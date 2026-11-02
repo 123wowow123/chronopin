@@ -16,3 +16,25 @@ describe('perfProblem tile tables', () => {
     if (typeof odd !== 'string') expect(odd.tables[0].display).toBeUndefined();
   });
 });
+
+describe('perfProblem timeline tables', () => {
+  const timeline = {
+    title: 'Production status',
+    display: 'timeline',
+    stages: ['Announced', 'Tape-out', 'Volume'],
+    current: 1,
+    columns: ['Date', 'Milestone', 'Status', 'Source'],
+    rows: [['Apr 15, 2026', 'Tape-out announced', 'Demonstrated', 'Wccftech']],
+  };
+  it('keeps stages and the reached stage on a four-column timeline', () => {
+    const parsed = perfProblem({ tables: [timeline] });
+    expect(typeof parsed).toBe('object');
+    if (typeof parsed !== 'string') expect(parsed.tables[0]).toMatchObject({ display: 'timeline', stages: timeline.stages, current: 1 });
+  });
+  it('rejects the wrong width, a stage index out of range and a translation with other stages', () => {
+    expect(perfProblem({ tables: [{ ...timeline, columns: ['a', 'b', 'c'], rows: [['x', 'y', 'z']] }] })).toMatch(/four columns/);
+    expect(perfProblem({ tables: [{ ...timeline, current: 3 }] })).toMatch(/current/);
+    const i18n = { es: { title: 'Estado', columns: timeline.columns, rows: timeline.rows, stages: ['Uno'] } };
+    expect(perfProblem({ tables: [{ ...timeline, i18n }] })).toMatch(/stages/);
+  });
+});

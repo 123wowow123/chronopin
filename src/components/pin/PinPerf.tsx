@@ -98,9 +98,57 @@ function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
   );
 }
 
+const PLANNED = /^(planned|expected|target)/i;
+
+// A four-column table (date, milestone, status, source) as a project timeline: an optional stage stepper with the
+// reached stage highlighted, then one dot per dated milestone (hollow while planned) and its [n] reference.
+// Whether a row is planned is read from the English base table, as a translation words the status differently.
+function Timeline({ table, base, evidence }: { table: PerfTable; base: PerfTable; evidence: Evidence[] }) {
+  const stages = table.stages ?? [];
+  return (
+    <section className="surface rounded-xl px-4 py-4" aria-label={table.title}>
+      <h2 className="text-xs font-semibold tracking-wide text-muted uppercase">{table.title}</h2>
+      {stages.length ? (
+        <ol className="mt-4 grid text-center text-[11px] leading-tight" style={{ gridTemplateColumns: `repeat(${stages.length}, minmax(0, 1fr))` }}>
+          {stages.map((stage, i) => {
+            const current = i === base.current;
+            return (
+              <li key={stage} aria-current={current ? 'step' : undefined} className="relative flex flex-col items-center gap-1.5 px-0.5">
+                {i > 0 ? <span aria-hidden className="absolute start-[-50%] top-[7px] h-0.5 w-full bg-raised-2" /> : null}
+                <span aria-hidden className={`relative z-10 size-4 rounded-full border-2 ${current ? 'border-link bg-link ring-4 ring-raised-2' : 'border-raised-2 bg-raised'}`} />
+                <span className={current ? 'font-semibold text-link' : (base.current ?? 0) > i ? 'text-muted' : 'text-muted opacity-70'}>{stage}</span>
+              </li>
+            );
+          })}
+        </ol>
+      ) : null}
+      <ol className="mt-4 ms-1.5 border-s-2 border-raised-2">
+        {table.rows.map(([date, label, status, source], i) => {
+          const planned = PLANNED.test(base.rows[i][2].trim());
+          return (
+            <li key={i} className="relative pb-4 ps-5 text-xs last:pb-0">
+              <span aria-hidden className={`absolute -start-[7px] top-0.5 size-3 rounded-full border-2 border-link ${planned ? 'bg-raised' : 'bg-link'}`} />
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span className="text-sm font-semibold tabular-nums">{date}</span>
+                <span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold leading-none ${planned ? 'border border-dashed border-muted text-muted' : 'bg-link text-raised'}`}>{status}</span>
+              </div>
+              <p className="mt-0.5 text-sm">
+                {label}
+                <CitedText text={source} evidence={evidence} label citesOnly />
+              </p>
+            </li>
+          );
+        })}
+      </ol>
+      {table.note ? <p className="mt-3 text-[11px] text-muted">{table.note}</p> : null}
+    </section>
+  );
+}
+
 function Table({ table: base, t, locale, evidence }: { table: PerfTable; t: Translator; locale: string; evidence: Evidence[] }) {
   const table = { ...base, ...base.i18n?.[locale] };
   if (base.display === 'tiles' && table.columns.length === 3) return <Tiles table={table} t={t} />;
+  if (base.display === 'timeline' && table.columns.length === 4) return <Timeline table={table} base={base} evidence={evidence} />;
   // A source column is shown as [n] links after the previous cell, not as a column.
   const last = table.columns.length - 1;
   const sourceColumn = last >= 2 && (table.columns[last].trim().toLowerCase() === t('pin.perf.source').toLowerCase() || /^sources?$/i.test(table.columns[last].trim()));

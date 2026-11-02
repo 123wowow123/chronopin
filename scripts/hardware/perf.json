@@ -11826,31 +11826,50 @@
         "sourceUrl": "https://www.notateslaapp.com/news/3521/how-teslas-fsd-hardware-has-changed-over-years"
       },
       {
-        "title": "AI5 production status",
+        "title": "AI5 production timeline",
+        "display": "timeline",
+        "stages": [
+          "Announced",
+          "Tape-out",
+          "Volume production",
+          "First deployment"
+        ],
+        "current": 1,
         "columns": [
-          "Item",
+          "Date",
+          "Milestone",
           "Status",
           "Source"
         ],
         "rows": [
           [
-            "Design tape-out",
-            "Announced by Musk, Apr 15, 2026",
+            "Jan 2026",
+            "Musk calls AI5 \"Roughly Hopper class as single SoC and Blackwell as dual\"",
+            "Demonstrated",
             "Wccftech"
           ],
           [
-            "Samsung version",
-            "Tape-out confirmed by a Samsung Foundry engineer, 2nm, Taylor TX (reported Jul 12, 2026)",
+            "Apr 15, 2026",
+            "Design tape-out announced by Musk; production split between TSMC and Samsung",
+            "Demonstrated",
+            "Wccftech"
+          ],
+          [
+            "Jul 12, 2026",
+            "Samsung Foundry engineer confirms tape-out of Samsung's 2nm version at Taylor, Texas",
+            "Demonstrated",
             "Drive Tesla Canada"
           ],
           [
-            "Volume production",
-            "Still expected in 2027",
+            "2027",
+            "High-volume production still expected",
+            "Planned",
             "Drive Tesla Canada"
           ],
           [
-            "First uses",
-            "Optimus and AI clusters; cars late 2027",
+            "Late 2027",
+            "Optimus and AI clusters first; vehicles expected to receive AI5",
+            "Planned",
             "Drive Tesla Canada / Not a Tesla App"
           ]
         ],

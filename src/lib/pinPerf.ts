@@ -8,10 +8,14 @@ export type PerfBar = { label: string; value: number; highlight?: boolean };
 // bars keep their labels (product names); a table's translation restates every
 // column and row, so it has the same shape.
 export type PerfChartText = { title: string; unit: string; note?: string };
-export type PerfTableText = { title: string; columns: string[]; rows: string[][]; note?: string };
+export type PerfTableText = { title: string; columns: string[]; rows: string[][]; note?: string; stages?: string[] };
 export type PerfChart = PerfChartText & { higherIsBetter?: boolean; sourceUrl?: string; bars: PerfBar[]; i18n?: Record<string, PerfChartText> };
 // display: 'tiles' shows a three-column table (measure, figure, basis) as telemetry tiles.
-export type PerfTable = PerfTableText & { sourceUrl?: string; display?: 'tiles'; i18n?: Record<string, PerfTableText> };
+// display: 'timeline' shows a four-column table (date, milestone, status, source) as a project timeline from
+// research to commercialization: stages is the stepper (the first `current`+1 stages reached, the last highlighted),
+// each row a dated, sourced milestone whose status is planned or demonstrated (English text, in the base table).
+export type PerfTable = PerfTableText & { sourceUrl?: string; display?: 'tiles' | 'timeline'; current?: number; i18n?: Record<string, PerfTableText> };
+export const TIMELINE_COLUMNS = 4;
 export type PinPerfJson = { charts: PerfChart[]; tables: PerfTable[]; checkedAt: string };
 
 export const MAX_PERF_CHARTS = 6;
@@ -34,8 +38,8 @@ function chartText(raw: unknown): PerfChartText | string {
   return { title, unit, ...(note ? { note } : {}) };
 }
 
-function tableText(raw: unknown, columns: number, rows: number): PerfTableText | string {
-  const v = raw as { title?: unknown; note?: unknown; columns?: unknown; rows?: unknown } | null | undefined;
+function tableText(raw: unknown, columns: number, rows: number, stages = 0): PerfTableText | string {
+  const v = raw as { title?: unknown; note?: unknown; columns?: unknown; rows?: unknown; stages?: unknown } | null | undefined;
   const title = text(v?.title, 120);
   const note = v?.note ? text(v.note, 500) : undefined;
   if (!title || (v?.note && !note)) return 'a translation needs a title.';
@@ -43,7 +47,9 @@ function tableText(raw: unknown, columns: number, rows: number): PerfTableText |
   const cols = v.columns.map((c: unknown) => text(c, 80));
   const cells = v.rows.map((row: unknown) => (Array.isArray(row) && row.length === columns ? row.map((cell: unknown) => text(cell, 200)) : null));
   if (cols.includes(null) || cells.some((row: (string | null)[] | null) => !row || row.includes(null))) return 'a translation has an empty or oversize cell.';
-  return { title, columns: cols as string[], rows: cells as string[][], ...(note ? { note } : {}) };
+  const names = stages ? (Array.isArray(v.stages) && v.stages.length === stages ? v.stages.map((name: unknown) => text(name, 40)) : null) : [];
+  if (!names || names.includes(null)) return 'a translation needs the same number of stages.';
+  return { title, columns: cols as string[], rows: cells as string[][], ...(note ? { note } : {}), ...(stages ? { stages: names as string[] } : {}) };
 }
 
 function i18nProblem<T>(raw: unknown, one: (v: unknown) => T | string): Record<string, T> | string {
@@ -103,9 +109,21 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
     if (sourceUrl === null) return `table ${i + 1}: sourceUrl is not a web address.`;
     const note = tb.note ? text(tb.note, 500) : undefined;
     if (tb.note && !note) return `table ${i + 1}: note is at most 500 characters.`;
-    const i18n = tb.i18n === undefined ? undefined : i18nProblem(tb.i18n, (v) => tableText(v, columns.length, rows.length));
+    let stages: string[] | undefined;
+    let current: number | undefined;
+    if (tb.display === 'timeline') {
+      if (columns.length !== TIMELINE_COLUMNS) return `table ${i + 1}: a timeline has four columns (date, milestone, status, source).`;
+      if (tb.stages !== undefined) {
+        const names = Array.isArray(tb.stages) ? tb.stages.map((name: unknown) => text(name, 40)) : [];
+        if (names.length < 2 || names.length > 8 || names.includes(null)) return `table ${i + 1}: stages are 2 to 8 names of at most 40 characters.`;
+        if (!Number.isInteger(tb.current) || tb.current < 0 || tb.current >= names.length) return `table ${i + 1}: current is the index of the reached stage.`;
+        stages = names as string[];
+        current = tb.current;
+      }
+    }
+    const i18n = tb.i18n === undefined ? undefined : i18nProblem(tb.i18n, (v) => tableText(v, columns.length, rows.length, stages?.length));
     if (typeof i18n === 'string') return `table ${i + 1}: ${i18n}`;
-    tables.push({ title, columns: columns as string[], rows, ...(tb.display === 'tiles' && columns.length === 3 ? { display: 'tiles' as const } : {}), ...(i18n ? { i18n } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
+    tables.push({ title, columns: columns as string[], rows, ...(tb.display === 'tiles' && columns.length === 3 ? { display: 'tiles' as const } : tb.display === 'timeline' ? { display: 'timeline' as const, ...(stages ? { stages, current } : {}) } : {}), ...(i18n ? { i18n } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
   }
   if (!charts.length && !tables.length) return 'At least one chart or table.';
   return { charts, tables };

@@ -104,6 +104,12 @@ rivals, the award, the service center and a timeline that sources did cover.
   the saved table and write the outlet as the site is known ("Wccftech", "Drive Tesla Canada / Not a Tesla App");
   matching is by site name (up to four words), so the pin must carry that reference. Other cells get `[n]` only
   where they name a reference. A name matching no reference shows no number, so check each one resolves.
+- **Production timeline for hardware**: a hardware/chip pin's path from research to commercialization is a `PinPerf`
+  table with `display: 'timeline'`: exactly four columns (Date, Milestone, Status, Source), `stages` (2-8 names, e.g.
+  Announced, Tape-out, Volume production, First deployment) and `current` (index of the reached stage). Status is
+  "Demonstrated" (happened, sourced) or "Planned"/"Expected" (hollow dot); never infer a stage from an elapsed date.
+  Source cells give the outlet name and render as `[n]` after the milestone. An `i18n` translation repeats columns,
+  rows and the same number of `stages`. Replace the old "production status" table with it.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
   `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.
