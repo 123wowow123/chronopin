@@ -1057,6 +1057,7 @@ const ms: Messages = {
     completes: 'Siap {when}',
     completion: 'Siap {when}',
     commercialization: 'Pengkomersialan {when}',
+    finalMilestone: 'Pencapaian akhir {when}',
     startsWhen: 'Bermula {when}',
     years: '{count}t',
     days: '{count}h',

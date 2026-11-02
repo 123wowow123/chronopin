@@ -1183,6 +1183,7 @@ const ar: Messages = {
     completes: 'الاكتمال {when}',
     completion: 'الإنجاز {when}',
     commercialization: 'التسويق التجاري {when}',
+    finalMilestone: 'المرحلة الأخيرة {when}',
     startsWhen: 'يبدأ {when}',
     years: '{count} سنة',
     days: '{count} يوم',

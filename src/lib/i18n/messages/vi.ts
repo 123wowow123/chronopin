@@ -1056,6 +1056,7 @@ const vi: Messages = {
     completes: 'Hoàn thành {when}',
     completion: 'Hoàn thành {when}',
     commercialization: 'Thương mại hóa {when}',
+    finalMilestone: 'Cột mốc cuối {when}',
     startsWhen: 'Bắt đầu {when}',
     years: '{count} năm',
     days: '{count} ngày',

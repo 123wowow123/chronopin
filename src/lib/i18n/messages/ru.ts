@@ -1074,6 +1074,7 @@ const ru: Messages = {
     completes: 'Завершение {when}',
     completion: 'Завершение {when}',
     commercialization: 'Коммерциализация {when}',
+    finalMilestone: 'Последний этап {when}',
     startsWhen: 'Начнётся {when}',
     years: '{count} г.',
     days: '{count} д.',

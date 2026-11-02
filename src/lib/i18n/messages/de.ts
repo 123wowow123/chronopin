@@ -1057,6 +1057,7 @@ const de: Messages = {
     completes: 'Fertig {when}',
     completion: 'Fertigstellung {when}',
     commercialization: 'Markteinführung {when}',
+    finalMilestone: 'Letzter Meilenstein {when}',
     startsWhen: 'Beginnt {when}',
     years: '{count} J',
     days: '{count} T',

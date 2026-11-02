@@ -1051,6 +1051,7 @@ const ko: Messages = {
     completes: '완공 {when}',
     completion: '완공 {when}',
     commercialization: '상용화 {when}',
+    finalMilestone: '최종 이정표 {when}',
     startsWhen: '{when} 시작',
     years: '{count}년',
     days: '{count}일',

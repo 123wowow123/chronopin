@@ -1062,6 +1062,7 @@ const hi: Messages = {
     completes: 'पूर्णता {when}',
     completion: 'पूर्णता {when}',
     commercialization: 'व्यावसायीकरण {when}',
+    finalMilestone: 'अंतिम पड़ाव {when}',
     startsWhen: '{when} शुरू होगा',
     years: '{count} वर्ष',
     days: '{count} दिन',

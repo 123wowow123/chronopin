@@ -1051,6 +1051,7 @@ const zh: Messages = {
     completes: '竣工 {when}',
     completion: '竣工 {when}',
     commercialization: '商业化 {when}',
+    finalMilestone: '最后里程碑 {when}',
     startsWhen: '{when}开始',
     years: '{count}年',
     days: '{count}天',

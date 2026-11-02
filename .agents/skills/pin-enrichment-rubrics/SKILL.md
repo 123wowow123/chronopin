@@ -117,15 +117,16 @@ rivals, the award, the service center and a timeline that sources did cover.
   for a launch- or approval-dated pin falls after its history) to the latest, so a drug, spacecraft or vehicle pin
   with a timeline shows its whole path. The same table works for any category with a staged path (drugs: Trials /
   Filing / Approval / Launch; spacecraft: Development / Test flights / First orbital / Operational; vehicles:
-  Reveal / Testing / Production / Deliveries); those pins keep the generic Start/End labels until a kind is added
-  to `src/lib/pinDateKind.ts`. Write outlet names so they match their reference's site name ("Air and Space Forces",
+  Reveal / Testing / Production / Deliveries); those pins use the neutral `program` kind in
+  `src/lib/pinDateKind.ts`; add a dedicated kind there (with strings in every locale) for category-specific wording. Write outlet names so they match their reference's site name ("Air and Space Forces",
   not "Air & Space Forces"); an ampersand breaks the match. Research traps: WebFetch is 403'd or truncated by Tom's Hardware and Digital Citizen, so read them in Chrome
   (`get_page_text`, never reuse a stale tab; a page that redirects fails the domain check, re-read the tab and retry).
   Add each opened page as a reference (`POST /api/pins/:id/references`) so its Source cell links; use the outlet's
   name ("Tom's Hardware" matches tomshardware.com). A standard or spec with no sourced product dates (JEDEC LPDDR6)
   gets no timeline: record the gap instead of a two-row table. `PUT performance` replaces everything, so re-send the
-  pin's existing charts and tables with the new timeline table. Such a pin's Start/End labels read Announced / Commercialization (construction
-  pins read Groundbreaking / Completion); the wording per kind lives in `src/lib/pinDateKind.ts` with strings in every
+  pin's existing charts and tables with the new timeline table. A chip pin (category Semiconductors or Computing) with a timeline reads Announced /
+  Commercialization; any other timeline pin (drug, spacecraft, vehicle) keeps Start/End and the bar ends "Final
+  milestone" (construction pins read Groundbreaking / Completion); the wording per kind lives in `src/lib/pinDateKind.ts` with strings in every
   `messages/*.ts` locale, so a new category's wording is added there.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then

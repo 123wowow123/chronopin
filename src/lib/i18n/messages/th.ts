@@ -1047,6 +1047,7 @@ const th: Messages = {
     completes: 'แล้วเสร็จ {when}',
     completion: 'แล้วเสร็จ {when}',
     commercialization: 'เชิงพาณิชย์ {when}',
+    finalMilestone: 'ก้าวสำคัญสุดท้าย {when}',
     startsWhen: 'เริ่ม {when}',
     years: '{count} ปี',
     days: '{count} วัน',

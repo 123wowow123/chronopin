@@ -1057,6 +1057,7 @@ const en = {
     completes: 'Completes {when}',
     completion: 'Completion {when}',
     commercialization: 'Commercialization {when}',
+    finalMilestone: 'Final milestone {when}',
     startsWhen: 'Starts {when}',
     years: '{count}y',
     days: '{count}d',

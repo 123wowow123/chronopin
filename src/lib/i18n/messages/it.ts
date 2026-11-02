@@ -1048,6 +1048,7 @@ const it: Messages = {
     completes: 'Fine lavori {when}',
     completion: 'Completamento {when}',
     commercialization: 'Commercializzazione {when}',
+    finalMilestone: 'Ultima tappa {when}',
     startsWhen: 'Inizia {when}',
     years: '{count}a',
     days: '{count}g',

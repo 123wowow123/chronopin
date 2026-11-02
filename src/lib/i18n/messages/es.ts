@@ -1057,6 +1057,7 @@ const es: Messages = {
     completes: 'Termina {when}',
     completion: 'Finalización {when}',
     commercialization: 'Comercialización {when}',
+    finalMilestone: 'Último hito {when}',
     startsWhen: 'Empieza {when}',
     years: '{count} a',
     days: '{count} d',

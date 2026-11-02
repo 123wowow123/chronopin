@@ -557,9 +557,9 @@ async function PinBody({
           <DelayReasoning pin={pin} />
         </div>
       ) : null}
-      {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} kind={pinDateKind(pin.tags, !!timeline)} /> : null}
+      {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} kind={pinDateKind(pin.tags, !!timeline, pin.categories)} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? new Date(timeline.start).toISOString() : pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? true : pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} kind={pinDateKind(pin.tags, !!timeline)} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? new Date(timeline.start).toISOString() : pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? true : pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} kind={pinDateKind(pin.tags, !!timeline, pin.categories)} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the

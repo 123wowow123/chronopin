@@ -1051,6 +1051,7 @@ const ja: Messages = {
     completes: '完成 {when}',
     completion: '完成 {when}',
     commercialization: '商用化 {when}',
+    finalMilestone: '最終マイルストーン {when}',
     startsWhen: '{when}に開始',
     years: '{count}年',
     days: '{count}日',

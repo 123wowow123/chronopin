@@ -1057,6 +1057,7 @@ const id: Messages = {
     completes: 'Selesai {when}',
     completion: 'Penyelesaian {when}',
     commercialization: 'Komersialisasi {when}',
+    finalMilestone: 'Tonggak terakhir {when}',
     startsWhen: 'Dimulai {when}',
     years: '{count}th',
     days: '{count}h',
