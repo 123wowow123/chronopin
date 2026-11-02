@@ -358,3 +358,11 @@ describe('tags on the form', () => {
     expect(applyScrape({ ...EMPTY_FORM, tags: 'Mine' }, { tags: ['Theirs'] }).tags).toBe('Mine');
   });
 });
+
+describe('formToPin subthreads', () => {
+  it('sends subthread only for a reply that asked for it', () => {
+    expect(formToPin({ ...EMPTY_FORM, parentId: 5, subthread: true }).subthread).toBe(true);
+    expect(formToPin({ ...EMPTY_FORM, parentId: 5 }).subthread).toBeUndefined();
+    expect(formToPin({ ...EMPTY_FORM, subthread: true }).subthread).toBeUndefined();
+  });
+});

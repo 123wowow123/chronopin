@@ -1,3 +1,4 @@
+import * as db from '@/server/db';
 import { after } from 'next/server';
 import { emitPinEvent } from '@/server/events';
 import { refreshGameInfo } from './gameInfo';
@@ -83,6 +84,8 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
   attributeReferences(pin.references, { existing: [], editorId: user.id, authorId: user.id });
 
   const { pin: saved } = await pin.save();
+  // A reply the author marked a subthread (Pin.subthread, 0239); only a reply can be one.
+  if (body.subthread === true && saved.parentId) await db.query(`UPDATE "Pin" SET "subthread" = true WHERE "id" = $1`, [saved.id]);
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
   if (body.flightPath) await saveFlightPath(saved.id, body.flightPath);
   if (score && typeof score !== 'string') await PinSentiment.setAuthored(saved.id, score);

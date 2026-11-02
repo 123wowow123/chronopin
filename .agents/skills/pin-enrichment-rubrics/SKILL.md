@@ -57,7 +57,7 @@ relevant section of `docs/okf/scraping/daily-jobs.md`.
 
 ## Chip and hardware generation threads (learned on Tesla AI5, 2026-11-01)
 - **Main thread = the chip generations only, oldest first** (Tesla: HW3 Autonomy Day 2019 -> AI4 rollout 2023 -> AI5
-  tape-out 2026). Each pin's `parentId` is the previous generation. **Side notes go in a sub-thread**, as a reply to the
+  tape-out 2026). Each pin's `parentId` is the previous generation. **Side notes go in a subthread**, as a reply to the
   generation pin they belong to, never inline in the main chain: foundry/supply deals (Samsung $16.5B AI6 deal, 2025-07-28,
   is a child of the AI5 pin), fab confirmations, retrofits, rumors, rival comparisons. The pin page Thread pane renders
   the nested tree (Ian, 2026-11-01, after the first version chained the Samsung deal between AI4 and AI5). When
@@ -132,3 +132,28 @@ rivals, the award, the service center and a timeline that sources did cover.
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
   `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.
 - Only state remaining gaps that are real (no published figure, page unreadable), each with its reason.
+
+## Equipment generation threads (Canon nanoimprint, 2026-11-02)
+Ian asked to "pin and make thread of iterative improvement models and add specs" for one machine (Canon
+FPA-1200NZ2C, prod pins 20710-20712). Pattern for any maker's tool/product line:
+- **Thread the generations oldest first** (gen 1 pin, then the named model, then side notes such as the first customer
+  delivery as a reply to it, marked a subthread with `PUT /api/pins/:id/subthread {subthread:true}` (author or admin;
+  migration 0239, `Pin.subthread`; the Thread pane then nests it under its parent even as the only reply, and a lone
+  main-line reply beside it keeps flush and keeps counting). Only works once 0239 and the route are deployed). A generation that has no release source (here FPA-1200NZ3C) stays a row in the
+  generation table labelled as a roadmap target, never its own pin.
+- **Generation table** on the named model's pin (`PinPerf`, columns Model / Status / throughput / overlay / defects /
+  Source): published figures and old roadmap targets in separate, labelled rows; write "Not published" where the maker's
+  page gives no figure (Canon's 2023 page has no throughput or defect number). Add a spec table with a "Basis" column
+  (maker spec / maker claim / maker expectation) and a `display: 'timeline'` table on every pin in the thread (2+ dated rows).
+- **Commentary** goes in `PUT /api/pins/:id/critic-reviews` (`source:'session'`, `basis`, `sourceUrl`, 1-8 reviews),
+  quoted from pages you opened. Independent doubters count: Bits&Chips (25 wafers/hour, EUV at least twice as fast)
+  and IO+ (ASML's Sander Hofman) were used for the nanoimprint tool. Say in the title when a quote is translated or
+  comes from a repost (AnandTech blocks WebFetch and redirects; its text was read through the Kowatek repost).
+- **Competitors** need an opened spec page per row (ASML NXE:3600D: NA 0.33, 300 mm, 26 x 33 mm, 13.5 nm; its
+  throughput and resolution cells were blank placeholders, so none were quoted). One honest row beats padding to 3.
+- **Sources you did not open stay out of references**: I first cited Canon's 2014 release unread and had to fix the
+  wording (Canon bought the whole company, Molecular Imprints, not just a business unit). Check a media file shows
+  this exact generation; a photo of the newer tool was removed from the gen-1 pin.
+- Pins from `create_pin` landed on prod only here (local returned 404): `refresh_admin_login.sh prod`, PUT performance /
+  critic-reviews / competitors with the admin token, then `POST /api/admin/pins/expire`. Reference `confidence` is 0-100.
+- `perf.json` entries for these pins are not yet added.

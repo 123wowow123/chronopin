@@ -32,6 +32,8 @@ export type PinFormValues = {
   id?: number;
   // null: posted on its own, not threaded under an earlier season's pin.
   parentId?: number | null;
+  // Post this reply as a subthread of the pin it answers (POST only; an edit sets it on the pin page).
+  subthread?: boolean;
   sourceUrl: string;
   title: string;
   description: string;
@@ -413,6 +415,7 @@ export function formToPin(values: PinFormValues) {
   return {
     id: values.id,
     parentId: values.parentId,
+    subthread: values.parentId && values.subthread ? true : undefined,
     title: values.title.trim(),
     description: values.description || undefined,
     sourceUrl: values.sourceUrl.trim() || undefined,

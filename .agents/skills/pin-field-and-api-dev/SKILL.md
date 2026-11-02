@@ -25,6 +25,12 @@ writing Next code.
 9. UI strings: edit every `messages/*.ts` locale in the same change.
 Verify: `curl /api/pins/:id`, `curl /api/main`, `npm test`, `npm run test:e2e`.
 
+## Subthreads in a thread
+`Pin.subthread` (0239) marks a reply as a subthread; `PUT /api/pins/:id/subthread {subthread:boolean}` (author/admin, needs a
+parent) sets it and `GET` reads `{subthread, hasParent}`. It is read straight off `Pin` by `queryThreadOrder` and is
+deliberately not in `PinBaseView` or the whole-pin PUT, so an edit cannot reset it. Nesting rules: `src/lib/thread.ts` +
+`queryThreadOrder`; toggle: `SideNoteToggle` on the pin page.
+
 ## New User field
 Five column lists in `src/server/model/user.ts`; user-editable fields must join `patchableUserProps` or
 `PATCH /api/users/me` silently ignores them.

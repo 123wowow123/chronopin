@@ -1,5 +1,6 @@
 'use client';
 
+import { ReplyKind } from './ReplyKind';
 import Link from '@/components/ui/Link';
 import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
@@ -35,6 +36,7 @@ export function QuickPinForm({ respondTo, tabs }: { respondTo?: PinJson; tabs?: 
   const router = useRouter();
   const [url, setUrl] = useState('');
   const [note, setNote] = useState('');
+  const [sideNote, setSideNote] = useState(false);
   const [phase, setPhase] = useState<Phase>('input');
   const [error, setError] = useState('');
   const [duplicateOf, setDuplicateOf] = useState<Pick<PinJson, 'id' | 'title'> | null>(null);
@@ -43,7 +45,7 @@ export function QuickPinForm({ respondTo, tabs }: { respondTo?: PinJson; tabs?: 
   const [matches, setMatches] = useState<DuplicateMatch[]>([]);
   const [readingSince, setReadingSince] = useState(0);
 
-  const blank = (): PinFormValues => ({ ...EMPTY_FORM, sourceUrl: url.trim(), parentId: respondTo?.id });
+  const blank = (): PinFormValues => ({ ...EMPTY_FORM, sourceUrl: url.trim(), parentId: respondTo?.id, subthread: sideNote });
 
   // The full form, filled in with what was read, and why it is needed. With no
   // description from the AI, the author's own words about the pin start it.
@@ -146,6 +148,7 @@ export function QuickPinForm({ respondTo, tabs }: { respondTo?: PinJson; tabs?: 
           {t('form.respondingTo')} <Link href={pinPath(respondTo)}>{respondTo.title}</Link>
         </p>
       ) : null}
+      {respondTo ? <ReplyKind sideNote={sideNote} onChange={setSideNote} className="mt-4" /> : null}
       <p className="mt-2 text-sm text-subtle">{t('quickPin.lede')}</p>
 
       <form onSubmit={create} noValidate className="surface mt-6 space-y-4 p-5">

@@ -204,6 +204,9 @@ export type PinJson = {
   // Only on a thread's pins: how far in the row is nested. A thread steps in
   // below a pin with more than one response, so an unbranched chain stays 0.
   threadLevel?: number;
+  // Only on a thread's pins: the author marked this reply a subthread, so it
+  // nests under the pin it answers even as that pin's only response.
+  subthread?: boolean;
   userId?: number;
   user?: PinUserJson;
   media?: MediumJson[];

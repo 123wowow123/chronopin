@@ -283,6 +283,7 @@ export default class Pins extends BasePins<Pin> {
     rows.forEach((row) => {
       row.reverseOrder = place.get(row.id)?.reverseOrder;
       row.threadLevel = place.get(row.id)?.level;
+      row.subthread = place.get(row.id)?.subthread;
     });
     return new Pins().setPinsSortBy(rows, 'reverseOrder', true);
   }
@@ -1020,36 +1021,37 @@ function queryPinByIds(ids: number[]): Promise<PageResult> {
 // A reader on any branch therefore sees the other branches too, not just the
 // line down to the top.
 //
-// level is how far a row is nested: it steps in only below a pin that has
-// more than one response, so a long unbranched chain stays flush left however
-// deep it runs. reverseOrder keeps its old meaning - 0 for pinId, positive
+// level is how far a row is nested: it steps in below a pin that has more
+// than one response, and for a reply marked as a subthread (Pin.subthread,
+// 0239) even when it is the only one, so a long unbranched chain stays flush
+// left however deep it runs. reverseOrder keeps its old meaning - 0 for pinId, positive
 // above it, negative below - so the flat API order is unchanged for a chain.
 // Ids and places only; getThreadPins reads the pins themselves.
-async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: number; level: number }[]> {
+async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: number; level: number; subthread: boolean }[]> {
   // UNION, not UNION ALL, so a parentId cycle ends instead of looping.
-  const rows = await db.query<{ id: number; parentId: number | null; start: Date | string }>(
+  const rows = await db.query<{ id: number; parentId: number | null; start: Date | string; subthread: boolean }>(
     `
     WITH RECURSIVE
-      "above" ("id", "parentId", "userId", "start") AS (
-          SELECT "id", "parentId", "userId", "utcStartDateTime"
+      "above" ("id", "parentId", "userId", "start", "subthread") AS (
+          SELECT "id", "parentId", "userId", "utcStartDateTime", "subthread"
           FROM "Pin"
           WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
         UNION
-          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime"
+          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime", "Pin"."subthread"
           FROM "Pin"
             JOIN "above" ON "Pin"."id" = "above"."parentId"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
       ),
-      "tree" ("id", "parentId", "userId", "start") AS (
-          SELECT "id", "parentId", "userId", "start" FROM "above"
+      "tree" ("id", "parentId", "userId", "start", "subthread") AS (
+          SELECT "id", "parentId", "userId", "start", "subthread" FROM "above"
         UNION
-          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime"
+          SELECT "Pin"."id", "Pin"."parentId", "Pin"."userId", "Pin"."utcStartDateTime", "Pin"."subthread"
           FROM "Pin"
             JOIN "tree" ON "Pin"."parentId" = "tree"."id"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
             AND "tree"."userId" = "Pin"."userId"
       )
-    SELECT "id", "parentId", "start" FROM "tree"`,
+    SELECT "id", "parentId", "start", "subthread" FROM "tree"`,
     [pinId],
   );
   if (!rows.length) return [];
@@ -1068,7 +1070,7 @@ async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrd
   const oldestFirst = (a: (typeof rows)[number], b: (typeof rows)[number]) => new Date(a.start).getTime() - new Date(b.start).getTime() || Number(a.id) - Number(b.id);
 
   // Depth first, with an explicit stack: a chain can run to hundreds of pins.
-  const ordered: { id: number; level: number }[] = [];
+  const ordered: { id: number; level: number; subthread: boolean }[] = [];
   const seen = new Set<number>();
   const stack = tops.sort(oldestFirst).reverse().map((row) => ({ row, level: 0 }));
   while (stack.length) {
@@ -1076,10 +1078,14 @@ async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrd
     const id = Number(row.id);
     if (seen.has(id)) continue;
     seen.add(id);
-    ordered.push({ id, level });
+    // A subthread is a flagged reply with a parent in the thread (a top pin has none to step in under).
+    ordered.push({ id, level, subthread: row.subthread === true && !tops.includes(row) });
     const below = (children.get(id) ?? []).sort(oldestFirst);
-    const next = below.length > 1 ? level + 1 : level;
-    for (let i = below.length - 1; i >= 0; i--) stack.push({ row: below[i], level: next });
+    // Subthreads always step in; the other replies step in only when there is more than one of them.
+    const mainLine = below.filter((r) => r.subthread !== true).length;
+    for (let i = below.length - 1; i >= 0; i--) {
+      stack.push({ row: below[i], level: mainLine > 1 || below[i].subthread === true ? level + 1 : level });
+    }
   }
 
   const at = Math.max(0, ordered.findIndex((o) => o.id === pinId));

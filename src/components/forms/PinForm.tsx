@@ -1,6 +1,7 @@
 'use client';
 
 import Anchor from '@/components/ui/Anchor';
+import { ReplyKind } from './ReplyKind';
 import Link from '@/components/ui/Link';
 import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -281,6 +282,7 @@ export function PinForm({
                 {t('form.postAsNew')}
               </button>
             )}
+            {mode !== 'edit' && values.parentId ? <ReplyKind sideNote={!!values.subthread} onChange={(next) => set('subthread', next)} className="mt-3" /> : null}
           </div>
         ) : null}
 

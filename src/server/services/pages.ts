@@ -419,7 +419,8 @@ export async function pinAlternateNames(id: number): Promise<AlternateNameJson[]
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a
-// response posted or moved (its parent's tag is invalidated too) - redraws it.
+// response posted or moved (its parent's tag is invalidated too) or marked a
+// subthread (Pin.subthread) - redraws it.
 export async function threadPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');

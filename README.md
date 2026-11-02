@@ -525,10 +525,11 @@ run
 EnergyDesk tracker batch clean-up (November 2, 2026)
 
 
-pin and make thread of iterative improvement models and add specs
-Canon FPA-1200NZ2C
+
+add gpu retal price graph on GPU pins
+https://www.silicondata.com/products/silicon-index
 
 
 
-pin 
-astra phoenix tower
+https://artificialanalysis.ai/articles/aa-personalitybench
+ai personality index, make panel

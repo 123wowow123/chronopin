@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { branchesUnder, threadNumbers } from './thread';
 
-const pin = (id: number, parentId?: number) => ({ id, parentId });
+const pin = (id: number, parentId?: number, subthread = false) => ({ id, parentId, subthread });
 
 describe('branchesUnder', () => {
   it('is false for a plain chain, from any pin in it', () => {
@@ -43,5 +43,27 @@ describe('threadNumbers', () => {
   it('keeps a branch of one pin at 1 and continues a chain after it ends', () => {
     const tree = [pin(1), pin(2, 1), pin(3, 1), pin(4, 3)];
     expect([...threadNumbers(tree).values()]).toEqual([1, 1, 1, 2]);
+  });
+});
+
+describe('subthreads', () => {
+  // 1 -> 2 -> (3 subthread), 2 -> 4 main line
+  const tree = [pin(1), pin(2, 1), pin(3, 2, true), pin(4, 2)];
+
+  it('branches under a pin whose only reply is a subthread', () => {
+    expect(branchesUnder([pin(1), pin(2, 1), pin(3, 2, true)], 1)).toBe(true);
+    expect(branchesUnder([pin(1), pin(2, 1), pin(3, 2, true)], 3)).toBe(false);
+  });
+
+  it('does not branch for one main-line reply beside no subthread', () => {
+    expect(branchesUnder([pin(1), pin(2, 1), pin(3, 2)], 1)).toBe(false);
+  });
+
+  it('restarts a subthread at 1 and lets a lone main-line reply keep counting', () => {
+    expect([...threadNumbers(tree).values()]).toEqual([1, 2, 1, 3]);
+  });
+
+  it('counts a subthread alone from 1', () => {
+    expect([...threadNumbers([pin(1), pin(2, 1), pin(3, 2, true)]).values()]).toEqual([1, 2, 1]);
   });
 });

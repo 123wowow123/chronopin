@@ -92,6 +92,7 @@ import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadList } from '@/components/pin/ThreadList';
+import { SideNoteToggle } from '@/components/pin/SideNoteToggle';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import { ThreadWatchButton } from '@/components/pin/ThreadWatchButton';
@@ -996,6 +997,7 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
+      <SideNoteToggle pinId={pin.id} />
       {new Set(stops.map((s) => `${s.latitude.toFixed(4)},${s.longitude.toFixed(4)}`)).size > 1 ? <ThreadMapLoader stops={stops} currentId={pin.id} backHref={pinPath(pin)} /> : null}
       <ThreadList
         key={pin.id}
