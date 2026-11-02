@@ -132,15 +132,15 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
 }
 
 // The span a pin's start meter runs over when it has a timeline table: its dated rows as marks, the earliest
-// placeable one as the start (a launch-dated pin's history precedes its own start) and the latest as the end (a bare year counts as its last day). Rows are [date, milestone, status, source].
-export function timelineSpan(perf: PinPerfJson | null | undefined): { marks: { at: number; label: string; date: string }[]; start: number; end: number } | null {
+// placeable one as the start (startStage: the first stage's name, "Launch", which the meter's left label uses instead of "Started"; a launch-dated pin's history precedes its own start) and the latest as the end (a bare year counts as its last day). Rows are [date, milestone, status, source].
+export function timelineSpan(perf: PinPerfJson | null | undefined): { marks: { at: number; label: string; date: string }[]; start: number; end: number; startStage?: string } | null {
   const table = perf?.tables.find((tb) => tb.display === 'timeline' && tb.columns.length === TIMELINE_COLUMNS);
   if (!table) return null;
   const marks = table.rows.flatMap(([date, label]) => {
     const at = milestoneTime(date);
     return at == null ? [] : [{ at, label, date }];
   });
-  return marks.length > 1 ? { marks, start: Math.min(...marks.map((m) => m.at)), end: Math.max(...marks.map((m) => m.at)) } : null;
+  return marks.length > 1 ? { marks, start: Math.min(...marks.map((m) => m.at)), end: Math.max(...marks.map((m) => m.at)), ...(table.stages?.[0] ? { startStage: table.stages[0] } : {}) } : null;
 }
 
 export const hasPerf = (perf: PinPerfJson | null | undefined): perf is PinPerfJson => !!perf && perf.charts.length + perf.tables.length > 0;

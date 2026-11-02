@@ -127,8 +127,9 @@ function stretchTitle(part: Stretch, t: Translator) {
 //
 // A construction pin (end given: its completion) runs the bar over the build
 // itself, groundbreaking to completion, with any slip of the start in front
-// of it in its own shade.
-export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [], kind }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: BuildMark[]; kind?: PinDateKind }) {
+// of it in its own shade. startStage (a timeline's first stage, e.g. "Launch")
+// names the left label in place of "Started".
+export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [], kind, startStage }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: BuildMark[]; kind?: PinDateKind; startStage?: string }) {
   const tick = useNow(SECOND);
   const t = useT();
   const now = tick || null;
@@ -160,6 +161,8 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
       ...phases(startMs, endMs, marks, t, !delayed),
     ];
   }
+  // A timeline pin's bar says how far along it is, whole days of the whole span, not a build phase's name.
+  const spanTitle = build && kind && kind !== 'construction' ? t('countdown.daysOfTotal', { elapsed: Math.max(0, Math.min(Math.floor((now - startMs) / DAY), Math.round((endMs - startMs) / DAY))).toLocaleString(t.locale), total: Math.round((endMs - startMs) / DAY).toLocaleString(t.locale) }) : undefined;
   const fillClass = started ? 'bg-past' : 'bg-future';
   // A day or more on, the exact years and days ("1y 9d") rather than a
   // rounded "last year"; under a day, the nearest hour or minute.
@@ -167,10 +170,11 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
   const goneDays = Math.floor(gone.rest / DAY);
   const agoLabel =
     started && (gone.years > 0 || goneDays > 0)
-      ? t('countdown.startedSpan', {
+      ? t(startStage ? 'countdown.stageSpan' : 'countdown.startedSpan', {
           span: [gone.years > 0 ? t('countdown.years', { count: gone.years }) : '', t('countdown.days', { count: goneDays })].filter(Boolean).join(' '),
+          stage: startStage ?? '',
         })
-      : t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) });
+      : t(startStage ? 'countdown.stageAgo' : 'countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale), stage: startStage ?? '' });
 
   return (
     <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>
@@ -179,7 +183,7 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
       <div className="relative flex h-1.5 flex-1 gap-0.5" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? t('countdown.started') : t('countdown.elapsed')}>
         {parts.length ? (
           parts.map((part) => (
-            <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={build && !part.late ? part.label : stretchTitle(part, t)}>
+            <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={spanTitle ?? (build && !part.late ? part.label : stretchTitle(part, t))}>
               <div
                 className={`absolute inset-y-0 start-0 rounded-full ${part.late ? LATE_TONES[part.tone].fill : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].fill : fillClass}`}
                 style={{ width: `${Math.min(100, Math.max(0, ((now - part.from) / (part.to - part.from)) * 100))}%` }}

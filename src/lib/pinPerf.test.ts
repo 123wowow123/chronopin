@@ -48,6 +48,12 @@ describe('timelineSpan', () => {
     expect(span?.end).toBe(Date.UTC(2028, 11, 31));
     expect(span?.marks).toHaveLength(2);
   });
+  it('names the first stage for the meter\'s left label', () => {
+    const withStages = perf([row('Mar 2026'), row('2028')]);
+    withStages.tables[0] = { ...withStages.tables[0], stages: ['Launch', 'Shipped'] } as never;
+    expect(timelineSpan(withStages)?.startStage).toBe('Launch');
+    expect(timelineSpan(perf([row('Mar 2026'), row('2028')]))?.startStage).toBeUndefined();
+  });
   it('needs two placeable rows', () => {
     expect(timelineSpan(perf([row('Mar 2026'), row('H2 2027')]))).toBeNull();
   });
