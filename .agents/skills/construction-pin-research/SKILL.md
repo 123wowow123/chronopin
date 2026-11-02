@@ -141,6 +141,10 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   Round-trip the whole pin (GET, change `media`, PUT) locally first and diff the
   readback, then on prod.
 - Timeline: `PinFactory.milestones` (section 4) with verbatim quotes; leave out dates you could not read yourself.
+  Owner instruction (2026-11-02): add the timeline **while researching** each construction pin, in the same pass as the
+  facts, never as a later round. Research the dated stages as you read the sources (announcement, queue entry,
+  interconnection agreement executed, approvals, groundbreaking, online date) and save the profile right after the
+  pin is corrected. Show conflicting dates side by side, each with its own source. See section 9 for queue-derived pins.
   Always include the **estimated completion** milestone (`basis: "planned"`, published precision such as
   `Early 2028`, source quoting the developer's or trade press's stated delivery target). Only when no delivery
   target is published, say so as a research gap; never infer one.
@@ -241,3 +245,48 @@ had to be repaired, so do it in one pass.
     the row (`Cortex 2 >120 MW Production`) and split a wrapped sentence with `...`.
 - **Rule for this skill:** whenever a request exposes something a pin of this kind should have carried (a spec, a field, a
   source type, a script trap), add it here in the same session, as the bullets above do. Ian asked for this on 2026-11-01.
+
+## 9. Queue-derived energy pins (generation, storage, solar; 2026-11-02, EnergyDesk batch 18416-18895)
+A 20-pin audit of the 470-pin @EnergyDesk batch (Cleanview/EIA/queue entries) found 3 supported, 7 real but wrong and
+10 with no matching project. Do not repeat it.
+- **Prove the project exists first.** Match name, size, county and technology to the EIA-860M row, the ISO/RTO queue
+  entry (ERCOT, MISO, PJM, CAISO, SPP), a regulator filing, the developer's release or news. A queue substation label
+  ("Reid EHV", "Nelson-Indian River") is not a project name; find the real one (Reid EHV was Sebree Solar). No match:
+  record a research gap with `mark_revisit`, do not post.
+- **Check hybrids and phases.** One address can be solar plus battery (Fleetwood: 2 MW + 2 MW), and one queue
+  entry can hold several phases or a stale size (Farmview 75 MW study vs 68 MW queue). Say which.
+- **Check operating status before writing a future date.** A plant already online (Essex, Sebree Solar I) is Completed
+  with its real operation date, never an "estimated" future one.
+- **References must be pages about the project.** A bare agency or utility homepage, or a shared spreadsheet, is not a
+  reference; if kept at all it carries confidence 30 or lower. Never rate a generic page 95.
+- **No invented specifics.** Acreage, chemistry, MWh, utility, docket numbers, tax-abatement or "interconnection agreement"
+  language need an opened source. Name the utility only if a source does; a balancing authority is not the interconnecting
+  utility. Aggregators (interconnection.fyi, Infrasure, Cleanview, Gridinfo) are labelled as such and rated below
+  official sources (queue PDF, regulator, developer release). Cleanview profile URLs in earlier pins were often dead; use
+  the URL you opened.
+- **Date confidence is capped by the score:** `estimated` scores at most 65, `delayed` 55, `unknown` 40 (migration 0238),
+  so those pins fall under the timeline's 70 bar unless they are Predicted pins. Use `confirmed`/`scheduled` only with a
+  source for the date. A proposed queue date is `estimated`.
+- **Addresses and coordinates.** A county-level source gets a county address and its centroid (Nominatim, one request per
+  second, descriptive User-Agent without the owner's email); a street address needs a source. `update_pin` has a per-run
+  write limit (250); the rest go through `PUT /api/pins/:id` with the admin token, sending the whole pin
+  (`?lightweight=1` for confidence-only changes).
+- **Duplicates.** `update_pin` answers 409 when the sourceUrl is already on another pin by the same author (Royal Slope:
+  18412 vs 16315). Merge verified facts into the older pin and remove the duplicate (`DELETE /api/pins/:id`).
+- **Saving the timeline profile (2026-11-02).** `save_factory_profile` checks a pin's references against the **local**
+  database, while `get_pin` and `update_pin` read and write production, so a pin corrected on production is rejected with
+  "Add these pages to the pin's references first". Save to production directly:
+  `PUT /api/pins/:id/factory` with the admin token and the profile plus `source: "session"`, `rubricYear: 2026`,
+  `assessmentDate` (today). Rules the validator enforces: `basis` is only `planned` or `demonstrated`; an `announced`
+  profile carries no `demonstrated` metric; milestone dates are ISO (`2025-09`, `2027`; "Fall 2023" and "Early 2026" are
+  rejected, and a bare year reads as its last day, so skip a vague season rather than force it); labels are at most 100
+  characters; a metric key appears once; at least three distinct metric keys; all six axes present (null, `unknown`).
+- **Check every quote against the raw page yourself.** A fetch tool returns a model-written summary: its "quotes" were
+  wrong on two Infrasure pages. Strip tags, collapse whitespace and test `quote in page` (`pdftotext` for PDFs) before
+  saving, as `scratchpad/factory.py` did. Sites that refuse a plain fetch (Clearway, Nucor, Urban Milwaukee) cannot be
+  verified this way; leave their quotes out. Do not send browser-like headers to get past a block; the auto-mode
+  classifier refuses it. The user's Chrome (`@browser`) is the sanctioned way to read such a page.
+- **Existing profiles.** The `factoryProfiles` daily job may already have saved a profile (Parkwood 18596, from the EIA
+  workbook); check `GET /api/pins/:id/factory` (204 = none) and keep a better-sourced one.
+- **EIA status code.** The interconnection.fyi page for an EIA row carries `detailedStatusCode` ("(V) Under construction,
+  more than 50 percent complete"); it is the official stage even when the page header says "Planned".
