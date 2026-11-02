@@ -31,6 +31,7 @@ import { PinGamePerf } from '@/components/pin/PinGamePerf';
 import { PinAircraftPerf } from '@/components/pin/PinAircraftPerf';
 import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
+import { BUILD_STATUSES, pinDateKind } from '@/lib/pinDateKind';
 import { timelineSpan } from '@/lib/pinPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinFactory } from '@/components/pin/PinFactory';
@@ -136,7 +137,6 @@ async function loadPin(params: Props['params']) {
   return Number.isInteger(id) && id > 0 ? pinById(id, await getLocale()) : null;
 }
 
-const BUILD_STATUSES = ['Proposed', 'In Progress', 'Completed', 'Withdrawn'];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
@@ -557,9 +557,9 @@ async function PinBody({
           <DelayReasoning pin={pin} />
         </div>
       ) : null}
-      {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} /> : null}
+      {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} kind={pinDateKind(pin.tags, !!timeline)} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} kind={pinDateKind(pin.tags, !!timeline)} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the

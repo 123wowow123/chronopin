@@ -113,7 +113,9 @@ rivals, the award, the service center and a timeline that sources did cover.
   The pin's start meter (the bar under the Start date) follows the timeline too: it runs from the pin's start to the
   latest placeable row, with a dot per dated row, instead of a full "started Nd ago" bar. Write dates the parser
   places ("Apr 15, 2026", "Jul 2026", "Q3 2027", "Late 2027", "2027" = year end); "early"/"H2" rows get no dot.
-  Needs two or more placeable rows.
+  Needs two or more placeable rows. Such a pin's Start/End labels read Announced / Commercialization (construction
+  pins read Groundbreaking / Completion); the wording per kind lives in `src/lib/pinDateKind.ts` with strings in every
+  `messages/*.ts` locale, so a new category's wording is added there.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
   `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.

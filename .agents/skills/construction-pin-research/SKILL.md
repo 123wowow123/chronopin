@@ -10,7 +10,9 @@ description: >-
 
 Evidence rule for everything below: opened HTTPS source, verbatim quote, preserve existing tags and authors,
 never invent a figure. Apply through the authenticated admin APIs in **both environments** and keep the
-research/replay catalogs synchronized. A construction pin runs groundbreaking to completion (a period, not a point).
+research/replay catalogs synchronized. A construction pin runs groundbreaking to completion (a period, not a point). The pin page words them that way
+(`src/lib/pinDateKind.ts`: Groundbreaking / Completion in the date ranges and the countdown end label, in all 16
+locales), so `utcStartDateTime` must be the groundbreaking date and `utcEndDateTime` the completion date.
 
 ## 1. Cost (`price`, `priceCurrency`)
 - Use the currency the source states; **no FX conversion**.

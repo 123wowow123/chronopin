@@ -4,6 +4,7 @@ import { useNow } from '@/lib/client/now';
 import { dayAgo, dayKeyOf, dayKeyParts, formatDayKey, timeAgo } from '@/lib/format';
 import { delayLabel } from '@/lib/delay';
 import { useT } from '@/lib/client/i18n';
+import { DATE_KIND_KEYS, type PinDateKind } from '@/lib/pinDateKind';
 import type { Translator } from '@/lib/i18n/translate';
 
 const SECOND = 1000;
@@ -89,7 +90,7 @@ function stretchTitle(part: Stretch, t: Translator) {
 // A construction pin (end given: its completion) runs the bar over the build
 // itself, groundbreaking to completion, with any slip of the start in front
 // of it in its own shade.
-export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [] }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: { at: number; label: string; date: string }[] }) {
+export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [], kind }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: { at: number; label: string; date: string }[]; kind?: PinDateKind }) {
   const tick = useNow(SECOND);
   const t = useT();
   const now = tick || null;
@@ -131,7 +132,7 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
           span: [gone.years > 0 ? t('countdown.years', { count: gone.years }) : '', t('countdown.days', { count: goneDays })].filter(Boolean).join(' '),
         })
       : t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) });
-  const completes = build ? t('countdown.completes', { when: formatDayKey(keyOf(endMs), t.locale) }) : '';
+  const completes = build ? t(kind ? DATE_KIND_KEYS[kind].ends : 'countdown.completes', { when: formatDayKey(keyOf(endMs), t.locale) }) : '';
 
   return (
     <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>

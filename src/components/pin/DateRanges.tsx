@@ -4,6 +4,7 @@ import Anchor from '@/components/ui/Anchor';
 import { useT } from '@/lib/client/i18n';
 import { orderEvidence } from '@/lib/citations';
 import type { DateClaim, DateRange } from '@/lib/dateClaims';
+import { DATE_KIND_KEYS, type PinDateKind } from '@/lib/pinDateKind';
 import { dateFormat, dayKeyParts, dayKeyToMs } from '@/lib/format';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import type { Evidence } from '@/lib/referenceConfidence';
@@ -82,10 +83,11 @@ function Range({ label, range, linked }: { label: string; range: DateRange; link
   );
 }
 
-// The pin's start and end, each as the most confident claim among its source
+// The pin's start and end (worded for its kind: groundbreaking/completion for a build, announced/commercialization
+// for hardware), each as the most confident claim among its source
 // and references, with the range they all give. "from ..." links to that
 // source's row in the References panel.
-export function DateRanges({ start, end, evidence = [] }: { start?: DateRange; end?: DateRange; evidence?: Evidence[] }) {
+export function DateRanges({ start, end, evidence = [], kind }: { start?: DateRange; end?: DateRange; evidence?: Evidence[]; kind?: PinDateKind }) {
   const t = useT();
   const linked = orderEvidence(evidence);
   if (!start && !end) {
@@ -93,8 +95,8 @@ export function DateRanges({ start, end, evidence = [] }: { start?: DateRange; e
   }
   return (
     <dl className="mt-1.5 flex flex-wrap items-center justify-between gap-x-6 gap-y-1 text-xs">
-      {start ? <Range label={t('dateRanges.start')} range={start} linked={linked} /> : null}
-      {end ? <Range label={t('dateRanges.end')} range={end} linked={linked} /> : null}
+      {start ? <Range label={t(kind ? DATE_KIND_KEYS[kind].start : 'dateRanges.start')} range={start} linked={linked} /> : null}
+      {end ? <Range label={t(kind ? DATE_KIND_KEYS[kind].end : 'dateRanges.end')} range={end} linked={linked} /> : null}
     </dl>
   );
 }
