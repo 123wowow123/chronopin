@@ -498,6 +498,13 @@ export async function searchPage(
   view = { ...view, timeZone: zoneFor(query, view.timeZone) };
   // Watched results are one person's list and must change the moment they
   // watch or unwatch a pin, so they skip the shared, briefly stale cache.
+  // seen:no is one reader's history, so it skips the shared cache too.
+  const unseen = !!userId && parseSearchQuery(query).unseen;
+  if (unseen && !onlyWatched) {
+    const page = await runSearch(query, userId, false, view);
+    await localizePins(page.pins, locale);
+    return page;
+  }
   if (!onlyWatched || !userId) return cachedSearch(query, view, locale);
   // watchVersion keys the results on the page: Next keeps a page left for
   // another mounted but hidden, so without it coming back to Watched after
@@ -577,6 +584,9 @@ export async function searchPageTagCounts(
   limit = TAG_CLOUD_SIZE,
   related = false,
 ): Promise<TagCount[]> {
+  if (userId && !onlyWatched && parseSearchQuery(query).unseen) {
+    return searchTagCounts(query, limit, { userId, onlyWatched: false, timeZone: zoneFor(query, timeZone), createdSince: resolveCreatedSince(created), related });
+  }
   if (related) return cachedRelatedTagCounts(joinSearchQuery(splitSearchQuery(query)), created, zoneFor(query, timeZone), limit, userId, onlyWatched);
   // The counts leave out the terms the cloud writes (searchTagCounts), so they
   // are cached without them too: every pick in the cloud then reads the same

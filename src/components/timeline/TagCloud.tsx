@@ -367,6 +367,7 @@ function ReservedFilters({
   className?: string;
 }) {
   const t = useT();
+  const { isLoggedIn } = useSession();
   const on = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
   const shown = RESERVED_TAGS.map((filter) => ({
     ...filter,
@@ -375,7 +376,8 @@ function ReservedFilters({
   }))
     // The preset size floors (100+ MW, Cost $1B+) are ready-made queries, not tags: left out unless picked, which is how they are unpicked.
     .filter((filter) => filter.min === undefined || on(filter.name))
-    .filter((filter) => showAll || filter.count > 0 || on(filter.name))
+    // Not seen is the viewer's own history: theirs alone, and never counted here.
+    .filter((filter) => (filter.field === 'seen' ? isLoggedIn || on(filter.name) : showAll || filter.count > 0 || on(filter.name)))
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (
@@ -399,7 +401,7 @@ function ReservedFilters({
             event.dataTransfer.setData('text/plain', text);
             event.dataTransfer.effectAllowed = 'copy';
           }}
-          title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
+          title={filter.field === 'seen' ? t('tagCloud.reservedTitle', { name: filter.label }) : `${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
           className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
             isStoredSiteTag(filter.name)
               ? on(filter.name) ? 'border-construction bg-construction/20 text-construction' : 'border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20'
@@ -408,10 +410,12 @@ function ReservedFilters({
         >
           <Icon name={filter.icon} className={`shrink-0 ${large ? 'size-4' : 'size-3'}`} />
           {filter.label}
-          <span className={`${isStoredSiteTag(filter.name) ? 'text-current opacity-80' : 'text-subtle'} tabular-nums`}>
-            {filter.count}
-            <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>
-          </span>
+          {filter.field !== 'seen' && (
+            <span className={`${isStoredSiteTag(filter.name) ? 'text-current opacity-80' : 'text-subtle'} tabular-nums`}>
+              {filter.count}
+              <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>
+            </span>
+          )}
         </button>
       ))}
       </div>

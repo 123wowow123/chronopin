@@ -1468,6 +1468,7 @@ const ru: Messages = {
     high: 'Высокая достоверность',
     medium: 'Средняя достоверность',
     low: 'Низкая достоверность',
+    notSeen: 'Не просмотрено',
   },
   tagCloud: {
     tagsSummary: 'Теги: {summary}',

@@ -1415,6 +1415,7 @@ const ms: Messages = {
     high: 'Keyakinan tinggi',
     medium: 'Keyakinan sederhana',
     low: 'Keyakinan rendah',
+    notSeen: 'Belum dilihat',
   },
   tagCloud: {
     tagsSummary: 'Teg: {summary}',

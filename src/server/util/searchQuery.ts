@@ -44,6 +44,11 @@
 // still match any of them. OR splits the query into groups first, so AND binds
 // tighter than OR.
 //
+// site: takes a web host (site:bbc.com, site:"https://www.nytimes.com/x"): the
+// pins whose source link is on it or any of its subdomains, as Google reads it.
+// A leading www., the scheme and the path are dropped; several hosts widen.
+// seen:no leaves out the pins the signed-in viewer has already opened (a pin
+// page view); for a guest it does nothing.
 // holiday: takes a holiday or special day by name (holiday:Halloween,
 // holiday:"Mid-Autumn Festival", holiday:"National Peanut Day"): the pins
 // starting on any of its days, the way date: reads them, in every year the
@@ -291,6 +296,12 @@ export type SearchQuery = {
   // Holidays and special days by name, any of them (holiday:Halloween); the
   // server turns each into the days it falls on.
   holidays: string[];
+  // Hosts a pin's source link must be on (site:bbc.com), subdomains included;
+  // any of them.
+  sites: string[];
+  // seen:no - only pins the signed-in viewer has not opened. A guest has no
+  // history, so it leaves a guest's results alone.
+  unseen: boolean;
   text: string;
 };
 
@@ -303,7 +314,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|radius|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|radius|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|site|seen|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -323,7 +334,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'radius' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'radius' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'site' | 'seen' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -552,6 +563,8 @@ function readParts(parts: QueryPart[]): SearchQuery {
     powerSources: [],
     powerKinds: [],
     holidays: [],
+    sites: [],
+    unseen: false,
     text: '',
   };
 
@@ -606,6 +619,12 @@ function readParts(parts: QueryPart[]): SearchQuery {
       // Names the search, matches nothing: the search box saves it (takeName).
     } else if (part.field === 'holiday') {
       if (part.value) addUnique(query.holidays, part.value);
+    } else if (part.field === 'site') {
+      const host = siteHost(part.value);
+      if (host) addUnique(query.sites, host);
+    } else if (part.field === 'seen') {
+      // Only seen:no is read; seen:yes and anything else is left out.
+      if (/^(no|false|0|not)$/i.test(part.value.trim())) query.unseen = true;
     } else if (part.field === 'taste') {
       // An axis the profile doesn't have is left out rather than matching nothing.
       const value = part.value.trim().toLowerCase();
@@ -722,7 +741,9 @@ export function hasFilters(query: SearchQuery): boolean {
     query.coolings.length ||
     query.powerSources.length ||
     query.powerKinds.length ||
-    query.holidays.length
+    query.holidays.length ||
+    query.sites.length ||
+    query.unseen
   );
 }
 
@@ -739,6 +760,20 @@ export function dependsOnZone(query: SearchQuery): boolean {
     query.updatedBounds.length ||
     query.holidays.length
   );
+}
+
+// A host as site: names it: lowercase, without scheme, credentials, www., port
+// or path. Null when nothing host-like is left.
+export function siteHost(value: string): string | null {
+  const host = value
+    .trim()
+    .toLowerCase()
+    .replace(/^[a-z][a-z0-9+.-]*:\/\//, '')
+    .replace(/^[^/?#@]*@/, '')
+    .replace(/[/?#:].*$/, '')
+    .replace(/^www\./, '')
+    .replace(/\.$/, '');
+  return /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)*$/.test(host) ? host : null;
 }
 
 const DAY = '(-?\\d{4,6}-\\d{2}-\\d{2})';

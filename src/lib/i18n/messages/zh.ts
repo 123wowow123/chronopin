@@ -1405,6 +1405,7 @@ const zh: Messages = {
     high: '可信度高',
     medium: '可信度中',
     low: '可信度低',
+    notSeen: '未看过',
   },
   tagCloud: {
     tagsSummary: '标签：{summary}',

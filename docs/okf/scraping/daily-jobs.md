@@ -674,6 +674,13 @@ A pin that is not a product (an event, award, shop, campaign, one-off auction, c
 **When.** In the news job after productLifecycle, so a new goods pin gets its tags and then its rivals. Limit: about five pins a run.
 **Traps.** Extraction now returns 2-5 `competitors` for a one-product pin (name, maker, summary; no source) and the pin save stores them unsourced, so each new goods pin is a gap until this task sources or replaces them. Never name a rival that released later than the pin unless the source calls it the pin's rival, and never use a ranking list as a head-to-head. A restored backfill (2026-10-26) left about 180 non-product or no-rival pins that this task will keep listing; skip them with a reason. Sites that answer 403 to fetches (Edmunds, Ford Authority, Primagames) need Chrome through `@browser`.
 
+### pinGangHandoff
+
+Added 2026-11-02 (owner: move @ThePinGang pins to proper curators; "that should be part of 6am/pm job"). Run in the news job's maintenance lane, before the factory profiles, so a profile saved on a moved pin can push to production.
+**Does** `python3 scripts/jobs/pingang_handoff.py` (dry run), then `--apply`: every live pin by user 1 whose categories map to a desk and that is good (at least 2 references, over 600 characters of summary, at least 1 picture, no garbled title) moves to that desk through `POST /api/admin/pins/author`, local and production (production matched by sourceUrl). Data-centre titles go to `@DataCenterDesk`. Thin or desk-less pins stay with @ThePinGang and are listed in `.scrape/pingang-held.json`; enrich them (references, picture, summary) in later runs and rerun, never move them as they are.
+**Enrich the held ones** with `python3 scripts/jobs/pingang_enrich_media.py --apply --prod`: it adds up to 3 source/reference og:images (at least 600px wide, no logos, no picture shared by 3+ pins, which is a site-wide card) to held pins with none, local then production by sourceUrl, then rerun the handoff. Authors are preserved. Pins still held need references or a longer summary researched by hand.
+**First run 2026-11-02:** 321 moved (Build 60, Game 52, Device 47, Health 39, Energy 24, Chip 17, Motor 17, Tech 13, ...); 163 held, 138 of them data-centre pins with no picture. Enrichment added pictures to 44 pins and 17 more moved (144 held).
+
 ### factoryProfiles
 
 Added 2026-10-27 (owner: the scraper should give every plant pin the project-timeline and buildout panel automatically; see AGENTS.md "Factory buildout profiles"). Replays what the 2026-10-27 sweep did by hand ([factory-capability.md](../api/factory-capability.md)).

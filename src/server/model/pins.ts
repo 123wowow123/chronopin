@@ -81,6 +81,8 @@ export type PinSearchFilters = {
   powerSources?: string[];
   powerKinds: ('generation' | 'usage' | 'storage')[];
   holidays: string[];
+  sites: string[];
+  unseen: boolean;
 };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
@@ -95,6 +97,8 @@ export type SearchFilter = PinSearchFilters & {
   // (searchClauses).
   text?: string;
   favoriteUserId?: number | null;
+  // The signed-in viewer, whose opened pins seen:no leaves out.
+  viewerId?: number | null;
   excludePredicted?: boolean;
   createdSince?: Date | null;
   startFrom?: Date | null;
@@ -1102,6 +1106,7 @@ const DELAY_AMOUNT: Record<DelayBound['unit'], string> = {
 // candidates and each scores as the search service said; without, every pin
 // scores 1.
 export function searchClauses(filter: SearchFilter) {
+  const viewerId = filter.viewerId;
   const params: unknown[] = [];
   const add = (value: unknown) => {
     params.push(value);
@@ -1425,6 +1430,15 @@ export function searchClauses(filter: SearchFilter) {
         return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`;
       });
       where.push(days.length ? `(${days.join(' OR ')})` : 'FALSE');
+    }
+    // site: - the host of the source link, or a subdomain of it.
+    if (filter.sites.length) {
+      const hosts = filter.sites.map((host) => add(`^[a-z][a-z0-9+.-]*://([^/?#@]*@)?([^/?#]*\\.)?${host.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(:[0-9]*)?([/?#]|$)`));
+      where.push(`(${hosts.map((pattern) => `"Pin"."sourceUrl" ~* ${pattern}`).join(' OR ')})`);
+    }
+    // seen:no - pins this viewer has no view of. Nobody signed in has none.
+    if (filter.unseen && viewerId) {
+      where.push(`NOT EXISTS (SELECT 1 FROM "PinView" AS "seen" WHERE "seen"."pinId" = "Pin"."id" AND "seen"."userId" = ${add(viewerId)})`);
     }
     if (filter.postedDays.length) {
       where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);

@@ -223,13 +223,13 @@ export type ReservedTag = {
   // The term a pick writes.
   // posted and updated are time-relative: their value is a relative day
   // (today, >=yesterday) the search resolves in the viewer's zone when it runs.
-  field: 'tag' | 'confidence' | 'posted' | 'updated' | 'mw' | 'power' | 'cost' | 'energy';
+  field: 'tag' | 'seen' | 'confidence' | 'posted' | 'updated' | 'mw' | 'power' | 'cost' | 'energy';
   value: string;
   // For mw: and cost:, the floor the pill sets (megawatts, US dollars).
   min?: number;
   // Evidence-backed site metadata, persisted rather than derived.
   stored?: boolean;
-  icon: 'thread' | 'shield' | 'sparkle' | 'clock' | 'bolt' | 'tag';
+  icon: 'eye-off' | 'thread' | 'shield' | 'sparkle' | 'clock' | 'bolt' | 'tag';
 };
 
 // The date confidence levels, firmest first, as their badge writes them
@@ -250,6 +250,8 @@ export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
+  // Only for a signed-in viewer (the cloud shows it to them alone, uncounted): it reads their own history.
+  { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
   // Size: the electrical capacity PinPower records and the cost in US dollars.
   // Power a pin's facility makes against power it draws.
   { key: 'powerGeneration', name: 'Power generation', field: 'power', value: 'generation', icon: 'bolt' },
@@ -291,11 +293,14 @@ export function reservedPicked(query: {
   costs?: { op: string; value: number }[];
   energies?: { op: string; value: number }[];
   powerKinds?: string[];
+  unseen?: boolean;
 }): string[] {
   // New and Updated stand for any posted: / updated: term, so a pick made
   // yesterday still reads as picked (and can be taken out) today.
   const has = (r: ReservedTag) =>
-    r.field === 'posted'
+    r.field === 'seen'
+      ? query.unseen === true
+      : r.field === 'posted'
       ? !!(query.postedDays?.length || query.postedBounds?.length)
       : r.field === 'updated'
         ? !!(query.updatedDays?.length || query.updatedBounds?.length)

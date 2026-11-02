@@ -253,6 +253,7 @@ async function searchFilter(rawQuery: SearchQuery, options: SearchOptions): Prom
     excludePredicted: options.excludePredicted,
     hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
+    viewerId: options.userId || null,
     timeZone: timeZoneOrUtc(options.timeZone),
   };
 }

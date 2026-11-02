@@ -29,6 +29,14 @@ for permission. This does not authorize production deployment.
 3. **Headless, no manual work:** `npm run jobs:run -- --all --driver session` (Claude Code's own login, no
    API key). Same as the admin page's "Run all jobs now". Use only when the user wants it unattended.
 
+**Rebinding the MCP to a new run (VS Code, 2026-11-02):** `claude` is not on PATH there. Use the extension's
+binary, `~/.vscode/extensions/anthropic.claude-code-*/resources/native-binary/claude`: run
+`mcp remove chronopin`, then the printed `mcp add chronopin -- ... --run <id>` line, then reconnect `chronopin`
+in `/mcp`. The tools are bound to one run id, so a stale id (previous run) means the reconnect is needed.
+This build has no `begin_job` / `finish_job` tool; close with `npm run jobs:run -- --finish <id> --report <file>`.
+Revisit marks on seasonal pins whose official 2027 pages are still the 2026 edition stay open: record them as
+checked in the run note, do not edit or resolve them.
+
 Which news run: 06:00 and 18:00 PT are both the `news` job. Only one run or job may be open at a time; if
 `begin_job` refuses, find and finish or abandon the open run first (`/admin/jobs`), never start a second.
 A run left open past 3 hours is cut off as abandoned.
@@ -52,3 +60,26 @@ A run left open past 3 hours is cut off as abandoned.
 - Read saved changes back on local and prod, confirm queues drained, then resolve review marks.
 - Write the run note `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md` (copy the previous note's OKF
   frontmatter) and run `npx vitest run src/lib/okfLint.test.ts`.
+
+## Unattended full-run checklist (owner, 2026-11-02: automate the whole job)
+
+Work the lanes in this order inside one open run, writing each lane's result into the slot's run note as it
+finishes (so a cut-off run leaves a usable note), then close once with `jobs:run --finish <id> --report <file>`:
+
+1. Prepare (`jobs:run --job news --prepare`), rebind the MCP (see above), load tools with ONE ToolSearch call:
+   `revisit_queue, pending_event_info, record_event_info, pending_sentiment, record_sentiment, review_research_gaps,
+   prediction_markets, predicted_pins, update_pin, get_pin, resolve_revisit, record_learning, WebSearch, WebFetch`.
+2. Lane 1 revisits: fetch operator pages in parallel (4 per batch); edit only on a verified fact; otherwise note
+   "checked, no new evidence" and leave the mark.
+3. Lane 2 event info: loop `pending_event_info(limit 2)` -> `record_event_info` 20 times. Read from the pages
+   handed back (no extra fetch needed); decimals are fine for prices but tiers take whole numbers; a prior-edition
+   lineup or price is never recorded; future "early bird opens <date>" = PreOrder with that date.
+4. Lane 3 markets (`prediction_markets` once), lane 4 `pending_sentiment` until empty, lane 5 ads/products.
+5. Write `news-YYYY-MM-DD-{am,pm}.md`, run `npx vitest run src/lib/okfLint.test.ts`, then finish.
+Spend parallel tool calls on independent fetches; stop and report a task only for a concrete blocker.
+
+## Added after run 49
+
+- Daily-job script helpers live in `scripts/jobs/` (`pingang_handoff.py`, `pingang_enrich_media.py`); scratch scripts go in the session scratchpad, not the repo.
+- Prediction-market pins: dollar volume and odds carry the observation date; thread to the existing parent (the Iran ceasefire pin 1952 is the parent for new ceasefire markets); call `prediction_accuracy` with `apply: true` after creating pins.
+- Before closing, list every open lane and unworked task in the run note (see `news-2026-11-02-am.md`) so the next slot starts there.

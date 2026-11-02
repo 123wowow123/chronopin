@@ -1405,6 +1405,7 @@ const ja: Messages = {
     high: '確度高',
     medium: '確度中',
     low: '確度低',
+    notSeen: '未読',
   },
   tagCloud: {
     tagsSummary: 'タグ：{summary}',

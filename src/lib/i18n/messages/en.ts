@@ -1415,6 +1415,7 @@ const en = {
     high: 'High confidence',
     medium: 'Medium confidence',
     low: 'Low confidence',
+    notSeen: 'Not seen',
   },
   tagCloud: {
     tagsSummary: 'Tags: {summary}',

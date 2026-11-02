@@ -1401,6 +1401,7 @@ const th: Messages = {
     high: 'ความเชื่อมั่นสูง',
     medium: 'ความเชื่อมั่นปานกลาง',
     low: 'ความเชื่อมั่นต่ำ',
+    notSeen: 'ยังไม่ได้ดู',
   },
   tagCloud: {
     tagsSummary: 'แท็ก: {summary}',

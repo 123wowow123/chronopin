@@ -145,6 +145,8 @@ describe('parseSearchQuery', () => {
       powerSources: [],
       powerKinds: [],
       holidays: [],
+      sites: [],
+      unseen: false,
       text: 'ios',
     });
   });
@@ -470,5 +472,15 @@ describe('directive case', () => {
     const parts = splitSearchQuery('TAG:Anime -Tag:"Foo Bar" "Company:Apple" Place:Tokyo hello');
     expect(parts.filter((p) => p.kind === 'term').map((p) => p.raw)).toEqual(['tag:Anime', '-tag:"Foo Bar"', '"company:Apple"', 'place:Tokyo']);
     expect(parseSearchQuery('TAG:Anime').tags).toEqual(['Anime']);
+  });
+});
+
+describe('site: and seen:', () => {
+  it('reads hosts from bare names, URLs and www', () => {
+    expect(parseSearchQuery('site:www.BBC.com site:"https://news.nytimes.com/a/b?x=1" site:bad_host').sites).toEqual(['bbc.com', 'news.nytimes.com']);
+  });
+  it('reads seen:no only', () => {
+    expect(parseSearchQuery('seen:no').unseen).toBe(true);
+    expect(parseSearchQuery('seen:yes').unseen).toBe(false);
   });
 });

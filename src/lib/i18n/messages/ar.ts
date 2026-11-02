@@ -1690,6 +1690,7 @@ const ar: Messages = {
     high: 'ثقة عالية',
     medium: 'ثقة متوسطة',
     low: 'ثقة منخفضة',
+    notSeen: 'لم تُشاهد',
   },
   tagCloud: {
     tagsSummary: 'الوسوم: {summary}',

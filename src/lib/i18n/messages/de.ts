@@ -1411,6 +1411,7 @@ const de: Messages = {
     high: 'Hohe Sicherheit',
     medium: 'Mittlere Sicherheit',
     low: 'Geringe Sicherheit',
+    notSeen: 'Nicht gesehen',
   },
   tagCloud: {
     tagsSummary: 'Tags: {summary}',

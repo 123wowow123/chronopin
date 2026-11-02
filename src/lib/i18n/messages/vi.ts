@@ -1414,6 +1414,7 @@ const vi: Messages = {
     high: 'Độ tin cậy cao',
     medium: 'Độ tin cậy trung bình',
     low: 'Độ tin cậy thấp',
+    notSeen: 'Chưa xem',
   },
   tagCloud: {
     tagsSummary: 'Thẻ: {summary}',

@@ -514,3 +514,16 @@ should be released. add varients to this based on pin show me full list of varie
 
 
 companies like tesla should have parent landing page pin detail page with a thread panel that breaks out to all sub product and with their pin thread of timelines. Should become a tree structure of the company with their projects. The main pins is constantly updated so will not show on main timeline but rather will be a company landing page pin
+
+
+use browser for this
+Senate trade filings are blocked by the Senate site's bot filter, and one OGE PDF is unreadable.
+
+I researched four model pins from pages I opened this run and saved them locally and on production. 132 of the 137 model pins still lack a rubric or spec tables.
+
+run
+EnergyDesk tracker batch clean-up (November 2, 2026)
+
+
+pin and make thread of iterative improvement models and add specs
+Canon FPA-1200NZ2C

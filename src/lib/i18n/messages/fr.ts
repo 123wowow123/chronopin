@@ -1411,6 +1411,7 @@ const fr: Messages = {
     high: 'Confiance élevée',
     medium: 'Confiance moyenne',
     low: 'Confiance faible',
+    notSeen: 'Non vus',
   },
   tagCloud: {
     tagsSummary: 'Tags : {summary}',

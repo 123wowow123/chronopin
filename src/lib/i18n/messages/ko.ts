@@ -1405,6 +1405,7 @@ const ko: Messages = {
     high: '높은 신뢰도',
     medium: '중간 신뢰도',
     low: '낮은 신뢰도',
+    notSeen: '안 본 핀',
   },
   tagCloud: {
     tagsSummary: '태그: {summary}',

@@ -334,3 +334,13 @@ Applies to a batch of pins generated from tracker listings (the EnergyDesk Clean
   Report counts per verdict and list every deleted id. Never delete a pin the audit marked SUPPORTED or PARTLY.
 - **Verdict mix to expect:** the first 100 pins gave 15 supported, 57 partly right and 28 with no match. Partly right
   usually means a real EIA or queue row with an invented name, address, developer or date, so fix it from the row.
+- **Result of the EnergyDesk batch clean-up (2026-11-02, 460 pins, ids 18400-18895).** 110 deleted (no real project, or a
+  duplicate), about 300 rewritten from tracker/queue rows, 41 held for a person: a real named project sits nearby but at a
+  different size, county or status (e.g. 18850/18881 Consumers-Voyager battery, 18883 Ross County Solar). The "X Clean
+  Solar/Energy Storage Center" names (ids 18846-18895) were almost all invented. Lessons: (1) the admin token lasts about
+  five hours, so refresh it (`.scrape/refresh-admin-token.sh`, password typed by the owner) before each wave; (2) agents
+  hit the account's 5-hour usage limit mid-wave, so finished lanes are safe in `scratchpad/audit/laneNN_out.json` and a
+  stalled agent resumes with SendMessage; (3) `scratchpad/wave.py <lanes>` applies a lane, deletes no-match pins
+  (>= 3 searches and only a withdrawn/label/aggregator neighbour) and logs the rest to `held.json`; (4) a patch with
+  `startDate: null` keeps the pin's old date and sets `dateConfidence: unknown`; (5) `http://` references must be
+  upgraded to `https://` and reference `publishedDate` must be a full YYYY-MM-DD or omitted.

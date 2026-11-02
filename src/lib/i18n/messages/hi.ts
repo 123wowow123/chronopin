@@ -1421,6 +1421,7 @@ const hi: Messages = {
     high: 'उच्च कॉन्फ़िडेंस',
     medium: 'मध्यम कॉन्फ़िडेंस',
     low: 'कम कॉन्फ़िडेंस',
+    notSeen: 'नहीं देखे गए',
   },
   tagCloud: {
     tagsSummary: 'टैग: {summary}',

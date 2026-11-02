@@ -1402,6 +1402,7 @@ const it: Messages = {
     high: 'Affidabilità alta',
     medium: 'Affidabilità media',
     low: 'Affidabilità bassa',
+    notSeen: 'Non visti',
   },
   tagCloud: {
     tagsSummary: 'Tag: {summary}',
