@@ -184,7 +184,7 @@ export default class Pins extends BasePins<Pin> {
       WHERE "p"."utcStartDateTime" >= $1::timestamptz AND "p"."utcStartDateTime" < $2::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
-        AND ${clearsBar('p', '$4')}
+        AND ${clearsBarOrDayEmpty('p', '$4', '$7::text')}
         AND ${withinRing('p', 5, 6)}
         AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ${clearsBar('timelineOther', '$4')} AND ${withinRing('timelineOther', 5, 6)}`)}`,
       [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null, timeZone],
@@ -772,6 +772,22 @@ const predictedPinOf = (as: string) =>
 export const clearsBar = (as: string, param: string) =>
   `(${param}::integer IS NULL OR COALESCE(${pinConfidenceOf(as)}, ${param}) >= ${param} OR ${predictedPinOf(as)})`;
 
+// clearsBar, or else nothing else clears it on pin "as"'s day: a day keeps its
+// below-the-bar pins when it has no confident one, so it is never left empty.
+// The day is the viewer's (timed pins on their local date, all-day pins on
+// their UTC date, as pinDayKey reads it); "tz" is the SQL of their time zone.
+// Reads the other pins' start only, so it stays a range scan of one day.
+export const clearsBarOrDayEmpty = (as: string, param: string, tz: string) => {
+  const zone = `CASE WHEN "${as}"."allDay" THEN 'UTC' ELSE ${tz} END`;
+  const dayStart = `(date_trunc('day', "${as}"."utcStartDateTime" AT TIME ZONE ${zone}) AT TIME ZONE ${zone})`;
+  const dayEnd = `((date_trunc('day', "${as}"."utcStartDateTime" AT TIME ZONE ${zone}) + interval '1 day') AT TIME ZONE ${zone})`;
+  return `(${clearsBar(as, param)} OR NOT EXISTS (
+    SELECT 1 FROM "Pin" AS "dayPin"
+    WHERE "dayPin"."utcDeletedDateTime" IS NULL AND "dayPin"."id" <> "${as}"."id"
+      AND "dayPin"."utcStartDateTime" >= ${dayStart} AND "dayPin"."utcStartDateTime" < ${dayEnd}
+      AND ${clearsBar('dayPin', param)}))`;
+};
+
 // Every pin id a user's Watch view shows: the pins they watch directly, plus
 // (unless excludePredicted is true) predicted pins of companies they follow.
 const watchedPinIdsOf = (userParam: string, excludePredicted = false) =>
@@ -919,7 +935,7 @@ function queryPage(
         AND "p"."utcDeletedDateTime" IS NULL
         ${onlyFavorites ? `AND "p"."id" IN (${watchedPinIdsOf('$1')})` : ''}
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
-        AND ${clearsBar('p', '$6')}
+        AND ${onlyFavorites ? clearsBar('p', '$6') : clearsBarOrDayEmpty('p', '$6', '$9::text')}
         AND ${withinRing('p', 7, 8)}
         ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ${clearsBar('timelineOther', '$6')} AND ${withinRing('timelineOther', 7, 8)}`)})`}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
