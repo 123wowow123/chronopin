@@ -13581,5 +13581,1285 @@
         "current": 1
       }
     ]
+  },
+  {
+    "sourceUrl": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-covid-19-vaccine",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Comirnaty: emergency use to approval",
+        "stages": [
+          "Emergency use",
+          "Expanded use",
+          "Approval"
+        ],
+        "current": 2,
+        "rows": [
+          [
+            "Dec 11, 2020",
+            "FDA issues first emergency use authorization for people 16 and older",
+            "Demonstrated",
+            "FDA"
+          ],
+          [
+            "May 10, 2021",
+            "EUA expanded to ages 12 through 15",
+            "Demonstrated",
+            "FDA"
+          ],
+          [
+            "Aug 23, 2021",
+            "FDA approves the vaccine as Comirnaty for people 16 and older; EUA continues for 12-15 and third doses",
+            "Demonstrated",
+            "BioSpace"
+          ]
+        ],
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "display": "timeline",
+        "sourceUrl": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-covid-19-vaccine"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.gsk.com/en-gb/media/press-releases/blenrep-approved-by-us-fda-for-use-in-treatment-of-relapsedrefractory-multiple-myeloma/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Blenrep: approval, withdrawal and return",
+        "stages": [
+          "Accelerated approval",
+          "Withdrawal",
+          "Pivotal trials",
+          "Re-approval"
+        ],
+        "current": 3,
+        "rows": [
+          [
+            "Aug 2020",
+            "FDA accelerated approval after DREAMM-2 (31% response rate)",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 2022",
+            "GSK begins withdrawing the US authorization after DREAMM-3 missed requirements",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Feb 5, 2024",
+            "DREAMM-7 progression-free survival results announced",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Dec 2024",
+            "DREAMM-7 overall survival: 51% lower risk of death (HR 0.49) in 3L+",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Jul 24, 2025",
+            "EU approval",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Oct 23, 2025",
+            "FDA approves Blenrep with bortezomib and dexamethasone after at least two prior lines",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Early 2028",
+            "Overall survival data for DREAMM-7 and DREAMM-8 and interim DREAMM-10 data",
+            "Expected",
+            "GSK"
+          ]
+        ],
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "display": "timeline",
+        "sourceUrl": "https://www.gsk.com/en-gb/media/press-releases/blenrep-approved-by-us-fda-for-use-in-treatment-of-relapsedrefractory-multiple-myeloma/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.merck.com/news/merck-receives-accelerated-approval-of-keytruda-pembrolizumab-the-first-fda-approved-anti-pd-1-therapy/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Keytruda: IND to global approvals",
+        "stages": [
+          "IND",
+          "Phase I",
+          "Breakthrough",
+          "US approval",
+          "EU approval"
+        ],
+        "current": 4,
+        "rows": [
+          [
+            "2010",
+            "Merck files the IND for the anti-PD-1 antibody",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Early 2011",
+            "Phase I study begins",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "2013",
+            "Breakthrough therapy designation; phase I melanoma results published in NEJM",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Sep 4, 2014",
+            "FDA accelerated approval for advanced melanoma, the first anti-PD-1 in the US",
+            "Demonstrated",
+            "Merck"
+          ],
+          [
+            "Jul 2015",
+            "EU marketing approval",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 2015",
+            "FDA approves it for PD-L1 positive metastatic non-small cell lung cancer",
+            "Demonstrated",
+            "Wikipedia"
+          ]
+        ],
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "display": "timeline",
+        "sourceUrl": "https://www.merck.com/news/merck-receives-accelerated-approval-of-keytruda-pembrolizumab-the-first-fda-approved-anti-pd-1-therapy/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Aflibercept",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Eylea: development to high dose",
+        "stages": [
+          "Development",
+          "US approval",
+          "EU approval",
+          "New indications",
+          "High dose"
+        ],
+        "current": 4,
+        "rows": [
+          [
+            "2006",
+            "Regeneron and Bayer agree to develop aflibercept for eye diseases",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 2011",
+            "FDA approves Eylea for wet macular degeneration",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 2012",
+            "EMA authorizes Eylea for wet macular degeneration",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jul 2014",
+            "Eylea approved for diabetic macular edema",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "May 2019",
+            "FDA expands the indication to all stages of diabetic retinopathy",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Aug 2023",
+            "FDA approves the 8 mg Eylea HD formulation",
+            "Demonstrated",
+            "Wikipedia"
+          ]
+        ],
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "display": "timeline",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Aflibercept"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://globalgenes.org/raredaily/fda-proposes-pulling-amgen-rare-disease-drug-from-market/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Tavneos: approval to proposed withdrawal",
+        "stages": [
+          "Approval",
+          "Safety signal",
+          "Withdrawal proposal"
+        ],
+        "current": 2,
+        "rows": [
+          [
+            "Oct 7, 2021",
+            "Tavneos approved as add-on for GPA and MPA",
+            "Demonstrated",
+            "Global Genes"
+          ],
+          [
+            "Mar 31, 2026",
+            "FDA drug safety communication on vanishing bile duct syndrome",
+            "Demonstrated",
+            "Global Genes"
+          ],
+          [
+            "Apr 28, 2026",
+            "FDA CDER proposal to withdraw approval reported; Amgen may request a hearing",
+            "Demonstrated",
+            "Global Genes"
+          ]
+        ],
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "display": "timeline",
+        "sourceUrl": "https://globalgenes.org/raredaily/fda-proposes-pulling-amgen-rare-disease-drug-from-market/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://boeing.mediaroom.com/2026-08-03-U-S-FAA-certifies-new-Boeing-737-7-airplane",
+    "charts": [],
+    "tables": [
+      {
+        "title": "737-7: flight test to first delivery",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Mar 16, 2018",
+            "First 737 MAX 7 flight from Renton, Washington",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Aug 2023",
+            "Boeing announces the engine anti-ice issue: an overheated composite nacelle inlet could crack and detach",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 2025",
+            "Boeing completes the anti-ice redesign",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Aug 3, 2026",
+            "FAA issues the amended type certificate and adds the 737-7 to Production Certificate No. 700",
+            "Demonstrated",
+            "Boeing Mediaroom"
+          ],
+          [
+            "Q1 2027",
+            "Southwest's target to receive the type and enter revenue service; no delivery has been made",
+            "Planned",
+            "Aerocrewnews"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Flight test",
+          "Certification",
+          "Delivery",
+          "Service"
+        ],
+        "current": 1,
+        "note": "Boeing did not seek EASA validation alongside FAA certification; the first delivery is not yet dated by Boeing."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.nasa.gov/aeronautics/x-59-first-supersonic-flight/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "X-59: contract to community tests",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 2, 2018",
+            "NASA awards Lockheed Martin the $247.5 million X-59 build contract",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jan 12, 2024",
+            "Public unveiling of the assembled X-59",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 28, 2025",
+            "First flight, subsonic, from Air Force Plant 42",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jun 5, 2026",
+            "First supersonic flight: 81 minutes, Mach 1.1 at 43,400 feet",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "2027",
+            "Community-response results due to ICAO and the FAA (2022 plan); a Mach 1.4 flight at 55,000 feet comes first, undated",
+            "Expected",
+            "Wikipedia"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Contract",
+          "Unveiling",
+          "First flight",
+          "Supersonic",
+          "Community tests"
+        ],
+        "current": 3
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://investors.boeing.com/investors/news/press-release-details/2025/U-S--Air-Force-Selects-Boeing-for-Next-Generation-Air-Dominance-Fighter-Platform/default.aspx",
+    "charts": [],
+    "tables": [
+      {
+        "title": "F-47: award to first flight",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2020",
+            "Air Force discloses that at least one NGAD demonstrator has already flown",
+            "Demonstrated",
+            "Breaking Defense"
+          ],
+          [
+            "Mar 21, 2025",
+            "Boeing wins the engineering and manufacturing development contract, reported at more than $20 billion",
+            "Demonstrated",
+            "Breaking Defense"
+          ],
+          [
+            "Sep 2025",
+            "Air Force chief says manufacturing of the first F-47 has begun",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "2028",
+            "First flight now expected, later than the early-2029 end-of-term target given in March 2025",
+            "Expected",
+            "Wikipedia"
+          ],
+          [
+            "2029",
+            "Aircraft to be operational by 2029; the service aims to field it in the 2030s",
+            "Expected",
+            "Wikipedia"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Demonstrator",
+          "Award",
+          "Build",
+          "First flight",
+          "Operational"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.aerospacetestinginternational.com/news/tempest-demonstrator-in-final-assembly-as-gcap-engine-nears-ground-test.html",
+    "charts": [],
+    "tables": [
+      {
+        "title": "GCAP demonstrator: decision to first flight",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jul 2022",
+            "UK government decides to build a flying technology demonstrator to de-risk Tempest",
+            "Demonstrated",
+            "Warsight"
+          ],
+          [
+            "May 2024",
+            "Design passes its critical design review",
+            "Demonstrated",
+            "Warsight"
+          ],
+          [
+            "Jul 16, 2025",
+            "BAE reveals the design; final wing skins delivered to Warton on Jul 14",
+            "Demonstrated",
+            "Warsight"
+          ],
+          [
+            "Jun 2026",
+            "Rear fuselage skin drilling begins; final wet build of the fuselage under way at Samlesbury",
+            "Demonstrated",
+            "Warsight"
+          ],
+          [
+            "Late 2027",
+            "Rollout planned before the end of 2027",
+            "Planned",
+            "Warsight"
+          ],
+          [
+            "2028",
+            "First flight date not set; reports suggest late 2027 or 2028 against an original target of July 2027",
+            "Expected",
+            "Warsight"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Decision",
+          "Design",
+          "Assembly",
+          "Rollout",
+          "First flight"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cnevpost.com/2026/06/17/byd-launches-da-tang-ev/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Da Tang EV: pre-sales to deliveries",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 24, 2026",
+            "Pre-sales open at the Beijing Auto Show",
+            "Demonstrated",
+            "CnEVPost"
+          ],
+          [
+            "Jun 17, 2026",
+            "China launch in four variants from 239,900 to 309,900 yuan, with more than 150,000 pre-orders",
+            "Demonstrated",
+            "CnEVPost"
+          ],
+          [
+            "Jul 23, 2026",
+            "10,000th Da Tang EV delivered, about a month after launch",
+            "Demonstrated",
+            "CnEVPost"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Debut",
+          "Pre-sales",
+          "Launch",
+          "Deliveries"
+        ],
+        "current": 3
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.byd.com/cn/dynasty-home/models/han/da-han-ev",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Da Han EV: debut to deliveries",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Aug 21, 2026",
+            "Official debut and pre-sales open at the Chengdu Auto Show, from 249,900 to 299,900 yuan",
+            "Demonstrated",
+            "CnEVPost"
+          ],
+          [
+            "Sep 25, 2026",
+            "BYD announces the Oct 13 launch date",
+            "Demonstrated",
+            "CnEVPost"
+          ],
+          [
+            "Oct 13, 2026",
+            "Da Han EV goes on sale in China",
+            "Demonstrated",
+            "CnEVPost"
+          ],
+          [
+            "Oct 2026",
+            "Customer deliveries scheduled to begin within two weeks of launch",
+            "Planned",
+            "CarNewsChina"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Debut",
+          "Pre-sales",
+          "Launch",
+          "Deliveries"
+        ],
+        "current": 2,
+        "note": "BYD has not published a delivery start date or a Da Han production start date."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.press.rolls-roycemotorcars.com/rolls-royce-motor-cars-pressclub/article/detail/T0437892EN/spectre-sets-off-from-the-home-of-rolls-royce-for-european/uk-media-drive?language=en",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Spectre: announcement to first deliveries",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Sep 2021",
+            "Rolls-Royce announces Spectre and confirms testing has started",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 2022",
+            "Spectre unveiled at the Home of Rolls-Royce in West Sussex after a 2.5 million km test programme",
+            "Demonstrated",
+            "Rolls-Royce Motor Cars"
+          ],
+          [
+            "Jun 1, 2023",
+            "UK dealer debut at the Berkeley Street showroom in Mayfair",
+            "Demonstrated",
+            "Rolls-Royce Motor Cars"
+          ],
+          [
+            "Oct 23, 2023",
+            "European and UK media drive; client deliveries described as just begun",
+            "Demonstrated",
+            "Rolls-Royce Motor Cars"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Announced",
+          "Testing",
+          "Reveal",
+          "Deliveries"
+        ],
+        "current": 3
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.byd.com/us/news-list/YANGWANG-Launched-the-U9-Priced-at-1-68-Million-RMB",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Yangwang U9: debut to records",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jan 8, 2023",
+            "Yangwang U9 electric supercar debuts at the Shenzhen launch event",
+            "Demonstrated",
+            "BYD"
+          ],
+          [
+            "Feb 25, 2024",
+            "U9 launched at 1.68 million yuan, with deliveries promised for the summer",
+            "Demonstrated",
+            "BYD"
+          ],
+          [
+            "Sep 2024",
+            "Deliveries start",
+            "Demonstrated",
+            "CarNewsChina"
+          ],
+          [
+            "Jan 21, 2025",
+            "100 U9s delivered in five months",
+            "Demonstrated",
+            "CarNewsChina"
+          ],
+          [
+            "Aug 22, 2025",
+            "U9 Xtreme laps the Nurburgring Nordschleife in 6:59.157",
+            "Demonstrated",
+            "BYD"
+          ],
+          [
+            "Sep 14, 2025",
+            "U9 Xtreme record top-speed run in Papenburg, Germany; limited series of no more than 30 units",
+            "Demonstrated",
+            "BYD"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Debut",
+          "Launch",
+          "Deliveries",
+          "Records"
+        ],
+        "current": 3,
+        "note": "Deliveries start is CarNewsChina's reporting; BYD's launch release said only summer 2024."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/245",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Juice path from launch to Jupiter",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 14, 2023",
+            "Launch on Ariane 5 from Kourou, French Guiana",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Aug 20, 2024",
+            "World-first lunar-Earth flyby (Moon Aug 19, Earth Aug 20) reroutes Juice to Venus",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Sep 28, 2026",
+            "Third gravity-assist: Earth flyby",
+            "Demonstrated",
+            "Sky at Night Magazine"
+          ],
+          [
+            "Jan 2029",
+            "Final Earth flyby",
+            "Planned",
+            "ESA"
+          ],
+          [
+            "Jul 2031",
+            "Arrival at Jupiter",
+            "Planned",
+            "ESA"
+          ]
+        ],
+        "stages": [
+          "Launch",
+          "Gravity assists",
+          "Jupiter arrival",
+          "Ganymede orbit"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/237",
+    "charts": [],
+    "tables": [
+      {
+        "title": "BepiColombo path from launch to Mercury orbit",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Oct 20, 2018",
+            "Launch on Ariane 5 from Kourou",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Oct 1, 2021",
+            "First of six Mercury flybys",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Jan 8, 2025",
+            "Sixth and final Mercury flyby",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Sep 3, 2026",
+            "Mercury Transfer Module separates, starting the arrival phase",
+            "Demonstrated",
+            "ESA"
+          ],
+          [
+            "Nov 21, 2026",
+            "MPO and Mio enter Mercury orbit together",
+            "Planned",
+            "ESA"
+          ],
+          [
+            "Dec 2026",
+            "Mio deployed into its own orbit (early December)",
+            "Planned",
+            "ESA"
+          ],
+          [
+            "Apr 2027",
+            "Science operations begin",
+            "Planned",
+            "ESA"
+          ]
+        ],
+        "stages": [
+          "Launch",
+          "Cruise and flybys",
+          "Mercury arrival",
+          "Science"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/6199",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Artemis II path from pad rollout to splashdown",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jan 2026",
+            "SLS and Orion arrive at Launch Pad 39B for wet dress rehearsal preparations",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Apr 1, 2026",
+            "SLS launches Artemis II with four astronauts from Pad 39B",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Apr 6, 2026",
+            "Crew passes the Apollo 13 distance record on the lunar flyby",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Apr 10, 2026",
+            "Orion splashes down in the Pacific off San Diego after a nearly 10-day flight",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "2027",
+            "Artemis III low Earth orbit test of Orion docking with commercial landers",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Pad rollout",
+          "Launch",
+          "Lunar flyby",
+          "Splashdown"
+        ],
+        "current": 3
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/1992",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Starship lander path to ship-to-ship docking",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jul 2021",
+            "NASA awards SpaceX the Starship HLS lander contract (Appendix H, Option A)",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Mar 14, 2024",
+            "Flight 3 moves propellant between two tanks inside one Starship",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Oct 13, 2025",
+            "Flight 11 flies, the last test of the second Starship version",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Q1 2027",
+            "Ship-to-ship propellant transfer demonstration, no earlier than; not yet scheduled",
+            "Planned",
+            "Wikipedia"
+          ],
+          [
+            "2027",
+            "Artemis III: Orion docks with a Starship pathfinder in low Earth orbit",
+            "Planned",
+            "NASA"
+          ],
+          [
+            "2028",
+            "Artemis IV: first planned crewed landing, lander not yet chosen",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Contract",
+          "Flight tests",
+          "Propellant transfer",
+          "Lunar landing"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/1993",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Artemis path from Artemis II to first crewed landing",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 1, 2026",
+            "Artemis II launches, first crewed SLS flight",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Apr 10, 2026",
+            "Artemis II splashes down in the Pacific",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Jun 9, 2026",
+            "Artemis III crew named for the 2027 Earth-orbit docking test",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Sep 30, 2026",
+            "Artemis III solid rocket booster stacking completed in the VAB",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "2027",
+            "Artemis III low Earth orbit docking test with commercial landers",
+            "Planned",
+            "NASA"
+          ],
+          [
+            "2028",
+            "Artemis IV: first planned crewed Moon landing near the lunar South Pole",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Artemis II",
+          "Artemis III test",
+          "Crewed landing"
+        ],
+        "current": 0
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/246",
+    "charts": [],
+    "tables": [
+      {
+        "title": "ISS path from assembly to controlled deorbit",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "1998",
+            "First assembly missions begin",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Jun 26, 2024",
+            "NASA selects SpaceX to build the US Deorbit Vehicle (up to $843 million)",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Mid 2028",
+            "Station begins drifting down as Russian fuel reserves are ready (early 2028)",
+            "Planned",
+            "Spaceflight Now"
+          ],
+          [
+            "Mid 2029",
+            "US Deorbit Vehicle expected to arrive",
+            "Planned",
+            "Spaceflight Now"
+          ],
+          [
+            "2030",
+            "NASA's committed operations end; controlled deorbit follows around 2030 or shortly after",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Assembly",
+          "Operations",
+          "Wind-down",
+          "Deorbit"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/514",
+    "charts": [],
+    "tables": [
+      {
+        "title": "ISS path from assembly to controlled deorbit",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "1998",
+            "First assembly missions begin",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Jun 26, 2024",
+            "NASA selects SpaceX to build the US Deorbit Vehicle (up to $843 million)",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Mid 2028",
+            "Station begins drifting down as Russian fuel reserves are ready (early 2028)",
+            "Planned",
+            "Spaceflight Now"
+          ],
+          [
+            "Mid 2029",
+            "US Deorbit Vehicle expected to arrive",
+            "Planned",
+            "Spaceflight Now"
+          ],
+          [
+            "2030",
+            "NASA's committed operations end; controlled deorbit follows around 2030 or shortly after",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Assembly",
+          "Operations",
+          "Wind-down",
+          "Deorbit"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/4945",
+    "charts": [],
+    "tables": [
+      {
+        "title": "AST SpaceMobile constellation path to commercial service",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Sep 2022",
+            "BlueWalker 3 test satellite launches on Falcon 9",
+            "Demonstrated",
+            "Spaceflight Now"
+          ],
+          [
+            "Sep 2024",
+            "Five Block 1 BlueBird satellites launch on Falcon 9",
+            "Demonstrated",
+            "Spaceflight Now"
+          ],
+          [
+            "Dec 23, 2025",
+            "BlueBird 6, first Block 2, launches on ISRO LVM3",
+            "Demonstrated",
+            "SatNews"
+          ],
+          [
+            "Jun 17, 2026",
+            "BlueBirds 8-10 launch on Falcon 9 (BlueBird 7 was lost after a New Glenn upper-stage anomaly)",
+            "Demonstrated",
+            "Spaceflight Now"
+          ],
+          [
+            "Aug 5, 2026",
+            "BlueBirds 11-13 launch on Falcon 9, 13 BlueBirds in orbit",
+            "Demonstrated",
+            "GCN"
+          ],
+          [
+            "Early 2027",
+            "Commercial direct-to-device service, moved from late 2026",
+            "Planned",
+            "SatNews"
+          ]
+        ],
+        "stages": [
+          "Test satellite",
+          "Block 1",
+          "Block 2 build-out",
+          "Commercial service"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/6618",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Tianwen-2 path from launch to sample return",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "May 29, 2025",
+            "Launch from Xichang",
+            "Demonstrated",
+            "Astronomy"
+          ],
+          [
+            "Jul 6, 2026",
+            "CNSA announces the probe has closed to 20 km of Kamo'oalewa",
+            "Demonstrated",
+            "Astronomy"
+          ],
+          [
+            "Apr 2027",
+            "Planned departure from the asteroid after sampling",
+            "Planned",
+            "Astronomy"
+          ],
+          [
+            "Nov 2027",
+            "Sample capsule expected to land in the Gobi Desert",
+            "Planned",
+            "Astronomy"
+          ],
+          [
+            "Jan 2035",
+            "Arrival at comet 311P/PanSTARRS",
+            "Planned",
+            "Astronomy"
+          ]
+        ],
+        "stages": [
+          "Launch",
+          "Cruise",
+          "Asteroid proximity",
+          "Sample return"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/115",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Parker Solar Probe path from launch to closest approach",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Aug 12, 2018",
+            "Launch to the Sun",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Nov 6, 2024",
+            "Seventh and final Venus flyby, at 233 miles, sets the operating orbit",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Dec 24, 2024",
+            "Record closest approach, 3.8 million miles from the Sun at about 430,000 mph",
+            "Demonstrated",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Launch",
+          "Venus flybys",
+          "Closest approach"
+        ],
+        "current": 2
+      }
+    ]
   }
 ]
