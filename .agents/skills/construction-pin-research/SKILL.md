@@ -64,6 +64,28 @@ locales), so `utcStartDateTime` must be the groundbreaking date and `utcEndDateT
   gets no dot) and a month or quarter as its first day, so keep milestone dates at the source's precision and label a
   real intermediate stage (commissioning, first production) rather than repeating the completion. No original
   completion date is stored, so a slipped completion cannot be drawn yet.
+- **The pin page's progress bar must carry the new timeline too (owner instruction, 2026-11-02).** The bar
+  (`CountdownMeter`) draws a build only when the pin has a status tag (`Proposed`/`In Progress`/`Completed`/`Withdrawn`)
+  **and** `utcEndDateTime` is later than the pin's start; otherwise it is a plain countdown, and a pin whose start has
+  passed shows a full bar reading "Started today" (Fleetwood 18703: its only date was the proposed completion,
+  2026-11-01, so the bar was full). So whenever you save a timeline, set the bar's three inputs in the same pass:
+  1. `utcStartDateTime` = the **sourced construction start** (groundbreaking, notice to proceed, "construction began
+     {month}"), not the completion date and not a queue-entry date; keep its precision.
+  2. `utcEndDateTime` = the sourced **completion** (proposed in-service, COD, opening), at the source's precision.
+     A bare year is read as its last day; do not invent a month.
+  3. Exactly one status tag, from what the sources document (an EIA detailed status code "(V) Under construction,
+     more than 50 percent complete" supports `In Progress`; a queue entry or announcement without construction
+     is `Proposed`; online is `Completed`, with end = the operation date).
+  The profile's `milestones` strictly between start and end become the dots on the bar, so give real intermediate
+  stages (approval, agreement executed, equipment, energization) at source precision; a milestone equal to the start
+  or end draws no dot. A slipped start goes in `originalStartDate`.
+  **No sourced construction start?** Do not move the start to the completion date to fill the bar and do not tag it
+  (the page would label the completion "Groundbreaking"). Leave the pin untagged with its completion as the start,
+  and queue the gap with `mark_revisit` ("construction start not published"). The EIA-860M row and interconnection.fyi
+  pages carry only the proposed operating month, never a construction start (checked on Fleetwood), so a bar for an
+  EIA-only pin needs a developer, utility, county or news source for the start.
+  Verify on the live page after saving (the bar's right label reads "Completion {date}" and the dots hover with the
+  milestone labels), and expire the cache (section above).
 - Untagged factory pins (owner decision, 2026-11-01): a pin dated at its announcement or planned production start gets
   **no** status tag until a groundbreaking/construction-start date is sourced, because a tag makes the page label its
   start "Groundbreaking". Do not tag and keep the announcement date, and do not move the start to a target year. Queue
@@ -290,3 +312,25 @@ A 20-pin audit of the 470-pin @EnergyDesk batch (Cleanview/EIA/queue entries) fo
   workbook); check `GET /api/pins/:id/factory` (204 = none) and keep a better-sourced one.
 - **EIA status code.** The interconnection.fyi page for an EIA row carries `detailedStatusCode` ("(V) Under construction,
   more than 50 percent complete"); it is the official stage even when the page header says "Planned".
+
+## 10. Clearing a generated batch: delete the unusable, merge the duplicates (owner instruction, 2026-11-02)
+Applies to a batch of pins generated from tracker listings (the EnergyDesk Cleanview/EIA/queue batch, ids 18400-18900).
+- **Delete a pin that has no usable reference.** After at least three distinct searches, if no real project matches the
+  pin's name, size and place (a queue substation label, a withdrawn queue entry, a name only an aggregator lists, a
+  project that exists in another state or county), the pin has nothing true to say: delete it. It is a soft delete,
+  `DELETE /api/pins/:id` with the admin token; confirm the public page then answers 404. Check first that it has no
+  watchers (`favoriteCount`), likes or comments, and that the author is the batch author. Keep and rewrite instead when
+  the audit found a plausible real match with a news or official source (Narragansett 18518: a 208 MW battery proposed
+  for North Kingstown, ecoRI).
+- **Merge duplicates, then delete the extra.** Two pins for one project (Reid EHV 18476 and Sebree Solar I 18675 were
+  the same 250 MW plant): keep the pin with the better-sourced profile or the older id, copy any verified fact the
+  other has that it lacks (`update_pin` or `PUT /api/pins/:id`, whole pin), then delete the other. `update_pin` answers
+  409 "already posted a pin with this source URL" when two pins share a source, which is the sign to merge (Royal Slope
+  18412 into 16315). Phases are not duplicates (Highland Solar North and South are separate 74.9 MW pins); compare
+  size, county, developer and the project-specific reference pages, not just the title.
+- **Process for a wave:** read-only audit agents write `{id, verdict, patch}` JSON (one lane of 10 pins each; brief in
+  `scratchpad/audit/BRIEF.md`); a script re-checks every quote against the raw page (drops the unverifiable), applies the
+  SUPPORTED/PARTLY patches and timeline profiles to production, then deletes the UNSUPPORTED and merges duplicates.
+  Report counts per verdict and list every deleted id. Never delete a pin the audit marked SUPPORTED or PARTLY.
+- **Verdict mix to expect:** the first 100 pins gave 15 supported, 57 partly right and 28 with no match. Partly right
+  usually means a real EIA or queue row with an invented name, address, developer or date, so fix it from the row.
