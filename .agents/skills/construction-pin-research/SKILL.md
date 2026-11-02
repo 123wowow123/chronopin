@@ -64,6 +64,11 @@ locales), so `utcStartDateTime` must be the groundbreaking date and `utcEndDateT
   gets no dot) and a month or quarter as its first day, so keep milestone dates at the source's precision and label a
   real intermediate stage (commissioning, first production) rather than repeating the completion. No original
   completion date is stored, so a slipped completion cannot be drawn yet.
+- Untagged factory pins (owner decision, 2026-11-01): a pin dated at its announcement or planned production start gets
+  **no** status tag until a groundbreaking/construction-start date is sourced, because a tag makes the page label its
+  start "Groundbreaking". Do not tag and keep the announcement date, and do not move the start to a target year. Queue
+  the evidence gap with `mark_revisit` instead (done for Westinghouse Hopkins 18957, Purina Mantova 3089, MG Galicia
+  14220). Denied permits (Wildcat Ridge 18967) stay untagged.
 - Exclude non-construction accidents, closures, sales and monitored storage. For cancelled/halted/unsupported
   status, document it rather than forcing a tag.
 - EIA-860M is preliminary: check the pin's existing operator/regulator references for commissioning evidence

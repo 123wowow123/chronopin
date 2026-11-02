@@ -11979,5 +11979,250 @@
         "sourceUrl": "https://www.digitalcitizen.life/intel-moves-14a-high-volume-production-forward-to-2028/"
       }
     ]
+  },
+  {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panther_Lake_(microprocessor)",
+    "charts": [
+      {
+        "bars": [
+          {
+            "label": "Core Ultra X9 388H (Panther Lake)",
+            "value": 1324,
+            "highlight": true
+          },
+          {
+            "label": "Core Ultra 9 285H (Arrow Lake-H)",
+            "value": 928
+          },
+          {
+            "label": "Ryzen AI 9 365",
+            "value": 832
+          },
+          {
+            "label": "Core Ultra 7 258V (Lunar Lake)",
+            "value": 591
+          }
+        ],
+        "note": "Wccftech review, 26 Jan 2026: ASUS Zenbook Duo 2026 (X9 388H) vs MSI Prestige AI EVO 16 (285H), MSI Prestige A16 AI+ (Ryzen AI 9 365) and ASUS Zenbook S14 (258V). Balanced mode by default; one reviewer, different laptops, so cooling and power limits differ. Higher is better.",
+        "unit": "points",
+        "title": "Cinebench 2024 multi-core",
+        "sourceUrl": "https://wccftech.com/review/asus-zenbook-duo-intel-core-ultra-x9-388h-panther-lake-laptop-review/"
+      },
+      {
+        "bars": [
+          {
+            "label": "Core Ultra X9 388H (Panther Lake)",
+            "value": 17819,
+            "highlight": true
+          },
+          {
+            "label": "Core Ultra 9 285H (Arrow Lake-H)",
+            "value": 16032
+          },
+          {
+            "label": "Ryzen AI 9 365",
+            "value": 12693
+          },
+          {
+            "label": "Core Ultra 7 258V (Lunar Lake)",
+            "value": 10805
+          }
+        ],
+        "note": "Wccftech review, 26 Jan 2026: ASUS Zenbook Duo 2026 (X9 388H) vs MSI Prestige AI EVO 16 (285H), MSI Prestige A16 AI+ (Ryzen AI 9 365) and ASUS Zenbook S14 (258V). Balanced mode by default; one reviewer, different laptops, so cooling and power limits differ. Higher is better.",
+        "unit": "points",
+        "title": "Geekbench 6 multi-core",
+        "sourceUrl": "https://wccftech.com/review/asus-zenbook-duo-intel-core-ultra-x9-388h-panther-lake-laptop-review/"
+      },
+      {
+        "bars": [
+          {
+            "label": "Arc B390 (Panther Lake)",
+            "value": 1652,
+            "highlight": true
+          },
+          {
+            "label": "Arc 140T (Arrow Lake-H)",
+            "value": 827
+          },
+          {
+            "label": "Arc 140V (Lunar Lake)",
+            "value": 823
+          },
+          {
+            "label": "Radeon 880M (Ryzen AI 9 365)",
+            "value": 524
+          }
+        ],
+        "note": "Wccftech review, 26 Jan 2026: ASUS Zenbook Duo 2026 (X9 388H) vs MSI Prestige AI EVO 16 (285H), MSI Prestige A16 AI+ (Ryzen AI 9 365) and ASUS Zenbook S14 (258V). Balanced mode by default; one reviewer, different laptops, so cooling and power limits differ. Higher is better.",
+        "unit": "points",
+        "title": "3DMark Steel Nomad (graphics)",
+        "sourceUrl": "https://wccftech.com/review/asus-zenbook-duo-intel-core-ultra-x9-388h-panther-lake-laptop-review/"
+      },
+      {
+        "bars": [
+          {
+            "label": "Arc B390 (Panther Lake)",
+            "value": 93.37,
+            "highlight": true
+          },
+          {
+            "label": "Arc 140T (Arrow Lake-H)",
+            "value": 44.13
+          },
+          {
+            "label": "Arc 140V (Lunar Lake)",
+            "value": 55.64
+          },
+          {
+            "label": "Radeon 880M (Ryzen AI 9 365)",
+            "value": 40.15
+          }
+        ],
+        "note": "Wccftech review, 26 Jan 2026: ASUS Zenbook Duo 2026 (X9 388H) vs MSI Prestige AI EVO 16 (285H), MSI Prestige A16 AI+ (Ryzen AI 9 365) and ASUS Zenbook S14 (258V). Balanced mode by default; one reviewer, different laptops, so cooling and power limits differ. Higher is better.",
+        "unit": "fps",
+        "title": "Cyberpunk 2077, 1200p Medium, balanced upscaling",
+        "sourceUrl": "https://wccftech.com/review/asus-zenbook-duo-intel-core-ultra-x9-388h-panther-lake-laptop-review/"
+      }
+    ],
+    "tables": [
+      {
+        "note": "Intel-measured, 'as of September 2025'; Intel names no SKUs for the 50% claims. Treat as vendor claims, not independent results.",
+        "rows": [
+          [
+            "More than 50% faster CPU performance",
+            "Previous generation (not named)",
+            "SPECrate2017_int_base, long-term steady-state power"
+          ],
+          [
+            "More than 50% faster graphics performance",
+            "Previous generation (not named)",
+            "Footnote cites the same SPECrate benchmark"
+          ],
+          [
+            "Up to 180 platform TOPS",
+            "Lunar Lake and Arrow Lake-H reference platforms",
+            "Measured with 3DMark Solar Bay, Cyberpunk 2077, Borderlands 3"
+          ],
+          [
+            "Up to 15% better performance per watt (Intel 18A)",
+            "Intel 3",
+            "Based on product specification"
+          ],
+          [
+            "30% improved chip density (Intel 18A)",
+            "Intel 3",
+            "Based on product specification"
+          ]
+        ],
+        "title": "Intel's own Panther Lake claims (Oct 2025)",
+        "columns": [
+          "Claim",
+          "Baseline",
+          "Intel's footnote"
+        ],
+        "sourceUrl": "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a.html"
+      },
+      {
+        "note": "Battery sizes differ (99, 99, 82 and 72 Wh), so the minutes are not like-for-like and are not charted.",
+        "rows": [
+          [
+            "Battery capacity (Wh)",
+            "99",
+            "99",
+            "82",
+            "72"
+          ],
+          [
+            "UL Office battery life (min)",
+            "1378",
+            "1224",
+            "752",
+            "1311"
+          ],
+          [
+            "Gaming battery life (min)",
+            "305",
+            "258",
+            "187",
+            "284"
+          ],
+          [
+            "Gaming power (W)",
+            "39",
+            "40",
+            "32",
+            "32"
+          ],
+          [
+            "Peak power (W)",
+            "69",
+            "73",
+            "71",
+            "42"
+          ],
+          [
+            "Idle power (W)",
+            "3.11",
+            "2.88",
+            "3.19",
+            "2.28"
+          ]
+        ],
+        "title": "Battery and power in the same review",
+        "columns": [
+          "Metric",
+          "X9 388H",
+          "285H",
+          "Ryzen AI 9 365",
+          "258V"
+        ],
+        "sourceUrl": "https://wccftech.com/review/asus-zenbook-duo-intel-core-ultra-x9-388h-panther-lake-laptop-review/"
+      },
+      {
+        "title": "Panther Lake production timeline",
+        "display": "timeline",
+        "stages": [
+          "18A risk production",
+          "Launch",
+          "Pre-orders",
+          "Global availability"
+        ],
+        "current": 1,
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 29, 2025",
+            "Intel 18A enters risk production, with volume manufacturing scheduled for the end of 2025; Intel did not say which processors",
+            "Demonstrated",
+            "Tom's Hardware"
+          ],
+          [
+            "Jan 5, 2026",
+            "Intel unveils Core Ultra Series 3 at CES, the first platform built on Intel 18A, powering over 200 designs",
+            "Demonstrated",
+            "Intel"
+          ],
+          [
+            "Jan 6, 2026",
+            "Pre-orders for the first consumer laptops to begin",
+            "Announced",
+            "Intel"
+          ],
+          [
+            "Jan 27, 2026",
+            "Systems to be available globally, with more designs through the first half of 2026",
+            "Announced",
+            "Intel"
+          ]
+        ],
+        "note": "Pre-order and availability dates are as Intel announced them on January 5, 2026.",
+        "sourceUrl": "https://newsroom.intel.com/client-computing/ces-2026-intel-core-ultra-series-3-debut-first-built-on-intel-18a"
+      }
+    ]
   }
 ]
