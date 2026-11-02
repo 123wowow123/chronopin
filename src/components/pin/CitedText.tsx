@@ -10,8 +10,9 @@ import type { Evidence } from '@/lib/referenceConfidence';
 // reference in the pin page's References panel. hrefBase is the pin's path
 // when shown away from that page. omit leaves out citations of one reference -
 // the one the text is shown next to. label marks short text (a table cell)
-// that gets a citation only where it names a reference.
-export function CitedText({ text, evidence, hrefBase, omit, label }: { text: string; evidence: Evidence[]; hrefBase?: string; omit?: number; label?: boolean }) {
+// that gets a citation only where it names a reference. citesOnly shows just the
+// [n] links, not the text.
+export function CitedText({ text, evidence, hrefBase, omit, label, citesOnly }: { text: string; evidence: Evidence[]; hrefBase?: string; omit?: number; label?: boolean; citesOnly?: boolean }) {
   const t = useT();
   const segments = citeReasoning(text, orderEvidence(evidence), !label)
     .map((segment) => (typeof segment === 'string' ? segment : { cite: segment.cite.filter((n) => n !== omit) }))
@@ -20,7 +21,7 @@ export function CitedText({ text, evidence, hrefBase, omit, label }: { text: str
     <>
       {segments.map((segment, i) =>
         typeof segment === 'string' ? (
-          segment
+          citesOnly ? null : segment
         ) : (
           // A taller tap target than the 13px superscript, without moving the text.
           <sup key={i} className="ms-px not-italic [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">

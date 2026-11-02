@@ -101,6 +101,10 @@ function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
 function Table({ table: base, t, locale, evidence }: { table: PerfTable; t: Translator; locale: string; evidence: Evidence[] }) {
   const table = { ...base, ...base.i18n?.[locale] };
   if (base.display === 'tiles' && table.columns.length === 3) return <Tiles table={table} t={t} />;
+  // A source column is shown as [n] links after the previous cell, not as a column.
+  const last = table.columns.length - 1;
+  const sourceColumn = last >= 2 && (table.columns[last].trim().toLowerCase() === t('pin.perf.source').toLowerCase() || /^sources?$/i.test(table.columns[last].trim()));
+  const columns = sourceColumn ? table.columns.slice(0, last) : table.columns;
   return (
     <div className="surface rounded-lg px-3 py-2">
       <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{table.title}</h2>
@@ -108,7 +112,7 @@ function Table({ table: base, t, locale, evidence }: { table: PerfTable; t: Tran
         <table className="w-full border-collapse text-xs">
           <thead>
             <tr className="border-b border-border/40 text-left text-muted">
-              {table.columns.map((column, i) => (
+              {columns.map((column, i) => (
                 <th key={column} scope="col" className={`py-1 pe-2 font-semibold ${i ? 'text-end' : ''}`}>
                   {column}
                 </th>
@@ -118,14 +122,15 @@ function Table({ table: base, t, locale, evidence }: { table: PerfTable; t: Tran
           <tbody>
             {table.rows.map((row) => (
               <tr key={row[0]} className="border-b border-border/20 last:border-0">
-                {row.map((cell, i) =>
+                {row.slice(0, columns.length).map((cell, i) =>
                   i === 0 ? (
                     <th key={i} scope="row" className="py-1 pe-2 text-left font-medium text-foreground">
                       {cell}
                     </th>
                   ) : (
                     <td key={i} className="py-1 pe-2 text-end tabular-nums">
-                      <CitedText text={cell} evidence={evidence} label />
+                      {sourceColumn ? cell : <CitedText text={cell} evidence={evidence} label />}
+                      {sourceColumn && i === columns.length - 1 ? <CitedText text={row[last]} evidence={evidence} label citesOnly /> : null}
                     </td>
                   ),
                 )}
