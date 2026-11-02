@@ -12224,5 +12224,1362 @@
         "sourceUrl": "https://newsroom.intel.com/client-computing/ces-2026-intel-core-ultra-series-3-debut-first-built-on-intel-18a"
       }
     ]
+  },
+  {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tesla_Roadster_(second_generation)",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Second-generation Roadster: concept to market",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Nov 2017",
+            "Second-generation Roadster announced, with deliveries first slated for 2020",
+            "Demonstrated",
+            "Yahoo Finance"
+          ],
+          [
+            "Nov 6, 2025",
+            "At the shareholder meeting, demo pushed to April 1, 2026 and production put 12-18 months after it",
+            "Demonstrated",
+            "Electrek"
+          ],
+          [
+            "Jun 5, 2026",
+            "Demo reportedly delayed again, to August or later",
+            "Demonstrated",
+            "Yahoo Finance"
+          ],
+          [
+            "Oct 15, 2026",
+            "Roadster shown with cold-gas thrusters and a suction system at SpaceX's McGregor site (rescheduled from Oct 1)",
+            "Demonstrated",
+            "AP News"
+          ],
+          [
+            "2028",
+            "Musk says consumer production will not begin until 2028; no price or road approval set",
+            "Expected",
+            "AP News"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Announced",
+          "Demo",
+          "Production",
+          "Deliveries"
+        ],
+        "current": 1,
+        "note": "Production and delivery dates are Tesla's statements, not confirmed starts."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tesla_Cybercab",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Cybercab: concept to service",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Oct 2024",
+            "Attendees ride autonomous Cybercabs on a closed course in California",
+            "Demonstrated",
+            "Motor1"
+          ],
+          [
+            "Nov 7, 2025",
+            "Musk says production starts in April 2026",
+            "Planned",
+            "Teslarati"
+          ],
+          [
+            "Feb 17, 2026",
+            "First Cybercab off the line at Giga Texas; continuous production not expected until April",
+            "Demonstrated",
+            "Electrek"
+          ],
+          [
+            "Jul 2026",
+            "Employee rides in Cybercab begin",
+            "Demonstrated",
+            "Motor1"
+          ],
+          [
+            "Sep 3, 2026",
+            "Launch event in Austin; public rides open from the evening of Sep 4",
+            "Demonstrated",
+            "InsideEVs"
+          ],
+          [
+            "Sep 3, 2026",
+            "NHTSA opens audit query AQ26002 on the Cybercab's safety self-certification",
+            "Demonstrated",
+            "Electrek"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Unveil",
+          "First unit",
+          "Production",
+          "Public rides"
+        ],
+        "current": 3,
+        "note": "No date has been given for consumer sales."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://aviationweek.com/air-transport/aircraft-propulsion/boeing-confirms-no-777-9-deliveries-until-least-2027",
+    "charts": [],
+    "tables": [
+      {
+        "title": "777-9: launch to first delivery",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Nov 2013",
+            "777-8X and 777-9X launched at the Dubai Airshow",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Mar 13, 2019",
+            "First 777-9 rolled out",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jan 25, 2020",
+            "First flight from Paine Field",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jan 16, 2025",
+            "Flight testing resumes after the August 2024 grounding",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Mar 2026",
+            "FAA clears the 777-9 into Type Inspection Authorization Phase 4A",
+            "Demonstrated",
+            "Simple Flying"
+          ],
+          [
+            "Dec 2026",
+            "Certification expected by the end of 2026",
+            "Expected",
+            "Wikipedia"
+          ],
+          [
+            "Jun 2027",
+            "Lufthansa first delivery scheduled for mid-2027; Emirates planning for late 2027",
+            "Expected",
+            "Simple Flying"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Launch",
+          "Rollout",
+          "Flight test",
+          "Certification",
+          "First delivery"
+        ],
+        "current": 2,
+        "note": "Boeing says only that it anticipates first delivery in 2027."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://electrek.co/2026/08/13/fords-ev-pickup-arrives-2027-more-than-affordable-price/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Ford Fathom: announcement to sale",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Aug 11, 2025",
+            "Ford unveils the Universal EV Platform and a midsize electric pickup for 2027",
+            "Demonstrated",
+            "EV Wire"
+          ],
+          [
+            "Aug 2026",
+            "Ford reveals the Fathom name and a starting price of $28,350",
+            "Demonstrated",
+            "Electrek"
+          ],
+          [
+            "Mar 2027",
+            "Production starts at Louisville Assembly Plant (Q1 2027)",
+            "Planned",
+            "Electrek"
+          ],
+          [
+            "Early 2027",
+            "Fathom goes on sale",
+            "Planned",
+            "Electrek"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Announced",
+          "Revealed",
+          "Production",
+          "On sale"
+        ],
+        "current": 1,
+        "note": "Dates are Ford's targets; no exact production or sale day is published."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.militarytimes.com/industry/techwatch/2026/07/30/b-21-raiders-set-to-be-on-the-ramp-at-ellsworth-air-force-base-in-2027/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "B-21 Raider: rollout to Ellsworth",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Dec 2, 2022",
+            "B-21 unveiled at a ceremony in Palmdale, California",
+            "Demonstrated",
+            "Air and Space Forces Magazine"
+          ],
+          [
+            "Nov 10, 2023",
+            "First flight",
+            "Demonstrated",
+            "Air and Space Forces Magazine"
+          ],
+          [
+            "Jan 17, 2024",
+            "Flight testing begins at Edwards Air Force Base",
+            "Demonstrated",
+            "Air and Space Forces Magazine"
+          ],
+          [
+            "Sep 11, 2025",
+            "Second B-21 flies and joins the test programme",
+            "Demonstrated",
+            "The Aviationist"
+          ],
+          [
+            "2027",
+            "First operational B-21s due at Ellsworth Air Force Base",
+            "Expected",
+            "The Aviationist"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Rollout",
+          "First flight",
+          "Testing",
+          "Delivery to Ellsworth"
+        ],
+        "current": 2,
+        "note": "Initial operational capability has no published date."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.airandspaceforces.com/allvin-first-f-47-being-built-first-flight-2028/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "F-47: award to first flight",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Mar 21, 2025",
+            "Boeing wins the Air Force's sixth-generation fighter contract",
+            "Demonstrated",
+            "Breaking Defense"
+          ],
+          [
+            "Sep 22, 2025",
+            "Gen. Allvin says Boeing has begun building the first test aircraft",
+            "Demonstrated",
+            "Air and Space Forces Magazine"
+          ],
+          [
+            "2028",
+            "First flight targeted in 2028",
+            "Expected",
+            "Air and Space Forces Magazine"
+          ],
+          [
+            "2030s",
+            "Expected to enter service in the 2030s",
+            "Expected",
+            "Breaking Defense"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Award",
+          "Build",
+          "First flight",
+          "Service"
+        ],
+        "current": 1,
+        "note": "No exact first-flight or service dates are published."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://news.cgtn.com/news/2025-11-01/China-s-2026-space-mission-lineup-Mengzhou-1-Long-March-10A-to-debut-1HWYMJGSIkE/share_amp.html",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Mengzhou and Long March 10A: test to orbit",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Feb 2024",
+            "China's manned space agency names the Mengzhou spaceship and Lanyue lander",
+            "Demonstrated",
+            "New Space Economy"
+          ],
+          [
+            "Aug 2025",
+            "Seven engines of a Long March 10A first-stage test article fire together in a static fire",
+            "Demonstrated",
+            "New Space Economy"
+          ],
+          [
+            "Feb 11, 2026",
+            "Max-Q abort test of Mengzhou and first flight of a Long March 10 prototype at Wenchang",
+            "Demonstrated",
+            "China Daily"
+          ],
+          [
+            "Dec 2026",
+            "Mengzhou-1 due to launch on Long March 10A and dock with Tiangong",
+            "Expected",
+            "New Space Economy"
+          ],
+          [
+            "2030",
+            "Crewed lunar landing targeted before 2030",
+            "Expected",
+            "New Space Economy"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Named",
+          "Static fire",
+          "Abort test",
+          "First orbital flight"
+        ],
+        "current": 2,
+        "note": "No exact launch date for Mengzhou-1 is published."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.airbus.com/en/newsroom/stories/2026-09-a350f-first-flight-new-freighter-aircraft-takes-to-the-sky",
+    "charts": [],
+    "tables": [
+      {
+        "title": "A350F: first flight to delivery",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jun 2026",
+            "Ground vibration testing completed",
+            "Demonstrated",
+            "Airbus"
+          ],
+          [
+            "Aug 2026",
+            "First A350F shown in a parcel-style livery",
+            "Demonstrated",
+            "Air Cargo News"
+          ],
+          [
+            "Sep 29, 2026",
+            "MSN700 makes its first flight from Toulouse, opening a roughly 400-hour campaign",
+            "Demonstrated",
+            "Airbus"
+          ],
+          [
+            "Jun 2027",
+            "Airbus targets certification completion by the second quarter of 2027",
+            "Expected",
+            "Airways"
+          ],
+          [
+            "2027",
+            "First delivery targeted by mid-2027 (Airways) or by the end of 2027 (Air Cargo News)",
+            "Expected",
+            "Air Cargo News"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Ground tests",
+          "First flight",
+          "Certification",
+          "First delivery"
+        ],
+        "current": 1,
+        "note": "Sources differ on the first-delivery date."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://news.abbvie.com/2026-09-28-U-S-FDA-Approves-AbbVies-JUVMO-TM-tavapadon-for-Parkinsons-Disease",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Tavapadon: trials to launch",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 18, 2024",
+            "TEMPO-3 adjunctive Phase 3 meets primary endpoint (+1.1 h on-time)",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Sep 26, 2024",
+            "TEMPO-1 monotherapy Phase 3 topline positive at 26 weeks",
+            "Demonstrated",
+            "Drug Topics"
+          ],
+          [
+            "Sep 26, 2025",
+            "AbbVie announces the NDA submitted to the FDA",
+            "Demonstrated",
+            "Life Sciences BC"
+          ],
+          [
+            "Sep 28, 2026",
+            "FDA approval of JUVMO announced by AbbVie",
+            "Demonstrated",
+            "AbbVie; Practical Neurology"
+          ],
+          [
+            "Oct 2026",
+            "US availability to patients expected",
+            "Expected",
+            "AbbVie"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Filing",
+          "Approval",
+          "Launch"
+        ],
+        "current": 2,
+        "sourceUrl": "https://news.abbvie.com/2026-09-28-U-S-FDA-Approves-AbbVies-JUVMO-TM-tavapadon-for-Parkinsons-Disease"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.jnj.com/media-center/press-releases/fda-approval-of-icotyde-icotrokinra-ushers-in-new-era-for-first-line-systemic-treatment-of-plaque-psoriasis-with-a-targeted-oral-peptide",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Icotrokinra: trials to approval",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Mar 2025",
+            "ICONIC-LEAD Phase 3 data presented as a late-breaker at the AAD annual meeting",
+            "Demonstrated",
+            "Dermatology Times"
+          ],
+          [
+            "Jul 18, 2025",
+            "FDA receives the icotrokinra NDA",
+            "Demonstrated",
+            "FDA"
+          ],
+          [
+            "Jul 21, 2025",
+            "J&J announces the NDA submission",
+            "Demonstrated",
+            "Dermatology Times"
+          ],
+          [
+            "Mar 17, 2026",
+            "FDA approves Icotyde for plaque psoriasis (adults and children 12+)",
+            "Demonstrated",
+            "FDA"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Filing",
+          "Approval"
+        ],
+        "current": 2,
+        "sourceUrl": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/220149Orig1s000ltr.pdf"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.merck.com/news/mercks-lipfendra-enlicitide-is-the-first-and-only-once-daily-oral-pcsk9-inhibitor-approved-by-the-u-s-fda-to-reduce-ldl-c-in-adults-with-hypercholesterolemia/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Enlicitide: trials to approval",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Nov 2025",
+            "CORALreef Lipids data: LDL-C down 55.8% vs placebo at week 24",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Dec 2025",
+            "FDA awards enlicitide a Commissioner's National Priority Voucher",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Mar 2026",
+            "CORALreef AddOn results presented at the ACC meeting",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Jul 16, 2026",
+            "FDA approves LIPFENDRA (enlicitide) tablets 20 mg",
+            "Demonstrated",
+            "Merck"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Priority voucher",
+          "Approval"
+        ],
+        "current": 2,
+        "sourceUrl": "https://www.merck.com/news/mercks-lipfendra-enlicitide-is-the-first-and-only-once-daily-oral-pcsk9-inhibitor-approved-by-the-u-s-fda-to-reduce-ldl-c-in-adults-with-hypercholesterolemia/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.prnewswire.com/news-releases/lillys-triple-agonist-retatrutide-successful-in-two-additional-phase-3-obesity-trials-delivering-significant-improvements-in-weight-and-a1c-302832674.html",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Retatrutide: trials to launch",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Dec 11, 2025",
+            "TRIUMPH-4 Phase 3 readout: up to 28.7% average weight loss",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "2026",
+            "Remaining TRIUMPH studies expected to read out by end of 2026",
+            "Expected",
+            "BioSpace"
+          ],
+          [
+            "Q1 2027",
+            "Lilly plans to file a US BLA for obesity",
+            "Planned",
+            "pharmaphorum"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Filing",
+          "Approval",
+          "Launch"
+        ],
+        "current": 0,
+        "sourceUrl": "https://pharmaphorum.com/news/lilly-plans-q1-2027-filing-obesity-triple-retatrutide"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://ir.inovio.com/news/news-details/2025/FDA-Accepts-for-Review-INOVIOs-BLA-for-INO-3107-for-the-Treatment-of-Adults-with-Recurrent-Respiratory-Papillomatosis-RRP/default.aspx",
+    "charts": [],
+    "tables": [
+      {
+        "title": "INO-3107: filing to FDA decision",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Dec 2025",
+            "FDA accepts the INO-3107 BLA for standard review; PDUFA goal 30 Oct 2026",
+            "Demonstrated",
+            "PharmaShots"
+          ],
+          [
+            "Aug 2026",
+            "Late-cycle review meeting and scheduled pre-licensure inspections completed",
+            "Demonstrated",
+            "MyChesCo"
+          ],
+          [
+            "Oct 30, 2026",
+            "PDUFA target action date (outcome not yet confirmed)",
+            "Expected",
+            "PharmaShots; MyChesCo"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Filing",
+          "FDA decision",
+          "Launch"
+        ],
+        "current": 1,
+        "sourceUrl": "https://pharmashots.com/30556/inovio-reports-the-us-fdas-bla-acceptance-of-ino-3107-for-recurrent-respiratory-papillomatosis-rrp/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=917287",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Denecimig: filing to launch",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Sep 2025",
+            "Novo Nordisk submits the denecimig BLA to the FDA",
+            "Demonstrated",
+            "BioPharm International"
+          ],
+          [
+            "Sep 17, 2026",
+            "EU CHMP gives a positive opinion",
+            "Demonstrated",
+            "BioPharm International"
+          ],
+          [
+            "Oct 2, 2026",
+            "Novo says the FDA review is extended over facility remediation (decision first expected Q3 2026)",
+            "Demonstrated",
+            "BioPharm International"
+          ],
+          [
+            "H1 2027",
+            "Novo still aims for a US launch",
+            "Expected",
+            "BioPharm International"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Filing",
+          "EU opinion",
+          "FDA decision",
+          "Launch"
+        ],
+        "current": 2,
+        "sourceUrl": "https://www.biopharminternational.com/view/fda-delays-novo-nordisks-denecimig-over-facility-fixes"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1133869/000110465926100071/capr-20260824xex99d1.htm",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Deramiocel: complete response to FDA decision",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jul 2025",
+            "FDA issues a Complete Response Letter on the deramiocel BLA",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Mar 10, 2026",
+            "Class 2 resubmission accepted; PDUFA target set for Aug 22, 2026",
+            "Demonstrated",
+            "BioSpace"
+          ],
+          [
+            "Aug 24, 2026",
+            "Capricor announces a major BLA amendment extending the review 90 days",
+            "Demonstrated",
+            "ParentProjectMD"
+          ],
+          [
+            "Nov 22, 2026",
+            "New PDUFA target action date (decision pending)",
+            "Expected",
+            "ParentProjectMD"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Complete response",
+          "Resubmission",
+          "FDA decision"
+        ],
+        "current": 1,
+        "sourceUrl": "https://www.parentprojectmd.org/update-on-deramiocel-pdufa-date-extended/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.hearingtracker.com/press-releases/fda-approves-regeneron-s-otarmeni",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Otarmeni: data to approval",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Oct 12, 2025",
+            "Interim DB-OTO results in 12 patients published in NEJM",
+            "Demonstrated",
+            "MedCity News"
+          ],
+          [
+            "Feb 2026",
+            "Regeneron submits the BLA (61 days before approval)",
+            "Demonstrated",
+            "MedCity News"
+          ],
+          [
+            "Apr 23, 2026",
+            "FDA grants accelerated approval to Otarmeni",
+            "Demonstrated",
+            "MedCity News"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Data",
+          "Filing",
+          "Approval"
+        ],
+        "current": 2,
+        "sourceUrl": "https://medcitynews.com/2026/04/regeneron-gene-therapy-hearing-loss-otarmeni-fda-approval-otof-otofe/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://us.gsk.com/en-us/media/press-releases/exdensur-depemokimab-approved-by-us-fda-for-the-treatment-of-severe-asthma/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Depemokimab: trials to approval",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Sep 2024",
+            "SWIFT-1 and SWIFT-2 Phase 3 results presented at the ERS Congress",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Dec 19, 2024",
+            "SWIFT results published in the New England Journal of Medicine",
+            "Demonstrated",
+            "GSK"
+          ],
+          [
+            "Dec 16, 2025",
+            "FDA approves Exdensur for severe eosinophilic asthma",
+            "Demonstrated",
+            "GSK"
+          ]
+        ],
+        "display": "timeline",
+        "stages": [
+          "Trials",
+          "Approval"
+        ],
+        "current": 1,
+        "sourceUrl": "https://us.gsk.com/en-us/media/press-releases/exdensur-depemokimab-approved-by-us-fda-for-the-treatment-of-severe-asthma/"
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/1945",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Starship test-flight path to orbit",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 20, 2023",
+            "Flight 1: first integrated Starship-Super Heavy flight; vehicle lost",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Mar 14, 2024",
+            "Flight 3: first flight to complete its planned suborbital trajectory",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 13, 2024",
+            "Flight 5: first Super Heavy booster caught by the launch tower",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "May 22, 2026",
+            "Flight 12: first Block 3 (V3) Starship flight",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Sep 28, 2026",
+            "Flight 14: first orbital flight, 26 Starlink V3 satellites deployed",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 12, 2026",
+            "Flight 15 no earlier than: first ship catch attempt planned",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Development",
+          "Test flights",
+          "First orbital",
+          "Operational"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/238",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Artemis III path from Artemis II to Earth-orbit docking test",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 1, 2026",
+            "Artemis II launches from Pad 39B, first crewed SLS flight",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Apr 11, 2026",
+            "Artemis II splashes down in the Pacific",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jun 9, 2026",
+            "Artemis III crew named: Bresnik, Parmitano, Douglas, Rubio",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Sep 30, 2026",
+            "SLS solid rocket booster stacking completed in the VAB",
+            "Demonstrated",
+            "NASA"
+          ],
+          [
+            "Early 2027",
+            "Spacer and adapters ship to Kennedy",
+            "Planned",
+            "NASA"
+          ],
+          [
+            "2027",
+            "Artemis III Earth-orbit rendezvous and docking tests with commercial landers",
+            "Planned",
+            "NASA"
+          ],
+          [
+            "2028",
+            "Artemis IV: first planned crewed landing near the lunar South Pole",
+            "Planned",
+            "NASA"
+          ]
+        ],
+        "stages": [
+          "Artemis II",
+          "Stacking",
+          "Pad tests",
+          "Earth-orbit test",
+          "Landing"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/6561",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Mengzhou and Long March 10 path to first orbital flight",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Feb 2024",
+            "China publicly names the Mengzhou spacecraft and Lanyue lander",
+            "Demonstrated",
+            "New Space Economy"
+          ],
+          [
+            "Aug 2025",
+            "Long March 10 first-stage test article static fire, seven engines, nearly 1,000 tonnes of thrust",
+            "Demonstrated",
+            "New Space Economy"
+          ],
+          [
+            "Feb 11, 2026",
+            "Max-Q abort test of a Mengzhou verification vehicle on a Long March 10 prototype, both recovered at sea",
+            "Demonstrated",
+            "New Space Economy"
+          ],
+          [
+            "2027",
+            "Mengzhou-1 uncrewed orbital flight on Long March 10A to Tiangong, now scheduled for 2027",
+            "Planned",
+            "Wikipedia"
+          ],
+          [
+            "2030",
+            "China's stated target for a crewed Moon landing (before 2030)",
+            "Planned",
+            "New Space Economy"
+          ]
+        ],
+        "stages": [
+          "Design",
+          "Ground tests",
+          "Abort test",
+          "First orbital",
+          "Crewed"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/240",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Dragonfly path from selection to Titan",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Jun 27, 2019",
+            "Dragonfly selected as NASA's fourth New Frontiers mission",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Mar 3, 2023",
+            "Passes preliminary design review",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 25, 2024",
+            "NASA awards SpaceX the Falcon Heavy launch contract",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Apr 25, 2025",
+            "Passes critical design review, full-scale construction and testing begin",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jul 5, 2028",
+            "Launch window opens (to Jul 25, 2028)",
+            "Planned",
+            "Wikipedia"
+          ],
+          [
+            "2034",
+            "Expected arrival at Titan after about six years of cruise",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Selection",
+          "Design",
+          "Build and test",
+          "Launch",
+          "Titan"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/6059",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Neutron rocket development path to first launch",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Mar 1, 2021",
+            "Rocket Lab announces Neutron",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 4, 2022",
+            "Archimedes engine test complex opens at NASA Stennis",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Aug 8, 2024",
+            "First Archimedes engine hot fire completed",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Sep 2025",
+            "Launch Complex 3 pad ceremony marks it ready for launch",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 10, 2025",
+            "Vehicle to arrive at LC-3 in Q1 2026, debut slips out of 2025",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 14, 2026",
+            "Forward dome manufacturing issue pushes first launch to 2027",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "2027",
+            "First Neutron flight expected",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "Engine tests",
+          "Launch site",
+          "Vehicle tests",
+          "First launch"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/244",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Europa Clipper path from launch to Europa flybys",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Aug 19, 2019",
+            "Mission moves to Phase C, final design and fabrication",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Oct 14, 2024",
+            "Launch on Falcon Heavy from Pad 39A",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Mar 1, 2025",
+            "Mars gravity-assist flyby at about 884 km",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Dec 3, 2026",
+            "Earth gravity-assist flyby",
+            "Planned",
+            "Wikipedia"
+          ],
+          [
+            "Apr 2030",
+            "Jupiter orbit insertion (Apr 10-11, 2030)",
+            "Planned",
+            "Wikipedia"
+          ],
+          [
+            "Mar 2031",
+            "First Europa flyby",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Development",
+          "Launch",
+          "Cruise",
+          "Jupiter orbit",
+          "Europa flybys"
+        ],
+        "current": 2
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/6567",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Chang'e-7 path from Wenchang arrival to launch",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 2026",
+            "Chang'e-7 spacecraft delivered to Wenchang Space Launch Site",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Aug 23, 2026",
+            "China Manned Space Agency says probe does not meet launch conditions for the Aug 23-24 window",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "2027",
+            "Launch re-planned for 2027, no firm date announced",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Development",
+          "At launch site",
+          "Launch",
+          "Lunar orbit",
+          "South Pole landing"
+        ],
+        "current": 1
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://www.chronopin.com/pin/1864",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Amazon Leo constellation path to consumer service",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Oct 6, 2023",
+            "Two KuiperSat prototype satellites launch on Atlas V",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Apr 28, 2025",
+            "First 27 production satellites launch on Atlas V",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Nov 12, 2025",
+            "Project Kuiper rebranded Amazon Leo, public beta waitlist opens",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "Jul 2026",
+            "396 production satellites launched",
+            "Demonstrated",
+            "Wikipedia"
+          ],
+          [
+            "2026",
+            "Consumer early service anticipated",
+            "Planned",
+            "Wikipedia"
+          ]
+        ],
+        "stages": [
+          "Prototypes",
+          "Production launches",
+          "Enterprise preview",
+          "Consumer service"
+        ],
+        "current": 1
+      }
+    ]
   }
 ]

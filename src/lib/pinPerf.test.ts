@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { perfProblem } from './pinPerf';
+import { perfProblem, timelineSpan } from './pinPerf';
 
 const table = { title: 'Usage', columns: ['Measure', 'Figure', 'Basis'], rows: [['Users', '950 million', 'Google-wide']] };
 
@@ -36,5 +36,19 @@ describe('perfProblem timeline tables', () => {
     expect(perfProblem({ tables: [{ ...timeline, current: 3 }] })).toMatch(/current/);
     const i18n = { es: { title: 'Estado', columns: timeline.columns, rows: timeline.rows, stages: ['Uno'] } };
     expect(perfProblem({ tables: [{ ...timeline, i18n }] })).toMatch(/stages/);
+  });
+});
+
+describe('timelineSpan', () => {
+  const row = (date: string) => [date, 'm', 'Planned', 'S'];
+  const perf = (rows: string[][]) => ({ charts: [], checkedAt: '', tables: [{ title: 't', display: 'timeline' as const, columns: ['Date', 'Milestone', 'Status', 'Source'], rows }] });
+  it('runs from the earliest placeable row to the latest', () => {
+    const span = timelineSpan(perf([row('Mar 2026'), row('H2 2027'), row('2028')]));
+    expect(span?.start).toBe(Date.UTC(2026, 2, 1));
+    expect(span?.end).toBe(Date.UTC(2028, 11, 31));
+    expect(span?.marks).toHaveLength(2);
+  });
+  it('needs two placeable rows', () => {
+    expect(timelineSpan(perf([row('Mar 2026'), row('H2 2027')]))).toBeNull();
   });
 });

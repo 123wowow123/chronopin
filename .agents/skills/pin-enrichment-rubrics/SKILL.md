@@ -113,7 +113,13 @@ rivals, the award, the service center and a timeline that sources did cover.
   The pin's start meter (the bar under the Start date) follows the timeline too: it runs from the pin's start to the
   latest placeable row, with a dot per dated row, instead of a full "started Nd ago" bar. Write dates the parser
   places ("Apr 15, 2026", "Jul 2026", "Q3 2027", "Late 2027", "2027" = year end); "early"/"H2" rows get no dot.
-  Needs two or more placeable rows. Research traps: WebFetch is 403'd or truncated by Tom's Hardware and Digital Citizen, so read them in Chrome
+  Needs two or more placeable rows. The bar runs from the **earliest** placeable row (not the pin's own start, which
+  for a launch- or approval-dated pin falls after its history) to the latest, so a drug, spacecraft or vehicle pin
+  with a timeline shows its whole path. The same table works for any category with a staged path (drugs: Trials /
+  Filing / Approval / Launch; spacecraft: Development / Test flights / First orbital / Operational; vehicles:
+  Reveal / Testing / Production / Deliveries); those pins keep the generic Start/End labels until a kind is added
+  to `src/lib/pinDateKind.ts`. Write outlet names so they match their reference's site name ("Air and Space Forces",
+  not "Air & Space Forces"); an ampersand breaks the match. Research traps: WebFetch is 403'd or truncated by Tom's Hardware and Digital Citizen, so read them in Chrome
   (`get_page_text`, never reuse a stale tab; a page that redirects fails the domain check, re-read the tab and retry).
   Add each opened page as a reference (`POST /api/pins/:id/references`) so its Source cell links; use the outlet's
   name ("Tom's Hardware" matches tomshardware.com). A standard or spec with no sourced product dates (JEDEC LPDDR6)

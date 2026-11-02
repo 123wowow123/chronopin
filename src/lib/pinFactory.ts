@@ -156,3 +156,17 @@ export const buildMarks = (milestones: FactoryMilestone[] | undefined): BuildMar
     const at = milestoneTime(m.date);
     return at == null ? [] : [{ at, label: m.label, date: m.date }];
   });
+
+// The buildout stage a milestone's wording marks the start of, or null when it
+// is neither (a lawsuit, a vote). Production is read first so "fully
+// operational" is not taken for the announcement it came with, and structural
+// work ("topped out", "roofed") stays construction however complete it sounds.
+export const BUILD_STAGES = ['announced', 'construction', 'commissioning', 'production'] as const;
+export type BuildStage = (typeof BUILD_STAGES)[number];
+export function milestoneStage(label: string): BuildStage | null {
+  if (/clearing|foundation|structur|roof|top(s|ped)? out|groundbreaking|breaks? ground|under construction/i.test(label)) return 'construction';
+  if (/commercial|fully operational|full(y)? (campus|operation|capacity)|expected operational|estimated operational|operational|in service|completion|complete\b|delivered/i.test(label)) return 'production';
+  if (/commission|first power|energi[sz]|online|goes? live|\blive\b|first (compute|cluster|unit|production)|trial|test/i.test(label)) return 'commissioning';
+  if (/announce|approv|acquire|permit|joint venture|tax abatement|agreement/i.test(label)) return 'announced';
+  return null;
+}
