@@ -47,3 +47,16 @@ site information sheet" with the PDF as `authorUrl`. Template: `scripts/construc
 
 ## After uploading
 Read the pin back, confirm each media URL loads, and note undownloadable images (the apply script drops them).
+
+## Near-duplicates and variety (Canon FPA-1200NZ2C shipment pin, 2026-11-02)
+- `check_image` only catches the same file at another size. Two press shots of the same machine from different
+  outlets (Canon's product photo, The Register's composite, eeNews Europe, Bits&Chips) pass it but look alike to a
+  reader, and Ian rejected them. **View every candidate and keep one picture per subject.**
+- Aim for different subjects across the three: the product or site in use (Canon's release photo of the tool in a
+  cleanroom), a press image of the product, and an explainer (Canon's process diagram, `.../interview/nanoimprint/img/img3.png`).
+  Read the release's own image list first (Canon: `/en/news/img/<year>/p<date>a.jpg`, `b.jpg`); outlets mostly repeat the
+  `a` shot.
+- Swap with `update_pin {removeMediumIds, addMedia}`. `addMedia` drops `authorName` / `authorUrl`, so after every
+  add `PATCH /api/admin/db/Medium?id=<id>` with both (admin token), then expire the pin and read it back.
+- When no photo of a place or institution turns up (the Texas Institute for Electronics), record the gap rather than
+  using a look-alike.
