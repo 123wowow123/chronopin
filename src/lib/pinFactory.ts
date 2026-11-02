@@ -129,6 +129,11 @@ export function milestoneTime(date: string): number | null {
   const text = date.trim();
   const day = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
   if (day) return Date.UTC(+day[1], +day[2] - 1, +day[3]);
+  const dayName = /^([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),\s*(\d{4})$/.exec(text);
+  const dayIndex = dayName ? MONTHS.indexOf(dayName[1].toLowerCase()) : -1;
+  if (dayName && dayIndex >= 0) return Date.UTC(+dayName[3], dayIndex, +dayName[2]);
+  const late = /^late\s+(\d{4})$/i.exec(text);
+  if (late) return Date.UTC(+late[1], 9, 1);
   const quarter = /^Q([1-4])\s+(\d{4})$/i.exec(text);
   if (quarter) return Date.UTC(+quarter[2], (+quarter[1] - 1) * 3, 1);
   const month = /^([A-Za-z]{3})[a-z]*\.?\s+(\d{4})$/.exec(text);

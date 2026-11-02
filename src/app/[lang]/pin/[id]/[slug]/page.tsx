@@ -31,6 +31,7 @@ import { PinGamePerf } from '@/components/pin/PinGamePerf';
 import { PinAircraftPerf } from '@/components/pin/PinAircraftPerf';
 import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
+import { timelineSpan } from '@/lib/pinPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinFactory } from '@/components/pin/PinFactory';
 import { PinForecastLinks } from '@/components/forecasts/PinForecastLinks';
@@ -247,7 +248,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -384,6 +385,7 @@ async function PinBody({
   costWholeProject,
   autoplay,
   buildMilestones,
+  timeline,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -400,6 +402,7 @@ async function PinBody({
   costWholeProject?: boolean;
   autoplay?: boolean;
   buildMilestones?: FactoryMilestone[];
+  timeline?: ReturnType<typeof timelineSpan>;
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // A datacenter figure searches for the pins at least that size (mw:>=100).
@@ -556,7 +559,7 @@ async function PinBody({
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} end={pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={buildMarks(buildMilestones)} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the

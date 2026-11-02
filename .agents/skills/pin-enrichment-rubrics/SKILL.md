@@ -110,6 +110,10 @@ rivals, the award, the service center and a timeline that sources did cover.
   "Demonstrated" (happened, sourced) or "Planned"/"Expected" (hollow dot); never infer a stage from an elapsed date.
   Source cells give the outlet name and render as `[n]` after the milestone. An `i18n` translation repeats columns,
   rows and the same number of `stages`. Replace the old "production status" table with it.
+  The pin's start meter (the bar under the Start date) follows the timeline too: it runs from the pin's start to the
+  latest placeable row, with a dot per dated row, instead of a full "started Nd ago" bar. Write dates the parser
+  places ("Apr 15, 2026", "Jul 2026", "Q3 2027", "Late 2027", "2027" = year end); "early"/"H2" rows get no dot.
+  Needs two or more placeable rows.
 - **Environment**: a pin posted through `POST /api/admin/pins` (when the helper refuses the desk, e.g. `@MotorDesk`)
   lives on prod; save competitors/performance/critic-reviews/factory there with the admin token, then
   `POST /api/admin/pins/expire`. Mirror to local by `sourceUrl` when the local app has the pin.

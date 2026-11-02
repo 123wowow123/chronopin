@@ -3,6 +3,8 @@
 // chart and table is the vendor's or a benchmark body's own numbers and names
 // its source page.
 
+import { milestoneTime } from './pinFactory';
+
 export type PerfBar = { label: string; value: number; highlight?: boolean };
 // The English text is the default; i18n holds the same text per locale. A chart's
 // bars keep their labels (product names); a table's translation restates every
@@ -127,6 +129,18 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
   }
   if (!charts.length && !tables.length) return 'At least one chart or table.';
   return { charts, tables };
+}
+
+// The span a hardware pin's start meter runs over when it has a timeline table: its dated rows as marks, the latest
+// placeable one as the end (a bare year counts as its last day). Rows are [date, milestone, status, source].
+export function timelineSpan(perf: PinPerfJson | null | undefined): { marks: { at: number; label: string; date: string }[]; end: number } | null {
+  const table = perf?.tables.find((tb) => tb.display === 'timeline' && tb.columns.length === TIMELINE_COLUMNS);
+  if (!table) return null;
+  const marks = table.rows.flatMap(([date, label]) => {
+    const at = milestoneTime(date);
+    return at == null ? [] : [{ at, label, date }];
+  });
+  return marks.length > 1 ? { marks, end: Math.max(...marks.map((m) => m.at)) } : null;
 }
 
 export const hasPerf = (perf: PinPerfJson | null | undefined): perf is PinPerfJson => !!perf && perf.charts.length + perf.tables.length > 0;
