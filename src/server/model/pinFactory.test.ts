@@ -47,7 +47,9 @@ describe('factory evidence contract', () => {
   it('accepts the researched catalog and keeps missing figures null', () => {
     expect(catalog.length).toBeGreaterThanOrEqual(28);
     for (const { profile } of catalog) {
-      expect(factoryProblem(profile)).toEqual(profile);
+      // checkedAt is a stored column the profile reader adds, not part of the validated profile.
+      const { checkedAt: _checkedAt, ...stored } = profile as typeof profile & { checkedAt?: string };
+      expect(factoryProblem(profile)).toEqual(stored);
       expect(factoryScores(profile).scale).toBeNull();
       expect(factoryScores(profile).efficiency).toBeNull();
       // All-null research profiles are valid: they document gaps and still drive the buildout panel.

@@ -94,8 +94,8 @@ describe('tagKind', () => {
 });
 
 describe('reserved filters', () => {
-  it('places stored construction statuses directly after Thread and keeps them searchable as tags', () => {
-    expect(RESERVED_TAGS.slice(0, 1 + CONSTRUCTION_STATUS_TAGS.length).map((r) => r.name)).toEqual(['Thread', ...CONSTRUCTION_STATUS_TAGS]);
+  it('places stored construction statuses after Thread and the signed-in Not seen filter and keeps them searchable as tags', () => {
+    expect(RESERVED_TAGS.slice(0, 2 + CONSTRUCTION_STATUS_TAGS.length).map((r) => r.name)).toEqual(['Thread', 'Not seen', ...CONSTRUCTION_STATUS_TAGS]);
     for (const name of CONSTRUCTION_STATUS_TAGS) {
       expect(isStoredSiteTag(name.toLowerCase())).toBe(true);
       expect(reservedTag(name)).toMatchObject({ field: 'tag', value: name, stored: true });
