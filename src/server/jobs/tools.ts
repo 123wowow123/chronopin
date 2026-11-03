@@ -51,7 +51,7 @@ import { importCampaigns } from '../services/personCampaignsImport';
 import PersonCampaign from '../model/personCampaign';
 import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
 import { campaignRefreshDue, cycleOf } from '@/lib/campaigns';
-import { personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, pushEventInfo, pushModelPerf, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -309,8 +309,12 @@ export const TOOLS: JobTool[] = [
       await Products.saveBlurb({ pinId, blurb: String(input.blurb), sourceUrl: input.sourceUrl ?? null, rating: input.rating ?? null });
       ctx.updated++;
       invalidateTimeline();
-      await act(ctx, { tool: 'save_product_blurb', pinId, detail: String(input.blurb) });
-      return { saved: true };
+      const pushed = await pushProductBlurb(pinId, { blurb: String(input.blurb).trim(), sourceUrl: input.sourceUrl ?? null, rating: input.rating ?? null }).catch((err) => {
+        log.warn(`pin ${pinId}'s blurb did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_product_blurb', pinId, detail: `${String(input.blurb)}${pushed ? ' (prod saved)' : ''}` });
+      return { saved: true, production: pushed };
     },
   },
   {
@@ -998,7 +1002,12 @@ export const TOOLS: JobTool[] = [
     run: async () => {
       const now = Date.now();
       const days = [dayKeyIn(now, 'UTC'), dayKeyIn(now + 86_400_000, 'UTC')];
-      const needed = await DailyHoroscope.needed(days);
+      // A run that writes to production works out the keys from production's own users and charts.
+      const source = await prodHoroscopeSource(days).catch((err) => {
+        log.warn('production horoscope inputs unavailable, using local:', (err as Error).message);
+        return null;
+      });
+      const needed = await DailyHoroscope.needed(days, source ?? undefined);
       return { days, ...needed, totalMissing: needed.transits.length + needed.signs.length };
     },
   },
@@ -1013,8 +1022,15 @@ export const TOOLS: JobTool[] = [
       const key = typeof input.transits === 'string' && input.transits.trim() ? input.transits : null;
       const sign = typeof input.sign === 'string' ? input.sign.toLowerCase() : '';
       const saved = key ? await DailyHoroscope.saveTransit(key, day, text) : await DailyHoroscope.save(sign, day, text);
-      if (saved) await act(ctx, { tool: 'save_horoscope', detail: `${key ?? sign} ${day}`.slice(0, 120) });
-      return { saved };
+      let pushed = false;
+      if (saved) {
+        pushed = await pushHoroscope(key ? 'TransitHoroscope' : 'DailyHoroscope', key ? { transits: key, day, text } : { sign, day, text }).catch((err) => {
+          log.warn(`the ${key ?? sign} reading for ${day} did not reach production:`, (err as Error).message);
+          return false;
+        });
+        await act(ctx, { tool: 'save_horoscope', detail: `${key ?? sign} ${day}${pushed ? ' (prod saved)' : ''}`.slice(0, 120) });
+      }
+      return { saved, production: pushed };
     },
   },
   {

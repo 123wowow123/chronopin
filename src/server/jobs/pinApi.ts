@@ -210,6 +210,64 @@ export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' |
   return true;
 }
 
+// A product's why-it-is-good line, matched to the production pin by source
+// identity (ids can differ). Admin maintenance; nothing happens unless the run
+// writes to production.
+export async function pushProductBlurb(pinId: number, row: { blurb: string; sourceUrl: string | null; rating: { score: number; max: number; source: string; url?: string | null } | null }): Promise<boolean> {
+  if (!prodBase()) return false;
+  const [local] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
+  if (!local?.sourceUrl) throw new Error(`Pin ${pinId}: missing sourceUrl for production blurb`);
+  const token = await adminToken('product blurb maintenance');
+  const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(local.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token });
+  if (found.rows.length !== 1) throw new Error(`Pin ${pinId}: production sourceUrl is missing or ambiguous`);
+  const r = row.rating;
+  await call('POST', '/api/admin/db/ProductBlurb?upsert=1', {
+    token,
+    body: { pinId: found.rows[0].id, blurb: row.blurb, sourceUrl: row.sourceUrl, ratingScore: r?.score ?? null, ratingMax: r?.max ?? null, ratingSource: r?.source ?? null, ratingUrl: r?.url ?? null },
+  });
+  return true;
+}
+
+// One horoscope reading (a transits key or a sun sign) for a UTC day. Keys are
+// computed from local users' charts; production readers with other aspects
+// still need their own keys from production's horoscopes_needed.
+export async function pushHoroscope(table: 'TransitHoroscope' | 'DailyHoroscope', row: Record<string, unknown>): Promise<boolean> {
+  if (!prodBase()) return false;
+  await call('POST', `/api/admin/db/${table}?upsert=1`, { token: await adminToken('horoscope maintenance'), body: row });
+  return true;
+}
+
+// Production's own users, birth charts and saved readings for the horoscopes
+// task (read only): its users' charts differ from this database's, so the keys
+// to write come from here. Null unless the run writes to production.
+export async function prodHoroscopeSource(days: string[]) {
+  if (!prodBase()) return null;
+  const token = await adminToken('horoscope key computation');
+  const all = async <T>(table: string, query = ''): Promise<T[]> => {
+    const rows: T[] = [];
+    for (let offset = 0; ; offset += 1000) {
+      const page = await call<{ rows: T[] }>('GET', `/api/admin/db/${table}?limit=1000&offset=${offset}${query}`, { token });
+      rows.push(...page.rows);
+      if (page.rows.length < 1000) return rows;
+    }
+  };
+  const users = (await all<{ id: number; birthday: string | null }>('User', '&birthday.null=false&utcDeletedDateTime.null=true')).filter((u) => u.birthday).map((u) => ({ id: u.id, birthday: String(u.birthday).slice(0, 10) }));
+  const births = new Map((await all<Record<string, any>>('UserBirth')).map((r) => [Number(r.userId), {
+    time: r.birthTime ? String(r.birthTime).slice(0, 5) : null,
+    latitude: r.birthLatitude ?? null,
+    longitude: r.birthLongitude ?? null,
+    placeName: r.birthPlaceName ?? null,
+    timeZone: r.birthTimeZone ?? null,
+  }]));
+  const first = days[0];
+  const last = days[days.length - 1];
+  const inDays = `&day.gte=${first}&day.lte=${last}`;
+  const day = (v: unknown) => String(v).slice(0, 10);
+  const haveT = (await all<{ transits: string; day: string }>('TransitHoroscope', inDays)).map((r) => ({ transits: r.transits, day: day(r.day) }));
+  const haveS = (await all<{ sign: string; day: string }>('DailyHoroscope', inDays)).map((r) => ({ sign: r.sign, day: day(r.day) }));
+  return { users, births, haveT, haveS };
+}
+
 // Only the sponsored translation endpoints: these are admin operations,
 // signed as the existing admin on the job database (same IDs as production).
 export async function sponsoredTranslationRequest(method: 'GET' | 'POST', path: string, body?: unknown) {

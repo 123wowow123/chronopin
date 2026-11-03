@@ -77,12 +77,15 @@ export function invalidatePin(id: number | string) {
 
 // Only the pin's own page changed (a comment's score, say): the timeline and
 // sitemap do not show it.
+// Safe because the job tools call it from the MCP process, outside Next's
+// static generation store, where revalidateTag throws and would skip the
+// production push that follows.
 export function expirePinPage(id: number | string) {
-  revalidateTag(TAGS.pin(id), 'max');
+  safeRevalidateTag(TAGS.pin(id), 'max');
 }
 
 export function invalidateTimeline() {
-  revalidateTag(TAGS.timeline, 'max');
+  safeRevalidateTag(TAGS.timeline, 'max');
 }
 
 // A setting that changes which pins every timeline page holds: expire at once,

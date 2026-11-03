@@ -1,7 +1,16 @@
 import { SUN_SIGN_SLUGS } from '@/lib/horoscope';
 import { personalSky } from '../horoscope';
 import * as db from '../db';
-import UserBirth from './userBirth';
+import UserBirth, { type Birth } from './userBirth';
+
+// Where the users, charts and readings come from: this database, or (for a run
+// that writes to production) production's own, whose users' charts differ.
+export type HoroscopeSource = {
+  users: { id: number; birthday: string }[];
+  births: Map<number, Birth>;
+  haveT: { transits: string; day: string }[];
+  haveS: { sign: string; day: string }[];
+};
 
 // The day's reading for a sun sign (0221). The page only reads these: the news
 // job's horoscopes task writes them, so a visit never spends LLM credit.
@@ -40,11 +49,11 @@ export default class DailyHoroscope {
   // Who needs what for the given days: each distinct set of transits (with how
   // many users have it) and, for users with nothing in aspect, their sign,
   // each with the days still lacking a reading.
-  static async needed(days: string[]) {
-    const users = await db.query<{ id: number; birthday: string }>(
+  static async needed(days: string[], source?: HoroscopeSource) {
+    const users = source?.users ?? await db.query<{ id: number; birthday: string }>(
       `SELECT "id", to_char("birthday", 'YYYY-MM-DD') AS "birthday" FROM "User" WHERE "birthday" IS NOT NULL AND "utcDeletedDateTime" IS NULL`,
     );
-    const births = await UserBirth.all();
+    const births = source?.births ?? await UserBirth.all();
     const transits = new Map<string, { users: number; day: string; transits: string[] }>();
     const signs = new Map<string, { users: number; day: string }>();
     for (const day of days) {
@@ -64,8 +73,8 @@ export default class DailyHoroscope {
         }
       }
     }
-    const haveT = await db.query<{ transits: string; day: string }>(`SELECT "transits", to_char("day", 'YYYY-MM-DD') AS "day" FROM "TransitHoroscope" WHERE "day" = ANY($1::date[])`, [days]);
-    const haveS = await db.query<{ sign: string; day: string }>(`SELECT "sign", to_char("day", 'YYYY-MM-DD') AS "day" FROM "DailyHoroscope" WHERE "day" = ANY($1::date[])`, [days]);
+    const haveT = source?.haveT ?? await db.query<{ transits: string; day: string }>(`SELECT "transits", to_char("day", 'YYYY-MM-DD') AS "day" FROM "TransitHoroscope" WHERE "day" = ANY($1::date[])`, [days]);
+    const haveS = source?.haveS ?? await db.query<{ sign: string; day: string }>(`SELECT "sign", to_char("day", 'YYYY-MM-DD') AS "day" FROM "DailyHoroscope" WHERE "day" = ANY($1::date[])`, [days]);
     const doneT = new Set(haveT.map((r) => `${r.day}|${r.transits}`));
     const doneS = new Set(haveS.map((r) => `${r.day}|${r.sign}`));
     return {
