@@ -459,21 +459,21 @@ def looks_english(text: str) -> bool:
     """True when text contains common English function words (mirrors the SQL stopword rule)."""
     return bool(ENGLISH_STOPWORDS.search(text))
 
-def acceptable(locale: str, en: str, tr: Optional[str]) -> bool:
+def acceptable(locale: str, en: str, tr: Optional[str], is_title: bool = False) -> bool:
     """
     whole_translation() plus a per-locale guard: a >= 80 char fragment that comes back as pure
     ASCII in a non-Latin-script locale was left in English (a partial-English bullet) unless the
     English source itself is not English.
     """
-    if not whole_translation(en, tr, is_fragment=True):
+    if not whole_translation(en, tr, is_fragment=True, is_title=is_title):
         return False
-    if tr and len(en) >= 60 and looks_english(en) and all(ord(c) < 128 for c in en) and html.unescape(tr.strip()) == en.strip():
+    if not is_title and tr and len(en) >= 60 and looks_english(en) and all(ord(c) < 128 for c in en) and html.unescape(tr.strip()) == en.strip():
         return False
     if locale in NON_LATIN_LOCALES and tr and len(en) >= 80 and looks_english(en) and all(ord(c) < 128 for c in tr):
         return False
     return True
 
-def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False) -> bool:
+def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False, is_title: bool = False) -> bool:
     """
     Python equivalent of wholeTranslation() in src/server/model/pinTranslation.ts,
     plus guards against untranslated English prose and mangled HTML entities.
@@ -487,7 +487,7 @@ def whole_translation(english: Optional[str], translated: Optional[str], is_frag
     en_prose = re.sub(r'<[^>]*>', '', en_s).strip()
     # Identical-to-English output is only an error when the English itself is English prose;
     # a pin that quotes a non-English source (e.g. an Indonesian headline) legitimately keeps it.
-    if not is_fragment and len(en_prose) > 40 and ' ' in en_prose and looks_english(en_prose) and (tr_s == en_s or html.unescape(tr_s) == html.unescape(en_s)):
+    if not is_title and not is_fragment and len(en_prose) > 40 and ' ' in en_prose and looks_english(en_prose) and (tr_s == en_s or html.unescape(tr_s) == html.unescape(en_s)):
         return False
     if re.search(r'(&amp;(?:amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|(?<![&a-zA-Z])(?:amp|quot);|＆amp;|&#39;|&#x27;)', tr_s):
         return False
@@ -510,7 +510,7 @@ def fix_thai_years(src: str, tr: str) -> str:
             tr = tr.replace(byr, yr).replace('พ.ศ.', 'ค.ศ.').replace('พ.ศ', 'ค.ศ')
     return tr
 
-def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: List[str]) -> Tuple[str, List[dict]]:
+def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: List[str], titles_set: Optional[Set[str]] = None) -> Tuple[str, List[dict]]:
     cache_path = CACHE_DIR / f'{locale}.json'
     cache: Dict[str, str] = {}
     if cache_path.exists():
@@ -519,7 +519,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
         except Exception:
             pass
 
-    missing = [t for t in locale_texts if t not in cache or not acceptable(locale, t, cache.get(t))]
+    missing = [t for t in locale_texts if t not in cache or not acceptable(locale, t, cache.get(t), is_title=(bool(titles_set and t in titles_set)))]
     batches: List[List[str]] = []
     cur_batch: List[str] = []
     cur_chars = 0
@@ -538,7 +538,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
         for src_core, tr in res.items():
             if locale == 'th':
                 tr = fix_thai_years(src_core, tr)
-            if not acceptable(locale, src_core, tr):
+            if not acceptable(locale, src_core, tr, is_title=(bool(titles_set and src_core in titles_set))):
                 print(f"[{locale}] Rejected untranslated/partial-English fragment: {src_core[:60]!r}")
                 continue
             cache[src_core] = tr
@@ -560,6 +560,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
             if not src:
                 continue
             is_html = f in HTML_FIELDS
+            is_title = (f == 'title')
             parts = re.split(r'(<[^>]*>)', src) if is_html else [src]
             out_parts: List[str] = []
 
@@ -573,11 +574,11 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
                 core = html.unescape(part.strip())
 
                 tr_core = cache.get(core)
-                if tr_core is None or not acceptable(locale, core, tr_core):
+                if tr_core is None or not acceptable(locale, core, tr_core, is_title=is_title):
                     tr_core = cache.get(part.strip())
                     if tr_core is not None:
                         tr_core = html.unescape(tr_core.strip())
-                        if not whole_translation(core, tr_core, is_fragment=True):
+                        if not whole_translation(core, tr_core, is_fragment=True, is_title=is_title):
                             tr_core = None
 
                 if tr_core is None:
@@ -608,7 +609,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
                 print(f"[{locale}] data-ref mismatch in pin {p['id']} field {f}")
                 valid = False
                 break
-            if not whole_translation(src, val):
+            if not whole_translation(src, val, is_title=is_title):
                 print(f"[{locale}] Incomplete translation (wholeTranslation failed) in pin {p['id']} field {f}")
                 valid = False
                 break
@@ -673,9 +674,14 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
 
     # Translate in parallel across active locales
     all_rows: List[dict] = []
+    titles_set: Set[str] = {
+        html.unescape(p['title'].strip())
+        for p in due_pins
+        if p.get('title')
+    }
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         futures = [
-            pool.submit(translate_locale, loc, pins_by_locale[loc], sorted(texts_by_locale[loc]))
+            pool.submit(translate_locale, loc, pins_by_locale[loc], sorted(texts_by_locale[loc]), titles_set)
             for loc in active_locales
         ]
         for fut in concurrent.futures.as_completed(futures):
