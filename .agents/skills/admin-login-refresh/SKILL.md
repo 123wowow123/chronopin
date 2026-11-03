@@ -45,3 +45,23 @@ curl -s -X PUT -H "Authorization: Bearer $T" -H 'Content-Type: application/json'
 - No `ADMIN_PASSWORD` in `.env.local`, or "sign-in failed": ask the owner; do not guess passwords or create
   accounts.
 - If production is unreachable, run `local` only and report production as not saved.
+
+## Full job flow (news run, learned 2026-11-03)
+
+Where the login fits in a 06:00 / 18:00 run (details: `run-news-job`, `daily-news-job`, `docs/okf/scraping/daily-jobs.md`):
+
+1. Read the slot's run note first; an open run is continued, never restarted. Check `localhost:3000` is up
+   (`npm run dev`, one instance); many steps (PinGang handoff, local readbacks) need it.
+2. Refresh the logins (`refresh_admin_login.sh`) before any step that PUTs through admin APIs. A 401 means refresh and
+   retry. Never print or delete the token files.
+3. Work the lanes in order (maintenance, event info, markets, scores, ads and products), in parallel agents if wanted;
+   agents report, the main session writes the run note.
+4. Local-only saves are pushed to prod by hand when a tool does not: match the prod pin by `sourceUrl`
+   (`/api/admin/db/Pin?sourceUrl=...`; ids usually agree but check), then `PUT /api/pins/:id/<endpoint>` or
+   `POST /api/admin/db/<Table>?upsert=1`, then GET to verify. Since 2026-11-03 the factory, model, blurb and
+   horoscope tools push by themselves (reconnect `chronopin` in `/mcp` after code changes).
+5. Horoscope keys must come from prod's users and charts (`horoscopes_needed` reads them when the run writes to prod).
+   To check the result as a user, GET `/api/horoscope/me` on prod with the admin token; do not forge other users' sessions.
+6. Write `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md`, run `npx vitest run src/lib/okfLint.test.ts`, list every open lane,
+   then close with `npm run jobs:run -- --finish <id> --report <file>` only when the whole run is worked or each gap is named.
+7. Deploy only when the user asks in words (`deploy-production`); a job run is content maintenance.
