@@ -4995,6 +4995,78 @@
     "sourceUrl": "https://solar.com/learn/battle-of-the-3-row-evs/"
   },
   {
+    "pinId": 4762,
+    "rank": 1,
+    "name": "eActros 600",
+    "maker": "Mercedes-Benz Trucks",
+    "competitorPinId": null,
+    "summary": "Long-haul battery-electric tractor with three battery packs (621 kWh) and up to 500 km of range; Electrek calls Tesla's 550 km at 40 tonnes \"competitive on paper but not a runaway lead\".",
+    "sourceUrl": "https://hub.mercedes-benz-trucks.com/gb/en/trucks/eactros-600.html"
+  },
+  {
+    "pinId": 4762,
+    "rank": 2,
+    "name": "FH Aero Electric",
+    "maker": "Volvo Trucks",
+    "competitorPinId": null,
+    "summary": "Flagship long-haul electric tractor with up to eight battery packs (up to 780 kWh) and a stated range of up to 700 km, more than the Semi's 550 km.",
+    "sourceUrl": "https://newmobility.news/2026/04/15/volvo-fh-aero-electric-raises-the-bar-to-700-km-range/"
+  },
+  {
+    "pinId": 4762,
+    "rank": 3,
+    "name": "eTGX",
+    "maker": "MAN Truck & Bus",
+    "competitorPinId": null,
+    "summary": "2026 generation shown at IAA Transportation: 4x2 tractor up to 660 km, 6x2 with a seventh battery up to 720 km, MCS charging up to 750 kW for 20 to 80% in about 30 minutes.",
+    "sourceUrl": "https://www.automotiveworld.com/news/man-etgx-hits-720-km-range-with-new-battery-at-iaa-2026/"
+  },
+  {
+    "pinId": 4762,
+    "rank": 4,
+    "name": "45 R Electric (BEV long-haul)",
+    "maker": "Scania",
+    "competitorPinId": null,
+    "summary": "IAA 2024 spec sheet for the battery-electric long-haul tractor: 624 kWh, 520 km, CCS2 charging up to 375 kW, 45 tonne GTW; a show-truck configuration, not a European price or order list.",
+    "sourceUrl": "https://www.scania.com/de/de/home/about-scania/events/iaa-transportation-2024-en/iaa-elektro.html"
+  },
+  {
+    "pinId": 4766,
+    "rank": 1,
+    "name": "eActros 600",
+    "maker": "Mercedes-Benz Trucks",
+    "competitorPinId": null,
+    "summary": "Long-haul battery-electric tractor with three battery packs (621 kWh) and up to 500 km of range; Electrek calls Tesla's 550 km at 40 tonnes \"competitive on paper but not a runaway lead\".",
+    "sourceUrl": "https://hub.mercedes-benz-trucks.com/gb/en/trucks/eactros-600.html"
+  },
+  {
+    "pinId": 4766,
+    "rank": 2,
+    "name": "FH Aero Electric",
+    "maker": "Volvo Trucks",
+    "competitorPinId": null,
+    "summary": "Flagship long-haul electric tractor with up to eight battery packs (up to 780 kWh) and a stated range of up to 700 km, more than the Semi's 550 km.",
+    "sourceUrl": "https://newmobility.news/2026/04/15/volvo-fh-aero-electric-raises-the-bar-to-700-km-range/"
+  },
+  {
+    "pinId": 4766,
+    "rank": 3,
+    "name": "eTGX",
+    "maker": "MAN Truck & Bus",
+    "competitorPinId": null,
+    "summary": "2026 generation shown at IAA Transportation: 4x2 tractor up to 660 km, 6x2 with a seventh battery up to 720 km, MCS charging up to 750 kW for 20 to 80% in about 30 minutes.",
+    "sourceUrl": "https://www.automotiveworld.com/news/man-etgx-hits-720-km-range-with-new-battery-at-iaa-2026/"
+  },
+  {
+    "pinId": 4766,
+    "rank": 4,
+    "name": "45 R Electric (BEV long-haul)",
+    "maker": "Scania",
+    "competitorPinId": null,
+    "summary": "IAA 2024 spec sheet for the battery-electric long-haul tractor: 624 kWh, 520 km, CCS2 charging up to 375 kW, 45 tonne GTW; a show-truck configuration, not a European price or order list.",
+    "sourceUrl": "https://www.scania.com/de/de/home/about-scania/events/iaa-transportation-2024-en/iaa-elektro.html"
+  },
+  {
     "pinId": 5153,
     "rank": 1,
     "name": "Star Wars: Shatterpoint",
@@ -21643,5 +21715,14 @@
     "competitorPinId": null,
     "summary": "OpenAI's earlier realtime model; Artificial Analysis puts its Big Bench Audio cost at $0.055 per task against $0.025 for Grok Voice 3.0.",
     "sourceUrl": "https://cellcog.ai/blog/grok-voice-3/"
+  },
+  {
+    "pinId": 20711,
+    "rank": 1,
+    "name": "TWINSCAN NXE:3600D",
+    "maker": "ASML",
+    "competitorPinId": null,
+    "summary": "0.33 NA EUV scanner on 300 mm wafers with a 26 x 33 mm field and 13.5 nm light; trade coverage puts Canon's 14 nm capability in line with this class of tool, while Bits&Chips says EUV scanners are at least twice as fast.",
+    "sourceUrl": "https://www.asml.com/en/products/euv-lithography-systems/twinscan-nxe-3600d"
   }
 ]
