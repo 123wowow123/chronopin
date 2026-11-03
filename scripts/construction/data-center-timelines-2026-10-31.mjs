@@ -92,7 +92,7 @@ for (const id of files) {
 
     const { rows: tags } = await call('GET', `/api/admin/db/PinTag?pinId=${id}&limit=200`);
     const stale = tags.filter((t) => STATUS.some((s) => s.toLowerCase() === t.name.toLowerCase()) && t.name !== d.status);
-    const wanted = [d.status, ...(d.status === 'In Progress' ? ['Under Construction'] : []), 'Data Centers'];
+    const wanted = [d.status, ...(d.status === 'In Progress' ? ['Under Construction'] : []), ...(d.extraTags ?? ['Data Centers'])];
     const addTags = wanted.filter((n) => !tags.some((t) => t.name.toLowerCase() === n.toLowerCase()));
     const priceNew = d.price && pin.price == null ? d.price : null;
     log.push([id, apply ? 'applying' : 'dry', `${d.status}${stale.length ? ` (was ${stale.map((t) => t.name)})` : ''} ms ${milestones.length} cap ${factory.capacityPoints?.length ?? 0} reviews ${d.reviews.length} refs+${newRefs.length} tags+${addTags.length} price ${priceNew ? priceNew.amount : '-'}${dropped.length ? ` dropped ${dropped.length}` : ''}`]);
