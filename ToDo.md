@@ -1,5 +1,19 @@
 # To Do
 
+## News run 45 (November 4, 2026): open items
+
+**Done:** WTI month-end thread 20725-20727 and October CPI 20728 on production; 25 revisits checked (9 resolved or edited); about 60 model rubric/table saves, 7 factory profiles, construction reviews, 12 product blurbs, pin and holiday ads. Details: `docs/okf/scraping/news-2026-11-04-am.md`. Rule added to `run-news-job`: every lane every run.
+
+- [ ] **Never run `oil_commodity_markets` with `apply: true`:** it writes canned text by direct SQL and overwrote local 16017. `commodityOil.ts` still needs a rewrite (hand-built text, API writes, one parent chain) before it is safe.
+- [ ] **Model-rubric backlog (about 70):** 5013, 15154, 1821, 15107, 15117, 15162, 15134 next; image-only launch tables on Anthropic, OpenAI, Qwen and Meta pages need Chrome or a text mirror. Overlapping saves on 15125, 15127, 15118, 15133, 15108: read the panels back.
+- [ ] **Factory profiles (46 left):** recheck 230, 222, 2281; 222 is tagged Proposed but under construction; 803 Frankfurt T3 opened 22 April 2026 but still says construction begins.
+- [ ] **Product competitors (1,247) and blurbs (about 90):** the head of the gap list is far-future, events and sneakers; filter to released products with rivals first.
+- [ ] **Ads:** 13 upcoming pins without a match; holiday tiers short (diwali, kwanzaa, posadas, songkran premium, lantern premium, nowruz).
+- [ ] **Reviews:** taste pins 7665, 7659, 13964, 3410, 5611 need real tastings; 425 Danjiang Bridge; 268, 513, 516, 803 still under three.
+- [ ] **Revisits left (13):** 4672, 5499, 16408, 15212 and the TravelDesk seasonal marks wait on 2027 official pages.
+- [ ] **Local behind prod:** 2318, 3273 and other agent edits reach local at the next sync; page caches were not expired (classifier refused the admin call).
+- [ ] **Uncommitted code, not deployed:** `scripts/jobs/mcp.ts` (`--follow`), `scripts/jobs/run.ts`, `src/server/model/jobRun.ts`, `src/server/jobs/commodityOil.ts`, `.agents/skills/run-news-job/SKILL.md`, the run note and this file.
+
 ## EnergyDesk tracker batch clean-up (November 2, 2026)
 
 **Done, on production:** all 460 estimated-date pins in ids 18400-18895 (@EnergyDesk, generated from Cleanview/EIA/queue rows) were audited in 46 lanes and cleaned: 110 deleted (no real project or duplicate; each read back as 404), about 300 rewritten from tracker/queue rows with sourced references, corrected address and coordinates, and (where quotes verified against the raw page) a `PinFactory` timeline; projects found already built are Completed; homepage and EIA-spreadsheet references downrated to 30. Pins 16315, 18489, 18493, 18516, 18596 and 18675 absorbed the duplicates. Scoring: migration 0238 caps `estimated` at 65, `delayed` 55, `unknown` 40; the timeline threshold is 70 on production and local; a day with no confident pin still shows its others. Skill `construction-pin-research` sections 9-10 plus the progress-bar and profile-saving rules record the method; scripts and lane JSON are in the session scratchpad (`apply.py`, `wave.py`, `audit/`).
