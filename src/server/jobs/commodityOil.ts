@@ -505,7 +505,8 @@ export async function syncMonthlyOilCommodities(options: { apply?: boolean } = {
               item.description,
               item.longFormSummary,
               item.marketUrl,
-              new Date(item.settlementDate),
+              // An all-day pin starts at 00:00Z (CK_Pin_allDayUtcMidnight), but a market's settlement time rarely does.
+              new Date(new Date(item.settlementDate).setUTCHours(0, 0, 0, 0)),
               item.dateConfidence,
               item.dateConfidenceReasoning,
               authorId,
