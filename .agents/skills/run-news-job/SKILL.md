@@ -80,6 +80,26 @@ finishes (so a cut-off run leaves a usable note), then close once with `jobs:run
 5. Write `news-YYYY-MM-DD-{am,pm}.md`, run `npx vitest run src/lib/okfLint.test.ts`, then finish.
 Spend parallel tool calls on independent fetches; stop and report a task only for a concrete blocker.
 
+## Every lane, every run (owner, 2026-11-04)
+
+All five lanes are done in full on **every** 06:00 and 18:00 run; "lanes still open" is not an acceptable close.
+Runs 43-45 left lanes 1, 3, 4 and 5 open and the backlog (25 revisits, 129 model-rubric gaps, 19 pins needing ads)
+only grew. Per run:
+
+- Lane 1: every revisit mark is re-checked and edited, resolved or re-noted with the new evidence. `weekReview`,
+  `freshSources` and `pingang_handoff.py` run too.
+- Lane 3: scan the markets, create every dated Predicted pin, thread Brent and WTI, run `prediction_accuracy`.
+- Lane 4: `model_scores`, `model_rubric_gaps` (work the batch it lists), `industry_forecast_status`,
+  `review_research_gaps`, horoscopes.
+- Lane 5: `pin_ads_check` fills every pin in `needsAds`, `holiday_ads_check`, `product_lifecycle_sync`,
+  `pending_ad_translations`, trader positions, person trades, product competitors, factory profiles.
+- If a run cannot finish (session limit, blocked source), say which task and why in the run note; do not close
+  with lanes silently skipped. Delegate independent lanes to subagents to finish in time.
+- Do **not** use `oil_commodity_markets` with `apply: true`: it writes canned text through direct SQL (see
+  learnings.md "Oil helper is not safe for publication"). Build Brent/WTI month-end pins by hand from the Kalshi
+  API (KXBRENTMON; KXWTI is a daily series, use the month's last-day event, e.g. `KXWTI-26OCT3014`), check
+  `find_pins` by source URL first, and thread each month under the previous one.
+
 ## Added after run 49
 
 - Daily-job script helpers live in `scripts/jobs/` (`pingang_handoff.py`, `pingang_enrich_media.py`); scratch scripts go in the session scratchpad, not the repo.

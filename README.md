@@ -533,3 +533,7 @@ https://www.silicondata.com/products/silicon-index
 
 https://artificialanalysis.ai/articles/aa-personalitybench
 ai personality index, make panel
+
+
+add side panel for and other interesting panels on this site
+https://epoch.ai/data-insights/ai-datacenter-power
