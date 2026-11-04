@@ -60,6 +60,12 @@ export default class JobRun {
     return rows.length > 0;
   }
 
+  /** The id of the run that is open now, newest first, or null between runs. */
+  static async runningId(): Promise<number | null> {
+    const rows = await db.query(`SELECT "id" FROM "JobRun" WHERE "status" = 'running' ORDER BY "id" DESC LIMIT 1`);
+    return rows.length ? Number(rows[0].id) : null;
+  }
+
   static async setDriver(id: number, driver: JobDriver) {
     await db.query(`UPDATE "JobRun" SET "driver" = $2 WHERE "id" = $1`, [id, driver]);
   }

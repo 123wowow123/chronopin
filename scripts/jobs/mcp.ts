@@ -5,6 +5,7 @@
 //
 //   tsx scripts/jobs/mcp.ts --run <JobRun id>
 //   tsx scripts/jobs/mcp.ts --all [--jobs midnight,news]   a full run: begin_job / finish_job
+//   tsx scripts/jobs/mcp.ts --follow                       works for whichever run is open now
 //
 // A Claude Code session in VS Code can use it too, to work a job by hand:
 // start a run with `npm run jobs:run -- --job midnight --prepare`, then add
@@ -12,6 +13,9 @@
 // --all: no run is open until the session calls begin_job for a job (which
 // opens that job's run then, so a long session never has a run waiting open),
 // and finish_job closes it (src/server/jobs/fullRun.ts).
+//
+// --follow is the one to register once in VS Code: every tool call looks up the
+// open run (`jobs:run --prepare` opens it), so a new run needs no rebind or reconnect.
 //
 // The protocol is small enough to speak directly: newline-delimited JSON-RPC,
 // with initialize, tools/list and tools/call.
@@ -27,7 +31,7 @@ import { afterRun } from '@/server/jobs';
 import { fullRunJobs } from '@/server/jobs/fullRun';
 import { contextForRun, runTool, TOOLS, type JobContext } from '@/server/jobs/tools';
 
-const { values: flags } = parseArgs({ options: { run: { type: 'string' }, all: { type: 'boolean', default: false }, jobs: { type: 'string' } } });
+const { values: flags } = parseArgs({ options: { run: { type: 'string' }, all: { type: 'boolean', default: false }, jobs: { type: 'string' }, follow: { type: 'boolean', default: false } } });
 
 // A full run's session-only tools: they move this server from job to job.
 const FULL_RUN_TOOLS = [
@@ -51,8 +55,17 @@ function send(message: Record<string, unknown>) {
   process.stdout.write(`${JSON.stringify({ jsonrpc: '2.0', ...message })}\n`);
 }
 
+async function contextForOpenRun(): Promise<JobContext | null> {
+  const runId = await JobRun.runningId();
+  if (!runId) return null;
+  const run = await JobRun.get(runId);
+  if (!run) return null;
+  const job = (await getDailyJobs()).jobs.find((j) => j.id === run.jobId);
+  return contextForRun(runId, job ?? { maxNewPins: 0, maxUpdates: 0 });
+}
+
 async function loadContext(): Promise<JobContext | null> {
-  if (flags.all) return null;
+  if (flags.all || flags.follow) return null;
   const runId = Number(flags.run);
   if (!Number.isInteger(runId) || runId < 1) throw new Error('Pass --run <JobRun id>');
   const run = await JobRun.get(runId);
@@ -117,7 +130,9 @@ async function main() {
           protocolVersion: params?.protocolVersion ?? '2025-06-18',
           capabilities: { tools: {} },
           serverInfo: { name: 'chronopin', version: '1.0.0' },
-          instructions: ctx
+          instructions: flags.follow
+            ? `Chronopin's daily-job tools; each call works for the run that is open now.`
+            : ctx
             ? `Chronopin's daily-job tools for run ${ctx.runId} (${ctx.jobId}).`
             : `Chronopin's daily-job tools for a full run of: ${full?.remaining.join(', ')}. Call begin_job for each job, then finish_job.`,
         },
@@ -145,11 +160,12 @@ async function main() {
       }
       // Each call runs on its own, so a slow scrape does not hold up a count;
       // in a full run it first waits for any begin_job / finish_job before it.
-      const call = gate.then(() =>
-        ctx
+      const call = gate.then(async () => {
+        if (flags.follow && (!ctx || (await JobRun.runningId()) !== ctx.runId)) ctx = await contextForOpenRun();
+        return ctx
           ? runTool(name, args, ctx).then(({ text, isError }) => send({ id, result: { content: [{ type: 'text', text }], isError } }))
-          : send({ id, result: { content: [{ type: 'text', text: 'No job is open: call begin_job first.' }], isError: true } }),
-      );
+          : send({ id, result: { content: [{ type: 'text', text: flags.follow ? 'No run is open: start one with `npm run jobs:run -- --job news --prepare`.' : 'No job is open: call begin_job first.' }], isError: true } });
+      });
       pending.add(call);
       void call.finally(() => pending.delete(call));
     } else {

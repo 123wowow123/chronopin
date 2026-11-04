@@ -68,6 +68,7 @@ async function prepare(jobId: string) {
   console.log(`Prompt:     ${promptFile}`);
   console.log(`MCP config: ${mcpFile}`);
   console.log(`Add the tools to Claude Code with:\n  claude mcp add chronopin -- ${path.resolve('node_modules/.bin/tsx')} ${path.resolve('scripts/jobs/mcp.ts')} --run ${runId}`);
+  console.log(`Or register once, with no rebind per run:\n  claude mcp add chronopin -- ${path.resolve('node_modules/.bin/tsx')} ${path.resolve('scripts/jobs/mcp.ts')} --follow`);
   console.log(`When done: npm run jobs:run -- --finish ${runId} --report <file>`);
 }
 

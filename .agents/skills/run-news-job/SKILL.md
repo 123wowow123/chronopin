@@ -29,6 +29,8 @@ for permission. This does not authorize production deployment.
 3. **Headless, no manual work:** `npm run jobs:run -- --all --driver session` (Claude Code's own login, no
    API key). Same as the admin page's "Run all jobs now". Use only when the user wants it unattended.
 
+**Register once (2026-11-04):** `claude mcp add chronopin -- <tsx> scripts/jobs/mcp.ts --follow` makes every tool call work for whichever run is open now, so a new `--prepare` needs no rebind or reconnect (reconnect `chronopin` in `/mcp` one time after switching to it). The rebind below is only for the old `--run <id>` registration.
+
 **Rebinding the MCP to a new run (VS Code, 2026-11-02):** `claude` is not on PATH there. Use the extension's
 binary, `~/.vscode/extensions/anthropic.claude-code-*/resources/native-binary/claude`: run
 `mcp remove chronopin`, then the printed `mcp add chronopin -- ... --run <id>` line, then reconnect `chronopin`
