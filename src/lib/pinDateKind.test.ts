@@ -12,4 +12,8 @@ describe('pinDateKind', () => {
   it('leaves pins without a timeline alone', () => {
     expect(pinDateKind([], false, ['Semiconductors'])).toBeUndefined();
   });
+  it('calls the single date of a finished build its completion', () => {
+    expect(pinDateKind([{ name: 'Completed' }], false, [], false)).toBe('completed');
+    expect(pinDateKind([{ name: 'Completed' }], false, [], true)).toBe('construction');
+  });
 });
