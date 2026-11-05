@@ -88,6 +88,11 @@ const GENERIC_WORDS = new Set(['gift', 'gifts', 'set', 'sets', 'kit', 'box', 'fe
 // (alcohol, vapes, adult products, weapons).
 const UNSUITABLE = /supplement|detox|capsule|\bpills?\b|shampoo|hair loss|\bliver\b|weight loss|vitamin|\bcbd\b|hemp|cannabis|alcohol|whiskey|vodka|\bwine\b|\bbeer\b|\bsake\b|vape|nicotine|cigar|sexy|lingerie|adult|\bknife\b|\bgun\b/i;
 
+// Generic craft, wedding and masquerade stock that merely shares a word with a
+// holiday's goods (run 46: bulk craft feathers and a masquerade mask were
+// listed for Brazil's Carnival, which asks for samba costumes and accessories).
+const GENERIC_STOCK = /\bcrafts?\b|\bdiy\b|\bwedding\b|masquerade|scrapbook/i;
+
 // Whether a search hit's title is about what the search asked for: it holds
 // one of the search's own words (a "mooncake" search also lists Japanese
 // sweets and pastries, none of them a mooncake).
@@ -98,7 +103,7 @@ export function onTopic(title: string, query: string): boolean {
     .split(/[^a-z]+/)
     .filter((w) => w.length >= 4 && !GENERIC_WORDS.has(w))
     .map((w) => w.replace(/s$/, ''));
-  if (UNSUITABLE.test(title)) return false;
+  if (UNSUITABLE.test(title) || GENERIC_STOCK.test(title)) return false;
   return !words.length || words.some((w) => lower.includes(w) || (w === 'mooncake' && lower.includes('moon cake')));
 }
 

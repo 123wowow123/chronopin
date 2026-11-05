@@ -2267,36 +2267,36 @@
   {
     "slug": "ddhq-house-control-2026",
     "industry": "Elections",
-    "title": "Democratic House-control probability, November 2026",
+    "title": "Democratic House seats projected, November 2026 (resolved from the pre-election 79% forecast)",
     "tags": [
       "Elections"
     ],
     "prefix": "",
-    "suffix": "%",
+    "suffix": " seats",
     "projection": {
-      "label": "Decision Desk HQ 2026 forecast, observed October 25, 2026",
+      "label": "CNBC decision desk projection, election night November 3, 2026 (at least)",
       "points": [
         {
           "x": "2026-11-03",
-          "value": 79
+          "value": 245
         }
       ]
     },
     "sources": [
       {
+        "label": "CNBC midterm elections 2026 live updates, November 3, 2026",
+        "url": "https://www.cnbc.com/2026/11/03/midterm-elections-2026-live-updates.html",
+        "date": "2026-11-03",
+        "quote": "The desk projects Democrats will win at least 245 House seats."
+      },
+      {
         "label": "Decision Desk HQ 2026 forecast, observed October 25, 2026",
         "url": "https://votes.decisiondeskhq.com/forecast/2026",
         "date": "2026-10-25",
         "quote": "Decision Desk HQ's model gives Democrats a 79% chance of winning the House"
-      },
-      {
-        "label": "DDHQ forecast methodology",
-        "url": "https://votes-docs.decisiondeskhq.com/forecast-methodology",
-        "date": null,
-        "quote": null
       }
     ],
-    "note": "Dated model snapshot observed October 25, 2026; publisher displays “Last updated Oct 25, 4:57 PM” without a timezone in the page text. Outcome date is the November 3 election, not market settlement. This is a probability, not a vote share, realized result or live feed; refresh before using it after the observation day and resolve after the election."
+    "note": "Resolved after the November 3, 2026 election. Before the vote, Decision Desk HQ's model (observed October 25) gave Democrats a 79% chance of winning the House; that probability is kept in the sources, not plotted. The plotted value is a minimum, a CNBC decision-desk election-night projection of at least 245 Democratic seats (218 is a majority), not a final certified count. Refresh with the official tally when it is complete."
   },
   {
     "slug": "idc-enterprise-ai-infrastructure",

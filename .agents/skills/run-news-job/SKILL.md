@@ -105,3 +105,7 @@ only grew. Per run:
 - Daily-job script helpers live in `scripts/jobs/` (`pingang_handoff.py`, `pingang_enrich_media.py`); scratch scripts go in the session scratchpad, not the repo.
 - Prediction-market pins: dollar volume and odds carry the observation date; thread to the existing parent (the Iran ceasefire pin 1952 is the parent for new ceasefire markets); call `prediction_accuracy` with `apply: true` after creating pins.
 - Before closing, list every open lane and unworked task in the run note (see `news-2026-11-02-am.md`) so the next slot starts there.
+
+## Added after run 46
+
+- Work the lanes with background subagents (see `daily-news-job` "Learnings from run 46"): one per lane in parallel, then a follow-up wave, then the parent writes the note and closes. Count revisit marks with a high `limit`; the default may hide some.

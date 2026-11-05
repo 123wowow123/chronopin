@@ -520,10 +520,6 @@ use browser for this
 Senate trade filings are blocked by the Senate site's bot filter, and one OGE PDF is unreadable.
 
 
-run
-EnergyDesk tracker batch clean-up (November 2, 2026)
-
-
 
 add gpu retal price graph on GPU pins
 https://www.silicondata.com/products/silicon-index
