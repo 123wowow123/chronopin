@@ -5,6 +5,7 @@
 //   npm run series:attach -- --id 2617 --series WCSSTUS1 --label "SPR crude stocks"
 //   npm run series:attach -- --tag SPR --series WCSSTUS1 --remove
 //   npm run series:attach -- --series WCSSTUS1 --dry-run
+//   npm run series:attach -- --id 20727 --source epoch --series meta-los-lunas:it --label "IT power, Epoch AI estimate"
 //   npm run series:attach -- --id 4900 --source fred --series PCEPI:PC1 --label "PCE price index, change from a year ago"
 //
 // Only the handle is stored. The numbers are fetched from the publisher when
@@ -49,7 +50,7 @@ async function pinIds(): Promise<{ id: number; title: string }[]> {
 
 async function run() {
   if (!flags.series) throw new Error('Name the series with --series (e.g. WCSSTUS1).');
-  const seriesId = normaliseSeriesId(flags.series);
+  const seriesId = flags.source === 'epoch' ? flags.series.trim().toLowerCase() : normaliseSeriesId(flags.series);
   const problem = seriesProblem({ source: flags.source, seriesId, markedDay: flags.marked });
   if (problem) throw new Error(problem);
   const pins = await pinIds();

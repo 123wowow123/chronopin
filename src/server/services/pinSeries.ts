@@ -9,6 +9,7 @@
 import * as db from '../db';
 import { getSeries, normaliseSeriesId, seriesUrl, type EiaSeries } from '../eiaSeries';
 import { fredUrl, getFredSeries, parseFredId, type FredSeries } from '../fredSeries';
+import { epochUrl, getEpochSeries, parseEpochId, type EpochSeries } from '../epochSeries';
 
 export type PinSeriesInput = {
   source?: string;
@@ -27,7 +28,7 @@ export type PinSeriesRow = {
   markedDay: string | null;
 };
 
-const SOURCES = new Set(['eia', 'fred']);
+const SOURCES = new Set(['eia', 'fred', 'epoch']);
 
 export function seriesProblem(input: PinSeriesInput): string | undefined {
   const source = input.source ?? 'eia';
@@ -40,6 +41,9 @@ export function seriesProblem(input: PinSeriesInput): string | undefined {
   if (source === 'fred' && !parseFredId(input.seriesId)) {
     return 'A FRED series id is the id and an optional units code, like PCEPI or PCEPI:PC1.';
   }
+  if (source === 'epoch' && !parseEpochId(input.seriesId)) {
+    return 'An Epoch series id is the campus slug and a metric, like meta-los-lunas:it (metric it, h100e or cost).';
+  }
   if (input.markedDay && !/^\d{4}-\d{2}-\d{2}$/.test(input.markedDay)) {
     return 'A marked day must be YYYY-MM-DD.';
   }
@@ -51,7 +55,7 @@ export async function saveSeries(pinId: number, input: PinSeriesInput): Promise<
   const problem = seriesProblem(input);
   if (problem) throw new Error(problem);
   const source = input.source ?? 'eia';
-  const seriesId = normaliseSeriesId(input.seriesId);
+  const seriesId = source === 'epoch' ? input.seriesId.trim().toLowerCase() : normaliseSeriesId(input.seriesId);
   await db.query(
     `INSERT INTO "PinSeries" ("pinId", "source", "seriesId", "label", "sourceUrl", "markedDay")
      VALUES ($1, $2, $3, $4, $5, $6)
@@ -62,10 +66,11 @@ export async function saveSeries(pinId: number, input: PinSeriesInput): Promise<
 }
 
 export async function removeSeries(pinId: number, seriesId: string, source = 'eia'): Promise<void> {
+  const id = source === 'epoch' ? seriesId.trim().toLowerCase() : normaliseSeriesId(seriesId);
   await db.query(`DELETE FROM "PinSeries" WHERE "pinId" = $1 AND "source" = $2 AND "seriesId" = $3`, [
     pinId,
     source,
-    normaliseSeriesId(seriesId),
+    id,
   ]);
 }
 
@@ -77,14 +82,15 @@ export async function seriesForPin(pinId: number): Promise<PinSeriesRow[]> {
 }
 
 // The publisher's current numbers for a stored handle, whoever publishes it.
-export function readSeries(source: string, seriesId: string): Promise<EiaSeries | FredSeries | null> {
+export function readSeries(source: string, seriesId: string): Promise<EiaSeries | FredSeries | EpochSeries | null> {
+  if (source === 'epoch') return getEpochSeries(seriesId);
   return source === 'fred' ? getFredSeries(seriesId) : getSeries(seriesId);
 }
 
 // Where a reader clicks through to: what the curator stored, else the
 // publisher's own page for the series.
 export const linkFor = (row: PinSeriesRow): string =>
-  row.sourceUrl || (row.source === 'fred' ? fredUrl(row.seriesId) : seriesUrl(row.seriesId));
+  row.sourceUrl || (row.source === 'epoch' ? epochUrl(row.seriesId) : row.source === 'fred' ? fredUrl(row.seriesId) : seriesUrl(row.seriesId));
 
 // Every pin's series, for the seed backup, and the restore that puts them
 // back. A greenfield refresh rebuilds the database from the schema and the

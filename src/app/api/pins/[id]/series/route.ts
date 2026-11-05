@@ -49,7 +49,8 @@ export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/p
     for (const row of rows) {
       const series = await readSeries(row.source, row.seriesId);
       if (!series) continue;
-      const windowed = series.points.filter((p) => p.day >= from && p.day <= to);
+      // A campus's few readings, projections included, are the whole story.
+      const windowed = row.source === 'epoch' ? series.points : series.points.filter((p) => p.day >= from && p.day <= to);
       // An event older or newer than the series has no window; show the
       // nearest end rather than an empty chart.
       const points = windowed.length ? windowed : series.points.slice(-52);
