@@ -519,7 +519,6 @@ companies like tesla should have parent landing page pin detail page with a thre
 use browser for this
 Senate trade filings are blocked by the Senate site's bot filter, and one OGE PDF is unreadable.
 
-I researched four model pins from pages I opened this run and saved them locally and on production. 132 of the 137 model pins still lack a rubric or spec tables.
 
 run
 EnergyDesk tracker batch clean-up (November 2, 2026)

@@ -5,7 +5,7 @@
 **Done:** WTI month-end thread 20725-20727 and October CPI 20728 on production; 25 revisits checked (9 resolved or edited); about 60 model rubric/table saves, 7 factory profiles, construction reviews, 12 product blurbs, pin and holiday ads. Details: `docs/okf/scraping/news-2026-11-04-am.md`. Rule added to `run-news-job`: every lane every run.
 
 - [ ] **Never run `oil_commodity_markets` with `apply: true`:** it writes canned text by direct SQL and overwrote local 16017. `commodityOil.ts` still needs a rewrite (hand-built text, API writes, one parent chain) before it is safe.
-- [ ] **Model-rubric backlog (about 70):** 5013, 15154, 1821, 15107, 15117, 15162, 15134 next; image-only launch tables on Anthropic, OpenAI, Qwen and Meta pages need Chrome or a text mirror. Overlapping saves on 15125, 15127, 15118, 15133, 15108: read the panels back.
+- [ ] **Model-rubric leftovers:** the backlog is cleared; only two small jobs remain. Read a sample of the new spec panels back (only 1797 and 5005 were verified; 1821's two charts lost their notes when re-saved, and 15104 and 15132 figures were not re-opened). Pictures: 1821 needs a third, 1798 has none on-subject.
 - [ ] **Factory profiles (46 left):** recheck 230, 222, 2281; 222 is tagged Proposed but under construction; 803 Frankfurt T3 opened 22 April 2026 but still says construction begins.
 - [ ] **Product competitors (1,247) and blurbs (about 90):** the head of the gap list is far-future, events and sneakers; filter to released products with rivals first.
 - [ ] **Ads:** 13 upcoming pins without a match; holiday tiers short (diwali, kwanzaa, posadas, songkran premium, lantern premium, nowruz).
