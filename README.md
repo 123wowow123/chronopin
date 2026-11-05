@@ -504,13 +504,6 @@ http://localhost:3000/pin/20640/perry-s-cafe-redevelopment-project
 
 
 
-http://localhost:3000/pin/20683/grok-voice-3-0-tops-speech-to-speech-index-at-86-9-for-the-same-0-08-a-minute
-
-are all these datacenter pined and spec graph added
-https://epoch.ai/data/ai-data-centers
-should be released. add varients to this based on pin show me full list of varients
-
-
 
 
 companies like tesla should have parent landing page pin detail page with a thread panel that breaks out to all sub product and with their pin thread of timelines. Should become a tree structure of the company with their projects. The main pins is constantly updated so will not show on main timeline but rather will be a company landing page pin

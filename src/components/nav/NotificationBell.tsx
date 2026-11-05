@@ -1175,8 +1175,9 @@ export function NotificationBell({ className = '' }: { className?: string }) {
           <LocalWeatherRow className="border-b border-line" />
           <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <PremiumRow className="border-b border-line" onNavigate={() => setOpen(false)} />
-          <Link href="/notifications" onClick={() => setOpen(false)} className="block border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
+          <Link href="/notifications" onClick={() => setOpen(false)} className="group/head flex items-center justify-between border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
             {t('notifications.title')}
+            <Icon name="back" className="size-4 rotate-180 text-subtle transition-transform group-hover/head:translate-x-0.5 rtl:rotate-0 rtl:group-hover/head:-translate-x-0.5" />
           </Link>
           <NotificationItems {...list} onNavigate={() => setOpen(false)} />
         </div>
