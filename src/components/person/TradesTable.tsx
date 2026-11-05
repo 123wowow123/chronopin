@@ -79,6 +79,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                   <td className="px-3 py-2">
                     <span className="font-medium text-ink">{tr.ticker ?? '—'}</span>
                     <span className="block max-w-xs text-xs text-subtle">{tr.asset}</span>
+                    {tr.note ? <span className="mt-1 block max-w-xs text-xs text-muted">{tr.note}</span> : null}
                     {tr.conflicts?.length ? (
                       <span
                         className="mt-1 inline-flex max-w-xs items-center gap-1 rounded-full bg-warning/15 px-2 py-0.5 text-[11px] font-semibold text-warning-soft ring-1 ring-warning/40 ring-inset"
@@ -90,7 +91,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                     ) : null}
                   </td>
                   <td className="px-3 py-2 whitespace-nowrap">
-                    <span className={tr.txType === 'purchase' ? 'text-success' : tr.txType === 'exchange' ? 'text-muted' : 'text-danger'}>{t(`person.trades.types.${tr.txType}`)}</span>
+                    <span className={tr.txType === 'purchase' ? 'text-success' : tr.txType === 'exchange' || tr.txType === 'other' ? 'text-muted' : 'text-danger'}>{t(`person.trades.types.${tr.txType}`)}</span>
                   </td>
                   <td className="px-3 py-2 whitespace-nowrap tabular-nums">{formatAmountRange(tr.amountLow, tr.amountHigh)}</td>
                   {/* A 278-T does not say whose account a trade was in. */}

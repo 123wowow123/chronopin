@@ -66,3 +66,15 @@ describe('the PAS index', () => {
     expect(ogeReportId(u)).toBe('1D97817A20B559D085258CA2002C8C51');
   });
 });
+
+describe('parseOge278T total return swaps', () => {
+  const r = parseOge278T("/s/ Bedford, Bryan [electronically signed on 11/03/2025 by Bedford, Bryan in Integrity.gov] - Filer received a 0 day filing extension.\n\nTransactions\n #          DESCRIPTION                                                                    TYPE                  DATE                   NOTIFICATION           AMOUNT\n                                                                                                                                        RECEIVED OVER\n                                                                                                                                        30 DAYS AGO\n\n 1          Total return swap contract with JPMorgan (value         See Endnote                                  10/22/2025             No\n            not readily ascertainable)\n\n 2          Total return swap contract with JPMorgan (value         See Endnote                                  10/22/2025             No\n            not readily ascertainable)\n\n\n\nEndnotes\n PART                   #                                           ENDNOTE\n\n Transactions           1                                           (1) Filer’s position receives return based on JPM Put Writing Index JPUSPRU6. This index writes puts\n                                                                    based on the SPX index.\n                                                                    (2) Filer’s position pays a fixed 0.60% rate to the counterparty.\n                                                                    The swap has a $5MM notional principal and expires 10/22/30.\n\n Transactions           2                                           (1) Filer’s position receives return based on JPM Dynamic Put Writing Index JPOSPWUT. This index\n                                                                    writes puts based on the SPX index.\n                                                                    (2) Filer’s position pays a fixed 0.60% rate to the counterparty.\n                                                                    The swap has a $5MM notional principal and expires 10/22/30.\n\n\n\n");
+  it('reads an untyped, amountless line as an "other" trade with its endnote', () => {
+    expect(r.trades).toHaveLength(2);
+    expect(r.trades[0]).toMatchObject({ asset: 'Total return swap contract with JPMorgan (value not readily ascertainable)', txType: 'other', txDate: '2025-10-22', amountLow: null, amountHigh: null });
+    expect(r.trades[0].note).toContain('JPUSPRU6');
+    expect(r.trades[0].note).toContain('$5MM notional principal and expires 10/22/30.');
+    expect(r.trades[1].note).toContain('JPOSPWUT');
+    expect(r.complete).toBe(true);
+  });
+});

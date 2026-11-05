@@ -23,7 +23,7 @@ export const CONFLICTS = (t: string) => `COALESCE((SELECT jsonb_agg(DISTINCT jso
   WHERE pc."personId" = ${t}."personId"), '[]'::jsonb)`;
 
 const COLUMNS = `"id", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate"::text AS "txDate",
-  "notifiedDate"::text AS "notifiedDate", "filedDate"::text AS "filedDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "sourceUrl", ${CONFLICTS('"PersonTrade"')} AS "conflicts"`;
+  "notifiedDate"::text AS "notifiedDate", "filedDate"::text AS "filedDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "note", "sourceUrl", ${CONFLICTS('"PersonTrade"')} AS "conflicts"`;
 
 // Stock trades a person disclosed (0188), and who watches for new ones.
 export default class PersonTrade {
@@ -53,11 +53,11 @@ export default class PersonTrade {
     let added = 0;
     for (const t of filing.trades) {
       const rows = await db.query(
-        `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl", "sector")
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+        `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl", "sector", "note")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
          ON CONFLICT ON CONSTRAINT "UC_PersonTrade_line" DO NOTHING
          RETURNING "id"`,
-        [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl, holdingSector(t.ticker, t.asset)],
+        [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl, holdingSector(t.ticker, t.asset), t.note ?? null],
       );
       added += rows.length;
     }
@@ -96,9 +96,9 @@ export default class PersonTrade {
     const old = await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
     if (!old[0]?.n) return PersonTrade.addFiling(personId, filing); // never stored (it parsed to nothing before)
     if (filing.trades.length < old[0].n) return 0;
-    const key = (t: { owner: string; asset: string; txType: string; txDate: string; amountLow: number | null; amountHigh: number | null; ticker: string | null; assetType: string | null }) =>
-      [t.owner, t.asset, t.txType, t.txDate, t.amountLow, t.amountHigh, t.ticker, t.assetType].join('|');
-    const stored = await db.query<any>(`SELECT "owner", "asset", "txType", "txDate"::text AS "txDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "ticker", "assetType" FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
+    const key = (t: { owner: string; asset: string; txType: string; txDate: string; amountLow: number | null; amountHigh: number | null; ticker: string | null; assetType: string | null; note?: string | null }) =>
+      [t.owner, t.asset, t.txType, t.txDate, t.amountLow, t.amountHigh, t.ticker, t.assetType, t.note ?? ''].join('|');
+    const stored = await db.query<any>(`SELECT "owner", "asset", "txType", "txDate"::text AS "txDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "ticker", "assetType", "note" FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
     const before = new Set(stored.map(key));
     const after = new Set(filing.trades.map((t) => key({ ...t, asset: t.asset.slice(0, 300) })));
     if (before.size === after.size && [...before].every((k) => after.has(k))) return 0;
@@ -108,10 +108,10 @@ export default class PersonTrade {
       for (const t of filing.trades) {
         n += (
           await q(
-            `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl")
-             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+            `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl", "note")
+             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
              ON CONFLICT ON CONSTRAINT "UC_PersonTrade_line" DO NOTHING RETURNING "id"`,
-            [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl],
+            [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl, t.note ?? null],
           )
         ).length;
       }

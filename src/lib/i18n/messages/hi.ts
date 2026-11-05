@@ -2498,7 +2498,7 @@ const hi: Messages = {
       filing: 'फ़ाइलिंग',
       read: 'देखें',
       owners: { self: 'स्वयं', spouse: 'जीवनसाथी', joint: 'संयुक्त', dependent: 'आश्रित बच्चा' },
-      types: { purchase: 'खरीद', sale: 'बिक्री', partial: 'आंशिक बिक्री', exchange: 'अदला-बदली' },
+      types: { purchase: 'खरीद', sale: 'बिक्री', partial: 'आंशिक बिक्री', exchange: 'अदला-बदली', other: 'अन्य' },
       showMore: 'सभी {count} लेन-देन दिखाएँ',
       watch: 'लेन-देन की सूचना पाएँ',
       watching: 'लेन-देन देख रहे हैं',

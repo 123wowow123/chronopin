@@ -2487,7 +2487,7 @@ const de: Messages = {
       filing: 'Meldung',
       read: 'Ansehen',
       owners: { self: 'Selbst', spouse: 'Ehepartner', joint: 'Gemeinsam', dependent: 'Unterhaltsberechtigtes Kind' },
-      types: { purchase: 'Kauf', sale: 'Verkauf', partial: 'Teilverkauf', exchange: 'Tausch' },
+      types: { purchase: 'Kauf', sale: 'Verkauf', partial: 'Teilverkauf', exchange: 'Tausch', other: 'Sonstiges' },
       showMore: 'Alle {count} Geschäfte anzeigen',
       watch: 'Über Geschäfte benachrichtigen',
       watching: 'Geschäfte beobachtet',

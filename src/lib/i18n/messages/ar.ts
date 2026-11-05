@@ -2859,7 +2859,7 @@ const ar: Messages = {
       filing: 'الإفصاح',
       read: 'عرض',
       owners: { self: 'الشخص نفسه', spouse: 'الزوج/الزوجة', joint: 'مشترك', dependent: 'ابن/ابنة معالة' },
-      types: { purchase: 'شراء', sale: 'بيع', partial: 'بيع جزئي', exchange: 'مبادلة' },
+      types: { purchase: 'شراء', sale: 'بيع', partial: 'بيع جزئي', exchange: 'مبادلة', other: 'أخرى' },
       showMore: 'عرض كل الصفقات ({count})',
       watch: 'أبلغني بالصفقات',
       watching: 'تتابع الصفقات',

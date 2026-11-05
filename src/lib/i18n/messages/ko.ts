@@ -2482,7 +2482,7 @@ const ko: Messages = {
       filing: '공시',
       read: '보기',
       owners: { self: '본인', spouse: '배우자', joint: '공동', dependent: '부양 자녀' },
-      types: { purchase: '매수', sale: '매도', partial: '일부 매도', exchange: '교환' },
+      types: { purchase: '매수', sale: '매도', partial: '일부 매도', exchange: '교환', other: '기타' },
       showMore: '거래 {count}건 모두 보기',
       watch: '거래 알림 받기',
       watching: '거래 알림 받는 중',

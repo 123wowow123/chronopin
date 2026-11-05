@@ -2492,7 +2492,7 @@ const en = {
       filing: 'Filing',
       read: 'Read',
       owners: { self: 'Self', spouse: 'Spouse', joint: 'Joint', dependent: 'Dependent child' },
-      types: { purchase: 'Purchase', sale: 'Sale', partial: 'Partial sale', exchange: 'Exchange' },
+      types: { purchase: 'Purchase', sale: 'Sale', partial: 'Partial sale', exchange: 'Exchange', other: 'Other' },
       showMore: 'Show all {count} trades',
       watch: 'Notify me of trades',
       watching: 'Watching trades',

@@ -226,7 +226,7 @@ export async function importTrades({
 export async function recentFilings(days: number) {
   const rows = await db.query<Record<string, any>>(
     `SELECT p."id" AS "personId", p."name", p."bioguideId", t."chamber", t."filingId", t."filedDate"::text AS "filedDate", t."sourceUrl", t."owner", t."asset", t."ticker", t."assetType", t."txType",
-            t."txDate"::text AS "txDate", t."notifiedDate"::text AS "notifiedDate", t."amountLow"::float8 AS "amountLow", t."amountHigh"::float8 AS "amountHigh"
+            t."txDate"::text AS "txDate", t."notifiedDate"::text AS "notifiedDate", t."amountLow"::float8 AS "amountLow", t."amountHigh"::float8 AS "amountHigh", t."note"
      FROM "PersonTrade" t JOIN "Person" p ON p."id" = t."personId"
      WHERE t."filedDate" >= now()::date - $1::int
      ORDER BY t."chamber", t."filingId", t."id"`,
@@ -236,7 +236,7 @@ export async function recentFilings(days: number) {
   for (const r of rows) {
     const key = `${r.chamber}:${r.filingId}`;
     const f = byFiling.get(key) ?? { ...(r.bioguideId ? { bioguideId: r.bioguideId } : { personId: r.personId, personName: r.name as string }), chamber: r.chamber, filingId: r.filingId, filedDate: r.filedDate, sourceUrl: r.sourceUrl, trades: [] };
-    f.trades.push({ owner: r.owner, asset: r.asset, ticker: r.ticker, assetType: r.assetType, txType: r.txType, txDate: r.txDate, notifiedDate: r.notifiedDate, amountLow: r.amountLow, amountHigh: r.amountHigh });
+    f.trades.push({ owner: r.owner, asset: r.asset, ticker: r.ticker, assetType: r.assetType, txType: r.txType, txDate: r.txDate, notifiedDate: r.notifiedDate, amountLow: r.amountLow, amountHigh: r.amountHigh, note: r.note });
     byFiling.set(key, f);
   }
   return [...byFiling.values()];

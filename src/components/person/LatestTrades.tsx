@@ -38,14 +38,15 @@ export function LatestTrades({ trades, t }: { trades: TradeRow[]; t: Translator 
                 { key: 'purchase', label: t('notifications.tradeBuys'), tone: 'text-success-soft', trades: rows.filter((r) => r.txType === 'purchase') },
                 { key: 'sale', label: t('notifications.tradeSells'), tone: 'text-danger-soft', trades: rows.filter((r) => r.txType === 'sale' || r.txType === 'partial') },
                 ...(rows.some((r) => r.txType === 'exchange') ? [{ key: 'exchange', label: t('person.trades.types.exchange'), tone: 'text-muted', trades: rows.filter((r) => r.txType === 'exchange') }] : []),
+                ...(rows.some((r) => r.txType === 'other') ? [{ key: 'other', label: t('person.trades.types.other'), tone: 'text-muted', trades: rows.filter((r) => r.txType === 'other') }] : []),
               ].map((column) => (
-                <div key={column.key} role="group" aria-label={column.label} className={`min-w-0 bg-panel ${column.key === 'exchange' ? 'col-span-2' : ''}`}>
+                <div key={column.key} role="group" aria-label={column.label} className={`min-w-0 bg-panel ${column.key === 'exchange' || column.key === 'other' ? 'col-span-2' : ''}`}>
                   <h5 className={`px-4 pt-3 text-xs font-semibold ${column.tone}`}>{column.label}</h5>
                   {column.trades.length ? <ul className="divide-y divide-line">
                     {column.trades.map((trade) => {
                       const tone = trade.txType === 'purchase'
                         ? 'bg-success/10 text-success-soft ring-success/30'
-                        : trade.txType === 'exchange' ? 'bg-raised text-muted ring-line' : 'bg-danger/10 text-danger-soft ring-danger/30';
+                        : trade.txType === 'exchange' || trade.txType === 'other' ? 'bg-raised text-muted ring-line' : 'bg-danger/10 text-danger-soft ring-danger/30';
                       const source = safeUrl(trade.sourceUrl);
                       return (
                         <li key={trade.id} className="min-w-0 bg-panel p-4">
@@ -59,6 +60,7 @@ export function LatestTrades({ trades, t }: { trades: TradeRow[]; t: Translator 
                             {trade.ticker ? <Link href={`/search?q=${encodeURIComponent(term('ticker', trade.ticker))}`} className={`rounded-md px-2 py-0.5 text-sm font-semibold ring-1 ring-inset hover:underline ${tone}`}>{trade.ticker}</Link> : null}
                             <span className={`min-w-0 break-words rounded-md px-2 py-0.5 text-sm ring-1 ring-inset ${tone}`}>{trade.asset}</span>
                           </div>
+                          {trade.note ? <p className="mt-2 text-xs text-muted">{trade.note}</p> : null}
                           {trade.conflicts?.length ? (
                             <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-warning-soft" title={[...new Set(trade.conflicts.map((c) => c.committee))].join('; ')}>
                               <Icon name="warning" className="size-3 shrink-0" />{t('person.conflict.label')}

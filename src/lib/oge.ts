@@ -9,6 +9,10 @@ import { parseAmount, type ParsedTrade, type TradeType } from './trades';
 const TYPES: Record<string, TradeType> = { purchase: 'purchase', sale: 'sale', 'sale (partial)': 'partial', exchange: 'exchange' };
 
 const ROW = /^\s*(\d+)\s{2,}(.*?)\s{2,}(Purchase|Sale \(Partial\)|Sale|Exchange)\s+(\d\d\/\d\d\/\d{4})\s+(?:Yes|No)\s+(\$[\d,]+(?:\s*-\s*(?:\$[\d,]+)?)?|Over\s+\$[\d,]+)\s*$/i;
+// A line with no purchase/sale type and no amount: a total return swap reads "See Endnote" in
+// the type column and "value not readily ascertainable" in the description. The filing's endnote
+// with the same number gives its terms.
+const SWAP_ROW = /^\s*(\d+)\s{2,}(.*?)\s{2,}See Endnote\s+(\d\d\/\d\d\/\d{4})\s+(?:Yes|No)\s*$/i;
 // The table header, the page footer ("Hegseth, Pete - Page 2") and the form's own lines.
 const SKIP = /^\s*(#\s+DESCRIPTION|RECEIVED OVER|30 DAYS AGO|.*- Page \d+\s*$|Transactions\s*$|\f)/;
 
@@ -31,6 +35,7 @@ export function parseOge278T(text: string): OgeReport {
   let current: ParsedTrade | null = null;
   let open = false; // the row's amount ended in "-": its upper bound is on a later line
   let describing = false;
+  const swapNumbers = new Map<ParsedTrade, string>();
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const m = ROW.exec(line.replace(/^\f/, ''));
@@ -50,6 +55,15 @@ export function parseOge278T(text: string): OgeReport {
       };
       trades.push(current);
       open = /-\s*$/.test(m[5]) && high == null;
+      describing = true;
+      continue;
+    }
+    const swap = SWAP_ROW.exec(line.replace(/^\f/, ''));
+    if (swap) {
+      current = { owner: 'self', asset: swap[2].trim(), ticker: null, assetType: null, txType: 'other', txDate: isoDate(swap[3]), notifiedDate: null, amountLow: null, amountHigh: null, note: null };
+      swapNumbers.set(current, swap[1]);
+      trades.push(current);
+      open = false;
       describing = true;
       continue;
     }
@@ -82,11 +96,26 @@ export function parseOge278T(text: string): OgeReport {
     }
   }
   for (const t of trades) {
+    t.asset = t.asset.replace(/\s+/g, ' ');
     const ticker = /\(([A-Z][A-Z0-9.\-]{0,9})\)\s*$/.exec(t.asset);
     t.ticker = ticker ? ticker[1] : null;
     t.asset = t.asset.replace(/\s+/g, ' ').replace(/\s*See Endnote$/i, '').trim();
   }
-  const looksLikeTrade = lines.filter((l) => /^[\f ]*\d+\s{2,}\S/.test(l) && (/\$\s?\d/.test(l) || /\b(Purchase|Sale|Exchange)\b/i.test(l))).length;
+  // The endnotes table: "Transactions   <#>   text", the text wrapping onto indented lines.
+  const notes = new Map<string, string>();
+  const at = lines.findIndex((l) => /^\s*Endnotes\s*$/.test(l));
+  let noteNo: string | null = null;
+  for (const l of at < 0 ? [] : lines.slice(at + 1)) {
+    const head = /^\s*Transactions\s+(\d+)\s{2,}(\S.*)$/.exec(l);
+    if (head) {
+      noteNo = head[1];
+      notes.set(noteNo, head[2].trim());
+    } else if (/^\s*(Summary of Contents|.*- Page \d+\s*$)/.test(l)) noteNo = null;
+    else if (noteNo && /^\s{20,}\S/.test(l)) notes.set(noteNo, `${notes.get(noteNo)} ${l.trim()}`);
+    else if (!/^\s*$/.test(l)) noteNo = null;
+  }
+  for (const [t, no] of swapNumbers) t.note = notes.get(no)?.replace(/\s+/g, ' ') ?? null;
+  const looksLikeTrade = lines.filter((l) => /^[\f ]*\d+\s{2,}\S/.test(l) && (/\$\s?\d/.test(l) || /\b(Purchase|Sale|Exchange)\b/i.test(l) || SWAP_ROW.test(l.replace(/^\f/, '')))).length;
   return { filedDate: signed ? isoDate(signed[1]) : null, trades, complete: trades.length > 0 && trades.length === looksLikeTrade, unread: Math.max(0, looksLikeTrade - trades.length) };
 }
 

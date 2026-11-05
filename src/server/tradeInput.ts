@@ -8,7 +8,7 @@ import type { TradeFiling } from './model/personTrade';
 export type FilingInput = TradeFiling & { personId?: number; bioguideId?: string; replace?: boolean };
 
 const OWNERS: TradeOwner[] = ['self', 'spouse', 'joint', 'dependent'];
-const TYPES: TradeType[] = ['purchase', 'sale', 'partial', 'exchange'];
+const TYPES: TradeType[] = ['purchase', 'sale', 'partial', 'exchange', 'other'];
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
 
 const day = (v: unknown) => (typeof v === 'string' && DAY.test(v) ? v : null);
@@ -40,6 +40,7 @@ export function readFilings(raw: unknown): FilingInput[] {
         notifiedDate: day(t.notifiedDate),
         amountLow: money(t.amountLow),
         amountHigh: money(t.amountHigh),
+        note: typeof t.note === 'string' && t.note.trim() ? t.note.trim().slice(0, 2000) : null,
       });
     }
     return {

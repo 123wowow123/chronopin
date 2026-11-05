@@ -2491,7 +2491,7 @@ const id: Messages = {
       filing: 'Laporan',
       read: 'Lihat',
       owners: { self: 'Sendiri', spouse: 'Pasangan', joint: 'Bersama', dependent: 'Anak tanggungan' },
-      types: { purchase: 'Pembelian', sale: 'Penjualan', partial: 'Penjualan sebagian', exchange: 'Pertukaran' },
+      types: { purchase: 'Pembelian', sale: 'Penjualan', partial: 'Penjualan sebagian', exchange: 'Pertukaran', other: 'Lainnya' },
       showMore: 'Tampilkan semua {count} transaksi',
       watch: 'Beri tahu saya tentang transaksi',
       watching: 'Memantau transaksi',

@@ -2490,7 +2490,7 @@ const vi: Messages = {
       filing: 'Hồ sơ',
       read: 'Xem',
       owners: { self: 'Bản thân', spouse: 'Vợ/chồng', joint: 'Chung', dependent: 'Con phụ thuộc' },
-      types: { purchase: 'Mua', sale: 'Bán', partial: 'Bán một phần', exchange: 'Hoán đổi' },
+      types: { purchase: 'Mua', sale: 'Bán', partial: 'Bán một phần', exchange: 'Hoán đổi', other: 'Khác' },
       showMore: 'Hiện tất cả {count} giao dịch',
       watch: 'Thông báo cho tôi về giao dịch',
       watching: 'Đang theo dõi giao dịch',

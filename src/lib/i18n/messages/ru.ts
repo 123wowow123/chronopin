@@ -2579,7 +2579,7 @@ const ru: Messages = {
       filing: 'Отчёт',
       read: 'Открыть',
       owners: { self: 'Сам', spouse: 'Супруг(а)', joint: 'Совместно', dependent: 'Ребёнок на иждивении' },
-      types: { purchase: 'Покупка', sale: 'Продажа', partial: 'Частичная продажа', exchange: 'Обмен' },
+      types: { purchase: 'Покупка', sale: 'Продажа', partial: 'Частичная продажа', exchange: 'Обмен', other: 'Другое' },
       showMore: 'Показать все сделки ({count})',
       watch: 'Уведомлять о сделках',
       watching: 'Слежу за сделками',

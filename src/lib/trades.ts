@@ -3,7 +3,8 @@
 // trade. Pure, so the importer, the page and the tests share it.
 
 export type TradeOwner = 'self' | 'spouse' | 'joint' | 'dependent';
-export type TradeType = 'purchase' | 'sale' | 'partial' | 'exchange';
+// 'other' is a line the filing gives no purchase/sale type for (an OGE 278-T total return swap).
+export type TradeType = 'purchase' | 'sale' | 'partial' | 'exchange' | 'other';
 
 export type ParsedTrade = {
   owner: TradeOwner;
@@ -15,6 +16,8 @@ export type ParsedTrade = {
   notifiedDate: string | null;
   amountLow: number | null;
   amountHigh: number | null;
+  // The filing's own endnote for the line (a swap's terms), verbatim; null when it has none.
+  note?: string | null;
 };
 
 export const OWNERS: Record<string, TradeOwner> = { SP: 'spouse', DC: 'dependent', JT: 'joint' };
@@ -145,6 +148,7 @@ export type TradeRow = {
   filedDate: string | null;
   amountLow: number | null;
   amountHigh: number | null;
+  note?: string | null;
   sourceUrl: string;
   // Committee seats the member holds that oversee this company's sector: a possible conflict of interest.
   conflicts?: { committee: string; sector: string }[];

@@ -2491,7 +2491,7 @@ const ms: Messages = {
       filing: 'Pemfailan',
       read: 'Baca',
       owners: { self: 'Sendiri', spouse: 'Pasangan', joint: 'Bersama', dependent: 'Anak tanggungan' },
-      types: { purchase: 'Pembelian', sale: 'Jualan', partial: 'Jualan separa', exchange: 'Pertukaran' },
+      types: { purchase: 'Pembelian', sale: 'Jualan', partial: 'Jualan separa', exchange: 'Pertukaran', other: 'Lain-lain' },
       showMore: 'Tunjuk semua {count} dagangan',
       watch: 'Maklumkan saya tentang dagangan',
       watching: 'Memantau dagangan',

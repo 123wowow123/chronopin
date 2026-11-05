@@ -2478,7 +2478,7 @@ const pt: Messages = {
       filing: 'Declaração',
       read: 'Ver',
       owners: { self: 'Próprio', spouse: 'Cônjuge', joint: 'Conjunto', dependent: 'Filho dependente' },
-      types: { purchase: 'Compra', sale: 'Venda', partial: 'Venda parcial', exchange: 'Troca' },
+      types: { purchase: 'Compra', sale: 'Venda', partial: 'Venda parcial', exchange: 'Troca', other: 'Outro' },
       showMore: 'Mostrar as {count} operações',
       watch: 'Avisar-me das operações',
       watching: 'A acompanhar operações',

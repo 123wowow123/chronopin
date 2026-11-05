@@ -2477,7 +2477,7 @@ const th: Messages = {
       filing: 'เอกสาร',
       read: 'ดู',
       owners: { self: 'ตนเอง', spouse: 'คู่สมรส', joint: 'ร่วมกัน', dependent: 'บุตรที่อยู่ในอุปการะ' },
-      types: { purchase: 'ซื้อ', sale: 'ขาย', partial: 'ขายบางส่วน', exchange: 'แลกเปลี่ยน' },
+      types: { purchase: 'ซื้อ', sale: 'ขาย', partial: 'ขายบางส่วน', exchange: 'แลกเปลี่ยน', other: 'อื่น ๆ' },
       showMore: 'แสดงทั้งหมด {count} รายการ',
       watch: 'แจ้งเตือนการซื้อขาย',
       watching: 'กำลังติดตามการซื้อขาย',
