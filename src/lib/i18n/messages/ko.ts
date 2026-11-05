@@ -167,6 +167,8 @@ const ko: Messages = {
     today: '<pin></pin>이(가) 오늘입니다',
     company: '<company></company>의 새 핀: <pin></pin>',
     companyMany: '<company></company>의 새 핀 <n>{count}</n>개',
+    companyUpdate: '<company></company>의 업데이트된 핀: <pin></pin>',
+    companyUpdateMany: '<company></company>의 업데이트된 핀 <n>{count}</n>개',
     search: "<pin></pin>이(가) 저장한 검색 “{name}”과 일치합니다",
     searchMany: "“{name}”과 일치하는 새 핀 <n>{count}</n>개",
     whySearch: "이 검색을 저장했습니다",

@@ -79,7 +79,7 @@ const userHref = (handle: string) => `/search?q=user:${encodeURIComponent(handle
 // are and the viewer's day they were posted on, the same day it was grouped
 // by: a wider net than the batch, but the only one that fits.
 function batchHref(n: Notification): string {
-  const whose = n.type === 'company' ? term('company', n.companyName ?? '') : term('user', n.actor.userName);
+  const whose = n.type === 'company' || n.type === 'companyUpdate' ? term('company', n.companyName ?? '') : term('user', n.actor.userName);
   const q =
     n.pinIds.length === n.groupCount ? term('pin', n.pinIds.join(',')) : `${whose} ${term('posted', n.groupDay)}`;
   return `/search?q=${encodeURIComponent(q)}&sort=date`;
@@ -178,6 +178,7 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
     case 'trade':
       return n.personName ? { icon: 'eye', label: t('notifications.whyTrade', { name: n.personName }), href: `${personPath(n.personName)}#trades` } : null;
     case 'company':
+    case 'companyUpdate':
       return n.companyName
         ? { icon: 'users', label: t('notifications.whyCompany', { company: n.companyName }), href: companyHref(n.companyName) }
         : null;
@@ -276,7 +277,7 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
           </span>
         )}
       </Link>
-    ) : n.type === 'company' && n.companyName ? (
+    ) : (n.type === 'company' || n.type === 'companyUpdate') && n.companyName ? (
       <Link href={companyHref(n.companyName)} onClick={onNavigate}>
         {n.companyLogoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element -- favicons from arbitrary hosts
@@ -696,9 +697,9 @@ function NotificationItems({
                           ),
                         })}
                       </PinRowLink>
-                    ) : n.type === 'company' && n.pinId ? (
+                    ) : (n.type === 'company' || n.type === 'companyUpdate') && n.pinId ? (
                       <PinRowLink n={n} onNavigate={onNavigate}>
-                        {t.rich(n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
+                        {t.rich(n.type === 'companyUpdate' ? (n.groupCount > 1 ? 'notifications.companyUpdateMany' : 'notifications.companyUpdate') : n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
                           count: n.groupCount,
                           company: () => <span className="font-semibold">{n.companyName}</span>,
                           pin: () => <span className="font-semibold">{n.pinTitle}</span>,

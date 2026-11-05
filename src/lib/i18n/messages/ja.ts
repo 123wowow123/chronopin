@@ -167,6 +167,8 @@ const ja: Messages = {
     today: '<pin></pin>は今日です',
     company: '<company></company>の新しいピン：<pin></pin>',
     companyMany: '<company></company>の新しいピン<n>{count}</n>件',
+    companyUpdate: '<company></company>の更新されたピン：<pin></pin>',
+    companyUpdateMany: '<company></company>の更新されたピン<n>{count}</n>件',
     search: "<pin></pin>が保存した検索「{name}」に一致しました",
     searchMany: "「{name}」に一致する新しいピンが<n>{count}</n>件あります",
     whySearch: "この検索を保存しています",

@@ -33,6 +33,8 @@ const types = {
   soon: 'soon',
   // A new pin for a company you follow. The actor is the pin's author.
   company: 'company',
+  // An existing pin was just given a company you follow: an update, not a new pin.
+  companyUpdate: 'companyUpdate',
   // A new pin from someone you follow. The actor is the pin's author.
   pin: 'pin',
   // A pin you watch was updated (a new entry in its Updates pane). Sent as a
@@ -66,6 +68,7 @@ const groupKey = (zone: string) => `
           CASE n."type"
             WHEN 'pin' THEN concat('pin:', n."actorId")
             WHEN 'company' THEN concat('company:', n."companyId")
+            WHEN 'companyUpdate' THEN concat('companyUpdate:', n."companyId")
             WHEN 'search' THEN concat('search:', n."searchAlertId")
             WHEN 'today' THEN concat('watch:', n."userId", ':', n."pinId")
             WHEN 'soon' THEN concat('watch:', n."userId", ':', n."pinId")
@@ -232,20 +235,24 @@ export default class Notification {
   // author is left out: they know. A pin saved again is told about once - the
   // unique index leaves one row per follower, pin and company.
   static createForCompanyFollowers(
-    { pinId, companyId, authorId }: { pinId: number; companyId: number; authorId: number },
+    { pinId, companyId, authorId, updated = false }: { pinId: number; companyId: number; authorId: number; updated?: boolean },
     query: QueryFn = db.query,
   ) {
+    // updated: the pin existed already ('companyUpdate'); a follower who was
+    // told it was new keeps that and is not told again.
+    const type = updated ? 'companyUpdate' : 'company';
     return query(
       `
       INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "companyId")
-      SELECT f."userId", $3, 'company', $1, $2
+      SELECT f."userId", $3, $4, $1, $2
       FROM "CompanyFollow" f
       JOIN "User" u ON u."id" = f."userId" AND u."utcDeletedDateTime" IS NULL
       WHERE f."companyId" = $2 AND f."utcDeletedDateTime" IS NULL AND f."userId" <> $3
-      ON CONFLICT ("userId", "pinId", "companyId") WHERE "type" = 'company'
+        AND NOT EXISTS (SELECT 1 FROM "Notification" x WHERE x."userId" = f."userId" AND x."pinId" = $1 AND x."companyId" = $2 AND x."type" = 'company')
+      ON CONFLICT ("userId", "pinId", "companyId") WHERE "type" = '${type}'
       DO NOTHING
       RETURNING "userId"`,
-      [pinId, companyId, authorId],
+      [pinId, companyId, authorId, type],
     ).then((rows) => announce(query, rows));
   }
 

@@ -110,11 +110,11 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   const lightweight = isAdmin(user) && new URL(request.url).searchParams.get('lightweight') === '1';
   emitPinEvent('update', updated, { userId: user.id, ...(lightweight ? { lightweight } : {}) });
   // A pin that has just been given a company is news to that company's
-  // followers, as a new pin for it would be. Editing it again tells nobody
-  // twice: a follower gets one notification per pin and company.
+  // followers, but as an update (the pin existed already), not a new pin.
+  // Editing it again tells nobody twice: one notification per pin and company.
   if (updated.companyId && updated.companyId !== existing.companyId) {
     after(() =>
-      CompanyFollow.notifyNewPin({ pinId: updated.id, companyId: updated.companyId, authorId: updated.userId ?? user.id }).catch((err) =>
+      CompanyFollow.notifyNewPin({ pinId: updated.id, companyId: updated.companyId, authorId: updated.userId ?? user.id, updated: true }).catch((err) =>
         log.warn('telling company followers failed:', (err as Error).message),
       ),
     );

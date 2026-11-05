@@ -167,6 +167,8 @@ const vi: Messages = {
     today: '<pin></pin> diễn ra hôm nay',
     company: '<company></company> có ghim mới: <pin></pin>',
     companyMany: '<company></company> có <n>{count}</n> ghim mới',
+    companyUpdate: '<company></company> có ghim được cập nhật: <pin></pin>',
+    companyUpdateMany: '<company></company> có <n>{count}</n> ghim được cập nhật',
     search: "<pin></pin> khớp với tìm kiếm đã lưu “{name}” của bạn",
     searchMany: "<n>{count}</n> ghim mới khớp với “{name}”",
     whySearch: "Bạn đã lưu tìm kiếm này",

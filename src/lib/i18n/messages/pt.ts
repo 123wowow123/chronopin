@@ -168,6 +168,8 @@ const pt: Messages = {
     today: '<pin></pin> é hoje',
     company: '<company></company> tem um novo pin: <pin></pin>',
     companyMany: '<company></company> tem <n>{count}</n> novos pins',
+    companyUpdate: '<company></company> tem um pin atualizado: <pin></pin>',
+    companyUpdateMany: '<company></company> tem <n>{count}</n> pins atualizados',
     search: "<pin></pin> corresponde à sua busca salva “{name}”",
     searchMany: "<n>{count}</n> novos pins correspondem a “{name}”",
     whySearch: "Você salvou esta busca",

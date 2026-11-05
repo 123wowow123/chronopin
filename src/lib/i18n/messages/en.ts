@@ -168,6 +168,8 @@ const en = {
     today: '<pin></pin> is today',
     company: '<company></company> has a new pin: <pin></pin>',
     companyMany: '<company></company> has <n>{count}</n> new pins',
+    companyUpdate: '<company></company> has an updated pin: <pin></pin>',
+    companyUpdateMany: '<company></company> has <n>{count}</n> updated pins',
     search: "<pin></pin> matches your saved search “{name}”",
     searchMany: "<n>{count}</n> new pins match “{name}”",
     whySearch: "You saved this search",

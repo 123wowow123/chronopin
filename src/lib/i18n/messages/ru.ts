@@ -174,6 +174,8 @@ const ru: Messages = {
     today: '<pin></pin> — сегодня',
     company: 'У <company></company> новый пин: <pin></pin>',
     companyMany: 'У <company></company> новых пинов: <n>{count}</n>',
+    companyUpdate: 'У <company></company> обновлён пин: <pin></pin>',
+    companyUpdateMany: 'У <company></company> обновлённых пинов: <n>{count}</n>',
     search: "<pin></pin> соответствует вашему сохранённому поиску «{name}»",
     searchMany: "Новых пинов, соответствующих «{name}»: <n>{count}</n>",
     whySearch: "Вы сохранили этот поиск",

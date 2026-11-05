@@ -168,6 +168,8 @@ const hi: Messages = {
     today: '<pin></pin> आज है',
     company: '<company></company> का एक नया पिन: <pin></pin>',
     companyMany: '<company></company> के <n>{count}</n> नए पिन',
+    companyUpdate: '<company></company> का एक अपडेट किया गया पिन: <pin></pin>',
+    companyUpdateMany: '<company></company> के <n>{count}</n> अपडेट किए गए पिन',
     search: "<pin></pin> आपकी सहेजी गई खोज “{name}” से मेल खाता है",
     searchMany: "<n>{count}</n> नए पिन “{name}” से मेल खाते हैं",
     whySearch: "आपने यह खोज सहेजी है",

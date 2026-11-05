@@ -168,6 +168,8 @@ const ms: Messages = {
     today: '<pin></pin> berlaku hari ini',
     company: '<company></company> mempunyai pin baharu: <pin></pin>',
     companyMany: '<company></company> mempunyai <n>{count}</n> pin baharu',
+    companyUpdate: '<company></company> mempunyai pin yang dikemas kini: <pin></pin>',
+    companyUpdateMany: '<company></company> mempunyai <n>{count}</n> pin yang dikemas kini',
     search: "<pin></pin> sepadan dengan carian tersimpan anda “{name}”",
     searchMany: "<n>{count}</n> pin baharu sepadan dengan “{name}”",
     whySearch: "Anda menyimpan carian ini",

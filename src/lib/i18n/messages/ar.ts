@@ -189,6 +189,8 @@ const ar: Messages = {
     today: '<pin></pin> اليوم',
     company: 'لدى <company></company> دبوس جديد: <pin></pin>',
     companyMany: 'لدى <company></company> دبابيس جديدة: <n>{count}</n>',
+    companyUpdate: 'لدى <company></company> دبوس محدَّث: <pin></pin>',
+    companyUpdateMany: 'لدى <company></company> دبابيس محدَّثة: <n>{count}</n>',
     search: "<pin></pin> يطابق بحثك المحفوظ «{name}»",
     searchMany: "<n>{count}</n> دبابيس جديدة تطابق «{name}»",
     whySearch: "لقد حفظت هذا البحث",

@@ -167,6 +167,8 @@ const th: Messages = {
     today: '<pin></pin> คือวันนี้',
     company: '<company></company> มีหมุดใหม่: <pin></pin>',
     companyMany: '<company></company> มีหมุดใหม่ <n>{count}</n> หมุด',
+    companyUpdate: '<company></company> มีหมุดที่อัปเดต: <pin></pin>',
+    companyUpdateMany: '<company></company> มีหมุดที่อัปเดต <n>{count}</n> หมุด',
     search: "<pin></pin> ตรงกับการค้นหาที่บันทึกไว้ “{name}”",
     searchMany: "พินใหม่ <n>{count}</n> รายการตรงกับ “{name}”",
     whySearch: "คุณบันทึกการค้นหานี้ไว้",

@@ -167,6 +167,8 @@ const de: Messages = {
     today: '<pin></pin> ist heute',
     company: 'Neuer Pin zu <company></company>: <pin></pin>',
     companyMany: '<n>{count}</n> neue Pins zu <company></company>',
+    companyUpdate: 'Aktualisierter Pin zu <company></company>: <pin></pin>',
+    companyUpdateMany: '<n>{count}</n> aktualisierte Pins zu <company></company>',
     search: "<pin></pin> passt zu deiner gespeicherten Suche „{name}“",
     searchMany: "<n>{count}</n> neue Pins passen zu „{name}“",
     whySearch: "Du hast diese Suche gespeichert",

@@ -168,6 +168,8 @@ const zh: Messages = {
     today: '<pin></pin> 就在今天',
     company: '<company></company> 有新图钉：<pin></pin>',
     companyMany: '<company></company> 有 <n>{count}</n> 个新图钉',
+    companyUpdate: '<company></company> 有已更新的图钉：<pin></pin>',
+    companyUpdateMany: '<company></company> 有 <n>{count}</n> 个已更新的图钉',
     search: "<pin></pin>与你保存的搜索“{name}”匹配",
     searchMany: "有 <n>{count}</n> 个新图钉与“{name}”匹配",
     whySearch: "你保存了这个搜索",

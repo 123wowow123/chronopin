@@ -167,6 +167,8 @@ const fr: Messages = {
     today: '<pin></pin>, c’est aujourd’hui',
     company: 'Nouvelle épingle pour <company></company> : <pin></pin>',
     companyMany: '<n>{count}</n> nouvelles épingles pour <company></company>',
+    companyUpdate: 'Épingle mise à jour pour <company></company> : <pin></pin>',
+    companyUpdateMany: '<n>{count}</n> épingles mises à jour pour <company></company>',
     search: "<pin></pin> correspond à votre recherche enregistrée « {name} »",
     searchMany: "<n>{count}</n> nouvelles épingles correspondent à « {name} »",
     whySearch: "Vous avez enregistré cette recherche",

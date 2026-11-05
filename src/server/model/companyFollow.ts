@@ -75,11 +75,11 @@ export default class CompanyFollow {
   // insert. The author is the actor, and is not told about their own pin.
   // Quiet for a pin with no company, and for a company nobody follows.
   static async notifyNewPin(
-    { pinId, companyId, authorId }: { pinId: number; companyId?: number | null; authorId: number },
+    { pinId, companyId, authorId, updated = false }: { pinId: number; companyId?: number | null; authorId: number; updated?: boolean },
     query: QueryFn = db.query,
   ) {
     if (!companyId) return;
-    await Notification.createForCompanyFollowers({ pinId, companyId, authorId }, query);
+    await Notification.createForCompanyFollowers({ pinId, companyId, authorId, updated }, query);
   }
 
   // Every live company follow, oldest first, for backup:data.

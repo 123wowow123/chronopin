@@ -168,6 +168,8 @@ const id: Messages = {
     today: '<pin></pin> adalah hari ini',
     company: '<company></company> memiliki pin baru: <pin></pin>',
     companyMany: '<company></company> memiliki <n>{count}</n> pin baru',
+    companyUpdate: '<company></company> memiliki pin yang diperbarui: <pin></pin>',
+    companyUpdateMany: '<company></company> memiliki <n>{count}</n> pin yang diperbarui',
     search: "<pin></pin> cocok dengan pencarian tersimpan Anda “{name}”",
     searchMany: "<n>{count}</n> pin baru cocok dengan “{name}”",
     whySearch: "Anda menyimpan pencarian ini",
