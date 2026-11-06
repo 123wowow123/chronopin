@@ -1,0 +1,38 @@
+{
+  "regionSlug": "san-diego",
+  "entries": [
+    {
+      "specialSourceUrl": "https://ev.knottybarrel.com/",
+      "name": "Knotty Barrel East Village",
+      "opening": {
+        "day": "2011-12-31", "precision": "year", "dateConfidence": "estimated",
+        "reason": "The cited source supports the branch opening year; the final day of that year is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://www.eastvillagesandiego.com/go/knotty-barrel",
+        "quote": "We reached that goal and opened our little neighborhood pub in 2011.",
+        "sourceTitle": "Knotty Barrel | East Village San Diego", "openedAt": "2026-11-06"
+      }
+    },
+    {
+      "specialSourceUrl": "https://rakirakiramen.com/locations/",
+      "name": "Rakiraki Ramen & Tsukemen - Convoy",
+      "opening": {
+        "day": "2012-10-31", "precision": "month", "dateConfidence": "estimated",
+        "reason": "The cited source supports the opening month (October 2012); the last day of that month is an estimated timeline anchor, not a verified opening day.",
+        "sourceUrl": "https://rakirakiramen.dreamersi.net/about",
+        "quote": "After years of apprenticeship, Watanabe brought his vision into fruition as Rakiraki Ramen & Tsukemen opened in October 2012.",
+        "sourceTitle": "About - Rakiraki Ramen and Tsukemen", "openedAt": "2026-11-06"
+      }
+    },
+    {
+      "specialSourceUrl": "https://www.asrestaurant.com/",
+      "name": "Mister A's",
+      "opening": {
+        "day": "1965-12-31", "precision": "year", "dateConfidence": "estimated",
+        "reason": "The cited source supports the branch opening year at the 12th-floor Manchester Financial building; the final day of that year is an estimated timeline anchor, not a verified opening day. The October 2022 date is a post-renovation reopening and is not used.",
+        "sourceUrl": "https://theresandiego.com/mister-as-anniversary-iconic-dining-in-the-sky/",
+        "quote": "Since 1965, this Bankers Hill landmark has delivered unforgettable dining experiences, blending timeless elegance with panoramic vistas that make any evening feel extraordinary.",
+        "sourceTitle": "Mister A's Celebrates 60 Years of Iconic Dining in the Sky", "openedAt": "2026-11-06"
+      }
+    }
+  ]
+}

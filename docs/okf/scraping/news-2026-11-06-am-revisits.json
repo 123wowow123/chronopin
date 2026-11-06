@@ -1,0 +1,356 @@
+{
+  "runId": 47,
+  "remaining": 35,
+  "marks": [
+    {
+      "pinId": 4672,
+      "title": "The River Tay Salmon Season Opens for 2027",
+      "reason": "October 16: both cited Tay Rivers URLs render Oops/page does not exist. Recover a current official 2027 opening-ceremony source before adding participants, venue or ticket details. Historical ceremonies do not verify this edition.\nNovember6,2026 maintenance checked: Rendered Tay Rivers URL is a Page not found/Oops page; no recovered2027opening-ceremony source. Historical ceremonies do not verify participants,venue or tickets.",
+      "marked": "2026-10-16T17:55:26.031Z",
+      "sourceUrl": "https://tayrivers.org/conservation-code/",
+      "utcStartDateTime": "2027-01-15T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@FishingDesk"
+    },
+    {
+      "pinId": 16408,
+      "title": "Cloud HQ MSP Chaska: Up to 200 MW IT Campus; Final Application Not Submitted",
+      "reason": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap.\nOctober21 PM: investment contradiction and Building1/campus scope corrected and verified. Current operator200MW across1\u20132buildings; city says final application not submitted/no timeline. Need dated RFSwithin20months anchor or actual opening commitment before replacing inherited November2027marker. Budget unpublished in current primary pages; obtain scope-matched capex evidence before restoring cost.\nNovember6,2026 maintenance checked: Rendered operator still200MW across1\u20132buildings and RFSWithin20Months without datedanchor. Chaska city still says no finalapplication and no reviewtimeline. No scopedpublishedcapex or newopening commitment.",
+      "marked": "2026-10-19T14:55:50.072Z",
+      "sourceUrl": "https://cloudhq.com/campus/msp-campus/",
+      "utcStartDateTime": "2027-11-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@EnergyDesk"
+    },
+    {
+      "pinId": 5499,
+      "title": "The 2026 MotoGP Season Finale Closes the 1000cc Era at Valencia",
+      "reason": "October21 PM: exact November27\u201329 Valencia ticket page https://tickets.motogp.com/en/21151-valencia/ says Grandstand tickets are sold out; remaining US$50.55 MGP Fan Fest Saturday tickets are a different scope. Saved hand InStock reading preserved. Reconcile circuit admission versus Fan Fest before changing availability or using Fan Fest as race-ticket minimum.\nNovember6,2026 maintenance checked: Exact2026Valencia page reopens withNov27\u201329dates but plainHTML has no liveinventory/prices; priorgrandstand-versusFanFest admission conflict remains. Preserved handreading.",
+      "marked": "2026-10-21T22:27:33.314Z",
+      "sourceUrl": "https://tickets.motogp.com/en/21151-valencia/",
+      "utcStartDateTime": "2026-11-27T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "author": "@RacingDesk"
+    },
+    {
+      "pinId": 17692,
+      "title": "Lollapalooza \u2014 Chicago seasonal activity",
+      "reason": "October 26 check: official Lollapalooza site still advertises the 2026 edition. Exact 2027 dates, lineup, prices and sale date remain unpublished. Keep the 2027 planning window estimated and recheck the official announcement.\nNovember6,2026 maintenance checked: OfficialLollapalooza page stillJuly30\u2013Aug2,2026;2027dates,lineup and ticketterms notannounced on openedpage.",
+      "marked": "2026-10-26T15:27:48.399Z",
+      "sourceUrl": "https://www.lollapalooza.com",
+      "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17729,
+      "title": "Colorado Renaissance Festival \u2014 Denver seasonal activity",
+      "reason": "October 26 check: Colorado Renaissance Festival confirms a June 2027 return, but exact weekends and adult/child prices remain TBA and ticket products are unavailable. Recheck the 2027 ticket release; do not borrow 2026 prices.\nNovember6,2026 maintenance checked: Opened2027operator ticketpage saysJune2027,eightweekends,adult/childTBA andCurrentlyUnavailable. Exactweekends,sale date and prices remain unpublished.",
+      "marked": "2026-10-26T15:27:48.411Z",
+      "sourceUrl": "https://coloradorenaissance.com/",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17989,
+      "title": "Seattle Storm at Climate Pledge Arena \u2014 Seattle seasonal activity",
+      "reason": "October 27 morning: 2027 Storm memberships accept deposits, which are not game-admission prices; verify actual 2027 single-game sale dates and prices.\nNovember6,2026 maintenance checked: Operatorhomepage still2026season andStorm360deposit invitation; no2027singlegame schedule or admissionprice.",
+      "marked": "2026-10-27T14:17:30.316Z",
+      "sourceUrl": "https://storm.wnba.com/",
+      "utcStartDateTime": "2027-05-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17958,
+      "title": "Lakeside Rodeo \u2014 San Diego seasonal activity",
+      "reason": "October 27 morning: Lakeside operator page has merchandise and a 2026 Summer Stampede, not an exact April 2027 Lakeside Rodeo schedule or ticket prices.\nNovember6,2026 maintenance checked: Operatorpage reopens to ticketinformation/navigation only; no2027schedule orprice evidence.",
+      "marked": "2026-10-27T14:17:30.316Z",
+      "sourceUrl": "https://www.lakesiderodeo.com/",
+      "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17855,
+      "title": "Wilson County Fair (Tennessee State Fair) \u2014 Nashville seasonal activity",
+      "reason": "October 27 morning: Wilson County / Tennessee State Fair operator page thanks 2026 visitors but publishes no exact 2027 dates or admission. Do not retain month placeholders as verified.\nNovember6,2026 maintenance checked: Operatorpage reopens but noexact2027dates oradmission inreadablebody.",
+      "marked": "2026-10-27T14:17:30.316Z",
+      "sourceUrl": "https://www.wilsoncountytnstatefair.com/",
+      "utcStartDateTime": "2027-08-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 5188,
+      "title": "Tamiya's Countach 5000S TT-02 Limited Edition R/C Kit Arrives around 21 November",
+      "reason": "October27 evening: Two native RC-platform rivals sourced and saved. Historical rival pins remain incomplete: Kyosho34461C maker says September2023 while retailer dates differ in August/September; scope regional release before pinning. HPI118000 was teased August22,2018 and reported available November26,2018;2016 platform poster does not date CreatorEdition. Complete independent source/media/date evidence for each historical event before creating linked pins.\n6NovAM: historical exact-product rival pins now created onprod:20787Kyosho34461C maker-monthSeptember2023(estimated;retaildayconflict disclosed),20788HPI118000 Aug22,2018teaser(announcement,notavailability). Linked5188competitors onproduction and GETverifiedbothlinks/media. Local5188retains sourcedrows but newprod-onlyIDs absentlocal, so localFKlinks await nextneededpull/replay; do not invent localIDs or pull just toclosejob.",
+      "marked": "2026-10-27T23:56:50.059Z",
+      "sourceUrl": "https://www.tamiya.com/japan/products/47527/index.html",
+      "utcStartDateTime": "2026-11-21T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "author": "@JapanGameDesk"
+    },
+    {
+      "pinId": 17497,
+      "title": "Iroquois Steeplechase \u2014 Nashville seasonal activity",
+      "reason": "October27 evening: Iroquois city page states May8,2027 but checkout links a2025 seating map. Need current2027 ticket listing/prices before setting sale availability.\nNovember6,2026 maintenance checked: Operatorhomepage explicitlyMay8,2027; individualtickets pagequotes$78butgenericAgilecheckout didnotverify2027inventory duringreading. Retain gap oncurrent-editionpricing/sale status.",
+      "marked": "2026-10-27T23:56:50.059Z",
+      "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+      "utcStartDateTime": "2027-05-08T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17380,
+      "title": "Beanpot hockey tournament \u2014 Boston seasonal activity",
+      "reason": "October27 evening: Beanpot pin is2027; TDGarden page is explicitly February2/9,2026 with2026 finalists. Need2027 dates, fixture and ticket page; do not reuse2026 on-sale notice.\nNovember6,2026 maintenance checked: TDGardenpage explicitlyFeb9,2026; itdoesnotdate2027Beanpot or establish2027fixtures/tickets.",
+      "marked": "2026-10-27T23:56:50.059Z",
+      "sourceUrl": "https://www.tdgarden.com/events/detail/beanpot-finals",
+      "utcStartDateTime": "2027-02-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17455,
+      "title": "Mesquite Championship Rodeo \u2014 Dallas seasonal activity",
+      "reason": "October27 evening: Mesquite Rodeo pin is2027; opened DFWChild source gives2026 June6 prices. Need2027 home-season schedule and admission; do not borrow prior-year prices.\nNovember6,2026 maintenance checked: DFWChildsourceredirects to2026June6calendar; no2027home-season schedule/admission.",
+      "marked": "2026-10-27T23:56:50.059Z",
+      "sourceUrl": "https://dfwchild.com/?p=21215",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 17612,
+      "title": "Seafair Weekend Festival \u2014 Seattle seasonal activity",
+      "reason": "October27 evening: Seafair pin is2027; operator countdown says2027 but signature-event dates and heading remain2026. Need exact2027 festival dates, lineup and tickets; no mixed-edition inference.\nNovember6,2026 maintenance checked: Browser-renderedSeafairpage still2026signaturedates,2027countdown andgeneric2027springtickets statement. Noexact2027weekend,lineup orsale date.",
+      "marked": "2026-10-27T23:56:50.059Z",
+      "sourceUrl": "https://www.seafair.org/",
+      "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@TravelDesk"
+    },
+    {
+      "pinId": 1871,
+      "title": "Diablo V Launches",
+      "reason": "2026-10-29 AM competitor research: Diablo V is dated 2029; no opened source establishes its own contemporary 2029 rival products. Avoid projecting today\u2019s market three years forward; await exact-release segment comparison.",
+      "marked": "2026-10-28T14:04:47.370Z",
+      "sourceUrl": "https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap",
+      "utcStartDateTime": "2029-06-20T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@GameDesk"
+    },
+    {
+      "pinId": 4420,
+      "title": "SZA x Vans VANSZA Drop 2 Brings the LX Tabi Hiker",
+      "reason": "Need sourced April2027 Vans VANSZA LX Tabi Hiker comparisons; no verified contemporaneous rival set yet.",
+      "marked": "2026-10-28T14:04:53.736Z",
+      "sourceUrl": "https://justfreshkicks.com/vans-sza-vansza-collection/",
+      "utcStartDateTime": "2027-04-08T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "author": "@SneakerDesk"
+    },
+    {
+      "pinId": 15156,
+      "title": "Trinity-Large-Thinking Released",
+      "reason": "Need Trinity-Large-Thinking launch-version evidence and additional verified independent tests; aibynick.com/thread/17 is one firsthand test, vendor pages do not establish independent reception.",
+      "marked": "2026-10-28T14:05:00.442Z",
+      "sourceUrl": "https://www.arcee.ai/blog/trinity-large-thinking",
+      "utcStartDateTime": "2026-04-01T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "author": "@AIDesk"
+    },
+    {
+      "pinId": 13962,
+      "title": "Baskin-Robbins Japan Launches Love Potion Grand Shake on 9 October",
+      "reason": "October 28 exact-product audit: removed cake and base-ice-cream reviews from Grand Shake 13962 in both environments, preserving seven maker-based axes. Exact-name Japanese searches found announcements, a prospective blogger and unattributed SNS roundups, but no opened original firsthand tasting of this shake. Research exact-product firsthand URL, date and quote; never restore other-product reviews.",
+      "marked": "2026-10-28T23:00:58.003Z",
+      "sourceUrl": "https://www.31ice.co.jp/contents/topics/261009_02.html",
+      "utcStartDateTime": "2026-10-09T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "author": "@SnackDesk"
+    },
+    {
+      "pinId": 6792,
+      "title": "Tang Bar \u2014 San Jose Plans an Opening in Little Saigon",
+      "reason": "October28 midnight: same909StoryRoad branch has contradictory January2027 current aggregator target versus January2026 SanJoseBlog forecast and a June18,2026 opened snippet. Verify exact-branch primary opening announcement/current service and first day before moving the January2027 marker. Sources: https://www.whatsopening.com/ca/san-jose and https://www.thesanjoseblog.com/2026/01/. Do not treat forecast or directory snippet as actual opening.\nNovember6,2026 maintenance checked: CurrentWhatsOpening still909StoryRoad expectedJanuary2027; priorconflictingopening evidenceunresolved and noexactbranchoperator first-dayannouncement.",
+      "marked": "2026-10-29T04:24:41.773Z",
+      "sourceUrl": "https://www.whatsopening.com/ca/san-jose/restaurants#tang-bar-san-jose",
+      "utcStartDateTime": "2027-01-31T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "FoodDesk"
+    },
+    {
+      "pinId": 6753,
+      "title": "Flaky Opens a Bureka Window in South Beach in October 2026",
+      "reason": "October28 midnight: corrected Flaky to operating byOctober23 based on https://bocaratonobserver.com/api/amp/food-and-drink/bites/feeling-flaky/ . Exact first service day unpublished there; aggregators disagree earlyOctober/October23. October31 retained only as explicitly estimated month marker. Need branch operator first-day announcement; never substitute publication date.\nNovember6,2026 maintenance checked: Infatuation stillOctoberopeningforecast; nooperator firstserviceday established for321Collins. Publicationdayisnotopeningday.",
+      "marked": "2026-10-29T04:24:43.910Z",
+      "sourceUrl": "https://www.theinfatuation.com/miami/guides/miami-fall-restaurant-openings-2026#flaky",
+      "utcStartDateTime": "2026-10-31T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "FoodDesk"
+    },
+    {
+      "pinId": 6774,
+      "title": "Happy Medium Books Caf\u00e9 Plans Its Riverside Relocation",
+      "reason": "October28 midnight: corrected HappyMedium scope to relocation from2724to2756ParkStreet. September reports target earlyOctober; October23 https://whatnow.com/jacksonville/restaurants/mixed-fillings-pie-shop-to-open-new-cafe-in-jacksonvilles-riverside/ describes future MixedFillings partnership, not exact relocated-branch opening. Obtain operator firstservice date at2756; do not use2023brand origin or partnership filing date.\nNovember6,2026 maintenance checked: WhatsOpening still2756ParkStreetOctober2026openingunconfirmed; operatoreventslist2756butnofirstserviceday. Relocationdate remainsunverified.",
+      "marked": "2026-10-29T04:24:46.009Z",
+      "sourceUrl": "https://www.whatsopening.com/fl/jacksonville/restaurants#happy-medium-cafe",
+      "utcStartDateTime": "2026-10-31T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "FoodDesk"
+    },
+    {
+      "pinId": 20292,
+      "title": "Kingdom Hearts IV Set for Late 2027 on Consoles and PC",
+      "reason": "2026-10-29 AM competitor queue: Kingdom Hearts IV future late-2027 pin needs opened exact-product comparisons supporting 2\u20135 contemporary rivals; announcement evidence alone does not establish them.",
+      "marked": "2026-10-29T16:04:03.719Z",
+      "sourceUrl": "https://www.ign.com/articles/d23-deep-dive-into-kingdom-hearts-panel-everything-announced-updating-live",
+      "utcStartDateTime": "2027-11-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@GameDesk"
+    },
+    {
+      "pinId": 20258,
+      "title": "Final Fantasy VII Revelation Set to Close the Remake Trilogy on 8 April 2027",
+      "reason": "2026-10-29 AM competitor queue: FFVII Revelation future release needs exact-product comparison evidence and canonical competitor pin matching; not completed within this run.",
+      "marked": "2026-10-29T16:04:06.392Z",
+      "sourceUrl": "https://gameinformer.com/state-of-play/2026/09/03/final-fantasy-vii-revelation-drops-april-8-2027",
+      "utcStartDateTime": "2027-04-08T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@GameDesk"
+    },
+    {
+      "pinId": 18091,
+      "title": "Google Springboard Data Center Campus Building 4 \u2014 Separate Buildout Details Unverified",
+      "reason": "Oct29 evening: supplied Muskogee URL redirects to a generic municipal homepage; no building-4 permit or primary filing found. Verify building-specific USD600m/118MW claims and schedule before a buildout profile.\nOct30 morning: generic municipal redirect still does not establish Muskogee building 4 cost, 118 MW or schedule. Obtain a building-specific permit or filing before profiling.\nNovember6,2026 maintenance checked: Muskogeeprojectfragmentreopens genericmunicipalhomepage;GoogleOklahomaenergyarticle andlocationlistdonotidentifySpringboardbuilding4/cost118MW/schedule.",
+      "marked": "2026-10-30T01:09:18.823Z",
+      "sourceUrl": null,
+      "utcStartDateTime": "2034-06-01T00:00:00.000Z",
+      "dateConfidence": "unknown",
+      "author": "@DataCenterDesk"
+    },
+    {
+      "pinId": 17354,
+      "title": "Google Lincoln Hyperscale Campus Building 8 \u2014 Separate Buildout Details Unverified",
+      "reason": "Oct29 evening: exact Google Lincoln building-8 URL returns 404. Recover a primary project/permit source for the claimed USD1bn/156MW building and dates before profiling.\nOct30 morning: exact Google Lincoln building 8 source still returns 404. Obtain primary building-specific cost, 156 MW and date evidence.\nNovember6,2026 maintenance checked: ExactGoogleLincoln building8URL still404.LES andEpochcampuspagesdonotverifya separatebuilding8budget156MW/date.",
+      "marked": "2026-10-30T01:09:21.870Z",
+      "sourceUrl": null,
+      "utcStartDateTime": "2032-09-01T00:00:00.000Z",
+      "dateConfidence": "unknown",
+      "author": "@DataCenterDesk"
+    },
+    {
+      "pinId": 2626,
+      "title": "EBRD-backed remediation of Kyrgyzstan's Mailuu-Suu tailings dam",
+      "reason": "Oct29 evening: EBRD confirms Mailuu-Suu remediation is underway but opened sources do not establish three scoped buildout metrics or the pin\u2019s 2032 completion. Procurement page blocked (403); obtain project documents before profiling.\nNovember6,2026 maintenance checked: EBRD2023release stillEUR23mgrant andsevenyearremediationprogramme;WNNcorroboratesbroadworks. Noverified2032exactscopecompletion oradditionalprofilemetrics.",
+      "marked": "2026-10-30T01:09:25.067Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=wIBmZiQvzC0",
+      "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@EnergyDesk"
+    },
+    {
+      "pinId": 634,
+      "title": "Lyon-Turin Base Tunnel Targeted for 2033 Completion",
+      "reason": "Oct29 evening: operator August2026 press kit supports construction profile and 2033 target, but existing EUR11.1bn price / EUR8bn summary / newer EUR14.7bn reports have conflicting scope and price bases. Reconcile with accessible primary budget documents; also audit overlapping pin423 before canonical consolidation.\nNovember6,2026 maintenance checked: CINEAstill2033target andEUR4bncivilcontracts,notwholeprojectbudget;Wikipedia stilldifferent2018pricebasis. Primarybudgetscope conflict unresolved;TELTPDFretrievedbutnotusedtoinferbudget.",
+      "marked": "2026-10-30T01:09:28.944Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=kc29axOAzRs",
+      "utcStartDateTime": "2033-12-31T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@BuildDesk"
+    },
+    {
+      "pinId": 18090,
+      "title": "Google Springboard Data Center Campus Building 3 \u2014 Separate Buildout Details Unverified",
+      "reason": "Oct30 morning: Port Muskogee fragment serves a generic homepage, not a building 3 project document. Verify the USD600m/118MW and 2032 claims with a building-specific primary filing.\nNovember6,2026 maintenance checked: PortMuskogeebuilding3URLblocked403;GoogleOklahomaenergyarticle andOGEgeneralpageprovide nocost118MWorscheduleforseparatebuilding3.",
+      "marked": "2026-10-30T14:01:26.259Z",
+      "sourceUrl": null,
+      "utcStartDateTime": "2032-06-01T00:00:00.000Z",
+      "dateConfidence": "unknown",
+      "author": "@DataCenterDesk"
+    },
+    {
+      "pinId": 17340,
+      "title": "Google Lincoln Hyperscale Campus Building 7 \u2014 Separate Buildout Details Unverified",
+      "reason": "Oct30 morning: exact Google Lincoln building 7 URL returns 404. Recover primary cost, 156MW and schedule evidence before profiling.\nNovember6,2026 maintenance checked: ExactGoogleLincoln building7URL still404.LES/Epochgenericcampusevidence doesnotverifyseparatebuilding7cost156MW/date.",
+      "marked": "2026-10-30T14:01:29.683Z",
+      "sourceUrl": null,
+      "utcStartDateTime": "2032-03-01T00:00:00.000Z",
+      "dateConfidence": "unknown",
+      "author": "@DataCenterDesk"
+    },
+    {
+      "pinId": 17151,
+      "title": "Proposed Hoodini Solar and Storage Project in Dateland",
+      "reason": "Oct30 morning: repaired identity to Eolus, solar450MW plus separate450MW storage; removed unsupported NextEra/$480m/western-Yuma maps. Need fresh primary queue/special-use records for current permit, exact site and opening date, a published budget and attributable site image; reconcile overlapping Hoodini pin16487. Retained December2031 marker is provisional, not a developer commitment.\nNovember6,2026 maintenance checked: OpenedEoluspage still450MWsolar+450MWstorage,Planning,withoutbudget orcommittedopening. OldKYMAwithdrawnSUPreport doesnotestablishcurrentwholeprojectwithdrawal;countyPDFTLSfailure. Noexactsite/newpermit source.",
+      "marked": "2026-10-30T14:01:33.943Z",
+      "sourceUrl": "https://www.eolus.com/en/projects/hoodini/",
+      "utcStartDateTime": "2031-12-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@EnergyDesk"
+    },
+    {
+      "pinId": 6564,
+      "title": "Bharat Mobility Global Expo 2027 Opens in New Delhi on 4 February",
+      "reason": "Oct30 morning: opened visitor-registration page is for the 2025 edition. Cleared inherited InStock and wrong-edition ticket link; obtain a genuine 2027 registration page before restoring sale status.\nNovember6,2026 maintenance checked: OpenedAutocar confirmsFeb4\u20139,2027dates butnogenuine2027registrationinventory; do not restore2025ticketlink.",
+      "marked": "2026-10-30T14:01:37.445Z",
+      "sourceUrl": "https://www.autocarindia.com/industry/next-bharat-mobility-global-expo-dates-confirmed-436000",
+      "utcStartDateTime": "2027-02-04T00:00:00.000Z",
+      "dateConfidence": "scheduled",
+      "author": "@MotorDesk"
+    },
+    {
+      "pinId": 17333,
+      "title": "Hope Hull Clean Solar Center: 120M USD, 80 MWac Solar Facility in Montgomery County, Alabama",
+      "reason": "Oct30 evening: original Silicon Ranch project page returns404 and generic Alabama PSC page does not identify SR Hope Hull. Need exact operator/permit identity, sourced capex or applicable cost benchmark, physical stage and operating target before a buildout profile; inherited USD120m/80MW claims not independently established.",
+      "marked": "2026-10-31T02:43:42.583Z",
+      "sourceUrl": "https://www.siliconranch.com/projects/hope-hull-solar/",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@EnergyDesk"
+    },
+    {
+      "pinId": 540,
+      "title": "Bogot\u00e1 Metro Line 1 Targets 2028 Opening",
+      "reason": "Oct30 evening: saved operator-sourced 16-station/23.96km profile and latest manager March14,2028 target, retaining March15 conflict. Need current same-scope budget evidence for inherited USD4bn, exact line/station map anchor and reviewed GIS from IDECA station dataset; no line geometry fabricated. Official rendering plus 3 relevant media and three dated independent project reactions remain unfilled.\nNovember6,2026 maintenance checked: ReopenedexistingColombiaOne/TropicanacoverageretainsMarch2028opening/separateSept2027trialoperation. No scope-matchedcurrentbudget orreviewedGIS;operatorreferenceTLSfailure. Media/reaction/geometrygapsremain.",
+      "marked": "2026-10-31T02:43:45.727Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=wCi6-u0cOBY",
+      "utcStartDateTime": "2028-03-14T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@BuildDesk"
+    },
+    {
+      "pinId": 2212,
+      "title": "The Athletics' Las Vegas Ballpark Opens on the Tropicana Site",
+      "reason": "Oct30 evening: current USD2.1bn budget and four sourced buildout fields saved. Need credited official rendering as lead and 3 relevant media, reviewed exact site geometry and three dated public project reactions. Existing historic Tropicana photo preserved; Feb29 construction completion is distinct from public opening at start of 2028 baseball season.\nNovember6,2026 maintenance checked: Openedoperatorballparkpage still2028season. ExistingJuly/Augcoverage supportsconstruction butolderUSD2bnvsnewerUSD2.1bnsourceblocked403; no newreviewedgeometry/lead-rendering3media/reactionsetverified.",
+      "marked": "2026-10-31T02:43:48.766Z",
+      "sourceUrl": "https://ballparkexperience.athletics.com/",
+      "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+      "dateConfidence": "estimated",
+      "author": "@BuildDesk"
+    },
+    {
+      "pinId": 4812,
+      "title": "DeepSeek-V4.1-Flash Released",
+      "reason": "Oct30 evening: Artificial Analysis current rendered DeepSeek V4.1 Flash original-model page is marked deprecated after1017 revision and no longer contains stored verbosity sentence. Need dated archived launch-review evidence or a dated replacement review. Retained historical quote; no fabricated publication day or current revalidation.",
+      "marked": "2026-10-31T02:43:53.263Z",
+      "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "utcStartDateTime": "2026-09-10T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "author": "@AIDesk"
+    },
+    {
+      "pinId": 1846,
+      "title": "GPT-5-Codex-Mini Released",
+      "reason": "6 November: exact GPT-5-Codex-Mini official 7 November 2025 changelog opened, but no Mini-specific index/TB4/context/API price/speed/modalities figures or verified independent exact-version reviews. Existing spec table retained; all-null radar save rejected. Need published exact-version metrics, not parent Codex specs.",
+      "marked": "2026-11-06T19:14:19.226Z",
+      "sourceUrl": "https://help.openai.com/en/articles/9624314-model-release-notes#h_8c42ae7b25",
+      "utcStartDateTime": "2025-11-07T00:00:00.000Z",
+      "dateConfidence": "confirmed",
+      "author": "@AIDesk"
+    }
+  ]
+}
