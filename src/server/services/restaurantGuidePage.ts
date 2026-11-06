@@ -86,13 +86,15 @@ function offerSchedule(regionSlug: string, version: string, offers: RestaurantOf
 export async function guideSummary(regionSlug: string, now: Date): Promise<(GuideSummary & { today: string; previewSnapshot: boolean }) | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
-  const { today, tops, offers, upcoming, recent, previewSnapshot, version } = await guideBase(region.slug);
+  const { today, tops, offers, upcoming, recent, previewSnapshot, version, details } = await guideBase(region.slug);
   const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone));
   const names = (list: { neighborhood: string }[]) => [...new Set(list.map((item) => item.neighborhood))].sort();
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image) ?? null;
+  const featuredTop = featured ? null : tops.find((restaurant) => restaurant.image) ?? null;
   return {
+    featuredPhotos: details[featured?.id ?? featuredTop?.pinId ?? 0]?.photos,
     today, previewSnapshot, featured,
-    featuredTop: featured ? null : tops.find((restaurant) => restaurant.image) ?? null,
+    featuredTop,
     counts: { upcoming: upcoming.length, new: recent.length, top: tops.length, discounts: sections.available.length + sections.upcoming.length },
     neighborhoods: { upcoming: names(upcoming), new: names(recent), top: names(tops), discounts: names(offers) },
   };

@@ -4,13 +4,12 @@ import { useState } from 'react';
 import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
-import { CardImage } from '@/components/pin/CardImage';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
 import { CardLike } from '@/components/pin/CardLike';
 import { pinTextDir } from '@/lib/i18n/config';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 import { pinPath } from '@/lib/seo';
-import type { PinJson } from '@/lib/types';
 import type { HotelReview } from '@/lib/pinHotel';
 import { getResortPricePerNight, type TravelResortPin } from '@/lib/travel';
 import { distanceKm, formatDistance } from '@/lib/distance';
@@ -47,19 +46,6 @@ function reviewSourceLabel(review: HotelReview): string {
   return hostOf(review.url);
 }
 
-function picture(media: PinJson['media']) {
-  // Prioritize high-resolution photo (type 1) with thumbName over video stills (type 3)
-  const medium =
-    media?.find((m) => String(m.type) === '1' && m.thumbName) ??
-    media?.find((m) => m.thumbName) ??
-    media?.[0];
-  return {
-    thumbName: medium?.thumbName,
-    originalUrl: medium?.originalUrl ?? undefined,
-    portrait: !!(medium?.thumbWidth && medium.thumbHeight && medium.thumbHeight > medium.thumbWidth * 1.2),
-  };
-}
-
 function resortBlurb(pin: TravelResortPin): string {
   // Use first review quote if available
   const quote = pin.hotel.reviews?.[0]?.quote;
@@ -92,7 +78,6 @@ export function ResortCard({
 }) {
   const t = useT();
   const gt = (key: string, values?: Record<string, string | number>) => t(`guides.travel.${key}` as MessageKey, values);
-  const pic = picture(resort.media);
   const name = resort.productName ?? resort.title;
   const blurb = resortBlurb(resort);
   const hotel = resort.hotel;
@@ -130,22 +115,7 @@ export function ResortCard({
     <article className={styles.card} id={`resort-${resort.id}`}>
       <CardLike pin={resort} />
       {/* Photo & Badge */}
-      <Link href={pinPath(resort)} className={styles.photoLink} aria-label={gt('view', { name })}>
-        {pic.thumbName || pic.originalUrl ? (
-          <CardImage
-            thumbName={pic.thumbName}
-            originalUrl={pic.originalUrl}
-            alt={name}
-            portrait={pic.portrait}
-            className={styles.cardImage}
-          />
-        ) : (
-          <span className={styles.photoPlaceholder} aria-hidden="true">
-            ✳
-          </span>
-        )}
-        <span className={styles.cardBadge}>{shelfLabel.toUpperCase()}</span>
-      </Link>
+      <LandingMediaGallery name={name} href={pinPath(resort)} media={resort.media} badge={<span className={styles.cardBadge}>{shelfLabel.toUpperCase()}</span>} />
 
       {/* Card Content */}
       <div className={styles.cardBody}>

@@ -164,6 +164,11 @@ retaining the cover `photo`. Each gallery entry needs an Azure `src`, accurate `
 Do not add dish names or availability claims based only on a venue gallery. The shared tile carousel
 deduplicates photo URLs, shows up to ten photos, and preserves native pin links and per-photo credits.
 New gallery UI code needs deployment before production can display the extra photos.
+The carousel now lives in `components/pin/LandingMediaGallery.tsx`; restaurant tiles use a thin
+`RestaurantPhotoGallery` alias. Products/cars, travel, activities, music, topic/company tiles,
+picture grids and featured panels share its mouse/finger gestures and pin-style arrows beside dots.
+Keep numeric counters removed. Native images retain their credits and videos load a player only
+after a click; changing slides unmounts the active player.
 
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then

@@ -1,7 +1,6 @@
-import Link from '@/components/ui/Link';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
-import { CardImage } from './CardImage';
+import { LandingMediaGallery } from './LandingMediaGallery';
 
 type Tile = { key: string; pin: PinJson; label?: string; thumbName?: string; originalUrl?: string; video: boolean };
 
@@ -41,19 +40,13 @@ export function MediaMosaic({ pins, labels, dateOf, max = 13, className }: { pin
     <ul className={`grid grid-cols-2 gap-2 ${cols} ${className ?? ''}`}>
       {list.map((tile, i) => (
         <li key={tile.key} className={`group relative overflow-hidden rounded-xl bg-panel ${big && i === 0 ? 'col-span-2 row-span-2 aspect-[4/3] sm:aspect-auto' : big ? 'aspect-[4/3] sm:aspect-auto' : 'aspect-[4/3]'}`}>
-          <Link href={pinPath(tile.pin)} title={tile.pin.title} className="block size-full hover:no-underline">
-            <CardImage thumbName={tile.thumbName} originalUrl={tile.originalUrl} alt={tile.pin.title} className="transition-transform duration-300 group-hover:scale-105" priority={i < 2} />
-            {tile.video ? (
-              <span aria-hidden className="absolute end-2 top-2 grid size-7 place-items-center rounded-full bg-black/60 text-xs text-white">
-                ▶
-              </span>
-            ) : null}
-            {tile.label ? <span className="absolute start-2 top-2 rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-semibold text-white shadow">{tile.label}</span> : null}
-            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 pt-10 text-white">
+          <LandingMediaGallery name={tile.pin.title} href={pinPath(tile.pin)} media={tile.pin.media} className="!h-full !aspect-auto" >
+            {tile.label ? <span className="pointer-events-none absolute start-2 top-2 rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-semibold text-white shadow">{tile.label}</span> : null}
+            <span className="pointer-events-none absolute inset-x-0 bottom-10 bg-gradient-to-t from-black/80 to-transparent p-2.5 pt-10 text-white">
               {dateOf ? <span className="block text-[11px] font-medium text-white/80">{dateOf(tile.pin)}</span> : null}
               <span className="line-clamp-2 text-xs font-medium sm:text-sm">{tile.pin.title}</span>
             </span>
-          </Link>
+          </LandingMediaGallery>
         </li>
       ))}
     </ul>

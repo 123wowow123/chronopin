@@ -8,7 +8,7 @@ import { AdFilledGrid } from '@/components/restaurants/AdFilledGrid';
 import { RestaurantCardAdsProvider } from '@/components/restaurants/RestaurantAdCard';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
-import { CardImage } from '@/components/pin/CardImage';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
 import {
   TRAVEL_SEASONS,
   formatMonthRange,
@@ -309,14 +309,7 @@ export function TravelView({
             </div>
 
             {featured && (featuredPic?.thumbName || featuredPic?.originalUrl) ? (
-              <Link href={pinPath(featured)} className={styles.featured} aria-label={gt('explore', { name: featured.productName ?? featured.title })}>
-                <CardImage
-                  thumbName={featuredPic?.thumbName}
-                  originalUrl={featuredPic?.originalUrl}
-                  alt={featured.productName ?? featured.title}
-                  priority
-                  className={styles.featuredImage}
-                />
+              <LandingMediaGallery name={featured.productName ?? featured.title} href={pinPath(featured)} media={featured.media} className={`${styles.featured} ${styles.landingHero}`}>
                 <div className={styles.featuredShade} />
                 <span className={styles.featuredBadge}>{t('guides.products.selection', { site: siteName.toUpperCase() })}</span>
                 <div className={styles.featuredCopy}>
@@ -336,7 +329,7 @@ export function TravelView({
                     <span aria-hidden="true">↗</span>
                   </span>
                 </div>
-              </Link>
+              </LandingMediaGallery>
             ) : (
               <div className={styles.noFeature}>
                 <span aria-hidden="true">✳</span>

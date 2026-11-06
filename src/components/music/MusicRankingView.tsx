@@ -17,6 +17,8 @@ import { useMusicPlayer } from './MusicPlayerContext';
 import { AlbumTracklist } from './AlbumTracklist';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
+import type { MediumJson } from '@/lib/types';
 import { CardLike } from '@/components/pin/CardLike';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
@@ -26,6 +28,15 @@ interface Props {
   title: string;
   description: string;
   path?: string;
+}
+
+function songMedia(song: MusicRankingEntry): MediumJson[] {
+  const video = song.youtubeUrl ?? (song.youtubeId ? `https://www.youtube.com/watch?v=${song.youtubeId}` : undefined);
+  return [
+    ...song.media ?? [],
+    ...(song.artworkUrl ? [{ type: 1, originalUrl: song.artworkUrl }] : []),
+    ...(video ? [{ type: 3, originalUrl: video, thumbName: song.youtubeId ? `https://i.ytimg.com/vi/${song.youtubeId}/hqdefault.jpg` : undefined }] : []),
+  ];
 }
 
 // One label per year the song ranked, best rank that year, newest first.
@@ -321,18 +332,7 @@ export function MusicRankingView({
           {featured ? (
             <div className="relative group">
               {featured.pinId ? <CardLike pin={{ id: featured.pinId }} /> : null}
-              <Link
-                href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl}
-                className={styles.featured}
-                aria-label={gm('explore', { title: featured.title, artist: featured.artist })}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element -- external music artwork images */}
-                <img
-                  src={featured.artworkUrl || undefined}
-                  alt={`${featured.title} artwork`}
-                  className={styles.featuredImage}
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+              <LandingMediaGallery name={`${featured.title} by ${featured.artist}`} href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl} media={songMedia(featured)} className={`${styles.featured} ${styles.landingHero}`}>
                 <div className={styles.featuredShade} />
                 <span className={styles.featuredBadge}>{gm('badge')}</span>
                 <div className={styles.featuredCopy}>
@@ -345,7 +345,7 @@ export function MusicRankingView({
                     <span aria-hidden="true">↗</span>
                   </span>
                 </div>
-              </Link>
+              </LandingMediaGallery>
 
               {/* Featured Audio & Full Playback Buttons */}
               <div className="absolute top-5 right-5 z-20 flex items-center gap-2">
@@ -685,21 +685,9 @@ export function MusicRankingView({
                             {song.pinId ? <CardLike pin={{ id: song.pinId }} /> : null}
                             {/* Photo / Artwork with Play Button Overlay */}
                             <div className="relative group/art aspect-[1.6] overflow-hidden bg-[var(--rule)]">
-                              <Link
-                                href={pinHref}
-                                className="block size-full"
-                                aria-label={`See ${song.title} by ${song.artist}`}
-                              >
-                                {/* eslint-disable-next-line @next/next/no-img-element -- external music artwork images */}
-                                <img
-                                  src={song.artworkUrl || undefined}
-                                  alt={`${song.title} by ${song.artist}`}
-                                  className={`${styles.cardImage} transition-transform duration-300 group-hover/art:scale-105`}
-                                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                  loading="lazy"
-                                />
+                              <LandingMediaGallery name={`${song.title} by ${song.artist}`} href={pinHref} media={songMedia(song)}>
                                 {/* Card Rank Badge */}
-                                <div className="absolute start-3.5 top-3.5 flex max-w-[calc(100%-28px)] flex-wrap gap-1.5">
+                                <div className="pointer-events-none absolute start-3.5 top-3.5 flex max-w-[calc(100%-28px)] flex-wrap gap-1.5">
                                   {yearLabels(song).map((l) => (
                                     <span key={l.year} className={styles.cardBadge} style={{ position: 'static' }}>
                                       #{l.rank} YEAR-END · {l.year}
@@ -713,7 +701,7 @@ export function MusicRankingView({
                                     {song.weeksAtNumberOne} WEEKS AT #1
                                   </span>
                                 ) : null}
-                              </Link>
+                              </LandingMediaGallery>
 
                               {/* Play / Pause Overlay Button */}
                               <button
@@ -723,7 +711,7 @@ export function MusicRankingView({
                                   e.stopPropagation();
                                   togglePlay(song, landingPageQueue);
                                 }}
-                                className={`absolute bottom-3 right-3 z-10 flex size-11 items-center justify-center rounded-full bg-[var(--green)] text-[#fffef0] shadow-md transition-all duration-200 cursor-pointer ${
+                                className={`absolute bottom-12 right-3 z-10 flex size-11 items-center justify-center rounded-full bg-[var(--green)] text-[#fffef0] shadow-md transition-all duration-200 cursor-pointer ${
                                   isThisPlaying
                                     ? 'opacity-100 scale-100 ring-2 ring-white/80'
                                     : 'opacity-90 group-hover/art:opacity-100 group-hover/art:scale-110'

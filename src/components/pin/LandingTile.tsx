@@ -5,37 +5,27 @@ import type { Translator } from '@/lib/i18n/translate';
 import { pinPath } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
-import { CardImage } from './CardImage';
-import { pinPicture } from './MediaMosaic';
+import { LandingMediaGallery } from './LandingMediaGallery';
 import { ThreadAge } from './ThreadAge';
 
 // A pin on a landing page, stripped to what makes someone click: the picture,
 // when, what, and a line of why. Prices, badges, tickers and counters stay on
 // the pin's own page.
 export function LandingTile({ pin, timeZone, t, upcoming }: { pin: PinJson; timeZone: string; t: Translator; upcoming: boolean }) {
-  const picture = pinPicture(pin);
   const day = pinDayKey(pin, timeZone);
   const date = dateFormat(INTL_LOCALES[t.locale], { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${day}T00:00:00Z`));
   const blurb = plainText(pin.description, 140);
   return (
-    <Link href={pinPath(pin)} dir={pinTextDir(pin)} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-shadow hover:no-underline hover:shadow-lg">
-      <span className="relative block aspect-[16/10] overflow-hidden bg-gradient-to-br from-raised to-panel">
-        {picture ? <CardImage thumbName={picture.thumbName} originalUrl={picture.originalUrl} alt="" className="transition-transform duration-500 group-hover:scale-105" /> : null}
-        {pin.categories?.[0] ? <span className="absolute start-3 top-3 rounded-full bg-black/55 px-2.5 py-0.5 text-[11px] font-medium text-white backdrop-blur-sm">{pin.categories[0]}</span> : null}
-        {picture?.video ? (
-          <span aria-hidden className="absolute end-3 top-3 grid size-7 place-items-center rounded-full bg-black/55 text-xs text-white backdrop-blur-sm">
-            ▶
-          </span>
-        ) : null}
-      </span>
-      <span className="flex flex-1 flex-col gap-1.5 p-4">
+    <article dir={pinTextDir(pin)} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-shadow hover:no-underline hover:shadow-lg">
+      <LandingMediaGallery name={pin.title} href={pinPath(pin)} media={pin.media} badge={pin.categories?.[0] ? <span className="pointer-events-none absolute start-3 top-3 rounded-full bg-black/55 px-2.5 py-0.5 text-[11px] font-medium text-white backdrop-blur-sm">{pin.categories[0]}</span> : null} />
+      <Link href={pinPath(pin)} className="flex flex-1 flex-col gap-1.5 p-4 hover:no-underline">
         <span className="flex items-center justify-between gap-2 text-xs text-subtle">
           <time dateTime={pin.allDay ? day : pin.utcStartDateTime}>{date}</time>
           {upcoming ? <ThreadAge start={pin.utcStartDateTime} allDay={pin.allDay} /> : null}
         </span>
         <span className="line-clamp-2 text-[17px] leading-snug font-semibold text-ink">{pin.title}</span>
         {blurb ? <span className="line-clamp-2 text-sm text-muted">{blurb}</span> : null}
-      </span>
-    </Link>
+      </Link>
+    </article>
   );
 }

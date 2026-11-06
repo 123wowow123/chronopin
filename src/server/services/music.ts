@@ -3,6 +3,7 @@
 
 import { cacheLife, cacheTag } from 'next/cache';
 import * as db from '../db';
+import type { MediumJson } from '@/lib/types';
 import {
   filterAndGroupMusicRankings,
   SEED_MUSIC_RANKINGS,
@@ -22,8 +23,10 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
 
   try {
     // Look up backed pins in the database to get live pin IDs and details
-    const rows = await db.query<{ id: number; title: string; productName: string | null; sourceUrl: string | null }>(
-      `SELECT p."id", p."title", p."productName", p."sourceUrl"
+    const rows = await db.query<{ id: number; title: string; productName: string | null; sourceUrl: string | null; media: MediumJson[] | null }>(
+      `SELECT p."id", p."title", p."productName", p."sourceUrl",
+         (SELECT jsonb_agg(to_jsonb(m) ORDER BY pm."weight" DESC, m."id") FROM "PinMedium" pm
+          JOIN "Medium" m ON m."id" = pm."mediumId" WHERE pm."pinId" = p."id" AND pm."utcDeletedDateTime" IS NULL) AS media
        FROM "Pin" p
        JOIN "PinTag" pt ON pt."pinId" = p."id"
        WHERE pt."name" = 'Music Ranking' AND p."utcDeletedDateTime" IS NULL`,
@@ -40,6 +43,8 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
       pinByExactTitle.set(r.title.toLowerCase(), r.id);
     }
 
+    const mediaByPin = new Map(rows.map((row) => [row.id, row.media ?? []]));
+
     // A ranking card must open its native pin page, so entries without a backing pin are not listed.
     return SEED_MUSIC_RANKINGS.map((entry) => {
       // The same song and source page repeat across ranks and countries, so the exact pin title wins.
@@ -53,6 +58,7 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
       return {
         ...entry,
         pinId,
+        media: pinId ? mediaByPin.get(pinId) : undefined,
       };
     }).filter((entry) => entry.pinId);
   } catch {

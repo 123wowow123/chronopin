@@ -264,8 +264,8 @@ export function PinMediaFrame({
   overlay: React.ReactNode;
   fallback: React.ReactNode;
   selectable?: boolean;
-  // A card in the timeline: `selectable`, but swipe and dots only (no
-  // arrows), the card's own crop in place of the page's cap on a tall
+  // A card in the timeline or a landing page: selectable media with swipe, dots
+  // and hover arrows; the card's own crop replaces the page's cap on a tall
   // picture, and a hidden tweet left unmounted so a card does not load one.
   card?: boolean;
 }) {
@@ -420,7 +420,7 @@ export function PinMediaFrame({
 
   const dotRow = dots ? (
         <div role="group" aria-label={t('media.label')} className={card ? 'absolute inset-x-0 bottom-5 z-10 flex items-center justify-center gap-0.5' : 'flex items-center justify-center gap-0.5 py-1'}>
-          {card ? null : <MediaArrow side="previous" label={t('media.previous')} onStep={() => step(-1)} />}
+          <MediaArrow side="previous" label={t('media.previous')} onStep={() => step(-1)} />
           {slides.map(({ medium, key }, i) => {
             const shown = key === active.key;
             return (
@@ -436,7 +436,7 @@ export function PinMediaFrame({
               </button>
             );
           })}
-          {card ? null : <MediaArrow side="next" label={t('media.next')} onStep={() => step(1)} />}
+          <MediaArrow side="next" label={t('media.next')} onStep={() => step(1)} />
         </div>
   ) : null;
 

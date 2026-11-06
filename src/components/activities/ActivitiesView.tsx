@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import Link from '@/components/ui/Link';
 import { CardLike } from '@/components/pin/CardLike';
 import { LandingMark } from '@/components/ui/LandingMark';
-import { CardImage } from '@/components/pin/CardImage';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
 import { useIntlLocale, useLocale, useT } from '@/lib/client/i18n';
 import { useRouter } from '@/lib/client/navigation';
 import { viewerPlace } from '@/lib/client/viewerPlace';
@@ -42,10 +42,7 @@ type Tab = 'today' | Season | ActivityTripTab;
 const LOCAL_KM = 100;
 const STAY_KEY = 'activities-stay-all-cities';
 
-function picture(media: ActivityPin['media']) {
-  const medium = media?.find((m) => String(m.type) === '1' && m.thumbName) ?? media?.find((m) => m.thumbName) ?? media?.[0];
-  return { thumbName: medium?.thumbName, originalUrl: medium?.originalUrl ?? undefined };
-}
+
 
 function longDate(iso: string, intl: string) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString(intl, { month: 'short', day: 'numeric', timeZone: 'UTC' });
@@ -346,7 +343,6 @@ export function ActivitiesView({
             <div className={styles.cardGrid}>
               {shown.map((pin) => {
                 const a = pin.activity;
-                const pic = picture(pin.media);
                 const aCity = activityCity(a.citySlug);
                 const dayHere = todayIn(pin);
                 const running = isActiveOn(a, dayHere);
@@ -355,16 +351,7 @@ export function ActivitiesView({
                 return (
                   <article key={pin.id} className={styles.card} id={`activity-${pin.id}`}>
                     <CardLike pin={pin} />
-                    <Link href={pinPath(pin)} className={styles.photoLink} aria-label={ga('view', { name: a.name })}>
-                      {pic.thumbName || pic.originalUrl ? (
-                        <CardImage thumbName={pic.thumbName} originalUrl={pic.originalUrl} alt={a.name} className={styles.cardImage} />
-                      ) : (
-                        <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
-                      )}
-                      <span className={`${styles.cardBadge} ${running ? styles.openBadge : ''}`}>
-                        {running ? ga('inSeasonNow') : ga('startsOn', { date: longDate(start, intl).toLocaleUpperCase(intl) })}
-                      </span>
-                    </Link>
+                    <LandingMediaGallery name={a.name} href={pinPath(pin)} media={pin.media} badge={<span className={`${styles.cardBadge} ${running ? styles.openBadge : ''}`}>{running ? ga('inSeasonNow') : ga('startsOn', { date: longDate(start, intl).toLocaleUpperCase(intl) })}</span>} />
                     <div className={styles.cardBody}>
                       <p className={styles.cardMeta}>
                         <span>{aCity?.name ?? a.citySlug}</span>

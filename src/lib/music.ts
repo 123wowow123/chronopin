@@ -1,3 +1,5 @@
+import type { MediumJson } from './types';
+
 // Top music rankings around the world, grouped by continent and then by country,
 // honoring ChronoPin's west-to-east ordering and backed by native Pin records.
 
@@ -222,6 +224,7 @@ export const COUNTRIES_BY_CONTINENT: Record<Continent, readonly CountryMeta[]> =
 };
 
 export interface MusicRankingEntry {
+  media?: MediumJson[];
   id: string;
   year: number;
   rank: number;

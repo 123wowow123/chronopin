@@ -2,7 +2,6 @@
 
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import Image from 'next/image';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { CardLike } from '@/components/pin/CardLike';
@@ -148,21 +147,19 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
             <p className={styles.lead}>{establishedOnly ? `Discover restaurants around ${region.name}, with menus, neighbourhoods, and local details to help you choose your next meal.` : 'The places about to open. The ones that just did. Your guide to what’s new on the local dining scene.'}</p>
           </div>
           {featured ? (
-            <Link href={href(featured)} className={styles.featured} aria-label={`Explore ${featured.name}'s opening`}>
-              <Image src={featured.image!} alt={`${featured.name} · ${featured.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 760px) 100vw, 50vw" priority className={styles.featuredImage} />
+            <RestaurantPhotoGallery name={featured.name} href={href(featured)} photos={[{ src: featured.image!, alt: `${featured.name} · ${featured.imageNote ?? 'restaurant photo'}`, credit: featured.imageNote ?? '' }, ...summary.featuredPhotos ?? []]} className={`${styles.featured} ${styles.landingHero}`}>
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>{openingGroup(featured, today) === 'new' ? 'RECENTLY OPENED' : 'ON THE HORIZON'}</span>
               <div className={styles.featuredCopy}><p>{featured.neighborhood} · {featured.cuisine}{featured.kidsFriendly ? ' · Kids friendly' : ''}</p><h2>{featured.name}</h2><span>Discover the opening <span aria-hidden="true">↗</span></span></div>
               {featured.imageNote && <span className={styles.featuredNote}>{featured.imageNote}</span>}
-            </Link>
+            </RestaurantPhotoGallery>
           ) : featuredTop ? (
-            <Link href={pinPath({ id: featuredTop.pinId, title: featuredTop.pinTitle })} className={styles.featured} aria-label={`Explore ${featuredTop.name}`}>
-              <Image src={featuredTop.image!} alt={`${featuredTop.name} · restaurant photo`} fill sizes="(max-width: 760px) 100vw, 50vw" priority className={styles.featuredImage} />
+            <RestaurantPhotoGallery name={featuredTop.name} href={pinPath({ id: featuredTop.pinId, title: featuredTop.pinTitle })} photos={[{ src: featuredTop.image!, alt: featuredTop.name, credit: featuredTop.imageCredit }, ...summary.featuredPhotos ?? []]} className={`${styles.featured} ${styles.landingHero}`}>
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>CHRONOPIN SELECTION</span>
               <div className={styles.featuredCopy}><p>{featuredTop.neighborhood} · {featuredTop.cuisine}{featuredTop.kidsFriendly ? ' · Kids friendly' : ''}</p><h2>{featuredTop.name}</h2><span>Explore the restaurant <span aria-hidden="true">↗</span></span></div>
               <span className={styles.featuredNote}>{featuredTop.imageCredit}</span>
-            </Link>
+            </RestaurantPhotoGallery>
           ) : <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>A new chapter<br />for local dining.</p></div>}
         </header>
 

@@ -1,9 +1,9 @@
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
-import { CardImage } from '@/components/pin/CardImage';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
 import { ProductTimeline } from '@/components/pin/ProductTimeline';
-import { MediaMosaic, pinPicture } from '@/components/pin/MediaMosaic';
+import { MediaMosaic } from '@/components/pin/MediaMosaic';
 import { siteName } from '@/lib/appConfig';
 import { branchMilestones, branchPins, productPath, productPinCount, type CompanyHubJson, type HubProductJson } from '@/lib/companyHub';
 import { dateFormat, plainText } from '@/lib/format';
@@ -58,7 +58,6 @@ export function CompanyHubView({
   const blurb = plainText(hub.description ?? company.description, 400);
   const about = plainText(hub.summary, 1600);
   const spotlight = page.upcoming[0] ?? page.past[0];
-  const spotlightPic = spotlight ? pinPicture(spotlight) : null;
   return (
     <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
       <JsonLd
@@ -120,17 +119,13 @@ export function CompanyHubView({
         {spotlight ? (
           <aside aria-label={t(page.upcoming[0] ? 'topic.upcoming' : 'topic.past')} className="self-start rounded-xl border border-line bg-panel p-4 shadow-sm">
             <p className="text-xs font-semibold tracking-wide text-subtle uppercase">{t(page.upcoming[0] ? 'topic.upcoming' : 'topic.past')}</p>
-            <Link href={pinPath(spotlight)} className="group mt-2 block hover:no-underline">
-              {spotlightPic ? (
-                <span className="relative block aspect-[16/9] overflow-hidden rounded-lg bg-raised">
-                  <CardImage thumbName={spotlightPic.thumbName} originalUrl={spotlightPic.originalUrl} alt="" className="transition-transform duration-300 group-hover:scale-105" />
-                </span>
-              ) : null}
-              <span className="mt-3 block text-xs font-medium text-subtle">
-                <PinDate pin={spotlight} timeZone={timeZone} t={t} />
-              </span>
-              <span className="mt-0.5 block text-base leading-snug font-semibold text-ink group-hover:text-link">{spotlight.title}</span>
-            </Link>
+            <div className="group mt-2">
+              <LandingMediaGallery name={spotlight.title} href={pinPath(spotlight)} media={spotlight.media} className="overflow-hidden rounded-lg" />
+              <Link href={pinPath(spotlight)} className="mt-3 block hover:no-underline">
+                <span className="block text-xs font-medium text-subtle"><PinDate pin={spotlight} timeZone={timeZone} t={t} /></span>
+                <span className="mt-0.5 block text-base leading-snug font-semibold text-ink group-hover:text-link">{spotlight.title}</span>
+              </Link>
+            </div>
             <p className="mt-3 border-t border-line pt-3 text-xs text-muted tabular-nums">
               {t('topic.counts', {
                 upcoming: page.upcomingCount,
@@ -178,17 +173,13 @@ export function CompanyHubView({
 }
 
 function ProductCard({ product, base, byId }: { product: HubProductJson; base: string; byId: Map<number, PinJson> }) {
-  const cover = [...branchMilestones(product).map((m) => m.pin), ...branchPins(product)]
-    .map((p) => byId.get(p.id))
-    .map((p) => (p ? pinPicture(p) : null))
-    .find(Boolean);
+  const media = [...branchMilestones(product).map((m) => m.pin), ...branchPins(product)]
+    .flatMap((p) => byId.get(p.id)?.media ?? []);
   const count = productPinCount(product);
   return (
-    <Link href={productPath(base, product)} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel hover:no-underline hover:shadow-md">
-      <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-raised to-panel">
-        {cover ? <CardImage thumbName={cover.thumbName} originalUrl={cover.originalUrl} alt="" className="transition-transform duration-300 group-hover:scale-105" /> : null}
-      </span>
-      <span className="flex flex-1 flex-col gap-1.5 p-4">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel hover:shadow-md">
+      <LandingMediaGallery name={product.name} href={productPath(base, product)} media={media} />
+      <Link href={productPath(base, product)} className="flex flex-1 flex-col gap-1.5 p-4 hover:no-underline">
         <span className="flex items-baseline justify-between gap-2">
           <span className="text-base font-semibold text-ink">{product.name}</span>
           <span className="shrink-0 text-xs text-subtle tabular-nums">{count}</span>
@@ -203,7 +194,7 @@ function ProductCard({ product, base, byId }: { product: HubProductJson; base: s
             ))}
           </span>
         ) : null}
-      </span>
-    </Link>
+      </Link>
+    </article>
   );
 }

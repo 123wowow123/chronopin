@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { ShelfTabs } from '@/components/products/ShelfTabs';
-import { CardImage } from '@/components/pin/CardImage';
+import { LandingMediaGallery } from '@/components/pin/LandingMediaGallery';
 import { CardLike } from '@/components/pin/CardLike';
 import { JsonLd } from '@/components/JsonLd';
 import { RatingSummary } from '@/components/pin/PinRatings';
@@ -97,9 +97,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
             <p className={styles.lead}>{description}</p>
           </div>
           {featured ? (
-            <Link href={pinPath(featured)} className={styles.featured} aria-label={t('guides.products.explore', { name: featured.productName ?? featured.title })}>
-              {/* eslint-disable-next-line @next/next/no-img-element -- pin thumbs come from the blob store */}
-              <img src={imageOf(featured)} alt={featured.productName ?? featured.title} className={styles.featuredImage} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
+            <LandingMediaGallery name={featured.productName ?? featured.title} href={pinPath(featured)} media={featured.media} className={`${styles.featured} ${styles.landingHero}`}>
               <div className={styles.featuredShade} />
               <span className={styles.featuredBadge}>{t('guides.products.selection', { site: siteName.toUpperCase() })}</span>
               <div className={styles.featuredCopy}>
@@ -110,7 +108,7 @@ export async function ProductsView({ shelves, title, description, path = '/produ
                 <h2>{featured.productName ?? featured.title}</h2>
                 <span>{t('guides.products.seeProduct')} <span aria-hidden="true">↗</span></span>
               </div>
-            </Link>
+            </LandingMediaGallery>
           ) : (
             <div className={styles.noFeature}><span aria-hidden="true">✳</span><p>{t('guides.products.emptyFeature')}</p></div>
           )}
@@ -130,20 +128,12 @@ export async function ProductsView({ shelves, title, description, path = '/produ
               </div>
               <AdFilledGrid cards={
                 shelf.pins.map((pin) => {
-                  const image = imageOf(pin);
                   const name = pin.productName ?? pin.title;
                   const isKidsFriendly = isKidsFriendlyProduct(pin, shelf.name);
                   return (
                     <article key={pin.id} className={styles.card}>
                       <CardLike pin={pin} />
-                      <Link href={pinPath(pin)} className={styles.photoLink} aria-label={t('guides.products.see', { name })}>
-                        {image ? (
-                          <CardImage thumbName={picture(pin.media).thumbName!} alt={name} portrait={picture(pin.media).portrait} className={styles.cardImage} />
-                        ) : (
-                          <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
-                        )}
-                        <span className={styles.cardBadge}>{label.toLocaleUpperCase(t.locale)}</span>
-                      </Link>
+                      <LandingMediaGallery name={name} href={pinPath(pin)} media={pin.media} badge={<span className={styles.cardBadge}>{label.toLocaleUpperCase(t.locale)}</span>} />
                       <div className={styles.cardBody}>
                         <div className="mb-2 flex items-center justify-between gap-3">
                           <p className={styles.cardMeta} style={{ margin: 0 }}>

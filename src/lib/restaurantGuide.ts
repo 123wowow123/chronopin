@@ -69,6 +69,7 @@ export function guidePageHref(pathname: string, view: GuideView, page: number, h
 }
 
 export type GuideSummary = {
+  featuredPhotos?: import('./restaurantPhotos').RestaurantCardPhoto[];
   counts: Record<GuideView, number>;
   neighborhoods: Record<GuideView, string[]>;
   // The restaurant in the hero, chosen from the openings.

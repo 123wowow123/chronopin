@@ -80,6 +80,7 @@
 @keyframes citySpin { to { transform:rotate(360deg); } }
 @media (prefers-reduced-motion:reduce) { .citySpinner { animation:none; } }
 .hero { display:grid; grid-template-columns:1fr 1fr; gap:50px; padding:44px 0 40px; align-items:center; }
+.hero>* { min-width:0; }
 .eyebrow { font-size:10px; font-weight:700; letter-spacing:2px; color:var(--green); margin-bottom:22px; }
 .heroCopy h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(48px,5.6vw,76px); line-height:1.05; font-weight:400; letter-spacing:-3px; margin:0 0 22px; }
 .heroCopy em { color:var(--green); font-weight:400; }
@@ -148,12 +149,24 @@
 .cardGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px 22px; }
 .card { position:relative; border:1px solid var(--rule); border-radius:5px; background:var(--paper-raised); overflow:hidden; display:flex; flex-direction:column; }
 .photoLink { position:relative; display:block; aspect-ratio:1.6; overflow:hidden; }
-.photoGallery { position:relative; aspect-ratio:1.6; flex-shrink:0; overflow:hidden; }
+.photoGallery { position:relative; width:100%; min-width:0; max-width:100%; aspect-ratio:1.6; flex-shrink:0; overflow:hidden; }
 .photoTrack { display:flex; width:100%; height:100%; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scrollbar-width:none; }
 .photoTrack::-webkit-scrollbar { display:none; }
 .photoTrack[data-swipeable] { cursor:grab; user-select:none; }
 .photoTrack[data-dragging] { cursor:grabbing; scroll-snap-type:none; }
 .photoTrack .photoSlide { flex:0 0 100%; height:100%; aspect-ratio:auto; scroll-snap-align:start; scroll-snap-stop:always; }
+.landingSlide { position:relative; min-width:0; overflow:hidden; }
+.landingSlide .landingSlideLink { width:100%; height:100%; aspect-ratio:auto; padding:0; border:0; background:transparent; cursor:inherit; }
+.landingSlide>.imageNote { pointer-events:none; }
+.landingPlay { position:absolute; inset:0; display:grid; place-items:center; color:white; font-size:32px; text-shadow:0 2px 8px #000; background:#0002; }
+.landingPlayer { height:100%; width:100%; background:#000; }
+.landingPlayer>div,.landingPlayer iframe { width:100%; height:100%; }
+.landingHero { aspect-ratio:auto; height:405px; min-height:405px; }
+.landingHero .featuredShade,.landingHero .featuredBadge,.landingHero .featuredCopy { pointer-events:none; }
+.landingHero .featuredCopy { bottom:56px; }
+.photoGallery>.imageNote,.photoGallery>.featuredNote { pointer-events:none; }
+.landingHero .landingSlide>.imageNote { top:0; bottom:auto; padding:6px 12px; background:linear-gradient(#0008,transparent); }
+@media(max-width:760px) { .landingHero { height:340px; min-height:340px; } }
 .photoGallery .cardBadge { pointer-events:none; }
 .photoGallery:has(.photoPagination) .imageNote { padding-bottom:46px; }
 .photoPagination { position:absolute; bottom:9px; left:12px; right:12px; display:flex; align-items:center; justify-content:center; gap:6px; color:white; font-size:10px; text-shadow:0 1px 3px #000; }

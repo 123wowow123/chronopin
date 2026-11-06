@@ -1,5 +1,15 @@
 # To Do
 
+## Company landing pages for every company (opened 2026-11-05)
+
+Tesla is the only company with a landing (hub) page: `/company/tesla`, product pages like `/company/tesla/vehicles`, product timeline, charts and the Earnings by segment pane. Generalise it to every company that merits one. Code and API: `docs/okf/api/company-hub.md`; everything so far is local only, uncommitted and not deployed.
+
+- [ ] **Pick the companies and the order:** start with the biggest by pin count and market cap (`companies:marketcap`), those with a ticker, and companies that already have product pins (Apple, Microsoft, Nvidia, Nintendo, Amazon, Google, Meta, BMW and similar). A company needs about 10 or more dated pins across at least 3 products to be worth a hub.
+- [ ] **Per company:** a hub pin (kept off the main timeline), a product tree via `PUT /api/admin/company-hub` (pins split into threads, 3 to 6 milestones per product), a sourced overview and infobox for each product (`[pin:ID]` citations only, never invented), and `PUT /api/admin/company-segments` rows from the results pins when quarterly segment revenue is stated (leave a quarter out when the pin lacks every segment).
+- [ ] **Tesla gaps to close first as the template:** overviews and facts for the products other than Vehicles and Robotaxi; the Q3 2026 results pin 2827 has no segment split yet; Q4 2024 and Q1 2025 give only some segments.
+- [ ] **Make it repeatable:** a script or skill under `.agents/skills/` that drafts a tree from a company's pins (grouping by product line), so a session reviews instead of writing from scratch; update `AGENTS.md` with the rule once it exists.
+- [ ] **Before it goes live:** the redirect from a hub pin's `/pin/ID/slug` to the landing page was deliberately not added because the feature is not live; decide that, the sitemap and `llms.txt` entries, and translations (left to the translation agent) at deploy time, which needs the owner's explicit ask.
+
 ## News run 45 (November 4, 2026): open items
 
 **Done:** WTI month-end thread 20725-20727 and October CPI 20728 on production; 25 revisits checked (9 resolved or edited); about 60 model rubric/table saves, 7 factory profiles, construction reviews, 12 product blurbs, pin and holiday ads. Details: `docs/okf/scraping/news-2026-11-04-am.md`. Rule added to `run-news-job`: every lane every run.
