@@ -1,0 +1,1995 @@
+{
+  "date": "2026-11-06",
+  "scope": "Follow-up on all 64 restaurant media gaps from the 121-pin pass. Verified source media saved to Azure and native pin media on production and local; no deployment or translations. Completion means at least two effective media, not necessarily three.",
+  "counts": {
+    "auditedPins": 64,
+    "pinsCompleted": 29,
+    "pinsUpdated": 30,
+    "pinsPartiallyFilled": 1,
+    "mediaAdded": 53,
+    "photosAndRenderingsAdded": 52,
+    "officialMenuImagesAdded": 1,
+    "remainingPins": 35,
+    "finalReadbacks": 60,
+    "readbackErrors": 0
+  },
+  "updated": [
+    {
+      "pinId": 14520,
+      "title": "FeiZi Xia Zhuang (Qin Yuan) — Wuhan restaurant guide",
+      "sourceUrl": "https://www.trip.com/restaurant/china/wuhan/detail/feizi-xia-zhuang-11434892/?curr=CNY",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://dimg04.c-ctrip.com/images/10030k000000ccgkkB9EF_D_750_450_Q90.jpg?proc=autoorient",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/14520/581432ace30ee9eead0829c6.webp",
+          "sourceUrl": "https://gs.ctrip.com/html5/you/foods/fooddetail/145/5284800.html",
+          "credit": "Photo via gs.ctrip.com",
+          "kind": "photo",
+          "mediumId": 36037
+        },
+        {
+          "originalUrl": "https://dimg04.c-ctrip.com/images/100b0k000000cam8t15EE_D_750_450_Q90.jpg?proc=autoorient",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/14520/23a791178ed7bbdf4a6c45cf.webp",
+          "sourceUrl": "https://gs.ctrip.com/html5/you/foods/fooddetail/145/5284800.html",
+          "credit": "Photo via gs.ctrip.com",
+          "kind": "photo",
+          "mediumId": 36038
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 14520,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36037,
+            36038
+          ]
+        },
+        {
+          "env": "local",
+          "id": 14520,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36015,
+            36016
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 14615,
+      "title": "Wen Yuan Restaurant — Dongguan restaurant guide",
+      "sourceUrl": "https://www.trip.com/restaurant/china/dongguan/detail/wen-yuan-restaurant-11654376/?curr=CNY",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://ak-d.tripcdn.com/images/0104512000a2n9ros2035_D_300_200_R5.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/14615/23679d4e626314118ba30b43.webp",
+          "sourceUrl": "https://hk.trip.com/restaurant/china/dongguan/detail/wen-yuan-restaurant-11654376/",
+          "credit": "Photo via hk.trip.com",
+          "kind": "photo",
+          "mediumId": 36033
+        },
+        {
+          "originalUrl": "https://ak-d.tripcdn.com/images/0103s12000a2n9pv4F412_D_300_200_R5.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/14615/4ba0ddea3d095e2c557324dc.webp",
+          "sourceUrl": "https://hk.trip.com/restaurant/china/dongguan/detail/wen-yuan-restaurant-11654376/",
+          "credit": "Photo via hk.trip.com",
+          "kind": "photo",
+          "mediumId": 36034
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 14615,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36033,
+            36034
+          ]
+        },
+        {
+          "env": "local",
+          "id": 14615,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36011,
+            36012
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15922,
+      "title": "Graniph Cafe Kyoto Opens in Shijo Kawaramachi",
+      "sourceUrl": "https://www.graniph.com/other/graniphkyoto",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://digitalpr.jp/simg/2515/146855/300_210_202610271049066ae003124c27d.png",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15922/ab96b60764668a93b7b1df99.webp",
+          "sourceUrl": "https://digitalpr.jp/r/146855",
+          "credit": "Photo via digitalpr.jp",
+          "kind": "photo",
+          "mediumId": 36026
+        },
+        {
+          "originalUrl": "https://digitalpr.jp/simg/2515/146855/400_266_202610271049426ae003365b987.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15922/14706cade2fc948895ac7213.webp",
+          "sourceUrl": "https://digitalpr.jp/r/146855",
+          "credit": "Photo via digitalpr.jp",
+          "kind": "photo",
+          "mediumId": 36027
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15922,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36026,
+            36027
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15922,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36004,
+            36005
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15468,
+      "title": "WEEKENDERS COFFEE SHINMACHI Opens in Shinmachi",
+      "sourceUrl": "https://www.instagram.com/weekenders_coffee/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://tasteofkansai.com/img/weekendersshinamchi10-1280.webp",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15468/9a6e7588409d265df387f17a.webp",
+          "sourceUrl": "https://tasteofkansai.com/en/cafe/weekenders-coffee-shinmachi/",
+          "credit": "Photo via tasteofkansai.com",
+          "kind": "photo",
+          "mediumId": 36064
+        },
+        {
+          "originalUrl": "https://tasteofkansai.com/img/weekendersshinamchi_ext-1280.webp",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15468/5e91b5a32c5be45e1f2bc4f6.webp",
+          "sourceUrl": "https://tasteofkansai.com/en/cafe/weekenders-coffee-shinmachi/",
+          "credit": "Photo via tasteofkansai.com",
+          "kind": "photo",
+          "mediumId": 36065
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15468,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36064,
+            36065
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15468,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36025,
+            36026
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15480,
+      "title": "Nigushi & Wine Roji Iru Opens in Teramachi / Gokomachi",
+      "sourceUrl": "https://www.instagram.com/rojiiru/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/842465857_18104284259175125_2599475691975698758_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=61qzE3EINoEQ7kNvwEq0gve&_nc_oc=Adr-HXN46ajycOFSio27z5jZ0LP8Hs3mT0z1X7ohlIA_fnm3n2sv8q8ZQlrO8DUsGLUUg2Q2y2V8nOH4H4b-fks0&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=FCvwPxsc4jquYjULHDLxkg&_nc_ss=7e60f&oh=00_AQShW5g9psYB9HrQFf3gFZNHW9Q_R5q60H9M9AbqzXC1fw&oe=6AF33F0B",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15480/2b6c5bd3ca805737f41d9b82.webp",
+          "sourceUrl": "https://www.instagram.com/rojiiru/p/DeTvYprzXqZ/",
+          "credit": "Photo via instagram.com",
+          "kind": "photo",
+          "mediumId": 36063
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15480,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36063
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15480,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36024
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15516,
+      "title": "Totomaru — Tenpaku Opens in Tenpaku",
+      "sourceUrl": "https://totomaru.ec-design.co.jp/news/detail/26831504-ec46-4b96-8ef6-c5349bb7f52e",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/65701/18/65701-18-6facc1bf81e007f56668af06f75f58d6-3900x2925.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15516/a9ea57e2e5b405b25cd3f9c4.webp",
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000018.000065701.html",
+          "credit": "Photo via prtimes.jp",
+          "kind": "photo",
+          "mediumId": 36070
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/65701/18/65701-18-3a913e45ba17185b4fa10739caad44da-3900x3291.jpg?format=jpeg&auto=webp&fit=bounds&width=720&height=480",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15516/af8042957f5ddfe076b73ea2.webp",
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000018.000065701.html",
+          "credit": "Photo via prtimes.jp",
+          "kind": "photo",
+          "mediumId": 36071
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15516,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36070,
+            36071
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15516,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36031,
+            36032
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7523,
+      "title": "Yun Xuan (Le Chinois) — Sofitel Kunming — Kunming restaurant guide",
+      "sourceUrl": "https://sofitel.accor.com/zh/hotels/8529/R003.restaurant.html",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://q5.itc.cn/q_70/images03/20250714/5f328330d5b1438da39759e0a6c43414.jpeg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7523/b1650a5d2f1518d5216087f6.webp",
+          "sourceUrl": "https://www.sohu.com/a/913828245_120815119",
+          "credit": "Photo via sohu.com",
+          "kind": "photo",
+          "mediumId": 36039
+        },
+        {
+          "originalUrl": "https://q0.itc.cn/q_70/images03/20250714/0440a468b47d4434a2249ac92782ed84.jpeg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7523/ae85530f2d7f5f6b90091e4d.webp",
+          "sourceUrl": "https://www.sohu.com/a/913828245_120815119",
+          "credit": "Photo via sohu.com",
+          "kind": "photo",
+          "mediumId": 36040
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7523,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36039,
+            36040
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7523,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36017,
+            36018
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15179,
+      "title": "Bar Cerino — Shanghai",
+      "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#bar-cerino",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://images.smartshanghai.com.cn/uploads/repository/2026/10/22/e162ab58-bb6b-4c32-908a-e620763b296c.jpg?x-oss-process=image/resize,w_680/quality,q_85/format,jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15179/ec888907b750094f531f1bf7.webp",
+          "sourceUrl": "https://www.smartshanghai.com/articles/nightlife/new-drinks-october-2026",
+          "credit": "Photo via smartshanghai.com",
+          "kind": "photo",
+          "mediumId": 36066
+        },
+        {
+          "originalUrl": "https://images.smartshanghai.com.cn/uploads/repository/2026/10/22/be71c97c-ac99-4d01-99c8-c78a22d0a067.jpg?x-oss-process=image/resize,w_680/quality,q_85/format,jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15179/5f5d2c588baebdbcf333904c.webp",
+          "sourceUrl": "https://www.smartshanghai.com/articles/nightlife/new-drinks-october-2026",
+          "credit": "Photo via smartshanghai.com",
+          "kind": "photo",
+          "mediumId": 36067
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15179,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36066,
+            36067
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15179,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36027,
+            36028
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15596,
+      "title": "PAIRINGx HOKKAIDO Opens in Odori",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://www.hbc.co.jp/pairingxhokkaido/image/ogp.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15596/22011c6b3306d4feb02e7e47.webp",
+          "sourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+          "credit": "Photo via hbc.co.jp",
+          "kind": "photo",
+          "mediumId": 36024
+        },
+        {
+          "originalUrl": "https://www.bauhaus-m.co.jp/wp-content/uploads/2026/10/DSC4053.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15596/67c2678ef2ea3fdd9aa75b60.webp",
+          "sourceUrl": "https://www.bauhaus-m.co.jp/works/17469/",
+          "credit": "Photo via bauhaus-m.co.jp",
+          "kind": "photo",
+          "mediumId": 36025
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15596,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36024,
+            36025
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15596,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36002,
+            36003
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15909,
+      "title": "OrySNACK Kyoto — BOOKHOME Opens in Karasuma Oike",
+      "sourceUrl": "https://orylab.com/information/2026/09/09/オリィ研究所、関西で初の常設店　京都で「orysnack-kyoto/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://static.camp-fire.jp/uploads/editor_uploaded_image/image/5508617/kitagawahonke.jpg?auto=format&fit=max&ref=ix_tag",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15909/671edd9be4a6c6425a0f292a.webp",
+          "sourceUrl": "https://camp-fire.jp/projects/975305/view",
+          "credit": "Photo supplied by Kitagawa Honke / Ory Laboratory — Kyoto project sake partner",
+          "kind": "photo",
+          "mediumId": 36101
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15909,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36101
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15909,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36054
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15924,
+      "title": "NUMBER SHOT — Hakata Ming Opens in Hakata Station",
+      "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93647/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://syougyoushisetsu.com/news/wp-content/uploads/2026/10/sub2-11.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15924/77c7f5d5134ffcc27496b2d0.webp",
+          "sourceUrl": "https://syougyoushisetsu.com/news/hakata-number-shot-ming-station-commercial-evolution/",
+          "credit": "Photo via syougyoushisetsu.com",
+          "kind": "photo",
+          "mediumId": 36030
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15924,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36030
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15924,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36008
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 15178,
+      "title": "Accents 洋泾浜 — Shanghai",
+      "sourceUrl": "https://www.citynewsservice.cn/articles/cns/fb/sh-buzz/sh-buzz-12-new-openings-plus-a-new-infinity-pool-bar-pm9e4zdk#accents",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://wx2.sinaimg.cn/cmw960/841a9365gy1igyuqhyh2sj22c0340hdt.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15178/2e29ee4500313a87424a0b02.webp",
+          "sourceUrl": "https://weibo.com/2/detail/5341699004175275",
+          "credit": "Photo via weibo.com",
+          "kind": "photo",
+          "mediumId": 36086
+        },
+        {
+          "originalUrl": "https://wx3.sinaimg.cn/cmw960/841a9365gy1igyuqiv96aj22c0340b29.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/15178/22d8f8a03032f0bf3f5a7dec.webp",
+          "sourceUrl": "https://weibo.com/2/detail/5341699004175275",
+          "credit": "Photo via weibo.com",
+          "kind": "photo",
+          "mediumId": 36087
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 15178,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36086,
+            36087
+          ]
+        },
+        {
+          "env": "local",
+          "id": 15178,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36039,
+            36040
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7577,
+      "title": "Yu Yue Ge — reopening — announced reopening in Tianya · Sanya Bay",
+      "sourceUrl": "https://weibo.com/2/detail/5340909604703335",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 3,
+      "media": [
+        {
+          "originalUrl": "https://q5.itc.cn/q_70/images03/20260828/ba475f4aba474284843c4e32535cfa36.png",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7577/64ff4d69c10938ce555f4d03.webp",
+          "sourceUrl": "https://www.sohu.com/a/1068934691_121106994",
+          "credit": "Photo via sohu.com",
+          "kind": "photo",
+          "mediumId": 36091
+        },
+        {
+          "originalUrl": "https://img.meituan.net/ugcpic/1c2fa959f221e6c8147641b9329f9412996910.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7577/b494f662d55b5339d2bf9e62.webp",
+          "sourceUrl": "https://www.dianping.com/shop/48062596/photos",
+          "credit": "Photo via dianping.com",
+          "kind": "photo",
+          "mediumId": 36092
+        },
+        {
+          "originalUrl": "https://qcloud.dpfile.com/pc/-Q5ewb4Aoei8jl2WEspBwlkeCzBR-OlY4YWCyvZYH3P15CS3Mbr0agNW1sB173_NjoJrvItByyS4HHaWdXyO_I7F0UeCRQYMHlogzbt7GHgNNiIYVnHvzugZCuBITtvjski7YaLlHpkrQUr5euoQrg.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7577/e95fc95b7867b26a66dc0052.webp",
+          "sourceUrl": "https://www.dianping.com/shop/48062596/photos",
+          "credit": "Photo via dianping.com",
+          "kind": "photo",
+          "mediumId": 36093
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7577,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36091,
+            36092,
+            36093
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7577,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36044,
+            36045,
+            36046
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 6703,
+      "title": "The Bixby Opens in Spring Branch",
+      "sourceUrl": "https://www.houstonpress.com/restaurants/openings-and-closings-the-branch-is-open-trill-4-arrives/#the-bixby",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_3840,ar_4:3,g_center,f_webp/images/PR_The_Bixby_offers_different_types_of_seating_wbcnt2",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6703/dd404d86fa667d661b2da894.webp",
+          "sourceUrl": "https://www.theinfatuation.com/houston/reviews/the-bixby",
+          "credit": "Photo via theinfatuation.com",
+          "kind": "photo",
+          "mediumId": 36062
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 6703,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36062
+          ]
+        },
+        {
+          "env": "local",
+          "id": 6703,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36023
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 6724,
+      "title": "Élephante Opens in Uptown",
+      "sourceUrl": "https://www.elephanterestaurants.com/location/dallas/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://static.wixstatic.com/media/29e141_4887e5a5545e42ac884bfac4fbe27858~mv2.jpg/v1/fit/w_1200,h_645,q_90,enc_avif,quality_auto/29e141_4887e5a5545e42ac884bfac4fbe27858~mv2.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6724/13acfc808cfc2ee4f22b4260.webp",
+          "sourceUrl": "https://www.tritongc.com/elephante",
+          "credit": "Photo via tritongc.com",
+          "kind": "photo",
+          "mediumId": 36028
+        },
+        {
+          "originalUrl": "https://static.wixstatic.com/media/29e141_48d26f1cab0a405a88aed26dba412d36~mv2.jpg/v1/fit/w_752,h_645,q_90,enc_avif,quality_auto/29e141_48d26f1cab0a405a88aed26dba412d36~mv2.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6724/886691e09c794bf83607fe04.webp",
+          "sourceUrl": "https://www.tritongc.com/elephante",
+          "credit": "Photo via tritongc.com",
+          "kind": "photo",
+          "mediumId": 36029
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 6724,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36028,
+            36029
+          ]
+        },
+        {
+          "env": "local",
+          "id": 6724,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36006,
+            36007
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 6764,
+      "title": "Rubys Plans an Opening in Pike Place Market",
+      "sourceUrl": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026#rubys",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_3840,ar_4:3,g_center,f_webp/images/Seattle_Rubys_Spread_MakenaYee_phone_EDIT-11_zpylnq",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6764/7f03058ae33ff4333a71abf9.webp",
+          "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/rubys-pike-place",
+          "credit": "Photo via theinfatuation.com",
+          "kind": "photo",
+          "mediumId": 36084
+        },
+        {
+          "originalUrl": "https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_3840,ar_4:3,g_center,f_webp/images/Seattle_Rubys_Interior_MakenaYee_phone_EDIT-2_hqpigy",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6764/9aeaf3bf01094ffdeb7c84d2.webp",
+          "sourceUrl": "https://www.theinfatuation.com/seattle/reviews/rubys-pike-place",
+          "credit": "Photo via theinfatuation.com",
+          "kind": "photo",
+          "mediumId": 36085
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 6764,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36084,
+            36085
+          ]
+        },
+        {
+          "env": "local",
+          "id": 6764,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36037,
+            36038
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7465,
+      "title": "Factory Hotpot — Meixin No. 2 Foreigner Street opens in Banan · Jieshi",
+      "sourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://res.cqhlw.cn/contentcloud/1/REPRINT/MEDIA/PICTURE/2026/9/26/fc97ab5952024e5a91ff06a0d03bf7f1_wh1023x682.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7465/472d56ec91c2385544821022.webp",
+          "sourceUrl": "https://www.cqnews.net/web/content_1553525970829131776.html",
+          "credit": "Photo via 第1眼TV-华龙网 — Meixin factory hotpot workers’ preview banquet",
+          "kind": "photo",
+          "mediumId": 36096
+        },
+        {
+          "originalUrl": "https://k.sinaimg.cn/n/spider20261001/289/w1080h809/20261001/9999-73d32ff3e7665f283545e52c089cca19.jpg/w700d1q75cms.jpg?by=cms_fixed_width",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7465/8234c97205c1214f0e687871.webp",
+          "sourceUrl": "https://finance.sina.cn/2026-10-01/detail-inittqxz1925580.d.html?wm=3049_0015",
+          "credit": "Photo via 重庆晨报 / Sina — Meixin factory hotpot dining room",
+          "kind": "photo",
+          "mediumId": 36097
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7465,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36096,
+            36097
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7465,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36049,
+            36050
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7502,
+      "title": "Molly Tea — Shuncheng — Kunming opening",
+      "sourceUrl": "https://www.kunming.cn/news/c/2026-09-03/14070784.shtml",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://wx2.sinaimg.cn/large/008gOwfPgy1igmv69i3elj32bd335b2d.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7502/c38a6720f8590dfe699b3157.webp",
+          "sourceUrl": "https://sina.cn/news/detail/5337975513943968.html",
+          "credit": "Molly Tea — Kunming launch drinks",
+          "kind": "photo",
+          "mediumId": 36094
+        },
+        {
+          "originalUrl": "https://wx2.sinaimg.cn/large/008gOwfPgy1igmv692x9sj32bd335x6r.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7502/13a0bf03425ba3585e930032.webp",
+          "sourceUrl": "https://sina.cn/news/detail/5337975513943968.html",
+          "credit": "Molly Tea — published Kunming launch menu (August 2026)",
+          "kind": "menu",
+          "mediumId": 36095
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7502,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36094,
+            36095
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7502,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36047,
+            36048
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7522,
+      "title": "Chayan Yuese — Baohe MixC — Hefei opening",
+      "sourceUrl": "https://ah.people.com.cn/BIG5/n2/2026/0914/c374164-41695290.html",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://n.sinaimg.cn/spider20260715/87/w1080h607/20260715/bab6-da6a76b8ad25f0b78ce2abd7abbb6070.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7522/cd61105d135155f50c9cd293.webp",
+          "sourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxaez7968894.shtml",
+          "credit": "Photo via finance.sina.com.cn",
+          "kind": "photo",
+          "mediumId": 36089
+        },
+        {
+          "originalUrl": "https://n.sinaimg.cn/spider20260715/500/w900h1200/20260715/2cae-8653e47c78211623453b6df06e9a22ea.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7522/e863a8bef39ec451d67aa8b4.webp",
+          "sourceUrl": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihxaez7968894.shtml",
+          "credit": "Photo via finance.sina.com.cn",
+          "kind": "photo",
+          "mediumId": 36090
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7522,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36089,
+            36090
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7522,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36042,
+            36043
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 19426,
+      "title": "Ore no Sora — Sapporo Opens in Tomioka",
+      "sourceUrl": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://i0.wp.com/misoya.net/wp-content/uploads/2026/10/orenosora-sapporo-01.webp?fit=1000%2C750&ssl=1",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/19426/770622155523143f8b7792db.webp",
+          "sourceUrl": "https://misoya.net/store/orenosora-sapporo/",
+          "credit": "Photo via misoya.net",
+          "kind": "photo",
+          "mediumId": 36031
+        },
+        {
+          "originalUrl": "https://i0.wp.com/misoya.net/wp-content/uploads/2026/10/orenosora-sapporo-02.webp?fit=1024%2C768&ssl=1",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/19426/dcf1eb8194092654277f8a01.webp",
+          "sourceUrl": "https://misoya.net/store/orenosora-sapporo/",
+          "credit": "Photo via misoya.net",
+          "kind": "photo",
+          "mediumId": 36032
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 19426,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36031,
+            36032
+          ]
+        },
+        {
+          "env": "local",
+          "id": 19426,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36009,
+            36010
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 6996,
+      "title": "Hayashi Tarō Plans an Opening in Mills 50",
+      "sourceUrl": "https://www.orlandoweekly.com/food-drink/tip-jar/orlando-area-restaurants-open-now-opening-soon-sujuo-korean-eatery-hayashi-taro-humble-crumb-and-more/#hayashi-taro",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://static.wixstatic.com/media/4e61a9_6b095e05287b4fcb91e977b6dbb997db~mv2.jpeg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6996/a85a627d8a60e477036555d7.webp",
+          "sourceUrl": "https://www.hayashitarofl.com/",
+          "credit": "Photo via hayashitarofl.com",
+          "kind": "photo",
+          "mediumId": 36068
+        },
+        {
+          "originalUrl": "https://static.wixstatic.com/media/4e61a9_e2a04616879948a9a409b24dd220b9b2~mv2.jpeg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/6996/13f78067ce511e906d4cf839.webp",
+          "sourceUrl": "https://www.hayashitarofl.com/",
+          "credit": "Photo via hayashitarofl.com",
+          "kind": "photo",
+          "mediumId": 36069
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 6996,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36068,
+            36069
+          ]
+        },
+        {
+          "env": "local",
+          "id": 6996,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36029,
+            36030
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7004,
+      "title": "Bocce Ristorante Plans an Opening in East Sacramento",
+      "sourceUrl": "https://whatnow.com/sacramento/restaurants/sacramentos-most-decorated-chef-is-finally-opening-his-own-place/#bocce",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://www.abridged.org/wp-content/uploads/2026/08/IMG_3969-scaled-e1788200355821.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7004/6f97749163c3ff32daebe763.webp",
+          "sourceUrl": "https://www.abridged.org/news/bocce-ristorante-opens/",
+          "credit": "Photo by Keyla Vasconcellos / Abridged — Bocce opening dishes",
+          "kind": "photo",
+          "mediumId": 36099
+        },
+        {
+          "originalUrl": "https://www.abridged.org/wp-content/uploads/2026/08/IMG_3963-scaled-e1788200339898-1024x576.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7004/248901d21bef8bef86926d07.webp",
+          "sourceUrl": "https://www.abridged.org/news/bocce-ristorante-opens/",
+          "credit": "Photo by Keyla Vasconcellos / Abridged — Bocce opening dishes",
+          "kind": "photo",
+          "mediumId": 36100
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7004,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36099,
+            36100
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7004,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36052,
+            36053
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7005,
+      "title": "Fiore del Vino Plans an Opening in Downtown",
+      "sourceUrl": "https://whatnow.com/sacramento/restaurants/three-women-are-bringing-a-florentine-wine-window-to-downtown-sacramento/#fiore-del-vino",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://whatnow.com/wp-content/uploads/2026/07/a3x8uoxcywtsuz8eetfwf7ogd-1024x759.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7005/1a3cc71385ace724a40f37e0.webp",
+          "sourceUrl": "https://whatnow.com/sacramento/restaurants/three-women-are-bringing-a-florentine-wine-window-to-downtown-sacramento/#fiore-del-vino",
+          "credit": "Photo via whatnow.com",
+          "kind": "photo",
+          "mediumId": 36088
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7005,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36088
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7005,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36041
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 13906,
+      "title": "Zaogaofeng — Wenlvcheng — Jinan restaurant guide",
+      "sourceUrl": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "http://img03.e23.cn/79a309581499e6218b36f90b3ae6b45f",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/13906/fad7cdb1ec5b781f5c5db573.webp",
+          "sourceUrl": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
+          "credit": "Photo via news.e23.cn",
+          "kind": "photo",
+          "mediumId": 36058
+        },
+        {
+          "originalUrl": "http://img03.e23.cn/f59563e293020ce540254489184625a9",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/13906/7566e94af19f1d933f3062f6.webp",
+          "sourceUrl": "https://news.e23.cn/jnnews/2026-08-18/2026081800033.html",
+          "credit": "Photo via news.e23.cn",
+          "kind": "photo",
+          "mediumId": 36059
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 13906,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36058,
+            36059
+          ]
+        },
+        {
+          "env": "local",
+          "id": 13906,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36019,
+            36020
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 17190,
+      "title": "Belong by Chef Shin Yong-woo (Cuisine K pop-up) opens in Gangnam-gu (Cuisine K Project)",
+      "sourceUrl": "https://www.khan.co.kr/article/202610021459001",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://m.cj.co.kr/cj_files/news/202610/1790899096126_0.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17190/a2b0c1c56c955c12a531ecb4.webp",
+          "sourceUrl": "https://m.cj.co.kr/kr/newsroom/pressreleases/news-detail/1828",
+          "credit": "Photo via m.cj.co.kr",
+          "kind": "photo",
+          "mediumId": 36080
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17190,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36080
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17190,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36033
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 7450,
+      "title": "Hanbijae (韓美膳) — Hanshin Arena Opens in Zuoying",
+      "sourceUrl": "https://www.hanshin.com.tw/漢神巨蛋/tw/News/品牌活動/韓美膳",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://www.hanshinarena.com.tw/upload/2026_09_1824/20260918152900j5r5rmckf10.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/7450/8a4b021edd2fb7e44e39a841.webp",
+          "sourceUrl": "https://www.hanshinarena.com.tw/%E6%BC%A2%E7%A5%9E%E5%B7%A8%E8%9B%8B/tw/Floor/4F/%E9%9F%93%E7%BE%8E%E8%86%B3",
+          "credit": "Photo via hanshinarena.com.tw",
+          "kind": "photo",
+          "mediumId": 36081
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 7450,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36081
+          ]
+        },
+        {
+          "env": "local",
+          "id": 7450,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36034
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 17178,
+      "title": "Tim Hortons Banff Town Seongsu plans an opening in Seongsu-dong, Seongdong-gu",
+      "sourceUrl": "https://www.newsis.com/view/NISX20261016_0003828402",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://wimg.heraldcorp.com/news/cms/2026/10/29/news-p.v1.20261029.5f26a80052224757b098dff0cbfbcee0_P1.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17178/2414cfd73e90284973f6e764.webp",
+          "sourceUrl": "https://biz.heraldcorp.com/article/10919400",
+          "credit": "Photo via biz.heraldcorp.com",
+          "kind": "photo",
+          "mediumId": 36082
+        },
+        {
+          "originalUrl": "https://wimg.heraldcorp.com/news/cms/2026/10/29/news-p.v1.20261029.7d30a16d57814a60b28b122e01888fb6_P1.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17178/e77054b6b773456e0e0c889c.webp",
+          "sourceUrl": "https://biz.heraldcorp.com/article/10919400",
+          "credit": "Photo via biz.heraldcorp.com",
+          "kind": "photo",
+          "mediumId": 36083
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17178,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36082,
+            36083
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17178,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36035,
+            36036
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 17181,
+      "title": "Haidilao — Cheongnyangni plans an opening in Cheongnyangni, Dongdaemun-gu",
+      "sourceUrl": "https://www.instagram.com/haidilaokorea/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://img1.newsis.com/2026/10/23/NISI20261023_0002272079_web.jpg?rnd=20261023123507",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17181/537ef8563571be39719bfcd5.webp",
+          "sourceUrl": "https://mobile.newsis.com/view/NISX20261023_0003838476",
+          "credit": "Photo by Kwon Min-ji / Newsis — Cheongnyangni Haidilao storefront before opening",
+          "kind": "photo",
+          "mediumId": 36098
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17181,
+          "verified": true,
+          "total": 1,
+          "mediumIds": [
+            36098
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17181,
+          "verified": true,
+          "total": 1,
+          "mediumIds": [
+            36051
+          ]
+        }
+      ],
+      "reason": "One verified Newsis storefront photo saved. Pin started with zero; needs another item. Korean brand posts inspected depict other branches/promotions.",
+      "previousResearchReason": "The public Korea profile opening photos were explicitly Busan Seomyeon, not Cheongnyangni; excluded.",
+      "sourcesChecked": [
+        "https://mobile.newsis.com/view/NISX20261023_0003838476",
+        "https://www.instagram.com/haidilao.jeju/p/Deq6Lq2C0Lt/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/De0N6koTfjh/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DeoisMOiHLF/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DfB0ccECgLq/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DfL0fHMz9YU/",
+        "https://www.instagram.com/haidilaokorea/",
+        "https://www.instagram.com/haidilaokorea/p/Dd8ieP1AWrK/",
+        "https://www.instagram.com/haidilaokorea/p/DdaUAmOgeJ9/",
+        "https://www.instagram.com/haidilaokorea/p/DeEXtdegcCx/",
+        "https://www.instagram.com/haidilaokorea/p/DejQvRVBY5Q/",
+        "https://www.instagram.com/haidilaokorea/p/DfBocrshgQg/",
+        "https://www.instagram.com/haidilaokorea/p/DfHaUkdhppV/",
+        "https://www.instagram.com/xiangxiangkr/p/DetVMs3IDHo/"
+      ],
+      "candidatesReviewed": 22
+    },
+    {
+      "pinId": 17227,
+      "title": "Van Leeuwen Ice Cream — Shinsegae Department Store Gangnam (Suite Park) opens in Banpo-dong, Seocho-gu",
+      "sourceUrl": "https://economist.co.kr/article/view/ecn202607230022",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 3,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://images.shinsegaegroupnewsroom.com/wp-content/uploads/2026/07/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90-%EA%B0%95%EB%82%A8%EC%A0%90-%EC%A7%80%ED%95%981%EC%B8%B5-%EC%8A%A4%EC%9C%84%ED%8A%B8%ED%8C%8C%ED%81%AC-%EB%B2%A4%EB%A3%A8%EC%97%94_%EA%B0%80%EB%A1%9C1.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17227/293019d22eb205e3738f14b8.webp",
+          "sourceUrl": "https://www.shinsegaegroupnewsroom.com/van-leeuwen-ice-cream-shinsegae-gangnam-first/",
+          "credit": "Photo via shinsegaegroupnewsroom.com",
+          "kind": "photo",
+          "mediumId": 36060
+        },
+        {
+          "originalUrl": "https://images.shinsegaegroupnewsroom.com/wp-content/uploads/2026/07/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90-%EA%B0%95%EB%82%A8%EC%A0%90-%EC%A7%80%ED%95%981%EC%B8%B5-%EC%8A%A4%EC%9C%84%ED%8A%B8%ED%8C%8C%ED%81%AC-%EB%B2%A4%EB%A3%A8%EC%97%94_%EA%B0%80%EB%A1%9C3.jpg",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17227/c7b52f41d1dee23b47f1e568.webp",
+          "sourceUrl": "https://www.shinsegaegroupnewsroom.com/van-leeuwen-ice-cream-shinsegae-gangnam-first/",
+          "credit": "Photo via shinsegaegroupnewsroom.com",
+          "kind": "photo",
+          "mediumId": 36061
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17227,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36060,
+            36061
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17227,
+          "verified": true,
+          "total": 3,
+          "mediumIds": [
+            36021,
+            36022
+          ]
+        }
+      ]
+    },
+    {
+      "pinId": 17194,
+      "title": "Deulbap Charban — Cheonho Station (9th store) opens in Cheonho",
+      "sourceUrl": "https://www.mk.co.kr/news/business/12134616",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 2,
+      "mediaAdded": 2,
+      "media": [
+        {
+          "originalUrl": "https://d12zq4w4guyljn.cloudfront.net/300_300_20261011054708_photo1_VqmGpLybPOZz.webp",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17194/7b9fa79cb3bfa3feb377713e.webp",
+          "sourceUrl": "https://www.diningcode.com/profile.php?rid=w2jpAaGjmbqq",
+          "credit": "Photo via diningcode.com",
+          "kind": "photo",
+          "mediumId": 36035
+        },
+        {
+          "originalUrl": "https://d12zq4w4guyljn.cloudfront.net/300_300_20261011054708_photo2_VqmGpLybPOZz.webp",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17194/e4032317124fbb6750ed15b9.webp",
+          "sourceUrl": "https://www.diningcode.com/profile.php?rid=w2jpAaGjmbqq",
+          "credit": "Photo via diningcode.com",
+          "kind": "photo",
+          "mediumId": 36036
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17194,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36035,
+            36036
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17194,
+          "verified": true,
+          "total": 2,
+          "mediumIds": [
+            36013,
+            36014
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining": [
+    {
+      "pinId": 17239,
+      "title": "Animate Cafe Busan: Arina Tanemura 30th Anniversary Collab (애니메이트 카페 부산점 타네무라 아리나 30주년) to open in Seomyeon",
+      "sourceUrl": "https://blog.naver.com/momobizip/224444496385",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "The published anniversary poster is already present. Available food/decor photos cover other collaborations or branches; no additional Arina Tanemura Busan media verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://blog.naver.com/momobizip/224444496385"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 14627,
+      "title": "姜太之御寿司专门店 — Qingdao restaurant guide",
+      "sourceUrl": "https://www.trip.com/restaurant/china/qingdao/detail/restaurant-11697286/?curr=CNY",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "The Qingdao Taidong listing matches the branch, but its gallery remains unavailable. Search results showed other cities; no second exact-branch asset recovered.",
+      "previousResearchReason": "Verified Taidong 4 Road 138 identity in cached Trip content; raw restaurant page still returned 404 and no additional downloadable branch photo was verified.",
+      "sourcesChecked": [
+        "https://es.trip.com/restaurant/china/qingdao/detail/restaurant-11697286/",
+        "https://www.trip.com/restaurant/china/qingdao/detail/restaurant-11697286/?curr=CNY",
+        "https://you.ctrip.com/food/qingdao5/11697286.html"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 15424,
+      "title": "NODE TABLE — Richmond Hotel Fukuoka Tenjin Opens in Tenjin",
+      "sourceUrl": "https://www.baitoru.com/jobdetail/165076991",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Future NODE TABLE opening at Richmond Hotel Fukuoka Tenjin. Recruiting imagery is stock; no new-venue gallery verified.",
+      "previousResearchReason": "Future branch announcement/recruitment images were stock; no additional exact NODE TABLE Fukuoka venue photo verified.",
+      "sourcesChecked": [
+        "https://www.baitoru.com/jobdetail/165076991"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 15912,
+      "title": "Okazuya Kirin — BOOKHOME Opens in Karasuma Oike",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "BOOKHOME publishes shared bookstore renderings and tenant logos, but no additional Kirin restaurant media verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://book-home.jp/",
+        "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#okazu-kirin"
+      ],
+      "candidatesReviewed": 26
+    },
+    {
+      "pinId": 15426,
+      "title": "Daimyo Bistro — Atelier Daimyo Opens in Daimyo",
+      "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93179",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Future Daimyo Bistro opening: recruiting images do not verify the new Atelier Daimyo premises.",
+      "previousResearchReason": "Future Daimyo branch recruitment imagery was stock; no additional exact venue photo verified.",
+      "sourcesChecked": [
+        "https://job.inshokuten.com/kyushu/work/detail/93179"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 15425,
+      "title": "BistroARC — Kego Opens in Kego",
+      "sourceUrl": "https://townwork.net/viewjob/jobid_fe1c93b9812691b3/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Future Bistro ARC opening: recruiting stock images do not verify the Kego branch.",
+      "previousResearchReason": "Future Kego branch recruitment imagery was stock; no additional exact BistroARC photo verified.",
+      "sourcesChecked": [
+        "https://townwork.net/viewjob/jobid_fe1c93b9812691b3/"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 16075,
+      "title": "Self Cafe — Honjin Opens in Honjin",
+      "sourceUrl": "https://selfcafe.jp/shop/aichi/honjin/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Honjin operator page has generic brand banners and text menus, not a branch gallery. Kamejima/Iwatsuka interiors excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://selfcafe.jp/shop/aichi/honjin/",
+        "https://www.instagram.com/selfcafe002/"
+      ],
+      "candidatesReviewed": 15
+    },
+    {
+      "pinId": 15498,
+      "title": "Maeda Coffee — Heisei Chishinkan pop-up Opens in Higashiyama",
+      "sourceUrl": "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Current museum announcement supplies no second Maeda pop-up photo. Historical The Muses lighting-case images and the permanent South Gate cafe were excluded as different operation/outlet.",
+      "previousResearchReason": "Museum shop-info photographs showed the permanent museum cafe, not this Heisei Chishinkan pop-up. They were excluded.",
+      "sourcesChecked": [
+        "https://www.instagram.com/kyotonatmuseum/",
+        "https://www.kyohaku.go.jp/eng/announcements/post_260928.html",
+        "https://www.kyohaku.go.jp/eng/visit/shop/",
+        "https://www.kyohaku.go.jp/jp/announcements/post_260928.html"
+      ],
+      "candidatesReviewed": 12
+    },
+    {
+      "pinId": 7512,
+      "title": "Zaogaofeng — Qingyuan Dajie — Jinan restaurant guide",
+      "sourceUrl": "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "No second exact Qingyuan Dajie branch photo verified; Wenlvcheng images belong to a different branch.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://auto.dzwww.com/ycjp/202609/t20260924_18154135.htm"
+      ],
+      "candidatesReviewed": 6
+    },
+    {
+      "pinId": 15591,
+      "title": "Mr. Fish by Hyatt Centric Sapporo Opens in Odori / Red Brick district",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000006.000182545.html",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Identity conflict: saved Hyatt release describes Matsu Grill & Bar, while pin says Mr. Fish. Do not attach that dining gallery until identity is resolved.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://hre-net.com/real_estate/93097/",
+        "https://prtimes.jp/main/html/rd/p/000000006.000182545.html"
+      ],
+      "candidatesReviewed": 14
+    },
+    {
+      "pinId": 15914,
+      "title": "Yakiniku Reimen Gensuke — Fukuoka Opens in Yakuin",
+      "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93587",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Gensuke Tabelog listing confirms future Shirogane opening but has no branch menu/photos; recruiting stock excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://job.inshokuten.com/kyushu/work/detail/93587"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 15911,
+      "title": "Curry Shop Family — BOOKHOME Opens in Karasuma Oike",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "BOOKHOME shared-area images and partner logos do not verify Curry Shop Family dining space or dishes.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://book-home.jp/",
+        "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#curry-family"
+      ],
+      "candidatesReviewed": 27
+    },
+    {
+      "pinId": 15910,
+      "title": "Teppan no Spaghetti — BOOKHOME Opens in Karasuma Oike",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "BOOKHOME shared-area images and partner logos do not verify Teppan no Spaghetti dining space or dishes.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://book-home.jp/",
+        "https://prtimes.jp/main/html/rd/p/000000005.000151502.html#teppan-spaghetti"
+      ],
+      "candidatesReviewed": 27
+    },
+    {
+      "pinId": 17106,
+      "title": "Hamakatsu — Iidabashi Opens 2026-11-25",
+      "sourceUrl": "https://www.ringerhut.co.jp/info/2026/1016_1/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Exact Iidabashi opening release has only the existing image. Other Hamakatsu branch photos were excluded; no new-branch menu asset verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://www.ringerhut.co.jp/info/2026/1016_1/"
+      ],
+      "candidatesReviewed": 1
+    },
+    {
+      "pinId": 15186,
+      "title": "Ba Quan Shi Man — H99, planned — Ningbo",
+      "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "H99 opening coverage names 八全十满, but inspected imagery covers other brands. No exact restaurant photo verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://finance.sina.com.cn/jjxw/2026-10-02/doc-initvprf5724161.shtml#ba-quan-shi-man"
+      ],
+      "candidatesReviewed": 20
+    },
+    {
+      "pinId": 19427,
+      "title": "Tomoe Sushi — Sapporo Tanukikoji Announces November 21 Opening",
+      "sourceUrl": "https://tabelog.com/hokkaido/A0101/A010103/1086167/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Future Tanukikoji Tomoe Sushi listing supplies no verified new-branch gallery; older same-brand venues excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://tabelog.com/hokkaido/A0101/A010103/1086167/"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 6675,
+      "title": "Pari Plans an Opening in Williamsburg",
+      "sourceUrl": "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#pari",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Pari operator site is coming-soon only; inspected review media are unrelated recommendations.",
+      "previousResearchReason": "Official Pari Brooklyn website remained a coming-soon page without additional usable venue photos.",
+      "sourcesChecked": [
+        "https://paribrooklyn.com/",
+        "https://www.instagram.com/infatuation",
+        "https://www.theinfatuation.com/new-york/guides/nyc-fall-restaurant-openings-2026#pari"
+      ],
+      "candidatesReviewed": 24
+    },
+    {
+      "pinId": 6698,
+      "title": "Cha Chin Plans an Opening in River North",
+      "sourceUrl": "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#cha-chin",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "ChaChin operator site is coming-soon only. Additional article images show other businesses; no second new-branch photo verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://chachinrestaurant.com/",
+        "https://chicago.eater.com/restaurant-news/169239/anticipated-new-chicago-restaurants-opening-fall-2026#cha-chin",
+        "https://www.connectcre.com/stories/chinese-peruvian-restaurant-concept-to-open-in-river-north/"
+      ],
+      "candidatesReviewed": 14
+    },
+    {
+      "pinId": 6708,
+      "title": "SoLuna Eats Opens in Grand Avenue",
+      "sourceUrl": "https://solunaeatsaz.com/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "SoLuna operator page exposes relevant dish image URLs, but original asset downloads return 403. Browser/page-assets fallback failed; unrelated imagery excluded.",
+      "previousResearchReason": "Official SoLuna food photos were visible on the public site but image downloads returned 403. Browser download fallback did not succeed. Downtown Phoenix article images showed other businesses and were rejected.",
+      "sourcesChecked": [
+        "https://dtphx.org/post/13-new-businesses-now-open-in-downtown-phoenix-2026",
+        "https://solunaeatsaz.com/",
+        "https://www.solunaeatsaz.com/"
+      ],
+      "candidatesReviewed": 11
+    },
+    {
+      "pinId": 7584,
+      "title": "The Baker & The Bottleman — Causeway Bay plans an opening in Causeway Bay",
+      "sourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Causeway Bay branch is future-opening coverage. Wan Chai/Marrow pop-up images do not verify the new branch.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 6761,
+      "title": "Session House Plans an Opening in Dorchester",
+      "sourceUrl": "https://boston.eater.com/restaurant-news/124663/boston-restaurants-fall-2026-openings-preview#session-house",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Session House planned Dorchester premises have no verified new-operation gallery. Previous pub photos excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://boston.eater.com/restaurant-news/124663/boston-restaurants-fall-2026-openings-preview#session-house",
+        "https://www.boston.com/food/restaurants/2026/11/03/5-restaurants-we-cant-wait-to-try-in-november-2026/",
+        "https://www.instagram.com/eaterboston",
+        "https://www.instagram.com/reel/DepIQ7_oW1b/",
+        "https://www.instagram.com/sessionhouseboston/"
+      ],
+      "candidatesReviewed": 19
+    },
+    {
+      "pinId": 6785,
+      "title": "Chista Plans an Opening in Rainey Street",
+      "sourceUrl": "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#chista-austin",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Chista operator site is coming-soon only; news repeats the existing owner image or shows other restaurants.",
+      "previousResearchReason": "Austin Food Magazine repeated the existing owner photograph; other retrieved images were advertisements/unrelated venues.",
+      "sourcesChecked": [
+        "https://austinfoodmagazine.com/chista-persian-restaurant-austin/",
+        "https://www.instagram.com/infatuation",
+        "https://www.theinfatuation.com/austin/guides/austin-fall-restaurant-openings-2026#chista-austin"
+      ],
+      "candidatesReviewed": 33
+    },
+    {
+      "pinId": 6792,
+      "title": "Tang Bar — San Jose Plans an Opening in Little Saigon",
+      "sourceUrl": "https://www.whatsopening.com/ca/san-jose/restaurants#tang-bar-san-jose",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Tang Bar San Jose remains a future-opening branch; other-city photos excluded. No additional San Jose media verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://www.whatsopening.com/ca/san-jose/restaurants#tang-bar-san-jose"
+      ],
+      "candidatesReviewed": 1
+    },
+    {
+      "pinId": 6801,
+      "title": "Honey Boy Pizzeria Opens in University District",
+      "sourceUrl": "https://www.instagram.com/honeyboypizzeria/",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Identity conflict: Seattle U-District pin versus Columbus, Ohio operator. Ohio photos cannot verify this Seattle pin.",
+      "previousResearchReason": "Identity mismatch: the operator Honey Boy Pizzeria material describes Columbus, Ohio, while this pin says Seattle University District. Columbus photos were withheld pending identity repair.",
+      "sourcesChecked": [
+        "https://www.instagram.com/hiddeneatsacrossusa/p/DefDPCNGxSV/",
+        "https://www.instagram.com/honeyboypizzeria/",
+        "https://www.instagram.com/honeyboypizzeria/p/DdYByF9xYLW/",
+        "https://www.instagram.com/honeyboypizzeria/p/De410CUsTUK/",
+        "https://www.instagram.com/honeyboypizzeria/p/DeBKYblRdeJ/",
+        "https://www.instagram.com/honeyboypizzeria/p/DeK6mautpaj/",
+        "https://www.instagram.com/honeyboypizzeria/p/DeUmpLLRQyY/",
+        "https://www.instagram.com/honeyboypizzeria/p/DeVYZW6RhFY/",
+        "https://www.instagram.com/honeyboypizzeria/p/DemVPfORkO5/",
+        "https://www.instagram.com/honeyboypizzeria/p/DfIn7y_R8jF/",
+        "https://www.instagram.com/honeyboypizzeria/p/DfTAqXIxiHO/"
+      ],
+      "candidatesReviewed": 11
+    },
+    {
+      "pinId": 2692,
+      "title": "Time Out Market Opens Its Global Flagship at 10 Piccadilly",
+      "sourceUrl": "https://www.timeout.com/about/latest-news/time-out-to-bring-its-globally-recognised-market-concept-to-piccadilly-circus-in-london-080626",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Existing Time Out Piccadilly aerial repeated in coverage. Architect images show office/lobby areas rather than the planned market; agent gallery is blocked.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://www.piercyandco.com/projects/view/10-piccadilly",
+        "https://www.timeout.com/about/latest-news/time-out-to-bring-its-globally-recognised-market-concept-to-piccadilly-circus-in-london-080626",
+        "https://www.timeout.com/london/news/time-out-market-london-piccadilly-080626"
+      ],
+      "candidatesReviewed": 10
+    },
+    {
+      "pinId": 7462,
+      "title": "Nuits — Pavilion plans an opening in Jing’an · Plaza 66",
+      "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Nuits Pavilion coverage repeats old Tongren branch/general mall imagery. No verified new restaurant gallery.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/",
+        "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#nuits",
+        "https://www.instagram.com/nomfluence"
+      ],
+      "candidatesReviewed": 36
+    },
+    {
+      "pinId": 7463,
+      "title": "Tribe Sky Beach Club — Shanghai plans an opening in Jing’an · Plaza 66",
+      "sourceUrl": "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "TRIBE SKY official gallery depicts Bangkok. Shanghai rooftop event photos/renderings beyond current coverage were not verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://rachelgouk.com/the-shanghai-scoop-food-drink-news-september-2026/#tribe",
+        "https://tribeskybeachclub.com/",
+        "https://www.instagram.com/nomfluence"
+      ],
+      "candidatesReviewed": 44
+    },
+    {
+      "pinId": 7477,
+      "title": "Din Tai Fung — Hangzhou Kerry Centre plans an opening in Gongshu · Kerry Centre",
+      "sourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Hangzhou Kerry announcement contains older-branch imagery. No exact new Kerry branch gallery verified.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://finance.sina.com.cn/roll/2026-04-27/doc-inhvxxww8977460.shtml",
+        "https://m.bbtnews.com.cn/content/97/4d/227384.html"
+      ],
+      "candidatesReviewed": 1
+    },
+    {
+      "pinId": 7509,
+      "title": "Meng Ze Yuan — planned — Hefei opening",
+      "sourceUrl": "https://www.ihg.com/holidayinn/hotels/cn/zh/hefei/hfecc/hoteldetail/dining",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Meng Ze Yuan / Hefei Central hotel restaurant identity matches text, but gallery access is blocked and available hotel images do not verify the dining outlet.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://www.ihg.com/holidayinn/hotels/cn/zh/hefei/hfecc/hoteldetail/dining"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 6971,
+      "title": "BARA ATL Plans an Opening in Underwood Hills",
+      "sourceUrl": "https://baraatl.com/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "BARA ATL operator/Uber media inaccessible; retrieved article galleries depict unrelated restaurants. No exact additional asset verified.",
+      "previousResearchReason": "Official BARA ATL site repeatedly returned 403; no alternate exact-venue additional image verified.",
+      "sourcesChecked": [
+        "https://baraatl.com/",
+        "https://www.ajc.com/food-and-dining/2026/09/atlanta-restaurant-openings-closings-september-2026/"
+      ],
+      "candidatesReviewed": 14
+    },
+    {
+      "pinId": 7000,
+      "title": "Coffee Dose Palm Springs Plans an Opening in South Palm Canyon",
+      "sourceUrl": "https://coffeedose.cafe/pages/locations#palm-springs",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Future Palm Springs Coffee Dose branch has no verified gallery; Encinitas/other branch interiors excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://coffeedose.cafe/pages/locations#palm-springs",
+        "https://squareup.com/us/en/press/coffee-dose",
+        "https://www.instagram.com/coffeedosecafe"
+      ],
+      "candidatesReviewed": 11
+    },
+    {
+      "pinId": 7451,
+      "title": "Five Star Noodles (五星麵舖) — Fumin Plans an Opening in Zuoying",
+      "sourceUrl": "https://www.1111.com.tw/job/132826364/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Future Fumin Five Star Noodles branch has recruiting/registry evidence only, no verified exact-branch media.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://www.1111.com.tw/job/132826364/"
+      ],
+      "candidatesReviewed": 0
+    },
+    {
+      "pinId": 17180,
+      "title": "Izakaya Jodo (relocation to Apgujeong) plans an opening in Apgujeong-dong, Gangnam-gu",
+      "sourceUrl": "https://www.instagram.com/zodo.robata/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 0,
+      "mediaAdded": 0,
+      "reason": "Zodo/JoDo imagery concerns old locations or pop-ups; no Apgujeong relocation gallery verified.",
+      "previousResearchReason": "Profile photos showed the previous location or unrelated pop-ups, not the new Apgujeong relocation.",
+      "sourcesChecked": [
+        "https://www.instagram.com/club_abv/p/DdoQKvBFCGX/",
+        "https://www.instagram.com/doughclub.seoul/p/DbVVO82yz24/",
+        "https://www.instagram.com/zodo.robata/",
+        "https://www.instagram.com/zodo.robata/p/DJVvsRLxlYl/",
+        "https://www.instagram.com/zodo.robata/p/DKKPT-nBAsg/",
+        "https://www.instagram.com/zodo.robata/p/DLkQ0iYxdC0/",
+        "https://www.instagram.com/zodo.robata/p/DNPakW9R_Bg/",
+        "https://www.instagram.com/zodo.robata/p/DPRHl37EuoC/",
+        "https://www.instagram.com/zodo.robata/p/DS7pX04Er0t/",
+        "https://www.instagram.com/zodo.robata/p/DUzxhEnkoyV/",
+        "https://www.instagram.com/zodo.robata/p/Dbc0tSIJpic/"
+      ],
+      "candidatesReviewed": 12
+    },
+    {
+      "pinId": 17181,
+      "title": "Haidilao — Cheongnyangni plans an opening in Cheongnyangni, Dongdaemun-gu",
+      "sourceUrl": "https://www.instagram.com/haidilaokorea/",
+      "effectiveMediaBefore": 0,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 1,
+      "media": [
+        {
+          "originalUrl": "https://img1.newsis.com/2026/10/23/NISI20261023_0002272079_web.jpg?rnd=20261023123507",
+          "azureUrl": "https://chronopin.blob.core.windows.net/thumb/landing-galleries/17181/537ef8563571be39719bfcd5.webp",
+          "sourceUrl": "https://mobile.newsis.com/view/NISX20261023_0003838476",
+          "credit": "Photo by Kwon Min-ji / Newsis — Cheongnyangni Haidilao storefront before opening",
+          "kind": "photo",
+          "mediumId": 36098
+        }
+      ],
+      "verification": [
+        {
+          "env": "prod",
+          "id": 17181,
+          "verified": true,
+          "total": 1,
+          "mediumIds": [
+            36098
+          ]
+        },
+        {
+          "env": "local",
+          "id": 17181,
+          "verified": true,
+          "total": 1,
+          "mediumIds": [
+            36051
+          ]
+        }
+      ],
+      "reason": "One verified Newsis storefront photo saved. Pin started with zero; needs another item. Korean brand posts inspected depict other branches/promotions.",
+      "previousResearchReason": "The public Korea profile opening photos were explicitly Busan Seomyeon, not Cheongnyangni; excluded.",
+      "sourcesChecked": [
+        "https://mobile.newsis.com/view/NISX20261023_0003838476",
+        "https://www.instagram.com/haidilao.jeju/p/Deq6Lq2C0Lt/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/De0N6koTfjh/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DeoisMOiHLF/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DfB0ccECgLq/",
+        "https://www.instagram.com/haidilao_seomyeon_/p/DfL0fHMz9YU/",
+        "https://www.instagram.com/haidilaokorea/",
+        "https://www.instagram.com/haidilaokorea/p/Dd8ieP1AWrK/",
+        "https://www.instagram.com/haidilaokorea/p/DdaUAmOgeJ9/",
+        "https://www.instagram.com/haidilaokorea/p/DeEXtdegcCx/",
+        "https://www.instagram.com/haidilaokorea/p/DejQvRVBY5Q/",
+        "https://www.instagram.com/haidilaokorea/p/DfBocrshgQg/",
+        "https://www.instagram.com/haidilaokorea/p/DfHaUkdhppV/",
+        "https://www.instagram.com/xiangxiangkr/p/DetVMs3IDHo/"
+      ],
+      "candidatesReviewed": 22
+    },
+    {
+      "pinId": 17237,
+      "title": "OLEA at Banyan Tree Busan Haeundae (올리아, 반얀트리 부산 해운대) to open in Gijang (Yeonhwa-ri / Osiria)",
+      "sourceUrl": "https://www.banyantree.com/korea/haeundae-busan#olea",
+      "effectiveMediaBefore": 1,
+      "effectiveMediaAfter": 1,
+      "mediaAdded": 0,
+      "reason": "Exact OLEA operator room image located, but public download returns 403. Accor gallery uses generic non-contract stock, which was excluded.",
+      "previousResearchReason": "No distinct additional media could be verified for this exact venue after inspecting the source and available candidates; duplicates, logos, unrelated story images and other branches were excluded.",
+      "sourcesChecked": [
+        "https://all.accor.com/hotel/C7W2/index.id.shtml",
+        "https://www.banyantree.com/korea/haeundae-busan#olea"
+      ],
+      "candidatesReviewed": 11
+    }
+  ]
+}

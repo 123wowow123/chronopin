@@ -1,5 +1,7 @@
 # Curated landing media: follow-up on the remaining 529 pins
 
+November 6 follow-up: [100 more media items saved to 58 restaurant pins; 57 gaps closed and 64 remain](restaurant-media-121-2026-11-06.md). The counts below describe the original November 5 pass.
+
 This pass added **537 verified images to 408 pins**, saved to production and local. All **816 final readbacks passed**. Every completed pin now has at least two effective media items. **121 restaurant pins still need verified additional media.**
 
 | Landing category | Gaps at start | Completed this pass | Remaining |

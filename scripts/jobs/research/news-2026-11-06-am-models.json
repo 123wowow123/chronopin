@@ -1,0 +1,97 @@
+{
+  "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/",
+  "pinId": 20785,
+  "llmPerformance": {
+    "reasoning": null,
+    "coding": null,
+    "context": 4,
+    "price": 0.5,
+    "speed": null,
+    "modalities": 3,
+    "source": "session",
+    "basis": "GPT-6 Cyber launch November5,2026; official API documentation read November6:1.05M context (4),text/image input (3),US$20 input/100 output per1M ->3:1 blendedUS$40 (0.5). No launch AA Intelligence Index,comparable Terminal-Bench4.0 or measured throughput opened; those axes null,not borrowed from Astra. Two independent press analyses string-verified; these report maker evaluations,not firsthand tests. Fewer than3:Reuters/Investing/SecurityWeek403,VentureBeat429,CyberScoopDNS failure.",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+    "reviews": [
+      {
+        "url": "https://www.theregister.com/security/2026/11/05/openai-releases-gpt-6-cyber-and-promises-this-one-stays-within-rules-of-engagement/5307855",
+        "title": "OpenAI releases GPT-6 Cyber, and promises this one stays within 'rules of engagement'",
+        "publishedDate": "2026-11-05",
+        "quote": "OpenAI declined to provide additional details about what happened in that 0.07 percent of cases"
+      },
+      {
+        "url": "https://www.watch.impress.co.jp/docs/news/2154307.html",
+        "title": "OpenAI、脆弱性発見・修正能力を強化したセキュリティ特化モデル「GPT-6 Cyber」",
+        "publishedDate": "2026-11-06",
+        "quote": "このほか発電所や浄水施設など重要インフラへの攻撃に対する安全対策の改良も行なったとしている。"
+      }
+    ],
+    "rubricYear": 2026
+  },
+  "performance": {
+    "charts": [
+      {
+        "title": "ExploitGym: maker-reported successful exploitation",
+        "unit": "%",
+        "bars": [
+          {
+            "label": "GPT-5.6 Cyber",
+            "value": 32.1
+          },
+          {
+            "label": "GPT-6 Cyber",
+            "value": 48.5,
+            "highlight": true
+          }
+        ],
+        "note": "OpenAI launch evaluation,5 November2026. This security benchmark is not Terminal-Bench4.0 and is not used for the general coding radar.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/"
+      }
+    ],
+    "tables": [
+      {
+        "title": "GPT-6 Cyber API specifications — documentation read6 November2026",
+        "columns": [
+          "Specification",
+          "Published value"
+        ],
+        "rows": [
+          [
+            "Model ID",
+            "gpt-6-cyber"
+          ],
+          [
+            "Context / maximum output",
+            "1,050,000 /128,000 tokens"
+          ],
+          [
+            "Input → output",
+            "Text and images → text"
+          ],
+          [
+            "Standard short-context input /cached input",
+            "USD20 /USD2 per1M tokens"
+          ],
+          [
+            "Standard short-context output",
+            "USD100 per1M tokens"
+          ],
+          [
+            "Cache writes",
+            "USD25 per1M for30min;USD50 for12hours"
+          ],
+          [
+            "Access",
+            "Approved Daybreak Red organizations;API and Codex"
+          ],
+          [
+            "Audio /video input",
+            "Not supported"
+          ]
+        ],
+        "note": "Read one day after November5 launch. Standard short-context list prices;not a blanket price for every request size or negotiated agreement.",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+      }
+    ]
+  },
+  "gap": "Production-only pin;local helper FK failure. Two independent press analyses,not3firsthand reviews;remaining exact-version AA/TB4/speed unpublished or not found. No i18n per translation handoff."
+}

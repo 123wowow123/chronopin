@@ -49,3 +49,15 @@ A hub company's landing page shows an "Earnings by segment" pane: the latest qua
 ```
 
 `pinId` is required and must be one of the company's pins. A quarter whose pin does not give every segment is left out rather than filled in.
+
+## Go-live decisions (2026-11-06)
+
+* **No redirect** from a hub pin's `/pin/ID/slug` to the landing page: the pin page already renders the same product tree, and hub pins are short single-source pins that the thin-pin rule keeps out of the index, so the company page is the indexed one.
+* **Sitemap:** `src/app/sitemap.ts` lists every `/company/<name>` with at least `MIN_INDEXED_PINS` pins, so hub companies are covered.
+* **llms.txt** links the `/companies` index; no per-company entries.
+* **Translations** stay with the translation agent.
+* **Threads:** a product lists pins, each standing for its whole same-author thread; extra pins on a page are usually the unlisted rest of a series chain. Fix only genuinely foreign threads (unlist the pin, or re-parent it as admin with a backup).
+
+## Hubs built (prod hub pin ids, 2026-11-06)
+
+Tesla 20747, Apple 20732, Microsoft 20733, Google 20734, Nike 20735, Salesforce 20736, Boeing Commercial Airplanes 20737, Oracle 20738, Qualcomm 20739, Meta 20740, NVIDIA 20741, Intel 20742, Amazon 20743, Broadcom 20744, Airbus 20745, BYD Company 20746, Square Enix 20748, Walt Disney Animation Studios 20749, Pixar 20750, Marvel Studios 20751, Walt Disney Pictures 20752, OpenAI 20763, Anthropic 20764, TSMC 20765, Xiaomi 20766, Sony 20767, Lululemon 20768, Nintendo 20786. Nintendo had only 10 pins (IGN reviews), so 14 console, handheld and franchise-debut pins were added first (20770-20784, prod only). Not built: Netflix (series premieres, not products).
