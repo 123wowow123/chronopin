@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { OpenSourceOnHash } from '@/components/pin/OpenSourceOnHash';
 import Link from '@/components/ui/Link';
-import { MediaMosaic } from '@/components/pin/MediaMosaic';
+import { CardImage } from '@/components/pin/CardImage';
+import { MediaMosaic, pinPicture } from '@/components/pin/MediaMosaic';
 import { ProductTimeline } from '@/components/pin/ProductTimeline';
 import { PinSection } from '@/components/topic/TopicView';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -91,7 +92,7 @@ async function Content({ params }: Pick<Props, 'params'>) {
         className="mt-5"
       />
       {paragraphs.length || page.product.facts.length ? (
-        <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
+        <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_26rem]">
           <article className="min-w-0 space-y-4 text-[15px] leading-relaxed">
             {paragraphs.map((parts, i) => (
               <p key={i}>
@@ -132,10 +133,19 @@ async function Content({ params }: Pick<Props, 'params'>) {
               <dl className="divide-y divide-line">
                 {page.product.facts.map((f, i) => {
                   const pin = f.pinId ? page.cited.find((c) => c.id === f.pinId) : undefined;
+                  const full = f.pinId ? [...page.upcoming, ...page.past].find((x) => x.id === f.pinId) : undefined;
+                  const pic = full ? pinPicture(full) : null;
                   return (
-                    <div key={i} className="grid grid-cols-[7rem_minmax(0,1fr)] gap-3 py-2">
-                      <dt className="text-muted">{f.label}</dt>
-                      <dd>{pin ? <Link href={pinPath(pin)}>{f.value}</Link> : f.value}</dd>
+                    <div key={i} className="flex gap-3 py-2.5">
+                      {pin && pic ? (
+                        <Link href={pinPath(pin)} tabIndex={-1} aria-hidden className="relative block min-h-16 w-28 shrink-0 self-stretch overflow-hidden rounded-md bg-panel">
+                          <CardImage thumbName={pic.thumbName} originalUrl={pic.originalUrl} alt="" />
+                        </Link>
+                      ) : null}
+                      <div className="min-w-0 flex-1">
+                        <dt className="mb-1 text-xs font-medium tracking-wide text-subtle uppercase">{f.label}</dt>
+                        <dd>{pin ? <Link href={pinPath(pin)}>{f.value}</Link> : f.value}</dd>
+                      </div>
                     </div>
                   );
                 })}
