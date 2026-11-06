@@ -24,13 +24,21 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ---
 
-## Subagent Delegation (`flash` Model)
+## Subagent Delegation (`flash` Model — Parallel Subagents)
 
-- **Always delegate translation rounds to a `flash` subagent:** When running this skill from a parent conversation, invoke a `self` subagent with `Model: 'flash'` (`invoke_subagent`) to execute the health check, synchronization, and verification steps. Reuse an existing `flash` subagent via `send_message` across subsequent rounds in the same conversation.
-- **Audit the `flash` subagent's work:** After the `flash` subagent finishes, inspect its transcript and output to verify that `check_translations.py` reports:
-  - `0` due pins (`100.0%` current & complete)
-  - `0` untranslated/mangled rows (no untranslated English prose, no partial-English `<li>` bullets of 80+ ASCII chars in `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, no `[⟦⟧]` delimiter leaks, and no non-Latin locales missing native script). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
-  - `0` skipped rows and `0` content leaks
+- **Always use `flash` subagents (`Model: 'flash'`) to perform translations:**
+  1. **Prepare & List Due Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...`).
+  2. **Shard Work Across Parallel `flash` Subagents:**
+     - When `<= 25` pins are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'self'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
+     - When `> 25` pins are due, partition `DUE_PIN_IDS` into disjoint shards (e.g. 20–25 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
+       ```bash
+       python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins <id1,id2,...>
+       ```
+     - If any fragment or pin requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
+  3. **Audit the `flash` Subagents' Work:** After all `flash` subagents complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have the final `flash` subagent run it and inspect its output) to verify:
+     - `0` due pins (`100.0%` current & complete)
+     - `0` untranslated/mangled rows (no untranslated English prose, no identical English `<li>` bullets of 60+ chars, no partial-English `<li>` bullets of 80+ ASCII chars in `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, no `[⟦⟧]` delimiter leaks, and no non-Latin locales missing native script). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
+     - `0` skipped rows and `0` content leaks
 
 ---
 
@@ -42,6 +50,10 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 |:---|:---|
 | **Health Check** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
 | **Check JSON Output** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --json` |
+| **Prep & List Due Pin IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
+| **Sync Assigned Pin Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
+| **Export Due Pins for Direct LLM Translation** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15860 --export /tmp/todo.json` |
+| **Validate & Apply Direct LLM Translations** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --apply /tmp/done.json` |
 | **Sync All Due Pins (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
 | **Sync with Batch Limit** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --limit 50` |
 | **Sync Specific Pin** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |

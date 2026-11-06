@@ -103,25 +103,31 @@ def run_prod_sql(sql: str) -> str:
 def fetch_due_pins(
     token: str,
     pin_id: Optional[int] = None,
+    pin_ids: Optional[Set[int]] = None,
     limit: Optional[int] = None,
     locale: Optional[str] = None,
 ) -> List[dict]:
     due_pins: List[dict] = []
-    after = (pin_id - 1) if pin_id else 0
+    if pin_id:
+        pin_ids = {pin_id}
+    after = (min(pin_ids) - 1) if pin_ids else 0
+    max_pin_id = max(pin_ids) if pin_ids else None
     loc_param = f"&locale={urllib.parse.quote(locale)}" if locale else ""
 
     while True:
-        batch_limit = 1 if pin_id else min(1000, (limit - len(due_pins)) if limit else 1000)
+        batch_limit = 1 if (pin_ids and len(pin_ids) == 1) else min(1000, (limit - len(due_pins)) if (limit and not pin_ids) else 1000)
         url = f"{BASE}/api/admin/translations?limit={batch_limit}&after={after}{loc_param}"
         req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + token})
         with urllib.request.urlopen(req, timeout=60) as resp:
             batch = json.load(resp).get('pins', [])
         if not batch:
             break
-        if pin_id:
-            due_pins = [p for p in batch if p['id'] == pin_id]
-            break
-        due_pins.extend(batch)
+        if pin_ids is not None:
+            due_pins.extend(p for p in batch if p['id'] in pin_ids)
+            if len(due_pins) >= len(pin_ids) or (max_pin_id is not None and batch[-1]['id'] >= max_pin_id):
+                break
+        else:
+            due_pins.extend(batch)
         if (limit and len(due_pins) >= limit) or len(batch) < batch_limit:
             break
         after = batch[-1]['id']
@@ -510,6 +516,20 @@ def fix_thai_years(src: str, tr: str) -> str:
             tr = tr.replace(byr, yr).replace('พ.ศ.', 'ค.ศ.').replace('พ.ศ', 'ค.ศ')
     return tr
 
+def _save_locale_cache_atomic(cache_path: pathlib.Path, new_entries: Dict[str, str]):
+    if not new_entries:
+        return
+    merged: Dict[str, str] = {}
+    if cache_path.exists():
+        try:
+            merged = json.loads(cache_path.read_text(encoding='utf-8'))
+        except Exception:
+            merged = {}
+    merged.update(new_entries)
+    tmp_path = cache_path.with_name(f"{cache_path.name}.{os.getpid()}.{time.time_ns()}.tmp")
+    tmp_path.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding='utf-8')
+    os.replace(tmp_path, cache_path)
+
 def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: List[str], titles_set: Optional[Set[str]] = None) -> Tuple[str, List[dict]]:
     cache_path = CACHE_DIR / f'{locale}.json'
     cache: Dict[str, str] = {}
@@ -533,6 +553,7 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
     if cur_batch:
         batches.append(cur_batch)
 
+    new_entries: Dict[str, str] = {}
     for idx, b in enumerate(batches, 1):
         res = call_batch(b, locale)
         for src_core, tr in res.items():
@@ -542,8 +563,9 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
                 print(f"[{locale}] Rejected untranslated/partial-English fragment: {src_core[:60]!r}")
                 continue
             cache[src_core] = tr
+            new_entries[src_core] = tr
         if idx % 5 == 0 or idx == len(batches):
-            cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding='utf-8')
+            _save_locale_cache_atomic(cache_path, new_entries)
 
     rows: List[dict] = []
     for p in pins_for_locale:
@@ -699,14 +721,22 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
     print(f"Successfully saved {saved} / {len(all_rows)} translation rows on production.")
     return saved
 
-def prepare_mangled_rows_for_repair(pin_id: Optional[int] = None):
+def prepare_mangled_rows_for_repair(pin_id: Optional[int] = None, pin_ids: Optional[Set[int]] = None):
     """
     Automatically repairs plain-text HTML entities in place and marks any PinTranslation rows
     that have untranslated English prose, mangled HTML entities, delimiter leaks, or missing
     native script with sourceHash='repair' (and fieldHashes updated per broken field) so
     fetch_due_pins() picks them up and re-translates only the affected fields.
     """
-    pin_filter = f"AND p.id = {int(pin_id)}" if pin_id else ""
+    if pin_id:
+        pin_ids = {int(pin_id)}
+    if pin_ids:
+        ids_csv = ', '.join(str(int(i)) for i in sorted(pin_ids))
+        pin_filter = f"AND p.id IN ({ids_csv})"
+        pin_filter_pt = f'AND pt."pinId" IN ({ids_csv})'
+    else:
+        pin_filter = ""
+        pin_filter_pt = ""
     sql = f"""
 -- 1. Unescape raw HTML entities in plain-text fields (title, dateConfidenceReasoning, delayReasoning)
 UPDATE "PinTranslation" pt
@@ -791,7 +821,6 @@ WHERE p.id = pt."pinId"
     run_prod_sql(sql)
 
     # 3. Rows whose summary still holds an English <li> bullet identical to the source (any locale)
-    pin_filter_pt = f'AND pt."pinId" = {int(pin_id)}' if pin_id else ''
     bullet_sql = f"""
 UPDATE "PinTranslation" pt
 SET "sourceHash" = 'repair',
@@ -813,23 +842,120 @@ WHERE pt."pinId" = bad."pinId" AND pt.locale = bad.locale {pin_filter_pt};
 """
     run_prod_sql(bullet_sql)
 
+def apply_translations_file(apply_path: str):
+    """
+    Validates and applies a JSON file of translated rows produced by a flash subagent:
+    [{"pinId": 123, "locale": "es", "sourceHash": "...", "title": "...", ...}]
+    """
+    raw = json.loads(pathlib.Path(apply_path).read_text(encoding='utf-8'))
+    rows = raw.get('translations', raw) if isinstance(raw, dict) else raw
+    if not isinstance(rows, list) or not rows:
+        print(f"No translation rows found in {apply_path}")
+        return
+
+    token = ensure_admin_token()
+    pin_ids = {int(r['pinId']) for r in rows if isinstance(r, dict) and 'pinId' in r}
+    due_by_id = {p['id']: p for p in fetch_due_pins(token, pin_ids=pin_ids)}
+
+    valid_rows: List[dict] = []
+    for r in rows:
+        pid = int(r['pinId'])
+        loc = r['locale']
+        p = due_by_id.get(pid)
+        row_out = {'pinId': pid, 'locale': loc, 'sourceHash': r.get('sourceHash') or (p['sourceHash'] if p else '')}
+        ok = True
+        for f in FIELDS:
+            if f not in r or r[f] is None:
+                continue
+            val = str(r[f])
+            src = (p.get(f) if p else None) or ''
+            if loc == 'th' and src:
+                val = fix_thai_years(src, val)
+            if f in HTML_FIELDS and src:
+                if re.findall(r'<[^>]*>', src) != re.findall(r'<[^>]*>', val):
+                    print(f"[{loc}] Tag mismatch in pin {pid} field {f}")
+                    ok = False
+                    break
+                if re.findall(r'data-ref="([^"]*)"', src) != re.findall(r'data-ref="([^"]*)"', val):
+                    print(f"[{loc}] data-ref mismatch in pin {pid} field {f}")
+                    ok = False
+                    break
+            if src and not whole_translation(src, val, is_title=(f == 'title')):
+                print(f"[{loc}] whole_translation failed in pin {pid} field {f}")
+                ok = False
+                break
+            row_out[f] = val
+        if ok and len(row_out) > 3:
+            valid_rows.append(row_out)
+
+    if not valid_rows:
+        print("No valid rows to apply.")
+        return
+
+    record_wiki_tracking(sorted({r['pinId'] for r in valid_rows}))
+    saved = push_translations(token, valid_rows)
+    print(f"Applied {saved} / {len(valid_rows)} validated rows from {apply_path}.")
+
 def main():
     parser = argparse.ArgumentParser(description="Synchronize production translations.")
     parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
     parser.add_argument('--chunk-size', type=int, default=25, help="Number of pins to process and push per outer chunk (default: 25)")
     parser.add_argument('--pin', type=int, help="Translate a specific pin id")
+    parser.add_argument('--pins', type=str, help="Translate a comma-separated list of pin ids (for parallel flash subagents)")
     parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
+    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs for sharding across parallel flash subagents")
+    parser.add_argument('--no-prep', action='store_true', help="Skip prepare_mangled_rows_for_repair when already run by coordinator")
+    parser.add_argument('--export', type=str, help="Export due pins and target fields to a JSON file")
+    parser.add_argument('--apply', type=str, help="Validate and apply translated rows from a JSON file")
     parser.add_argument('--dry-run', action='store_true', help="Only display due pins without translating")
     args = parser.parse_args()
 
-    if not args.dry_run:
-        prepare_mangled_rows_for_repair(pin_id=args.pin)
+    if args.apply:
+        apply_translations_file(args.apply)
+        return
+
+    pin_ids: Optional[Set[int]] = None
+    if args.pins:
+        pin_ids = {int(x.strip()) for x in args.pins.split(',') if x.strip()}
+    elif args.pin:
+        pin_ids = {int(args.pin)}
+
+    if not args.dry_run and not args.no_prep:
+        prepare_mangled_rows_for_repair(pin_ids=pin_ids)
 
     token = ensure_admin_token()
-    due_pins = fetch_due_pins(token, pin_id=args.pin, limit=args.limit, locale=args.locale)
+    due_pins = fetch_due_pins(token, pin_ids=pin_ids, limit=args.limit, locale=args.locale)
     print(f"Found {len(due_pins)} pin(s) due for translation.")
     if not due_pins:
         print("All matching pins are already up to date!")
+        return
+
+    if args.list_ids:
+        ids = [p['id'] for p in due_pins]
+        print("DUE_PIN_IDS=" + ",".join(str(i) for i in ids))
+        return
+
+    if args.export:
+        export_path = pathlib.Path(args.export)
+        export_path.parent.mkdir(exist_ok=True, parents=True)
+        export_data = []
+        for p in due_pins:
+            locales_due = p.get('locales', [])
+            export_data.append({
+                'id': p['id'],
+                'sourceHash': p['sourceHash'],
+                'locales': locales_due,
+                'states': p.get('states', {}),
+                'changed': p.get('changed', {}),
+                'targetFieldsByLocale': {loc: target_fields_for(p, loc) for loc in locales_due},
+                'title': p.get('title'),
+                'description': p.get('description'),
+                'longFormSummary': p.get('longFormSummary'),
+                'dateConfidenceReasoning': p.get('dateConfidenceReasoning'),
+                'delayReasoning': p.get('delayReasoning'),
+            })
+        export_path.write_text(json.dumps({'pins': export_data}, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f"Exported {len(export_data)} due pin(s) to {export_path}")
         return
 
     if args.dry_run:

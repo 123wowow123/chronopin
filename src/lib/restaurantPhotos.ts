@@ -1,6 +1,6 @@
 import type { RestaurantMenuProfile, RestaurantPhoto } from './restaurantMenus';
 
-export type RestaurantCardPhoto = Pick<RestaurantPhoto, 'src' | 'alt' | 'credit'> & { sourceUrl?: string; originalUrl?: string };
+export type RestaurantCardPhoto = Pick<RestaurantPhoto, 'src' | 'alt' | 'credit'> & { sourceUrl?: string; originalUrl?: string; caption?: string };
 
 export function restaurantCardPhotos(photos: (RestaurantCardPhoto | undefined)[]): RestaurantCardPhoto[] {
   const seen = new Set<string>();
@@ -15,6 +15,6 @@ export function restaurantCardPhotos(photos: (RestaurantCardPhoto | undefined)[]
 export function restaurantProfilePhotos(profile?: RestaurantMenuProfile): RestaurantCardPhoto[] {
   return restaurantCardPhotos([
     profile?.photo, ...profile?.photos ?? [],
-    ...profile?.menus.flatMap((menu) => menu.items.flatMap(({ image }) => image ? [{ ...image, alt: image.caption }] : [])) ?? [],
+    ...profile?.menus.flatMap((menu) => menu.items.flatMap(({ image }) => image ? [{ ...image, alt: image.caption, caption: image.caption }] : [])) ?? [],
   ]);
 }
