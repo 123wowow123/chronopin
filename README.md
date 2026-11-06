@@ -504,7 +504,7 @@ http://localhost:3000/pin/20640/perry-s-cafe-redevelopment-project
 
 
 
-add menu items with largest discount on special deal
+mark menu items with largest discount on special deal on restaurant landing page tile and make it sortable with restaurant on landing page based on this value
 
 
 

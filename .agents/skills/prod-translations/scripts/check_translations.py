@@ -165,17 +165,49 @@ counts AS (
   JOIN LATERAL (SELECT li, n FROM regexp_split_to_table(coalesce(pt."longFormSummary", ''), '</li>') WITH ORDINALITY AS x(li, n)) t ON t.n = e.n
   WHERE p."longFormSummary" ~ '<li>'
 ) b WHERE length(en_li) >= 60 AND en_li = tr_li AND en_li !~ '[^\\x00-\\x7F]' AND en_li ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M') x) AS identical_english_bullet_rows
+),
+panel_items AS (
+  SELECT pp."pinId",
+         (SELECT count(*) FROM unnest(ARRAY['es','fr','de','ja','zh','ko','hi','ar','th','it','ru','pt','ms','vi','id']) loc
+          WHERE (c->'i18n'->loc->>'title') IS NOT NULL AND (c->'i18n'->loc->>'unit') IS NOT NULL
+            AND (c->>'note' IS NULL OR (c->'i18n'->loc->>'note') IS NOT NULL)) AS locales_done
+  FROM "PinPerf" pp
+  JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL
+  CROSS JOIN LATERAL jsonb_array_elements(pp.charts) c
+  UNION ALL
+  SELECT pp."pinId",
+         (SELECT count(*) FROM unnest(ARRAY['es','fr','de','ja','zh','ko','hi','ar','th','it','ru','pt','ms','vi','id']) loc
+          WHERE (t->'i18n'->loc->>'title') IS NOT NULL
+            AND jsonb_array_length(coalesce(t->'i18n'->loc->'columns', '[]'::jsonb)) = jsonb_array_length(coalesce(t->'columns', '[]'::jsonb))
+            AND jsonb_array_length(coalesce(t->'i18n'->loc->'rows', '[]'::jsonb)) = jsonb_array_length(coalesce(t->'rows', '[]'::jsonb))
+            AND (t->>'note' IS NULL OR (t->'i18n'->loc->>'note') IS NOT NULL)
+            AND (t->'stages' IS NULL OR jsonb_array_length(coalesce(t->'i18n'->loc->'stages', '[]'::jsonb)) = jsonb_array_length(t->'stages'))) AS locales_done
+  FROM "PinPerf" pp
+  JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL
+  CROSS JOIN LATERAL jsonb_array_elements(pp.tables) t
+),
+panel_counts AS (
+  SELECT
+    count(*) AS total_panels,
+    count(*) FILTER (WHERE locales_done = 15) AS panels_complete,
+    count(*) FILTER (WHERE locales_done < 15) AS panels_incomplete,
+    count(DISTINCT "pinId") FILTER (WHERE locales_done < 15) AS pins_with_incomplete_panels
+  FROM panel_items
 )
 SELECT json_build_object(
-  'active_pins', active_pins,
-  'total_translation_rows', total_translation_rows,
-  'orphaned_translation_rows', orphaned_translation_rows,
-  'pins_with_content_tracking', pins_with_content_tracking,
-  'translations_with_content_tracking', translations_with_content_tracking,
-  'untranslated_or_mangled_rows', untranslated_or_mangled_rows,
-  'identical_english_bullet_rows', identical_english_bullet_rows
+  'active_pins', counts.active_pins,
+  'total_translation_rows', counts.total_translation_rows,
+  'orphaned_translation_rows', counts.orphaned_translation_rows,
+  'pins_with_content_tracking', counts.pins_with_content_tracking,
+  'translations_with_content_tracking', counts.translations_with_content_tracking,
+  'untranslated_or_mangled_rows', counts.untranslated_or_mangled_rows,
+  'identical_english_bullet_rows', counts.identical_english_bullet_rows,
+  'total_panels', panel_counts.total_panels,
+  'panels_complete', panel_counts.panels_complete,
+  'panels_incomplete', panel_counts.panels_incomplete,
+  'pins_with_incomplete_panels', panel_counts.pins_with_incomplete_panels
 )::text
-FROM counts;
+FROM counts, panel_counts;
 """
     raw_output = run_prod_sql(sql).strip()
     db_data = None
@@ -222,6 +254,10 @@ FROM counts;
         'translations_with_content_tracking': db_data['translations_with_content_tracking'],
         'untranslated_or_mangled_rows': db_data['untranslated_or_mangled_rows'] + db_data['identical_english_bullet_rows'],
         'identical_english_bullet_rows': db_data['identical_english_bullet_rows'],
+        'total_panels': db_data['total_panels'],
+        'panels_complete': db_data['panels_complete'],
+        'panels_incomplete': db_data['panels_incomplete'],
+        'pins_with_incomplete_panels': db_data['pins_with_incomplete_panels'],
         'percent_current': pct_current,
     }
 
@@ -241,6 +277,8 @@ FROM counts;
         print(f"Missing (never done):      {data['missing_rows']:,}")
         print(f"Pins Due for Translation:  {data['due_pins_count']:,}")
         print("-" * 60)
+        print(f"PinPerf Panels Complete:   {data['panels_complete']:,} / {data['total_panels']:,}")
+        print(f"Panels Missing i18n:       {data['panels_incomplete']:,} ({data['pins_with_incomplete_panels']:,} pins)")
         print(f"Untranslated/Mangled Rows:                  {data['untranslated_or_mangled_rows']:,}")
         print(f"Prohibited Tracking in Pin Content:         {data['pins_with_content_tracking']:,}")
         print(f"Prohibited Tracking in Translation Content: {data['translations_with_content_tracking']:,}")
@@ -256,12 +294,15 @@ FROM counts;
             print("   Run .agents/skills/prod-translations/scripts/sync_translations.py to auto-repair.")
             sys.exit(1)
 
-        if data['due_pins_count'] > 0:
-            print(f"⚠️  {data['due_pins_count']} pin(s) require translation update.")
+        if data['due_pins_count'] > 0 or data['pins_with_incomplete_panels'] > 0:
+            if data['due_pins_count'] > 0:
+                print(f"⚠️  {data['due_pins_count']} pin(s) require translation update.")
+            if data['pins_with_incomplete_panels'] > 0:
+                print(f"⚠️  {data['pins_with_incomplete_panels']} pin(s) ({data['panels_incomplete']} panels) require PinPerf panel i18n translation.")
             print("   Run .agents/skills/prod-translations/scripts/sync_translations.py to translate.")
             sys.exit(1)
 
-        print("✅ 100% of production pins are translated, complete, and up to date with zero content leaks.")
+        print("✅ 100% of production pins and PinPerf panels are translated, complete, and up to date with zero content leaks.")
         sys.exit(0)
 
 if __name__ == '__main__':

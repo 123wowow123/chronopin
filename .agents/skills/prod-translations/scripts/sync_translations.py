@@ -896,6 +896,292 @@ def apply_translations_file(apply_path: str):
     saved = push_translations(token, valid_rows)
     print(f"Applied {saved} / {len(valid_rows)} validated rows from {apply_path}.")
 
+def _chart_locale_ok(c: dict, loc: str) -> bool:
+    tr = (c.get('i18n') or {}).get(loc)
+    if not isinstance(tr, dict):
+        return False
+    t = (tr.get('title') or '').strip()
+    u = (tr.get('unit') or '').strip()
+    if not t or len(t) > 120 or not u or len(u) > 40:
+        return False
+    if c.get('note'):
+        n = (tr.get('note') or '').strip()
+        if not n or len(n) > 500:
+            return False
+    return True
+
+def _table_locale_ok(tb: dict, loc: str) -> bool:
+    tr = (tb.get('i18n') or {}).get(loc)
+    if not isinstance(tr, dict):
+        return False
+    t = (tr.get('title') or '').strip()
+    if not t or len(t) > 120:
+        return False
+    cols = tb.get('columns') or []
+    tr_cols = tr.get('columns')
+    if not isinstance(tr_cols, list) or len(tr_cols) != len(cols):
+        return False
+    if any(not isinstance(x, str) or not x.strip() or len(x.strip()) > 80 for x in tr_cols):
+        return False
+    rows = tb.get('rows') or []
+    tr_rows = tr.get('rows')
+    if not isinstance(tr_rows, list) or len(tr_rows) != len(rows):
+        return False
+    for r in tr_rows:
+        if not isinstance(r, list) or len(r) != len(cols):
+            return False
+        if any(not isinstance(cell, str) or not cell.strip() or len(cell.strip()) > 200 for cell in r):
+            return False
+    if tb.get('note'):
+        n = (tr.get('note') or '').strip()
+        if not n or len(n) > 500:
+            return False
+    if tb.get('display') == 'timeline' and tb.get('stages'):
+        stages = tb.get('stages') or []
+        tr_stages = tr.get('stages')
+        if not isinstance(tr_stages, list) or len(tr_stages) != len(stages):
+            return False
+        if any(not isinstance(s, str) or not s.strip() or len(s.strip()) > 40 for s in tr_stages):
+            return False
+    return True
+
+def fetch_due_panel_pins(pin_ids: Optional[Set[int]] = None, limit: Optional[int] = None) -> List[dict]:
+    pin_filter = f'AND pp."pinId" IN ({", ".join(str(int(i)) for i in sorted(pin_ids))})' if pin_ids else ''
+    sql = f"""
+\\pset tuples_only on
+\\pset format unaligned
+SELECT json_build_object('pinId', pp."pinId", 'charts', pp.charts, 'tables', pp.tables)::text
+FROM "PinPerf" pp
+JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL
+WHERE 1=1 {pin_filter}
+ORDER BY pp."pinId";
+"""
+    raw = run_prod_sql(sql)
+    due: List[dict] = []
+    for line in raw.splitlines():
+        line = line.strip()
+        if not (line.startswith('{') and line.endswith('}')):
+            continue
+        try:
+            item = json.loads(line)
+        except Exception:
+            continue
+        charts = item.get('charts') or []
+        tables = item.get('tables') or []
+        needs = False
+        for c in charts:
+            if any(not _chart_locale_ok(c, loc) for loc in LOCALES):
+                needs = True
+                break
+        if not needs:
+            for tb in tables:
+                if any(not _table_locale_ok(tb, loc) for loc in LOCALES):
+                    needs = True
+                    break
+        if needs:
+            due.append(item)
+            if limit and len(due) >= limit:
+                break
+    return due
+
+def _fit_panel_text(val: str, src: str, max_len: int) -> str:
+    val = val.strip()
+    if not val:
+        val = src.strip()
+    if len(val) <= max_len:
+        return val
+    # If cell has <cite...> tags, keep tags intact and trim prose prefix
+    if '<cite' in val:
+        cites = ''.join(re.findall(r'<cite[^>]*></cite>', val))
+        prose = re.sub(r'<cite[^>]*></cite>', '', val).strip()
+        avail = max_len - len(cites) - 1
+        if avail >= 1:
+            return prose[:avail].rstrip() + '…' + cites
+    if len(src.strip()) <= max_len:
+        return src.strip()
+    return val[:max_len - 1].rstrip() + '…'
+
+def _collect_panel_fragments(s: str, out: Set[str]):
+    if not s or not s.strip():
+        return
+    if '<' in s and '>' in s:
+        for part in re.split(r'(<[^>]*>)', s):
+            if not part.startswith('<') and part.strip() and any(ch.isalpha() for ch in html.unescape(part)):
+                out.add(html.unescape(part.strip()))
+    elif any(ch.isalpha() for ch in html.unescape(s)):
+        out.add(html.unescape(s.strip()))
+
+def _translate_panel_string(s: str, loc: str, cache: Dict[str, str], max_len: int) -> str:
+    if not s or not s.strip():
+        return s
+    has_tags = ('<' in s and '>' in s)
+    parts = re.split(r'(<[^>]*>)', s) if has_tags else [s]
+    out_parts: List[str] = []
+    for part in parts:
+        if (has_tags and part.startswith('<')) or not part.strip() or not any(ch.isalpha() for ch in html.unescape(part)):
+            out_parts.append(part)
+            continue
+        leading_ws = part[:len(part) - len(part.lstrip())]
+        trailing_ws = part[len(part.rstrip()):]
+        core = html.unescape(part.strip())
+        tr_core = cache.get(core)
+        if not tr_core or not tr_core.strip():
+            tr_core = core
+        else:
+            tr_core = html.unescape(tr_core.strip())
+        if loc == 'th':
+            tr_core = fix_thai_years(core, tr_core)
+        out_parts.append(f"{leading_ws}{tr_core}{trailing_ws}")
+    return _fit_panel_text(''.join(out_parts), s, max_len)
+
+def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None) -> int:
+    if not panel_pins:
+        return 0
+    target_locales = [l.strip() for l in locale_filter.split(',') if l.strip() in LOCALES] if locale_filter else LOCALES
+    texts_by_locale: Dict[str, Set[str]] = {loc: set() for loc in target_locales}
+
+    for item in panel_pins:
+        for c in item.get('charts') or []:
+            for loc in target_locales:
+                if _chart_locale_ok(c, loc):
+                    continue
+                _collect_panel_fragments(c.get('title') or '', texts_by_locale[loc])
+                _collect_panel_fragments(c.get('unit') or '', texts_by_locale[loc])
+                if c.get('note'):
+                    _collect_panel_fragments(c['note'], texts_by_locale[loc])
+        for tb in item.get('tables') or []:
+            for loc in target_locales:
+                if _table_locale_ok(tb, loc):
+                    continue
+                _collect_panel_fragments(tb.get('title') or '', texts_by_locale[loc])
+                for col in tb.get('columns') or []:
+                    _collect_panel_fragments(str(col), texts_by_locale[loc])
+                for row in tb.get('rows') or []:
+                    for cell in row:
+                        _collect_panel_fragments(str(cell), texts_by_locale[loc])
+                if tb.get('note'):
+                    _collect_panel_fragments(tb['note'], texts_by_locale[loc])
+                if tb.get('display') == 'timeline' and tb.get('stages'):
+                    for st in tb['stages']:
+                        _collect_panel_fragments(str(st), texts_by_locale[loc])
+
+    active_locales = [loc for loc in target_locales if texts_by_locale[loc]]
+    print(f"Translating PinPerf panel strings across {len(active_locales)} locale(s) for {len(panel_pins)} pin(s)...")
+
+    def _fill_panel_locale_cache(loc: str, texts: List[str]) -> Tuple[str, Dict[str, str]]:
+        cache_path = CACHE_DIR / f'{loc}.json'
+        cache: Dict[str, str] = {}
+        if cache_path.exists():
+            try:
+                cache = json.loads(cache_path.read_text(encoding='utf-8'))
+            except Exception:
+                pass
+        missing = [t for t in texts if t not in cache or not (cache.get(t) or '').strip()]
+        batches: List[List[str]] = []
+        cur: List[str] = []
+        cur_chars = 0
+        for t in missing:
+            if cur and (len(cur) >= 25 or cur_chars + len(t) > 4500):
+                batches.append(cur)
+                cur = []
+                cur_chars = 0
+            cur.append(t)
+            cur_chars += len(t)
+        if cur:
+            batches.append(cur)
+        new_entries: Dict[str, str] = {}
+        for idx, b in enumerate(batches, 1):
+            res = _call_batchexecute(b, loc)
+            for src_core in b:
+                tr = res.get(src_core)
+                if not tr or not tr.strip():
+                    tr = _raw_translate_single(src_core, loc)
+                if tr and tr.strip():
+                    if loc == 'th':
+                        tr = fix_thai_years(src_core, tr)
+                    cache[src_core] = tr.strip()
+                    new_entries[src_core] = tr.strip()
+            if idx % 5 == 0 or idx == len(batches):
+                _save_locale_cache_atomic(cache_path, new_entries)
+        return loc, cache
+
+    caches_by_locale: Dict[str, Dict[str, str]] = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+        futs = [pool.submit(_fill_panel_locale_cache, loc, sorted(texts_by_locale[loc])) for loc in active_locales]
+        for fut in concurrent.futures.as_completed(futs):
+            loc, loc_cache = fut.result()
+            caches_by_locale[loc] = loc_cache
+
+    for loc in target_locales:
+        if loc not in caches_by_locale:
+            cache_path = CACHE_DIR / f'{loc}.json'
+            caches_by_locale[loc] = json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
+
+    token = ensure_admin_token()
+    saved_pins = 0
+    for item in panel_pins:
+        pid = item['pinId']
+        charts = item.get('charts') or []
+        tables = item.get('tables') or []
+        for c in charts:
+            i18n = dict(c.get('i18n') or {})
+            for loc in target_locales:
+                if _chart_locale_ok(c, loc):
+                    continue
+                lc = caches_by_locale[loc]
+                entry: dict = {
+                    'title': _translate_panel_string(c['title'], loc, lc, 120),
+                    'unit': _translate_panel_string(c['unit'], loc, lc, 40),
+                }
+                if c.get('note'):
+                    entry['note'] = _translate_panel_string(c['note'], loc, lc, 500)
+                i18n[loc] = entry
+            c['i18n'] = i18n
+
+        for tb in tables:
+            i18n = dict(tb.get('i18n') or {})
+            for loc in target_locales:
+                if _table_locale_ok(tb, loc):
+                    continue
+                lc = caches_by_locale[loc]
+                entry = {
+                    'title': _translate_panel_string(tb['title'], loc, lc, 120),
+                    'columns': [_translate_panel_string(str(col), loc, lc, 80) for col in (tb.get('columns') or [])],
+                    'rows': [
+                        [_translate_panel_string(str(cell), loc, lc, 200) for cell in row]
+                        for row in (tb.get('rows') or [])
+                    ],
+                }
+                if tb.get('note'):
+                    entry['note'] = _translate_panel_string(tb['note'], loc, lc, 500)
+                if tb.get('display') == 'timeline' and tb.get('stages'):
+                    entry['stages'] = [_translate_panel_string(str(st), loc, lc, 40) for st in tb['stages']]
+                i18n[loc] = entry
+            tb['i18n'] = i18n
+
+        req = urllib.request.Request(
+            f"{BASE}/api/pins/{pid}/performance",
+            method='PUT',
+            data=json.dumps({'charts': charts, 'tables': tables}, ensure_ascii=False).encode('utf-8'),
+            headers={
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token,
+                'User-Agent': 'chronopin-translations',
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                if resp.status == 200:
+                    saved_pins += 1
+                    print(f"  [PinPerf] Saved 15-locale panel i18n for pin {pid} ({len(charts)} charts, {len(tables)} tables)")
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode('utf-8', errors='replace')
+            print(f"  [PinPerf] ERROR saving pin {pid}: HTTP {e.code}: {err_body}")
+
+    if saved_pins:
+        record_wiki_tracking([item['pinId'] for item in panel_pins])
+    return saved_pins
+
 def main():
     parser = argparse.ArgumentParser(description="Synchronize production translations.")
     parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
@@ -903,7 +1189,8 @@ def main():
     parser.add_argument('--pin', type=int, help="Translate a specific pin id")
     parser.add_argument('--pins', type=str, help="Translate a comma-separated list of pin ids (for parallel flash subagents)")
     parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
-    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs for sharding across parallel flash subagents")
+    parser.add_argument('--panels', action='store_true', help="Only translate PinPerf panels (charts and tables i18n)")
+    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs and panel pin IDs for sharding across parallel flash subagents")
     parser.add_argument('--no-prep', action='store_true', help="Skip prepare_mangled_rows_for_repair when already run by coordinator")
     parser.add_argument('--export', type=str, help="Export due pins and target fields to a JSON file")
     parser.add_argument('--apply', type=str, help="Validate and apply translated rows from a JSON file")
@@ -920,19 +1207,25 @@ def main():
     elif args.pin:
         pin_ids = {int(args.pin)}
 
-    if not args.dry_run and not args.no_prep:
+    if not args.dry_run and not args.no_prep and not args.panels:
         prepare_mangled_rows_for_repair(pin_ids=pin_ids)
 
     token = ensure_admin_token()
-    due_pins = fetch_due_pins(token, pin_ids=pin_ids, limit=args.limit, locale=args.locale)
-    print(f"Found {len(due_pins)} pin(s) due for translation.")
-    if not due_pins:
-        print("All matching pins are already up to date!")
-        return
+    due_pins = [] if args.panels else fetch_due_pins(token, pin_ids=pin_ids, limit=args.limit, locale=args.locale)
+    due_panel_pins = fetch_due_panel_pins(pin_ids=pin_ids, limit=args.limit)
+
+    if not args.panels:
+        print(f"Found {len(due_pins)} pin(s) due for text translation.")
+    print(f"Found {len(due_panel_pins)} pin(s) due for PinPerf panel i18n translation.")
 
     if args.list_ids:
-        ids = [p['id'] for p in due_pins]
-        print("DUE_PIN_IDS=" + ",".join(str(i) for i in ids))
+        if not args.panels:
+            print("DUE_PIN_IDS=" + ",".join(str(p['id']) for p in due_pins))
+        print("DUE_PANEL_PIN_IDS=" + ",".join(str(p['pinId']) for p in due_panel_pins))
+        return
+
+    if not due_pins and not due_panel_pins:
+        print("All matching pins and PinPerf panels are already up to date!")
         return
 
     if args.export:
@@ -954,8 +1247,8 @@ def main():
                 'dateConfidenceReasoning': p.get('dateConfidenceReasoning'),
                 'delayReasoning': p.get('delayReasoning'),
             })
-        export_path.write_text(json.dumps({'pins': export_data}, ensure_ascii=False, indent=2), encoding='utf-8')
-        print(f"Exported {len(export_data)} due pin(s) to {export_path}")
+        export_path.write_text(json.dumps({'pins': export_data, 'panelPins': due_panel_pins}, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f"Exported {len(export_data)} due pin(s) and {len(due_panel_pins)} panel pin(s) to {export_path}")
         return
 
     if args.dry_run:
@@ -967,7 +1260,9 @@ def main():
             }
             for p in due_pins[:20]
         ]
-        print(f"Dry-run sample (up to 20):\n{json.dumps(sample, indent=2)}")
+        panel_sample = [p['pinId'] for p in due_panel_pins[:20]]
+        print(f"Dry-run pin sample (up to 20):\n{json.dumps(sample, indent=2)}")
+        print(f"Dry-run panel pin IDs (up to 20): {panel_sample}")
         return
 
     chunk_size = max(1, args.chunk_size)
@@ -977,7 +1272,13 @@ def main():
         print(f"\n--- Processing pin chunk {idx // chunk_size + 1} / {(len(due_pins) + chunk_size - 1) // chunk_size} ({len(chunk)} pins: {chunk[0]['id']}..{chunk[-1]['id']}) ---")
         total_saved += sync_pin_chunk(chunk)
 
-    print(f"\nCompleted all chunks. Total translation rows saved: {total_saved}")
+    total_panel_pins_saved = 0
+    for idx in range(0, len(due_panel_pins), chunk_size):
+        pchunk = due_panel_pins[idx:idx + chunk_size]
+        print(f"\n--- Processing PinPerf panel chunk {idx // chunk_size + 1} / {(len(due_panel_pins) + chunk_size - 1) // chunk_size} ({len(pchunk)} pins: {pchunk[0]['pinId']}..{pchunk[-1]['pinId']}) ---")
+        total_panel_pins_saved += sync_panel_chunk(pchunk, locale_filter=args.locale)
+
+    print(f"\nCompleted all chunks. Total translation rows saved: {total_saved} | Total PinPerf panel pins saved: {total_panel_pins_saved}")
 
 if __name__ == '__main__':
     main()

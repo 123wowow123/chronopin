@@ -115,3 +115,9 @@ For each active pin (`utcDeletedDateTime IS NULL`) and each of the 15 locales:
 - Chronopin requires consistent Gregorian calendar dates across all locales.
 - The post-processor must replace `str(year + 543)` back with `str(year)`, and replace `พ.ศ.` with `ค.ศ.`.
 
+### 5. `PinPerf` Panels (`charts` & `tables` `i18n` at `/api/pins/:id/performance`)
+- Every chart (`PerfChart`) and table (`PerfTable`) in `"PinPerf"` (`src/lib/pinPerf.ts`) carries an `i18n` dictionary mapping each of the 15 target locales (`es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id`) to its localized text:
+  - **Chart (`PerfChartText`):** `{ title: string (<= 120), unit: string (<= 40), note?: string (<= 500) }`. Bar `label`s (product/model names) are kept on the base chart and not duplicated per locale. If `chart.note` is present on the English chart, `i18n[loc].note` is required.
+  - **Table (`PerfTableText`):** `{ title: string (<= 120), columns: string[] (same count, each <= 80), rows: string[][] (same shape, each cell <= 200), note?: string (<= 500), stages?: string[] (same count when display === 'timeline', each <= 40) }`. Any `<cite data-ref="..."></cite>` tags inside table cells must be preserved verbatim.
+- During every translation job, `check_translations.py` verifies `panels_incomplete == 0` (`pins_with_incomplete_panels == 0`), and `sync_translations.py` (with `--panels` or default sync) translates any incomplete panels and saves them via `PUT /api/pins/:id/performance`.
+

@@ -6,9 +6,13 @@
 //
 // Figures are only those printed as numbers in the article (Transparency index, Friendly Elo,
 // average words, lists and bold per response). Nothing here is inferred; the other seven indexes
-// and 29 traits are charts without numbers in the page text. Translations are left to the translation agent.
+// and 29 traits are charts without numbers in the page text. Translations (15 locales, owner ask 2026-11-06) live in
+// personalityBench.i18n.json and are attached here, so a replay never wipes them.
+//
+//   npx tsx scripts/models/personalityBench.ts --json out.json   # also dump the panels per pin (for the prod PUT)
 
 import './../env';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { perfProblem, type PerfChart, type PerfTable } from '@/lib/pinPerf';
 import { perfForPin, savePerf } from '@/server/model/pinPerf';
 import { invalidatePin } from '@/server/services/cache';
@@ -34,6 +38,11 @@ const MODELS = [
   { label: 'Gemini 4 Argon', effort: 'high', transparency: 18, friendly: 1059, ci: '1030-1087', words: 790, lists: 3.88, bold: 17.2 },
 ];
 
+type Tr = { tTitle: string; fTitle: string; tabTitle: string; idxUnit: string; tLead: string; fLead: string; tabLead: string; note: string; cols: string[]; effort: Record<string, string> };
+const TR: Record<string, Tr> = JSON.parse(readFileSync(new URL('./personalityBench.i18n.json', import.meta.url), 'utf8'));
+const L = Object.keys(TR);
+const each = <T,>(f: (t: Tr) => T) => Object.fromEntries(L.map((l) => [l, f(TR[l])]));
+
 const note =
   'Artificial Analysis launch article, results as at 19 Oct 2026 (the live leaderboard has grown to 41 models and may differ). ' +
   'No system prompt; 900 private questions; pairwise judging by Gemini 3.8 Flash, Claude Sonnet 5.5 and GLM 5.3 Flash. ' +
@@ -51,6 +60,7 @@ function panels(self: string): { charts: PerfChart[]; tables: PerfTable[] } {
         sourceUrl: ARTICLE,
         bars: bars('transparency'),
         note: 'Truthful, admits uncertainty, disclaims assumptions, flags nuances and non-sycophantic; percentile rank across all models rated. ' + note,
+        i18n: each((t) => ({ title: t.tTitle, unit: t.idxUnit, note: t.tLead + t.note })),
       },
       {
         title: `${PREFIX}: Friendly trait`,
@@ -58,6 +68,7 @@ function panels(self: string): { charts: PerfChart[]; tables: PerfTable[] } {
         sourceUrl: ARTICLE,
         bars: bars('friendly'),
         note: 'Pairwise Elo on the Friendly trait, anchor model GPT-6.1 Sol fixed at 1000. ' + note,
+        i18n: each((t) => ({ title: t.fTitle, unit: 'Elo', note: t.fLead + t.note })),
       },
     ],
     tables: [
@@ -67,11 +78,18 @@ function panels(self: string): { charts: PerfChart[]; tables: PerfTable[] } {
         columns: ['Model', 'Transparency index', 'Friendly Elo (95% CI)', 'Words per reply', 'Lists per reply', 'Bold per reply'],
         rows: MODELS.map((m) => [`${m.label} (${m.effort})`, String(m.transparency), `${m.friendly} (${m.ci})`, String(m.words), String(m.lists), String(m.bold)]),
         note: 'Words, lists and bold are averages per response over the 900 questions: descriptive, not quality scores. ' + note,
+        i18n: each((t) => ({
+          title: t.tabTitle,
+          columns: t.cols,
+          rows: MODELS.map((m) => [`${m.label} (${t.effort[m.effort]})`, String(m.transparency), `${m.friendly} (${m.ci})`, String(m.words), String(m.lists), String(m.bold)]),
+          note: t.tabLead + t.note,
+        })),
       },
     ],
   };
 }
 
+const dump: Record<number, { charts: PerfChart[]; tables: PerfTable[] }> = {};
 for (const [id, self] of Object.entries(PINS)) {
   const pinId = Number(id);
   const current = await perfForPin(pinId);
@@ -81,8 +99,11 @@ for (const [id, self] of Object.entries(PINS)) {
     tables: [...(current?.tables ?? []).filter((t) => !t.title.startsWith(PREFIX)), ...add.tables],
   });
   if (typeof merged === 'string') throw new Error(`${pinId}: ${merged}`);
+  dump[pinId] = add;
   await savePerf(pinId, merged.charts, merged.tables);
   invalidatePin(pinId);
   console.log('saved', pinId, self, `${merged.charts.length} charts, ${merged.tables.length} tables`);
 }
+const out = process.argv.indexOf('--json');
+if (out > 0) writeFileSync(process.argv[out + 1], JSON.stringify(dump));
 process.exit(0);

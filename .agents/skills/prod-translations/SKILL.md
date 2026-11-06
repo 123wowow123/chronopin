@@ -26,17 +26,20 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ## Subagent Delegation (`flash` Model — Parallel Subagents)
 
-- **Always use `flash` subagents (`Model: 'flash'`) to perform translations:**
-  1. **Prepare & List Due Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...`).
+- **Always use `flash` subagents (`Model: 'flash'`) to perform translations (both pin text AND `PinPerf` panels):**
+  1. **Prepare & List Due Pin IDs and Panel Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...` and `DUE_PANEL_PIN_IDS=...`).
   2. **Shard Work Across Parallel `flash` Subagents:**
-     - When `<= 25` pins are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'self'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
-     - When `> 25` pins are due, partition `DUE_PIN_IDS` into disjoint shards (e.g. 20–25 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
+     - **Translate `PinPerf` Panels (`charts` and `tables` `i18n`) If Not Done Yet:** Whenever `DUE_PANEL_PIN_IDS` is non-empty (`pins_with_incomplete_panels > 0`), the translation job MUST also translate all due `PinPerf` panels across all 15 non-English locales (`PUT /api/pins/:id/performance`).
+     - When `<= 25` pins (or panel pins) are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'self'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
+     - When `> 25` pins or panel pins are due, partition the due IDs into disjoint shards (e.g. 20–80 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
        ```bash
        python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins <id1,id2,...>
        ```
+       (or `--panels --pins <id1,id2,...>` when sharding panel-only pins).
      - If any fragment or pin requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
   3. **Audit the `flash` Subagents' Work:** After all `flash` subagents complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have the final `flash` subagent run it and inspect its output) to verify:
      - `0` due pins (`100.0%` current & complete)
+     - `0` panels missing `i18n` (`panels_incomplete: 0`, `pins_with_incomplete_panels: 0` across all `PinPerf` charts and tables)
      - `0` untranslated/mangled rows (no untranslated English prose, no identical English `<li>` bullets of 60+ chars, no partial-English `<li>` bullets of 80+ ASCII chars in `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, no `[⟦⟧]` delimiter leaks, and no non-Latin locales missing native script). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
      - `0` skipped rows and `0` content leaks
 
@@ -48,17 +51,18 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 
 | Task | Command |
 |:---|:---|
-| **Health Check** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
+| **Health Check (Pins + Panels)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
 | **Check JSON Output** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --json` |
-| **Prep & List Due Pin IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
+| **Prep & List Due Pin + Panel IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
 | **Sync Assigned Pin Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
+| **Sync Assigned Panel Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --panels --pins 20678,20688,...` |
 | **Export Due Pins for Direct LLM Translation** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15860 --export /tmp/todo.json` |
 | **Validate & Apply Direct LLM Translations** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --apply /tmp/done.json` |
-| **Sync All Due Pins (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
+| **Sync All Due Pins & Panels (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
 | **Sync with Batch Limit** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --limit 50` |
-| **Sync Specific Pin** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
+| **Sync Specific Pin (Text + Panels)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
 | **Sync Specific Locale** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --locale de` |
-| **Preview Due Pins** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
+| **Preview Due Pins & Panels** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
 | **Audit Content for Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py` |
 | **Clean Accidental Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py --apply` |
 
@@ -100,6 +104,7 @@ The script automatically:
 4. Records model tracking metadata into the backing `SourceWiki` records (and never pin content) without marking unbuilt sources as `ready` or bumping `wikiVersion` from `0`.
 5. Translates in outer chunks (`--chunk-size 25`) using multi-RPC `batchexecute` (`MkEWBc`) HTTP `POST` across due locales with caching in `.scrape/translations-cache/`, never falling back to untranslated English on failure.
 6. Fixes Thai Buddhist era years back to the Gregorian calendar (`+543` offset fix) and validates `wholeTranslation` completeness before pushing each chunk in batches of 150 to `POST /api/admin/translations`.
+7. **Translates `PinPerf` Panels (`charts` and `tables` `i18n`):** Checks `"PinPerf"` for any active pin whose performance/benchmark/spec/telemetry/timeline panels lack complete 15-locale `i18n` entries (`title`, `unit`, `note` on charts; `title`, `columns`, `rows`, `note`, `stages` on tables), translates missing locales while enforcing `src/lib/pinPerf.ts` (`perfProblem`) length bounds (`title <= 120`, `unit <= 40`, `column <= 80`, `cell <= 200`, `stage <= 40`, `note <= 500`) and preserving `<cite data-ref="...">` tags, and saves them via `PUT /api/pins/:id/performance`.
 
 ### Step 3: Verification & Read-Back
 1. **Database Check:**
