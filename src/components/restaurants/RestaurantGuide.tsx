@@ -12,6 +12,7 @@ import { guidePageHref, type GuideItem, type GuidePage, type GuideSummary, type 
 import { pinPath } from '@/lib/seo';
 import styles from './RestaurantGuide.module.css';
 import { AvailableRestaurantOffers } from './AvailableRestaurantOffers';
+import { RestaurantPhotoGallery } from './RestaurantPhotoGallery';
 import { RestaurantOfferMenu } from './RestaurantOfferMenu';
 import { restaurantDistance, type RestaurantDetails } from '@/lib/restaurantSort';
 import { formatDistance } from '@/lib/distance';
@@ -217,11 +218,10 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
       return (
       <article key={restaurant.slug} className={styles.card}>
         <CardLike pin={{ id: restaurant.pinId }} />
-        <Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} className={styles.photoLink} aria-label={`See ${restaurant.name}'s restaurant details`}>
-          {restaurant.image ? <Image src={restaurant.image} alt={restaurant.name} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>}
-          <span className={`${styles.cardBadge} ${styles.openBadge}`}>{restaurant.recognition}</span>
-          <span className={styles.imageNote}>{restaurant.imageCredit}</span>
-        </Link>
+        <RestaurantPhotoGallery name={restaurant.name} href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} photos={[
+          restaurant.image ? { src: restaurant.image, alt: restaurant.name, credit: restaurant.imageCredit } : undefined,
+          ...details[restaurant.pinId]?.photos ?? [],
+        ]} badge={<span className={`${styles.cardBadge} ${styles.openBadge}`}>{restaurant.recognition}</span>} />
         <div className={styles.cardBody}>
           <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}{isKidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
@@ -247,11 +247,10 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
       return (
       <article key={restaurant.id} className={styles.card}>
         <CardLike pin={{ id: restaurant.id }} />
-        <Link href={href(restaurant)} className={styles.photoLink} aria-label={`See ${restaurant.name}'s opening details`}>
-          {restaurant.image ? <Image src={restaurant.image} alt={`${restaurant.name} · ${restaurant.imageNote ?? 'restaurant photo'}`} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} /> : <div className={styles.photoPlaceholder}><span aria-hidden="true">✳</span></div>}
-          <span className={`${styles.cardBadge} ${group === 'new' ? styles.openBadge : ''}`}>{group === 'new' ? 'JUST OPENED' : restaurant.day <= today ? 'AWAITING UPDATE' : 'COMING SOON'}</span>
-          {restaurant.imageNote && <span className={styles.imageNote}>{restaurant.imageNote}</span>}
-        </Link>
+        <RestaurantPhotoGallery name={restaurant.name} href={href(restaurant)} photos={[
+          restaurant.image ? { src: restaurant.image, alt: `${restaurant.name} · ${restaurant.imageNote ?? 'restaurant photo'}`, credit: restaurant.imageNote ?? '' } : undefined,
+          ...details[restaurant.id]?.photos ?? [],
+        ]} badge={<span className={`${styles.cardBadge} ${group === 'new' ? styles.openBadge : ''}`}>{group === 'new' ? 'JUST OPENED' : restaurant.day <= today ? 'AWAITING UPDATE' : 'COMING SOON'}</span>} />
         <div className={styles.cardBody}>
           <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Restaurant price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}{isKidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>

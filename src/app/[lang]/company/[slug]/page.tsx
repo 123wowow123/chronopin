@@ -61,7 +61,7 @@ async function CompanyContent({ params }: Pick<Props, 'params'>) {
   const hubView = page.company.hub ? await companyHubView(slug, t.locale) : null;
   if (hubView) {
     const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
-    return <CompanyHubView page={hubView.page} tree={hubView.tree} milestones={hubView.milestones} timeZone={timeZone} video={video} t={t} description={t('topic.companyDescription', { name: page.name, site: siteName })} />;
+    return <CompanyHubView page={hubView.page} tree={hubView.tree} segments={hubView.segments} milestones={hubView.milestones} timeZone={timeZone} video={video} t={t} description={t('topic.companyDescription', { name: page.name, site: siteName })} />;
   }
   const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
   const label = page.name;

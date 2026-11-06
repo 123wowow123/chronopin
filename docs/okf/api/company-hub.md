@@ -37,3 +37,15 @@ sources say. Local Tesla: only "Robotaxi and Cybercab" has an overview so far.
 The picture walls on the hub and product pages show only milestone pins, oldest first, each with its label and month
 (falling back to every pin when a page has fewer than two), the product cards use a milestone picture as their cover,
 and the product timeline draws milestone dots large. Choose launches, unveilings and firsts, from the product's own pins.
+
+## Earnings by segment
+
+A hub company's landing page shows an "Earnings by segment" pane: the latest quarter's revenue split by reporting segment (with the change on the same quarter a year earlier) and a stacked column per quarter. Figures live in `CompanySegmentRevenue` (0246), US dollars in billions as the results pin states them, never estimated; every row names the results pin it came from.
+
+`GET /api/admin/company-segments?company=Tesla` reads the rows. `PUT` (admin) replaces them:
+
+```json
+{ "company": "Tesla", "rows": [{ "period": "Q2 2026", "periodEnd": "2026-06-30", "segment": "Automotive", "amountBillions": 20.5, "pinId": 4767 }] }
+```
+
+`pinId` is required and must be one of the company's pins. A quarter whose pin does not give every segment is left out rather than filled in.

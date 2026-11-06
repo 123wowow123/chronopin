@@ -148,6 +148,21 @@
 .cardGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px 22px; }
 .card { position:relative; border:1px solid var(--rule); border-radius:5px; background:var(--paper-raised); overflow:hidden; display:flex; flex-direction:column; }
 .photoLink { position:relative; display:block; aspect-ratio:1.6; overflow:hidden; }
+.photoGallery { position:relative; aspect-ratio:1.6; flex-shrink:0; overflow:hidden; }
+.photoTrack { display:flex; width:100%; height:100%; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scrollbar-width:none; }
+.photoTrack::-webkit-scrollbar { display:none; }
+.photoTrack[data-swipeable] { cursor:grab; user-select:none; }
+.photoTrack[data-dragging] { cursor:grabbing; scroll-snap-type:none; }
+.photoTrack .photoSlide { flex:0 0 100%; height:100%; aspect-ratio:auto; scroll-snap-align:start; scroll-snap-stop:always; }
+.photoGallery .cardBadge { pointer-events:none; }
+.photoGallery:has(.photoPagination) .imageNote { padding-bottom:46px; }
+.photoPagination { position:absolute; bottom:9px; left:12px; right:12px; display:flex; align-items:center; justify-content:center; gap:6px; color:white; font-size:10px; text-shadow:0 1px 3px #000; }
+.photoDots { display:flex; align-items:center; min-width:0; gap:0; pointer-events:auto; }
+.photoDots button { display:grid; place-items:center; flex:0 1 20px; width:20px; height:32px; padding:0; border:0; background:none; cursor:pointer; }
+.photoDots button::after { content:''; width:5px; height:5px; border-radius:50%; background:#ffffff80; box-shadow:0 1px 3px #0006; }
+.photoDots button[aria-current]::after { width:7px; height:7px; background:white; }
+.photoDots button:focus-visible { outline:3px solid var(--green); outline-offset:2px; }
+@media(max-width:600px) { .photoGallery { aspect-ratio:1.75; } }
 .guide .photoLink:focus-visible { outline:none; }
 .photoLink:focus-visible::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; box-shadow:inset 0 0 0 3px var(--green),inset 0 0 0 5px #fff; }
 .cardBadge { position:absolute; top:14px; left:14px; color:#3b452b; background:#edf0cf; font-weight:750; font-size:8px; letter-spacing:.9px; padding:7px 9px; border-radius:2px; }

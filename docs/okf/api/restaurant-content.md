@@ -48,6 +48,8 @@ Create the restaurant pin first, then POST its content using that pin's source U
 
 For gallery photos, upload and verify public Azure blobs, set the representative `tile.image`, and attach additional photo records through the existing `/api/admin/db/Medium` and `/api/admin/db/PinMedium` APIs. Preserve `authorName`/`authorUrl` credits. This updates media stored in the database without changing a catalog file.
 
+Landing-page tiles also display `profile.menu.photos` and specials-profile `photos` arrays, alongside the cover, native pin images and exact menu-item photos. Each gallery photo retains `{ src, alt, credit, sourceUrl, originalUrl, checkedAt }`; `src` must use Chronopin Azure Blob Storage. Galleries show up to ten distinct photos with touch swiping, previous/next buttons, photo dots and per-photo credits. Save complete profiles with current revisions and verify readbacks. The carousel UI requires an application deployment; subsequent gallery content updates use the existing management APIs.
+
 ## Offer menus
 
 Scheduled specials and their associated menus remain managed through `/api/admin/restaurant-specials` (see [restaurant-specials.md](restaurant-specials.md)). Pin pages combine ordinary menus with those stored offer menus; the offer API wins when both have the same menu label. Edit offer prices and conditions through the offer API, rather than assigning regular items to a promotion. Both management APIs immediately expire restaurant guide caches and the affected pin pages. Expired offers, holiday exclusions and upcoming local start times are unchanged.

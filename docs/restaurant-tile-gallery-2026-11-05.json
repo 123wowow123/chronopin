@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-05",
+  "restaurant": "Knotty Barrel East Village",
+  "branchAddress": "844 Market St, San Diego, CA 92101",
+  "sourceUrl": "https://ev.knottybarrel.com/",
+  "review": "Visually reviewed all candidates from the operator gallery. Omitted the bar-counter shot matching the existing cover; retained patio, game room, facade, dining room, patio entrance, cocktail and pretzel photographs. Photos illustrate the venue and do not establish promotional availability.",
+  "photos": [
+    {
+      "alt": "Exterior seating area at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/1-da27faaae18c3529.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/f6/c32b01fbd846279c252e595126b4b3/full"
+    },
+    {
+      "alt": "Interior game area at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/2-210ab3c0c914a64a.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/37/3bcf7a98a04c8cb16500a53a92051b/full"
+    },
+    {
+      "alt": "Exterior Knotty Barrel entrance and seating area at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/4-e8ad827bc450e42b.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/70/b7d649844e4690a6d8e7b5a29d1ec5/full"
+    },
+    {
+      "alt": "Interior, tables and seats at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/5-44d777824f417dd6.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/1a/00eb8eee054a259f545c28e971284f/full"
+    },
+    {
+      "alt": "Exterior, entrance to patio at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/6-eb5787d0332d8f13.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/5d/cd16dfd57a4e4b836aa15c9667b7c4/full"
+    },
+    {
+      "alt": "Espresso Martini cocktail at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/7-dee8df315c02fe9d.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/ee/bd8e2786f44f7f87f7cfdac2947210/full"
+    },
+    {
+      "alt": "Warm pretzel and beer cheese dip at Knotty Barrel East Village",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-galleries/knotty-barrel-east-village/8-60d7a89496662820.webp",
+      "credit": "Photo via Knotty Barrel East Village",
+      "checkedAt": "2026-11-05",
+      "sourceUrl": "https://ev.knottybarrel.com/",
+      "originalUrl": "https://static.spotapps.co/spots/d6/bb3e6c454b4aaca4113f6fbe09a7fd/full"
+    }
+  ],
+  "saved": {
+    "production": {
+      "specialVenueId": 1173,
+      "revision": 3,
+      "verifiedFullProfileReadback": true
+    },
+    "local": {
+      "specialVenueId": 1173,
+      "revision": 3,
+      "verifiedFullProfileReadback": true
+    }
+  },
+  "deployment": "Carousel code verified locally; no production deployment requested or performed.",
+  "translations": "Left to the translation agent; none run."
+}

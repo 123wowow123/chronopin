@@ -1,3 +1,4 @@
+import type { RestaurantCardPhoto } from './restaurantPhotos';
 import { TZDate } from '@date-fns/tz';
 import { distanceKm, type Place } from './distance';
 import type { RestaurantMenu, RestaurantPhoto, RestaurantReview, RestaurantSpecial } from './restaurantMenus';
@@ -19,6 +20,7 @@ export type RestaurantOffer = {
   menu?: RestaurantMenu;
   review?: RestaurantReview;
   photo?: RestaurantPhoto;
+  photos?: RestaurantCardPhoto[];
   location?: Place;
   kidsFriendly?: boolean;
 };

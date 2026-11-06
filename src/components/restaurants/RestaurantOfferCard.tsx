@@ -1,7 +1,7 @@
 'use client';
 
 import { useId, useState, type KeyboardEvent } from 'react';
-import Image from 'next/image';
+import { RestaurantPhotoGallery } from './RestaurantPhotoGallery';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { CardLike } from '@/components/pin/CardLike';
@@ -39,16 +39,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
 
   return <article className={styles.card}>
     {pinId ? <CardLike pin={{ id: pinId }} /> : null}
-    <Link href={card.restaurantHref} className={styles.photoLink} aria-label={`See ${card.name}'s restaurant details`}>
-      {card.photo ? (
-        <>
-          <Image src={card.photo.src} alt={card.photo.alt} fill unoptimized className={styles.cardImage} />
-          <span className={styles.imageNote}>{card.photo.credit}</span>
-        </>
-      ) : (
-        <span className={styles.photoPlaceholder} aria-hidden="true">✳</span>
-      )}
-    </Link>
+    <RestaurantPhotoGallery key={card.restaurantHref} name={card.name} href={card.restaurantHref} photos={[card.photo, ...card.photos ?? []]} />
     <div className={styles.cardBody}>
       <p className={styles.cardMeta}>{card.neighborhood}{card.kidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
       {origin && distance != null ? <p className={styles.offerDistance} title="Approximate straight-line distance">{formatDistance(distance, usesImperial())} {origin.source !== 'device' && origin.name ? `from ${origin.name}` : 'away'}</p> : sort === 'distance' ? <p className={styles.offerDistance}>Distance unavailable</p> : null}

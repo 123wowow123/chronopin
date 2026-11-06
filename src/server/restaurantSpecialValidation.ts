@@ -77,6 +77,14 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
   }
   if (p.review !== undefined) { const r = p.review; object(r); check(Number.isFinite(r.score) && r.score >= 0 && r.score <= 5 && Number.isInteger(r.count) && r.count >= 0 && text(r.provider) && url(r.sourceUrl) && date(r.checkedAt), 'Invalid review evidence'); }
   if (p.photo !== undefined) { const photo = p.photo; object(photo); check(url(photo.src) && text(photo.alt) && photo.alt.trim() && text(photo.credit) && url(photo.sourceUrl) && url(photo.originalUrl) && date(photo.checkedAt), 'Invalid photo provenance'); }
+  if (p.photos !== undefined) {
+    list(p.photos, 20);
+    for (const photo of p.photos) {
+      object(photo);
+      check(url(photo.src) && new URL(photo.src).protocol === 'https:' && new URL(photo.src).hostname === 'chronopin.blob.core.windows.net', 'Gallery photos must use Chronopin Azure Blob URLs');
+      check(text(photo.alt) && photo.alt.trim() && text(photo.credit) && photo.credit.trim() && url(photo.sourceUrl) && url(photo.originalUrl) && date(photo.checkedAt), 'Invalid gallery photo provenance');
+    }
+  }
   if (p.location !== undefined) { const l = p.location; object(l); check(Number.isFinite(l.latitude) && Math.abs(l.latitude) <= 90 && Number.isFinite(l.longitude) && Math.abs(l.longitude) <= 180 && url(l.sourceUrl) && date(l.checkedAt), 'Invalid location'); }
   if (p.lunchNote !== undefined) { object(p.lunchNote); check(text(p.lunchNote.text) && url(p.lunchNote.sourceUrl), 'Invalid lunch note'); }
   // Clone the validated JSON rather than preserving an input object's prototype.

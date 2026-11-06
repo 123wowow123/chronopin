@@ -2,6 +2,7 @@
 
 import * as db from '../db';
 import { nestProducts, type HubFactJson, type CompanyHubJson, type HubPinJson } from '@/lib/companyHub';
+import type { SegmentRow } from '@/lib/companySegments';
 import Pins from './pins';
 
 // The company a pin is the hub of, or null for any other pin.
@@ -124,4 +125,23 @@ export async function hubPinIds(companyId: number): Promise<number[]> {
     [companyId],
   );
   return rows.map((r) => r.id);
+}
+
+// A company's revenue by segment and quarter (0246), for its landing page.
+export async function companySegments(companyId: number): Promise<SegmentRow[]> {
+  const rows = await db.query<{ period: string; periodEnd: Date | string; segment: string; amountBillions: string; pinId: number | null }>(
+    `SELECT "period", "periodEnd", "segment", "amountBillions", "pinId" FROM "CompanySegmentRevenue" WHERE "companyId" = $1 ORDER BY "periodEnd", "segment"`,
+    [companyId],
+  );
+  return rows.map((r) => ({ period: r.period, periodEnd: new Date(r.periodEnd).toISOString().slice(0, 10), segment: r.segment, amountBillions: Number(r.amountBillions), pinId: r.pinId }));
+}
+
+// Replaces a company's segment figures in one transaction.
+export async function saveCompanySegments(companyId: number, rows: SegmentRow[]): Promise<void> {
+  await db.transaction(async (query) => {
+    await query(`DELETE FROM "CompanySegmentRevenue" WHERE "companyId" = $1`, [companyId]);
+    for (const r of rows) {
+      await query(`INSERT INTO "CompanySegmentRevenue" ("companyId", "periodEnd", "period", "segment", "amountBillions", "pinId") VALUES ($1, $2, $3, $4, $5, $6)`, [companyId, r.periodEnd, r.period, r.segment, r.amountBillions, r.pinId]);
+    }
+  });
 }

@@ -1,6 +1,7 @@
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
+import { CompanyCharts } from './CompanyCharts';
 import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { LandingTile } from '@/components/pin/LandingTile';
@@ -111,6 +112,8 @@ export function TopicView({
         </p>
       </header>
 
+      {company ? <CompanyCharts name={page.name} ticker={company.ticker} sentiment={company.sentiment} className="mt-6" /> : null}
+
       <TopicBody page={page} timeZone={timeZone} video={video} t={t} />
     </main>
   );
@@ -154,7 +157,7 @@ function PinLink({ pin }: { pin: PinJson }) {
 // The pin's day in the viewer's zone (UTC for a crawler; an all-day pin's
 // day is the same everywhere), with its month in words: a sentence quoted
 // elsewhere must not leave 11/05 to be read as 5 November or 11 May.
-function PinDate({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Translator }) {
+export function PinDate({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Translator }) {
   const day = pinDayKey(pin, timeZone);
   return <time dateTime={pin.allDay ? day : pin.utcStartDateTime}>{dateFormat(INTL_LOCALES[t.locale], { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${day}T00:00:00Z`))}</time>;
 }

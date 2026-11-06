@@ -2,10 +2,14 @@
 // with Cache Components like the rest of src/server/services/pages.ts.
 
 import { cacheLife, cacheTag } from 'next/cache';
+import Comment from '../model/comment';
 import Company from '../model/company';
-import { companyHubTree, hubPinOfCompany } from '../model/companyHub';
+import PinSentiment from '../model/pinSentiment';
+import type { CompanySentiment } from '@/lib/companySentiment';
+import { companyHubTree, companySegments, hubPinOfCompany } from '../model/companyHub';
 import * as db from '../db';
 import type { CompanyHubJson } from '@/lib/companyHub';
+import type { SegmentRow } from '@/lib/companySegments';
 import { branchMilestones, branchPins, findProduct, overviewParagraphs, type HubProductJson } from '@/lib/companyHub';
 import Pins from '../model/pins';
 import Topics, { type TopicPinIds } from '../model/topics';
@@ -60,7 +64,7 @@ export type TopicPage = {
 };
 
 export type CompanyTopicPage = TopicPage & {
-  company: { name: string; description: string | null; logoUrl: string | null; wikiUrl: string | null; websiteUrl: string | null; hub: { id: number; title: string; description: string | null; summary: string | null } | null };
+  company: { name: string; description: string | null; logoUrl: string | null; wikiUrl: string | null; websiteUrl: string | null; ticker: string | null; sentiment: CompanySentiment | null; hub: { id: number; title: string; description: string | null; summary: string | null } | null };
 };
 
 export async function tagPage(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<(TopicPage & { kind: string }) | null> {
@@ -86,13 +90,24 @@ export async function companyPage(slug: string, locale: Locale = DEFAULT_LOCALE)
     Topics.companyPinIds(entry.id, new Date(), { upcoming: UPCOMING, past: PAST }, await timelineMinConfidence()),
   ]);
   if (!row) return null;
+  const [pinTones, tones] = await Promise.all([PinSentiment.forCompany(entry.id), Comment.forCompany(entry.id, 200)]);
+  const sentiment: CompanySentiment | null =
+    pinTones.length || tones.length
+      ? {
+          pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment, product: p.product })),
+          comments: tones
+            .filter((c): c is typeof c & { sentiment: number } => c.sentiment != null)
+            .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment, pinId: c.pinId }))
+            .reverse(),
+        }
+      : null;
   const hubId = await hubPinOfCompany(entry.id);
   const hubRow = hubId ? (await Pins.queryByIds([hubId])).pins[0] : null;
   cacheTag(...(hubId ? [TAGS.pin(hubId)] : []));
   const page = await topicPins(row.name, ids, index, locale, { company: row.name });
   return {
     ...page,
-    company: { name: row.name, description: row.description, logoUrl: row.logoUrl, wikiUrl: row.wikiUrl, websiteUrl: row.websiteUrl, hub: hubId && hubRow ? { id: hubId, title: hubRow.title, description: hubRow.description ?? null, summary: hubRow.longFormSummary ?? null } : null },
+    company: { name: row.name, description: row.description, logoUrl: row.logoUrl, wikiUrl: row.wikiUrl, websiteUrl: row.websiteUrl, ticker: await Company.tickerOf(entry.id), sentiment, hub: hubId && hubRow ? { id: hubId, title: hubRow.title, description: hubRow.description ?? null, summary: hubRow.longFormSummary ?? null } : null },
   };
 }
 
@@ -187,7 +202,7 @@ export async function companyProductPage(companySlug: string, productSlugged: st
 }
 
 // Everything a company's hub landing page draws: the company page, its product tree.
-export async function companyHubView(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<{ page: CompanyTopicPage; tree: CompanyHubJson; milestones: { label: string; productName: string; pin: PinJson }[] } | null> {
+export async function companyHubView(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<{ page: CompanyTopicPage; tree: CompanyHubJson; segments: SegmentRow[]; milestones: { label: string; productName: string; pin: PinJson }[] } | null> {
   'use cache';
   cacheLife('hours');
   const page = await companyPage(slug, locale);
@@ -203,5 +218,7 @@ export async function companyHubView(slug: string, locale: Locale = DEFAULT_LOCA
   const localized = await localizePins(loaded, locale);
   const byId = new Map(localized.map((p) => [p.id, p]));
   const milestones = events.flatMap((e) => (byId.has(e.pin.id) ? [{ label: e.label, productName: e.product.name, pin: byId.get(e.pin.id)! }] : []));
-  return { page, tree, milestones };
+  const segments = await companySegments(entry.id);
+  cacheTag(...segments.flatMap((r) => (r.pinId ? [TAGS.pin(r.pinId)] : [])));
+  return { page, tree, segments, milestones };
 }

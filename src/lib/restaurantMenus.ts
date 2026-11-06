@@ -49,6 +49,7 @@ export type RestaurantMenuProfile = {
   lunchNote?: { text: string; sourceUrl: string };
   review?: RestaurantReview;
   photo?: RestaurantPhoto;
+  photos?: RestaurantPhoto[];
   location?: { latitude: number; longitude: number; sourceUrl: string; checkedAt: string };
 };
 

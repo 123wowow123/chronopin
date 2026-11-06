@@ -156,6 +156,15 @@ from verified public-page coverage, and check aliases/titles before declaring a 
 Current follow-up evidence: `docs/restaurant-dish-photos-followup-2026-10-31.json`; 236/280 specials profiles with photos, 237/280 venues including ordinary menus, 43 remaining photo gaps. Storage counts still do not imply public native-pin coverage.
 
 ## Saving
+Landing tile photo galleries use the branch's native pin image media, the venue `photo`, optional
+`photos: RestaurantPhoto[]`, and verified menu-item photos. Add interior/exterior/patio shots to `photos`
+on the same `/api/admin/restaurant-specials` profile (or `profile.menu.photos` on restaurant-content),
+retaining the cover `photo`. Each gallery entry needs an Azure `src`, accurate `alt`, `credit`,
+`sourceUrl`, `originalUrl`, and `checkedAt`; review every image and verify its public blob first.
+Do not add dish names or availability claims based only on a venue gallery. The shared tile carousel
+deduplicates photo URLs, shows up to ten photos, and preserves native pin links and per-photo credits.
+New gallery UI code needs deployment before production can display the extra photos.
+
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.

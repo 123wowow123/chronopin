@@ -38,6 +38,7 @@ it('identifies kids menus accurately without false positives', () => {
 it('resolves kidsFriendly from tags, menus, and content profiles in restaurantGuideDetails', async () => {
   query.mockResolvedValueOnce([{ id: 101, latitude: 32.7, longitude: -117.1, ratings: null, tags: ['Family', 'Outdoor'] }]);
   listRestaurantContent.mockResolvedValueOnce([]);
+  query.mockResolvedValueOnce([]);
   const guide1 = await restaurantGuideDetails([{ id: 101, sourceUrl: 'https://example.com/family-spot' } as any], []);
   expect(guide1[101]?.kidsFriendly).toBe(true);
 
@@ -48,6 +49,7 @@ it('resolves kidsFriendly from tags, menus, and content profiles in restaurantGu
       menu: { menus: [{ label: 'Main', items: [{ name: "Kid's Mac & Cheese" }] }] },
     },
   }]);
+  query.mockResolvedValueOnce([]);
   const guide2 = await restaurantGuideDetails([{ id: 102, sourceUrl: 'https://example.com/menu-spot' } as any], []);
   expect(guide2[102]?.kidsFriendly).toBe(true);
 });

@@ -1,3 +1,5 @@
+import { restaurantCardPhotos, restaurantProfilePhotos } from '@/lib/restaurantPhotos';
+import { restaurantPinPhotos } from './restaurantPhotos';
 import * as db from '@/server/db';
 import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
 import { restaurantMenuFor, restaurantSourceKey } from '@/lib/restaurantMenus';
@@ -17,13 +19,14 @@ export function hasKidsMenu(menu?: { items?: { name?: string; category?: string 
 export async function restaurantGuideDetails(restaurants: Restaurant[], tops: TopRestaurant[]): Promise<Record<number, RestaurantDetails>> {
   const sources = [...restaurants.map((r) => ({ id: r.id, source: r.sourceUrl, kidsFriendly: r.kidsFriendly })), ...tops.map((r) => ({ id: r.pinId, source: r.sourceUrl, kidsFriendly: r.kidsFriendly }))];
   if (!sources.length) return {};
-  const [pins, venues, content] = await Promise.all([
+  const [pins, venues, content, photos] = await Promise.all([
     db.query<{ id: number; latitude: number | null; longitude: number | null; ratings: PinRatingJson[] | null; tags: string[] | null }>(`SELECT p."id", ST_Y(p."location"::geometry) AS latitude, ST_X(p."location"::geometry) AS longitude,
       (SELECT jsonb_agg(jsonb_build_object('score', r."score", 'scoreMax', r."scoreMax", 'source', r."source", 'url', r."url") ORDER BY r."source") FROM "PinRating" r WHERE r."pinId" = p."id") AS ratings,
       (SELECT array_agg(t."name"::text) FROM "PinTag" t WHERE t."pinId" = p."id") AS tags
       FROM "Pin" p WHERE p."id" = ANY($1::int[]) AND p."utcDeletedDateTime" IS NULL`, [[...new Set(sources.map((r) => r.id))]]),
     listSpecialVenues(),
     listRestaurantContent({ sources: sources.flatMap((source) => source.source ? [source.source] : []) }),
+    restaurantPinPhotos(sources.map((source) => source.id)),
   ]);
   const result: Record<number, RestaurantDetails> = {};
   for (const pin of pins) {
@@ -45,6 +48,9 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
       result[source.id] = { ...result[source.id], kidsFriendly };
     }
     const profile = venues.find((v) => restaurantSourceKey(v.profile.pinSourceUrl) === restaurantSourceKey(source.source ?? ''))?.profile;
+    result[source.id] = { ...result[source.id], photos: restaurantCardPhotos([
+      ...photos[source.id] ?? [], ...restaurantProfilePhotos(record?.profile.menu), ...restaurantProfilePhotos(profile),
+    ]) };
     if (!profile) continue;
     const venueKids = profile.menus?.some(hasKidsMenu);
     result[source.id] = {

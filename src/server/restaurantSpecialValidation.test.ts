@@ -31,4 +31,15 @@ describe('restaurant special management validation', () => {
     expect(() => specialVenueRevision(undefined)).toThrow('current revision');
     expect(() => specialVenueRevision(0)).toThrow('current revision');
   });
+  it('retains credited Azure gallery photos and rejects missing provenance or external storage', () => {
+    const value = input();
+    const photo = { src: 'https://chronopin.blob.core.windows.net/thumb/patio.webp', alt: 'Branch patio', credit: 'Restaurant', sourceUrl: 'https://restaurant.example/gallery', originalUrl: 'https://restaurant.example/patio.jpg', checkedAt: '2026-11-05' };
+    Object.assign(value.profile, { photos: [photo] });
+    expect(parseSpecialVenue(value).profile.photos).toEqual([photo]);
+    photo.credit = '';
+    expect(() => parseSpecialVenue(value)).toThrow('provenance');
+    photo.credit = 'Restaurant';
+    photo.src = 'https://other.example/patio.webp';
+    expect(() => parseSpecialVenue(value)).toThrow('Azure');
+  });
 });

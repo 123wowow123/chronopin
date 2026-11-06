@@ -1,3 +1,5 @@
+import { restaurantPinPhotos } from './restaurantPhotos';
+import { restaurantCardPhotos, restaurantProfilePhotos } from '@/lib/restaurantPhotos';
 import Holidays from 'date-holidays';
 import { restaurantSourceKey, type RestaurantMenuProfile } from '@/lib/restaurantMenus';
 import { isRestaurantPromotion, type RestaurantOffer } from '@/lib/restaurantOffers';
@@ -14,7 +16,10 @@ export async function regionalRestaurantOffers(restaurants: Restaurant[], topRes
   const records = loaded ?? await listSpecialVenues();
   const supplementalSources = records.filter((record) => record.enabled && (!regionSlug || record.regionSlug === regionSlug)).map((record) => record.profile.pinSourceUrl).filter(Boolean);
   const pinsBySource = await Pin.findBySourceUrls(supplementalSources);
-  return buildRestaurantOffers(restaurants, topRestaurants, today, regionSlug, records, pinsBySource);
+  const offers = buildRestaurantOffers(restaurants, topRestaurants, today, regionSlug, records, pinsBySource);
+  const idOf = (href: string) => Number(/^\/pin\/(\d+)\//.exec(href)?.[1]);
+  const photos = await restaurantPinPhotos(offers.map((offer) => idOf(offer.restaurantHref)).filter(Boolean));
+  return offers.map((offer) => ({ ...offer, photos: restaurantCardPhotos([offer.photo, ...photos[idOf(offer.restaurantHref)] ?? [], ...offer.photos ?? []]) }));
 }
 
 export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants: TopRestaurant[], today: string, regionSlug: string | undefined, records: RestaurantSpecialVenue[], pinsBySource?: Map<string, { id: number; title: string }>): RestaurantOffer[] {
@@ -84,6 +89,7 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
         venueKey: restaurantSourceKey(profile.pinSourceUrl),
         review: profile.review,
         photo: profile.photo,
+        photos: restaurantProfilePhotos(profile),
         location: profile.location,
         menu: menu ? { ...menu, items: menu.items.filter((item) => !special.excludedMenuItems?.includes(item.name)) } : undefined,
         ...(kidsFriendly ? { kidsFriendly } : {}),
