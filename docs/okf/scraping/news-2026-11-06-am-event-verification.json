@@ -1,0 +1,3531 @@
+{
+  "runId": 47,
+  "slot": "2026-11-06 06:00 America/Los_Angeles",
+  "checked": 40,
+  "rows": [
+    {
+      "pinId": 17956,
+      "at": "2026-11-06T15:21:48.738830+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Diego FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.sandiegofc.com/tickets/index",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.sandiegofc.com/",
+            "checkedAt": "2026-10-27T14:01:32.661Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Diego FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.sandiegofc.com/tickets/index",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.sandiegofc.com/",
+            "checkedAt": "2026-11-06T15:21:48.738Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Diego FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.sandiegofc.com/tickets/index",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.sandiegofc.com/",
+            "checkedAt": "2026-10-27T14:01:32.661Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Diego FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.sandiegofc.com/tickets/index",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.sandiegofc.com/",
+            "checkedAt": "2026-11-06T15:21:48.738Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17958,
+      "at": "2026-11-06T15:21:53.272771+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.lakesiderodeo.com/p/lakeside-rodeo-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.lakesiderodeo.com/",
+            "checkedAt": "2026-10-27T14:01:40.910Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.lakesiderodeo.com/p/lakeside-rodeo-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.lakesiderodeo.com/",
+            "checkedAt": "2026-11-06T15:21:53.272Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.lakesiderodeo.com/p/lakeside-rodeo-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.lakesiderodeo.com/",
+            "checkedAt": "2026-10-27T14:01:40.910Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.lakesiderodeo.com/p/lakeside-rodeo-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.lakesiderodeo.com/",
+            "checkedAt": "2026-11-06T15:21:53.272Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17978,
+      "at": "2026-11-06T15:23:49.961890+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "California Golden Bears football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://calbears.com/sports/2021/2/23/cal-golden-bears-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://calbears.com/sports/football",
+            "checkedAt": "2026-10-27T14:01:45.201Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "California Golden Bears football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://calbears.com/sports/2021/2/23/cal-golden-bears-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://calbears.com/sports/football",
+            "checkedAt": "2026-11-06T15:23:49.961Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "California Golden Bears football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://calbears.com/sports/2021/2/23/cal-golden-bears-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://calbears.com/sports/football",
+            "checkedAt": "2026-10-27T14:01:45.201Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "California Golden Bears football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://calbears.com/sports/2021/2/23/cal-golden-bears-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://calbears.com/sports/football",
+            "checkedAt": "2026-11-06T15:23:49.961Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17980,
+      "at": "2026-11-06T15:23:54.454119+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Jose Sharks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/sharks/tickets/individual-game-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/sharks",
+            "checkedAt": "2026-10-27T14:03:36.265Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Jose Sharks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/sharks/tickets/individual-game-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/sharks",
+            "checkedAt": "2026-11-06T15:23:54.454Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Jose Sharks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/sharks/tickets/individual-game-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/sharks",
+            "checkedAt": "2026-10-27T14:03:36.265Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Jose Sharks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/sharks/tickets/individual-game-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/sharks",
+            "checkedAt": "2026-11-06T15:23:54.454Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17989,
+      "at": "2026-11-06T15:23:59.058764+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Storm",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://storm.wnba.com/storm-360-membership",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://storm.wnba.com/",
+            "checkedAt": "2026-10-27T14:03:41.981Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Storm",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://storm.wnba.com/storm-360-membership",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://storm.wnba.com/",
+            "checkedAt": "2026-11-06T15:23:59.058Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Storm",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://storm.wnba.com/storm-360-membership",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://storm.wnba.com/",
+            "checkedAt": "2026-10-27T14:03:41.981Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Storm",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://storm.wnba.com/storm-360-membership",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://storm.wnba.com/",
+            "checkedAt": "2026-11-06T15:23:59.058Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17990,
+      "at": "2026-11-06T15:24:04.021165+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Seahawks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.seahawks.com/tickets/single-game-tickets/?utm_source=web-app&utm_medium=button&utm_campaign=1624486146&utm_content=home-page",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seahawks.com/",
+            "checkedAt": "2026-10-27T14:03:46.632Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Seahawks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.seahawks.com/tickets/single-game-tickets/?utm_source=web-app&utm_medium=button&utm_campaign=1624486146&utm_content=home-page",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seahawks.com/",
+            "checkedAt": "2026-11-06T15:24:04.021Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Seahawks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.seahawks.com/tickets/single-game-tickets/?utm_source=web-app&utm_medium=button&utm_campaign=1624486146&utm_content=home-page",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seahawks.com/",
+            "checkedAt": "2026-10-27T14:03:46.632Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Seahawks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.seahawks.com/tickets/single-game-tickets/?utm_source=web-app&utm_medium=button&utm_campaign=1624486146&utm_content=home-page",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seahawks.com/",
+            "checkedAt": "2026-11-06T15:24:04.021Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17991,
+      "at": "2026-11-06T15:25:41.964091+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Huskies football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://gohuskies.evenue.net/list/UW",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://gohuskies.com/",
+            "checkedAt": "2026-10-27T14:03:50.994Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Huskies football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://gohuskies.evenue.net/list/UW",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://gohuskies.com/",
+            "checkedAt": "2026-11-06T15:25:41.964Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Huskies football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://gohuskies.evenue.net/list/UW",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://gohuskies.com/",
+            "checkedAt": "2026-10-27T14:03:50.994Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Huskies football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://gohuskies.evenue.net/list/UW",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://gohuskies.com/",
+            "checkedAt": "2026-11-06T15:25:41.964Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17992,
+      "at": "2026-11-06T15:25:49.468980+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Sounders FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.soundersfc.com/tickets/single-match-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.soundersfc.com/",
+            "checkedAt": "2026-10-27T14:08:51.264Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Sounders FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.soundersfc.com/tickets/single-match-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.soundersfc.com/",
+            "checkedAt": "2026-11-06T15:25:49.468Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Sounders FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.soundersfc.com/tickets/single-match-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.soundersfc.com/",
+            "checkedAt": "2026-10-27T14:08:51.264Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Sounders FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.soundersfc.com/tickets/single-match-tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.soundersfc.com/",
+            "checkedAt": "2026-11-06T15:25:49.468Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 18013,
+      "at": "2026-11-06T15:25:54.794611+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.preakness.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.preakness.com/",
+            "checkedAt": "2026-10-27T14:09:01.158Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.preakness.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.preakness.com/",
+            "checkedAt": "2026-11-06T15:25:54.794Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.preakness.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.preakness.com/",
+            "checkedAt": "2026-10-27T14:09:01.158Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.preakness.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.preakness.com/",
+            "checkedAt": "2026-11-06T15:25:54.794Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 18014,
+      "at": "2026-11-06T15:26:04.869471+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Baltimore Orioles",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/orioles/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/orioles",
+            "checkedAt": "2026-10-27T14:09:05.689Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Baltimore Orioles",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/orioles/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/orioles",
+            "checkedAt": "2026-11-06T15:26:04.869Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Baltimore Orioles",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/orioles/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/orioles",
+            "checkedAt": "2026-10-27T14:09:05.689Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Baltimore Orioles",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/orioles/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/orioles",
+            "checkedAt": "2026-11-06T15:26:04.869Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 18024,
+      "at": "2026-11-06T15:27:28.149026+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "D.C. United",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.dcunited.com/tickets/single",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.dcunited.com",
+            "checkedAt": "2026-10-27T14:10:03.361Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "D.C. United",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.dcunited.com/tickets/single",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.dcunited.com",
+            "checkedAt": "2026-11-06T15:27:28.149Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "D.C. United",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.dcunited.com/tickets/single",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.dcunited.com",
+            "checkedAt": "2026-10-27T14:10:03.361Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "D.C. United",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.dcunited.com/tickets/single",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.dcunited.com",
+            "checkedAt": "2026-11-06T15:27:28.149Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 18017,
+      "at": "2026-11-06T15:27:32.664667+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Commanders",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.commanders.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.commanders.com/",
+            "checkedAt": "2026-10-27T14:10:07.554Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Commanders",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.commanders.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.commanders.com/",
+            "checkedAt": "2026-11-06T15:27:32.664Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Commanders",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.commanders.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.commanders.com/",
+            "checkedAt": "2026-10-27T14:10:07.554Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Commanders",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.commanders.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.commanders.com/",
+            "checkedAt": "2026-11-06T15:27:32.664Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17396,
+      "at": "2026-11-06T15:27:37.168454+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Philadelphia Phillies",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/phillies/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/",
+            "checkedAt": "2026-10-27T14:10:11.915Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Philadelphia Phillies",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/phillies/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/",
+            "checkedAt": "2026-11-06T15:27:37.168Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Philadelphia Phillies",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/phillies/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/",
+            "checkedAt": "2026-10-27T14:10:11.915Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Philadelphia Phillies",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/phillies/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/",
+            "checkedAt": "2026-11-06T15:27:37.168Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17417,
+      "at": "2026-11-06T15:27:41.751216+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Atlanta Braves",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/braves/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/",
+            "checkedAt": "2026-10-27T14:13:23.414Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Atlanta Braves",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/braves/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/",
+            "checkedAt": "2026-11-06T15:27:41.751Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Atlanta Braves",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/braves/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/",
+            "checkedAt": "2026-10-27T14:13:23.414Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Atlanta Braves",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/braves/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.atlantanewsfirst.com/2026/07/16/braves-2027-schedule-released-will-open-season-road-vs-dodgers-brewers/",
+            "checkedAt": "2026-11-06T15:27:41.751Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17405,
+      "at": "2026-11-06T15:29:19.490011+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Nationals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/nationals/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://wjla.com/sports/washington-nationals/nationals-announce-2027-schedule-will-play-home-opener-against-phillies-washington-mlb-major-league-baseball-philadelphia-opening-day-atlanta-braves-nats-park",
+            "checkedAt": "2026-10-27T14:13:28.488Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Nationals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/nationals/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/amp/press-release/washington-nationals-announce-2027-schedule.html",
+            "checkedAt": "2026-11-06T15:29:19.490Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Nationals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/nationals/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://wjla.com/sports/washington-nationals/nationals-announce-2027-schedule-will-play-home-opener-against-phillies-washington-mlb-major-league-baseball-philadelphia-opening-day-atlanta-braves-nats-park",
+            "checkedAt": "2026-10-27T14:13:28.488Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Nationals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/nationals/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/amp/press-release/washington-nationals-announce-2027-schedule.html",
+            "checkedAt": "2026-11-06T15:29:19.490Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17424,
+      "at": "2026-11-06T15:29:24.089971+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://cgaf.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://cgaf.com/",
+            "checkedAt": "2026-10-27T14:13:37.056Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://cgaf.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://cgaf.com/",
+            "checkedAt": "2026-11-06T15:29:24.089Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://cgaf.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://cgaf.com/",
+            "checkedAt": "2026-10-27T14:13:37.056Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://cgaf.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://cgaf.com/",
+            "checkedAt": "2026-11-06T15:29:24.089Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17437,
+      "at": "2026-11-06T15:29:28.608162+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Miami Marlins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/marlins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://en.wikipedia.org/wiki/LoanDepot_Park",
+            "checkedAt": "2026-10-27T14:13:42.072Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Miami Marlins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/marlins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/news/miami-marlins-announce-2027-regular-season-schedule",
+            "checkedAt": "2026-11-06T15:29:28.608Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Miami Marlins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/marlins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://en.wikipedia.org/wiki/LoanDepot_Park",
+            "checkedAt": "2026-10-27T14:13:42.072Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Miami Marlins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/marlins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/news/miami-marlins-announce-2027-regular-season-schedule",
+            "checkedAt": "2026-11-06T15:29:28.608Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 18016,
+      "at": "2026-11-06T15:29:33.277323+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Capitals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/capitals/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/capitals/",
+            "checkedAt": "2026-10-27T14:16:08.909Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Capitals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/capitals/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/capitals/",
+            "checkedAt": "2026-11-06T15:29:33.277Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Washington Capitals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/capitals/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/capitals/",
+            "checkedAt": "2026-10-27T14:16:08.909Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Washington Capitals",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/capitals/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nhl.com/capitals/",
+            "checkedAt": "2026-11-06T15:29:33.277Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17442,
+      "at": "2026-11-06T15:31:56.024090+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.greekfestival.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.greekfestival.org/",
+            "checkedAt": "2026-10-27T23:33:50.917Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.greekfestival.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.greekfestival.org/",
+            "checkedAt": "2026-11-06T15:31:56.024Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.greekfestival.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.greekfestival.org/",
+            "checkedAt": "2026-10-27T23:33:50.917Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.greekfestival.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.greekfestival.org/",
+            "checkedAt": "2026-11-06T15:31:56.024Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17448,
+      "at": "2026-11-06T15:32:00.574615+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Houston Rockets",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/rockets/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+            "checkedAt": "2026-10-27T23:34:09.941Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Houston Rockets",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/rockets/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+            "checkedAt": "2026-11-06T15:32:00.574Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Houston Rockets",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/rockets/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+            "checkedAt": "2026-10-27T23:34:09.941Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Houston Rockets",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/rockets/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+            "checkedAt": "2026-11-06T15:32:00.574Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17455,
+      "at": "2026-11-06T15:32:05.999888+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://dfwchild.com/?p=21215",
+            "checkedAt": "2026-10-27T23:34:27.083Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://dfwchild.com/?p=21215",
+            "checkedAt": "2026-11-06T15:32:05.999Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://dfwchild.com/?p=21215",
+            "checkedAt": "2026-10-27T23:34:27.083Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.mesquiterodeo.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://dfwchild.com/?p=21215",
+            "checkedAt": "2026-11-06T15:32:05.999Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17459,
+      "at": "2026-11-06T15:32:10.546830+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Dallas Mavericks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/mavs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+            "checkedAt": "2026-10-27T23:35:59.724Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Dallas Mavericks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/mavs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+            "checkedAt": "2026-11-06T15:32:10.546Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Dallas Mavericks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/mavs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+            "checkedAt": "2026-10-27T23:35:59.724Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Dallas Mavericks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/mavs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+            "checkedAt": "2026-11-06T15:32:10.546Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17466,
+      "at": "2026-11-06T15:34:22.735064+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://rodeoaustin.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.austintexas.org/austin-insider-blog/blog/post/rodeo-austin/",
+            "checkedAt": "2026-10-27T23:36:08.210Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://rodeoaustin.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://rodeoaustin.com/tickets/",
+            "checkedAt": "2026-11-06T15:34:22.735Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://rodeoaustin.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.austintexas.org/austin-insider-blog/blog/post/rodeo-austin/",
+            "checkedAt": "2026-10-27T23:36:08.210Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://rodeoaustin.com/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://rodeoaustin.com/tickets/",
+            "checkedAt": "2026-11-06T15:34:22.735Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17471,
+      "at": "2026-11-06T15:34:27.266898+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Austin FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide",
+            "checkedAt": "2026-10-27T23:36:12.422Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Austin FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide",
+            "checkedAt": "2026-11-06T15:34:27.266Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Austin FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide",
+            "checkedAt": "2026-10-27T23:36:12.422Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Austin FC",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.austinfc.com/tickets/singlematch",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://atxtoday.6amcity.com/sports/austin-fc-2026-fan-guide",
+            "checkedAt": "2026-11-06T15:34:27.266Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17486,
+      "at": "2026-11-06T15:34:32.197957+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Antonio Missions",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+            "checkedAt": "2026-10-27T23:39:24.940Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Antonio Missions",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+            "checkedAt": "2026-11-06T15:34:32.197Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Antonio Missions",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+            "checkedAt": "2026-10-27T23:39:24.940Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Antonio Missions",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.milb.com/san-antonio/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/milb/san-antonio/news/missions-announce-2027-schedule",
+            "checkedAt": "2026-11-06T15:34:32.197Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17481,
+      "at": "2026-11-06T15:34:36.738619+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Antonio Spurs",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/spurs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20",
+            "checkedAt": "2026-10-27T23:39:35.015Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Antonio Spurs",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/spurs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20",
+            "checkedAt": "2026-11-06T15:34:36.738Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Antonio Spurs",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/spurs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20",
+            "checkedAt": "2026-10-27T23:39:35.015Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Antonio Spurs",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nba.com/spurs/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://foxsanantonio.com/news/local/spurs-unveil-2026-27-schedule-home-opener-vs-thunder-on-october-20",
+            "checkedAt": "2026-11-06T15:34:36.738Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17497,
+      "at": "2026-11-06T19:08:00.926860+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+            "checkedAt": "2026-10-27T23:39:55.409Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+            "checkedAt": "2026-11-06T19:08:00.926Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+            "checkedAt": "2026-10-27T23:39:55.409Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.iroquoissteeplechase.org/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.visitmusiccity.com/events/iroquois-steeplechase",
+            "checkedAt": "2026-11-06T19:08:00.926Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17516,
+      "at": "2026-11-06T19:08:05.549849+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Park Brook Elementary Choir",
+                "type": "PerformingGroup"
+              },
+              {
+                "name": "Annie and Linnea",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+            "lowPrice": 10,
+            "highPrice": 30,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "Age17+; increases to $35 on December9.",
+                "label": "Adult Ticket",
+                "price": 30
+              },
+              {
+                "note": "Ages4\u201316; increases to $15 on December9.",
+                "label": "Youth Ticket",
+                "price": 10
+              },
+              {
+                "note": "Free.",
+                "label": "Age3 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.loppet.org/events/luminary/",
+            "checkedAt": "2026-10-27T23:40:01.376Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Park Brook Elementary Choir",
+                "type": "PerformingGroup"
+              },
+              {
+                "name": "Annie and Linnea",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+            "lowPrice": 10,
+            "highPrice": 30,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "Age17+; increases to $35 on December9.",
+                "label": "Adult Ticket",
+                "price": 30
+              },
+              {
+                "note": "Ages4\u201316; increases to $15 on December9.",
+                "label": "Youth Ticket",
+                "price": 10
+              },
+              {
+                "note": "Free.",
+                "label": "Age3 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.loppet.org/events/luminary/",
+            "checkedAt": "2026-11-06T19:08:05.549Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Park Brook Elementary Choir",
+                "type": "PerformingGroup"
+              },
+              {
+                "name": "Annie and Linnea",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+            "lowPrice": 10,
+            "highPrice": 30,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "Age17+; increases to $35 on December9.",
+                "label": "Adult Ticket",
+                "price": 30
+              },
+              {
+                "note": "Ages4\u201316; increases to $15 on December9.",
+                "label": "Youth Ticket",
+                "price": 10
+              },
+              {
+                "note": "Free.",
+                "label": "Age3 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.loppet.org/events/luminary/",
+            "checkedAt": "2026-10-27T23:40:01.376Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Park Brook Elementary Choir",
+                "type": "PerformingGroup"
+              },
+              {
+                "name": "Annie and Linnea",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://runsignup.com/TicketEvent/LuminaryLoppet2027",
+            "lowPrice": 10,
+            "highPrice": 30,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "Age17+; increases to $35 on December9.",
+                "label": "Adult Ticket",
+                "price": 30
+              },
+              {
+                "note": "Ages4\u201316; increases to $15 on December9.",
+                "label": "Youth Ticket",
+                "price": 10
+              },
+              {
+                "note": "Free.",
+                "label": "Age3 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.loppet.org/events/luminary/",
+            "checkedAt": "2026-11-06T19:08:05.549Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17556,
+      "at": "2026-11-06T19:08:10.246994+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.azfamily.com/2026/03/30/batter-up-what-know-about-d-backs-2026-home-opener-chase-field/",
+            "checkedAt": "2026-10-27T23:43:54.637Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Arizona Diamondbacks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://arizonasports.com/mlb/arizona-diamondbacks/diamondbacks-reveal-2027-schedule-opening-day-san-diego",
+            "checkedAt": "2026-11-06T19:08:10.246Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.azfamily.com/2026/03/30/batter-up-what-know-about-d-backs-2026-home-opener-chase-field/",
+            "checkedAt": "2026-10-27T23:43:54.637Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Arizona Diamondbacks",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/dbacks/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://arizonasports.com/mlb/arizona-diamondbacks/diamondbacks-reveal-2027-schedule-opening-day-san-diego",
+            "checkedAt": "2026-11-06T19:08:10.246Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17523,
+      "at": "2026-11-06T19:08:14.757897+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mlb.com/twins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox9.com/sports/minnesota-twins-open-2026-regular-season-baltimore-march-26",
+            "checkedAt": "2026-10-27T23:43:59.946Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Minnesota Twins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/twins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/amp/press-release/twins-announce-2027-schedule.html",
+            "checkedAt": "2026-11-06T19:08:14.757Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.mlb.com/twins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.fox9.com/sports/minnesota-twins-open-2026-regular-season-baltimore-march-26",
+            "checkedAt": "2026-10-27T23:43:59.946Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Minnesota Twins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/twins/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.mlb.com/amp/press-release/twins-announce-2027-schedule.html",
+            "checkedAt": "2026-11-06T19:08:14.757Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17586,
+      "at": "2026-11-06T19:10:43.339970+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+            "lowPrice": 34,
+            "highPrice": 88,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Thursday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Thursday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Friday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Friday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Saturday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Saturday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Sunday Adult",
+                "price": 67
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Sunday Junior / U.S. Military / Senior",
+                "price": 34
+              },
+              {
+                "note": "With paying adult. Preview Night optional USD67 adult/USD34 reduced, requires all four daily badges.",
+                "label": "Children12andunder",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": "2026-11-14T17:00:00.000Z",
+            "source": "hand",
+            "sourceUrl": "https://www.comic-con.org/cc/badges/",
+            "checkedAt": "2026-11-06T19:10:21.532Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+            "lowPrice": 34,
+            "highPrice": 88,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Thursday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Thursday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Friday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Friday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Saturday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Saturday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Sunday Adult",
+                "price": 67
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Sunday Junior / U.S. Military / Senior",
+                "price": 34
+              },
+              {
+                "note": "With paying adult. Preview Night optional USD 67 adult/USD 34 reduced, requires all four daily badges.",
+                "label": "Children 12 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": "2026-11-14T17:00:00.000Z",
+            "source": "hand",
+            "sourceUrl": "https://www.comic-con.org/cc/badges/",
+            "checkedAt": "2026-11-06T19:10:43.339Z"
+          },
+          "preserved": false
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+            "lowPrice": 34,
+            "highPrice": 88,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Thursday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Thursday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Friday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Friday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Saturday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Saturday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD15 handling fee per member in addition to badge prices.",
+                "label": "Sunday Adult",
+                "price": 67
+              },
+              {
+                "note": "Juniors13\u201317, active-duty military with ID, seniors60+; USD15 handling fee per member.",
+                "label": "Sunday Junior / U.S. Military / Senior",
+                "price": 34
+              },
+              {
+                "note": "With paying adult. Preview Night optional USD67 adult/USD34 reduced, requires all four daily badges.",
+                "label": "Children12andunder",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": "2026-11-14T17:00:00.000Z",
+            "source": "hand",
+            "sourceUrl": "https://www.comic-con.org/cc/badges/",
+            "checkedAt": "2026-11-06T19:10:21.532Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.comic-con.org/cc/badges/open-registration/",
+            "lowPrice": 34,
+            "highPrice": 88,
+            "priceCurrency": "USD",
+            "tiers": [
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Thursday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Thursday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Friday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Friday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Saturday Adult",
+                "price": 88
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Saturday Junior / U.S. Military / Senior",
+                "price": 44
+              },
+              {
+                "note": "USD 15 handling fee per member in addition to badge prices.",
+                "label": "Sunday Adult",
+                "price": 67
+              },
+              {
+                "note": "Juniors 13\u201317, active-duty military with ID, seniors 60+; USD 15 handling fee per member.",
+                "label": "Sunday Junior / U.S. Military / Senior",
+                "price": 34
+              },
+              {
+                "note": "With paying adult. Preview Night optional USD 67 adult/USD 34 reduced, requires all four daily badges.",
+                "label": "Children 12 and under",
+                "price": 0
+              }
+            ],
+            "itinerary": [],
+            "availability": "PreOrder",
+            "onSaleDate": "2026-11-14T17:00:00.000Z",
+            "source": "hand",
+            "sourceUrl": "https://www.comic-con.org/cc/badges/",
+            "checkedAt": "2026-11-06T19:10:43.339Z"
+          },
+          "preserved": false
+        }
+      }
+    },
+    {
+      "pinId": 17566,
+      "at": "2026-11-06T19:10:09.569725+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.runrocknroll.com/las-vegas/",
+            "checkedAt": "2026-10-27T23:44:35.020Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.runrocknroll.com/las-vegas/",
+            "checkedAt": "2026-11-06T19:10:09.569Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.runrocknroll.com/las-vegas/",
+            "checkedAt": "2026-10-27T23:44:35.020Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.runrocknroll.com/events/las-vegas/register",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.runrocknroll.com/las-vegas/",
+            "checkedAt": "2026-11-06T19:10:09.569Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17603,
+      "at": "2026-11-06T19:10:14.042407+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Francisco Giants",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/giants/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/",
+            "checkedAt": "2026-10-27T23:46:00.438Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Francisco Giants",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/giants/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/",
+            "checkedAt": "2026-11-06T19:10:14.042Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "San Francisco Giants",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/giants/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/",
+            "checkedAt": "2026-10-27T23:46:00.438Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "San Francisco Giants",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/giants/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/",
+            "checkedAt": "2026-11-06T19:10:14.042Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17611,
+      "at": "2026-11-06T19:10:18.769506+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Mariners",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/mariners/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star",
+            "checkedAt": "2026-10-27T23:46:04.808Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Mariners",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/mariners/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star",
+            "checkedAt": "2026-11-06T19:10:18.769Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Mariners",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/mariners/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star",
+            "checkedAt": "2026-10-27T23:46:04.808Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Mariners",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.mlb.com/mariners/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star",
+            "checkedAt": "2026-11-06T19:10:18.769Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17612,
+      "at": "2026-11-06T19:11:24.348811+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.seafair.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seafair.org/",
+            "checkedAt": "2026-10-27T23:46:09.046Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.seafair.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seafair.org/",
+            "checkedAt": "2026-11-06T19:11:24.348Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.seafair.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seafair.org/",
+            "checkedAt": "2026-10-27T23:46:09.046Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.seafair.org/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.seafair.org/",
+            "checkedAt": "2026-11-06T19:11:24.348Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17620,
+      "at": "2026-11-06T19:11:28.984275+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Kraken",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
+            "checkedAt": "2026-10-27T23:46:13.272Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Kraken",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
+            "checkedAt": "2026-11-06T19:11:28.984Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Seattle Kraken",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
+            "checkedAt": "2026-10-27T23:46:13.272Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Seattle Kraken",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.nhl.com/kraken/tickets/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
+            "checkedAt": "2026-11-06T19:11:28.984Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17616,
+      "at": "2026-11-06T19:11:33.812930+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://bumbershoot.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.bumbershoot.com/",
+            "checkedAt": "2026-10-27T23:47:30.289Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://bumbershoot.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.bumbershoot.com/",
+            "checkedAt": "2026-11-06T19:11:33.812Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://bumbershoot.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.bumbershoot.com/",
+            "checkedAt": "2026-10-27T23:47:30.289Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://bumbershoot.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.bumbershoot.com/",
+            "checkedAt": "2026-11-06T19:11:33.812Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17645,
+      "at": "2026-11-06T19:11:38.820853+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Georgia Tech Yellow Jackets football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://ramblinwreck.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.ramblinwreck.com/",
+            "checkedAt": "2026-10-27T23:47:34.930Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Georgia Tech Yellow Jackets football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://ramblinwreck.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.ramblinwreck.com/",
+            "checkedAt": "2026-11-06T19:11:38.820Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Georgia Tech Yellow Jackets football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://ramblinwreck.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.ramblinwreck.com/",
+            "checkedAt": "2026-10-27T23:47:34.930Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Georgia Tech Yellow Jackets football",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://ramblinwreck.com/tickets",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.ramblinwreck.com/",
+            "checkedAt": "2026-11-06T19:11:38.820Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17679,
+      "at": "2026-11-06T19:12:35.874440+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [
+              {
+                "name": "Providence Bruins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.providencebruins.com/schedule",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.providencebruins.com/",
+            "checkedAt": "2026-10-27T23:47:39.357Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Providence Bruins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.providencebruins.com/schedule",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.providencebruins.com/",
+            "checkedAt": "2026-11-06T19:12:35.874Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [
+              {
+                "name": "Providence Bruins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.providencebruins.com/schedule",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.providencebruins.com/",
+            "checkedAt": "2026-10-27T23:47:39.357Z"
+          },
+          "after": {
+            "performers": [
+              {
+                "name": "Providence Bruins",
+                "type": "PerformingGroup"
+              }
+            ],
+            "ticketUrl": "https://www.providencebruins.com/schedule",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": "InStock",
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.providencebruins.com/",
+            "checkedAt": "2026-11-06T19:12:35.874Z"
+          },
+          "preserved": true
+        }
+      }
+    },
+    {
+      "pinId": 17661,
+      "at": "2026-11-06T19:12:40.526470+00:00",
+      "environments": {
+        "local": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.oktoberfestinfbg.com/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.oktoberfestinfbg.com",
+            "checkedAt": "2026-10-27T23:47:43.943Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.oktoberfestinfbg.com/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.oktoberfestinfbg.com",
+            "checkedAt": "2026-11-06T19:12:40.526Z"
+          },
+          "preserved": true
+        },
+        "prod": {
+          "before": {
+            "performers": [],
+            "ticketUrl": "https://www.oktoberfestinfbg.com/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.oktoberfestinfbg.com",
+            "checkedAt": "2026-10-27T23:47:43.943Z"
+          },
+          "after": {
+            "performers": [],
+            "ticketUrl": "https://www.oktoberfestinfbg.com/",
+            "lowPrice": null,
+            "highPrice": null,
+            "priceCurrency": null,
+            "tiers": [],
+            "itinerary": [],
+            "availability": null,
+            "onSaleDate": null,
+            "source": "hand",
+            "sourceUrl": "https://www.oktoberfestinfbg.com",
+            "checkedAt": "2026-11-06T19:12:40.526Z"
+          },
+          "preserved": true
+        }
+      }
+    }
+  ]
+}

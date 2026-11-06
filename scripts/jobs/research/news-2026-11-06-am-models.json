@@ -93,5 +93,562 @@
       }
     ]
   },
-  "gap": "Production-only pin;local helper FK failure. Two independent press analyses,not3firsthand reviews;remaining exact-version AA/TB4/speed unpublished or not found. No i18n per translation handoff."
+  "gap": "Production-only pin;local helper FK failure. Two independent press analyses,not3firsthand reviews;remaining exact-version AA/TB4/speed unpublished or not found. No i18n per translation handoff.",
+  "graniteScopeRepair": {
+    "pinId": 15212,
+    "kind": "llm",
+    "scores": {
+      "reasoning": 2,
+      "coding": 3,
+      "context": 3,
+      "price": null,
+      "speed": null,
+      "modalities": 1
+    },
+    "basis": "Family pin: radar represents the 30B instruct member; 3B and8B remain separate labelled columns/bars, not averaged scores. Scored on IBM's HF cards (opened): 30B instruct GPQA 45.76, MMLU-Pro 64.09, HumanEval 88.41, BFCL v3 73.68; 8B GPQA 41.96, HumanEval 85.37; sequence length 131072 on the card while a secondary write-up says 512K for 8B/30B (disputed, scored on 131072+). Text-only dense models. Price and speed null: open Apache 2.0 weights, no first-party price or throughput published. Reviews are launch write-ups, not hands-on tests; fewer independent tests found. One source reports community claims Qwen 3.5 9B beat the 30B on local coding.",
+    "sourceUrl": "https://huggingface.co/ibm-granite/granite-4.1-8b",
+    "reviews": [
+      {
+        "url": "https://rits.shanghai.nyu.edu/ai/ibm-releases-granite-4-1-dense-8b-matches-prior-32b-moe-flagship/",
+        "quote": "the new 8B instruct model matches or beats IBM’s prior flagship, the Granite 4.0 32B Mixture-of-Experts, on enterprise-relevant benchmarks while running on a far simpler architecture",
+        "title": "IBM Releases Granite 4.1: Dense 8B Matches Prior 32B MoE Flagship",
+        "publishedDate": "2026-04-30"
+      },
+      {
+        "url": "https://firethering.com/granite-4-1-ibm-open-source-model-family/",
+        "quote": "On BFCL V3, the standard tool calling benchmark. The 8B scores 68.3, the 32B MoE scores 64.7.",
+        "title": "Granite 4.1: IBM's 8B Model Is Competing With Models Four Times Its Size",
+        "publishedDate": "2026-04-30"
+      },
+      {
+        "url": "https://www.dsebastien.net/granite-4-1/",
+        "quote": "community reports note Qwen 3.5 9B outperforming Granite 4.1 30B on several local-coding benchmarks, so the \"8B matches 32B MoE\" framing is internal and contested.",
+        "title": "Granite 4.1",
+        "publishedDate": "2026-05-01"
+      }
+    ]
+  },
+  "criticReviews": [
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 2028,
+        "basis": "Exact release/season/episode matched to opened firsthand review;publication day from article:published_time and visible dateline. Quote string-matched in fetched page;no shop or roundup used.",
+        "reviews": [
+          {
+            "url": "https://www.tomsguide.com/entertainment/netflix/black-doves-season-2-review-netflixs-spy-thriller-with-keira-knightley-is-the-answer-to-my-slow-horses-withdrawal",
+            "title": "‘Black Doves’ season 2 review: Netflix’s spy thriller with Keira Knightley is the answer to my ‘Slow Horses’ withdrawal",
+            "publishedDate": "2026-11-05",
+            "quote": "winning mix of spy games and genuine friendship makes this another binge-worthy winner.",
+            "sentiment": 0.6
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Black Doves Season 2 Premieres\",\"saved\":[{\"pinId\":2028,\"production\":false,\"reviews\":1},{\"pinId\":2028,\"production\":true,\"reviews\":1}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 19839,
+        "basis": "Exact release/season/episode matched to opened firsthand review;publication day from article:published_time and visible dateline. Quote string-matched in fetched page;no shop or roundup used.",
+        "reviews": [
+          {
+            "url": "https://www.cinemablend.com/television/chicago-fire-joe-minoso-talks-emotional-300th-episode-cruz-exit-tears",
+            "title": "I Was A Mess Watching Cruz Leave 51 In Chicago Fire’s 300th Episode. There Were ‘A Lot Of Tears’ On Set, Too",
+            "publishedDate": "2026-11-05",
+            "quote": "While I was a mess watching Cruz’s farewell to 51",
+            "sentiment": 0.6
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Chicago Fire S15E5 \\\"Three Hundred\\\" Marks 300th Episode\",\"saved\":[{\"pinId\":19839,\"production\":false,\"reviews\":1},{\"pinId\":19839,\"production\":true,\"reviews\":1}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 296,
+        "basis": "Exact release/season/episode matched to opened firsthand review;publication day from article:published_time and visible dateline. Quote string-matched in fetched page;no shop or roundup used.",
+        "reviews": [
+          {
+            "url": "https://www.gamesradar.com/games/the-legend-of-zelda/the-legend-of-zelda-ocarina-of-time-remake-review/",
+            "title": "The Legend of Zelda: Ocarina of Time review: \"Pure magic – the biggest, boldest remake I've ever played\"",
+            "publishedDate": "2026-11-04",
+            "quote": "Between newly voiced dialogue, revamped dungeons, fresh puzzles, and more, Hyrule has never felt so alive.",
+            "sentiment": 0.9
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"The Legend of Zelda: Ocarina of Time Remake Sets November 5 Release\",\"saved\":[{\"pinId\":296,\"production\":false,\"reviews\":1},{\"pinId\":296,\"production\":true,\"reviews\":1}]}\n"
+    }
+  ],
+  "constructionReactions": [
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 513,
+        "basis": "Exact-project reaction from opened source, quote string-matched. Tone is editorial estimate. Reported government target labelled as reported, not a direct speech quote. Genuinely undated supplier/press-kit pages remain undated. Existing excerpts retained; fewer than three distinct verified reaction pages remain a source gap.",
+        "reviews": [
+          {
+            "url": "https://www.maxfrank.com/intl-en/projects/entries/dc2-tower-wien-AT.php",
+            "title": "DC Tower 2 – MAX FRANK",
+            "publishedDate": "",
+            "quote": "We can guarantee this protection with the Egcobox ® cantilever connection.",
+            "sentiment": 0.4
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"DC Tower 2 Set to Complete Vienna's Donau City Skyline\",\"saved\":[{\"pinId\":513,\"production\":false,\"reviews\":2},{\"pinId\":513,\"production\":true,\"reviews\":2}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 516,
+        "basis": "Exact-project reaction from opened source, quote string-matched. Tone is editorial estimate. Reported government target labelled as reported, not a direct speech quote. Genuinely undated supplier/press-kit pages remain undated. Existing excerpts retained; fewer than three distinct verified reaction pages remain a source gap.",
+        "reviews": [
+          {
+            "url": "https://globalnews.ca/news/10894997/new-roof-olympic-stadium-870-million/",
+            "title": "New roof for Montreal’s Olympic Stadium to cost $870 million - Montreal | Globalnews.ca",
+            "publishedDate": "2024-11-29",
+            "quote": "There is no reason to think that Montreal cannot host these type of events if it has a proper stadium,",
+            "sentiment": 0.5
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Montreal's Olympic Stadium Roof Targeted to Reopen in 2028\",\"saved\":[{\"pinId\":516,\"production\":false,\"reviews\":2},{\"pinId\":516,\"production\":true,\"reviews\":2}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 638,
+        "basis": "Exact-project reaction from opened source, quote string-matched. Tone is editorial estimate. Reported government target labelled as reported, not a direct speech quote. Genuinely undated supplier/press-kit pages remain undated. Existing excerpts retained; fewer than three distinct verified reaction pages remain a source gap.",
+        "reviews": [
+          {
+            "url": "https://www.bangkokpost.com/thailand/general/3288894/thailand-targets-2030-completion-of-first-phase-of-highspeed-rail-link-to-china",
+            "title": " Bangkok Post - Thailand targets 2030 completion of first phase of high-speed rail link to China",
+            "publishedDate": "2026-07-20",
+            "quote": "The Thai government aims ⁠to complete the ​construction of a 250-kilometre (155-mile) section of a high-speed rail ​line that will connect ‌it to China by 2030,",
+            "sentiment": 0.2
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Thailand-China Railway's First Phase Pushed to 2030\",\"saved\":[{\"pinId\":638,\"production\":false,\"reviews\":2},{\"pinId\":638,\"production\":true,\"reviews\":2}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 803,
+        "basis": "Exact-project reaction from opened source, quote string-matched. Tone is editorial estimate. Reported government target labelled as reported, not a direct speech quote. Genuinely undated supplier/press-kit pages remain undated. Existing excerpts retained; fewer than three distinct verified reaction pages remain a source gap.",
+        "reviews": [
+          {
+            "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/press-kit--inauguration-first-day-of-operations.html",
+            "title": "Press kit: Inauguration and first day of operations at Terminal 3",
+            "publishedDate": "",
+            "quote": "At the same time, sustainable progress requires acceptance.",
+            "sentiment": 0.2
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Construction Begins on Frankfurt Airport's €4 Billion Terminal 3\",\"saved\":[{\"pinId\":803,\"production\":false,\"reviews\":3},{\"pinId\":803,\"production\":true,\"reviews\":3}]}\n"
+    },
+    {
+      "input": {
+        "table": "PinCriticReview",
+        "pinId": 2190,
+        "basis": "Exact-project reaction from opened source, quote string-matched. Tone is editorial estimate. Reported government target labelled as reported, not a direct speech quote. Genuinely undated supplier/press-kit pages remain undated. Existing excerpts retained; fewer than three distinct verified reaction pages remain a source gap.",
+        "reviews": [
+          {
+            "url": "https://komonews.com/news/local/story/memorial-stadium-project-seattle-center-sps-private-funding-construction-groundbreaking-one-roof-stadium-partnership-kraken-climate-pledge-arena-samantha-holloway-oak-view-group-ballmer-norcliffe-foundation-gates-wafd-bank-amazon-brotman-schultz",
+            "title": "Philanthropists, prominent families donate millions to finish Memorial Stadium project",
+            "publishedDate": "2025-01-30",
+            "quote": "This will be this beacon of joy and hope for youth, but also really bring the whole community in,",
+            "sentiment": 0.8
+          }
+        ]
+      },
+      "result": "{\"table\":\"PinCriticReview\",\"title\":\"Memorial Stadium Is Due to Reopen at Seattle Center\",\"saved\":[{\"pinId\":2190,\"production\":false,\"reviews\":1},{\"pinId\":2190,\"production\":true,\"reviews\":1}]}\n"
+    }
+  ],
+  "additionalCriticReadback4396": {
+    "reviews": [
+      {
+        "url": "https://riffmagazine.com/album-reviews/kings-of-leon-o-my-beloved/",
+        "quote": "While the instrumentation shines in bursts, the band generally plays it safe.",
+        "title": "REVIEW: Kings of Leon play it safe while digging family life on ‘O My Beloved’",
+        "sentiment": -0.3,
+        "publishedDate": "2026-10-31"
+      }
+    ],
+    "source": "session",
+    "basis": "Exact release/season/episode matched to opened firsthand review;publication day from article:published_time and visible dateline. Quote string-matched in fetched page;no shop or roundup used.",
+    "sourceUrl": null,
+    "checkedAt": "2026-11-06T15:33:23.232Z"
+  },
+  "productionIdentityVerification": [
+    {
+      "id": 20769,
+      "title": "National Leads the Forecast as New Zealand Votes on 7 November",
+      "company": null,
+      "author": "@PoliticsDesk",
+      "media": []
+    },
+    {
+      "id": 20728,
+      "title": "October CPI Lands November 10, With Kalshi Pricing a 0.2% Monthly Rise as a Coin Flip",
+      "company": "Bureau of Labor Statistics",
+      "author": "@OddsDesk",
+      "media": [
+        [
+          34220,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": 20785,
+      "title": "GPT-6 Cyber Launches for Approved Daybreak Red Security Researchers",
+      "company": "OpenAI",
+      "author": "@AIDesk",
+      "media": [
+        [
+          36126,
+          "OpenAI",
+          "https://openai.com/index/introducing-gpt-6-cyber/"
+        ],
+        [
+          36145,
+          "OpenAI via Impress Watch",
+          "https://www.watch.impress.co.jp/docs/news/2154307.html"
+        ],
+        [
+          36146,
+          "OpenAI via Impress Watch",
+          "https://www.watch.impress.co.jp/docs/news/2154307.html"
+        ]
+      ]
+    },
+    {
+      "id": 20692,
+      "title": "Brent Crude Oil Price — November 2026",
+      "company": null,
+      "author": "@EnergyDesk",
+      "media": [
+        [
+          34100,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": 17480,
+      "title": "Luminaria Contemporary Arts Festival — San Antonio seasonal activity",
+      "company": null,
+      "author": "@TravelDesk",
+      "media": [
+        [
+          26594,
+          "Corey Leopold / Wikimedia Commons (CC BY 2.0)",
+          "https://commons.wikimedia.org/wiki/File:Houston_Street_at_Luminaria.jpg"
+        ],
+        [
+          35545,
+          "Photo via tpr.org",
+          "https://www.tpr.org/arts-culture/2023-10-22/photos-san-antonios-luminaria-contemporary-arts-festival-2023"
+        ]
+      ]
+    },
+    {
+      "id": 17540,
+      "title": "Denver Cinco de Mayo Festival Returns on 1–2 May 2027",
+      "company": null,
+      "author": "@TravelDesk",
+      "media": [
+        [
+          26475,
+          "Photo: Visit Denver",
+          "https://visitdenver.com/articles/post/denvers-cinco-de-mayo-festival-noted-as-one-of-the-largest-cultural-events-in-colorado/"
+        ],
+        [
+          34613,
+          "Photo via denvergazette.com",
+          "https://www.denvergazette.com/2025/05/02/36th-annual-cinco-de-mayo-festival-to-take-over-civic-center-park-this-weekend/"
+        ]
+      ]
+    },
+    {
+      "id": 17603,
+      "title": "San Francisco Giants at Oracle Park — San Francisco seasonal activity",
+      "company": null,
+      "author": "@TravelDesk",
+      "media": [
+        [
+          26620,
+          "Photo: nbcsportsbayarea.com (official page)",
+          "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/"
+        ],
+        [
+          34637,
+          "Photo via nbcsportsbayarea.com",
+          "https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/"
+        ]
+      ]
+    },
+    {
+      "id": 17611,
+      "title": "Seattle Mariners at T-Mobile Park — Seattle seasonal activity",
+      "company": null,
+      "author": "@TravelDesk",
+      "media": [
+        [
+          26630,
+          "Photo: komonews.com (official page)",
+          "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star"
+        ],
+        [
+          34641,
+          "Photo via komonews.com",
+          "https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star"
+        ]
+      ]
+    },
+    {
+      "archive20773": "2026-11-06T19:12:57.459Z"
+    },
+    {
+      "sentimentPin": 20732,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0
+    },
+    {
+      "sentimentPin": 2947,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0
+    },
+    {
+      "sentimentPin": 4065,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0
+    },
+    {
+      "sentimentPin": 4446,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0
+    },
+    {
+      "sentimentPin": 4491,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0.25
+    },
+    {
+      "sentimentPin": 4493,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0.25
+    },
+    {
+      "sentimentPin": 4740,
+      "rows": 1,
+      "hashMatches": true,
+      "score": 0
+    }
+  ],
+  "hubSentimentMap": [
+    {
+      "localId": 20728,
+      "title": "Tesla",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "03eb012455a021a92403905213dc500d5eaff4182f31708dc2ef1d49988b1d48"
+    },
+    {
+      "localId": 20729,
+      "title": "Apple",
+      "matches": [
+        20732
+      ],
+      "sourceRows": 1,
+      "textHash": "5254d2d7b738092f41695ac3a005acd8af30bbece4cf4dfe9490aaef5fc21f44"
+    },
+    {
+      "localId": 20730,
+      "title": "Microsoft",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "89f6d17a282fd8aa729c06e33add0dd59459cba2c4d8a34da0c8de2a2dc4ea9b"
+    },
+    {
+      "localId": 20731,
+      "title": "Google",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "cd253ef5e0bcab099611de76b6d073089259d9428ceb56e892c77b3be934f844"
+    },
+    {
+      "localId": 20732,
+      "title": "Nike",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "a8faac65f82baeef8b359dad177c2c6f5757e4647767ca6eb75864799597c6d4"
+    },
+    {
+      "localId": 20733,
+      "title": "Salesforce",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "85d4fe180690db7abad43966f474fe264df65f1702a32343e6fcc879579cbb1a"
+    },
+    {
+      "localId": 20734,
+      "title": "Boeing Commercial Airplanes",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "4cbb1e9ab8d059678d84055f81ee6f9f61df23dcd3cd5a2a3e810664dbd1011d"
+    },
+    {
+      "localId": 20735,
+      "title": "Oracle",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "7fffaf65eb63db5cdc982a03c6c077d21c370237468840946d5956c3bd8ac1e3"
+    },
+    {
+      "localId": 20736,
+      "title": "Qualcomm",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "88e26369b21da65a25de8d96d09b45bcbf3b30758546d85a2fbccdcb7a3839b1"
+    },
+    {
+      "localId": 20737,
+      "title": "Meta",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "0029f9db1d822106439cab178d942ced39a03aac036cd35eb27bc68e85e62ddb"
+    },
+    {
+      "localId": 20738,
+      "title": "NVIDIA",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "064dab2f42868ae68cc267b0bbd1ae32687442aa58a08cb641a9638eee97cb04"
+    },
+    {
+      "localId": 20739,
+      "title": "Intel",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "b47a313a859374edfbfe6c5cf25811ffbb98d64c8338200122d8a32e5bcb8629"
+    },
+    {
+      "localId": 20740,
+      "title": "Amazon",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "bd7453314b342780be9ee500c2e7866b3a4489781aee53fba633cf07055316db"
+    },
+    {
+      "localId": 20741,
+      "title": "Broadcom",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "37f696cdfa6d5f6021819bbea3c120048ede1e0a39dd0e975c35b80d5dc212b5"
+    },
+    {
+      "localId": 20742,
+      "title": "Airbus",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "c1475327f5f92499b552ec2509892b06d5e693e99335af2370ef3c6f9dc00c16"
+    },
+    {
+      "localId": 20743,
+      "title": "BYD Company",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "c0e5129ce6b7cf9120bf30b96754bfd789614f6bbaf4fba627eefdfb4699f0f2"
+    },
+    {
+      "localId": 20744,
+      "title": "Pixar Animation Studios",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "9e20357db2d70c62f319efc794cad0d5b4f70192b97fbb4846ee6bd8af171431"
+    },
+    {
+      "localId": 20745,
+      "title": "Marvel Studios",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "d9d0110763d1f7c66c280750d100959aa4043fdf3892b2ba0a387785838e548e"
+    },
+    {
+      "localId": 20746,
+      "title": "Walt Disney Animation Studios",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "3b4fadad878c6fbc16aa394e016883bdbbc8cc22259fdc87d3b3f9c0f87cef7e"
+    },
+    {
+      "localId": 20747,
+      "title": "Square Enix",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "4ffee06189869e81b24aa9cee315ac425341e513e4204523d164b1225df8873c"
+    },
+    {
+      "localId": 20748,
+      "title": "Walt Disney Pictures",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "a38d6d1d8e23203b6eadb84569c30fdcc29cbf13b60e47c19894a89cc5b9c158"
+    },
+    {
+      "localId": 20749,
+      "title": "OpenAI",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "c552f2a18ad5180895fd91866a3d90188a62832c06a64799180cdc69d742d430"
+    },
+    {
+      "localId": 20750,
+      "title": "Anthropic",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "b360bec76f9942b5aab57b7ceb2be684975d2bffcbda7cac8c0864a4d090fb8c"
+    },
+    {
+      "localId": 20751,
+      "title": "TSMC",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "02ce64bf8b7361bd997bf7712f5e9a41203cd215bcde63e9695748bbabca3cb4"
+    },
+    {
+      "localId": 20752,
+      "title": "Xiaomi",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "95ffbbe0d496a3ff2ff919c2ea39719aa4b8ed7ea1e5f36e0d5f55926d86b178"
+    },
+    {
+      "localId": 20753,
+      "title": "Sony",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "405a280d2e8a67cde14f1991e40427bbded8a6f3009b75f663d60c84ef05118a"
+    },
+    {
+      "localId": 20754,
+      "title": "Lululemon",
+      "matches": [],
+      "sourceRows": 0,
+      "textHash": "ed69acdf1222a757cc419412e5290854b82b16014dc4f9ef2d3dd75f5aeaaca9"
+    }
+  ]
 }

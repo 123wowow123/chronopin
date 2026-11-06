@@ -1,0 +1,139 @@
+{
+  "runId": 47,
+  "initial": [
+    {
+      "id": 17540,
+      "matchingFacts": true,
+      "owners": [
+        435,
+        435
+      ],
+      "localMedia": 2,
+      "prodMedia": 2
+    },
+    {
+      "id": 151,
+      "matchingFacts": true,
+      "owners": [
+        226,
+        226
+      ],
+      "localMedia": 2,
+      "prodMedia": 2
+    },
+    {
+      "id": 2947,
+      "matchingFacts": true,
+      "owners": [
+        408,
+        408
+      ],
+      "localMedia": 4,
+      "prodMedia": 4
+    },
+    {
+      "id": 17480,
+      "matchingFacts": true,
+      "owners": [
+        435,
+        435
+      ],
+      "localMedia": 2,
+      "prodMedia": 2
+    },
+    {
+      "id": 4493,
+      "matchingFacts": true,
+      "owners": [
+        418,
+        418
+      ],
+      "localMedia": 3,
+      "prodMedia": 3
+    },
+    {
+      "id": 4491,
+      "matchingFacts": true,
+      "owners": [
+        418,
+        418
+      ],
+      "localMedia": 3,
+      "prodMedia": 3
+    },
+    {
+      "id": 4740,
+      "matchingFacts": true,
+      "owners": [
+        408,
+        408
+      ],
+      "localMedia": 3,
+      "prodMedia": 3
+    },
+    {
+      "id": 4446,
+      "matchingFacts": true,
+      "owners": [
+        414,
+        414
+      ],
+      "localMedia": 3,
+      "prodMedia": 3
+    },
+    {
+      "id": 4065,
+      "matchingFacts": true,
+      "owners": [
+        416,
+        416
+      ],
+      "localMedia": 4,
+      "prodMedia": 4
+    }
+  ],
+  "followup": [
+    {
+      "pinId": 17603,
+      "match": true,
+      "start": "2027-03-25T00:00:00.000Z",
+      "end": "2027-09-20T00:00:00.000Z",
+      "owners": [
+        435,
+        435
+      ],
+      "media": [
+        2,
+        2
+      ]
+    },
+    {
+      "pinId": 17611,
+      "match": true,
+      "start": "2027-03-25T00:00:00.000Z",
+      "end": "2027-09-20T00:00:00.000Z",
+      "owners": [
+        435,
+        435
+      ],
+      "media": [
+        2,
+        2
+      ]
+    },
+    {
+      "pinId": 17620,
+      "match": true,
+      "start": "2026-10-04T00:00:00.000Z",
+      "end": "2027-04-04T00:00:00.000Z",
+      "owners": [
+        435,
+        435
+      ],
+      "media": [
+        2,
+        2
+      ]
+    }
+  ]
+}
