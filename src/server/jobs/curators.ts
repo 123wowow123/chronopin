@@ -21,6 +21,7 @@ export const CURATORS: Record<string, string> = {
   '@DeviceDesk': 'consumer devices and gadgets: launches, sales, CES awards',
   '@BuildDesk': 'buildings, infrastructure, transport projects, space launches',
   '@OddsDesk': 'prediction markets (Kalshi, Polymarket)',
+  '@MotorDesk': 'cars and motoring: launches, EV and gas performance, racing machinery',
   '@SneakerDesk': 'sneaker and apparel drops',
   '@MarketDesk': 'financial markets',
   '@ScienceDesk': 'science, research, prizes, astronomy',
