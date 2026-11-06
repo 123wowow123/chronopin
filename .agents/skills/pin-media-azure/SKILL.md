@@ -60,3 +60,11 @@ Read the pin back, confirm each media URL loads, and note undownloadable images 
   add `PATCH /api/admin/db/Medium?id=<id>` with both (admin token), then expire the pin and read it back.
 - When no photo of a place or institution turns up (the Texas Institute for Electronics), record the gap rather than
   using a look-alike.
+
+## Curated landing-page backfills
+- Count effective card media first: native photos/videos plus curated profile galleries, menu images and existing music artwork/videos. Do not backfill cars/music merely because native-image counts omit valid video or profile media.
+- Consult the restaurant guide's recorded exact-branch operator website when a pin's news source contains only one photo. Do not treat another dining outlet in the same hotel as the same venue.
+- When `www.trip.com` blocks an exact-branch restaurant gallery, try `us.trip.com` with the same path/place ID. Verify the numeric identity and branch name; retain that branch's gallery images only, excluding nearby restaurant recommendations.
+- Check lazy `data-image`/background attributes and operator press pages when ordinary `<img>` scraping finds only logos. Visual review remains mandatory.
+- Append native `Medium` and `PinMedium` rows through the audited admin API, expire each pin, and verify media URLs, attribution, preserved existing media and unchanged title/author/date in each environment. Remove a wrong stock/other-venue cover only after verified replacement media are saved.
+- Keep a per-pin source-gap report and resumable manifests. See `docs/landing-media-backfill-2026-11-05.md` for the curated backfill method.
