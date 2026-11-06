@@ -17,6 +17,10 @@ Owner instructions (2026-10-13, 2026-10-28): apply routine, researched daily-job
 
 Pins about something built carry a sourced `price`/`priceCurrency` (no FX conversion, null when unpublished), one status tag (`Proposed` / `In Progress` / `Completed` / `Withdrawn`, never inferred from an elapsed date), `PinPower` generation fields for power plants, and a `PinFactory` buildout profile (multi-plant pins are split into threaded per-plant pins). Details: `.agents/skills/construction-pin-research/`; the extraction prompt in `src/server/extract/systemPrompt.ts` carries the cost rule.
 
+## Company landing pages
+
+A company with about 10+ dated pins across 3+ products gets a hub (landing) page like `/company/tesla`: a hub pin, a product tree with 3 to 6 milestones per product, and sourced `[pin:ID]` overviews and facts, never invented. Draft the tree with `scripts/company/hubDraft.ts`; workflow, API and traps (the `create_pin` tool writes to production): `.agents/skills/company-hub-research/` and `docs/okf/api/company-hub.md`. Pushing a hub to production needs the owner's ask in that conversation; translations are left to the translation agent.
+
 ## Pin rubrics, reviews and competitors
 
 Taste radar (food/drink), car performance (EV and gas), restaurant dining, AI model rubrics with spec graphs and media, and product competitors each have required fields, review minimums and save endpoints. Never invent figures or reviews; record specific research gaps instead. Details: `.agents/skills/pin-enrichment-rubrics/`.
