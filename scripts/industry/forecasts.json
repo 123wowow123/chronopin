@@ -6281,5 +6281,322 @@
       }
     ],
     "note": "BLS notes many writers and authors are self-employed; the occupation covers all written media, not only books. Jobs (number of workers). History joins the base-year employment shown in successive Occupational Outlook Handbook editions (read from Internet Archive copies of bls.gov); each edition re-estimates the base, so jumps between years can reflect method and classification changes, not only real change. The projection is BLS's 2034 figure, a single point; no intermediate years are published. This is workforce size, not industry revenue."
+  },
+  {
+    "slug": "epoch-ai-datacenter-power",
+    "industry": "Data Centers",
+    "title": "Global AI data center power capacity (GW)",
+    "tags": [
+      "Data Centers",
+      "AI Data Centers",
+      "Data Centres",
+      "Data Center",
+      "Datacenter",
+      "Energy",
+      "Computing",
+      "Semiconductors"
+    ],
+    "prefix": "",
+    "suffix": " GW",
+    "sources": [
+      {
+        "label": "Epoch AI, Global AI power capacity is now comparable to peak power usage of New York State (Data Insight, CC BY)",
+        "url": "https://epoch.ai/data-insights/ai-datacenter-power",
+        "date": "2026-01-16",
+        "quote": "Total AI data center power capacity reached approximately 30 GW in the last quarter of 2025—comparable to peak power usage in New York State, and outstripping many developed countries."
+      },
+      {
+        "label": "Epoch AI, AI data center power capacity by quarter (CSV)",
+        "url": "https://epoch.ai/data/charts/total-ai-datacenter-power/ai_datacenter_power_quarterly.csv",
+        "date": "2026-02-16",
+        "quote": null
+      },
+      {
+        "label": "Epoch AI chip sales explorer",
+        "url": "https://epoch.ai/data/ai-chip-sales",
+        "date": null,
+        "quote": null
+      },
+      {
+        "label": "Epoch AI, GPUs account for about 40% of power usage in AI data centers",
+        "url": "https://epoch.ai/data-insights/gpus-power-usage-in-ai-data-centers",
+        "date": "2025-12-18",
+        "quote": "In a typical frontier AI data center, total server power is 1.53x GPU power alone."
+      },
+      {
+        "label": "New York Department of Public Service, summer energy outlook (NY peak demand, about 31 GW)",
+        "url": "https://dps.ny.gov/summer-energy-outlook",
+        "date": null,
+        "quote": null
+      }
+    ],
+    "note": "Estimated by Epoch AI from the rated power (TDP) of AI chips sold by NVIDIA, Google, Amazon, AMD and Huawei, spread into calendar quarters. Datacenter power is chip power times a 2.5x overhead for servers, networking, cooling and other facility use, assuming every chip runs at full rated draw. The Q4 2025 point (dated 2025-12-31) extrapolates NVIDIA, Google and AMD sales from their average growth since Q1 2024, so it may change. For scale, Epoch compares peak demand of New York State (about 31 GW, 2025 estimate), the Netherlands (19 GW) and New Zealand (7 GW). Epoch's companion analysis puts GPUs at about 41% of facility power at peak (servers 63%, all IT equipment 71%).",
+    "history": [
+      {
+        "label": "AI datacenter power (chip power x 2.5)",
+        "points": [
+          {
+            "x": "2022-03-31",
+            "value": 0.15
+          },
+          {
+            "x": "2022-06-30",
+            "value": 0.38
+          },
+          {
+            "x": "2022-09-30",
+            "value": 0.6
+          },
+          {
+            "x": "2022-12-31",
+            "value": 0.88
+          },
+          {
+            "x": "2023-03-31",
+            "value": 1.21
+          },
+          {
+            "x": "2023-06-30",
+            "value": 1.77
+          },
+          {
+            "x": "2023-09-30",
+            "value": 2.61
+          },
+          {
+            "x": "2023-12-31",
+            "value": 3.69
+          },
+          {
+            "x": "2024-03-31",
+            "value": 5.51
+          },
+          {
+            "x": "2024-06-30",
+            "value": 7.69
+          },
+          {
+            "x": "2024-09-30",
+            "value": 10.31
+          },
+          {
+            "x": "2024-12-31",
+            "value": 13.5
+          },
+          {
+            "x": "2025-03-31",
+            "value": 17.55
+          },
+          {
+            "x": "2025-06-30",
+            "value": 21.73
+          },
+          {
+            "x": "2025-09-30",
+            "value": 26.92
+          },
+          {
+            "x": "2025-12-31",
+            "value": 31.24
+          }
+        ]
+      },
+      {
+        "label": "AI chip power (rated TDP, cumulative)",
+        "points": [
+          {
+            "x": "2022-03-31",
+            "value": 0.06
+          },
+          {
+            "x": "2022-06-30",
+            "value": 0.15
+          },
+          {
+            "x": "2022-09-30",
+            "value": 0.24
+          },
+          {
+            "x": "2022-12-31",
+            "value": 0.35
+          },
+          {
+            "x": "2023-03-31",
+            "value": 0.48
+          },
+          {
+            "x": "2023-06-30",
+            "value": 0.71
+          },
+          {
+            "x": "2023-09-30",
+            "value": 1.04
+          },
+          {
+            "x": "2023-12-31",
+            "value": 1.48
+          },
+          {
+            "x": "2024-03-31",
+            "value": 2.2
+          },
+          {
+            "x": "2024-06-30",
+            "value": 3.07
+          },
+          {
+            "x": "2024-09-30",
+            "value": 4.13
+          },
+          {
+            "x": "2024-12-31",
+            "value": 5.4
+          },
+          {
+            "x": "2025-03-31",
+            "value": 7.02
+          },
+          {
+            "x": "2025-06-30",
+            "value": 8.69
+          },
+          {
+            "x": "2025-09-30",
+            "value": 10.77
+          },
+          {
+            "x": "2025-12-31",
+            "value": 12.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "epoch-ai-chip-power-added",
+    "industry": "Data Centers",
+    "title": "AI chip power added per quarter (GW)",
+    "tags": [
+      "Data Centers",
+      "AI Data Centers",
+      "Data Centres",
+      "Data Center",
+      "Datacenter",
+      "Energy",
+      "Computing",
+      "Semiconductors"
+    ],
+    "prefix": "",
+    "suffix": " GW",
+    "sources": [
+      {
+        "label": "Epoch AI, Global AI power capacity is now comparable to peak power usage of New York State (Data Insight, CC BY)",
+        "url": "https://epoch.ai/data-insights/ai-datacenter-power",
+        "date": "2026-01-16",
+        "quote": "Total AI data center power capacity reached approximately 30 GW in the last quarter of 2025—comparable to peak power usage in New York State, and outstripping many developed countries."
+      },
+      {
+        "label": "Epoch AI, AI data center power capacity by quarter (CSV)",
+        "url": "https://epoch.ai/data/charts/total-ai-datacenter-power/ai_datacenter_power_quarterly.csv",
+        "date": "2026-02-16",
+        "quote": null
+      },
+      {
+        "label": "Epoch AI chip sales explorer",
+        "url": "https://epoch.ai/data/ai-chip-sales",
+        "date": null,
+        "quote": null
+      },
+      {
+        "label": "Epoch AI, GPUs account for about 40% of power usage in AI data centers",
+        "url": "https://epoch.ai/data-insights/gpus-power-usage-in-ai-data-centers",
+        "date": "2025-12-18",
+        "quote": "In a typical frontier AI data center, total server power is 1.53x GPU power alone."
+      },
+      {
+        "label": "New York Department of Public Service, summer energy outlook (NY peak demand, about 31 GW)",
+        "url": "https://dps.ny.gov/summer-energy-outlook",
+        "date": null,
+        "quote": null
+      },
+      {
+        "label": "Epoch AI, Global AI computing capacity is doubling every 7 months",
+        "url": "https://epoch.ai/data-insights/ai-chip-production",
+        "date": "2026-01-09",
+        "quote": "We estimate that global computing capacity has been growing by 3.3x per year since 2022 (90% CI: 2.7x to 4.1x)."
+      }
+    ],
+    "note": "Change in cumulative rated chip power from the prior quarter, from the same Epoch AI dataset. It is chip power, not facility power: multiply by Epoch's 2.5x overhead for data center capacity. The Q4 2025 value (1.73 GW) includes extrapolated sales for some manufacturers. Epoch separately estimates that total AI computing capacity has grown about 3.3x per year since 2022, a 7-month doubling time (90% CI 6 to 8 months).",
+    "history": [
+      {
+        "label": "Chip power added in the quarter",
+        "points": [
+          {
+            "x": "2022-03-31",
+            "value": 0.06
+          },
+          {
+            "x": "2022-06-30",
+            "value": 0.09
+          },
+          {
+            "x": "2022-09-30",
+            "value": 0.09
+          },
+          {
+            "x": "2022-12-31",
+            "value": 0.11
+          },
+          {
+            "x": "2023-03-31",
+            "value": 0.13
+          },
+          {
+            "x": "2023-06-30",
+            "value": 0.22
+          },
+          {
+            "x": "2023-09-30",
+            "value": 0.34
+          },
+          {
+            "x": "2023-12-31",
+            "value": 0.43
+          },
+          {
+            "x": "2024-03-31",
+            "value": 0.73
+          },
+          {
+            "x": "2024-06-30",
+            "value": 0.87
+          },
+          {
+            "x": "2024-09-30",
+            "value": 1.05
+          },
+          {
+            "x": "2024-12-31",
+            "value": 1.27
+          },
+          {
+            "x": "2025-03-31",
+            "value": 1.62
+          },
+          {
+            "x": "2025-06-30",
+            "value": 1.67
+          },
+          {
+            "x": "2025-09-30",
+            "value": 2.08
+          },
+          {
+            "x": "2025-12-31",
+            "value": 1.73
+          }
+        ]
+      }
+    ]
   }
 ]
