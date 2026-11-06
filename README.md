@@ -477,7 +477,7 @@ https://www.chronopin.com/pin/20607/m6-4-earthquake-strikes-southeast-of-easter-
 
 
 
-creat this 'The All-Map' graph dynamically for each person's holdings. start with michael burry
+create this 'The All-Map' graph dynamically for each person's holdings. start with michael burry
 https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_source=post-email-title&publication_id=6819723&post_id=219082855&utm_campaign=email-post-title&isFreemail=false&r=3eoc7b&triedRedirect=true&utm_medium=email
 
 
@@ -501,26 +501,6 @@ merge with progress bar
 http://localhost:3000/pin/20640/perry-s-cafe-redevelopment-project
 
 
-
-
-
-
-
-companies like tesla should have parent landing page pin detail page with a thread panel that breaks out to all sub product and with their pin thread of timelines. Should become a tree structure of the company with their projects. The main pins is constantly updated so will not show on main timeline but rather will be a company landing page pin
-
-
-
-add gpu retal price graph on GPU pins
-https://www.silicondata.com/products/silicon-index
-
-
-
-https://artificialanalysis.ai/articles/aa-personalitybench
-ai personality index, make panel
-
-
-add side panel for and other interesting panels on this site
-https://epoch.ai/data-insights/ai-datacenter-power
 
 
 
