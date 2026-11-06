@@ -3,7 +3,6 @@ import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
 import { CardImage } from '@/components/pin/CardImage';
 import { ProductTimeline } from '@/components/pin/ProductTimeline';
-import { CompanyTree } from '@/components/pin/CompanyTree';
 import { MediaMosaic, pinPicture } from '@/components/pin/MediaMosaic';
 import { siteName } from '@/lib/appConfig';
 import { branchMilestones, branchPins, productPath, productPinCount, type CompanyHubJson, type HubProductJson } from '@/lib/companyHub';
@@ -99,8 +98,6 @@ export function CompanyHubView({ page, tree, milestones, timeZone, video, t, des
       ) : null}
 
       <ProductTimeline products={tree.products} base={base} t={t} now={new Date()} className="mt-10" />
-
-      <CompanyTree tree={tree} t={t} className="mt-10" />
 
       <div className="mt-12">
         <TopicBody page={page} timeZone={timeZone} video={video} t={t} tiles />

@@ -94,7 +94,6 @@ import { TopicBody } from '@/components/topic/TopicView';
 import { companyPage } from '@/server/services/topics';
 import { topicSlug } from '@/lib/topics';
 import { MediaMosaic } from '@/components/pin/MediaMosaic';
-import { CompanyTree } from '@/components/pin/CompanyTree';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadList } from '@/components/pin/ThreadList';
 import { SideNoteToggle } from '@/components/pin/SideNoteToggle';
@@ -978,10 +977,10 @@ async function ThreadAwareTags({ pin, className }: { pin: PinJson; className?: s
 const THREAD_INDENT = 16;
 const MAX_THREAD_INDENT = 4;
 
-// A company's hub pin shows its product tree; every other pin its thread.
+// A company's hub pin has no thread pane (its products live on the landing
+// page); every other pin shows its thread.
 async function ThreadOrCompanyTree({ pin }: { pin: PinJson }) {
-  const tree = await pinCompanyHub(pin.id);
-  if (tree) return <CompanyTree tree={tree} t={await getT()} />;
+  if (await pinCompanyHub(pin.id)) return null;
   return <Thread pin={pin} />;
 }
 

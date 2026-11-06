@@ -4,6 +4,7 @@ import type { Translator } from '@/lib/i18n/translate';
 import { pinPath } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
 import { companyPath } from '@/lib/topics';
+import { CardImage } from './CardImage';
 import { ThreadAge } from './ThreadAge';
 
 const MAX_DEPTH = 5;
@@ -14,8 +15,8 @@ const MAX_DEPTH = 5;
 export function CompanyTree({ tree, t, className }: { tree: CompanyHubJson; t: Translator; className?: string }) {
   return (
     <section aria-labelledby="company-tree-heading" className={`surface mt-6 p-5 ${className ?? ''}`}>
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 id="company-tree-heading" className="text-base font-semibold">
+      <div className="flex flex-wrap items-center justify-end gap-2">
+        <h2 id="company-tree-heading" className="sr-only">
           {t('thread.companyTreeHeading')}
         </h2>
         <Link href={`/search?q=${encodeURIComponent(term('company', tree.companyName))}`} prefetch={false} className="text-sm">
@@ -57,8 +58,11 @@ function Branch({ product, depth, base }: { product: HubProductJson; depth: numb
             <ol className="space-y-0.5">
               {product.pins.map((p, i) => (
                 <li key={p.id}>
-                  <Link href={pinPath(p)} className="flex gap-3 rounded-lg px-3 py-1.5 text-sm text-ink hover:bg-raised/60 hover:no-underline">
+                  <Link href={pinPath(p)} className="flex items-center gap-3 rounded-lg px-3 py-1.5 text-sm text-ink hover:bg-raised/60 hover:no-underline">
                     <span className="w-4 shrink-0 text-end text-subtle tabular-nums">{i + 1}</span>
+                    <span className="relative h-12 w-16 shrink-0 overflow-hidden rounded-md bg-panel">
+                      {p.thumbName || p.originalUrl ? <CardImage thumbName={p.thumbName} originalUrl={p.originalUrl} alt="" /> : null}
+                    </span>
                     <span className="min-w-0 flex-1">{p.title}</span>
                     <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
                   </Link>

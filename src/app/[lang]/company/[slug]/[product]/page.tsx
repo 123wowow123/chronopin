@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import { OpenSourceOnHash } from '@/components/pin/OpenSourceOnHash';
 import Link from '@/components/ui/Link';
 import { MediaMosaic } from '@/components/pin/MediaMosaic';
 import { ProductTimeline } from '@/components/pin/ProductTimeline';
-import { CompanyTree } from '@/components/pin/CompanyTree';
 import { PinSection } from '@/components/topic/TopicView';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { siteName } from '@/lib/appConfig';
@@ -107,22 +107,23 @@ async function Content({ params }: Pick<Props, 'params'>) {
               </p>
             ))}
             {cited.length ? (
-              <section aria-labelledby="sources-heading" className="pt-2">
-                <h2 id="sources-heading" className="mb-2 text-base font-semibold">
-                  {t('references.heading')}
-                </h2>
+              <details className="group pt-2">
+                <OpenSourceOnHash />
+                <summary className="mb-2 cursor-pointer text-base font-semibold">
+                  {t('references.heading')} <span className="text-sm font-normal text-subtle">({cited.length})</span>
+                </summary>
                 <ol className="space-y-1 text-sm">
                   {cited.map((id, i) => {
                     const pin = page.cited.find((c) => c.id === id);
                     return pin ? (
-                      <li key={id} id={`source-${i + 1}`} className="flex gap-2">
+                      <li key={id} id={`source-${i + 1}`} className="flex scroll-mt-24 gap-2 rounded-md px-2 py-1 data-[hit]:bg-accent/15 data-[hit]:ring-1 data-[hit]:ring-accent/40">
                         <span className="w-6 shrink-0 text-subtle tabular-nums">[{i + 1}]</span>
                         <Link href={pinPath(pin)}>{pin.title}</Link>
                       </li>
                     ) : null;
                   })}
                 </ol>
-              </section>
+              </details>
             ) : null}
           </article>
           {page.product.facts.length ? (
@@ -144,7 +145,6 @@ async function Content({ params }: Pick<Props, 'params'>) {
         </div>
       ) : null}
       {page.product.children.length ? <ProductTimeline products={[page.product]} base={base} t={t} now={now} className="mt-8" /> : null}
-      {page.product.children.length ? <CompanyTree tree={{ companyId: 0, companyName: page.company.name, products: page.product.children }} t={t} /> : null}
       <div className="mt-10">
         <TimelineVideoProvider setting={video}>
           <PinSection id="upcoming" heading={t('topic.upcoming')} pins={page.upcoming} timeZone={timeZone} now={now} todayKey={todayKey} tiles t={t} />
