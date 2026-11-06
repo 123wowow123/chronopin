@@ -3,6 +3,10 @@
 
 import { cacheLife, cacheTag } from 'next/cache';
 import Company from '../model/company';
+import { companyHubTree, hubPinOfCompany } from '../model/companyHub';
+import * as db from '../db';
+import type { CompanyHubJson } from '@/lib/companyHub';
+import { branchMilestones, branchPins, findProduct, overviewParagraphs, type HubProductJson } from '@/lib/companyHub';
 import Pins from '../model/pins';
 import Topics, { type TopicPinIds } from '../model/topics';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
@@ -56,7 +60,7 @@ export type TopicPage = {
 };
 
 export type CompanyTopicPage = TopicPage & {
-  company: { name: string; description: string | null; logoUrl: string | null; wikiUrl: string | null; websiteUrl: string | null };
+  company: { name: string; description: string | null; logoUrl: string | null; wikiUrl: string | null; websiteUrl: string | null; hub: { id: number; title: string; description: string | null; summary: string | null } | null };
 };
 
 export async function tagPage(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<(TopicPage & { kind: string }) | null> {
@@ -82,10 +86,13 @@ export async function companyPage(slug: string, locale: Locale = DEFAULT_LOCALE)
     Topics.companyPinIds(entry.id, new Date(), { upcoming: UPCOMING, past: PAST }, await timelineMinConfidence()),
   ]);
   if (!row) return null;
+  const hubId = await hubPinOfCompany(entry.id);
+  const hubRow = hubId ? (await Pins.queryByIds([hubId])).pins[0] : null;
+  cacheTag(...(hubId ? [TAGS.pin(hubId)] : []));
   const page = await topicPins(row.name, ids, index, locale, { company: row.name });
   return {
     ...page,
-    company: { name: row.name, description: row.description, logoUrl: row.logoUrl, wikiUrl: row.wikiUrl, websiteUrl: row.websiteUrl },
+    company: { name: row.name, description: row.description, logoUrl: row.logoUrl, wikiUrl: row.wikiUrl, websiteUrl: row.websiteUrl, hub: hubId && hubRow ? { id: hubId, title: hubRow.title, description: hubRow.description ?? null, summary: hubRow.longFormSummary ?? null } : null },
   };
 }
 
@@ -133,4 +140,68 @@ function tally(names: string[], self?: string): [string, number][] {
     if (key !== self?.toLowerCase() && key !== 'thread') counts.set(key, (counts.get(key) ?? 0) + 1);
   }
   return [...counts].sort((a, b) => b[1] - a[1]);
+}
+
+export type CompanyProductPage = {
+  company: { name: string; hubPinId: number | null };
+  product: HubProductJson;
+  ancestors: HubProductJson[];
+  upcoming: PinJson[];
+  past: PinJson[];
+  // Its major events, oldest first, with the full pin for the picture.
+  milestones: { label: string; pin: PinJson }[];
+  // The pins its overview cites, by number (see overviewParagraphs).
+  cited: { id: number; title: string }[];
+};
+
+// A product of a company's hub tree: its sub-products and every pin under it.
+export async function companyProductPage(companySlug: string, productSlugged: string, locale: Locale = DEFAULT_LOCALE): Promise<CompanyProductPage | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.timeline);
+  const entry = (await topicIndex()).companies.find((c) => c.slug === companySlug);
+  if (!entry) return null;
+  const tree = await companyHubTree(entry.id, entry.name);
+  const found = findProduct(tree.products, productSlugged);
+  if (!found) return null;
+  const listed = branchPins(found.product);
+  cacheTag(...listed.map((p) => TAGS.pin(p.id)));
+  const loaded = toJson<PinJson[]>((await Pins.queryByIds(listed.map((p) => p.id))).pins);
+  const byId = new Map(loaded.map((p) => [p.id, p]));
+  const pins = await localizePins(listed.flatMap((p) => (byId.has(p.id) ? [byId.get(p.id)!] : [])), locale);
+  const { cited: citedIds } = overviewParagraphs(found.product.overview);
+  const factIds = found.product.facts.flatMap((f) => (f.pinId ? [f.pinId] : []));
+  const allCited = [...new Set([...citedIds, ...factIds])];
+  const titles = allCited.length ? await db.query<{ id: number; title: string }>(`SELECT "id", "title" FROM "Pin" WHERE "id" = ANY($1::integer[]) AND "utcDeletedDateTime" IS NULL`, [allCited]) : [];
+  cacheTag(...allCited.map((id) => TAGS.pin(id)));
+  const now = Date.now();
+  return {
+    milestones: branchMilestones(found.product).flatMap((m) => (byId.has(m.pin.id) ? [{ label: m.label, pin: pins.find((p) => p.id === m.pin.id) ?? byId.get(m.pin.id)! }] : [])),
+    cited: allCited.flatMap((id) => titles.filter((t) => t.id === id)),
+    company: { name: entry.name, hubPinId: await hubPinOfCompany(entry.id) },
+    product: found.product,
+    ancestors: found.ancestors,
+    upcoming: pins.filter((p) => new Date(p.utcStartDateTime).getTime() >= now),
+    past: pins.filter((p) => new Date(p.utcStartDateTime).getTime() < now).reverse(),
+  };
+}
+
+// Everything a company's hub landing page draws: the company page, its product tree.
+export async function companyHubView(slug: string, locale: Locale = DEFAULT_LOCALE): Promise<{ page: CompanyTopicPage; tree: CompanyHubJson; milestones: { label: string; productName: string; pin: PinJson }[] } | null> {
+  'use cache';
+  cacheLife('hours');
+  const page = await companyPage(slug, locale);
+  if (!page?.company.hub) return null;
+  const entry = (await topicIndex()).companies.find((c) => c.slug === slug);
+  if (!entry) return null;
+  const tree = await companyHubTree(entry.id, page.name);
+  const listed = (products: CompanyHubJson['products']): number[] => products.flatMap((p) => [...p.pins.map((x) => x.id), ...listed(p.children)]);
+  cacheTag(TAGS.timeline, TAGS.pin(page.company.hub.id), ...listed(tree.products).map((id) => TAGS.pin(id)));
+  // The major events across every product, oldest first.
+  const events = tree.products.flatMap(branchMilestones).sort((a, b) => a.pin.utcStartDateTime.localeCompare(b.pin.utcStartDateTime));
+  const loaded = events.length ? toJson<PinJson[]>((await Pins.queryByIds(events.map((e) => e.pin.id))).pins) : [];
+  const localized = await localizePins(loaded, locale);
+  const byId = new Map(localized.map((p) => [p.id, p]));
+  const milestones = events.flatMap((e) => (byId.has(e.pin.id) ? [{ label: e.label, productName: e.product.name, pin: byId.get(e.pin.id)! }] : []));
+  return { page, tree, milestones };
 }

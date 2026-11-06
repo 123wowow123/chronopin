@@ -1221,6 +1221,12 @@ const fr: Messages = {
     titlePlanned: 'Annoncés pour une diffusion pas encore terminée',
   },
   thread: {
+    productTimelineHeading: 'Chronologie des produits',
+    productTimelineNote: 'Chaque barre va de la première épingle datée d\'un produit à la plus récente ; chaque point est une épingle et les grands points marquent ses événements majeurs.',
+    companyTreeHeading: 'Produits et chronologies',
+    companyTreeNote: 'Cette page d\'accueil est tenue à jour et n\'apparaît pas dans la chronologie principale.',
+    companyTreeAll: 'Toutes les épingles de {name}',
+    companyTreeEmpty: 'Aucun produit n\'a encore été ajouté.',
     moveFailed: 'Impossible de la déplacer. Veuillez réessayer.',
     replyKind: 'Cette réponse est',
     replyNext: 'Étape suivante',

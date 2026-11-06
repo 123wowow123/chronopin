@@ -1426,6 +1426,12 @@ const ar: Messages = {
     titlePlanned: 'معلَن عن عرض لم ينتهِ بعد',
   },
   thread: {
+    productTimelineHeading: 'الجدول الزمني للمنتجات',
+    productTimelineNote: 'يمتد كل شريط من أول دبوس مؤرَّخ عن المنتج إلى أحدثها؛ كل نقطة دبوس، والنقاط الكبيرة تشير إلى أبرز أحداثه.',
+    companyTreeHeading: 'المنتجات والجداول الزمنية',
+    companyTreeNote: 'تُحدَّث صفحة الهبوط هذه باستمرار ولا تظهر في الجدول الزمني الرئيسي.',
+    companyTreeAll: 'جميع دبابيس {name}',
+    companyTreeEmpty: 'لم تُضف أي منتجات بعد.',
     moveFailed: 'تعذّر النقل. يُرجى المحاولة مجددًا.',
     replyKind: 'هذا الرد',
     replyNext: 'الخطوة التالية',

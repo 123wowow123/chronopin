@@ -1221,6 +1221,12 @@ const vi: Messages = {
     titlePlanned: 'Được công bố cho một loạt phim chưa kết thúc',
   },
   thread: {
+    productTimelineHeading: 'Dòng thời gian sản phẩm',
+    productTimelineNote: 'Mỗi thanh chạy từ ghim có ngày đầu tiên về một sản phẩm đến ghim mới nhất; mỗi chấm là một ghim, chấm lớn đánh dấu sự kiện quan trọng.',
+    companyTreeHeading: 'Sản phẩm và dòng thời gian',
+    companyTreeNote: 'Trang chủ này luôn được cập nhật và không xuất hiện trên dòng thời gian chính.',
+    companyTreeAll: 'Tất cả ghim của {name}',
+    companyTreeEmpty: 'Chưa có sản phẩm nào được thêm.',
     moveFailed: 'Không di chuyển được. Vui lòng thử lại.',
     replyKind: 'Phản hồi này là',
     replyNext: 'Bước tiếp theo',

@@ -1,3 +1,5 @@
+import { companyHubTree, hubCompanyOfPin } from '../model/companyHub';
+import type { CompanyHubJson } from '@/lib/companyHub';
 import { factoryForPin } from '../model/pinFactory';
 import { forecastSlugsForNames } from '../model/industryForecast';
 // Data for server-rendered pages, cached with Cache Components. Every function
@@ -427,6 +429,19 @@ export async function threadPins(id: number, locale: Locale = DEFAULT_LOCALE): P
   const pins = toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
   cacheTag(TAGS.pin(id), ...pins.map((p) => TAGS.pin(p.id)));
   return localizePins(pins, locale);
+}
+
+// The company tree when this pin is a company's hub pin, else null. Tagged
+// with the hub pin and every pin the tree lists, so changing any of them redraws it.
+export async function pinCompanyHub(id: number): Promise<CompanyHubJson | null> {
+  'use cache';
+  cacheLife('hours');
+  const hub = await hubCompanyOfPin(id);
+  if (!hub) return null;
+  const tree = await companyHubTree(hub.companyId, hub.companyName);
+  const pinIds = (products: CompanyHubJson['products']): number[] => products.flatMap((p) => [...p.pins.map((x) => x.id), ...pinIds(p.children)]);
+  cacheTag(TAGS.pin(id), ...pinIds(tree.products).map((n) => TAGS.pin(n)));
+  return tree;
 }
 
 // The pins in a pin's confirmed duplicate group, itself included, best ranked

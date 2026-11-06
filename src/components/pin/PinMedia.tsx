@@ -40,6 +40,7 @@ export function PinMedia({
   sizes,
   poster,
   autoplay,
+  slice,
   onMissing,
 }: {
   medium: MediumJson;
@@ -50,6 +51,7 @@ export function PinMedia({
   sizes: string;
   poster?: boolean;
   autoplay?: boolean;
+  slice?: ImageSlice;
   onMissing?: () => void;
 }) {
   const type = String(medium.type);
@@ -72,8 +74,26 @@ export function PinMedia({
     return null;
   }
   return (
-    <ImageMedium medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} onMissing={onMissing} />
+    <ImageMedium medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} slice={slice} onMissing={onMissing} />
   );
+}
+
+// One square-ish piece of a very tall picture (an infographic): piece `index`
+// of `count` equal horizontal bands.
+type ImageSlice = { index: number; count: number };
+
+// A picture this much taller than wide is an infographic: it is cut into
+// bands (see tallSlices) instead of scrolling inside the frame.
+const TALL_RATIO = 2.2;
+
+// How many equal, roughly square bands a medium is shown as: 1 unless it is
+// an image far taller than wide.
+function tallSlices(medium: MediumJson): number {
+  if (String(medium.type) !== '1') return 1;
+  const w = medium.thumbWidth || medium.originalWidth;
+  const h = medium.thumbHeight || medium.originalHeight;
+  if (!w || !h || h / w < TALL_RATIO) return 1;
+  return Math.max(2, Math.round(h / w));
 }
 
 function ImageMedium({
@@ -83,6 +103,7 @@ function ImageMedium({
   external,
   priority,
   sizes,
+  slice,
   onMissing,
 }: {
   medium: MediumJson;
@@ -91,6 +112,7 @@ function ImageMedium({
   external?: boolean;
   priority?: boolean;
   sizes: string;
+  slice?: ImageSlice;
   onMissing?: () => void;
 }) {
   const [useOriginal, setUseOriginal] = useState(!medium.thumbName);
@@ -157,16 +179,28 @@ function ImageMedium({
     />
   );
 
+  // A band: the whole picture, count bands tall, shifted up behind a window one band high.
+  const shown = slice ? (
+    <div
+      className="relative overflow-hidden [&_img]:absolute [&_img]:left-0 [&_img]:top-[var(--band-top)]"
+      style={{ aspectRatio: `${width} / ${height / slice.count}`, '--band-top': `${-slice.index * 100}%` } as React.CSSProperties}
+    >
+      {image}
+    </div>
+  ) : (
+    image
+  );
+
   if (!href) {
-    return image;
+    return shown;
   }
   return external ? (
     <Anchor href={href} target="_blank" rel="noopener" className="block">
-      {image}
+      {shown}
     </Anchor>
   ) : (
     <Link href={href} className="block">
-      {image}
+      {shown}
     </Link>
   );
 }
@@ -254,10 +288,16 @@ export function PinMediaFrame({
   // by an effect: the server would draw an empty frame (and the place row a
   // missing picture puts above it), and the card would grow by a picture once
   // the browser hydrated and moved on to the next medium.
+  const selectable = selectableProp || card;
   const slides = videosFirst(media)
     .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
-    .filter((slide) => drawable(slide.medium, poster) && !missing.has(slide.key));
-  const selectable = selectableProp || card;
+    .filter((slide) => drawable(slide.medium, poster) && !missing.has(slide.key))
+    // On the pin's own page a tall infographic becomes a run of slides, one band each.
+    .flatMap(({ medium, key }): { medium: MediumJson; key: string; slice?: ImageSlice; source: string }[] => {
+      const count = selectableProp && !card ? tallSlices(medium) : 1;
+      if (count === 1) return [{ medium, key, source: key }];
+      return Array.from({ length: count }, (_, index) => ({ medium, key: `${key}#${index}`, slice: { index, count }, source: key }));
+    });
   const active = (selectable ? slides.find((slide) => slide.key === activeKey) : undefined) ?? slides[0];
   // Only what can be reached is drawn: every slide when the dots are there, the
   // first one otherwise.
@@ -407,7 +447,7 @@ export function PinMediaFrame({
           overflow-x-clip keeps a dragged slide from widening the page. */}
       <div ref={dots ? frameRef : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
         {labelled ? overlay : null}
-        {shownSlides.map(({ medium, key }, i) => {
+        {shownSlides.map(({ medium, key, slice, source }, i) => {
           const shown = key === active.key;
           // A hidden player is unmounted so it stops; other hidden media stay mounted.
           if (!shown && (playing(medium) || (card && String(medium.type) === '2'))) {
@@ -415,7 +455,7 @@ export function PinMediaFrame({
           }
           // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
           // so the dots stay above a card's cut-off.
-          const capped = dots && !card && !playing(medium);
+          const capped = dots && !card && !playing(medium) && !slice;
           return (
             <div
               key={key}
@@ -425,7 +465,7 @@ export function PinMediaFrame({
                 .join(' ') || undefined}
               style={shown && dragX ? { transform: `translateX(${dragX}px)` } : undefined}
             >
-              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
+              <MediaSlide medium={medium} mediumKey={source} slice={slice} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
             </div>
           );
         })}

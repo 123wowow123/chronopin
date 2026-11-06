@@ -1222,6 +1222,12 @@ const en = {
     titlePlanned: 'Announced for a run still to finish',
   },
   thread: {
+    productTimelineHeading: 'Product timeline',
+    productTimelineNote: 'Each bar runs from the first dated pin about a product to its latest; every dot is a pin and the large dots mark its major events.',
+    companyTreeHeading: 'Products and timelines',
+    companyTreeNote: 'This landing page is kept up to date and stays off the main timeline.',
+    companyTreeAll: 'All {name} pins',
+    companyTreeEmpty: 'No products have been added yet.',
     moveFailed: 'Could not move it. Please try again.',
     replyKind: 'This reply is',
     replyNext: 'Next step',

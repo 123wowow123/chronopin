@@ -1212,6 +1212,12 @@ const pt: Messages = {
     titlePlanned: 'Anunciados para uma exibição ainda não concluída',
   },
   thread: {
+    productTimelineHeading: 'Linha do tempo dos produtos',
+    productTimelineNote: 'Cada barra vai do primeiro pin datado sobre um produto até o mais recente; cada ponto é um pin e os pontos grandes marcam os principais eventos.',
+    companyTreeHeading: 'Produtos e linhas do tempo',
+    companyTreeNote: 'Esta página principal é mantida atualizada e não aparece na linha do tempo principal.',
+    companyTreeAll: 'Todos os pins de {name}',
+    companyTreeEmpty: 'Nenhum produto foi adicionado ainda.',
     moveFailed: 'Não foi possível mover. Tente novamente.',
     replyKind: 'Esta resposta é',
     replyNext: 'Próximo passo',

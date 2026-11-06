@@ -1228,6 +1228,12 @@ const hi: Messages = {
     titlePlanned: 'अभी जारी सीरीज़ के लिए घोषित',
   },
   thread: {
+    productTimelineHeading: 'उत्पाद टाइमलाइन',
+    productTimelineNote: 'हर बार किसी उत्पाद के पहले तारीख़ वाले पिन से सबसे नए पिन तक जाता है; हर बिंदु एक पिन है और बड़े बिंदु प्रमुख घटनाएँ दिखाते हैं।',
+    companyTreeHeading: 'उत्पाद और टाइमलाइन',
+    companyTreeNote: 'यह लैंडिंग पेज लगातार अपडेट होता है और मुख्य टाइमलाइन में नहीं दिखता।',
+    companyTreeAll: '{name} के सभी पिन',
+    companyTreeEmpty: 'अभी तक कोई उत्पाद नहीं जोड़ा गया है।',
     moveFailed: 'इसे मूव नहीं किया जा सका। कृपया फिर से कोशिश करें।',
     replyKind: 'यह जवाब है',
     replyNext: 'अगला चरण',

@@ -1222,6 +1222,12 @@ const id: Messages = {
     titlePlanned: 'Diumumkan untuk tayangan yang belum selesai',
   },
   thread: {
+    productTimelineHeading: 'Lini masa produk',
+    productTimelineNote: 'Setiap batang berjalan dari pin bertanggal pertama tentang sebuah produk hingga yang terbaru; setiap titik adalah pin dan titik besar menandai peristiwa penting.',
+    companyTreeHeading: 'Produk dan lini masa',
+    companyTreeNote: 'Halaman utama ini selalu diperbarui dan tidak muncul di lini masa utama.',
+    companyTreeAll: 'Semua pin {name}',
+    companyTreeEmpty: 'Belum ada produk yang ditambahkan.',
     moveFailed: 'Gagal memindahkan. Silakan coba lagi.',
     replyKind: 'Balasan ini adalah',
     replyNext: 'Langkah berikutnya',

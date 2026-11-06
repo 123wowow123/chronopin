@@ -1215,6 +1215,12 @@ const zh: Messages = {
     titlePlanned: '尚未播完的剧集已公布的总集数',
   },
   thread: {
+    productTimelineHeading: '产品时间线',
+    productTimelineNote: '每条横条从某产品的第一枚有日期的图钉延伸到最新一枚；每个点是一枚图钉，大点标记重大事件。',
+    companyTreeHeading: '产品与时间线',
+    companyTreeNote: '此主页会持续更新，不会出现在主时间线中。',
+    companyTreeAll: '{name} 的所有图钉',
+    companyTreeEmpty: '尚未添加任何产品。',
     moveFailed: '无法移动，请重试。',
     replyKind: '此回复是',
     replyNext: '下一步',

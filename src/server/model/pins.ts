@@ -189,6 +189,7 @@ export default class Pins extends BasePins<Pin> {
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
         AND ${clearsBarOrDayEmpty('p', '$4', '$7::text')}
+        AND ${notCompanyHub('p')}
         AND ${withinRing('p', 5, 6)}
         AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ${clearsBar('timelineOther', '$4')} AND ${withinRing('timelineOther', 5, 6)}`)}`,
       [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null, timeZone],
@@ -774,6 +775,10 @@ const predictedPinOf = (as: string) =>
 // Whether pin "as" clears the timeline's confidence bar at parameter "param"
 // (null for no bar). A predicted pin always does: its date is an estimate by
 // design, which the date-confidence cap (0238) would otherwise score under it.
+// Whether pin "as" is not a company's hub pin (CompanyHub, 0243): a hub is a
+// living landing page, so the timeline's pages, counts and day popups leave it out.
+export const notCompanyHub = (as: string) => `NOT EXISTS (SELECT 1 FROM "CompanyHub" AS "ch" WHERE "ch"."pinId" = "${as}"."id")`;
+
 export const clearsBar = (as: string, param: string) =>
   `(${param}::integer IS NULL OR COALESCE(${pinConfidenceOf(as)}, ${param}) >= ${param} OR ${predictedPinOf(as)})`;
 
@@ -941,6 +946,7 @@ function queryPage(
         ${onlyFavorites ? `AND "p"."id" IN (${watchedPinIdsOf('$1')})` : ''}
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ${onlyFavorites ? clearsBar('p', '$6') : clearsBarOrDayEmpty('p', '$6', '$9::text')}
+        AND ${notCompanyHub('p')}
         AND ${withinRing('p', 7, 8)}
         ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ${clearsBar('timelineOther', '$6')} AND ${withinRing('timelineOther', 7, 8)}`)})`}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
@@ -966,6 +972,7 @@ function queryBetween(start: Date, end: Date, userId: number, limit: number, cre
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ${clearsBar('p', '$6')}
+        AND ${notCompanyHub('p')}
         AND ${withinRing('p', 7, 8)}
       ORDER BY "p"."utcStartDateTime", "p"."id"
       LIMIT $5))

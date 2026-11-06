@@ -1215,6 +1215,12 @@ const ja: Messages = {
     titlePlanned: 'まだ終わっていない放送の予定話数',
   },
   thread: {
+    productTimelineHeading: '製品タイムライン',
+    productTimelineNote: '各バーは製品に関する最初の日付付きピンから最新のピンまでを表します。点は1つのピンで、大きな点は主要な出来事です。',
+    companyTreeHeading: '製品とタイムライン',
+    companyTreeNote: 'このランディングページは常に更新され、メインのタイムラインには表示されません。',
+    companyTreeAll: '{name} のピンをすべて見る',
+    companyTreeEmpty: '製品はまだ追加されていません。',
     moveFailed: '移動できませんでした。もう一度お試しください。',
     replyKind: 'この返信は',
     replyNext: '次のステップ',

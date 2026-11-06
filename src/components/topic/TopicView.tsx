@@ -3,6 +3,7 @@ import Link from '@/components/ui/Link';
 import { JsonLd } from '@/components/JsonLd';
 import { CalendarSubscribe } from '@/components/pin/CalendarSubscribe';
 import { CardGrid } from '@/components/pin/CardGrid';
+import { LandingTile } from '@/components/pin/LandingTile';
 import { PinCard } from '@/components/pin/PinCard';
 import { siteName } from '@/lib/appConfig';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -47,8 +48,6 @@ export function TopicView({
 }) {
   const company = 'company' in page ? page.company : undefined;
   const hub = kind === 'tag' ? { name: t('topic.tags'), path: '/tags' } : { name: t('topic.companies'), path: '/companies' };
-  const now = new Date();
-  const todayKey = dayKeyIn(now, timeZone);
   const next = page.upcoming[0];
   const latest = page.past[0];
 
@@ -112,13 +111,26 @@ export function TopicView({
         </p>
       </header>
 
+      <TopicBody page={page} timeZone={timeZone} video={video} t={t} />
+    </main>
+  );
+}
+
+// The pins a tag or company page lists (upcoming soonest first, then the
+// recent past) and its neighbouring tags and companies. A company's hub pin
+// page shows this in place of "More like this".
+export function TopicBody({ page, timeZone, video, t, tiles = false }: { page: TopicPage; timeZone: string; video: TimelineVideoSetting; t: Translator; tiles?: boolean }) {
+  const now = new Date();
+  const todayKey = dayKeyIn(now, timeZone);
+  return (
+    <>
       <TimelineVideoProvider setting={video}>
-        <PinSection id="upcoming" heading={t('topic.upcoming')} pins={page.upcoming} timeZone={timeZone} now={now} todayKey={todayKey} />
-        <PinSection id="recent" heading={t('topic.past')} pins={page.past} timeZone={timeZone} now={now} todayKey={todayKey} />
+        <PinSection id="upcoming" heading={t('topic.upcoming')} pins={page.upcoming} timeZone={timeZone} now={now} todayKey={todayKey} tiles={tiles} t={t} />
+        <PinSection id="recent" heading={t('topic.past')} pins={page.past} timeZone={timeZone} now={now} todayKey={todayKey} tiles={tiles} t={t} />
       </TimelineVideoProvider>
 
       {page.relatedTags.length || page.relatedCompanies.length ? (
-        <div className="mt-16 grid gap-8 border-t border-line pt-10 md:grid-cols-2">
+        <div className={`mt-16 grid gap-8 border-t border-line pt-10 ${page.relatedTags.length && page.relatedCompanies.length ? 'md:grid-cols-2' : ''}`}>
           {page.relatedTags.length ? (
             <TopicLinks heading={t('topic.relatedTags')} links={page.relatedTags.map((tag) => ({ href: tagPath(tag.name), label: tagLabel(t, tag), pins: tag.pins }))} />
           ) : null}
@@ -127,7 +139,7 @@ export function TopicView({
           ) : null}
         </div>
       ) : null}
-    </main>
+    </>
   );
 }
 
@@ -147,8 +159,24 @@ function PinDate({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
   return <time dateTime={pin.allDay ? day : pin.utcStartDateTime}>{dateFormat(INTL_LOCALES[t.locale], { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${day}T00:00:00Z`))}</time>;
 }
 
-export function PinSection({ id, heading, pins, timeZone, now, todayKey }: { id: string; heading: string; pins: PinJson[]; timeZone: string; now: Date; todayKey: string }) {
+export function PinSection({ id, heading, pins, timeZone, now, todayKey, tiles = false, t }: { id: string; heading: string; pins: PinJson[]; timeZone: string; now: Date; todayKey: string; tiles?: boolean; t?: Translator }) {
   if (!pins.length) return null;
+  if (tiles && t) {
+    return (
+      <section aria-labelledby={`${id}-heading`} className="mt-12 first:mt-0">
+        <h2 id={`${id}-heading`} className="mb-5 text-2xl font-semibold tracking-tight">
+          {heading}
+        </h2>
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {pins.map((p) => (
+            <li key={p.id}>
+              <LandingTile pin={p} timeZone={timeZone} t={t} upcoming={new Date(p.utcStartDateTime) >= now} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  }
   return (
     <section aria-labelledby={`${id}-heading`} className="mt-10 first:mt-0">
       <h2 id={`${id}-heading`} className="mb-4 text-xl font-semibold tracking-tight">

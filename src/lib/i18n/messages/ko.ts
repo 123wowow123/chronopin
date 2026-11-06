@@ -1215,6 +1215,12 @@ const ko: Messages = {
     titlePlanned: '아직 끝나지 않은 방영분의 예정 화수',
   },
   thread: {
+    productTimelineHeading: '제품 타임라인',
+    productTimelineNote: '각 막대는 제품에 대한 첫 날짜 핀부터 최신 핀까지를 나타냅니다. 점 하나가 핀 하나이며 큰 점은 주요 사건입니다.',
+    companyTreeHeading: '제품과 타임라인',
+    companyTreeNote: '이 랜딩 페이지는 계속 업데이트되며 메인 타임라인에는 표시되지 않습니다.',
+    companyTreeAll: '{name}의 모든 핀',
+    companyTreeEmpty: '아직 추가된 제품이 없습니다.',
     moveFailed: '이동하지 못했습니다. 다시 시도해 주세요.',
     replyKind: '이 답글은',
     replyNext: '다음 단계',

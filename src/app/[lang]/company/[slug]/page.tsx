@@ -6,8 +6,9 @@ import { siteName } from '@/lib/appConfig';
 import { localizePath } from '@/lib/i18n/config';
 import { alternates, getT } from '@/lib/i18n/server';
 import { companyPath, topicSlug } from '@/lib/topics';
+import { CompanyHubView } from '@/components/topic/CompanyHubView';
 import { timelineVideo } from '@/server/services/pages';
-import { companyPage } from '@/server/services/topics';
+import { companyHubView, companyPage } from '@/server/services/topics';
 import { viewerTimeZone } from '@/server/viewer';
 import { siteCardImages } from '@/server/services/shareCard';
 
@@ -56,6 +57,12 @@ async function CompanyContent({ params }: Pick<Props, 'params'>) {
   if (!page) notFound();
   // One URL per company: /company/Nintendo goes to /company/nintendo.
   if (raw !== slug) permanentRedirect(localizePath(companyPath(page.name), t.locale));
+  // A company with a hub pin gets its landing page, with a card for each product.
+  const hubView = page.company.hub ? await companyHubView(slug, t.locale) : null;
+  if (hubView) {
+    const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
+    return <CompanyHubView page={hubView.page} tree={hubView.tree} milestones={hubView.milestones} timeZone={timeZone} video={video} t={t} description={t('topic.companyDescription', { name: page.name, site: siteName })} />;
+  }
   const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);
   const label = page.name;
   return (

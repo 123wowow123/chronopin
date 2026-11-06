@@ -1222,6 +1222,12 @@ const ms: Messages = {
     titlePlanned: 'Diumumkan untuk siri yang belum tamat',
   },
   thread: {
+    productTimelineHeading: 'Garis masa produk',
+    productTimelineNote: 'Setiap bar bermula dari pin bertarikh pertama tentang sesuatu produk hingga yang terkini; setiap titik ialah pin dan titik besar menandakan peristiwa utama.',
+    companyTreeHeading: 'Produk dan garis masa',
+    companyTreeNote: 'Halaman utama ini sentiasa dikemas kini dan tidak muncul dalam garis masa utama.',
+    companyTreeAll: 'Semua pin {name}',
+    companyTreeEmpty: 'Belum ada produk ditambah.',
     moveFailed: 'Tidak dapat memindahkannya. Sila cuba lagi.',
     replyKind: 'Balasan ini ialah',
     replyNext: 'Langkah seterusnya',

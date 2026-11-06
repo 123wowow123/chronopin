@@ -90,6 +90,11 @@ import { PinWeather } from '@/components/pin/PinWeather';
 import { RelatedPins } from '@/components/pin/RelatedPins';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
+import { TopicBody } from '@/components/topic/TopicView';
+import { companyPage } from '@/server/services/topics';
+import { topicSlug } from '@/lib/topics';
+import { MediaMosaic } from '@/components/pin/MediaMosaic';
+import { CompanyTree } from '@/components/pin/CompanyTree';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadList } from '@/components/pin/ThreadList';
 import { SideNoteToggle } from '@/components/pin/SideNoteToggle';
@@ -119,7 +124,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -289,7 +294,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           ) : null}
 
           <Suspense fallback={null}>
-            <Thread pin={pin} />
+            <ThreadOrCompanyTree pin={pin} />
           </Suspense>
 
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
@@ -364,7 +369,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
       </div>
 
       <Suspense fallback={null}>
-        <Related pin={pin} />
+        <RelatedOrCompanyPins pin={pin} />
       </Suspense>
     </>
   );
@@ -973,6 +978,13 @@ async function ThreadAwareTags({ pin, className }: { pin: PinJson; className?: s
 const THREAD_INDENT = 16;
 const MAX_THREAD_INDENT = 4;
 
+// A company's hub pin shows its product tree; every other pin its thread.
+async function ThreadOrCompanyTree({ pin }: { pin: PinJson }) {
+  const tree = await pinCompanyHub(pin.id);
+  if (tree) return <CompanyTree tree={tree} t={await getT()} />;
+  return <Thread pin={pin} />;
+}
+
 async function Thread({ pin }: { pin: PinJson }) {
   const t = await getT();
   const pins = await threadPins(pin.id, t.locale);
@@ -1050,6 +1062,17 @@ async function PinCommentsSection({ pinId }: { pinId: number }) {
 
 // "More like this" loads in the browser once scrolled to (RelatedPins), so the
 // page never waits on it.
+// A company's hub pin lists the company's pins where other pins show "More like this".
+async function RelatedOrCompanyPins({ pin }: { pin: PinJson }) {
+  const hub = await pinCompanyHub(pin.id);
+  if (hub) {
+    const [t, timeZone, video] = await Promise.all([getT(), viewerTimeZone(), timelineVideo()]);
+    const page = await companyPage(topicSlug(hub.companyName), t.locale);
+    if (page) return <div className="mt-10"><MediaMosaic pins={[...page.past, ...page.upcoming]} max={19} className="mb-10" /><TopicBody page={page} timeZone={timeZone} video={video} t={t} /></div>;
+  }
+  return <Related pin={pin} />;
+}
+
 async function Related({ pin }: { pin: PinJson }) {
   const t = await getT();
   const [timeZone, video] = await Promise.all([viewerTimeZone(), timelineVideo()]);

@@ -1221,6 +1221,12 @@ const de: Messages = {
     titlePlanned: 'Angekündigt für eine noch laufende Staffel',
   },
   thread: {
+    productTimelineHeading: 'Produktzeitleiste',
+    productTimelineNote: 'Jeder Balken reicht vom ersten datierten Pin zu einem Produkt bis zum neuesten; jeder Punkt ist ein Pin, große Punkte markieren die wichtigsten Ereignisse.',
+    companyTreeHeading: 'Produkte und Zeitleisten',
+    companyTreeNote: 'Diese Übersichtsseite wird laufend aktualisiert und erscheint nicht in der Haupt-Zeitleiste.',
+    companyTreeAll: 'Alle Pins zu {name}',
+    companyTreeEmpty: 'Es wurden noch keine Produkte hinzugefügt.',
     moveFailed: 'Verschieben fehlgeschlagen. Bitte versuche es erneut.',
     replyKind: 'Diese Antwort ist',
     replyNext: 'Nächster Schritt',

@@ -1212,6 +1212,12 @@ const it: Messages = {
     titlePlanned: 'Annunciati per una serie non ancora conclusa',
   },
   thread: {
+    productTimelineHeading: 'Cronologia dei prodotti',
+    productTimelineNote: 'Ogni barra va dal primo pin datato su un prodotto al più recente; ogni punto è un pin e i punti grandi segnano gli eventi principali.',
+    companyTreeHeading: 'Prodotti e cronologie',
+    companyTreeNote: 'Questa pagina principale è sempre aggiornata e non compare nella cronologia principale.',
+    companyTreeAll: 'Tutti i pin di {name}',
+    companyTreeEmpty: 'Non è stato ancora aggiunto alcun prodotto.',
     moveFailed: 'Impossibile spostarlo. Riprova.',
     replyKind: 'Questa risposta è',
     replyNext: 'Passo successivo',

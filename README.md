@@ -521,3 +521,7 @@ ai personality index, make panel
 
 add side panel for and other interesting panels on this site
 https://epoch.ai/data-insights/ai-datacenter-power
+
+
+
+add menu items with largest discount on special deal
