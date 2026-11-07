@@ -95,13 +95,13 @@ export default class PinPhoto {
     return Number(row.n);
   }
 
-  static async create(input: { pinId: number; userId: number; blobName: string; width: number; height: number; caption?: string | null; stars?: number | null; tags?: PhotoTag[] }) {
-    const [row] = await db.query<{ id: number }>(
-      `INSERT INTO "PinPhoto" ("pinId", "userId", "blobName", "width", "height", "caption", "stars", "tags")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb) RETURNING "id"`,
-      [input.pinId, input.userId, input.blobName, input.width, input.height, input.caption?.trim() || null, input.stars ?? null, JSON.stringify(input.tags ?? [])],
+  static async create(input: { pinId: number; userId: number; blobName: string; width: number; height: number; caption?: string | null; stars?: number | null; tags?: PhotoTag[]; reviewId?: number }, query: db.QueryFn = db.query) {
+    const [row] = await query<{ id: number }>(
+      `INSERT INTO "PinPhoto" ("pinId", "userId", "blobName", "width", "height", "caption", "stars", "tags", "reviewId")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb, $9) RETURNING "id"`,
+      [input.pinId, input.userId, input.blobName, input.width, input.height, input.caption?.trim() || null, input.stars ?? null, JSON.stringify(input.tags ?? []), input.reviewId ?? null],
     );
-    const [photo] = await db.query<PinPhotoJson & Row>(`${SELECT} WHERE "p"."id" = $1`, [row.id, input.userId]);
+    const [photo] = await query<PinPhotoJson & Row>(`${SELECT} WHERE "p"."id" = $1`, [row.id, input.userId]);
     return photo;
   }
 

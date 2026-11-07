@@ -30,15 +30,45 @@
           },
           {
             "name": "Wagyu longaniza",
-            "price": 11
+            "price": 11,
+            "reviews": [
+              {
+                "provider": "Axios San Diego",
+                "title": "Fort Oak in Mission Hills adds happy hour to its weekday deals",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/08/04/fort-oak-new-happy-hour-mission-hills",
+                "quote": "smoky, sliced sausage",
+                "publishedDate": "2025-08-04",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Baja shrimp cocktail",
-            "price": 13
+            "price": 13,
+            "reviews": [
+              {
+                "provider": "Axios San Diego",
+                "title": "Fort Oak in Mission Hills adds happy hour to its weekday deals",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/08/04/fort-oak-new-happy-hour-mission-hills",
+                "quote": "like a fresh ceviche",
+                "publishedDate": "2025-08-04",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Crispy fried chicken wings",
-            "price": 15
+            "price": 15,
+            "reviews": [
+              {
+                "provider": "Axios San Diego",
+                "title": "Fort Oak in Mission Hills adds happy hour to its weekday deals",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/08/04/fort-oak-new-happy-hour-mission-hills",
+                "quote": "crispy, double-fried wings",
+                "publishedDate": "2025-08-04",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Lemon drop",
@@ -408,7 +438,17 @@
         "items": [
           {
             "name": "Happy Meal",
-            "price": 20
+            "price": 20,
+            "reviews": [
+              {
+                "provider": "Axios San Diego",
+                "title": "Herb & Wood's happy hour, happy meal is worth the hype",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/03/21/happy-meal-happy-hour-herb-wood-encinitas",
+                "quote": "the adult happy meal at Herb & Wood is more my speed.",
+                "publishedDate": "2025-03-21",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Roasted oysters (3)",
@@ -686,7 +726,17 @@
         "items": [
           {
             "name": "Guacamole",
-            "category": "Food"
+            "category": "Food",
+            "reviews": [
+              {
+                "provider": "OB Rag",
+                "title": "Restaurant Review – “Coasterra” on Harbor Island",
+                "sourceUrl": "https://obrag.org/2016/05/restaurant-review-coasterra-on-harbor-island/",
+                "quote": "It was delicious; maybe a wee bit too spicy for some, but we enjoyed the flavor.",
+                "publishedDate": "2016-05-25",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Ceviche Clasico",
@@ -13897,7 +13947,17 @@
             "name": "Burger Parisienne",
             "category": "Food",
             "note": "caramelized onion, american cheese, sauce bordelaise",
-            "price": 12
+            "price": 12,
+            "reviews": [
+              {
+                "provider": "Ranch & Coast Magazine",
+                "title": "March 2026 Dining Diary: San Diego dining favorites from our Food Editor-at-Large",
+                "sourceUrl": "https://ranchandcoast.com/dine/march-2026-dining-diary-san-diego-dining-favorites-from-our-food-editor-at-large/",
+                "quote": "I loved it that much.",
+                "publishedDate": "2026-04-21",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Burger Americaine",
@@ -16399,13 +16459,41 @@
             "name": "Caesar \"Twinkies\"",
             "category": "Bites",
             "note": "romaine lettuce, parmesan, olive oil",
-            "price": 10
+            "price": 10,
+            "reviews": [
+              {
+                "provider": "Ranch & Coast Magazine",
+                "title": "Dining Review: The Whaling Bar",
+                "sourceUrl": "https://ranchandcoast.com/dine/dining-review-the-whaling-bar/",
+                "quote": "the showstopper is a creamy, salty Caesar",
+                "publishedDate": "2024-12-06",
+                "checkedAt": "2026-11-07"
+              },
+              {
+                "provider": "lindsayEats.",
+                "title": "out and about: the whaling bar",
+                "sourceUrl": "https://www.lindsayeats.com/blog/2026/8/22/566ap37r0euqyiftvwqqaumqnzh7hf",
+                "quote": "The caesar salad bites? Yeah, that’s a non negotiable.",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Celery Salad",
             "category": "Bites",
             "note": "dates, walnut, olive oil, pecorino",
-            "price": 10
+            "price": 10,
+            "reviews": [
+              {
+                "provider": "Ranch & Coast Magazine",
+                "title": "Dining Review: The Whaling Bar",
+                "sourceUrl": "https://ranchandcoast.com/dine/dining-review-the-whaling-bar/",
+                "quote": "crisp celery, dates, walnuts, and Pecorino cheese",
+                "publishedDate": "2024-12-06",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "French Fries",

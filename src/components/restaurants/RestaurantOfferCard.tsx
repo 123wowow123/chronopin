@@ -52,7 +52,7 @@ export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: Sc
         <h4 className={styles.offerTitle}>{offer.special.title}</h4>
         <div className={styles.offerStatus}><span>{upcoming ? 'Up next' : 'Available now'}</span><strong>{offer.startsAt ? <time dateTime={offer.startsAt}>Starts {nextTime(offer.startsAt)}</time> : `Until ${offerEndLabel(offer.end)}`}</strong></div>
         {offer.special.description && <p className={styles.cardDescription}>{offer.special.description}</p>}
-        <RestaurantOfferMenu menu={offer.menu} restaurant={card.name} />
+        <RestaurantOfferMenu pinId={pinId} menu={offer.menu} restaurant={card.name} />
         <p className={styles.offerSchedule}>{offer.special.schedule}</p>
         {offer.special.conditions?.length ? <ul className={styles.offerConditions}>{offer.special.conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul> : null}
         {offer.menu?.note && <p className={styles.offerSchedule}>{offer.menu.note}</p>}

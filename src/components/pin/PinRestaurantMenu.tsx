@@ -1,9 +1,10 @@
 import Anchor from '@/components/ui/Anchor';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuState, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuState, restaurantDishImages, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
+import { MenuItemReviews } from './MenuItemReviews';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
-import { FoodPhotoStrip, MenuDishPhoto } from './MenuDishPhoto';
+import { FoodPhotoStrip } from './MenuDishPhoto';
 import styles from './RestaurantMenu.module.css';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 
@@ -11,20 +12,19 @@ function SourceLink({ url, children }: { url: string; children: ReactNode }) {
   return <Anchor href={url} target="_blank" rel="noopener noreferrer" className={styles.source}>{children} <span aria-hidden="true">↗</span></Anchor>;
 }
 
-function MenuContent({ menu }: { menu: RestaurantMenu }) {
+function MenuContent({ menu, pinId }: { menu: RestaurantMenu; pinId: number }) {
   const categories = restaurantMenuCategories(menu.items);
   const amount = (value: number) => restaurantMenuAmount(value, menu.currency);
   const categoryTabs = categories.map((category) => {
     const items = menu.items.filter((item) => (item.category || 'Menu') === category);
-    const gallery = items.flatMap((item) => (item.image ? [item.image] : []));
-    let photoIndex = 0;
+    const gallery = items.filter((item) => restaurantDishImages(item).length);
     return { label: category, content: <div className={styles.menuItems} tabIndex={0} aria-label={`${category} items`}>
       <section className={styles.category}>
         <div className={styles.categoryHeading}><h4 className={styles.categoryTitle}>{category}</h4><span className={styles.categoryCount} aria-label={`${items.length} items`}>{items.length.toString().padStart(2, '0')}</span></div>
         <dl>{items.map((item, index) => (
           <div key={`${item.name}-${index}`} className={styles.item}>
             <dt className={styles.dish}>
-              <span className={styles.dishLine}>{item.image ? <MenuDishPhoto name={item.name} gallery={gallery} index={photoIndex++} /> : null}<span className={styles.dishName}>{item.name}</span><span className={styles.leader} aria-hidden="true" /></span>
+              <span className={styles.dishLine}><MenuItemReviews pinId={pinId} item={item} gallery={gallery}><span className={styles.dishName}>{item.name}</span></MenuItemReviews><span className={styles.leader} aria-hidden="true" /></span>
               {item.note ? <span className={styles.dishNote}>{item.note}</span> : null}
             </dt>
             <dd className={styles.price}>{item.price != null ? amount(item.price) : item.priceLabel || 'Price not published'}</dd>
@@ -70,7 +70,7 @@ function Special({ special }: { special: RestaurantSpecial }) {
 
 // Curated branch-specific information. Missing information is a verification
 // gap, not a claim that a venue has no menu or offers.
-export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: string | null | undefined; today: string }) {
+export async function PinRestaurantMenu({ pinId, sourceUrl, today }: { pinId: number; sourceUrl: string | null | undefined; today: string }) {
   const profile = await restaurantMenuProfileFor(sourceUrl);
   if (!profile) return null;
   const menus = profile.menus.filter((menu) => menu.items.length || menu.pages?.length || menu.coverage === 'link');
@@ -79,8 +79,8 @@ export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: strin
   const lunch = specials.filter((special) => special.kind === 'lunch');
   const other = specials.filter((special) => special.kind === 'other');
   const checked = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${profile.checkedAt}T00:00:00Z`));
-  const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items).flatMap((item) => item.image ? [item.image] : []).map((image) => [image.src, image])).values()];
-  const tabs = menus.map((menu) => ({ label: menu.label, content: <MenuContent menu={menu} /> }));
+  const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items).filter((item) => restaurantDishImages(item).length).map((item) => [restaurantDishImages(item)[0].src, item])).values()];
+  const tabs = menus.map((menu) => ({ label: menu.label, content: <MenuContent menu={menu} pinId={pinId} /> }));
   if (lunch.length) tabs.push({ label: 'Lunch specials', content: <div>
     <h3 className={styles.menuTitle}>Lunch specials</h3>
     <div className={styles.offers}>{lunch.map((special) => <Special key={special.title} special={special} />)}</div>
@@ -98,7 +98,7 @@ export async function PinRestaurantMenu({ sourceUrl, today }: { sourceUrl: strin
       </div>
       <div className={styles.body}>
         {rescrapeCandidate ? <p role="status" className={styles.update}>Update due. Showing the last verified menu and specials; check the restaurant’s links for the latest details.</p> : null}
-        {dishPhotos.length ? <FoodPhotoStrip images={dishPhotos} /> : null}
+        {dishPhotos.length ? <FoodPhotoStrip items={dishPhotos} pinId={pinId} /> : null}
         <RestaurantMenuTabs tabs={tabs} />
         <p className={styles.footer}>Prices use each menu’s currency. Times are local to the restaurant. Confirm availability before visiting.</p>
       </div>

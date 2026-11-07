@@ -224,7 +224,7 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.pinId]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
-          <RestaurantOfferMenu menu={details[restaurant.pinId]?.menu} restaurant={restaurant.name} specials={false} />
+          <RestaurantOfferMenu pinId={restaurant.pinId} menu={details[restaurant.pinId]?.menu} restaurant={restaurant.name} specials={false} />
           {details[restaurant.pinId]?.menu?.note && <p className={styles.offerSchedule}>{details[restaurant.pinId].menu!.note}</p>}
           <p className={styles.topAddress}>{restaurant.address}</p>
           <div className={styles.topLinks}><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>View restaurant ↗</Link><Anchor href={restaurant.websiteUrl} target="_blank" rel="noopener noreferrer">Visit website ↗</Anchor></div>
@@ -253,7 +253,7 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.id]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
-          <RestaurantOfferMenu menu={details[restaurant.id]?.menu} restaurant={restaurant.name} specials={false} />
+          <RestaurantOfferMenu pinId={restaurant.id} menu={details[restaurant.id]?.menu} restaurant={restaurant.name} specials={false} />
           {details[restaurant.id]?.menu?.note && <p className={styles.offerSchedule}>{details[restaurant.id].menu!.note}</p>}
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>
         </div>

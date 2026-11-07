@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
+import { restaurantDishImages, restaurantMenuAmount, restaurantMenuCategories, restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
 import topPins from '@/server/data/sanDiegoTopRestaurants.preview.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
 import { RESTAURANT_REGIONS } from './restaurants';
@@ -155,4 +155,12 @@ describe('restaurantMenuCategories', () => {
     expect(restaurantMenuCategories([{ category: 'Food' }, { category: 'Drinks' }])).toEqual(['Food', 'Drinks']);
     expect(restaurantMenuCategories([{}, { category: 'Drinks' }])).toEqual(['Menu', 'Drinks']);
   });
+});
+
+it('combines a dish cover and additional photos without duplicate slides', () => {
+  const image = { src: 'https://example.com/cover.webp', caption: 'Dish', credit: 'Photographer', sourceUrl: 'https://example.com/' };
+  const extra = { ...image, src: 'https://example.com/second.webp' };
+  expect(restaurantDishImages({ image, images: [image, extra] })).toEqual([image, extra]);
+  expect(restaurantDishImages({ images: [extra] })).toEqual([extra]);
+  expect(restaurantDishImages({})).toEqual([]);
 });

@@ -43,3 +43,28 @@ describe('restaurant special management validation', () => {
     expect(() => parseSpecialVenue(value)).toThrow('Azure');
   });
 });
+
+
+it('retains dish review sources and rejects unsafe links, oversized quotes and invented dates', () => {
+  const value = input();
+  const review = { provider: 'Food critic', title: 'Dinner at the branch', sourceUrl: 'https://critic.example/review', quote: 'Crisp and delicious.', publishedDate: null, checkedAt: '2026-11-07' };
+  Object.assign(value.profile.menus[0].items[0], { reviews: [review] });
+  expect(parseSpecialVenue(value).profile.menus[0].items[0].reviews).toEqual([review]);
+  review.sourceUrl = 'javascript:alert(1)';
+  expect(() => parseSpecialVenue(value)).toThrow('dish review evidence');
+  review.sourceUrl = 'https://critic.example/review';
+  review.quote = 'x'.repeat(301);
+  expect(() => parseSpecialVenue(value)).toThrow('dish review evidence');
+  review.quote = 'Crisp and delicious.';
+  Object.assign(review, { publishedDate: '2026-02-30' });
+  expect(() => parseSpecialVenue(value)).toThrow('dish review evidence');
+});
+
+it('retains multiple credited dish photos and rejects uncredited gallery entries', () => {
+  const value = input();
+  const image = { src: 'https://chronopin.blob.core.windows.net/thumb/dish.webp', caption: 'Exact dish', credit: 'Photographer', sourceUrl: 'https://restaurant.example/photo' };
+  Object.assign(value.profile.menus[0].items[0], { images: [image] });
+  expect(parseSpecialVenue(value).profile.menus[0].items[0].images).toEqual([image]);
+  image.credit = '';
+  expect(() => parseSpecialVenue(value)).toThrow('menu item image');
+});

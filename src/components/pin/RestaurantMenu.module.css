@@ -45,21 +45,59 @@
 @media(prefers-reduced-motion:reduce) { .tab { transition:none; } }
 
 .sections { margin-top:20px; }
-.dishThumb { flex:none; width:48px; height:48px; padding:0; border:1px solid var(--menu-rule); border-radius:8px; overflow:hidden; cursor:zoom-in; background:none; }
+.dishThumb { flex:none; width:48px; height:48px; padding:0; border:1px solid var(--menu-rule); border-radius:8px; overflow:hidden; cursor:pointer; background:none; }
 .dishThumbImg { display:block; width:100%; height:100%; object-fit:cover; }
-.lightbox { position:fixed; inset:0; z-index:1000; display:flex; align-items:center; justify-content:center; padding:20px; background:rgb(0 0 0 / .78); }
-.lightboxFigure { position:relative; margin:0; max-width:min(92vw,900px); border-radius:12px; overflow:hidden; background:var(--menu-paper); }
-.lightboxImg { display:block; width:100%; height:auto; max-height:75vh; object-fit:contain; background:#000; }
-.lightboxCaption { display:grid; gap:4px; padding:12px 16px; color:var(--menu-ink); font-size:14px; }
-.lightboxCaption a { color:var(--menu-accent); font-size:11px; text-decoration:none; }
-.lightboxCount { color:var(--menu-muted); font-size:11px; }
-.lightboxNav { position:absolute; top:calc(50% - 60px); width:40px; height:40px; border:0; border-radius:50%; background:rgb(0 0 0 / .6); color:#fff; font-size:28px; line-height:1; cursor:pointer; }
-.lightboxPrev { left:8px; }
-.lightboxNext { right:8px; }
-.lightboxClose { position:absolute; top:8px; right:8px; width:32px; height:32px; border:0; border-radius:50%; background:rgb(0 0 0 / .6); color:#fff; font-size:20px; line-height:1; cursor:pointer; }
 .foodStrip { margin-bottom:22px; }
 .foodStripList { display:flex; gap:12px; margin:12px 0 0; padding:0 0 6px; list-style:none; overflow-x:auto; }
 .foodStripItem { flex:none; width:120px; }
-.foodStripButton { display:block; width:120px; height:90px; padding:0; border:1px solid var(--menu-rule); border-radius:8px; overflow:hidden; cursor:zoom-in; background:none; }
+.foodStripButton { display:block; width:120px; height:90px; padding:0; border:1px solid var(--menu-rule); border-radius:8px; overflow:hidden; cursor:pointer; background:none; }
 .foodStripImg { display:block; width:100%; height:100%; object-fit:cover; }
 .foodStripCaption { display:block; margin-top:5px; color:var(--menu-muted); font-size:11px; line-height:1.4; }
+
+.reviewButton { display:inline-flex; flex:none; align-items:center; justify-content:center; gap:4px; min-width:28px; min-height:28px; padding:4px 7px; border:1px solid transparent; border-radius:999px; background:transparent; color:var(--menu-muted,var(--soft,var(--color-subtle))); cursor:pointer; transition:color .15s,background .15s; }
+.reviewButton[data-has-reviews='true'] { color:var(--menu-accent,var(--green,var(--color-accent))); border-color:color-mix(in srgb,currentColor 16%,transparent); background:color-mix(in srgb,currentColor 4%,transparent); }
+.reviewButton[data-rated='true'] { color:#866019; border-color:#dfcd9e; background:#fbf4e2; box-shadow:0 1px 2px rgb(61 42 10 / 5%); }
+:global([data-theme='dark']) .reviewButton[data-rated='true'] { color:#edcf87; border-color:#665634; background:#342e20; }
+.reviewButton:hover { background:color-mix(in srgb,currentColor 8%,transparent); }
+.reviewButton:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+.reviewStar { width:13px; height:13px; stroke-width:1.5; }
+.reviewButton[data-rated='true'] .reviewStar { fill:currentColor; }
+.reviewRating { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; letter-spacing:-.2px; }
+.reviewRating small { display:inline; margin-inline-start:1px; font-size:10px; font-weight:400; opacity:.7; }
+@media(prefers-reduced-motion:reduce) { .reviewButton { transition:none; } }
+.reviewDialog { position:fixed; inset:0; margin:auto; width:min(1280px,calc(100vw - 24px)); height:min(820px,90dvh); max-height:90dvh; padding:0; border:1px solid var(--color-line); border-radius:22px; background:var(--color-panel); color:var(--color-ink); overflow-y:auto; box-shadow:0 24px 100px rgb(0 0 0 / .22); scrollbar-width:thin; }
+.reviewDialog::backdrop { background:rgb(12 20 16 / .62); backdrop-filter:blur(5px); }
+.reviewDialogBody { padding:24px; }
+.reviewDialogHeading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.reviewDialogHeading h2 { font-family:Georgia,'Times New Roman',serif; font-size:28px; font-weight:400; line-height:1.2; letter-spacing:-.5px; }
+.reviewDialogHeading button { display:flex; flex:none; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:var(--color-raised); color:var(--color-muted); cursor:pointer; }
+.reviewDialogColumns { display:block; }
+.reviewDialogReviews > .reviewSectionTitle:first-child { margin-top:22px; }
+@media(min-width:820px) { .reviewDialogColumns { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:28px; align-items:start; } .reviewDialogReviews > .reviewSectionTitle:first-child { margin-top:16px; } }
+.reviewPhoto { margin-top:16px; }
+.reviewPhoto figcaption { display:grid; gap:4px; margin-top:8px; font-size:12px; color:var(--color-subtle); }
+.reviewPhoto figcaption a { color:var(--color-accent); font-size:11px; }
+.reviewPhotoNavigation { display:flex; justify-content:space-between; gap:12px; margin-top:12px; padding-bottom:12px; border-bottom:1px solid var(--color-line); }
+.reviewPhotoNavigation button { padding:6px 0; color:var(--color-accent); font-size:12px; cursor:pointer; }
+.reviewDialog :is(button,a):focus-visible { outline:2px solid var(--color-accent); outline-offset:3px; }
+
+.reviewText { min-width:0; padding:0; border:0; background:none; color:inherit; font:inherit; line-height:inherit; text-align:start; overflow-wrap:anywhere; cursor:pointer; }
+.reviewText:hover { text-decoration:underline; text-underline-offset:3px; }
+.reviewText:focus-visible { outline:2px solid currentColor; outline-offset:3px; border-radius:2px; }
+
+.reviewPhotoFrame { overflow:hidden; border-radius:14px; background:#141916; color:#fff; }
+.reviewPhotoFrame.reviewPhotoFrame img { height:min(440px,60dvh); max-height:none; width:100%; object-fit:contain; }
+.reviewPhotoFrame figcaption { margin:0; padding:8px 12px 12px; color:#e2e8e4; }
+.reviewPhotoFrame figcaption a { color:#b5cddb; }
+
+.reviewEyebrow { margin:0 0 5px; color:var(--color-subtle); font-size:9px; font-weight:650; letter-spacing:1.5px; text-transform:uppercase; }
+.reviewSectionTitle { margin-top:22px; margin-bottom:12px; color:var(--color-ink); font-size:13px; font-weight:650; }
+.reviewSources { display:grid; gap:10px; padding:0; list-style:none; }
+.reviewSourceCard { padding:15px 16px; border:1px solid var(--color-line); border-radius:12px; background:color-mix(in srgb,var(--color-raised) 45%,transparent); }
+.reviewSourceMeta { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 12px; font-size:10px; color:var(--color-subtle); }
+.reviewSourceMeta > span { font-weight:650; color:var(--color-muted); }
+.reviewSourceCard blockquote { margin:9px 0 12px; color:var(--color-ink); font-size:14px; line-height:1.7; }
+.reviewSourceLink { display:flex; align-items:baseline; justify-content:space-between; gap:12px; color:var(--color-accent); font-size:11px; line-height:1.5; }
+.reviewSourceLink:hover { text-decoration:underline; text-underline-offset:3px; }
+.reviewEmpty { padding:14px 16px; border:1px dashed var(--color-line); border-radius:12px; color:var(--color-subtle); font-size:12px; }
+@media(max-width:500px) { .reviewDialogBody { padding:18px; } .reviewDialogHeading h2 { font-size:25px; } .reviewDialog { border-radius:18px; } }

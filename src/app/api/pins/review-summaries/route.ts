@@ -11,5 +11,8 @@ export const GET = route(async (request: NextRequest) => {
     .map(Number)
     .filter((n) => Number.isInteger(n) && n > 0)
     .slice(0, 200);
+  if (request.nextUrl.searchParams.get('items') === '1') {
+    return json(await PinReview.menuItemSummaries(ids), 200, { 'Cache-Control': 'no-store' });
+  }
   return json(await PinReview.summaries(ids), 200, { 'Cache-Control': 'public, max-age=60' });
 });

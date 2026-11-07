@@ -66,7 +66,8 @@ export type RestaurantMenu = {
 
 // A photo of the dish itself (Azure blob), shown as a thumbnail that opens large with its caption.
 export type RestaurantDishImage = { src: string; caption: string; credit: string; sourceUrl: string; width?: number; height?: number };
-export type RestaurantMenuItem = { name: string; category?: string; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage };
+export type RestaurantDishReview = { provider: string; title: string; sourceUrl: string; quote: string; publishedDate: string | null; checkedAt: string };
+export type RestaurantMenuItem = { name: string; category?: string; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage; images?: RestaurantDishImage[]; reviews?: RestaurantDishReview[] };
 
 // A menu's section tabs in display order: the categories as the menu lists them, except
 // that Food (when there is one) comes first, so it opens selected ahead of Drinks.
@@ -113,4 +114,9 @@ export function restaurantMenuState(profile: RestaurantMenuProfile, today: strin
 
 export function restaurantMenuRescrapeCandidates(today: string): RestaurantMenuProfile[] {
   return (profiles as RestaurantMenuProfile[]).filter((profile) => restaurantMenuState(profile, today).rescrapeCandidate);
+}
+
+// Keep the existing cover first and remove repeated gallery URLs.
+export function restaurantDishImages(item: Pick<RestaurantMenuItem, 'image' | 'images'>): RestaurantDishImage[] {
+  return [...new Map([...(item.image ? [item.image] : []), ...item.images ?? []].map((image) => [image.src, image])).values()];
 }

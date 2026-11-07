@@ -48,7 +48,20 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
     }
     list(menu.items, 1000);
     for (const item of menu.items) { object(item); check(text(item.name) && item.name.trim(), 'Invalid menu item'); optionalStrings(item, ['category', 'note', 'priceLabel']); check(item.price === undefined || (Number.isFinite(item.price) && item.price >= 0), 'Invalid menu price');
-      if (item.image !== undefined) { const img = item.image; object(img); check(assetUrl(img.src) && text(img.caption) && img.caption.trim() && text(img.credit) && img.credit.trim() && url(img.sourceUrl), 'Invalid menu item image: needs src, caption, credit and sourceUrl'); } }
+      if (item.reviews !== undefined) {
+        list(item.reviews, 6);
+        for (const review of item.reviews) {
+          object(review);
+          check(text(review.provider) && review.provider.trim() && text(review.title) && review.title.trim() && url(review.sourceUrl) && new URL(review.sourceUrl).protocol === 'https:' && text(review.quote) && review.quote.trim() && review.quote.length <= 300 && (review.publishedDate === null || date(review.publishedDate)) && date(review.checkedAt), 'Invalid dish review evidence');
+        }
+      }
+      const validateImage = (img: unknown) => {
+        object(img);
+        check(assetUrl(img.src) && text(img.caption) && img.caption.trim() && text(img.credit) && img.credit.trim() && url(img.sourceUrl), 'Invalid menu item image: needs src, caption, credit and sourceUrl');
+      };
+      if (item.image !== undefined) validateImage(item.image);
+      if (item.images !== undefined) { list(item.images, 10); for (const image of item.images) validateImage(image); }
+    }
   }
   list(p.specials, 50);
   for (const special of p.specials) {

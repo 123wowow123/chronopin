@@ -2000,7 +2000,17 @@
             "name": "Ten-course tasting menu",
             "category": "Dining room",
             "price": 398,
-            "note": "Per person; seasonal courses."
+            "note": "Per person; seasonal courses.",
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Addison",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/addison",
+                "quote": "Skillful execution and creativity transform excellent quality product",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Tartelette menu",
@@ -2033,7 +2043,17 @@
           {
             "name": "Seasonal tasting menu — 10+ courses",
             "category": "Tasting menu",
-            "priceLabel": "Price not published"
+            "priceLabel": "Price not published",
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Lucien",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/la-jolla/restaurant/lucien",
+                "quote": "the region's bounty is celebrated on a menu that reflects French and Japanese influences.",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           }
         ],
         "note": "The restaurant publishes the tasting-menu format, but does not list its current courses or price on this page."
@@ -2122,7 +2142,17 @@
           {
             "name": "CHILEAN SEA BASS",
             "category": "Specials",
-            "price": 22
+            "price": 22,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Soichi",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/soichi",
+                "quote": "Sea bass, marinated with two kinds of miso, is broiled and caramelized",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "CHAWAN MUSHI",
@@ -2143,13 +2173,33 @@
             "name": "Blue Fin Tuna",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 9,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Soichi",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/soichi",
+                "quote": "Spanish bluefin tuna has a slight tang",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Toro",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 13,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Soichi",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/soichi",
+                "quote": "fatty tuna is luscious",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Scallop",
@@ -2979,13 +3029,41 @@
             "name": "Tuna Tartare",
             "category": "Appetizers",
             "note": "Olives / tomato / celery root sauce & jalapeno",
-            "price": 16.9
+            "price": 16.9,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Ciccia Osteria",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+                "quote": "delicate olive-flecked tuna tartare",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Mushroom Flan",
             "category": "Appetizers",
             "note": "Savory pecorino cheese crust",
-            "price": 16.9
+            "price": 16.9,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Ciccia Osteria",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+                "quote": "decadently cheesy mushroom flan",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              },
+              {
+                "provider": "San Diego Magazine",
+                "title": "The Perfect Order at Ciccia Osteria",
+                "sourceUrl": "https://sandiegomagazine.com/food-drink/ciccia-osteria-menu-perfect-order/",
+                "quote": "This dish is why I could go vegetarian, but never vegan.",
+                "publishedDate": "2024-06-06",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Breaded Zucchini",
@@ -3122,7 +3200,17 @@
             "name": "Gnocchi al Pesto",
             "category": "Homemade Filled Pasta",
             "note": "Basil / pine nuts / pecorino & Parmesan cheese",
-            "price": 23.85
+            "price": 23.85,
+            "reviews": [
+              {
+                "provider": "San Diego Magazine",
+                "title": "The Perfect Order at Ciccia Osteria",
+                "sourceUrl": "https://sandiegomagazine.com/food-drink/ciccia-osteria-menu-perfect-order/",
+                "quote": "Cassineri’s are clouds",
+                "publishedDate": "2024-06-06",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Ciccio",
@@ -3328,7 +3416,17 @@
           {
             "name": "Steak",
             "category": "Tacos",
-            "price": 8.5
+            "price": 8.5,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "LOLA 55",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
+                "quote": "grilled steak with crispy onions",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Mesquite Chicken",
@@ -3338,12 +3436,32 @@
           {
             "name": "Baja Style Fish",
             "category": "Tacos",
-            "price": 7.5
+            "price": 7.5,
+            "reviews": [
+              {
+                "provider": "The Boy Who Ate San Diego",
+                "title": "Lola 55",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "quote": "The balance was nonexistent for me.",
+                "publishedDate": "2024-02-15",
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Smoked Carnitas",
             "category": "Tacos",
-            "price": 7
+            "price": 7,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "LOLA 55",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
+                "quote": "smoked pork shoulder with tomatillos",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Cauliflower",
@@ -3651,7 +3769,17 @@
           {
             "name": "Duck Curry Noodles",
             "category": "Signatures",
-            "price": 33
+            "price": 33,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Sovereign",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
+                "quote": "a crispy leg of duck confit",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Three Musketeers",
@@ -3706,7 +3834,17 @@
           {
             "name": "Isan Sausage",
             "category": "Special",
-            "price": 12
+            "price": 12,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Sovereign",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
+                "quote": "nicely paired with a side of purple sticky rice",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "Wasabi Scallop Ceviche",
@@ -3826,7 +3964,17 @@
           {
             "name": "Sovereign Ice Cream",
             "category": "Dessert",
-            "price": 15
+            "price": 15,
+            "reviews": [
+              {
+                "provider": "MICHELIN Guide",
+                "title": "Sovereign",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
+                "quote": "house-made taro ice cream",
+                "publishedDate": null,
+                "checkedAt": "2026-11-07"
+              }
+            ]
           },
           {
             "name": "2 Ice Cream Scoops",

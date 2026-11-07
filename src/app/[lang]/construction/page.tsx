@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function ConstructionPage({ searchParams }: Props) {
   return (
-    <Suspense fallback={<div className="mx-auto h-[70vh] max-w-7xl animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
+    <Suspense fallback={<div className="mx-auto h-[70vh] max-w-[120rem] animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
       <Construction searchParams={searchParams} />
     </Suspense>
   );
@@ -52,14 +52,10 @@ async function Construction({ searchParams }: Props) {
   const href = (y: number, all: boolean) => `/construction?year=${y}${all ? '&country=all' : ''}`;
   const pill = 'rounded-full border border-line px-3 py-1 text-sm hover:bg-panel';
   return (
-    <main className="mx-auto max-w-7xl px-4 py-6">
+    <main className="mx-auto w-full max-w-[120rem] px-4 py-6">
       <h1 className="text-2xl font-semibold">{t('guides.construction.heading', { year: range, place: everywhere ? t('guides.construction.worldwide') : t('guides.construction.usa') })}</h1>
       <p className="mt-1 max-w-3xl text-muted">{t('guides.construction.description', { site: siteName })}</p>
       <div className="my-4 flex flex-wrap items-center gap-2">
-        <Link href={href(year - 1, everywhere)} className={pill}>← {year - 1}</Link>
-        <span className="px-2 font-medium">{range}</span>
-        <Link href={href(year + 1, everywhere)} className={pill}>{year + 1} →</Link>
-        <span className="mx-2 h-5 w-px bg-line" />
         <Link href={href(year, false)} className={`${pill} ${everywhere ? '' : 'bg-panel font-medium'}`}>{t('guides.construction.usa')}</Link>
         <Link href={href(year, true)} className={`${pill} ${everywhere ? 'bg-panel font-medium' : ''}`}>{t('guides.construction.worldwide')}</Link>
       </div>

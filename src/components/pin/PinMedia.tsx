@@ -257,6 +257,7 @@ export function PinMediaFrame({
   selectable: selectableProp,
   card,
   poster,
+  renderCaption,
   ...shared
 }: Omit<Parameters<typeof PinMedia>[0], 'onMissing' | 'medium'> & {
   media: MediumJson[];
@@ -264,6 +265,7 @@ export function PinMediaFrame({
   overlay: React.ReactNode;
   fallback: React.ReactNode;
   selectable?: boolean;
+  renderCaption?: (medium: MediumJson) => React.ReactNode;
   // A card in the timeline or a landing page: selectable media with swipe, dots
   // and hover arrows; the card's own crop replaces the page's cap on a tall
   // picture, and a hidden tweet left unmounted so a card does not load one.
@@ -441,12 +443,17 @@ export function PinMediaFrame({
   ) : null;
 
   const frame = (
-    <div dir="ltr" className={`group/media ${className}`}>
+    <div dir="ltr" data-media-carousel={dots || undefined} className={`group/media ${className}`} onKeyDown={dots ? (event) => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        event.stopPropagation();
+        step(event.key === 'ArrowLeft' ? -1 : 1);
+      } : undefined}>
       {/* touch-action keeps vertical scroll and pinch with the browser and
           hands sideways drags to the swipe - on each slide too, since a capped
           slide scrolls and so starts its own touch-action chain.
           overflow-x-clip keeps a dragged slide from widening the page. */}
-      <div ref={dots ? frameRef : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
+      <div ref={dots ? frameRef : undefined} tabIndex={dots ? 0 : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
         {labelled ? overlay : null}
         {shownSlides.map(({ medium, key, slice, source }, i) => {
           const shown = key === active.key;
@@ -473,6 +480,7 @@ export function PinMediaFrame({
         {card ? dotRow : null}
       </div>
       {card ? null : dotRow}
+      {renderCaption?.(active.medium)}
     </div>
   );
   return labelled ? (

@@ -1,6 +1,10 @@
 // Reader reviews (0209) and the menu-item tags on reader photos.
 
 export const REVIEW_COMMENT_MAX = 1000;
+export const REVIEW_PHOTO_MAX = 5;
+export const REVIEW_PHOTO_MAX_BYTES = 15 * 1024 * 1024;
+
+export type ReviewPhotoJson = { id: number; blobName: string; width: number | null; height: number | null; caption: string | null; hidden: boolean };
 export const PHOTO_TAG_MAX = 12;
 export const PHOTO_TAG_ITEM_MAX = 120;
 // Smallest tagged region, as a fraction of the picture's side.
@@ -20,6 +24,7 @@ export type PinReviewJson = {
   stars: number;
   comment: string | null;
   mine: boolean;
+  photos?: ReviewPhotoJson[];
   utcCreatedDateTime: string;
   utcUpdatedDateTime: string;
 };

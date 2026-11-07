@@ -671,7 +671,7 @@ async function PinBody({
       {pin.description ? <div dir={pinTextDir(pin)} className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
 
-      <PinRestaurantMenu sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
+      <PinRestaurantMenu pinId={pin.id} sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
       <PinRestaurantDetails sourceUrl={pin.sourceUrl} name={pin.company || pin.title} isRestaurant={isRestaurant} priceRange={pin.restaurantPriceRange} />
 
       {pin.user?.id && pin.user.userName ? (

@@ -173,3 +173,50 @@ after a click; changing slides unmounts the active player.
 Ongoing menu, visit-detail and landing-page tile edits go through the database management APIs. Use `/api/admin/restaurant-content` (content) and `/api/admin/restaurant-specials` (offers and menus). Bundled
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.
+
+## Menu-item reviews
+Menu rows on landing tiles and native pin menus share `MenuItemReviews`: a star icon opens
+sourced external excerpts and reader ratings/comments for that exact dish on that backing pin.
+`RestaurantMenuItem.reviews` entries require `provider`, exact article `title`, HTTPS `sourceUrl`,
+a short verbatim `quote` (maximum 300 characters), nullable `publishedDate`, and `checkedAt`.
+Open the review, verify the exact branch and dish, and retain criticism as well as praise.
+Never turn a venue-wide score into a dish score. Respect excerpt limits across all dishes citing
+one article; dates shown on sources take precedence over date-like URL paths.
+Save via restaurant-content / restaurant-specials, including duplicate menu records that override
+ordinary menus; preserve prices, photos, menu check dates and unrelated reviews, and verify readbacks.
+Replay the reviewed San Diego batch with `npx tsx scripts/restaurants/menuItemReviews.ts local|prod`
+(dry run), then `--apply`, after refreshing admin logins. Evidence lives in
+`scripts/restaurants/menuItemReviews.json`; keep bundled catalogs synchronized.
+Reader reviews use `/api/pins/:id/reviews?item=<exact trimmed item name>` and migration 0247.
+The empty item key is the whole-pin review; exclude dish ratings from restaurant summaries.
+The dialog loads reader reviews only when opened, uses native focus containment, and installs
+an Escape handler on window capture because the navbar's document capture handler otherwise
+consumes native Escape dismissal (including when the navbar hydrates after the dialog opens).
+The menu review star is filled only when a numeric reader rating exists. Show the
+reader rating average as `4.5/5`, never the review count as a score. Unscored external reviews
+show only an outlined star without visible text; never infer a numeric dish rating from prose or a restaurant-wide rating.
+Landing tiles and native pin menus hide the star when empty (and while counts are unknown);
+clicking the menu text still lets readers add the first review. Tooltips/accessibility labels explain the state. Reader averages and counts
+are batched across restaurants via `/api/pins/review-summaries?items=1&ids=...`, shared by all menu
+rows, and updated when the review form loads after a save/delete. Full comments load on open.
+Menu item text (a keyboard-accessible button), thumbnails, review stars, and the pin's Food photos strip use that same `MenuItemReviews`
+viewer. Show the selected dish's image at the top of the popup, above its external and reader reviews, with its caption,
+credit and source link. Previous/next switches both the photo and the reviews together; do not
+reintroduce a separate photo-only lightbox for these menu images.
+
+A dish can keep its cover in `image` and add up to ten credited photos in `images`. The popup
+uses the pin's `PinMediaFrame` for touch swipes, mouse drags, trackpad, dots and hover arrows.
+Photo swipes stay within that dish; the separate previous/next dish controls change reviews too.
+`restaurantDishImages` joins and deduplicates cover/gallery URLs. Validate every gallery entry's
+caption, credit and source URL; append verified Azure photos through the same content APIs.
+Historical photos must say so in their captions; never copy their old promotional prices into
+current menus. Provenance for the Por Favor batch is in `scripts/restaurants/menuItemPhotos.json`.
+
+Readers may attach up to five photos (15 MB each) when posting/editing a dish review. The
+review form previews files and can remove pending/existing attachments before saving. Multipart
+`PUT /api/pins/:id/reviews?item=...` accepts repeated `photos` files, `stars`, `comment`, and JSON
+`removePhotoIds`. Existing JSON-only rating saves remain supported. Migration 0248 adds
+`PinPhoto.reviewId`; save the review and photo records in one DB transaction, using the existing
+Azure reader-photo conversion and verified-email/daily-upload limits. Failed saves clean up new
+blobs. Return visible attachments with their review (flag-hidden photos are owner-only). Review
+delete soft-deletes its attachments too. Reader photos remain distinct from sourced dish photos.

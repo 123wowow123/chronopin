@@ -8,10 +8,11 @@ import { pinPath } from '@/lib/seo';
 import { TAGS } from './cache';
 import { localizePins } from './translations';
 
-import { CONSTRUCTION_YEARS, type ConstructionBar } from '@/lib/construction';
+import { CONSTRUCTION_PAD_YEARS, CONSTRUCTION_YEARS, type ConstructionBar } from '@/lib/construction';
 export type { ConstructionBar, ConstructionStatus } from '@/lib/construction';
 
 export { CONSTRUCTION_YEARS };
+const CHART_YEARS = CONSTRUCTION_YEARS + 2 * CONSTRUCTION_PAD_YEARS;
 export const CONSTRUCTION_ROW_LIMIT = 150;
 
 // Builds whose span touches the year, longest-running first by start. A pin with
@@ -21,6 +22,7 @@ export async function constructionSpans(year: number, country: string | null, lo
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.timeline);
+  year -= CONSTRUCTION_PAD_YEARS;
   const rows = await db.query<Omit<ConstructionBar, 'href'> & { total: string }>(
     `SELECT p.id, p.title, p."utcStartDateTime"::text AS start, p."utcEndDateTime"::text AS "end", bt.name::text AS status,
             p.price::float8 AS price, p."priceCurrency", pp.city, pp.country, pm."thumbName", pm."originalUrl",
@@ -44,7 +46,7 @@ export async function constructionSpans(year: number, country: string | null, lo
                         WHERE x."pinId" = p.id AND x."utcDeletedDateTime" IS NULL
                         ORDER BY (m."type"::text = '3') DESC, x.weight DESC, m.id LIMIT 1) pm ON true
      WHERE p."utcDeletedDateTime" IS NULL AND p."utcEndDateTime" - p."utcStartDateTime" > interval '1 day'
-       AND p."utcStartDateTime" < make_timestamptz($1::int + ${CONSTRUCTION_YEARS}, 1, 1, 0, 0, 0, 'UTC')
+       AND p."utcStartDateTime" < make_timestamptz($1::int + ${CHART_YEARS}, 1, 1, 0, 0, 0, 'UTC')
        AND p."utcEndDateTime" >= make_timestamptz($1::int, 1, 1, 0, 0, 0, 'UTC')
        AND ($2::text IS NULL OR pp.country = $2)
      ORDER BY p."utcStartDateTime", p.id LIMIT ${CONSTRUCTION_ROW_LIMIT}`,
@@ -56,7 +58,7 @@ export async function constructionSpans(year: number, country: string | null, lo
      JOIN "PinAddressPlace" pp ON pp."pinId" = p.id
      WHERE p."utcDeletedDateTime" IS NULL AND ($1::text IS NULL OR pp.country = $1)
        AND (p."utcEndDateTime" IS NULL OR p."utcEndDateTime" - p."utcStartDateTime" <= interval '1 day')
-       AND p."utcStartDateTime" < make_timestamptz($2::int + ${CONSTRUCTION_YEARS}, 1, 1, 0, 0, 0, 'UTC')
+       AND p."utcStartDateTime" < make_timestamptz($2::int + ${CHART_YEARS}, 1, 1, 0, 0, 0, 'UTC')
        AND COALESCE(p."utcEndDateTime", p."utcStartDateTime") >= make_timestamptz($2::int, 1, 1, 0, 0, 0, 'UTC')`,
     [country, year],
   );

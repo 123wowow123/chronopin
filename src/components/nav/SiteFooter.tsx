@@ -19,6 +19,7 @@ export async function SiteFooter() {
   const links = [
     { href: '/forecasts', label: t('nav.forecasts') },
     { href: '/predictions', label: t('nav.predictions') },
+    { href: '/construction', label: t('nav.construction') },
     // Crawlable doors to the topic hubs and, through them, every /tag and /company page.
     { href: '/tags', label: t('topic.tagsTitle') },
     { href: '/companies', label: t('topic.companiesTitle') },

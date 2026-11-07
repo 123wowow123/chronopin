@@ -2,11 +2,12 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Link from '@/components/ui/Link';
+import { Icon } from '@/components/ui/Icon';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel } from '@/lib/i18n/labels';
 import { formatMoney } from '@/lib/people';
-import { CONSTRUCTION_YEARS, type ConstructionBar, type ConstructionSector, type ConstructionStatus } from '@/lib/construction';
+import { CONSTRUCTION_PAD_YEARS, CONSTRUCTION_YEAR_PX, CONSTRUCTION_YEARS, type ConstructionBar, type ConstructionSector, type ConstructionStatus } from '@/lib/construction';
 
 // Fixed shades like the buildout stages on the pin page: they carry both themes.
 const TONE: Record<ConstructionStatus, string> = { Proposed: 'bg-slate-400', 'In Progress': 'bg-blue-600', Completed: 'bg-emerald-500' };
@@ -35,6 +36,7 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
   const [sector, setSector] = useState<ConstructionSector | null>(null);
   const [sort, setSort] = useState<Sort>('start');
   const [sub, setSub] = useState<string | null>(null);
+  const scroller = useRef<HTMLDivElement>(null);
   const sectorRow = useRef<HTMLDivElement>(null);
   const [clipped, setClipped] = useState<Set<string>>(new Set());
 
@@ -51,8 +53,15 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
     if (!row) return;
     const measure = () => {
       const kids = [...row.querySelectorAll<HTMLElement>('[data-sub]')];
-      const top = kids[0]?.offsetTop ?? 0;
-      const next = new Set(kids.filter((k) => k.offsetTop > top + 4).map((k) => k.dataset.sub!));
+      kids.forEach((k) => k.classList.remove('hidden'));
+      const other = row.querySelector<HTMLElement>('[data-other]');
+      const top = other?.offsetTop ?? kids[0]?.offsetTop ?? 0;
+      // Other is the last pill: keep the category pills that fit on the first line beside it.
+      const room = row.clientWidth - (other?.offsetWidth ?? 0) - 8;
+      const fit = kids.filter((k) => k.offsetTop <= top + 4 && k.offsetLeft + k.offsetWidth - row.offsetLeft <= room);
+      const keep = new Set(fit.map((k) => k.dataset.sub!));
+      const next = new Set(kids.filter((k) => !keep.has(k.dataset.sub!)).map((k) => k.dataset.sub!));
+      kids.forEach((k) => k.classList.toggle('hidden', next.has(k.dataset.sub!)));
       setClipped((prev) => (prev.size === next.size && [...next].every((x) => prev.has(x)) ? prev : next));
     };
     measure();
@@ -80,14 +89,27 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
     finishing: rows.filter((b) => new Date(b.end).getUTCFullYear() === thisYear && b.status !== 'Completed').length,
   };
 
-  const from = Date.UTC(year, 0, 1);
-  const span = Date.UTC(year + CONSTRUCTION_YEARS, 0, 1) - from;
+  const startYear = year - CONSTRUCTION_PAD_YEARS;
+  const chartYears = CONSTRUCTION_YEARS + 2 * CONSTRUCTION_PAD_YEARS;
+  // Open on the chosen window; the padding years either side are a scroll away.
+  useLayoutEffect(() => { if (scroller.current) scroller.current.scrollLeft = CONSTRUCTION_PAD_YEARS * CONSTRUCTION_YEAR_PX; }, [year, rows.length > 0]);
+  const from = Date.UTC(startYear, 0, 1);
+  const span = Date.UTC(startYear + chartYears, 0, 1) - from;
   const pct = (ms: number) => Math.min(100, Math.max(0, ((ms - from) / span) * 100));
   const today = now >= from && now < from + span ? pct(now) : null;
-  const years = Array.from({ length: CONSTRUCTION_YEARS }, (_, i) => ({ i, left: pct(Date.UTC(year + i, 0, 1)), label: String(year + i) }));
+  const years = Array.from({ length: chartYears }, (_, i) => ({ i, left: pct(Date.UTC(startYear + i, 0, 1)), label: String(startYear + i) }));
   // Quarter lines only while the window is short enough to leave them readable.
-  const fine = CONSTRUCTION_YEARS <= 5;
-  const grid = Array.from({ length: fine ? CONSTRUCTION_YEARS * 4 : CONSTRUCTION_YEARS }, (_, q) => ({ q, left: pct(fine ? Date.UTC(year + Math.floor(q / 4), (q % 4) * 3, 1) : Date.UTC(year + q, 0, 1)), strong: !fine || q % 4 === 0 }));
+  const fine = chartYears <= 5;
+  const grid = Array.from({ length: fine ? chartYears * 4 : chartYears }, (_, q) => ({ q, left: pct(fine ? Date.UTC(startYear + Math.floor(q / 4), (q % 4) * 3, 1) : Date.UTC(startYear + q, 0, 1)), strong: !fine || q % 4 === 0 }));
+  // Centre today's line in the visible part of the chart (the title column stays pinned on the left).
+  const goToday = () => {
+    const box = scroller.current;
+    const line = box?.querySelector('[data-today]');
+    if (!box || !line) return;
+    const titleW = box.querySelector('li > a')?.getBoundingClientRect().width ?? 0;
+    const delta = line.getBoundingClientRect().left - box.getBoundingClientRect().left - (titleW + (box.clientWidth - titleW) / 2);
+    box.scrollTo({ left: box.scrollLeft + delta, behavior: 'smooth' });
+  };
   const fmt = new Intl.DateTimeFormat(t.locale, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
   const chip = (on: boolean) => `rounded-full border px-3 py-1 text-sm ${on ? 'border-ink bg-panel font-medium' : 'border-line hover:bg-panel'}`;
@@ -109,8 +131,9 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
 
       <div ref={sectorRow} className="mb-2 flex flex-wrap items-center gap-2 overflow-hidden" style={{ maxHeight: '2.25rem' }}>
         <button type="button" className={chip(!sector)} aria-pressed={!sector} onClick={() => { setSector(null); setSub(null); }}>{t('guides.construction.sectorAll')}</button>
-        {SECTORS.map((s) => <button key={s} type="button" className={chip(sector === s && !sub)} aria-pressed={sector === s && !sub} onClick={() => { setSector(sector === s && !sub ? null : s); setSub(null); }}>{t(`guides.construction.${SECTOR_KEY[s]}`)}</button>)}
-        {subs.map((name) => <button key={name} type="button" data-sub={name} className={`${chip(sub === name)} ${clipped.has(name) ? 'invisible' : ''}`} aria-pressed={sub === name} tabIndex={clipped.has(name) ? -1 : 0} onClick={() => { setSector(sub === name ? null : 'other'); setSub(sub === name ? null : name); }}>{categoryLabel(t, name)}</button>)}
+        {SECTORS.filter((s) => s !== 'other').map((s) => <button key={s} type="button" className={chip(sector === s && !sub)} aria-pressed={sector === s && !sub} onClick={() => { setSector(sector === s && !sub ? null : s); setSub(null); }}>{t(`guides.construction.${SECTOR_KEY[s]}`)}</button>)}
+        {subs.map((name) => <button key={name} type="button" data-sub={name} className={`${chip(sub === name)} ${clipped.has(name) ? 'hidden' : ''}`} aria-pressed={sub === name} tabIndex={clipped.has(name) ? -1 : 0} onClick={() => { setSector(sub === name ? null : 'other'); setSub(sub === name ? null : name); }}>{categoryLabel(t, name)}</button>)}
+        <button type="button" data-other className={chip(sector === 'other' && !sub)} aria-pressed={sector === 'other' && !sub} onClick={() => { setSector(sector === 'other' && !sub ? null : 'other'); setSub(null); }}>{t('guides.construction.sectorOther')}</button>
       </div>
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex flex-wrap items-center gap-2">
@@ -123,19 +146,26 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
             );
           })}
         </div>
+        <div className="flex items-center gap-3">
+        {rows.length > 0 && <Link href={`/map?q=${encodeURIComponent(`pin:${rows.slice(0, 400).map((r) => r.id).join(',')}`)}&past=all&future=all&fit=results`} className={`${chip(false)} flex items-center gap-1.5 hover:no-underline`}><Icon name="map" className="size-3.5 text-link" />{t('pin.toMap')}</Link>}
+        {today !== null && <button type="button" className={`${chip(false)} flex items-center gap-1.5`} onClick={goToday}><span className="size-2.5 rounded-sm bg-red-500" />{t('controls.today')}</button>}
         <label className="flex items-center gap-2 text-sm text-muted">
           {t('guides.construction.sortBy')}
-          <select className="rounded-lg border border-line bg-panel px-2 py-1 text-ink" value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
+          <select className="appearance-none rounded-lg border border-line bg-panel bg-no-repeat py-1 ps-3 pe-9 text-ink" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238a8f9c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E\")", backgroundPosition: 'right 0.75rem center' }} value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
             {SORTS.map((s) => <option key={s} value={s}>{t(`guides.construction.${SORT_KEY[s]}`)}</option>)}
           </select>
         </label>
+        </div>
       </div>
 
       {rows.length ? (
-        <div className="overflow-x-auto rounded-xl border border-line bg-panel">
-          <div className="min-w-[760px]">
-            <div className="relative ms-64 h-8 border-b border-line text-xs text-muted">
-              {years.map((y) => <span key={y.i} className="absolute top-2 border-s border-line ps-1 font-medium" style={{ left: `${y.left}%` }}>{y.label}</span>)}
+        <div ref={scroller} className="overflow-x-auto rounded-xl border border-line bg-panel">
+          <div style={{ minWidth: `calc(24rem + ${chartYears * CONSTRUCTION_YEAR_PX}px)` }}>
+            <div className="flex h-8 border-b border-line text-xs text-muted">
+              <div aria-hidden className="sticky start-0 z-20 w-72 shrink-0 border-e border-line bg-panel lg:w-96" />
+              <div className="relative flex-1" style={{ minWidth: chartYears * CONSTRUCTION_YEAR_PX }}>
+                {years.map((y) => <span key={y.i} className="absolute top-2 border-s border-line ps-1 font-medium" style={{ left: `${y.left}%` }}>{y.label}</span>)}
+              </div>
             </div>
             <ul>
               {rows.map((bar) => {
@@ -147,16 +177,18 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
                 const facts = [[bar.city, bar.country].filter(Boolean).join(', '), bar.price ? formatMoney(t.locale, bar.price, bar.priceCurrency || 'USD') : null, bar.megawatts ? power(bar.megawatts) : null].filter(Boolean).join(' · ');
                 return (
                   <li key={bar.id} className="flex items-center border-b border-line/60 last:border-b-0 hover:bg-page/60">
-                    <Link href={bar.href} className="flex w-64 shrink-0 items-center gap-2 px-3 py-1 text-sm" title={label}>
+                    <div className="sticky start-0 z-20 flex w-72 shrink-0 items-center border-e border-line bg-panel lg:w-96">
+                    <Link href={bar.href} className="flex min-w-0 flex-1 items-center gap-2 py-1 ps-3 text-sm" title={label}>
                       <PinThumb thumbName={bar.thumbName} originalUrl={bar.originalUrl} title={bar.title} className="h-9 w-12" />
                       <span className="min-w-0">
                         <span className="block truncate">{bar.title}</span>
                         <span className="block truncate text-xs text-muted">{facts}</span>
                       </span>
                     </Link>
-                    <div className="relative h-11 flex-1">
+                    </div>
+                    <div className="relative h-11 flex-1" style={{ minWidth: chartYears * CONSTRUCTION_YEAR_PX }}>
                       {grid.map((g) => <span key={g.q} className={`absolute inset-y-0 border-s ${g.strong ? 'border-line' : 'border-line/30'}`} style={{ left: `${g.left}%` }} />)}
-                      {today !== null && <span className="absolute inset-y-0 z-10 w-px bg-red-500" style={{ left: `${today}%` }} />}
+                      {today !== null && <span data-today className="absolute inset-y-0 z-10 w-px bg-red-500" style={{ left: `${today}%` }} />}
                       <Link href={bar.href} aria-label={label} title={`${label} · ${Math.round((e - s) / DAY)} d`} className={`absolute top-3 h-5 rounded ${TONE[bar.status]} ${s < from ? 'rounded-s-none' : ''} ${e >= from + span ? 'rounded-e-none' : ''}`} style={{ left: `${left}%`, width: `${width}%` }} />
                     </div>
                   </li>
