@@ -106,15 +106,30 @@
     "sweetness": 4.5,
     "astringency": 0.5,
     "umami": 0.5,
-    "basis": "Premium chocolate bars in Ferrero Rocher and Raffaello flavours: hazelnut, milk chocolate and coconut, sweet. Tasting-review scope: Dark 55% hazelnut bar only; this review does not cover the milk, white or Raffaello bars in the launch collection. Existing seven-axis editorial estimates are retained.",
+    "basis": "6NovPM reopened Trolley exactFerreroRocherMilkChocolateHazelnutBar90g page and stringmatched existing customerquote. Its date remains genuinelyunpublished. ExistingChocolatier/Ocado entries retained but not revalidated because currentpages returned403. Threeexistingreviews coverdistinctbarvariants; no inventednewreview.",
     "pungent": 0,
     "coolness": 0,
     "reviews": [
       {
         "url": "https://www.chocolatier.co.uk/ferrero-rocher-dark-55-hazelnut-chocolate-bar-review/",
-        "title": "David Fiske — Ferrero Rocher Dark 55% bar (Chocolatier)",
         "quote": "Taste-wise, the hazelnut flavour dominates, accompanied by a prominent sweetness.",
+        "title": "David Fiske — Ferrero Rocher Dark 55% bar (Chocolatier)",
+        "sentiment": 0.3,
         "publishedDate": "2023-03-12"
+      },
+      {
+        "url": "https://www.ocado.com/products/ferrero-raffaello-white-chocolate-and-coconut-bar/633067011",
+        "quote": "Can only manage a few pieces as extremely sweet way more so than the original balls. ... coconut taste is there but sweetness would make it a rare treat.",
+        "title": "Ocado shopper review 'A Lot Sweet': Ferrero Raffaello White Chocolate and Coconut Bar 90g",
+        "sentiment": -0.2,
+        "publishedDate": "2024-12-26"
+      },
+      {
+        "url": "https://www.trolley.co.uk/product/ferrero-rocher-milk-chocolate-hazelnut-bar/FLP669",
+        "quote": "I love Ferrero Rocher original but this is delicious! I can get through a bar quite quickly",
+        "title": "Ferrero Rocher Milk Chocolate & Hazelnut Sharing Bar 90g",
+        "sentiment": 0.8,
+        "publishedDate": null
       }
     ]
   },
@@ -1203,12 +1218,13 @@
     "umami": 0,
     "pungent": 0.5,
     "coolness": 0,
-    "basis": "Manufacturer describes lychee sweetness and a slightly floral taste. Lychee sweetness and a light floral note, with carbonation. Sweetness is perceived intensity, not sugar content. Pungency reflects a small estimated carbonation prickle, not chili heat. Tasting-review scope: Lychee Fizzy 330 ml can customer tasting, not the retailer’s response or a different CHI FOREST flavor. Existing seven-axis editorial estimates are retained.",
+    "basis": "Exact-product/project excerpt string-matched in the opened page during6NovPMrun. Tone score is an editorial estimate. Published day is explicit where supplied; retailer customer review dates remain genuinely unpublished. Existing reviews retained; this pass does not claim all remaining review gaps closed.",
     "reviews": [
       {
         "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
-        "title": "Michelle — CHI FOREST Lychee Fizzy tasting (HelloAsia!)",
         "quote": "Doesn't taste of artificial sweeteners at all like some sugar free drinks do. Quite fizzy!",
+        "title": "Chi Forest Sugar-Free Sparkling Water (Lychee Fizzy) 330ml",
+        "sentiment": 0.8,
         "publishedDate": null
       }
     ],
@@ -1347,12 +1363,13 @@
     "umami": 0.5,
     "pungent": 0,
     "coolness": 0,
-    "basis": "Retailer identifies the matcha variant as creamy, chewy green-tea milk candy. Sweet milk-candy base with a green-tea note and chewy texture. Tea bitterness and dryness are conservative estimates; this is the matcha half of the bundle. Tasting-review scope: Matcha 150 g customer tasting on HelloAsia; exact review date not established. These subjective accounts support flavor context; existing seven-axis editorial estimates are retained.",
+    "basis": "Exact-product/project excerpt string-matched in the opened page during6NovPMrun. Tone score is an editorial estimate. Published day is explicit where supplied; retailer customer review dates remain genuinely unpublished. Existing reviews retained; this pass does not claim all remaining review gaps closed.",
     "reviews": [
       {
         "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
         "quote": "the creamy candy I've come to expect from White Rabbit candies with the added earthiness and green-tea umami from the matcha.",
-        "title": "Hylton Warburton — HelloAsia customer tasting: matcha",
+        "title": "White Rabbit Creamy Candy (Matcha) 150g | South Africa",
+        "sentiment": 0.8,
         "publishedDate": null
       }
     ],

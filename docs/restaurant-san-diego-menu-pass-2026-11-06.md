@@ -96,3 +96,15 @@ Traps: Chrome's javascript_tool times out at 45 s so run the crawl as a backgrou
 from the Yelp page hangs (Chrome local-network prompt); PIL default font cannot draw non-latin-1 (strip labels);
 dedupe matched items per venue id, not globally. Chicago/Miami batch lives in `miami3/` (see above).
 Totals now: ~1,407 dish photos across all specials profiles (San Diego 1,026).
+
+### Japan, chain menus (same day)
+
+Japan specials profiles are mostly operator/department-store chains with unlabeled menu imagery, so the Yelp pipeline does
+not apply (Yelp has almost no listings; hotpepper.jp food pages carry ~5 slogan-titled photos, not per-dish ones).
+Done: Qu'il fait bon (8 branches, Tokyo x4 + Osaka, Fukuoka, Nagoya, Kyoto): the operator's 35th-anniversary blog
+(`/blogs/news/35e-anniversaire`) has four tart photos whose alt text names the tart (edenworks A Garden Eternal,
+apple-pie, Kumamoto Rihei Mont Blanc, Tamba chestnut). 64 attachments (slice + whole on each branch), one photo per tart,
+in `.scrape/sd-menu-pass-2026-11-06/qfb/`. The site rate-limits curl (`local_rate_limited`, 18-byte reply); the pumpkin
+tart product page and the Christmas-cake blog images could not be read that way. Skipped: Sarabeth's (news-post photos
+have empty alt text and show different dishes than the post names), Mia Bocca / Itadaki Kokko-chan (menu is tall composite
+design images with no per-dish captions).

@@ -1,0 +1,792 @@
+[
+  {
+    "key": "news48-vaughan3",
+    "pinIds": {
+      "local": null,
+      "production": 20798
+    },
+    "title": "Vaughan 3 40 MW Battery Storage Facility Is Announced Complete in Ontario",
+    "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document",
+    "profile": {
+      "sector": "Grid-scale lithium-ion battery energy storage",
+      "status": "production",
+      "assessmentDate": "2026-11-06",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Operational storage rating",
+          "value": "40 MW / 160 MWh; 27.6 kV connection",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "Vaughan 3 Energy Storage 1 LP: a 40 MW/160 MWh facility at 6531 Rutherford Rd. in Vaughan, connected at 27.6 kilovolts (kV)."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operational status",
+          "value": "Operational as announced November 6, 2026; exact COD unpublished",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "IESO operating contract",
+          "value": "20-year IESO contract; awarded through the 2023 procurement",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational under 20-year contracts with the IESO, providing long-term support for the provincial electricity grid."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "IESO procurement contract awarded",
+          "date": "2023",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "In 2023, Alectra Energy Solutions and Convergent were awarded three contracts through the IESO’s Expedited Long-Term 1 procurement."
+          }
+        },
+        {
+          "label": "Section 80 construction notice filed",
+          "date": "2024-12-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction expected (historical plan)",
+          "date": "Q1 2025",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction reported underway; exact start unpublished",
+          "date": "2025-07-17",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Vaughan 3 has stated that it plans to own one battery storage facility located in Vaughan, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by January 2026."
+          }
+        },
+        {
+          "label": "Commercial operation expected (historical target)",
+          "date": "January 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Vaughan 3 has stated that it plans to own one battery storage facility located in Vaughan, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by January 2026."
+          }
+        },
+        {
+          "label": "Storage licence issued",
+          "date": "2026-07-30",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document",
+            "title": "Electricity Storage Licence ES-2025-0183 — Vaughan 3 Energy Storage 1 LP",
+            "publishedDate": "2026-07-30",
+            "quote": "Date of Issuance: July 30, 2026"
+          }
+        },
+        {
+          "label": "Completion and operational status announced",
+          "date": "2026-11-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        }
+      ]
+    },
+    "power": {
+      "megawatts": 40,
+      "kind": "storage",
+      "source": "hand",
+      "sourceUrl": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+      "note": "40 MW charge/discharge rating and 160 MWh storage; operational as announced November 6, 2026. This is storage, not generation capacity.",
+      "checkedAt": "2026-11-07T04:11:54.137Z"
+    },
+    "critic": {
+      "reviews": [
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "quote": "These projects will strengthen reliability and support our communities’ growing energy needs for years to come.",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "sentiment": 0.7,
+          "publishedDate": "2026-11-06"
+        }
+      ],
+      "source": "session",
+      "basis": "Issuer Brian Bentz’s reaction applies to the three newly operational plants; it is an official partner perspective. The exact quote was verified in the November 6 issuer announcement. Sentiment is an editorial estimate; independent local reactions were not found.",
+      "sourceUrl": null,
+      "checkedAt": "2026-11-07T04:11:56.634Z"
+    },
+    "pin": {
+      "title": "Vaughan 3 40 MW Battery Storage Facility Is Announced Complete in Ontario",
+      "description": "Alectra Energy Solutions and Convergent announced that the Vaughan 3 battery facility is operational, with 40 MW/160 MWh of storage at 6531 Rutherford Road. The November 6, 2026 announcement confirms completed status; the exact commercial-operation day and project cost were not published.",
+      "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document",
+      "utcStartDateTime": "2026-11-06T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "allDay": true,
+      "allDayStated": false,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Dated to the November 6, 2026 completion announcement: the issuer explicitly says all three facilities are now operational. The exact plant-specific commercial-operation date and construction-start day were not stated. This is a completed-facility announcement, not an invented groundbreaking date.",
+      "address": "Estimated: 6531 Rutherford Road, Vaughan, Ontario, Canada",
+      "latitude": 43.8058561,
+      "longitude": -79.6473512,
+      "price": null,
+      "priceCurrency": null,
+      "company": "Alectra Energy Solutions",
+      "companyWikiUrl": null,
+      "categories": [
+        "Energy",
+        "Infrastructure"
+      ],
+      "tags": [
+        "Completed",
+        "Battery Storage",
+        "Ontario",
+        "Vaughan"
+      ],
+      "media": [
+        {
+          "type": 1,
+          "originalUrl": "https://ml.globenewswire.com/media/f1193c49-b38c-417b-8762-826a5954fd36/medium/alectra-energy-solutions-and-convergent-energy-and-power-com.jpg"
+        }
+      ],
+      "stocks": [],
+      "references": [
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document",
+          "title": "Electricity Storage Licence ES-2025-0183 — Vaughan 3 Energy Storage 1 LP",
+          "publishedDate": "2026-07-30",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "publishedDate": "2026-11-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+          "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+          "publishedDate": "2025-07-17",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+          "title": "Alectra Convergent Development LP — Section 80 Notices",
+          "publishedDate": "2024-12-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?q=6531+Rutherford+Road%2C+Vaughan%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1",
+          "title": "OpenStreetMap Nominatim address match — 6531 Rutherford Road, Vaughan, Ontario, Canada",
+          "confidence": 85,
+          "reasoning": "Address geocode for the exact licensed street address; approximate marker, not a reviewed battery footprint."
+        }
+      ],
+      "longFormSummary": "<h3>Completed battery storage facility</h3><ul><li>Vaughan 3 is a 40 MW/160 MWh battery energy storage facility at 6531 Rutherford Road, Vaughan, Ontario, Canada, connected at 27.6 kV. It is one of three Alectra–Convergent projects which the issuer announced as operational on November 6, 2026.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li><li>The partners won the three IESO Expedited Long-Term 1 contracts in 2023. The completed facilities operate under 20-year IESO contracts. Stored electricity is released during high demand; this is storage capacity, not an electricity-generation rating.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Project timeline</h3><ul><li>A December 6, 2024 regulatory notice expected construction in Q1 2025 and commercial operation in Q4 2025. Those were historical plans.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document\"></cite></li><li>The July 17, 2025 OEB decision said construction of Vaughan 3 had begun; it did not publish an exact groundbreaking day. The then-stated operation target was January 2026. These targets do not establish the actual operation day.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document\"></cite></li><li>The site-specific storage licence was issued on 2026-07-30. The later November 6 announcement explicitly confirmed operation; the exact commercial-operation date remains unpublished.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document\"></cite><cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Cost and location precision</h3><ul><li>The opened issuer and regulator sources publish no plant-level capital cost; price and currency remain unset. No share of another programme total is allocated to this plant.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite><cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document\"></cite></li><li>The map marker is an estimated address geocode for the licensed street address, not a verified battery-container footprint. No reviewed site polygon is available.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/950412/File/document\"></cite><cite data-ref=\"https://nominatim.openstreetmap.org/search?q=6531+Rutherford+Road%2C+Vaughan%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1\"></cite></li></ul>"
+    }
+  },
+  {
+    "key": "news48-vaughan1e",
+    "pinIds": {
+      "local": null,
+      "production": 20799
+    },
+    "title": "Vaughan 1E 20 MW Battery Storage Facility Is Announced Complete in Ontario",
+    "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document",
+    "profile": {
+      "sector": "Grid-scale lithium-ion battery energy storage",
+      "status": "production",
+      "assessmentDate": "2026-11-06",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Operational storage rating",
+          "value": "20 MW / 80 MWh; 27.6 kV connection",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "Vaughan 1E Energy Storage 1 LP: a 20 MW/80 MWh facility at 8118 Dufferin St. in Vaughan, connected at 27.6 kV."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operational status",
+          "value": "Operational as announced November 6, 2026; exact COD unpublished",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "IESO operating contract",
+          "value": "20-year IESO contract; awarded through the 2023 procurement",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational under 20-year contracts with the IESO, providing long-term support for the provincial electricity grid."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "IESO procurement contract awarded",
+          "date": "2023",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "In 2023, Alectra Energy Solutions and Convergent were awarded three contracts through the IESO’s Expedited Long-Term 1 procurement."
+          }
+        },
+        {
+          "label": "Section 80 construction notice filed",
+          "date": "2024-12-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction expected (historical plan)",
+          "date": "Q1 2025",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction reported underway; exact start unpublished",
+          "date": "2025-07-17",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Vaughan 1E has stated that it plans to own one battery storage facility located in Vaughan, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by January 2026."
+          }
+        },
+        {
+          "label": "Commercial operation expected (historical target)",
+          "date": "January 2026",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Vaughan 1E has stated that it plans to own one battery storage facility located in Vaughan, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by January 2026."
+          }
+        },
+        {
+          "label": "Storage licence issued",
+          "date": "2026-05-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document",
+            "title": "Electricity Storage Licence ES-2025-0185 — Vaughan 1E Energy Storage 1 LP",
+            "publishedDate": "2026-05-19",
+            "quote": "Date of Issuance: May 19, 2026"
+          }
+        },
+        {
+          "label": "Completion and operational status announced",
+          "date": "2026-11-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        }
+      ]
+    },
+    "power": {
+      "megawatts": 20,
+      "kind": "storage",
+      "source": "hand",
+      "sourceUrl": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+      "note": "20 MW charge/discharge rating and 80 MWh storage; operational as announced November 6, 2026. This is storage, not generation capacity.",
+      "checkedAt": "2026-11-07T04:12:04.125Z"
+    },
+    "critic": {
+      "reviews": [
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "quote": "These projects will strengthen reliability and support our communities’ growing energy needs for years to come.",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "sentiment": 0.7,
+          "publishedDate": "2026-11-06"
+        }
+      ],
+      "source": "session",
+      "basis": "Issuer Brian Bentz’s reaction applies to the three newly operational plants; it is an official partner perspective. The exact quote was verified in the November 6 issuer announcement. Sentiment is an editorial estimate; independent local reactions were not found.",
+      "sourceUrl": null,
+      "checkedAt": "2026-11-07T04:12:06.396Z"
+    },
+    "pin": {
+      "title": "Vaughan 1E 20 MW Battery Storage Facility Is Announced Complete in Ontario",
+      "description": "Alectra Energy Solutions and Convergent announced that the Vaughan 1E battery facility is operational, with 20 MW/80 MWh of storage at 8118 Dufferin Street. The November 6, 2026 announcement confirms completed status; the exact commercial-operation day and project cost were not published.",
+      "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document",
+      "utcStartDateTime": "2026-11-06T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "allDay": true,
+      "allDayStated": false,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Dated to the November 6, 2026 completion announcement: the issuer explicitly says all three facilities are now operational. The exact plant-specific commercial-operation date and construction-start day were not stated. This is a completed-facility announcement, not an invented groundbreaking date.",
+      "address": "Estimated: 8118 Dufferin Street, Vaughan, Ontario, Canada",
+      "latitude": 43.814534,
+      "longitude": -79.4770073,
+      "price": null,
+      "priceCurrency": null,
+      "company": "Alectra Energy Solutions",
+      "companyWikiUrl": null,
+      "categories": [
+        "Energy",
+        "Infrastructure"
+      ],
+      "tags": [
+        "Completed",
+        "Battery Storage",
+        "Ontario",
+        "Vaughan"
+      ],
+      "media": [],
+      "stocks": [],
+      "references": [
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document",
+          "title": "Electricity Storage Licence ES-2025-0185 — Vaughan 1E Energy Storage 1 LP",
+          "publishedDate": "2026-05-19",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "publishedDate": "2026-11-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+          "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+          "publishedDate": "2025-07-17",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+          "title": "Alectra Convergent Development LP — Section 80 Notices",
+          "publishedDate": "2024-12-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?q=8118+Dufferin+Street%2C+Vaughan%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1",
+          "title": "OpenStreetMap Nominatim address match — 8118 Dufferin Street, Vaughan, Ontario, Canada",
+          "confidence": 85,
+          "reasoning": "Address geocode for the exact licensed street address; approximate marker, not a reviewed battery footprint."
+        }
+      ],
+      "longFormSummary": "<h3>Completed battery storage facility</h3><ul><li>Vaughan 1E is a 20 MW/80 MWh battery energy storage facility at 8118 Dufferin Street, Vaughan, Ontario, Canada, connected at 27.6 kV. It is one of three Alectra–Convergent projects which the issuer announced as operational on November 6, 2026.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li><li>The partners won the three IESO Expedited Long-Term 1 contracts in 2023. The completed facilities operate under 20-year IESO contracts. Stored electricity is released during high demand; this is storage capacity, not an electricity-generation rating.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Project timeline</h3><ul><li>A December 6, 2024 regulatory notice expected construction in Q1 2025 and commercial operation in Q4 2025. Those were historical plans.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document\"></cite></li><li>The July 17, 2025 OEB decision said construction of Vaughan 1E had begun; it did not publish an exact groundbreaking day. The then-stated operation target was January 2026. These targets do not establish the actual operation day.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document\"></cite></li><li>The site-specific storage licence was issued on 2026-05-19. The later November 6 announcement explicitly confirmed operation; the exact commercial-operation date remains unpublished.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document\"></cite><cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Cost and location precision</h3><ul><li>The opened issuer and regulator sources publish no plant-level capital cost; price and currency remain unset. No share of another programme total is allocated to this plant.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite><cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document\"></cite></li><li>The map marker is an estimated address geocode for the licensed street address, not a verified battery-container footprint. No reviewed site polygon is available.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942008/File/document\"></cite><cite data-ref=\"https://nominatim.openstreetmap.org/search?q=8118+Dufferin+Street%2C+Vaughan%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1\"></cite></li></ul>",
+      "parentId": 20798
+    }
+  },
+  {
+    "key": "news48-arlen",
+    "pinIds": {
+      "local": null,
+      "production": 20800
+    },
+    "title": "Arlen 20 MW Battery Storage Facility Is Announced Complete in Ontario",
+    "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document",
+    "profile": {
+      "sector": "Grid-scale lithium-ion battery energy storage",
+      "status": "production",
+      "assessmentDate": "2026-11-06",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No sourced comparable cohort or plant-specific measured operating capability supports a scored assessment.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Operational storage rating",
+          "value": "20 MW / 80 MWh; 13.8 kV connection",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "Arlen Energy Storage 1 LP: a 20 MW/80 MWh facility at 436 Clair Rd. W. in Guelph, connected at 13.8 kV."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Operational status",
+          "value": "Operational as announced November 6, 2026; exact COD unpublished",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        },
+        {
+          "key": "timeline",
+          "label": "IESO operating contract",
+          "value": "20-year IESO contract; awarded through the 2023 procurement",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational under 20-year contracts with the IESO, providing long-term support for the provincial electricity grid."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "IESO procurement contract awarded",
+          "date": "2023",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "In 2023, Alectra Energy Solutions and Convergent were awarded three contracts through the IESO’s Expedited Long-Term 1 procurement."
+          }
+        },
+        {
+          "label": "Section 80 construction notice filed",
+          "date": "2024-12-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction expected (historical plan)",
+          "date": "Q1 2025",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+            "title": "Alectra Convergent Development LP — Section 80 Notices",
+            "publishedDate": "2024-12-06",
+            "quote": "Construction on the three storage facilities is expected to commence in Q1 2025. Commercial operation is expected to commence in Q4 2025."
+          }
+        },
+        {
+          "label": "Construction reported underway; exact start unpublished",
+          "date": "2025-07-17",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Arlen Energy has stated that it plans to own one battery storage facility located in Guelph, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by December 2025."
+          }
+        },
+        {
+          "label": "Commercial operation expected (historical target)",
+          "date": "December 2025",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+            "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+            "publishedDate": "2025-07-17",
+            "quote": "Arlen Energy has stated that it plans to own one battery storage facility located in Guelph, Ontario. Construction of the facility has begun and it is expected to commence commercial operation by December 2025."
+          }
+        },
+        {
+          "label": "Storage licence issued",
+          "date": "2026-05-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document",
+            "title": "Electricity Storage Licence ES-2025-0184 — Arlen Energy Storage 1 LP",
+            "publishedDate": "2026-05-19",
+            "quote": "Date of Issuance: May 19, 2026"
+          }
+        },
+        {
+          "label": "Completion and operational status announced",
+          "date": "2026-11-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+            "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+            "publishedDate": "2026-11-06",
+            "quote": "All three facilities are now operational, adding 320 megawatt-hours (MWh) of energy storage capacity to Ontario’s electricity grid."
+          }
+        }
+      ]
+    },
+    "power": {
+      "megawatts": 20,
+      "kind": "storage",
+      "source": "hand",
+      "sourceUrl": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+      "note": "20 MW charge/discharge rating and 80 MWh storage; operational as announced November 6, 2026. This is storage, not generation capacity.",
+      "checkedAt": "2026-11-07T04:12:15.029Z"
+    },
+    "critic": {
+      "reviews": [
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "quote": "These projects will strengthen reliability and support our communities’ growing energy needs for years to come.",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "sentiment": 0.7,
+          "publishedDate": "2026-11-06"
+        }
+      ],
+      "source": "session",
+      "basis": "Issuer Brian Bentz’s reaction applies to the three newly operational plants; it is an official partner perspective. The exact quote was verified in the November 6 issuer announcement. Sentiment is an editorial estimate; independent local reactions were not found.",
+      "sourceUrl": null,
+      "checkedAt": "2026-11-07T04:12:19.194Z"
+    },
+    "pin": {
+      "title": "Arlen 20 MW Battery Storage Facility Is Announced Complete in Ontario",
+      "description": "Alectra Energy Solutions and Convergent announced that the Arlen battery facility is operational, with 20 MW/80 MWh of storage at 436 Clair Road West. The November 6, 2026 announcement confirms completed status; the exact commercial-operation day and project cost were not published.",
+      "sourceUrl": "https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document",
+      "utcStartDateTime": "2026-11-06T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "allDay": true,
+      "allDayStated": false,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Dated to the November 6, 2026 completion announcement: the issuer explicitly says all three facilities are now operational. The exact plant-specific commercial-operation date and construction-start day were not stated. This is a completed-facility announcement, not an invented groundbreaking date.",
+      "address": "Estimated: 436 Clair Road West, Guelph, Ontario, Canada",
+      "latitude": 43.48704,
+      "longitude": -80.20608,
+      "price": null,
+      "priceCurrency": null,
+      "company": "Alectra Energy Solutions",
+      "companyWikiUrl": null,
+      "categories": [
+        "Energy",
+        "Infrastructure"
+      ],
+      "tags": [
+        "Completed",
+        "Battery Storage",
+        "Ontario",
+        "Guelph"
+      ],
+      "media": [],
+      "stocks": [],
+      "references": [
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document",
+          "title": "Electricity Storage Licence ES-2025-0184 — Arlen Energy Storage 1 LP",
+          "publishedDate": "2026-05-19",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html",
+          "title": "Alectra Energy Solutions and Convergent Energy and Power Complete Three Battery Storage Facilities Supporting Ontario’s Electricity Grid",
+          "publishedDate": "2026-11-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document",
+          "title": "OEB Decision and Order EB-2025-0183/0184/0185 — Electricity Storage Licences",
+          "publishedDate": "2025-07-17",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document",
+          "title": "Alectra Convergent Development LP — Section 80 Notices",
+          "publishedDate": "2024-12-06",
+          "confidence": 100,
+          "reasoning": "Opened primary regulator document or issuer announcement; plant identity, stated milestone and scope verified."
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search?q=436+Clair+Road+West%2C+Guelph%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1",
+          "title": "OpenStreetMap Nominatim address match — 436 Clair Road West, Guelph, Ontario, Canada",
+          "confidence": 85,
+          "reasoning": "Address geocode for the exact licensed street address; approximate marker, not a reviewed battery footprint."
+        }
+      ],
+      "longFormSummary": "<h3>Completed battery storage facility</h3><ul><li>Arlen is a 20 MW/80 MWh battery energy storage facility at 436 Clair Road West, Guelph, Ontario, Canada, connected at 13.8 kV. It is one of three Alectra–Convergent projects which the issuer announced as operational on November 6, 2026.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li><li>The partners won the three IESO Expedited Long-Term 1 contracts in 2023. The completed facilities operate under 20-year IESO contracts. Stored electricity is released during high demand; this is storage capacity, not an electricity-generation rating.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Project timeline</h3><ul><li>A December 6, 2024 regulatory notice expected construction in Q1 2025 and commercial operation in Q4 2025. Those were historical plans.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/875179/File/document\"></cite></li><li>The July 17, 2025 OEB decision said construction of Arlen had begun; it did not publish an exact groundbreaking day. The then-stated operation target was December 2025. These targets do not establish the actual operation day.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/905091/File/document\"></cite></li><li>The site-specific storage licence was issued on 2026-05-19. The later November 6 announcement explicitly confirmed operation; the exact commercial-operation date remains unpublished.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document\"></cite><cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite></li></ul><h3>Cost and location precision</h3><ul><li>The opened issuer and regulator sources publish no plant-level capital cost; price and currency remain unset. No share of another programme total is allocated to this plant.<cite data-ref=\"https://new.streetinsider.com/Globe%2BNewswire/Alectra%2BEnergy%2BSolutions%2Band%2BConvergent%2BEnergy%2Band%2BPower%2BComplete%2BThree%2BBattery%2BStorage%2BFacilities%2BSupporting%2BOntario%E2%80%99s%2BElectricity%2BGrid/27309109.html\"></cite><cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document\"></cite></li><li>The map marker is an estimated address geocode for the licensed street address, not a verified battery-container footprint. No reviewed site polygon is available.<cite data-ref=\"https://www.rds.oeb.ca/CMWebDrawer/Record/942011/File/document\"></cite><cite data-ref=\"https://nominatim.openstreetmap.org/search?q=436+Clair+Road+West%2C+Guelph%2C+Ontario%2C+Canada&format=json&limit=1&addressdetails=1\"></cite></li></ul>",
+      "parentId": 20799
+    }
+  }
+]

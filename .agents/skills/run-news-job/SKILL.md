@@ -109,3 +109,7 @@ only grew. Per run:
 ## Added after run 46
 
 - Work the lanes with background subagents (see `daily-news-job` "Learnings from run 46"): one per lane in parallel, then a follow-up wave, then the parent writes the note and closes. Count revisit marks with a high `limit`; the default may hide some.
+
+## MCP transport in a Codex terminal session (run 48)
+
+When the tools are not registered as a connector, the existing stdio MCP protocol can be called directly from a persistent child process (`scripts/jobs/mcp.ts --run <id>`). Keep that process alive for paired research/save calls: `pending_event_info` stores its opened pages in a process-local `eventPagesRead` map and `record_event_info` must run in the same process. Launching a fresh MCP process per call loses that evidence cache and the record tool correctly refuses. Preserve the protocol's JSON-RPC response/error checks and the native run action log; do not substitute direct database writes.

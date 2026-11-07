@@ -1,0 +1,264 @@
+{
+  "runId": 48,
+  "pins": [
+    {
+      "id": 20692,
+      "title": "Brent Crude Oil Price \u2014 November 2026",
+      "sourceUrl": "https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26nov3017",
+      "userId": 408,
+      "parentId": 16017,
+      "utcStartDateTime": "2026-11-30T22:00:00.000Z",
+      "utcEndDateTime": null,
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: read on 6 November 2026 in the evening Pacific slot, Yes bid/ask was 53\u201357% above US$95.99 and 43\u201347% above US$97.99, with 85,355.55 contract units across 30 thresholds. This supports a broad US$96\u201398 crossing, not a precise modal band or dollar turnover. The contract measures a single index reading on 30 November 2026 at 5:00 PM EST (22:00 UTC), not a monthly average.",
+      "media": [
+        {
+          "id": 34100,
+          "thumbName": "e35762ac-0610-4f82-a414-168baf21169f.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 525,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/news/2026-10-16/brent-343d60b8c3f05699.webp",
+          "originalWidth": 1200,
+          "originalHeight": 630,
+          "type": "1"
+        }
+      ]
+    },
+    {
+      "id": 20722,
+      "title": "New Zealand Votes November 7, With Luxon Leading the Next-PM Forecast",
+      "sourceUrl": "https://polymarket.com/event/next-prime-minister-of-new-zealand-174",
+      "userId": 324,
+      "parentId": null,
+      "utcStartDateTime": "2026-11-06T20:00:00.000Z",
+      "utcEndDateTime": "2026-11-07T06:00:00.000Z",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: the prime-minister outcome is uncertain. On 6 November 2026, Polymarket priced Luxon at 55.5% and Hipkins at 43.5%, with US$233,883 traded. Official election-day polling runs 9am\u20137pm NZDT on 7 November, corresponding to 6 November 20:00 through 7 November 06:00 UTC. Government formation may follow coalition talks; the pin uses election onset rather than market settlement.",
+      "media": [
+        {
+          "id": 34213,
+          "thumbName": "c0597052-6a70-431f-8228-fd8635a86f32.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 750,
+          "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Beehive Building Wellington New Zealand.jpg?width=1920",
+          "originalWidth": 1920,
+          "originalHeight": 1440,
+          "type": "1"
+        },
+        {
+          "id": 34214,
+          "thumbName": "667e77e8-e3e6-4b61-b7df-68659c7729dc.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 667,
+          "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Beehive and Parliament House - Wellington - New Zealand - DSC00165.jpg?width=1920",
+          "originalWidth": 1920,
+          "originalHeight": 1280,
+          "type": "1"
+        }
+      ]
+    },
+    {
+      "id": 20723,
+      "title": "Godzilla Minus Zero Opens November 6, With the US$28\u201331 Million Bracket Leading Its Forecast",
+      "sourceUrl": "https://polymarket.com/event/godzilla-minus-zero-opening-weekend-box-office",
+      "userId": 51,
+      "parentId": null,
+      "utcStartDateTime": "2026-11-06T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: the North American release date is 6 November 2026, while the opening-weekend gross remains uncertain. On 6 November Polymarket displayed 73% for US$28\u201331 million and 24% for US$31\u201334 million, with US$137,832 traded. The pin remains dated to release onset, not exchange settlement.",
+      "media": [
+        {
+          "id": 34215,
+          "thumbName": "cf7e6170-5747-4867-b55d-e1bd9e2d80b7.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 667,
+          "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Godzilla Square 2018.jpg?width=1920",
+          "originalWidth": 1920,
+          "originalHeight": 1280,
+          "type": "1"
+        }
+      ]
+    },
+    {
+      "id": 20728,
+      "title": "October CPI Lands November 10, With Kalshi Pricing a 0.3% Headline Monthly Band",
+      "sourceUrl": "https://www.bls.gov/schedule/news_release/cpi.htm",
+      "userId": 277,
+      "parentId": 1981,
+      "utcStartDateTime": "2026-11-10T13:30:00.000Z",
+      "utcEndDateTime": "2026-11-10T14:30:00.000Z",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: BLS schedules release for 10 November 2026 at 8:30 a.m. Eastern (13:30 UTC). The unknown inflation outcome is forecast: observed 6 November evening, headline Yes bid/ask was 58\u201361% above 0.2% and 14\u201315% above 0.3%; core was 83\u201384% above 0.1% and 41\u201343% above 0.2%. Release onset is established; the result remains uncertain.",
+      "media": [
+        {
+          "id": 34220,
+          "thumbName": "9bfadd3c-9ac8-44a1-af72-d697a9dc6fde.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 453,
+          "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Postal_Square_Building.jpg",
+          "originalWidth": 3181,
+          "originalHeight": 1441,
+          "type": "1"
+        }
+      ]
+    },
+    {
+      "id": 20769,
+      "title": "National Leads the Forecast as New Zealand Votes on 7 November",
+      "sourceUrl": "https://polymarket.com/event/new-zealand-legislative-election-winner",
+      "userId": 324,
+      "parentId": 20722,
+      "utcStartDateTime": "2026-11-06T20:00:00.000Z",
+      "utcEndDateTime": "2026-11-07T06:00:00.000Z",
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: the predicted most-seats winner remains uncertain. On 6 November 2026 Polymarket priced National at 66% and Labour at 32.5%, with US$280,051 traded. The Electoral Commission confirms election-day polling 9am\u20137pm NZDT on 7 November; the pin starts at 20:00 UTC on 6 November, not market settlement.",
+      "media": [
+        {
+          "id": 36170,
+          "thumbName": "d0346c74-cc08-4225-bfec-a5b9d201e708.jpeg",
+          "thumbWidth": 1000,
+          "thumbHeight": 500,
+          "originalUrl": "https://polymarket-upload.s3.us-east-2.amazonaws.com/which-parties-will-be-part-of-the-next-government-of-new-zealand-JkhMvb-9VUVd.jpg",
+          "originalWidth": 1600,
+          "originalHeight": 800,
+          "type": "1",
+          "authorName": "Polymarket",
+          "authorUrl": "https://polymarket.com/event/new-zealand-legislative-election-winner"
+        }
+      ]
+    },
+    {
+      "id": 20797,
+      "title": "Kalshi Prices an Astra 6.1+ Release Before 31 December at 94%",
+      "sourceUrl": "https://kalshi.com/markets/kxgpt/when-will-openai-release-astra-6-1/kxgpt-astra61",
+      "userId": 438,
+      "parentId": 4802,
+      "utcStartDateTime": "2026-12-30T00:00:00.000Z",
+      "utcEndDateTime": null,
+      "dateConfidence": "estimated",
+      "dateConfidenceReasoning": "Estimated: on 6 November 2026 Kalshi displayed 43% before 13 November and 94% before 31 December, with US$590,335 displayed volume. The first majority-probability cutoff is 31 December; 30 December marks the last eligible calendar day of that release window, not a claim about the most likely exact day and not the exchange settlement buffer. The public-release date remains unknown.",
+      "media": [
+        {
+          "id": 36169,
+          "thumbName": "684e5a39-a4cd-4a13-9240-87ac435a2fdb.png",
+          "thumbWidth": 1000,
+          "thumbHeight": 525,
+          "originalUrl": "https://kalshi.com/api-app/preview/KXGPT-ASTRA61?width=1200&height=630",
+          "originalWidth": 1200,
+          "originalHeight": 630,
+          "type": "1",
+          "authorName": "Kalshi",
+          "authorUrl": "https://kalshi.com/markets/kxgpt/when-will-openai-release-astra-6-1/kxgpt-astra61"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "pinId": 1821,
+      "url": "https://chronopin.blob.core.windows.net/thumb/b9198fd3-02c4-46c1-8a9d-b3f432f64544.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1821,
+      "url": "https://chronopin.blob.core.windows.net/thumb/050d8247-3167-40d0-ba15-7fe79f0626c9.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1821,
+      "url": "https://chronopin.blob.core.windows.net/thumb/1222c0a3-ffed-4c2e-90f8-d09580918e8d.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1818,
+      "url": "https://chronopin.blob.core.windows.net/thumb/c01aefdf-6337-4872-bef1-9d9ea3e90876.jpeg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "pinId": 1818,
+      "url": "https://chronopin.blob.core.windows.net/thumb/31f476c7-3132-458f-a2d0-cbedb0aa3f95.jpeg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "pinId": 1800,
+      "url": "https://chronopin.blob.core.windows.net/thumb/84412cd9-d4dc-48a4-aae5-9d256647d13e.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1800,
+      "url": "https://chronopin.blob.core.windows.net/thumb/67caa474-a2a7-4136-a80f-051c48578d94.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1797,
+      "url": "https://chronopin.blob.core.windows.net/thumb/39601e5f-aa5e-4954-87a8-3fbd5bb992ec.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "pinId": 1797,
+      "url": "https://chronopin.blob.core.windows.net/thumb/7b722b17-ee01-464a-9555-f6b31691d4ba.jpeg",
+      "status": 200,
+      "type": "image/jpeg"
+    }
+  ],
+  "newMedia": [
+    {
+      "pinId": 20797,
+      "url": "https://chronopin.blob.core.windows.net/thumb/684e5a39-a4cd-4a13-9240-87ac435a2fdb.png",
+      "status": 200
+    },
+    {
+      "pinId": 20769,
+      "url": "https://chronopin.blob.core.windows.net/thumb/d0346c74-cc08-4225-bfec-a5b9d201e708.jpeg",
+      "status": 200
+    }
+  ],
+  "predictionAccuracy": {
+    "pins": 68,
+    "recorded": 0,
+    "settled": 2,
+    "voided": 0,
+    "skipped": 3,
+    "limit": 20000
+  },
+  "astraRecordedOdds": {
+    "rows": [
+      {
+        "id": 207,
+        "pinId": 20797,
+        "marketUrl": "https://kalshi.com/markets/kxgpt/when-will-openai-release-astra-6-1/kxgpt-astra61",
+        "source": "Kalshi",
+        "question": "When will OpenAI release Astra 6.1+?",
+        "outcomes": [
+          {
+            "label": "Before Dec 31, 2026",
+            "probability": 0.94
+          },
+          {
+            "label": "Before Nov 13, 2026",
+            "probability": 0.43
+          }
+        ],
+        "volume": 180315.5613,
+        "closeTime": "2026-12-31T04:59:00.000Z",
+        "status": "open",
+        "finalOutcomes": null,
+        "utcSnapshotDateTime": "2026-11-07T03:42:13.716Z",
+        "utcResolvedDateTime": null,
+        "basis": "live"
+      }
+    ],
+    "total": 1,
+    "limit": 50,
+    "offset": 0
+  }
+}

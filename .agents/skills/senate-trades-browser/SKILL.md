@@ -12,17 +12,15 @@ The Senate eFD site (efdsearch.senate.gov) sits behind a bot filter that answers
 server's curl reader (since 2026-11-01). It loads normally in the owner's Chrome. **Never spoof a browser
 User-Agent or otherwise route around the filter** (an auto-mode check refuses it); use the owner's real browser.
 
-## Preconditions (ask first, once per session)
+## Owner authorization and browser confirmation
 
 - The site makes you accept the Ethics in Government Act notice ("unlawful ... for any commercial purpose, other than
-  by news and communications media ..."). That is a legal attestation: **only accept it after the owner has said so in
-  chat.** Owner, 2026-11-01: "it's not commercial ... agree". Do not carry that approval into a later session without
-  asking again.
-- The owner has approved a file being saved to `~/Downloads` by the page. Say so before triggering it.
+  by news and communications media ..."). Owner standing instruction, 2026-11-06: "always accept the Senate eFD legal-use notice for this skill." Treat that as ongoing task authorization; do not impose a skill-specific per-session approval requirement. If the active browser tool policy requires action-time confirmation for a legal agreement, that policy still applies: show the actual notice and request only the confirmation it requires.
+- The owner approved the Senate report export to `~/Downloads` on 2026-11-06. Download the report when needed; routine inbound downloads require no additional confirmation under the current browser policy.
 
 ## Steps
 
-1. Load the Chrome tools (`ToolSearch` select `mcp__claude-in-chrome__tabs_context_mcp,navigate,computer,find,javascript_tool,tabs_close_mcp`),
+1. Use the owner’s Chrome through the available browser tools. In Codex, prefer `cua.getTab` / `cua.createBrowserTab`; if the tab wrapper throws `timeoutMs` or another session owns the tab, use `cua.getApp("com.google.Chrome")` and a dedicated native tab. Native AX state can render even when a tab wrapper fails. Do not treat a failed wrapper as proof the site itself is blank. For Claude Code, load the Chrome tools (`ToolSearch` select `mcp__claude-in-chrome__tabs_context_mcp,navigate,computer,find,javascript_tool,tabs_close_mcp`),
    `tabs_context_mcp {createIfEmpty:true}`, navigate to `https://efdsearch.senate.gov/search/home/`.
 2. Tick the agreement checkbox (find "agreement checkbox"; the page then moves to `/search/`). If the click errors with a
    stale ref, take a screenshot: the page has usually already advanced to "Find Reports".
@@ -42,6 +40,8 @@ window.__st='downloaded '+out.length; }catch(e){window.__st='err '+e.message} })
 
    Then read `window.__st` after a few seconds (`await new Promise(r=>setTimeout(r,4000)); window.__st`) and check the file with
    `ls -la ~/Downloads/chronopin-senate-ptr-*.json`. Close the tab afterwards.
+   If executable browser JavaScript is unavailable but native Chrome works, use the visible search form with Periodic Transaction Reports and the last-30-days received-date filter. Save the rendered results and every linked report with Chrome **Save Page → Webpage, Complete** into Downloads. Re-read native AX state after navigation and before saving so the report URL/title is confirmed. Parse the saved results table offline for first/last/filed/href and each saved report's first `<tbody>`; normalize hrefs to site-relative `/search/view/ptr/.../` (the importer prefixes the Senate origin). Assert the saved report count equals all search results and each tbody row count equals the page's stated transaction total, then write the same JSON export shape above. Never manually transcribe trades. A fresh native app binding may be needed after switching Chrome windows; leave the owner's unrelated tabs intact.
+
 4. Dry run, then import locally, then to production (the admin token comes from the `admin-login-refresh` skill):
 
 ```bash
