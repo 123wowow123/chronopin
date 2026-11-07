@@ -461,12 +461,10 @@ https://hub.tslombard.com/the-perkini-report
 
 
 
-How can Chronopin improve organic search growth. Use my broswer to check if needed
+How can Chronopin improve organic search growth. Use my browser to check if needed
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
 
 
-
-build span chart display for construction pins with a timeline and show
 
 
 earthquakes should have running thread per year.
