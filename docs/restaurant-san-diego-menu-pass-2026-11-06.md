@@ -123,3 +123,21 @@ one image is 150M pixels (PIL bomb warning).
 985 candidates -> 906 after a full contact-sheet review (50 sheets; rejects: scene shots, wrong dish, hands, text overlays,
 near-identical multi-dish platters) -> 901 applied on 102 venues, readbacks verified. Credit line: "Photo via DiningCity
 Restaurant Week". Provenance caveat: these look like diner-submitted photos; licensing is not confirmed.
+
+### Follow-up 2026-11-07: Queenstown, Union Gaslamp, Qu'il fait bon Christmas tarts
+
+- Queenstown Public House (content 1965, pin 20503): added "Weekday lunch" (33 items) and "Weekend brunch" (36) from the
+  operator's PDFs (queenstownhg.com `Public-House-Lunch-Menu.pdf`, `Brunch-Menu.pdf`; the "lunch" PDF also carries the
+  until-2-pm brunch block). 17 items reuse the same dish's photo from the Dinner menu. Read the PDFs as page images: two-column
+  `pdftotext` output interleaves columns.
+- Union Kitchen & Tap Gaslamp (content 1969): added Lunch (42) and Brunch (38) from gaslampunion.com/lunch and /brunch (read in
+  Chrome; the brunch page needs a few seconds to render). 29 items reuse the dinner photo of the same dish.
+- Qu'il fait bon: nine Christmas Cake 2026 tarts on six branches (Shinjuku, Aoyama, Ginza, Tokyo Dome, Solamachi, Grand Front
+  Osaka) got the product photo from the operator's `christmas-cake-2026` news page (54 attachments). The pumpkin tart stays
+  without a photo (no product image found).
+- Still not done: Rakiraki Convoy (no prices, no confirmed Convoy address), Earls Miami (slugs already in batch 2).
+- Menu additions PUT to `/api/admin/restaurant-content/:id` with `revision`; the prod admin GET by id returns the record.
+
+Decision 2026-11-07 (owner): keep the 901 DiningCity China dish photos on production. Their licensing is still unconfirmed
+(they look diner-submitted); the credit line stays "Photo via DiningCity Restaurant Week" in the data, though dish photos
+with a caption no longer show the credit in the UI.
