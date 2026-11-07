@@ -113,3 +113,9 @@ only grew. Per run:
 ## MCP transport in a Codex terminal session (run 48)
 
 When the tools are not registered as a connector, the existing stdio MCP protocol can be called directly from a persistent child process (`scripts/jobs/mcp.ts --run <id>`). Keep that process alive for paired research/save calls: `pending_event_info` stores its opened pages in a process-local `eventPagesRead` map and `record_event_info` must run in the same process. Launching a fresh MCP process per call loses that evidence cache and the record tool correctly refuses. Preserve the protocol's JSON-RPC response/error checks and the native run action log; do not substitute direct database writes.
+
+## Codex transport notes from run 49
+
+- Run slow MCP calls from a retained background promise and inspect it in later Node REPL calls; a 30-second Node REPL timeout resets the kernel even when a production create already succeeded. Check production by exact source URL and subject before retrying a timed-out creation.
+- Large tool responses can be cut at 40,000 characters inside the JSON string (`industry_forecast_status`), making it invalid JSON. Preserve the response and read the bounded affected rows through the authenticated native admin API; do not treat truncation as an empty queue.
+- Cross-host review panels normally have different `checkedAt` timestamps. Verify all substantive fields and reviews, excluding only that check timestamp; do not report equal content as a failed save merely because the two writes happened milliseconds apart.

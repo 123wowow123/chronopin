@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { Suspense } from 'react';
-import { ConstructionChart } from '@/components/construction/ConstructionChart';
+import { ConstructionExplorer } from '@/components/construction/ConstructionExplorer';
 import Link from '@/components/ui/Link';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
-import { CONSTRUCTION_ROW_LIMIT, CONSTRUCTION_YEARS, constructionSpans, type ConstructionStatus } from '@/server/services/construction';
+import { CONSTRUCTION_ROW_LIMIT, CONSTRUCTION_YEARS, constructionSpans } from '@/server/services/construction';
 import { siteCardImages } from '@/server/services/shareCard';
 
 type Props = { searchParams: Promise<{ year?: string; country?: string }> };
@@ -51,7 +51,6 @@ async function Construction({ searchParams }: Props) {
   const range = `${year}–${year + CONSTRUCTION_YEARS - 1}`;
   const href = (y: number, all: boolean) => `/construction?year=${y}${all ? '&country=all' : ''}`;
   const pill = 'rounded-full border border-line px-3 py-1 text-sm hover:bg-panel';
-  const legend: [ConstructionStatus, string, 'proposed' | 'inProgress' | 'completed'][] = [['Proposed', 'bg-slate-400', 'proposed'], ['In Progress', 'bg-blue-600', 'inProgress'], ['Completed', 'bg-emerald-500', 'completed']];
   return (
     <main className="mx-auto max-w-7xl px-4 py-6">
       <h1 className="text-2xl font-semibold">{t('guides.construction.heading', { year: range, place: everywhere ? t('guides.construction.worldwide') : t('guides.construction.usa') })}</h1>
@@ -63,13 +62,10 @@ async function Construction({ searchParams }: Props) {
         <span className="mx-2 h-5 w-px bg-line" />
         <Link href={href(year, false)} className={`${pill} ${everywhere ? '' : 'bg-panel font-medium'}`}>{t('guides.construction.usa')}</Link>
         <Link href={href(year, true)} className={`${pill} ${everywhere ? 'bg-panel font-medium' : ''}`}>{t('guides.construction.worldwide')}</Link>
-        <ul className="ms-auto flex gap-3 text-xs text-muted">
-          {legend.map(([status, tone, key]) => <li key={status} className="flex items-center gap-1"><span className={`size-2.5 rounded-sm ${tone}`} />{t(`reserved.${key}`)}</li>)}
-        </ul>
       </div>
       {bars.length ? (
         <>
-          <ConstructionChart bars={bars} year={year} now={now} />
+          <ConstructionExplorer bars={bars} year={year} now={now} />
           <p className="mt-2 text-xs text-muted">{total > CONSTRUCTION_ROW_LIMIT ? t('guides.construction.shownOf', { shown: String(bars.length), total: String(total) }) : t('guides.construction.count', { total: String(total) })}</p>
           {undated > 0 && <p className="mt-1 text-xs text-muted">{t('guides.construction.undated', { count: String(undated) })}</p>}
         </>

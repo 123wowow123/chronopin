@@ -1,0 +1,385 @@
+{
+  "pins": {
+    "18190": {
+      "id": 18190,
+      "title": "Starship Flight 15 Targets No Earlier Than November 13",
+      "sourceUrl": "https://polymarket.com/event/spacex-starship-flight-test-15",
+      "date": "2026-11-13T00:00:00.000Z",
+      "parent": 1945,
+      "reason": "Estimated: Eric Berger’s November 5, 2026 on-site UP.Summit report says SpaceX launch vice president Kiko Dontchev is targeting Friday, November 13 for Flight 15. Next Spaceflight also lists NET November 13. No clock time or final SpaceX countdown is established. This newer executive target supersedes the October 21 market-window estimate; settlement buffers remain excluded.",
+      "media": [
+        {
+          "id": 27714,
+          "thumb": "519cdf76-8d6c-40d0-a11e-237e8fcf15c6.jpeg"
+        },
+        {
+          "id": 27715,
+          "thumb": "aa2fd2a3-8817-49ff-9c79-af51b6b69b40.jpeg"
+        },
+        {
+          "id": 27716,
+          "thumb": "0b7d038d-7f91-40cb-b2ac-4d36e669f6b9.jpeg"
+        }
+      ]
+    },
+    "20692": {
+      "id": 20692,
+      "title": "Brent Crude Oil Price — November 2026",
+      "sourceUrl": "https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26nov3017",
+      "date": "2026-11-30T22:00:00.000Z",
+      "parent": 16017,
+      "reason": "Estimated: observed November 7, 2026 morning Pacific, Yes bid/ask was 53–57% above US$95.99 and44–48% above US$97.99. The November 30 5 pmEST index-reading event had86,918.23 contracts across 30 thresholds. This supports a broad US$96–98 50% crossing rather than a precise modal band or verified dollar turnover. The pin remains at 22:00 UTC onNovember30, not a monthly average.",
+      "media": [
+        {
+          "id": 34100,
+          "thumb": "e35762ac-0610-4f82-a414-168baf21169f.jpeg"
+        }
+      ]
+    },
+    "20722": {
+      "id": 20722,
+      "title": "Luxon Leads Next-PM Market as New Zealand Government Formation Remains Unresolved",
+      "sourceUrl": "https://polymarket.com/event/next-prime-minister-of-new-zealand-174",
+      "date": "2026-11-06T20:00:00.000Z",
+      "reason": "Estimated outcome: On November 7, the exchange API priced Christopher Luxon at 83% and Chris Hipkins at 13.5% for the next-prime-minister contract, with US$304,740.82 traded. Preserve November 7 voting onset; the count is preliminary and official results are due November 27. Government formation is separate from the most-seats result.",
+      "media": [
+        {
+          "id": 34213,
+          "thumb": "c0597052-6a70-431f-8228-fd8635a86f32.jpeg"
+        },
+        {
+          "id": 34214,
+          "thumb": "667e77e8-e3e6-4b61-b7df-68659c7729dc.jpeg"
+        }
+      ]
+    },
+    "20769": {
+      "id": 20769,
+      "title": "National Leads New Zealand’s Preliminary Seat Count; Official Results Due November 27",
+      "sourceUrl": "https://polymarket.com/event/new-zealand-legislative-election-winner",
+      "date": "2026-11-06T20:00:00.000Z",
+      "parent": 20722,
+      "reason": "Estimated outcome: On November 7, the exchange API priced National at 98.65% and Labour at 1.3% for the most-seats contract, with US$718,378.39 traded. Preserve November 7 voting onset; the count is preliminary and official results are due November 27. Government formation is separate from the most-seats result.",
+      "media": [
+        {
+          "id": 36170,
+          "thumb": "d0346c74-cc08-4225-bfec-a5b9d201e708.jpeg",
+          "authorName": "Polymarket",
+          "authorUrl": "https://polymarket.com/event/new-zealand-legislative-election-winner"
+        }
+      ]
+    },
+    "20797": {
+      "id": 20797,
+      "title": "Kalshi Favours an Astra 6.1+ Release Before November 13",
+      "sourceUrl": "https://kalshi.com/markets/kxgpt/when-will-openai-release-astra-6-1/kxgpt-astra61",
+      "date": "2026-11-12T00:00:00.000Z",
+      "parent": 4802,
+      "reason": "Estimated: On November 7, 2026, the before-November 13 contract last traded 56%, with current Yes bid/ask 52–54%; before-December 31 was 93–94%. November 12 is the final eligible day of the first majority-probability window, not an announced exact launch date. The event reported 595,096.57 contracts across all deadlines; contract counts are not dollar cash turnover.",
+      "media": [
+        {
+          "id": 36169,
+          "thumb": "684e5a39-a4cd-4a13-9240-87ac435a2fdb.png",
+          "authorName": "Kalshi",
+          "authorUrl": "https://kalshi.com/markets/kxgpt/when-will-openai-release-astra-6-1/kxgpt-astra61"
+        }
+      ]
+    },
+    "20847": {
+      "id": 20847,
+      "title": "House Vote on Pete Hegseth Impeachment Is Favoured Before November 14",
+      "sourceUrl": "https://kalshi.com/markets/kxvotehegsethimpeach/will-the-house-vote-on-impeaching-pete-hegseth-before-2027/kxvotehegsethimpeach-26oct",
+      "date": "2026-11-13T00:00:00.000Z",
+      "reason": "Estimated: On November 7, 2026, Kalshi’s first majority-probability window was before November 14: last trade 62%, current Yes bid/ask 64–67%. November 13 marks the final day of that window, not a scheduled vote. The event had 69,012.94 contracts traded across three deadlines; the job scan estimated US$47,033 using last-price-weighted volume, not audited cash turnover.",
+      "media": [
+        {
+          "id": 36257,
+          "thumb": "a099dd01-8c46-4e52-95fc-b84fbf776960.png",
+          "authorName": "Kalshi",
+          "authorUrl": "https://kalshi.com/markets/kxvotehegsethimpeach/will-the-house-vote-on-impeaching-pete-hegseth-before-2027/kxvotehegsethimpeach-26oct"
+        }
+      ]
+    },
+    "20848": {
+      "id": 20848,
+      "title": "Lee Fairclough Leads Forecast as Ontario Liberal Leadership Voting Opens November 9",
+      "sourceUrl": "https://polymarket.com/event/ontario-liberal-party-leadership-election-winner",
+      "date": "2026-11-09T00:00:00.000Z",
+      "reason": "Estimated outcome: On November 7, 2026, Polymarket’s scan priced Lee Fairclough at 64.5% and Navdeep Bains at 34%, with US$19,830 total volume. The official party site schedules voting November 9–20 and results November 21. This pin starts with voting, not the exchange close or result announcement; it does not predict a precise victory day.",
+      "media": [
+        {
+          "id": 36265,
+          "thumb": "581d3162-1453-4985-9560-525adcfc5a1c.png",
+          "authorName": "Ontario Liberal Party",
+          "authorUrl": "https://leadership.ontarioliberal.ca/"
+        },
+        {
+          "id": 36266,
+          "thumb": "3326f1ad-0b28-45c2-ae80-1d2711a73b1f.jpeg",
+          "authorName": "Ontario Liberal Party — Lee Fairclough portrait",
+          "authorUrl": "https://leadership.ontarioliberal.ca/candidates"
+        },
+        {
+          "id": 36267,
+          "thumb": "f18ca422-a35b-4729-9630-f96c05f106f1.png",
+          "authorName": "Ontario Liberal Party — Navdeep Bains portrait",
+          "authorUrl": "https://leadership.ontarioliberal.ca/candidates"
+        }
+      ]
+    },
+    "20849": {
+      "id": 20849,
+      "title": "Justin Allgaier Is Favoured for NASCAR’s 2026 O’Reilly Title at Homestead",
+      "sourceUrl": "https://kalshi.com/markets/kxnascarautopartsseries/nascar-o-reilly-auto-parts-series-champion-nascar-auto-parts-series/kxnascarautopartsseries-naps26",
+      "date": "2026-11-07T22:00:00.000Z",
+      "reason": "Estimated winner: On November 7, 2026, Allgaier’s Yes bid/ask was 52–53%, ahead of Corey Day at 22–26% and Jesse Love at 21–23%. The event had 334,799.56 contracts traded. The scan estimated US$62,218 in last-price-weighted volume, not verified historical cash turnover. The 5 p.m. Eastern race start is published in the team schedule; the winner remains a forecast.",
+      "media": [
+        {
+          "id": 36268,
+          "thumb": "b0fb443a-799b-4d41-ae6c-69b095d0aa80.png",
+          "authorName": "Kalshi",
+          "authorUrl": "https://kalshi.com/markets/kxnascarautopartsseries/nascar-o-reilly-auto-parts-series-champion-nascar-auto-parts-series/kxnascarautopartsseries-naps26"
+        }
+      ]
+    }
+  },
+  "media": [
+    {
+      "pinId": 20847,
+      "id": 36257,
+      "source": "https://kalshi.com/api-app/preview/KXVOTEHEGSETHIMPEACH-26OCT?width=1200&height=630",
+      "authorName": "Kalshi",
+      "authorUrl": "https://kalshi.com/markets/kxvotehegsethimpeach/will-the-house-vote-on-impeaching-pete-hegseth-before-2027/kxvotehegsethimpeach-26oct",
+      "status": 200,
+      "type": "image/png",
+      "blob": "https://chronopin.blob.core.windows.net/thumb/a099dd01-8c46-4e52-95fc-b84fbf776960.png"
+    },
+    {
+      "pinId": 20848,
+      "id": 36266,
+      "source": "https://images.squarespace-cdn.com/content/v1/698261b05a2b8d79719f80b4/7cc5373b-d2ee-404f-9502-09b4cd856c27/Official+Headshot.jpg",
+      "authorName": "Ontario Liberal Party — Lee Fairclough portrait",
+      "authorUrl": "https://leadership.ontarioliberal.ca/candidates",
+      "status": 200,
+      "type": "image/jpeg",
+      "blob": "https://chronopin.blob.core.windows.net/thumb/3326f1ad-0b28-45c2-ae80-1d2711a73b1f.jpeg"
+    },
+    {
+      "pinId": 20848,
+      "id": 36265,
+      "source": "http://static1.squarespace.com/static/698261b05a2b8d79719f80b4/t/698628a25178496a329be783/1770399906205/OLP+Leadership+Race+Logo+-+Social+Sharing.png?format=1500w",
+      "authorName": "Ontario Liberal Party",
+      "authorUrl": "https://leadership.ontarioliberal.ca/",
+      "status": 200,
+      "type": "image/png",
+      "blob": "https://chronopin.blob.core.windows.net/thumb/581d3162-1453-4985-9560-525adcfc5a1c.png"
+    },
+    {
+      "pinId": 20849,
+      "id": 36268,
+      "source": "https://kalshi.com/api-app/preview/KXNASCARAUTOPARTSSERIES-NAPS26?width=1200&height=630",
+      "authorName": "Kalshi",
+      "authorUrl": "https://kalshi.com/markets/kxnascarautopartsseries/nascar-o-reilly-auto-parts-series-champion-nascar-auto-parts-series/kxnascarautopartsseries-naps26",
+      "status": 200,
+      "type": "image/png",
+      "blob": "https://chronopin.blob.core.windows.net/thumb/b0fb443a-799b-4d41-ae6c-69b095d0aa80.png"
+    },
+    {
+      "pinId": 20848,
+      "id": 36267,
+      "source": "https://images.squarespace-cdn.com/content/v1/698261b05a2b8d79719f80b4/2f95c1d8-d2b7-472b-9d3c-2c761fdde8f5/Navdeep+Bains+Headshot",
+      "authorName": "Ontario Liberal Party — Navdeep Bains portrait",
+      "authorUrl": "https://leadership.ontarioliberal.ca/candidates",
+      "status": 200,
+      "type": "image/png",
+      "blob": "https://chronopin.blob.core.windows.net/thumb/f18ca422-a35b-4729-9630-f96c05f106f1.png"
+    }
+  ],
+  "records": {
+    "rows": [
+      {
+        "id": 208,
+        "pinId": 20847,
+        "marketUrl": "https://kalshi.com/markets/kxvotehegsethimpeach/will-the-house-vote-on-impeaching-pete-hegseth-before-2027/kxvotehegsethimpeach-26oct",
+        "source": "Kalshi",
+        "question": "Will the House vote on impeaching Pete Hegseth? Before 2027",
+        "outcomes": [
+          {
+            "label": "Before Jan 1, 2027",
+            "probability": 0.84
+          },
+          {
+            "label": "Before Nov 21, 2026",
+            "probability": 0.77
+          },
+          {
+            "label": "Before Nov 14, 2026",
+            "probability": 0.62
+          }
+        ],
+        "volume": 47033.402,
+        "closeTime": "2027-01-01T04:59:00.000Z",
+        "status": "open",
+        "finalOutcomes": null,
+        "utcSnapshotDateTime": "2026-11-07T14:19:12.312Z",
+        "utcResolvedDateTime": null,
+        "basis": "live"
+      },
+      {
+        "id": 209,
+        "pinId": 20848,
+        "marketUrl": "https://polymarket.com/event/ontario-liberal-party-leadership-election-winner",
+        "source": "Polymarket",
+        "question": "Ontario Liberal Party Leadership Election Winner",
+        "outcomes": [
+          {
+            "label": "Lee Fairclough",
+            "probability": 0.645
+          },
+          {
+            "label": "Navdeep Bains",
+            "probability": 0.34
+          },
+          {
+            "label": "Stephanie Bowman",
+            "probability": 0.0155
+          },
+          {
+            "label": "Dylan Marando",
+            "probability": 0.0015
+          },
+          {
+            "label": "Eric Lombardi",
+            "probability": 0.0005
+          }
+        ],
+        "volume": 19830.003978,
+        "closeTime": "2026-11-10T04:59:00.000Z",
+        "status": "open",
+        "finalOutcomes": null,
+        "utcSnapshotDateTime": "2026-11-07T14:21:00.585Z",
+        "utcResolvedDateTime": null,
+        "basis": "live"
+      },
+      {
+        "id": 210,
+        "pinId": 20849,
+        "marketUrl": "https://kalshi.com/markets/kxnascarautopartsseries/nascar-o-reilly-auto-parts-series-champion-nascar-auto-parts-series/kxnascarautopartsseries-naps26",
+        "source": "Kalshi",
+        "question": "NASCAR O'Reilly Auto Parts Series Champion NASCAR Auto Parts Series",
+        "outcomes": [
+          {
+            "label": "Justin Allgaier",
+            "probability": 0.52
+          },
+          {
+            "label": "Jesse Love",
+            "probability": 0.21
+          },
+          {
+            "label": "Corey Day",
+            "probability": 0.21
+          },
+          {
+            "label": "Carson Kvapil",
+            "probability": 0.1
+          },
+          {
+            "label": "Anthony Alfredo",
+            "probability": 0.04
+          },
+          {
+            "label": "Sheldon Creed",
+            "probability": 0.03
+          },
+          {
+            "label": "Brandon Jones",
+            "probability": 0.02
+          },
+          {
+            "label": "Garrett Smithley",
+            "probability": 0.01
+          },
+          {
+            "label": "Ryan Ellis",
+            "probability": 0.01
+          },
+          {
+            "label": "Luke Fenhaus",
+            "probability": 0.01
+          },
+          {
+            "label": "Josh Bilicki",
+            "probability": 0.01
+          },
+          {
+            "label": "Sammy Smith",
+            "probability": 0.01
+          },
+          {
+            "label": "William Sawalich",
+            "probability": 0.01
+          },
+          {
+            "label": "Giovanni Ruggiero",
+            "probability": 0.01
+          },
+          {
+            "label": "Austin Hill",
+            "probability": 0.01
+          },
+          {
+            "label": "Harrison Burton",
+            "probability": 0.01
+          },
+          {
+            "label": "Nicholas Sanchez",
+            "probability": 0.01
+          },
+          {
+            "label": "Dean Thompson",
+            "probability": 0.01
+          },
+          {
+            "label": "Jeb Burton",
+            "probability": 0.01
+          },
+          {
+            "label": "Kyle Sieg",
+            "probability": 0.01
+          },
+          {
+            "label": "Cody Ware",
+            "probability": 0.01
+          },
+          {
+            "label": "Blaine Perkins",
+            "probability": 0.01
+          },
+          {
+            "label": "Ross Chastain",
+            "probability": 0.01
+          },
+          {
+            "label": "Joey Gase",
+            "probability": 0.01
+          },
+          {
+            "label": "Ryan Sieg",
+            "probability": 0.01
+          }
+        ],
+        "volume": 61930.10369999998,
+        "closeTime": "2026-11-09T15:00:00.000Z",
+        "status": "open",
+        "finalOutcomes": null,
+        "utcSnapshotDateTime": "2026-11-07T14:21:10.210Z",
+        "utcResolvedDateTime": null,
+        "basis": "live"
+      }
+    ],
+    "total": 3,
+    "limit": 100,
+    "offset": 0
+  }
+}

@@ -361,15 +361,15 @@
       "id": 20837,
       "textHash": "55312db7bdb2",
       "sentiment": 0.3,
-      "product": "The Murder of JonBenét Ramsey",
-      "title": "The Murder of JonBenét Ramsey Premieres on Netflix",
+      "product": "The Murder of JonBen\u00e9t Ramsey",
+      "title": "The Murder of JonBen\u00e9t Ramsey Premieres on Netflix",
       "company": "Netflix",
       "readback": {
         "pinId": 20837,
         "sentiment": 0.3,
         "textHash": "55312db7bdb25ceb3fc6dcf2ae33e52922d540d95e9917d89d55681bf2276ccc",
         "utcScoredDateTime": "2026-11-07T14:17:02.046Z",
-        "product": "The Murder of JonBenét Ramsey",
+        "product": "The Murder of JonBen\u00e9t Ramsey",
         "productHash": "55312db7bdb25ceb3fc6dcf2ae33e52922d540d95e9917d89d55681bf2276ccc"
       },
       "verified": true
@@ -546,14 +546,195 @@
       "refused": []
     }
   ],
-  "pendingFinal": [
-    {
-      "id": 17731,
-      "textHash": "6bafc5b4a2be"
-    },
-    {
-      "id": 20807,
-      "textHash": "c4d0cf1374e1"
-    }
-  ]
+  "pendingFinal": [],
+  "followup": {
+    "judgments": [
+      {
+        "id": 18190,
+        "textHash": "830ff2237994",
+        "sentiment": 0.3,
+        "product": "Starship",
+        "title": "Starship Flight 15 Targets No Earlier Than November 13",
+        "description": "SpaceX is targeting no earlier than November 13, 2026 for Starship Flight 15, according to Eric Berger\u2019s November 5 report of launch vice president Kiko Dontchev\u2019s UP.Summit remarks. No final liftoff time is announced.",
+        "company": "SpaceX",
+        "readback": {
+          "pinId": 18190,
+          "sentiment": 0.3,
+          "textHash": "830ff2237994d6d03e371e84121b9fe14da2376715685eb6bbda016abb51abdf",
+          "utcScoredDateTime": "2026-11-07T14:37:55.597Z",
+          "product": "Starship",
+          "productHash": "830ff2237994d6d03e371e84121b9fe14da2376715685eb6bbda016abb51abdf"
+        },
+        "verified": true
+      },
+      {
+        "id": 20797,
+        "textHash": "70bf3feace88",
+        "sentiment": 0.1,
+        "product": "GPT",
+        "title": "Kalshi Favours an Astra 6.1+ Release Before November 13",
+        "description": "On November 7, 2026, Kalshi\u2019s current Yes bid/ask favoured an OpenAI Astra 6.1-or-newer public release before November 13 at 52\u201354%, versus 93\u201394% before December 31. The release date remains unannounced; these are forecast windows.",
+        "company": "OpenAI",
+        "readback": {
+          "pinId": 20797,
+          "sentiment": 0.1,
+          "textHash": "70bf3feace888449c962856e2e25dd32ee153fe869a09add66d5a17080119b9c",
+          "utcScoredDateTime": "2026-11-07T14:37:55.602Z",
+          "product": "GPT",
+          "productHash": "70bf3feace888449c962856e2e25dd32ee153fe869a09add66d5a17080119b9c"
+        },
+        "verified": true
+      },
+      {
+        "id": 20807,
+        "textHash": "c4d0cf1374e1",
+        "sentiment": 0.3,
+        "product": "Will Trent",
+        "title": "Will Trent Season 5 Premieres on ABC",
+        "description": "ABC's midseason schedule puts the Season 5 premiere of Will Trent on Tuesday 5 January 2027 at 8 pm ET, with the next-day Hulu stream expected as in earlier seasons. The season picks up about a year after the events of the Season 4 finale, with the GBI still waiting for Amanda Wagner's successor.",
+        "company": "ABC",
+        "readback": {
+          "pinId": 20807,
+          "sentiment": 0.3,
+          "textHash": "c4d0cf1374e131295f316d1211c72282f32cd6f15f17d75a6fb015946910b804",
+          "utcScoredDateTime": "2026-11-07T14:37:55.606Z",
+          "product": "Will Trent",
+          "productHash": "c4d0cf1374e131295f316d1211c72282f32cd6f15f17d75a6fb015946910b804"
+        },
+        "verified": true
+      },
+      {
+        "id": 20825,
+        "textHash": "4a7d0b1a5dc6",
+        "sentiment": 0.3,
+        "product": "Canada Dry",
+        "title": "Canada Dry Raspberry Lemonade Launches in Spring 2027",
+        "description": "Keurig Dr Pepper will release Canada Dry Raspberry Lemonade, in regular and Zero Sugar, as a seasonal flavor beginning in spring 2027, one of four soda launches in its 2027 lineup; no price or day has been published.",
+        "company": "Keurig Dr Pepper",
+        "readback": {
+          "pinId": 20825,
+          "sentiment": 0.3,
+          "textHash": "4a7d0b1a5dc69876fd6e50eaf69ebd578e0e5c583352bfaf10c5a0bf60dc6f5f",
+          "utcScoredDateTime": "2026-11-07T14:37:55.609Z",
+          "product": "Canada Dry",
+          "productHash": "4a7d0b1a5dc69876fd6e50eaf69ebd578e0e5c583352bfaf10c5a0bf60dc6f5f"
+        },
+        "verified": true
+      },
+      {
+        "id": 20834,
+        "textHash": "4a1cb209acda",
+        "sentiment": 0.3,
+        "product": "Blue Eye Samurai",
+        "title": "Blue Eye Samurai Season 2 Premieres on Netflix",
+        "description": "Netflix's Blue Eye Samurai returns on 19 January 2027 with six new episodes of Season 2, which follows Mizu to London as her revenge quest widens into Europe. Netflix says the animated drama will conclude in 2028.",
+        "company": "Netflix",
+        "readback": {
+          "pinId": 20834,
+          "sentiment": 0.3,
+          "textHash": "4a1cb209acdaaf68453a9af3ed785fbaaa15196bf43a4f05c3c67b09a52e6027",
+          "utcScoredDateTime": "2026-11-07T14:37:55.611Z",
+          "product": "Blue Eye Samurai",
+          "productHash": "4a1cb209acdaaf68453a9af3ed785fbaaa15196bf43a4f05c3c67b09a52e6027"
+        },
+        "verified": true
+      },
+      {
+        "id": 20835,
+        "textHash": "a44b129bb0df",
+        "sentiment": 0.3,
+        "product": "Mayor of Kingstown",
+        "title": "Mayor of Kingstown Final Season 5 Premieres on Paramount+",
+        "description": "Paramount+ premieres the fifth and final season of Mayor of Kingstown on Friday 15 January 2027, picking up right after Season 4's two murders with Jeremy Renner's Mike McLusky still fighting for control of the prison town. The final season has eight episodes; Taylor Sheridan co-created the series with Hugh Dillon.",
+        "company": "Paramount+",
+        "readback": {
+          "pinId": 20835,
+          "sentiment": 0.3,
+          "textHash": "a44b129bb0df2e38bf9babe675fb1cd6e6823049969b186f1f618b4c6dbed484",
+          "utcScoredDateTime": "2026-11-07T14:37:55.614Z",
+          "product": "Mayor of Kingstown",
+          "productHash": "a44b129bb0df2e38bf9babe675fb1cd6e6823049969b186f1f618b4c6dbed484"
+        },
+        "verified": true
+      },
+      {
+        "id": 20837,
+        "textHash": "44ba051df199",
+        "sentiment": 0.3,
+        "product": "The Murder of JonBen\u00e9t Ramsey",
+        "title": "The Murder of JonBen\u00e9t Ramsey Premieres on Netflix",
+        "description": "Netflix releases the limited series The Murder of JonBen\u00e9t Ramsey on Thursday 10 December 2026, with Melissa McCarthy and Clive Owen as Patsy and John Ramsey. The show moved to Netflix from Paramount+ and is run by Richard LaGravenese.",
+        "company": "Netflix",
+        "readback": {
+          "pinId": 20837,
+          "sentiment": 0.3,
+          "textHash": "44ba051df199055b1e7831470a91302bb675fb7bce96af6207d289a8b580f7ec",
+          "utcScoredDateTime": "2026-11-07T14:37:55.616Z",
+          "product": "The Murder of JonBen\u00e9t Ramsey",
+          "productHash": "44ba051df199055b1e7831470a91302bb675fb7bce96af6207d289a8b580f7ec"
+        },
+        "verified": true
+      },
+      {
+        "id": 20843,
+        "textHash": "a82a62d20820",
+        "sentiment": 0,
+        "product": "9-1-1",
+        "title": "9-1-1 Season 10 Returns From Its Winter Break on ABC",
+        "description": "9-1-1 returns from its fall break on Thursday 7 January 2027 at 8 pm ET with Season 10 episode 7, ahead of 9-1-1: Nashville at 9 pm and Grey's Anatomy at 10 pm. The fall run is scheduled to end with episode 6, \"Et Tu?\", on 19 November 2026.",
+        "company": "ABC",
+        "readback": {
+          "pinId": 20843,
+          "sentiment": 0,
+          "textHash": "a82a62d20820f4a1c18a8c7428ea18db267ea30d21e4a5e5d65cb85e5f150374",
+          "utcScoredDateTime": "2026-11-07T14:37:55.619Z",
+          "product": "9-1-1",
+          "productHash": "a82a62d20820f4a1c18a8c7428ea18db267ea30d21e4a5e5d65cb85e5f150374"
+        },
+        "verified": true
+      },
+      {
+        "id": 20844,
+        "textHash": "1670b7812461",
+        "sentiment": 0,
+        "product": "Abbott Elementary",
+        "title": "Abbott Elementary Season 6 Returns From Its Winter Break on ABC",
+        "description": "Abbott Elementary returns with new Season 6 episodes on Wednesday 13 January 2027 at 8:31 pm ET on ABC, after the fall run is scheduled to end with episode 8, \"Parents\", on 9 December 2026. It is the first of the 2027 episodes, numbered episode 9 in TVMaze's listing.",
+        "company": "ABC",
+        "readback": {
+          "pinId": 20844,
+          "sentiment": 0,
+          "textHash": "1670b7812461b4052a3eb637cc55060a848c51c79890a6d3553c67cc822c45b6",
+          "utcScoredDateTime": "2026-11-07T14:37:55.621Z",
+          "product": "Abbott Elementary",
+          "productHash": "1670b7812461b4052a3eb637cc55060a848c51c79890a6d3553c67cc822c45b6"
+        },
+        "verified": true
+      },
+      {
+        "id": 20845,
+        "textHash": "421ae2894aa8",
+        "sentiment": 0,
+        "product": "Grey's Anatomy",
+        "title": "Grey's Anatomy Season 23 Returns From Its Winter Break on ABC",
+        "description": "Grey's Anatomy returns with Season 23 episode 7 on Thursday 7 January 2027 at 10 pm ET on ABC, after the fall run is scheduled to end with \"Till I Collapse\" on 19 November 2026. ABC also says its untitled Grey's Anatomy spin-off is on track for the 2027-28 season.",
+        "company": "ABC",
+        "readback": {
+          "pinId": 20845,
+          "sentiment": 0,
+          "textHash": "421ae2894aa8ff45b9ee8913c0a70712566c4f4daf1c08aebeb9d4b28925cb10",
+          "utcScoredDateTime": "2026-11-07T14:37:55.624Z",
+          "product": "Grey's Anatomy",
+          "productHash": "421ae2894aa8ff45b9ee8913c0a70712566c4f4daf1c08aebeb9d4b28925cb10"
+        },
+        "verified": true
+      }
+    ],
+    "responses": [
+      {
+        "saved": 10,
+        "refused": []
+      }
+    ]
+  }
 }

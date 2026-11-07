@@ -8,23 +8,27 @@ import { pinPath } from '@/lib/seo';
 import { TAGS } from './cache';
 import { localizePins } from './translations';
 
-export type ConstructionStatus = 'Proposed' | 'In Progress' | 'Completed';
-export type ConstructionBar = { id: number; title: string; href: string; start: string; end: string; status: ConstructionStatus; price: number | null; priceCurrency: string | null; city: string | null; country: string | null; thumbName: string | null; originalUrl: string | null };
+import { CONSTRUCTION_YEARS, type ConstructionBar } from '@/lib/construction';
+export type { ConstructionBar, ConstructionStatus } from '@/lib/construction';
 
+export { CONSTRUCTION_YEARS };
 export const CONSTRUCTION_ROW_LIMIT = 150;
 
 // Builds whose span touches the year, longest-running first by start. A pin with
 // real completion has no span to draw and is left out (an all-day pin's default end is
 // start + 1 day, which is not a completion); Withdrawn builds are too.
-export const CONSTRUCTION_YEARS = 10;
-
 export async function constructionSpans(year: number, country: string | null, locale: Locale = DEFAULT_LOCALE): Promise<{ bars: ConstructionBar[]; total: number; undated: number }> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.timeline);
   const rows = await db.query<Omit<ConstructionBar, 'href'> & { total: string }>(
     `SELECT p.id, p.title, p."utcStartDateTime"::text AS start, p."utcEndDateTime"::text AS "end", bt.name::text AS status,
-            p.price::float8 AS price, p."priceCurrency", pp.city, pp.country, pm."thumbName", pm."originalUrl", count(*) OVER () AS total
+            p.price::float8 AS price, p."priceCurrency", pp.city, pp.country, pm."thumbName", pm."originalUrl",
+            CASE WHEN EXISTS (SELECT 1 FROM "PinDatacenter" d WHERE d."pinId" = p.id) THEN 'datacenter'
+                 WHEN EXISTS (SELECT 1 FROM "PinPower" w WHERE w."pinId" = p.id) THEN 'power'
+                 WHEN EXISTS (SELECT 1 FROM "PinFactory" f WHERE f."pinId" = p.id) THEN 'factory' ELSE 'other' END AS sector,
+            (SELECT w.megawatts::float8 FROM "PinPower" w WHERE w."pinId" = p.id) AS megawatts,
+            (SELECT w.kind FROM "PinPower" w WHERE w."pinId" = p.id) AS "powerKind", count(*) OVER () AS total
      FROM "Pin" p
      JOIN "PinTag" bt ON bt."pinId" = p.id AND bt.name IN ('Proposed', 'In Progress', 'Completed')
      JOIN "PinAddressPlace" pp ON pp."pinId" = p.id

@@ -15084,6 +15084,33 @@
     "sourceUrl": "https://gigazine.net/gsc_news/en/20200319-playstation-5-xbox-series-x-nintendo-switch"
   },
   {
+    "pinId": 19805,
+    "rank": 1,
+    "name": "Claude Opus 5.5",
+    "maker": "Anthropic",
+    "competitorPinId": 2694,
+    "summary": "Benchmarklist's comparison table lists Opus 5.5 as a rival frontier model; it is priced at $24 on that page versus $12 for Kimi K3.1 Pro.",
+    "sourceUrl": "https://benchmarklist.com/models/moonshotai-kimi-k3.1-pro/"
+  },
+  {
+    "pinId": 19805,
+    "rank": 2,
+    "name": "Gemini 4 Carbon",
+    "maker": "Google",
+    "competitorPinId": 20445,
+    "summary": "Listed beside Kimi K3.1 Pro on Benchmarklist; priced at $12 on that page, the same as Kimi, with a much larger long-context and multimodal lead in the table.",
+    "sourceUrl": "https://benchmarklist.com/models/moonshotai-kimi-k3.1-pro/"
+  },
+  {
+    "pinId": 19805,
+    "rank": 3,
+    "name": "DeepSeek-V4-Pro",
+    "maker": "DeepSeek",
+    "competitorPinId": 15110,
+    "summary": "Gradually.ai pairs it directly with Kimi K3.1 Pro: 1M-token context versus 1.05M, $0.66/$1.98 per 1M tokens off-peak versus $2/$10, and 81 versus 36 tokens per second.",
+    "sourceUrl": "https://www.gradually.ai/en/llm-comparison/deepseek-v4-pro-vs-kimi-k3.1-pro/"
+  },
+  {
     "pinId": 19850,
     "rank": 1,
     "name": "Li Auto L9",

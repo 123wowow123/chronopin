@@ -726,5 +726,773 @@
     "label": "U.S. trade balance: goods and services",
     "sourceUrl": null,
     "markedDay": "2026-07-01"
+  },
+  {
+    "pinId": 18978,
+    "source": "epoch",
+    "seriesId": "colossus-2:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19041,
+    "source": "epoch",
+    "seriesId": "coreweave-helios:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19042,
+    "source": "epoch",
+    "seriesId": "microsoft-fairwater-atlanta:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19043,
+    "source": "epoch",
+    "seriesId": "goodnight:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19045,
+    "source": "epoch",
+    "seriesId": "google-new-albany:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19046,
+    "source": "epoch",
+    "seriesId": "alibaba-zhangbei:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19047,
+    "source": "epoch",
+    "seriesId": "openai-stargate-uae:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19049,
+    "source": "epoch",
+    "seriesId": "google-council-bluffs-east:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19050,
+    "source": "epoch",
+    "seriesId": "amazon-ridgeland:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19051,
+    "source": "epoch",
+    "seriesId": "meta-prometheus:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19052,
+    "source": "epoch",
+    "seriesId": "google-pryor-north:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19053,
+    "source": "epoch",
+    "seriesId": "microsoft-project-osmium:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19054,
+    "source": "epoch",
+    "seriesId": "meta-jeffersonville:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19055,
+    "source": "epoch",
+    "seriesId": "google-columbus:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19056,
+    "source": "epoch",
+    "seriesId": "vnet-bayin-ulanqab:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19057,
+    "source": "epoch",
+    "seriesId": "vantage-tx1:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19058,
+    "source": "epoch",
+    "seriesId": "openai-stargate-shackelford:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19059,
+    "source": "epoch",
+    "seriesId": "google-midlothian:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19060,
+    "source": "epoch",
+    "seriesId": "google-fort-wayne:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19061,
+    "source": "epoch",
+    "seriesId": "openai-stargate-milam:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19062,
+    "source": "epoch",
+    "seriesId": "start-campus-sines-data-campus:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19063,
+    "source": "epoch",
+    "seriesId": "coreweave-denton-tx:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19064,
+    "source": "epoch",
+    "seriesId": "meta-rosemount:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19065,
+    "source": "epoch",
+    "seriesId": "huawei-horinger:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19066,
+    "source": "epoch",
+    "seriesId": "google-mesa:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19067,
+    "source": "epoch",
+    "seriesId": "google-red-oak:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19068,
+    "source": "epoch",
+    "seriesId": "coreweave-marble-nc:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19069,
+    "source": "epoch",
+    "seriesId": "oracle-batam:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19070,
+    "source": "epoch",
+    "seriesId": "dayone-nusajaya:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19071,
+    "source": "epoch",
+    "seriesId": "google-the-dalles:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19072,
+    "source": "epoch",
+    "seriesId": "bridge-data-centres-my06:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19073,
+    "source": "epoch",
+    "seriesId": "meta-cheyenne:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19074,
+    "source": "epoch",
+    "seriesId": "dayone-kempas:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19075,
+    "source": "epoch",
+    "seriesId": "google-lancaster:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19076,
+    "source": "epoch",
+    "seriesId": "microsoft-sat14:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19077,
+    "source": "epoch",
+    "seriesId": "anthropic-lake-mariner:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19078,
+    "source": "epoch",
+    "seriesId": "google-arcola:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19079,
+    "source": "epoch",
+    "seriesId": "anthropic-barber-lake:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19080,
+    "source": "epoch",
+    "seriesId": "meta-eagle-mountain:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19081,
+    "source": "epoch",
+    "seriesId": "coreweave-norway:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19082,
+    "source": "epoch",
+    "seriesId": "coreweave-dalton-1-2:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19083,
+    "source": "epoch",
+    "seriesId": "ecodatacenter-2:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19084,
+    "source": "epoch",
+    "seriesId": "nebius-mantsala:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19085,
+    "source": "epoch",
+    "seriesId": "meta-huntsville:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19086,
+    "source": "epoch",
+    "seriesId": "microsoft-narvik-norway:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19087,
+    "source": "epoch",
+    "seriesId": "qts-richmond-1:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19088,
+    "source": "epoch",
+    "seriesId": "huawei-wuhu:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19089,
+    "source": "epoch",
+    "seriesId": "meta-bowling-green:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19090,
+    "source": "epoch",
+    "seriesId": "coreweave-lancaster-greenfield-site:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19096,
+    "source": "epoch",
+    "seriesId": "nscale-keflavik:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19097,
+    "source": "epoch",
+    "seriesId": "envision-galaxy-ulanqab:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19158,
+    "source": "epoch",
+    "seriesId": "microsoft-fairwater-wisconsin:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19159,
+    "source": "epoch",
+    "seriesId": "amazon-madison-mega-site:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19160,
+    "source": "epoch",
+    "seriesId": "openai-stargate-abilene:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19161,
+    "source": "epoch",
+    "seriesId": "anthropic-amazon-new-carlisle:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19162,
+    "source": "epoch",
+    "seriesId": "colossus-1:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19163,
+    "source": "epoch",
+    "seriesId": "meta-hyperion:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19164,
+    "source": "epoch",
+    "seriesId": "openai-stargate-lordstown:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19165,
+    "source": "epoch",
+    "seriesId": "stack-infrastructure-nva02:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19166,
+    "source": "epoch",
+    "seriesId": "microsoft-nebius-new-jersey:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19167,
+    "source": "epoch",
+    "seriesId": "microsoft-goodyear:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19168,
+    "source": "epoch",
+    "seriesId": "meta-temple:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19169,
+    "source": "epoch",
+    "seriesId": "meta-montgomery:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19170,
+    "source": "epoch",
+    "seriesId": "openai-stargate-michigan:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19171,
+    "source": "epoch",
+    "seriesId": "crusoe-abilene-expansion:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19172,
+    "source": "epoch",
+    "seriesId": "google-cedar-rapids:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19173,
+    "source": "epoch",
+    "seriesId": "openai-stargate-wisconsin:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19174,
+    "source": "epoch",
+    "seriesId": "stream-phoenix:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19175,
+    "source": "epoch",
+    "seriesId": "qts-cedar-rapids:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19176,
+    "source": "epoch",
+    "seriesId": "meta-kuna:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19177,
+    "source": "epoch",
+    "seriesId": "meta-aiken:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19178,
+    "source": "epoch",
+    "seriesId": "meta-gallatin:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19179,
+    "source": "epoch",
+    "seriesId": "google-lincoln:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19180,
+    "source": "epoch",
+    "seriesId": "coreweave-muskogee-ok:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19181,
+    "source": "epoch",
+    "seriesId": "google-papillion:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19182,
+    "source": "epoch",
+    "seriesId": "meta-sarpy:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19183,
+    "source": "epoch",
+    "seriesId": "coreweave-ellendale-nd:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19184,
+    "source": "epoch",
+    "seriesId": "microsoft-sat40:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19185,
+    "source": "epoch",
+    "seriesId": "coreweave-chester-va:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19186,
+    "source": "epoch",
+    "seriesId": "qts-richmond-2:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19187,
+    "source": "epoch",
+    "seriesId": "google-storey-county:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19188,
+    "source": "epoch",
+    "seriesId": "core42-lake-mariner:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19189,
+    "source": "epoch",
+    "seriesId": "qts-richmond-3:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19190,
+    "source": "epoch",
+    "seriesId": "aws-new-albany:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19191,
+    "source": "epoch",
+    "seriesId": "google-bristow:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19192,
+    "source": "epoch",
+    "seriesId": "xai-qts-atlanta:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19194,
+    "source": "epoch",
+    "seriesId": "qts-eagle-mountain:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19195,
+    "source": "epoch",
+    "seriesId": "meta-qts-hillsboro-2:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19196,
+    "source": "epoch",
+    "seriesId": "southgate-melbourne:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19197,
+    "source": "epoch",
+    "seriesId": "aws-berwick:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 19198,
+    "source": "epoch",
+    "seriesId": "google-waltham-cross:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 20688,
+    "source": "epoch",
+    "seriesId": "google-kansas-city-east:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 20689,
+    "source": "epoch",
+    "seriesId": "ytl-johor:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 20690,
+    "source": "epoch",
+    "seriesId": "google-omaha:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 20691,
+    "source": "epoch",
+    "seriesId": "openai-stargate-new-mexico:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
+  },
+  {
+    "pinId": 20727,
+    "source": "epoch",
+    "seriesId": "meta-los-lunas:it",
+    "label": "IT power over time (Epoch AI estimate, projections included)",
+    "sourceUrl": null,
+    "markedDay": null
   }
 ]

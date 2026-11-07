@@ -134478,5 +134478,1131 @@
     "references": [],
     "note": null,
     "utcCreatedDateTime": "2026-11-03T04:58:10.644Z"
+  },
+  {
+    "id": 4904,
+    "pinId": 16017,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi's October Brent contract settled at $112.35 per barrel, the one-minute close at 5:00 PM EDT on October 30, 2026. The last pre-settlement book put its 50% point near $111-113, so the market was on point. Earlier forecast history is retained.",
+        "field": "description",
+        "before": "Brent crude oil monthly contract settled at $112.35/bbl for October 2026. Prediction market pricing was on point (Final settlement realized at $112.35/bbl on October 30, 2026. Prediction market consensus traded at ~$112.35/bbl with $262,219 volume, proving on point within t...)."
+      },
+      {
+        "after": "<h3>Settled: $112.35 per barrel</h3><ul><li>Kalshi's October Brent contract resolved on the one-minute close at 5:00 PM EDT (21:00 UTC) on October 30, 2026. The exchange API now publishes expiration_value 112.35 USD/Bbl, rounded to two decimals; for example the above-$138.99 strike resolved No. The rules use the Pyth Brent Crude Oil 24/7 index for settlements from September 30; this is a single observation, not a monthly average or a physical cargo price.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>How the forecast did: the October 30 morning book put its largest adjacent midpoint band at USD 112.99-114.99 and its 50% crossing near USD 111-113, and the earlier October 16 book centered nearer USD 104. The final $112.35 landed inside the late-month band, so the late market was on point while the mid-month distribution was too low. Sparse threshold quotes make these readings noisy, not a calibrated interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li></ul><h3>Forecast history</h3><ul><li>October 30 morning snapshot: 30 active October Brent thresholds, Yes bid/ask 50-59% above USD 112.99 and 16-20% above USD 114.99, volume 241,633.38 contract units. Units times latest prices give a derived turnover proxy of USD 135,914.02, not exchange-reported dollar volume.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Late October snapshots (October 26-29) had the 50% threshold between USD 108.99 and USD 110.99 and rising, with volume growing from about 189,000 to 227,000 contract units.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>October 16 forecast: the 30-strike book quoted 71-75% above USD 100.99, 54-55% above USD 102.99 and 44-45% above USD 104.99, with estimated turnover near USD 59,668.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecast a USD 105/bbl average Brent spot price for Q4 against constrained Middle East flows, inventory withdrawals and tight diesel markets. A quarterly spot average and this single contract observation are different benchmarks.<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Brent crude oil settled at <strong>$112.35/bbl</strong> on October 30, 2026 for the October 2026 contract, resolving Kalshi market series KXBRENTMON across 30 strike brackets on $262,219 volume<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li><strong>Prediction outcome:</strong> The prediction was <strong>on point</strong>. Final settlement realized at $112.35/bbl on October 30, 2026. Prediction market consensus traded at ~$112.35/bbl with $262,219 volume, proving on point within tight trading bands.<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Settlement data confirmed against official ICE front-month index and exchange closing 1-minute candlestick specifications<cite data-ref=\"https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTEM&f=M\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-04T19:08:46.828Z"
+  },
+  {
+    "id": 4905,
+    "pinId": 17540,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Denver Cinco de Mayo Festival Returns on 1–2 May 2027",
+        "field": "title",
+        "before": "Denver Cinco de Mayo Festival — Denver seasonal activity"
+      },
+      {
+        "after": "Denver’s Cinco de Mayo festival is scheduled for 1–2 May 2027 at Civic Center Park, with music, dance, food and a community parade.",
+        "field": "description",
+        "before": "A two-day festival with a parade, mariachi, dance, food and lowrider shows."
+      },
+      {
+        "after": "2027-05-03T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2027-06-01T00:00:00.000Z"
+      },
+      {
+        "after": "<p>Denver’s Cinco de Mayo festival is scheduled for May 1–2, 2027 at Civic Center Park. Visit Denver lists the community parade for Saturday May 1, from 11 a.m. to noon, with music and dance across three stages.<cite data-ref=\"https://visitdenver.com/things-to-do/festivals-events/cinco-de-mayo-festival/\"></cite></p><p>The city tourism page also lists lowrider shows on both days, a Chihuahua race on May 1 and a taco-eating contest on May 2. Named performers have not been established in this reading.<cite data-ref=\"https://visitdenver.com/things-to-do/festivals-events/cinco-de-mayo-festival/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>A two-day festival with a parade, mariachi, dance, food and lowrider shows.<cite data-ref=\"https://www.denvergazette.com/2025/05/02/36th-annual-cinco-de-mayo-festival-to-take-over-civic-center-park-this-weekend/\"></cite></p><p>Civic Center Park, Civic Center, Denver. Not stated.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://visitdenver.com/things-to-do/festivals-events/cinco-de-mayo-festival/",
+        "title": "Visit Denver: Denver Cinco de Mayo Festival 2027",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:23:42.181Z"
+  },
+  {
+    "id": 4906,
+    "pinId": 2947,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Babcock & Wilcox schedules its Q3 2026 earnings conference call for 9 November at 5 p.m. EST (22:00 UTC).",
+        "field": "description",
+        "before": "B&W's third-quarter 2026 report and its 5 p.m. ET call, estimated for Monday 9 November from its pattern of Monday-evening calls; the company has not announced the date yet. The quarter will be measured against its raised $80-105 million 2026 adjusted EBITDA target."
+      },
+      {
+        "after": "<ul><li>Babcock &amp; Wilcox’s investor calendar now lists its Q3 2026 Earnings Conference Call for November 9, 2026 at 5:00 p.m. EST. This confirms the call time previously estimated from past reporting patterns.<cite data-ref=\"https://investors.babcock.com/home/events-and-presentations\"></cite></li><li>The company lists U.S. and Canada dial-in numbers and an international conference number, with conference ID 654862201, alongside a webcast link. The calendar dates the earnings call; it does not establish a separate release-publication time.<cite data-ref=\"https://investors.babcock.com/home/events-and-presentations\"></cite></li><li>The preceding quarterly call took place August 10, 2026. In its Q2 report, the company reported revenue of $319.7 million and adjusted EBITDA of $21.8 million, and raised its 2026 adjusted EBITDA target to $80 million–$105 million.<cite data-ref=\"https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-enterprises-reports-second-quarter-2026-results\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>B&amp;W has not yet set its third-quarter 2026 call: its events page lists the 10 August Q2 call as the latest, and its newsroom has no Q3 call notice as of 22 September 2026<cite data-ref=\"https://investors.babcock.com/home/events-and-presentations\"></cite></li><li>Every B&amp;W earnings call since August 2023 has been at 5 p.m. ET; the 2026 calls fell on Mondays (16 March, 11 May, 10 August) and the Q3 calls were on 9 November 2023, 12 November 2024 and 10 November 2025, which points to Monday 9 November 2026<cite data-ref=\"https://investors.babcock.com/home/events-and-presentations\"></cite><cite data-ref=\"https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-announces-ai-data-center-project-and-reports-third-quarter-2025-results\"></cite></li><li>B&amp;W announces each call one to three weeks ahead and issues the results release \"prior to\" it: Q3 2025 results came out on 4 November 2025, six days before the call, while the Q1 and Q2 2026 releases came the same day<cite data-ref=\"https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-announces-ai-data-center-project-and-reports-third-quarter-2025-results\"></cite><cite data-ref=\"https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-sets-second-quarter-2026-conference-call-and-webcast-for-monday-august-10-2026-at-5-pm-et\"></cite></li><li>Nasdaq's Zacks-based estimate is 3 November 2026, with a consensus of $0.03 a share from one analyst against a $0.06 loss a year earlier<cite data-ref=\"https://api.nasdaq.com/api/analyst/BW/earnings-date\"></cite></li><li>The quarter will be measured against the 2026 adjusted EBITDA target range B&amp;W raised to $80.0 million to $105.0 million with its Q2 results, when revenue was $319.7 million and adjusted EBITDA $21.8 million<cite data-ref=\"https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-enterprises-reports-second-quarter-2026-results\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://investors.babcock.com/home/events-and-presentations",
+        "title": "Babcock & Wilcox investor calendar: Q3 2026 earnings conference call",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:23:42.396Z"
+  },
+  {
+    "id": 4907,
+    "pinId": 17480,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Luminaria’s free outdoor contemporary arts festival runs on Houston Street in San Antonio on 14 November 2026, from 6 p.m. to midnight CST.",
+        "field": "description",
+        "before": "A one-night contemporary arts festival of installations and performances."
+      },
+      {
+        "after": "2026-11-15T00:00:00.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-11-14T00:00:00.000Z"
+      },
+      {
+        "after": "2026-11-15T06:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      },
+      {
+        "after": "<p>Luminaria schedules its 2026 contemporary arts festival for Saturday November 14, from 6 p.m. to midnight on Houston Street at Downtown West and Zona Cultural in San Antonio. The operator describes the outdoor event as free.<cite data-ref=\"https://luminariasa.org/\"></cite></p><p>The festival combines live music, film, digital art, poetry, theater, fine art, large installations and dance. Announced anchor locations include Texas Public Radio, San Pedro Creek, Alameda Theatre, Paseo on Houston and the Institute of Texan Cultures. These describe the festival footprint rather than a single entrance.<cite data-ref=\"https://luminariasa.org/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>A one-night contemporary arts festival of installations and performances.<cite data-ref=\"https://www.tpr.org/community-calendar/event/luminaria-contemporary-arts-festival-2026-02-08-2026-16-57-07\"></cite></p><p>Houston Street, downtown, Downtown West, San Antonio. Free per past editions; confirm.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://luminariasa.org/",
+        "title": "Luminaria operator: 2026 contemporary arts festival",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:24:02.419Z"
+  },
+  {
+    "id": 4908,
+    "pinId": 4493,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Starbucks schedules Red Cup Day for 17 November 2026: participating stores will give a collectible reusable red cup with a purchased handcrafted holiday beverage, while supplies last.",
+        "field": "description",
+        "before": "Starbucks' Red Cup Day, when any handcrafted holiday drink comes with a free limited-edition reusable red cup while supplies last, is expected on Thursday 12 November 2026, a week after the holiday launch as in past years."
+      },
+      {
+        "after": "2026-11-17T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-12T00:00:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": true,
+        "before": "2026-11-13T00:00:00.000Z"
+      },
+      {
+        "after": "<p>Starbucks schedules Red Cup Day for November 17, 2026. Its November 4 announcement says customers purchasing any handcrafted holiday beverage that day will receive a collectible reusable red cup at participating stores, while supplies last.<cite data-ref=\"https://about.starbucks.com/stories/2026/starbucks-holiday-menu-arrives-nov-5-with-new-and-returning-drinks-treats-holiday-cups-and-merchandise/\"></cite></p><p>The giveaway is a separate date from the November 5 holiday-menu launch. Starbucks’ 2026 holiday calendar also lists November 17 for Red Cup Day; the earlier November 12 estimate based on prior-year patterns has been superseded.<cite data-ref=\"https://about.starbucks.com/stories/2026/starbucks-holiday-2026/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Starbucks has not dated Red Cup Day 2026; in 2025 it was Thursday 13 November, a week after the 6 November holiday launch<cite data-ref=\"https://www.timeout.com/usa/news/starbucks-red-cup-day-is-happening-this-week-here-is-how-to-snag-that-free-holiday-cup-111025\"></cite><cite data-ref=\"https://www.today.com/food/restaurants/starbucks-red-cup-day-2025-rcna243480\"></cite></li><li>It has fallen on a Thursday every year since at least 2021: 18 November 2021, 17 November 2022, 16 November 2023 and 14 November 2024<cite data-ref=\"https://www.timeout.com/usa/news/starbucks-announces-2025-holiday-menu-and-confirms-the-return-of-red-cup-day-100825\"></cite><cite data-ref=\"https://abcnews.com/GMA/Food/starbucks-holiday-menu-return-coffee-shops-nov-7/story?id=115303078\"></cite></li><li>On the day, any size of a handcrafted holiday drink - hot, iced or blended - comes with a free grande reusable red cup at participating US stores, while supplies last, whether ordered in store, at the drive-thru, in the app or by delivery<cite data-ref=\"https://www.today.com/food/restaurants/starbucks-red-cup-day-2025-rcna243480\"></cite></li><li>For 2025 Starbucks said it would give away 'more cups than ever before'; the cup was made with 95 percent recycled material and illustrated by Starbucks designer Yvonne Chan<cite data-ref=\"https://www.today.com/food/restaurants/starbucks-red-cup-day-2025-rcna243480\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-menu-arrives-nov-5-with-new-and-returning-drinks-treats-holiday-cups-and-merchandise/",
+        "title": "Starbucks November4 announcement: Red Cup Day November17",
+        "confidence": 98,
+        "publishedDate": "2026-11-04"
+      },
+      {
+        "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+        "title": "Starbucks2026 holiday calendar",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:24:54.640Z"
+  },
+  {
+    "id": 4909,
+    "pinId": 4491,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Starbucks announces its 2026 holiday drinks, festive cups and seasonal merchandise for 5 November at participating coffeehouses.",
+        "field": "description",
+        "before": "Starbucks' red holiday cups, holiday drinks and seasonal drinkware are expected back in US coffeehouses on Thursday 5 November 2026, the first Thursday of November as in 2024 and 2025, a year after the Bearista cup sold out within hours."
+      },
+      {
+        "after": "<p>Starbucks announced November 5 as the start of its 2026 holiday menu, festive cup designs and seasonal merchandise. Its November 4 company release supersedes the earlier estimate based on past holiday launches.<cite data-ref=\"https://about.starbucks.com/stories/2026/starbucks-holiday-menu-arrives-nov-5-with-new-and-returning-drinks-treats-holiday-cups-and-merchandise/\"></cite></p><p>Starbucks’ holiday calendar separates the November 5 launch from Red Cup Day on November 17 and the return of the original Bearista Glass Cold Cup on December 1 at select coffeehouses while supplies last.<cite data-ref=\"https://about.starbucks.com/stories/2026/starbucks-holiday-2026/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Starbucks has not yet dated its 2026 holiday launch; in 2025 the menu was announced in early October and launched nationwide on Thursday 6 November<cite data-ref=\"https://www.timeout.com/usa/news/starbucks-announces-2025-holiday-menu-and-confirms-the-return-of-red-cup-day-100825\"></cite><cite data-ref=\"https://abcnews.com/GMA/Food/starbucks-bearista-cups-viral-score/story?id=127260359\"></cite></li><li>In 2024 the holiday menu, red cups and seasonal merch arrived on Thursday 7 November<cite data-ref=\"https://abcnews.com/GMA/Food/starbucks-holiday-menu-return-coffee-shops-nov-7/story?id=115303078\"></cite><cite data-ref=\"https://www.nbcchicago.com/news/local/starbucks-2024-holiday-menu-date-heres-when-you-can-get-the-iconic-red-cups/3594313/\"></cite>, making the first Thursday of November - 5 November in 2026 - the likely day</li><li>Red Cup Day, when a holiday drink comes with a free collectible reusable cup while supplies last, has followed on a Thursday: 14 November 2024, 16 November 2023, 17 November 2022 and 18 November 2021<cite data-ref=\"https://www.timeout.com/usa/news/starbucks-announces-2025-holiday-menu-and-confirms-the-return-of-red-cup-day-100825\"></cite><cite data-ref=\"https://abcnews.com/GMA/Food/starbucks-holiday-menu-return-coffee-shops-nov-7/story?id=115303078\"></cite></li><li>The holiday launch is also when the season's drinkware drops in stores; in 2025 the $29.95 Bearista cold cup sold out fast<cite data-ref=\"https://abcnews.com/GMA/Food/starbucks-bearista-cups-viral-score/story?id=127260359\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-menu-arrives-nov-5-with-new-and-returning-drinks-treats-holiday-cups-and-merchandise/",
+        "title": "Starbucks2026holiday launch announcement",
+        "confidence": 98,
+        "publishedDate": "2026-11-04"
+      },
+      {
+        "url": "https://about.starbucks.com/stories/2026/starbucks-holiday-2026/",
+        "title": "Starbucks2026holiday calendar",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:25:32.152Z"
+  },
+  {
+    "id": 4910,
+    "pinId": 4740,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Sable Offshore Reports Q3 2026 Results on 9 November",
+        "field": "title",
+        "before": "Sable Offshore Reports Q3 2026 Results"
+      },
+      {
+        "after": "Sable Offshore’s October 26 announcement schedules its third-quarter 2026 financial and operating results for Monday November 9, before the market opens. The company schedules its results conference call and webcast for the same day at 11 a.",
+        "field": "description",
+        "before": "Sable Offshore is expected to report its third-quarter 2026 results, the first quarter with all 77 Harmony and Heritage wells due online and Platform Hondo's planned September restart, against 2H 2026 guidance of 40,000 to 45,000 net barrels of oil equivalent a day."
+      },
+      {
+        "after": "2026-11-09T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-10T00:00:00.000Z"
+      },
+      {
+        "after": "<p>Sable Offshore’s October 26 announcement schedules its third-quarter 2026 financial and operating results for Monday November 9, before the market opens.<cite data-ref=\"https://sableoffshore.com/news/news-details/2026/Sable-Offshore-Corp--Announces-Third-Quarter-2026-Earnings-Release-Date-and-Conference-Call/default.aspx\"></cite></p><p>The company schedules its results conference call and webcast for the same day at 11 a.m. Eastern Time, or 10 a.m. Central Time. A replay is to be available on the company website afterward.<cite data-ref=\"https://sableoffshore.com/news/news-details/2026/Sable-Offshore-Corp--Announces-Third-Quarter-2026-Earnings-Release-Date-and-Conference-Call/default.aspx\"></cite></p><p>The explicit company notice replaces the previous November10 estimate; no exact publication minute is given for the before-market release.<cite data-ref=\"https://sableoffshore.com/news/news-details/2026/Sable-Offshore-Corp--Announces-Third-Quarter-2026-Earnings-Release-Date-and-Conference-Call/default.aspx\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Sable Offshore has not yet set the date; its third-quarter 2025 results came on 13 November 2025<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148125000105/socc-20251113.htm\"></cite> and its second-quarter 2026 report on 10 August 2026<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000104/socc-20260630.htm\"></cite><cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>Sable expected to bring all 77 production wells on Platforms Harmony and Heritage online during the third quarter and Platform Hondo online in September 2026; about 47 wells were online in July, each producing about 721 gross barrels a day<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>Five completed perforation additions, each forecast at about 600 gross barrels a day, were to come online with Hondo's restart, with four more planned for early Q4 2026<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>Hondo's lower-sulfur oil should bring field-wide sulfur content back to normal after refiners began charging quality deducts on the sudden supply of Pacific OCS crude<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>Guidance for the second half of 2026 is 47,500 to 52,500 gross and 40,000 to 45,000 net barrels of oil equivalent a day, about 100% oil, with $75 million to $95 million of capital spending<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>Sable had 191,869,572 shares outstanding on 7 August 2026 and reports as a non-accelerated filer<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000104/socc-20260630.htm\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://sableoffshore.com/news/news-details/2026/Sable-Offshore-Corp--Announces-Third-Quarter-2026-Earnings-Release-Date-and-Conference-Call/default.aspx",
+        "title": "Sable Offshore Reports Q3 2026 Results on 9 November — company announcement/calendar",
+        "confidence": 98,
+        "publishedDate": "2026-10-26"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:26:57.264Z"
+  },
+  {
+    "id": 4911,
+    "pinId": 4446,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "On Holding Reports Q3 2026 Results on 10 November",
+        "field": "title",
+        "before": "On Holding Expected to Report Q3 2026 Results"
+      },
+      {
+        "after": "On Holding’s October 27 announcement schedules its third-quarter 2026 results for Tuesday November 10, before U.S. financial markets open. Management schedules the earnings conference call and webcast for 8 a.",
+        "field": "description",
+        "before": "On Holding is expected to report third-quarter 2026 results around 11 November, having guided at its Investor Day to about 17% constant-currency sales growth for the quarter plus up to $65 million of US tariff refunds."
+      },
+      {
+        "after": "2026-11-10T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-11T00:00:00.000Z"
+      },
+      {
+        "after": "<p>On Holding’s October 27 announcement schedules its third-quarter 2026 results for Tuesday November 10, before U.S. financial markets open.<cite data-ref=\"https://investors.on-running.com/news/news-details/2026/On-to-Release-Third-Quarter-2026-Results-on-Tuesday-November-10-2026/default.aspx\"></cite></p><p>Management schedules the earnings conference call and webcast for 8 a.m. U.S. Eastern Time on November 10 (2 p.m. Central European Time). The company provides telephone access and says a recording will be available on its website following the call.<cite data-ref=\"https://investors.on-running.com/news/news-details/2026/On-to-Release-Third-Quarter-2026-Results-on-Tuesday-November-10-2026/default.aspx\"></cite></p><p>The explicit company notice replaces the previous November11 estimate; the call time is distinct from the before-market results release.<cite data-ref=\"https://investors.on-running.com/news/news-details/2026/On-to-Release-Third-Quarter-2026-Results-on-Tuesday-November-10-2026/default.aspx\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<ul><li>On has not confirmed the date; trackers estimate Wednesday 11 November 2026 from last year's schedule<cite data-ref=\"https://www.marketbeat.com/stocks/NYSE/ONON/earnings/\"></cite></li><li>On guided at its 22 September Investor Day to about 17% constant-currency net sales growth in Q3 2026, reflecting disciplined wholesale sell-in and strong DTC momentum<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1858985/000185898526000021/exhibit991oninvestorday202.htm\"></cite></li><li>Up to $65 million (up to CHF 53 million) of tariff refunds are expected in the quarter and will lift reported gross profit; the full-year outlook stays at low-20% constant-currency growth, a gross margin of at least 65.0% and an adjusted EBITDA margin of 19.5-20.0% excluding refunds<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1858985/000185898526000021/exhibit991oninvestorday202.htm\"></cite></li><li>The comparison: Q3 2025 net sales of CHF 794.4 million, up 24.9% (34.5% constant currency), with a record 65.7% gross margin<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1858985/000185898525000015/a25q3-ex991xpressrelease.htm\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://investors.on-running.com/news/news-details/2026/On-to-Release-Third-Quarter-2026-Results-on-Tuesday-November-10-2026/default.aspx",
+        "title": "On Holding Reports Q3 2026 Results on 10 November — company announcement/calendar",
+        "confidence": 98,
+        "publishedDate": "2026-10-27"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:26:58.766Z"
+  },
+  {
+    "id": 4912,
+    "pinId": 4065,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Burberry Schedules FY27 Interim Results for 12 November",
+        "field": "title",
+        "before": "Burberry Heads Toward Its FY27 Interim Results in Mid-November 2026"
+      },
+      {
+        "after": "Burberry’s investor page lists Interim Results for November 12, 2026 in its financial calendar. The company’s investor site provides its results and reports, regulatory announcements and financial calendar.",
+        "field": "description",
+        "before": "Market data providers expect Burberry to publish interim results for the half year to September 2026 around 12 November 2026, the next scheduled test of Joshua Schulman's turnaround after a return to profit and a growing first quarter."
+      },
+      {
+        "after": "<p>Burberry’s investor page lists Interim Results for November 12, 2026 in its financial calendar.<cite data-ref=\"https://www.burberryplc.com/investors\"></cite></p><p>The company’s investor site provides its results and reports, regulatory announcements and financial calendar. This reading verifies the scheduled day; it does not establish a publication time or the results themselves.<cite data-ref=\"https://www.burberryplc.com/investors\"></cite></p><p>Official financial calendar read November6 confirms November12, replacing a mid-November estimate from an earnings aggregator.<cite data-ref=\"https://www.burberryplc.com/investors\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Burberry's interim results for the half year to September 2026 are expected around 12 November 2026, per market data providers, since the company's own calendar could not be reached<cite data-ref=\"https://www.investing.com/equities/burberry-earnings\"></cite></li><li>They follow a first-quarter trading update (17 July 2026) showing comparable sales up 5%, with the Americas up 12% and Greater China up 9%<cite data-ref=\"https://www.investegate.co.uk/announcement/rns/burberry-group--brby/first-quarter-trading-update-/9673547\"></cite><cite data-ref=\"https://www.luxurytribune.com/en/burberry-wins-over-gen-z-and-returns-to-growth-in-the-2026-2027-first-quarter\"></cite></li><li>CEO Joshua Schulman said in that update that 'our strategy is working', with all major product categories growing for the first time in three years<cite data-ref=\"https://www.luxurytribune.com/en/burberry-wins-over-gen-z-and-returns-to-growth-in-the-2026-2027-first-quarter\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.burberryplc.com/investors",
+        "title": "Burberry Schedules FY27 Interim Results for 12 November — company announcement/calendar",
+        "confidence": 98
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:27:02.250Z"
+  },
+  {
+    "id": 4913,
+    "pinId": 4740,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Sable Offshore’s October 26 announcement schedules its third-quarter 2026 financial and operating results for Monday November 9, before the market opens.",
+        "field": "description",
+        "before": "Sable Offshore’s October 26 announcement schedules its third-quarter 2026 financial and operating results for Monday November 9, before the market opens. The company schedules its results conference call and webcast for the same day at 11 a."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:28:15.394Z"
+  },
+  {
+    "id": 4914,
+    "pinId": 4446,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "On Holding’s October 27 announcement schedules its third-quarter 2026 results for Tuesday November 10, before U.S. financial markets open.",
+        "field": "description",
+        "before": "On Holding’s October 27 announcement schedules its third-quarter 2026 results for Tuesday November 10, before U.S. financial markets open. Management schedules the earnings conference call and webcast for 8 a."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:28:21.006Z"
+  },
+  {
+    "id": 4915,
+    "pinId": 4065,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Burberry’s investor page lists Interim Results for November 12, 2026 in its financial calendar.",
+        "field": "description",
+        "before": "Burberry’s investor page lists Interim Results for November 12, 2026 in its financial calendar. The company’s investor site provides its results and reports, regulatory announcements and financial calendar."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T15:28:22.684Z"
+  },
+  {
+    "id": 4916,
+    "pinId": 17603,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "San Francisco Giants regular-season home games at Oracle Park are scheduled from 25 March to 19 September 2027, opening against the Colorado Rockies.",
+        "field": "description",
+        "before": "Baseball by the bay."
+      },
+      {
+        "after": "2027-03-25T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2027-03-01T00:00:00.000Z"
+      },
+      {
+        "after": "2027-09-20T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2027-09-30T00:00:00.000Z"
+      },
+      {
+        "after": "<p>San Francisco Giants regular-season home games at Oracle Park are scheduled to begin March 25, 2027 against the Colorado Rockies. The team’s published calendar marks its last regular-season home game for September 19 against the Atlanta Braves.<cite data-ref=\"https://img.mlbstatic.com/mlb-images/image/upload/q_auto/mlb/fvsqbjbiexhmntkk5sy4\"></cite></p><p>This window covers regular-season home fixtures, with road games and off days in between; it does not mean games take place every day. Spring training and any postseason games are separate. Published schedules can change, so check the individual fixture before making plans.<cite data-ref=\"https://img.mlbstatic.com/mlb-images/image/upload/q_auto/mlb/fvsqbjbiexhmntkk5sy4\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Baseball by the bay.<cite data-ref=\"https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/buster-posey-schedule-2027-season/1950400/\"></cite></p><p>Oracle Park, SoMa, San Francisco. Paid.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mlb.com/giants/schedule/printable-schedule-2027",
+        "title": "Official2027teamprintableschedule",
+        "confidence": 98
+      },
+      {
+        "url": "https://img.mlbstatic.com/mlb-images/image/upload/q_auto/mlb/fvsqbjbiexhmntkk5sy4",
+        "title": "2027regular-seasoncalendar:homeandawayfixtures",
+        "confidence": 98
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T19:11:35.124Z"
+  },
+  {
+    "id": 4917,
+    "pinId": 17611,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Seattle Mariners regular-season home games at T-Mobile Park are scheduled from 25 March to 19 September 2027, opening against the Boston Red Sox.",
+        "field": "description",
+        "before": "Baseball with retractable roof."
+      },
+      {
+        "after": "2027-03-25T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2027-03-01T00:00:00.000Z"
+      },
+      {
+        "after": "2027-09-20T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2027-09-30T00:00:00.000Z"
+      },
+      {
+        "after": "<p>Seattle Mariners regular-season home games at T-Mobile Park are scheduled to begin March 25, 2027 against the Boston Red Sox. The team’s published calendar marks its last regular-season home game for September 19 against the Toronto Blue Jays.<cite data-ref=\"https://mktg.mlbstatic.com/mariners/documents/y2027/regular-season-schedule.pdf\"></cite></p><p>This window covers regular-season home fixtures, with road games and off days in between; it does not mean games take place every day. Spring training and any postseason games are separate. Published schedules can change, so check the individual fixture before making plans.<cite data-ref=\"https://mktg.mlbstatic.com/mariners/documents/y2027/regular-season-schedule.pdf\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Baseball with retractable roof.<cite data-ref=\"https://komonews.com/news/local/where-to-find-the-mariners-2027-schedule-vs-red-sox-at-t-mobile-park-kicking-off-seven-game-homestand-t-mobile-park-al-west-division-all-star\"></cite></p><p>T-Mobile Park, SoDo, Seattle. Paid.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mlb.com/mariners/schedule/printable-schedule",
+        "title": "Official2027teamprintableschedule",
+        "confidence": 98
+      },
+      {
+        "url": "https://mktg.mlbstatic.com/mariners/documents/y2027/regular-season-schedule.pdf",
+        "title": "2027regular-seasoncalendar:homeandawayfixtures",
+        "confidence": 98
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T19:11:37.005Z"
+  },
+  {
+    "id": 4918,
+    "pinId": 17620,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Seattle Kraken regular-season home games at Climate Pledge Arena are scheduled from 4 October 2026 to 3 April 2027, opening against Calgary and ending against Winnipeg.",
+        "field": "description",
+        "before": "NHL hockey."
+      },
+      {
+        "after": "2026-10-04T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-01T00:00:00.000Z"
+      },
+      {
+        "after": "2027-04-04T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2027-04-30T00:00:00.000Z"
+      },
+      {
+        "after": "<p>The Kraken’s 2026–27 regular-season home schedule at Climate Pledge Arena begins October 4 against Calgary and ends April 3 against Winnipeg. The team’s schedule article distinguishes its October 1 road opener in Calgary and its April 10 finale in Chicago from the Seattle dates.<cite data-ref=\"https://www.nhl.com/kraken/news/seattle-kraken-2026-27-nhl-schedule-release\"></cite></p><p>This is the span of regular-season games in Seattle, with road trips and off days between fixtures; it is not a daily event. The team’s November games in Finland and any postseason fixtures fall outside this venue-specific scope.<cite data-ref=\"https://www.nhl.com/kraken/news/seattle-kraken-2026-27-nhl-schedule-release\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>NHL hockey.<cite data-ref=\"https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season\"></cite></p><p>Climate Pledge Arena, Lower Queen Anne, Seattle. Paid.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nhl.com/kraken/news/seattle-kraken-2026-27-nhl-schedule-release",
+        "title": "Seattle Kraken official 2026–27 schedule release",
+        "confidence": 98,
+        "publishedDate": "2026-07-16"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-06T19:12:23.210Z"
+  },
+  {
+    "id": 4919,
+    "pinId": 157,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "UN DESA’s July 2015 World Population Prospects revision projected 9.7 billion people in 2050, from 7.3 billion in 2015. This pin records that historical forecast, whose outcome remains an estimate.",
+        "field": "description",
+        "before": "The current world population of 7.3 billion is expected to reach 8.5 billion by 2030, 9.7 billion in 2050 and 11.2 billion in 2100, according to a new UN DESA report, “World Population Prospects: The 2015 Revision”, launched today. India expected to become the largest country in population size, surpassing China around 2022, while Nigeria could surpass the United States by 2050"
+      },
+      {
+        "after": "<ul><li>This pin records the July 2015 World Population Prospects revision, rather than a current population estimate. UN DESA projected 8.5 billion people in 2030, 9.7 billion in 2050 and 11.2 billion in 2100 from a 2015 population of 7.3 billion.<cite data-ref=\"https://desapublications.un.org/publications/world-population-prospects-2015-revision\"></cite></li><li>The report expected half of 2015–2050 population growth to be concentrated in nine countries: India, Nigeria, Pakistan, the Democratic Republic of the Congo, Ethiopia, Tanzania, the United States, Indonesia and Uganda.<cite data-ref=\"https://desapublications.un.org/publications/world-population-prospects-2015-revision\"></cite></li><li>These were projections conditional on demographic assumptions. The report highlighted uncertainty and the influence of future fertility on long-term population size.<cite data-ref=\"https://desapublications.un.org/publications/world-population-prospects-2015-revision\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The UN projects world population rising from about 7.7 billion (2019 estimate) to 9.7 billion in 2050, possibly peaking near 11 billion late in the century, though the UN's Population Division director says that peak \"is not certain\"<cite data-ref=\"https://fox11online.com/news/nation-world/un-world-population-expected-to-rise-to-97-billion-in-2050\"></cite><cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li><li>More than half of the growth to 2050 comes from nine countries: India, Nigeria, Pakistan, DR Congo, Ethiopia, Tanzania, Indonesia, Egypt and the United States; sub-Saharan Africa's population nearly doubles<cite data-ref=\"https://fox11online.com/news/nation-world/un-world-population-expected-to-rise-to-97-billion-in-2050\"></cite><cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li><li>India is projected to overtake China (by 2027 in the 2019 revision), while China's population falls by more than two percent by 2050<cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li><li>Fertility fell from 3.2 births per woman in 1990 to 2.5 in 2019 and is projected at 2.2 by 2050, against 2.1 needed for replacement<cite data-ref=\"https://fox11online.com/news/nation-world/un-world-population-expected-to-rise-to-97-billion-in-2050\"></cite><cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li><li>27 countries or areas lost at least one percent of population since 2010; 55 countries are projected to shrink by 1% or more by 2050<cite data-ref=\"https://fox11online.com/news/nation-world/un-world-population-expected-to-rise-to-97-billion-in-2050\"></cite><cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li><li>Life expectancy is expected to reach 77.1 years in 2050, up from 72.6 now<cite data-ref=\"https://www.aljazeera.com/news/2019/6/18/un-world-population-expected-to-rise-to-9-7-billion-in-2050\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://desapublications.un.org/publications/world-population-prospects-2015-revision",
+        "title": "UN DESA: The World Population Prospects: 2015 Revision",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:41:09.499Z"
+  },
+  {
+    "id": 4920,
+    "pinId": 17763,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Houston Dash played their 2026 NWSL home season at Shell Energy Stadium in EaDo. The club’s November 1 recap identifies that evening’s Portland Thorns match as the final regular-season match; the March start remains an estimated season window.",
+        "field": "description",
+        "before": "Houston’s NWSL side plays home matches at the same downtown stadium from spring into autumn."
+      },
+      {
+        "after": "2026-11-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-11-30T00:00:00.000Z"
+      },
+      {
+        "after": "<p>Houston Dash played home matches at Shell Energy Stadium in EaDo, Houston. The season start remains an estimated March window.</p><p>The club reported that Houston closed the 2026 regular season with a 2–0 home loss to Portland Thorns FC on November 1, 2026. The season window ends on that documented final match, replacing the generic November 30 estimate.<cite data-ref=\"https://www.houstondynamofc.com/houstondash/news/houston-dash-thank-fans-following-final-match-of-the-season\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Houston’s NWSL side plays home matches at the same downtown stadium from spring into autumn.<cite data-ref=\"https://www.houstondash.com\"></cite></p><p>Shell Energy Stadium, EaDo, Houston. Paid - prices not read.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.houstondynamofc.com/houstondash/news/houston-dash-thank-fans-following-final-match-of-the-season",
+        "title": "MATCH RECAP: Houston Dash Thank Fans Following Final Match of the Season",
+        "confidence": 100,
+        "publishedDate": "2026-11-01"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:42:51.982Z"
+  },
+  {
+    "id": 4921,
+    "pinId": 17673,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-12-11T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-11-30T00:00:00.000Z"
+      },
+      {
+        "after": "<p>WaterFire presents river bonfires, music and waterfront programming at Waterplace Park and downtown Providence on selected evenings. The May start remains an estimated seasonal window.<cite data-ref=\"https://waterfire.org/\"></cite></p><p>The official 2026 lighting schedule includes a Holiday Basin Lighting on Friday, December 11, at Waterplace Park. Its listing places onshore programming from 4 p.m. and the lighting from sunset to 9 p.m. The season endpoint follows this latest listed lighting, rather than the former November estimate.<cite data-ref=\"https://waterfire.org/schedule/2026-waterfire-providence-event-schedule/\"></cite><cite data-ref=\"https://waterfire.org/events/friday-december-11-holiday-basin-lighting/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Bonfires blaze on braziers down the downtown Providence rivers with music and performers on select evenings through the warm season.<cite data-ref=\"https://waterfire.org/\"></cite></p><p>Waterplace Park and downtown rivers, Providence RI, 50 mi south, Boston. Free.</p>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://waterfire.org/schedule/2026-waterfire-providence-event-schedule/",
+        "title": "2026 WaterFire Providence Event Schedule",
+        "confidence": 100
+      },
+      {
+        "url": "https://waterfire.org/events/friday-december-11-holiday-basin-lighting/",
+        "title": "Friday, December 11 (Holiday Basin Lighting)",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:44:58.173Z"
+  },
+  {
+    "id": 4922,
+    "pinId": 17712,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.fwrodeo.com/",
+        "title": "Stockyards Rodeo — Cowtown Coliseum",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:45:07.669Z"
+  },
+  {
+    "id": 4923,
+    "pinId": 17763,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-11-02T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-11-01T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:47:19.270Z"
+  },
+  {
+    "id": 4924,
+    "pinId": 17673,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-12-12T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-12-11T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:47:30.268Z"
+  },
+  {
+    "id": 4925,
+    "pinId": 7665,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
+        "title": "White Rabbit Creamy Candy (Matcha) 150g | South Africa",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:23.044Z"
+  },
+  {
+    "id": 4926,
+    "pinId": 7659,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
+        "title": "Chi Forest Sugar-Free Sparkling Water (Lychee Fizzy) 330ml",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:27.165Z"
+  },
+  {
+    "id": 4927,
+    "pinId": 638,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/524541",
+        "title": "Thailand and China Committed to Elevating Comprehensive Strategic Partnership with the Signing of 15 Cooperation Documents",
+        "confidence": 100,
+        "publishedDate": "2026-07-21"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:34.569Z"
+  },
+  {
+    "id": 4928,
+    "pinId": 2192,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://mayor.lacity.gov/news/mayor-karen-bass-celebrates-grand-opening-metro-d-line-extension-section-1-expanding-access",
+        "title": "Mayor Karen Bass Celebrates Grand Opening of Metro D Line Extension Section 1, Expanding Access and Opportunity for Angelenos",
+        "confidence": 100,
+        "publishedDate": "2026-05-08"
+      },
+      {
+        "url": "https://thesource.metro.net/its-official-d-line-extension-section-1-to-open-on-may-8/?_bhlid=2545812ae22bd56fe6ee6ecc69f77c20a780324b",
+        "title": "It’s official! D Line Extension Section 1 to open on May 8",
+        "confidence": 100,
+        "publishedDate": "2026-02-26"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:38.408Z"
+  },
+  {
+    "id": 4929,
+    "pinId": 2066,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.theguardian.com/tv-and-radio/2026/nov/04/stick-review-owen-wilson-golf-rhea-seehorn-season-two",
+        "title": "Stick review – you really need Owen Wilson’s beautiful golf comedy in your life",
+        "confidence": 100,
+        "publishedDate": "2026-11-04"
+      },
+      {
+        "url": "https://filmspeak.net/tv-reviews/2026/11/3/stick-season-2-review-a-breezy-heartfelt-hole-in-one",
+        "title": "'Stick' Season 2 Review: A Breezy, Heartfelt Hole-In-One",
+        "confidence": 100,
+        "publishedDate": "2026-11-03"
+      },
+      {
+        "url": "https://bingerampage.com/stick-season-2-premiere-review/",
+        "title": "Can Owen Wilson’s “Stick” Keep Swinging In Season 2?",
+        "confidence": 100,
+        "publishedDate": "2026-11-04"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:42.633Z"
+  },
+  {
+    "id": 4930,
+    "pinId": 2190,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.seattlecenter.com/memorial-stadium",
+        "title": "A New Vision for Memorial Stadium at Seattle Center",
+        "confidence": 100
+      },
+      {
+        "url": "https://www.seattleschools.org/departments/capital-projects-and-planning/projects/memorial-stadium/",
+        "title": "Memorial Stadium - Seattle Public Schools",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:51.405Z"
+  },
+  {
+    "id": 4931,
+    "pinId": 3410,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.trolley.co.uk/product/ferrero-rocher-milk-chocolate-hazelnut-bar/FLP669",
+        "title": "Ferrero Rocher Milk Chocolate & Hazelnut Sharing Bar 90g",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T03:49:56.735Z"
+  },
+  {
+    "id": 4932,
+    "pinId": 17731,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Boulder Creek Festival Returns May 28–31, 2027",
+        "field": "title",
+        "before": "Boulder Creek Festival — Denver seasonal activity"
+      },
+      {
+        "after": "Boulder Creek Festival is scheduled for May 28–31, 2027, over Memorial Day weekend in Boulder, Colorado. The operator has announced the dates; named 2027 performers and current ticket prices remain unpublished.",
+        "field": "description",
+        "before": "Memorial Day weekend brings live music, craft vendors, kayak and tube events and food along Boulder Creek."
+      },
+      {
+        "after": "2027-05-28T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2027-05-01T00:00:00.000Z"
+      },
+      {
+        "after": "<p>The official Boulder Creek Festival homepage announces May 28–31, 2027, for its Memorial Day weekend return in Boulder, Colorado. These scheduled dates replace the earlier broad May planning window.<cite data-ref=\"https://bouldercreekfest.com/\"></cite></p><p>The festival site lists music, food, shopping and activities for children. Its homepage still thanks 2026 sponsors, so prior-edition names, prices and program details are not treated as a verified 2027 lineup. Named 2027 performers and current ticket prices were not published in the material opened on November 7, 2026.<cite data-ref=\"https://bouldercreekfest.com/\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Memorial Day weekend brings live music, craft vendors, kayak and tube events and food along Boulder Creek.<cite data-ref=\"https://bouldercreekfest.com/\"></cite></p><p>Boulder Creek Path, Boulder, Boulder, 30 mi northwest, Denver. Free.</p>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:17:29.567Z"
+  },
+  {
+    "id": 4933,
+    "pinId": 3294,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "PLDT Schedules 9M 2026 Results Briefing for 12 November",
+        "field": "title",
+        "before": "PLDT Reports 9M 2026 Results"
+      },
+      {
+        "after": "PLDT will hold its nine-month 2026 financial and operating results briefing on November 12 at 3:30 p.m. Manila time via MS Teams, according to its October 28 PSE filing.",
+        "field": "description",
+        "before": "PLDT's nine-month 2026 results, after a flat first half with core income at ₱17.3 billion and no full-year profit guidance; 2026 capex is guided to the mid-₱50 billion range."
+      },
+      {
+        "after": "2026-11-12T07:30:00.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-11-12T04:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>PLDT’s October 28, 2026 PSE disclosure schedules its nine-month 2026 financial and operating results briefing for November 12, 2026 at 3:30 p.m. Manila time via MS Teams. The scheduled briefing replaces the earlier date/time estimate based on prior-year patterns. The disclosure does not specify a separate results-publication time.<cite data-ref=\"https://edge.pse.com.ph/downloadHtml.do?file_id=1983492\"></cite></li><li>The baseline from 2025: core income of PHP 25.8 billion (flat), telco core income of PHP 25.3 billion (down 5%), reported income of PHP 25.1 billion, EBITDA of PHP 82.8 billion (up 3%, 52% margin) and capex of PHP 43.0 billion against PHP 52.3 billion a year earlier.</li><li>First-half 2026 set the 2026 context: gross service revenues of PHP 108.7 billion (up 2%), EBITDA of PHP 56.1 billion, core income of PHP 17.3 billion (stable), telco core income of PHP 16.6 billion (down 2%) and reported net income of PHP 16.4 billion (down 6%). Capex was PHP 20.7 billion against PHP 27.4 billion.</li><li>On the H1 call management kept full-year capex guidance in the mid-PHP 50 billion range, implying heavier second-half spending, and reaffirmed a roughly 60% payout, declaring PHP 46 per share.</li><li>Net debt was PHP 287.3 billion, about 2.6 times EBITDA against a target near 2 times. The data-centre arm Vitro had about 34 MW of activated IT capacity, with another 10 MW targeted by year-end and a possible listing in Q4 2026 subject to market conditions.</li><li>Management said wireless top-ups improved from minus 3% in March to plus 1% in June, home fiber added 97,000 lines in Q2, and it expected a second-half benefit. These are management statements.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>PLDT reports nine-month results in the second week of November. The most recent comparable event was on 11 November 2025, when the company presented January-September 2025 results at a 3:30 p.m. Manila-time analysts' briefing; the 2026 date of 12 November is an estimate, and no 2026 briefing notice had been filed when this was researched.</li><li>The baseline from 2025: core income of PHP 25.8 billion (flat), telco core income of PHP 25.3 billion (down 5%), reported income of PHP 25.1 billion, EBITDA of PHP 82.8 billion (up 3%, 52% margin) and capex of PHP 43.0 billion against PHP 52.3 billion a year earlier.</li><li>First-half 2026 set the 2026 context: gross service revenues of PHP 108.7 billion (up 2%), EBITDA of PHP 56.1 billion, core income of PHP 17.3 billion (stable), telco core income of PHP 16.6 billion (down 2%) and reported net income of PHP 16.4 billion (down 6%). Capex was PHP 20.7 billion against PHP 27.4 billion.</li><li>On the H1 call management kept full-year capex guidance in the mid-PHP 50 billion range, implying heavier second-half spending, and reaffirmed a roughly 60% payout, declaring PHP 46 per share.</li><li>Net debt was PHP 287.3 billion, about 2.6 times EBITDA against a target near 2 times. The data-centre arm Vitro had about 34 MW of activated IT capacity, with another 10 MW targeted by year-end and a possible listing in Q4 2026 subject to market conditions.</li><li>Management said wireless top-ups improved from minus 3% in March to plus 1% in June, home fiber added 97,000 lines in Q2, and it expected a second-half benefit. These are management statements.</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://edge.pse.com.ph/downloadHtml.do?file_id=1983492",
+        "title": "PLDT PSE notice: Nine Months 2026 Financial and Operating Results briefing",
+        "confidence": 100,
+        "publishedDate": "2026-10-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:19:51.832Z"
+  },
+  {
+    "id": 4934,
+    "pinId": 2626,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Mailuu-Suu Uranium Legacy Remediation Continues Toward 2032",
+        "field": "title",
+        "before": "EBRD-backed remediation of Kyrgyzstan's Mailuu-Suu tailings dam"
+      },
+      {
+        "after": "Remediation at Mailuu-Suu in Kyrgyzstan began in August 2023. The revised IAEA master plan sets a 2032 completion horizon, with separate work packages and a EUR40.1 million remediation estimate; the earlier EUR23 million figure was a grant allocation.",
+        "field": "description",
+        "before": "A €23M EBRD-backed grant funds a seven-year project to relocate radioactive uranium tailings from Mailuu-Suu's most dangerous dam, away from the Fergana Valley's water supply."
+      },
+      {
+        "after": "2023-08-01T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2032-12-31T00:00:00.000Z"
+      },
+      {
+        "after": "2033-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      },
+      {
+        "after": "<p>Remediation of the Mailuu-Suu uranium legacy site in Kyrgyzstan began in August 2023, according to the revised IAEA strategic master plan. The programme is underway, with full completion planned by 2032 subject to detailed-design peer review and funding. Its calendar spans the sourced August 2023 start and the 2032 target year; neither source precision establishes an exact first or final work day.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The updated plan lists EUR40.1 million for remediation and EUR2.5 million for environmental-impact and feasibility studies, or EUR42.6 million together. The native cost of EUR40.1 million refers to remediation work. The earlier EUR23 million EBRD-managed grant is an allocation, not the revised full project estimate.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>Part1, closure of mine openings and demolition, finished in July2024. Part2 began in September2024 and was expected to finish in2026; Part3 began in November2024 with a2030 target. Part4, relocation of tailings ponds5and7, is planned to begin in2027 and finish in2032. Those planned dates do not establish completion of the remaining works.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The EBRD’s original2023 grant announcement describes stabilising and covering more than2million cubic metres of radioactive tailings, including relocation of approximately350,000cubic metres, to reduce risks to communities and waterways. The revised IAEA plan explains that further geotechnical work required a different solution for ponds5and7.<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite><cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<h3>Construction research — October 24, 2026</h3><p>IAEA’s revised strategic master plan confirms Mailuu-Suu remediation began in August 2023, with separate parts continuing to 2032. In Progress applies to the full remediation scope; a completed initial part does not finish the site. Its updated table lists approximately EUR40.1m remediation, distinct from EUR42.6m including studies and the older EUR23m grant. Native target moves from 2030 to an estimated 2032 year anchor, subject to funding and design review.</p><ul><li>IAEA — Strategic Master Plan for Environmental Remediation of Uranium Legacy Sites in Central Asia, revised edition: <q>40.1</q><cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></li></ul><h3>Earlier pin evidence</h3><ul><li>On 16 May 2023 a EUR 23 million (USD 25 million) grant from the EBRD-managed Environmental Remediation Account for Central Asia (ERA) was signed to remediate the Mailuu-Suu uranium legacy site in the Kyrgyz Republic over seven years, the largest since the ERA was set up<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite><cite data-ref=\"https://www.world-nuclear-news.org/Articles/Remediation-of-Kyrgyz-uranium-legacy-site-to-start\"></cite></li><li>The work will stabilise and cover over 2 million cubic metres of radioactive tailings along the Mailuu-Suu River, with about 350,000 cubic metres relocated to safe disposal and soil covers 2 m thick<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite><cite data-ref=\"https://www.world-nuclear-news.org/Articles/Remediation-of-Kyrgyz-uranium-legacy-site-to-start\"></cite></li><li>It protects the Fergana Valley river system (more than 15 million people) and more than 100,000 people around Mailuu-Suu<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite></li><li>Uranium was mined and milled there from 1946 to 1967, leaving 23 tailings ponds and 13 debris heaps, some damaged by landslides and floods; it is the third such Kyrgyz site after Shekaftar and Min-Kush<cite data-ref=\"https://www.world-nuclear-news.org/Articles/Remediation-of-Kyrgyz-uranium-legacy-site-to-start\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:20:29.872Z"
+  },
+  {
+    "id": 4935,
+    "pinId": 2626,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<p>Remediation of the Mailuu-Suu uranium legacy site in Kyrgyzstan began in August 2023, according to the revised IAEA strategic master plan. The programme is underway, with full completion planned by 2032 subject to detailed-design peer review and funding. Its calendar spans the sourced August 2023 start and the 2032 target year; neither source precision establishes an exact first or final work day.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The updated plan lists EUR 40.1 million for remediation and EUR 2.5 million for environmental-impact and feasibility studies, or EUR 42.6 million together. The native cost of EUR 40.1 million refers to remediation work. The earlier EUR 23 million EBRD-managed grant is an allocation, not the revised full project estimate.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>Part 1, closure of mine openings and demolition, finished in July 2024. Part 2 began in September 2024 and was expected to finish in 2026; Part 3 began in November 2024 with a 2030 target. Part 4, relocation of tailings ponds 5 and 7, is planned to begin in 2027 and finish in 2032. Those planned dates do not establish completion of the remaining works.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The EBRD’s original 2023 grant announcement describes stabilising and covering more than 2 million cubic metres of radioactive tailings, including relocation of approximately 350,000 cubic metres, to reduce risks to communities and waterways. The revised IAEA plan explains that further geotechnical work required a different solution for ponds 5 and 7.<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite><cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p>",
+        "field": "longFormSummary",
+        "before": "<p>Remediation of the Mailuu-Suu uranium legacy site in Kyrgyzstan began in August 2023, according to the revised IAEA strategic master plan. The programme is underway, with full completion planned by 2032 subject to detailed-design peer review and funding. Its calendar spans the sourced August 2023 start and the 2032 target year; neither source precision establishes an exact first or final work day.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The updated plan lists EUR40.1 million for remediation and EUR2.5 million for environmental-impact and feasibility studies, or EUR42.6 million together. The native cost of EUR40.1 million refers to remediation work. The earlier EUR23 million EBRD-managed grant is an allocation, not the revised full project estimate.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>Part1, closure of mine openings and demolition, finished in July2024. Part2 began in September2024 and was expected to finish in2026; Part3 began in November2024 with a2030 target. Part4, relocation of tailings ponds5and7, is planned to begin in2027 and finish in2032. Those planned dates do not establish completion of the remaining works.<cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p><p>The EBRD’s original2023 grant announcement describes stabilising and covering more than2million cubic metres of radioactive tailings, including relocation of approximately350,000cubic metres, to reduce risks to communities and waterways. The revised IAEA plan explains that further geotechnical work required a different solution for ponds5and7.<cite data-ref=\"https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html\"></cite><cite data-ref=\"https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf\"></cite></p>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:21:20.715Z"
+  },
+  {
+    "id": 4936,
+    "pinId": 18190,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Starship Flight 15 Targets No Earlier Than November 13",
+        "field": "title",
+        "before": "Starship Flight 15 Is Forecast for the Second Half of November"
+      },
+      {
+        "after": "2026-11-13T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-16T00:00:00.000Z"
+      },
+      {
+        "after": "<h3>7 November timing update</h3><ul><li>Eric Berger reported from the November 5 UP.Summit that SpaceX launch vice president Kiko Dontchev targeted November 13 for Flight 15. The direct journalist post was opened in this run; the date remains a target.<cite data-ref=\"https://x.com/SciGuySpace/status/2118446089191690338\"></cite></li><li>Next Spaceflight lists no earlier than November 13, 2026, without a liftoff time. Its notes describe a possible ship and V3 booster catch, pending final confirmation; neither success nor a final mission profile is assumed.<cite data-ref=\"https://www.nextspaceflight.com/launches/details/8403/\"></cite></li></ul><ul><li>On October 21, 2026, Polymarket reported US$37,948.11 across the Flight 15 event. Launch was priced at 3.95% by October 31, 20.5% by November 15 and 73.5% by November 30. Differencing the latter deadlines places 53 percentage points in November 16–30, the largest remaining quoted interval. November 16 is its estimated onset boundary, not a confirmed SpaceX launch day; the June 2027 administrative settlement buffer is excluded. The November 30 timing submarket is thin, at US$6,617.36.<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-15\"></cite></li><li>Flight 15 follows Flight 14’s orbital milestone. An upper-stage tower catch has been discussed, but the mission profile and catch success are separate questions. Propellant transfer between two vehicles remains a future capability to demonstrate and is not asserted as this flight’s confirmed objective.<cite data-ref=\"https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket?trk=public_post_comment-text\"></cite></li><li>Media credit: the launch photograph is SpaceX imagery via Space.com of Flight 14 on September 28, not Flight 15. The accompanying NASASpaceflight video is also Flight 14 background. The Polymarket card is a dated forecast snapshot. This predicted pin answers the verified Flight 14 pin so the next test stays in its program’s thread.<cite data-ref=\"https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket?trk=public_post_comment-text\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>On October 21, 2026, Polymarket reported US$37,948.11 across the Flight 15 event. Launch was priced at 3.95% by October 31, 20.5% by November 15 and 73.5% by November 30. Differencing the latter deadlines places 53 percentage points in November 16–30, the largest remaining quoted interval. November 16 is its estimated onset boundary, not a confirmed SpaceX launch day; the June 2027 administrative settlement buffer is excluded. The November 30 timing submarket is thin, at US$6,617.36.<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-15\"></cite></li><li>Flight 15 follows Flight 14’s orbital milestone. An upper-stage tower catch has been discussed, but the mission profile and catch success are separate questions. Propellant transfer between two vehicles remains a future capability to demonstrate and is not asserted as this flight’s confirmed objective.<cite data-ref=\"https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket?trk=public_post_comment-text\"></cite></li><li>Media credit: the launch photograph is SpaceX imagery via Space.com of Flight 14 on September 28, not Flight 15. The accompanying NASASpaceflight video is also Flight 14 background. The Polymarket card is a dated forecast snapshot. This predicted pin answers the verified Flight 14 pin so the next test stays in its program’s thread.<cite data-ref=\"https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket?trk=public_post_comment-text\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://x.com/SciGuySpace/status/2118446089191690338",
+        "title": "Eric Berger: Dontchev targets November13 for Flight15",
+        "confidence": 90,
+        "publishedDate": "2026-11-05"
+      },
+      {
+        "url": "https://www.nextspaceflight.com/launches/details/8403/",
+        "title": "Starship Flight15 — Next Spaceflight",
+        "confidence": 90
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:24:33.171Z"
+  },
+  {
+    "id": 4937,
+    "pinId": 2065,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://theknockturnal.com/st-denis-medical-returns-for-season-3/",
+        "title": "‘St. Denis Medical’ Returns for Season 3",
+        "confidence": 85,
+        "publishedDate": "2026-11-03"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:26:51.355Z"
+  },
+  {
+    "id": 4938,
+    "pinId": 513,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://wien.orf.at/stories/3348707/",
+        "title": "DC Tower 2 bekommt Photovoltaikfassade",
+        "confidence": 85,
+        "publishedDate": "2026-04-05"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:26:56.191Z"
+  },
+  {
+    "id": 4939,
+    "pinId": 2193,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.enr.com/articles/64152-arc-flashes-at-lax-people-mover-draw-concerns-as-contractor-dispute-continues",
+        "title": "Arc Flashes at LAX People Mover Draw Concerns as Contractor Dispute Continues",
+        "confidence": 85,
+        "publishedDate": "2026-11-02"
+      },
+      {
+        "url": "https://smmirror.com/lawa-addresses-rumors-and-status-of-lax-skylink-train/",
+        "title": "Los Angeles airport officials push back against online rumors surrounding SkyLink train progress",
+        "confidence": 85,
+        "publishedDate": "2026-10-24"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:27:00.868Z"
+  },
+  {
+    "id": 4940,
+    "pinId": 2224,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://wsvn.com/news/local/miami-dade/fans-swarm-the-inter-miami-nu-stadium-for-its-grand-opening-first-home-game/",
+        "title": "Fans swarm the Inter Miami Nu Stadium for its grand opening, first home game",
+        "confidence": 85,
+        "publishedDate": "2026-04-05"
+      },
+      {
+        "url": "https://cadenaser.com/nacional/2026/04/03/messi-bendice-el-nuevo-hogar-del-inter-de-miami-despues-de-tan-poco-tiempo-haber-construido-algo-asi-es-una-locura-cadena-ser/",
+        "title": "Messi bendice el nuevo hogar del Inter de Miami: \"Después de tan poco tiempo, haber construido algo así es una locura\"",
+        "confidence": 85,
+        "publishedDate": "2026-04-03"
+      },
+      {
+        "url": "https://www.intermiamicf.com/news/match-preview-inter-miami-cf-hosts-austin-fc-for-nu-stadium-s-historic-opener",
+        "title": "MATCH PREVIEW: Inter Miami CF Hosts Austin FC for Nu Stadium's Historic Opener",
+        "confidence": 85,
+        "publishedDate": "2026-04-04"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:27:07.098Z"
+  },
+  {
+    "id": 4941,
+    "pinId": 4440,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://sneakernews.com/2026/06/25/nike-gt-cut-4-victor-wembanyama-statue-of-liberty/",
+        "title": "Nike Made A Statue Of Liberty PE For Victor Wembanyama",
+        "confidence": 85,
+        "publishedDate": "2026-06-25"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:27:12.553Z"
+  },
+  {
+    "id": 4942,
+    "pinId": 18190,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "SpaceX is targeting no earlier than November 13, 2026 for Starship Flight 15, according to Eric Berger’s November 5 report of launch vice president Kiko Dontchev’s UP.Summit remarks. No final liftoff time is announced.",
+        "field": "description",
+        "before": "October 21 launch odds favour the November 16–30 window: 53 percentage points, with 73.5% by November 30. The event traded US$37,948.11; no firm SpaceX day is announced."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:27:42.901Z"
+  },
+  {
+    "id": 4943,
+    "pinId": 20692,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi’s November Brent contract resolves to a one-minute closing price on 30 November 2026 at 5:00 PM EST. In the 6 November evening snapshot, the Yes bid/ask crossed 50% between US$95.99 and US$97.99 a barrel; 85,355.55 contract units had traded across 30 thresholds.",
+        "field": "description",
+        "before": "Kalshi's November Brent contract resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST. On 1 November 2026 its 20-strike ladder put the 50% crossing near US$108 a barrel, on a very thin book."
+      },
+      {
+        "after": "<h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=200\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 20 threshold strikes from US$91.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 2 November 2026, the ladder had moved lower: Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102, about US$6 under the 1 November reading. Adjacent midpoint steps are only 5-6 percentage points, so there is no sharp modal band. About 3,680 contracts have traded, roughly US$1,241 when each strike's contracts are multiplied by its last price (a derived proxy, not reported dollar volume); several last prices sit well above the current bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 1 November 2026, the ladder's Yes bid/ask was 72-75% above US$99.99, 67-69% above US$101.99, 50-51% above US$107.99, 40-41% above US$111.99, 25-26% above US$117.99 and 9-10% above US$129.99; the 50% crossing sat near US$108<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>The book is very thin, so these quotes are a rough guide and not strong evidence of where Brent will settle<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75 and September at US$97.92, and the October contract closed on 30 October with its settlement value still unpublished on 2 November (the exchange API showed status closed with no result)<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100",
+        "title": "Kalshi monthly Brent ladder — 6 November evening snapshot",
+        "confidence": 98
+      },
+      {
+        "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=200",
+        "title": "Kalshi open November2026 Brent contracts",
+        "confidence": 90
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-07T14:27:43.831Z"
   }
 ]

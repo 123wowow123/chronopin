@@ -40627,115 +40627,205 @@
       "local": 2626,
       "production": 2626
     },
-    "title": "EBRD-backed remediation of Kyrgyzstan's Mailuu-Suu tailings dam",
+    "title": "Mailuu-Suu Uranium Legacy Remediation Continues Toward 2032",
     "sourceUrl": "https://www.youtube.com/watch?v=wIBmZiQvzC0",
     "profile": {
-      "sector": "Infrastructure: uranium-tailings remediation",
-      "status": "announced",
-      "assessmentDate": "2026-10-29",
-      "rubricYear": 2026,
-      "source": "session",
       "axes": {
         "scale": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established.",
-          "sources": []
-        },
-        "automation": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced project-specific automation process supporting a score was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No comparable cohort of at least five facilities with consistent output measures was established."
         },
         "technical": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No scored process capability against a documented sector baseline was established.",
-          "sources": []
-        },
-        "efficiency": {
           "score": null,
-          "basis": "unknown",
-          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established.",
-          "sources": []
-        },
-        "supplyChain": {
-          "score": null,
-          "basis": "unknown",
-          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established.",
-          "sources": []
+          "sources": [],
+          "reasoning": "No scored process capability against a documented sector baseline was established."
         },
         "workforce": {
-          "score": null,
           "basis": "unknown",
-          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established.",
-          "sources": []
+          "score": null,
+          "sources": [],
+          "reasoning": "No documented credential pathway or measured training outcomes supporting a score were established."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced project-specific automation process supporting a score was established."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No output-normalized resource-efficiency cohort of at least five facilities was established."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No sourced manufacturing bottleneck-relief assessment was established."
         }
       },
+      "sector": "Infrastructure: uranium-tailings remediation",
+      "source": "session",
+      "status": "construction",
       "metrics": [
         {
           "key": "investment",
-          "label": "Published investment and scope",
-          "value": "EUR 23 million remediation grant; not aggregate Central Asia programme budget.",
+          "label": "Revised remediation estimate",
+          "value": "EUR40.1 million remediation; EUR42.6 million including EUR2.5 million EIA/feasibility studies. Earlier EUR23 million grant is not the total revised cost.",
           "basis": "planned",
           "source": {
-            "url": "https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html",
-            "title": "Remediation works to begin at largest uranium legacy site in the Kyrgyz Republic",
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
             "publishedDate": null,
-            "quote": "\u20ac23 million"
+            "quote": "40.1"
           }
         },
         {
           "key": "capacity",
+          "basis": "planned",
           "label": "Published capacity and scope",
           "value": "Stabilise and cover more than two million cubic metres of radioactive tailings.",
-          "basis": "planned",
           "source": {
             "url": "https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html",
+            "quote": "2 million cubic meters",
             "title": "Remediation works to begin at largest uranium legacy site in the Kyrgyz Republic",
-            "publishedDate": null,
-            "quote": "2 million cubic meters"
+            "publishedDate": null
           }
         },
         {
           "key": "products",
+          "basis": "planned",
           "label": "Project design and equipment",
           "value": "Planned two-metre soil covers limit infiltration and access.",
-          "basis": "planned",
           "source": {
             "url": "https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html",
+            "quote": "2 metres thick",
             "title": "Remediation works to begin at largest uranium legacy site in the Kyrgyz Republic",
-            "publishedDate": null,
-            "quote": "2 metres thick"
+            "publishedDate": null
           }
         },
         {
           "key": "timeline",
-          "label": "Published project schedule",
-          "value": "Seven-year remediation scope at grant signing, not demonstrated completion.",
+          "label": "Revised completion horizon",
+          "value": "Works commenced August 2023; full remediation expected by 2032, subject to detailed-design peer review and funding.",
           "basis": "planned",
           "source": {
-            "url": "https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html",
-            "title": "Remediation works to begin at largest uranium legacy site in the Kyrgyz Republic",
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
             "publishedDate": null,
-            "quote": "seven years of remediation works"
+            "quote": "Works at the site have commenced in August 2023 and are expected to be concluded within a nine-year timeframe, until 2032."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Remediation underway",
+          "value": "Part 1 completed July 2024; Part 2 began September 2024 and Part 3 November 2024. Their earlier target years do not prove completion.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "Remediation of Mailuu-Suu started in August 2023 and will continue until 2032."
           }
         }
       ],
       "milestones": [
         {
-          "label": "Remediation grant announced",
-          "date": "2023-05-16",
+          "date": "2023-08",
+          "label": "Remediation works commenced",
           "basis": "demonstrated",
           "source": {
-            "url": "https://www.ebrd.com/news/2023/remediation-works-to-begin-at-largest-uranium-legacy-site-in-the-kyrgyz-republic.html",
-            "title": "Remediation works to begin at largest uranium legacy site in the Kyrgyz Republic",
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
             "publishedDate": null,
-            "quote": "16 May 2023"
+            "quote": "Works at the site have commenced in August 2023"
+          }
+        },
+        {
+          "date": "2024-07",
+          "label": "Part 1 mine closure and demolition completed",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "demolition works and was completed in July 2024 below budget and ahead of schedule;"
+          }
+        },
+        {
+          "date": "2024-09",
+          "label": "Part 2 remediation started",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "These works started in September 2024 and are expected to be concluded in 2026;"
+          }
+        },
+        {
+          "date": "2024-11",
+          "label": "Part 3 tailings relocation started",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "started in November 2024 and is expected to be completed in 2030;"
+          }
+        },
+        {
+          "date": "2026",
+          "label": "Part 2 target completion",
+          "basis": "planned",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "These works started in September 2024 and are expected to be concluded in 2026;"
+          }
+        },
+        {
+          "date": "2027",
+          "label": "Part 4 planned start, subject to design review",
+          "basis": "planned",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "and is expected to start in 2027 and be completed in 2032."
+          }
+        },
+        {
+          "date": "2030",
+          "label": "Part 3 target completion",
+          "basis": "planned",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "started in November 2024 and is expected to be completed in 2030;"
+          }
+        },
+        {
+          "date": "2032",
+          "label": "Full remediation target, subject to design review",
+          "basis": "planned",
+          "source": {
+            "url": "https://nucleus.iaea.org/sites/connect/CGULSpublic/Documents/25-02890E_BRO_SMP-3_WEB.pdf",
+            "title": "IAEA revised Strategic Master Plan, 2025\u20132030",
+            "publishedDate": null,
+            "quote": "and is expected to start in 2027 and be completed in 2032."
           }
         }
-      ]
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-11-07",
+      "checkedAt": "2026-10-30T03:26:04.226Z"
     }
   },
   {

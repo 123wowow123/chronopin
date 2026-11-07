@@ -1,0 +1,154 @@
+{
+  "runId": 49,
+  "reviews": [
+    {
+      "pinId": 2065,
+      "table": "PinCriticReview",
+      "basis": "Opened and matched exact Season 3 premiere coverage; this is Sarina Francis’s editorial verdict accompanying cast interviews, not a review of an earlier season. One verified review, below three; no aggregate or season1 reviews reused.",
+      "reviews": [
+        {
+          "url": "https://theknockturnal.com/st-denis-medical-returns-for-season-3/",
+          "title": "‘St. Denis Medical’ Returns for Season 3",
+          "publishedDate": "2026-11-03",
+          "quote": "The workplace comedy provides laughs, relatable characters, and workplace drama that makes it worth the watch.",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "pinId": 513,
+      "table": "PinCriticReview",
+      "basis": "Opened April5 ORF exact DC Tower2 report; excerpt reports the developer’s expected operating-cost benefit and is an attributed project perspective, not an independent measured energy claim. Preserves existing two reviews.",
+      "reviews": [
+        {
+          "url": "https://wien.orf.at/stories/3348707/",
+          "title": "DC Tower 2 bekommt Photovoltaikfassade",
+          "publishedDate": "2026-04-05",
+          "quote": "Aber die Betriebskosten des Gebäudes sollen so deutlich optimiert werden, heißt es von der S+B Gruppe, dem Projektentwickler.",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "pinId": 2193,
+      "table": "PinCriticReview",
+      "basis": "Exact LAX SkyLink project reactions: ENR reports LAWA’s warning about unresolved passenger-service safety issues; Mirror reports the agency’s response to rumors. Two verified dated sources; official October PDF blocked403 and not quoted. No opening date inferred from contractor targets.",
+      "reviews": [
+        {
+          "url": "https://www.enr.com/articles/64152-arc-flashes-at-lax-people-mover-draw-concerns-as-contractor-dispute-continues",
+          "title": "Arc Flashes at LAX People Mover Draw Concerns as Contractor Dispute Continues",
+          "publishedDate": "2026-11-02",
+          "quote": "According to LAWA, the trains cannot carry passengers until LINXS fixes outstanding issues like structural repairs at the West Central Terminal Area",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://smmirror.com/lawa-addresses-rumors-and-status-of-lax-skylink-train/",
+          "title": "Los Angeles airport officials push back against online rumors surrounding SkyLink train progress",
+          "publishedDate": "2026-10-24",
+          "quote": "LAWA confirms contractor LINXS has resumed final reliability testing, debunking claims on social media.",
+          "sentiment": 0.2
+        }
+      ]
+    },
+    {
+      "pinId": 2224,
+      "table": "PinCriticReview",
+      "basis": "Exact Nu Stadium opening reactions from a local fan reported byWSVN, Messi reported byCadenaSER and coachMascherano on club’s primarypage. Officialclub page JSON-LD datePublished April4 verified, rather than its embeddedApril3tweet date. Three distinct sourceURLs; owner/player/coachviews are explicitly stakeholder reactions, not independent architectural tests.",
+      "reviews": [
+        {
+          "url": "https://wsvn.com/news/local/miami-dade/fans-swarm-the-inter-miami-nu-stadium-for-its-grand-opening-first-home-game/",
+          "title": "Fans swarm the Inter Miami Nu Stadium for its grand opening, first home game",
+          "publishedDate": "2026-04-05",
+          "quote": "We’re excited that we can finally have a stadium that we can call home.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://cadenaser.com/nacional/2026/04/03/messi-bendice-el-nuevo-hogar-del-inter-de-miami-despues-de-tan-poco-tiempo-haber-construido-algo-asi-es-una-locura-cadena-ser/",
+          "title": "Messi bendice el nuevo hogar del Inter de Miami: \"Después de tan poco tiempo, haber construido algo así es una locura\"",
+          "publishedDate": "2026-04-03",
+          "quote": "Después de tan poco tiempo, haber construido algo así es una locura.",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.intermiamicf.com/news/match-preview-inter-miami-cf-hosts-austin-fc-for-nu-stadium-s-historic-opener",
+          "title": "MATCH PREVIEW: Inter Miami CF Hosts Austin FC for Nu Stadium's Historic Opener",
+          "publishedDate": "2026-04-04",
+          "quote": "The stadium is top-notch. The pitch is excellent for playing, and the locker rooms and all the team facilities are impressive.",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "pinId": 4440,
+      "table": "PinCriticReview",
+      "basis": "Exact StatueofLiberty colorway design editorial byJohnKim, browser-rendered and stringmatched. Source showsAsia-PacificEPversion IW0738-300; quote addresses sharedcolorway narrative, not USregional availability oron-courtperformance. One independenteditorial; no genericGT4performance review borrowed.",
+      "reviews": [
+        {
+          "url": "https://sneakernews.com/2026/06/25/nike-gt-cut-4-victor-wembanyama-statue-of-liberty/",
+          "title": "Nike Made A Statue Of Liberty PE For Victor Wembanyama",
+          "publishedDate": "2026-06-25",
+          "quote": "On paper, it’s a clever narrative, but the timing is just completely awkward",
+          "sentiment": -0.5
+        }
+      ]
+    }
+  ],
+  "tasteCleanup": [
+    {
+      "pinId": 5611,
+      "host": "local",
+      "reviewsBefore": 1,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 5611,
+      "host": "prod",
+      "reviewsBefore": 1,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 5612,
+      "host": "local",
+      "reviewsBefore": 3,
+      "reviewsAfter": 1,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 5612,
+      "host": "prod",
+      "reviewsBefore": 3,
+      "reviewsAfter": 1,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 5613,
+      "host": "local",
+      "reviewsBefore": 4,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 5613,
+      "host": "prod",
+      "reviewsBefore": 4,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 13912,
+      "host": "local",
+      "reviewsBefore": 2,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    },
+    {
+      "pinId": 13912,
+      "host": "prod",
+      "reviewsBefore": 2,
+      "reviewsAfter": 0,
+      "axesPreserved": true
+    }
+  ]
+}

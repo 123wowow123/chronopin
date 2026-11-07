@@ -1,0 +1,58 @@
+[
+  {
+    "pinId": 5611,
+    "host": "local",
+    "reviewsBefore": 1,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 5611,
+    "host": "prod",
+    "reviewsBefore": 1,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 5612,
+    "host": "local",
+    "reviewsBefore": 3,
+    "reviewsAfter": 1,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 5612,
+    "host": "prod",
+    "reviewsBefore": 3,
+    "reviewsAfter": 1,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 5613,
+    "host": "local",
+    "reviewsBefore": 4,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 5613,
+    "host": "prod",
+    "reviewsBefore": 4,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 13912,
+    "host": "local",
+    "reviewsBefore": 2,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  },
+  {
+    "pinId": 13912,
+    "host": "prod",
+    "reviewsBefore": 2,
+    "reviewsAfter": 0,
+    "axesPreserved": true
+  }
+]

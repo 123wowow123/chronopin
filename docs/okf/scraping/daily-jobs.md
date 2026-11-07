@@ -1269,6 +1269,6 @@ drivers and limits; the earlier standalone `ad-translations` entry is removed.
 No pin creation or pin edit is needed. Each successful save is recorded in the
 job's action log. Completed languages are skipped, so rerunning only fills gaps.
 
-## Latest manual news run — October 30, 2026 morning
+## Latest manual news run — November 7, 2026 morning
 
-[Run 35 report](news-2026-10-30-am.md): four new pins; Hoodini identity and Gaylord public-opening repairs; 40 event readings; model specifications, trade/ad synchronization and production translation verification. Follow-up gaps include building-specific primary sources, Hoodini permit/queue reconciliation, Senate eFD response format and prediction-record selection before market filtering.
+[Run 49 report](news-2026-11-07-am.md): three new forecast pins, five existing forecast/timing updates, forty event readings with both-host native verification, Mailuu-Suu/PLDT/Boulder corrections, five researched review panels, exact-variant taste cleanup, three new factory profiles and verified paced ad replay. Local and production sentiment queues were empty at the final check. Fresh Senate browser export and complete Burry/Shrub archive checks remain specifically blocked by automated access denial and native browser interruption during owner activity. Pin translations remain with the separate agent.
