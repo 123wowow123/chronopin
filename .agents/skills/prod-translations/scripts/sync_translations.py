@@ -1124,6 +1124,10 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
         charts = item.get('charts') or []
         tables = item.get('tables') or []
         for c in charts:
+            c['title'] = _fit_panel_text(c.get('title') or '', c.get('title') or '', 120)
+            c['unit'] = _fit_panel_text(c.get('unit') or '', c.get('unit') or '', 40)
+            if c.get('note'):
+                c['note'] = _fit_panel_text(c['note'], c['note'], 500)
             i18n = dict(c.get('i18n') or {})
             for loc in target_locales:
                 if _chart_locale_ok(c, loc):
@@ -1139,6 +1143,16 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
             c['i18n'] = i18n
 
         for tb in tables:
+            tb['title'] = _fit_panel_text(tb.get('title') or '', tb.get('title') or '', 120)
+            tb['columns'] = [_fit_panel_text(str(col), str(col), 80) for col in (tb.get('columns') or [])]
+            tb['rows'] = [
+                [_fit_panel_text(str(cell), str(cell), 200) for cell in row]
+                for row in (tb.get('rows') or [])
+            ]
+            if tb.get('note'):
+                tb['note'] = _fit_panel_text(tb['note'], tb['note'], 500)
+            if tb.get('display') == 'timeline' and tb.get('stages'):
+                tb['stages'] = [_fit_panel_text(str(st), str(st), 40) for st in tb['stages']]
             i18n = dict(tb.get('i18n') or {})
             for loc in target_locales:
                 if _table_locale_ok(tb, loc):

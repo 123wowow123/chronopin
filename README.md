@@ -465,8 +465,6 @@ How can Chronopin improve organic search growth. Use my broswer to check if need
 https://search.google.com/search-console?utm_source=about-page&resource_id=sc-domain:chronopin.com
 
 
-are all landing pages translated besides the pins?
-
 
 build span chart display for construction pins with a timeline and show
 
