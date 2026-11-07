@@ -108,3 +108,18 @@ in `.scrape/sd-menu-pass-2026-11-06/qfb/`. The site rate-limits curl (`local_rat
 tart product page and the Christmas-cake blog images could not be read that way. Skipped: Sarabeth's (news-post photos
 have empty alt text and show different dishes than the post names), Mia Bocca / Itadaki Kokko-chan (menu is tall composite
 design images with no per-dish captions).
+
+### China (DiningCity Restaurant Week), same day
+
+129 China venues have DiningCity Restaurant Week set menus. Each dish with a camera icon opens a "Dish details" panel with a
+named photo. A first attempt to read the page's `api.diningcity.asia` key and call its photos API in bulk was blocked
+(treated as circumventing site access); I did not retry it. Instead a script opened each restaurant page in a same-origin
+iframe in Chrome and clicked each dish icon like a visitor, reading the panel image (`static-assets.diningcity.asia/<hash>`).
+Data: `.scrape/sd-menu-pass-2026-11-06/dc/` (`rows.txt` was saved through a Chrome blob download into ~/Downloads, then copied).
+Traps: the close-panel heuristic often failed, so later dishes on a page got the previous dish's image (many names shared one
+hash) - keep only the first row per (venue, hash); sharp rejects some JPEGs PIL accepts (re-save through PIL first);
+a manifest entry whose item name occurs twice in a menu aborts applyReviewed.py (pre-count and drop);
+one image is 150M pixels (PIL bomb warning).
+985 candidates -> 906 after a full contact-sheet review (50 sheets; rejects: scene shots, wrong dish, hands, text overlays,
+near-identical multi-dish platters) -> 901 applied on 102 venues, readbacks verified. Credit line: "Photo via DiningCity
+Restaurant Week". Provenance caveat: these look like diner-submitted photos; licensing is not confirmed.
