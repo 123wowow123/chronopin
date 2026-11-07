@@ -7,6 +7,11 @@ import { PER_SECOND, THROTTLED_BOT_NAMES } from '@/server/botLimit';
 const PRIVATE_PAGES = ['/admin', '/settings', '/preferences', '/profile', '/following', '/notifications', '/create', '/update/', '/respond/', '/login', '/signup'];
 
 const DISALLOW = [
+  // Next.js client-navigation (RSC) payloads. Search Console's crawl stats show
+  // these `?_rsc=` fetches as ~73% of Googlebot's requests ("Other file type"):
+  // they are not pages, and a rendered page already carries its own payload inline.
+  '/*?_rsc=',
+  '/*&_rsc=',
   '/api/',
   '/auth/',
   '/upload/',

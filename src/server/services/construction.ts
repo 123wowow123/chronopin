@@ -24,14 +24,21 @@ export async function constructionSpans(year: number, country: string | null, lo
   const rows = await db.query<Omit<ConstructionBar, 'href'> & { total: string }>(
     `SELECT p.id, p.title, p."utcStartDateTime"::text AS start, p."utcEndDateTime"::text AS "end", bt.name::text AS status,
             p.price::float8 AS price, p."priceCurrency", pp.city, pp.country, pm."thumbName", pm."originalUrl",
-            CASE WHEN EXISTS (SELECT 1 FROM "PinDatacenter" d WHERE d."pinId" = p.id) THEN 'datacenter'
-                 WHEN EXISTS (SELECT 1 FROM "PinPower" w WHERE w."pinId" = p.id) THEN 'power'
-                 WHEN EXISTS (SELECT 1 FROM "PinFactory" f WHERE f."pinId" = p.id) THEN 'factory' ELSE 'other' END AS sector,
+            CASE WHEN EXISTS (SELECT 1 FROM "PinDatacenter" d WHERE d."pinId" = p.id) OR fp.sector ~* 'data cent' THEN 'datacenter'
+                 WHEN EXISTS (SELECT 1 FROM "PinPower" w WHERE w."pinId" = p.id) OR p.title ~* '((^|[^a-z])wind([^a-z]|$)|offshore wind|wind farm|solar|battery storage|nuclear|reactor)' OR EXISTS (SELECT 1 FROM "PinTag" c WHERE c."pinId" = p.id AND c.name IN ('Solar', 'BESS', 'EnergyStorage')) THEN 'power'
+                 WHEN fp.sector ~* '(^|[^a-z])(rail|road|roads|transit|aviation|ports?|transport|highway|airport|subway|tunnel)([^a-z]|$)' OR EXISTS (SELECT 1 FROM "PinTag" c WHERE c."pinId" = p.id AND c.name IN ('Transport', 'Marine')) THEN 'transport'
+                 WHEN fp.sector ~* '(residential|housing|apartment)' OR p.title ~* '(apartment|housing|homes|residen|affordable|senior living)' OR EXISTS (SELECT 1 FROM "PinTag" c WHERE c."pinId" = p.id AND c.name = 'Property') THEN 'housing'
+                 WHEN fp.sector ~* '(manufactur|semiconductor|fab|factory|assembly)' OR EXISTS (SELECT 1 FROM "PinTag" c WHERE c."pinId" = p.id AND c.name IN ('Semiconductors', 'Manufacturing')) THEN 'factory'
+                 WHEN fp.sector IS NOT NULL OR EXISTS (SELECT 1 FROM "PinTag" c WHERE c."pinId" = p.id AND c.name = 'Architecture') THEN 'buildings'
+                 ELSE 'other' END AS sector,
+            (SELECT c.name::text FROM "PinTag" c WHERE c."pinId" = p.id AND c.kind = 'category'
+               AND c.name NOT IN ('Infrastructure', 'Architecture', 'Business', 'Labour', 'Policy', 'Climate') ORDER BY c.name LIMIT 1) AS category,
             (SELECT w.megawatts::float8 FROM "PinPower" w WHERE w."pinId" = p.id) AS megawatts,
             (SELECT w.kind FROM "PinPower" w WHERE w."pinId" = p.id) AS "powerKind", count(*) OVER () AS total
      FROM "Pin" p
      JOIN "PinTag" bt ON bt."pinId" = p.id AND bt.name IN ('Proposed', 'In Progress', 'Completed')
      JOIN "PinAddressPlace" pp ON pp."pinId" = p.id
+     LEFT JOIN LATERAL (SELECT f.profile->>'sector' AS sector FROM "PinFactory" f WHERE f."pinId" = p.id) fp ON true
      LEFT JOIN LATERAL (SELECT m."thumbName", CASE WHEN m."type"::text = '1' THEN m."originalUrl" END AS "originalUrl"
                         FROM "PinMedium" x JOIN "Medium" m ON m.id = x."mediumId"
                         WHERE x."pinId" = p.id AND x."utcDeletedDateTime" IS NULL

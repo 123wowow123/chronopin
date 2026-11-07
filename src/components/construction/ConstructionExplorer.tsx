@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
 import { formatMoney } from '@/lib/people';
 import { CONSTRUCTION_YEARS, type ConstructionBar, type ConstructionSector, type ConstructionStatus } from '@/lib/construction';
 
@@ -11,8 +12,8 @@ import { CONSTRUCTION_YEARS, type ConstructionBar, type ConstructionSector, type
 const TONE: Record<ConstructionStatus, string> = { Proposed: 'bg-slate-400', 'In Progress': 'bg-blue-600', Completed: 'bg-emerald-500' };
 const STATUS_KEY = { Proposed: 'proposed', 'In Progress': 'inProgress', Completed: 'completed' } as const;
 const STATUSES: ConstructionStatus[] = ['Proposed', 'In Progress', 'Completed'];
-const SECTORS: ConstructionSector[] = ['power', 'datacenter', 'factory', 'other'];
-const SECTOR_KEY = { power: 'sectorPower', datacenter: 'sectorDatacenter', factory: 'sectorFactory', other: 'sectorOther' } as const;
+const SECTORS: ConstructionSector[] = ['power', 'datacenter', 'factory', 'transport', 'housing', 'buildings', 'other'];
+const SECTOR_KEY = { power: 'sectorPower', datacenter: 'sectorDatacenter', factory: 'sectorFactory', transport: 'sectorTransport', housing: 'sectorHousing', buildings: 'sectorBuildings', other: 'sectorOther' } as const;
 const SORTS = ['start', 'end', 'cost', 'size'] as const;
 type Sort = (typeof SORTS)[number];
 const SORT_KEY = { start: 'sortStart', end: 'sortEnd', cost: 'sortCost', size: 'sortSize' } as const;
@@ -33,9 +34,35 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
   const [statuses, setStatuses] = useState<ConstructionStatus[]>(STATUSES);
   const [sector, setSector] = useState<ConstructionSector | null>(null);
   const [sort, setSort] = useState<Sort>('start');
+  const [sub, setSub] = useState<string | null>(null);
+  const sectorRow = useRef<HTMLDivElement>(null);
+  const [clipped, setClipped] = useState<Set<string>>(new Set());
+
+  // What the Other pill holds, as pills of its own: the categories of its builds, most builds first.
+  const subs = useMemo(() => {
+    const n = new Map<string, number>();
+    for (const b of bars) if (b.sector === 'other' && b.category) n.set(b.category, (n.get(b.category) ?? 0) + 1);
+    return [...n].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([name]) => name);
+  }, [bars]);
+
+  // The category pills take the room the row has: those that would wrap onto a second line are hidden.
+  useLayoutEffect(() => {
+    const row = sectorRow.current;
+    if (!row) return;
+    const measure = () => {
+      const kids = [...row.querySelectorAll<HTMLElement>('[data-sub]')];
+      const top = kids[0]?.offsetTop ?? 0;
+      const next = new Set(kids.filter((k) => k.offsetTop > top + 4).map((k) => k.dataset.sub!));
+      setClipped((prev) => (prev.size === next.size && [...next].every((x) => prev.has(x)) ? prev : next));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(row);
+    return () => ro.disconnect();
+  }, [subs]);
 
   const rows = useMemo(() => {
-    const kept = bars.filter((b) => statuses.includes(b.status) && (!sector || b.sector === sector));
+    const kept = bars.filter((b) => statuses.includes(b.status) && (!sector || b.sector === sector) && (!sub || b.category === sub));
     const key: Record<Sort, (b: ConstructionBar) => number> = {
       start: (b) => Date.parse(b.start),
       end: (b) => Date.parse(b.end),
@@ -43,7 +70,7 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
       size: (b) => -(b.megawatts ?? 0),
     };
     return [...kept].sort((a, b) => key[sort](a) - key[sort](b) || a.id - b.id);
-  }, [bars, statuses, sector, sort]);
+  }, [bars, statuses, sector, sub, sort]);
 
   const thisYear = new Date(now).getUTCFullYear();
   const stats = {
@@ -80,19 +107,23 @@ export function ConstructionExplorer({ bars, year, now }: { bars: ConstructionBa
         {stat(t('guides.construction.statFinishing', { year: String(thisYear) }), stats.finishing.toLocaleString(t.locale))}
       </div>
 
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        <button type="button" className={chip(!sector)} aria-pressed={!sector} onClick={() => setSector(null)}>{t('guides.construction.sectorAll')}</button>
-        {SECTORS.map((s) => <button key={s} type="button" className={chip(sector === s)} aria-pressed={sector === s} onClick={() => setSector(sector === s ? null : s)}>{t(`guides.construction.${SECTOR_KEY[s]}`)}</button>)}
-        <span className="mx-1 h-5 w-px bg-line" />
-        {STATUSES.map((s) => {
-          const on = statuses.includes(s);
-          return (
-            <button key={s} type="button" className={`${chip(on)} flex items-center gap-1.5`} aria-pressed={on} onClick={() => setStatuses(on ? statuses.filter((x) => x !== s) : [...statuses, s])}>
-              <span className={`size-2.5 rounded-sm ${TONE[s]}`} />{t(`reserved.${STATUS_KEY[s]}`)}
-            </button>
-          );
-        })}
-        <label className="ms-auto flex items-center gap-2 text-sm text-muted">
+      <div ref={sectorRow} className="mb-2 flex flex-wrap items-center gap-2 overflow-hidden" style={{ maxHeight: '2.25rem' }}>
+        <button type="button" className={chip(!sector)} aria-pressed={!sector} onClick={() => { setSector(null); setSub(null); }}>{t('guides.construction.sectorAll')}</button>
+        {SECTORS.map((s) => <button key={s} type="button" className={chip(sector === s && !sub)} aria-pressed={sector === s && !sub} onClick={() => { setSector(sector === s && !sub ? null : s); setSub(null); }}>{t(`guides.construction.${SECTOR_KEY[s]}`)}</button>)}
+        {subs.map((name) => <button key={name} type="button" data-sub={name} className={`${chip(sub === name)} ${clipped.has(name) ? 'invisible' : ''}`} aria-pressed={sub === name} tabIndex={clipped.has(name) ? -1 : 0} onClick={() => { setSector(sub === name ? null : 'other'); setSub(sub === name ? null : name); }}>{categoryLabel(t, name)}</button>)}
+      </div>
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {STATUSES.map((s) => {
+            const on = statuses.includes(s);
+            return (
+              <button key={s} type="button" className={`${chip(on)} flex items-center gap-1.5`} aria-pressed={on} onClick={() => setStatuses(on ? statuses.filter((x) => x !== s) : [...statuses, s])}>
+                <span className={`size-2.5 rounded-sm ${TONE[s]}`} />{t(`reserved.${STATUS_KEY[s]}`)}
+              </button>
+            );
+          })}
+        </div>
+        <label className="flex items-center gap-2 text-sm text-muted">
           {t('guides.construction.sortBy')}
           <select className="rounded-lg border border-line bg-panel px-2 py-1 text-ink" value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
             {SORTS.map((s) => <option key={s} value={s}>{t(`guides.construction.${SORT_KEY[s]}`)}</option>)}
