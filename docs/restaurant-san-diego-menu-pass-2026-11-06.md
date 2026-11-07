@@ -141,3 +141,13 @@ Restaurant Week". Provenance caveat: these look like diner-submitted photos; lic
 Decision 2026-11-07 (owner): keep the 901 DiningCity China dish photos on production. Their licensing is still unconfirmed
 (they look diner-submitted); the credit line stays "Photo via DiningCity Restaurant Week" in the data, though dish photos
 with a caption no longer show the credit in the UI.
+
+### Follow-up 2026-11-07 (later): Earls Miami, pumpkin tart, New York tab
+- Earls Kitchen + Bar Miami: Yelp slug `earls-kitchen-bar-miami-8` is 150 NE 8th St (Worldcenter, specials id 654),
+  `-6` is 7535 N Kendall Dr (Dadeland, 667). Branches confirmed by address in the page title, then 4 + 2 dish photos applied
+  (hands, multi-dish and other-dish captions rejected; the Worldcenter photo set was not reused on Dadeland). Yelp's food photo
+  tab holds ~120 photos per branch; many captions are generic or name another dish.
+- Qu'il fait bon October pumpkin tart (Miyoi Farm Kuririn): the product is no longer on the site (search returns nothing),
+  so it stays without a photo.
+- New York Specials tab: the guide shows no Specials tab at 08:06 PST on a Saturday (it lists only live or upcoming offers);
+  nothing is broken. Tokyo's Specials tab rendered correctly with its photo cards.
