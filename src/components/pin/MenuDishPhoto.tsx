@@ -25,7 +25,6 @@ function Lightbox({ images, start, onClose }: { images: RestaurantDishImage[]; s
         <Image key={image.src} src={image.src} alt={image.caption} width={image.width ?? 1200} height={image.height ?? 900} sizes="90vw" loading="eager" className={styles.lightboxImg} />
         <figcaption className={styles.lightboxCaption}>
           <strong>{image.caption}</strong>
-          <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer">Photo: {image.credit} ↗</a>
           {count > 1 ? <span className={styles.lightboxCount}>{index + 1} / {count}</span> : null}
         </figcaption>
         <button type="button" className={styles.lightboxClose} onClick={onClose} aria-label="Close photo">×</button>

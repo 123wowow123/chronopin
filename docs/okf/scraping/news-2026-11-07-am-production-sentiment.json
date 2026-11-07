@@ -1,0 +1,559 @@
+{
+  "judgments": [
+    {
+      "id": 20804,
+      "textHash": "42532bcca1e4",
+      "sentiment": 0,
+      "product": "",
+      "title": "Lenovo Tech World @ CES 2027 Keynote at Sphere in Las Vegas",
+      "company": "Lenovo",
+      "readback": {
+        "pinId": 20804,
+        "sentiment": 0,
+        "textHash": "42532bcca1e4b7f1d49562f2dfcf6ee0177a75ed44918d6badf7eb22322221e6",
+        "utcScoredDateTime": "2026-11-07T14:16:57.709Z",
+        "product": null,
+        "productHash": "42532bcca1e4b7f1d49562f2dfcf6ee0177a75ed44918d6badf7eb22322221e6"
+      },
+      "verified": true
+    },
+    {
+      "id": 20805,
+      "textHash": "5589e045334a",
+      "sentiment": 0.3,
+      "product": "GV90",
+      "title": "Genesis GV90 Flagship Electric SUV Due in Europe and Australia in First Half of 2027",
+      "company": "Genesis Motor",
+      "readback": {
+        "pinId": 20805,
+        "sentiment": 0.3,
+        "textHash": "5589e045334a40cead020c8b5c19f917942c8cb86cc7cd4c074d46a9c8abf635",
+        "utcScoredDateTime": "2026-11-07T14:16:57.757Z",
+        "product": "GV90",
+        "productHash": "5589e045334a40cead020c8b5c19f917942c8cb86cc7cd4c074d46a9c8abf635"
+      },
+      "verified": true
+    },
+    {
+      "id": 20807,
+      "textHash": "6d60785421fa",
+      "sentiment": 0.3,
+      "product": "Will Trent",
+      "title": "Will Trent Season 5 Premieres on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20807,
+        "sentiment": 0.3,
+        "textHash": "6d60785421fa6cc0562cbe5f56150310c858d7affec712be36c02fc0c7964492",
+        "utcScoredDateTime": "2026-11-07T14:16:57.763Z",
+        "product": "Will Trent",
+        "productHash": "6d60785421fa6cc0562cbe5f56150310c858d7affec712be36c02fc0c7964492"
+      },
+      "verified": true
+    },
+    {
+      "id": 20811,
+      "textHash": "d9997ce0007b",
+      "sentiment": 0.3,
+      "product": "High Potential",
+      "title": "High Potential Season 3 Premieres on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20811,
+        "sentiment": 0.3,
+        "textHash": "d9997ce0007b1fe646c5e0f0ddd505fd9772e419b39ccfb58806c753d2f0ce71",
+        "utcScoredDateTime": "2026-11-07T14:16:57.767Z",
+        "product": "High Potential",
+        "productHash": "d9997ce0007b1fe646c5e0f0ddd505fd9772e419b39ccfb58806c753d2f0ce71"
+      },
+      "verified": true
+    },
+    {
+      "id": 20813,
+      "textHash": "a62a858e9b91",
+      "sentiment": 0.3,
+      "product": "Shifting Gears",
+      "title": "Shifting Gears Season 3 Premieres on ABC With a Two-Episode Opener",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20813,
+        "sentiment": 0.3,
+        "textHash": "a62a858e9b916fd133f1ce23be2619f0903463dd2fbed708bab95e0e3ac0aeb1",
+        "utcScoredDateTime": "2026-11-07T14:16:57.771Z",
+        "product": "Shifting Gears",
+        "productHash": "a62a858e9b916fd133f1ce23be2619f0903463dd2fbed708bab95e0e3ac0aeb1"
+      },
+      "verified": true
+    },
+    {
+      "id": 20815,
+      "textHash": "a6182d039c6a",
+      "sentiment": 0.3,
+      "product": "Dr Pepper",
+      "title": "Dr Pepper Ice Cream Float Becomes a Permanent Flavor From February 2027",
+      "company": "Keurig Dr Pepper",
+      "readback": {
+        "pinId": 20815,
+        "sentiment": 0.3,
+        "textHash": "a6182d039c6a9a9eaa8375c89baaecc2d12b554d2222ee94b71aafba8b5047ba",
+        "utcScoredDateTime": "2026-11-07T14:16:57.775Z",
+        "product": "Dr Pepper",
+        "productHash": "a6182d039c6a9a9eaa8375c89baaecc2d12b554d2222ee94b71aafba8b5047ba"
+      },
+      "verified": true
+    },
+    {
+      "id": 20816,
+      "textHash": "ab5e6f079024",
+      "sentiment": 0.3,
+      "product": "The Rookie",
+      "title": "The Rookie Season 9 Premieres on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20816,
+        "sentiment": 0.3,
+        "textHash": "ab5e6f0790243f0b7a47f878ff70d4d8245c513bfb87d3f614c179a3a20479d1",
+        "utcScoredDateTime": "2026-11-07T14:16:57.778Z",
+        "product": "The Rookie",
+        "productHash": "ab5e6f0790243f0b7a47f878ff70d4d8245c513bfb87d3f614c179a3a20479d1"
+      },
+      "verified": true
+    },
+    {
+      "id": 20817,
+      "textHash": "f7c813a01c5e",
+      "sentiment": 0.3,
+      "product": "GHOST Energy",
+      "title": "GHOST Energy Sour Strips Appleberry Goes Nationwide and Blueberry Cream Arrives in January 2027",
+      "company": "Keurig Dr Pepper",
+      "readback": {
+        "pinId": 20817,
+        "sentiment": 0.3,
+        "textHash": "f7c813a01c5e9c0e35898e5e44e8ce98c6ddc35c6bfd33aa4b57219df6c4424c",
+        "utcScoredDateTime": "2026-11-07T14:16:57.781Z",
+        "product": "GHOST Energy",
+        "productHash": "f7c813a01c5e9c0e35898e5e44e8ce98c6ddc35c6bfd33aa4b57219df6c4424c"
+      },
+      "verified": true
+    },
+    {
+      "id": 20818,
+      "textHash": "76c6d709b6c8",
+      "sentiment": 0.3,
+      "product": "The Rookie",
+      "title": "The Rookie: North Premieres on ABC With Jay Ellis",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20818,
+        "sentiment": 0.3,
+        "textHash": "76c6d709b6c8cb2e678b60b88517b378ae9def869aee5663b145a10641cec8b7",
+        "utcScoredDateTime": "2026-11-07T14:16:57.785Z",
+        "product": "The Rookie",
+        "productHash": "76c6d709b6c8cb2e678b60b88517b378ae9def869aee5663b145a10641cec8b7"
+      },
+      "verified": true
+    },
+    {
+      "id": 20820,
+      "textHash": "31421419c9f6",
+      "sentiment": 0.3,
+      "product": "Baywatch",
+      "title": "Baywatch Reboot Premieres on Fox With Stephen Amell",
+      "company": "FOX",
+      "readback": {
+        "pinId": 20820,
+        "sentiment": 0.3,
+        "textHash": "31421419c9f6bc9dd05a640219093d259a800ff1364037b9a286a12e7ecd3cd7",
+        "utcScoredDateTime": "2026-11-07T14:16:57.788Z",
+        "product": "Baywatch",
+        "productHash": "31421419c9f6bc9dd05a640219093d259a800ff1364037b9a286a12e7ecd3cd7"
+      },
+      "verified": true
+    },
+    {
+      "id": 20822,
+      "textHash": "fdc01195bc5b",
+      "sentiment": 0.3,
+      "product": "The Rockford Files",
+      "title": "The Rockford Files Reboot Premieres on NBC With David Boreanaz",
+      "company": "NBC",
+      "readback": {
+        "pinId": 20822,
+        "sentiment": 0.3,
+        "textHash": "fdc01195bc5b26df8771f783f5eeedd59a1e56c8bbe92c18da4f48a058d3c6a2",
+        "utcScoredDateTime": "2026-11-07T14:16:59.841Z",
+        "product": "The Rockford Files",
+        "productHash": "fdc01195bc5b26df8771f783f5eeedd59a1e56c8bbe92c18da4f48a058d3c6a2"
+      },
+      "verified": true
+    },
+    {
+      "id": 20824,
+      "textHash": "8d5b5cdbdb4f",
+      "sentiment": 0.3,
+      "product": "",
+      "title": "C4 Cocoa Loco, C4 Mini Cans and Bloom Cotton Candy Lemon Freezie Launch in January 2027",
+      "company": "Keurig Dr Pepper",
+      "readback": {
+        "pinId": 20824,
+        "sentiment": 0.3,
+        "textHash": "8d5b5cdbdb4fa342af765e9cf8a8a500c1eee18fd7b696e6fc8ed8d17b6886ff",
+        "utcScoredDateTime": "2026-11-07T14:16:59.847Z",
+        "product": null,
+        "productHash": "8d5b5cdbdb4fa342af765e9cf8a8a500c1eee18fd7b696e6fc8ed8d17b6886ff"
+      },
+      "verified": true
+    },
+    {
+      "id": 20825,
+      "textHash": "bd917bd0de26",
+      "sentiment": 0.3,
+      "product": "Canada Dry",
+      "title": "Canada Dry Raspberry Lemonade Launches in Spring 2027",
+      "company": "Keurig Dr Pepper",
+      "readback": {
+        "pinId": 20825,
+        "sentiment": 0.3,
+        "textHash": "bd917bd0de264fca1301160460426c728e3564b308c5eb3fae41c5a1f0cade3c",
+        "utcScoredDateTime": "2026-11-07T14:16:59.851Z",
+        "product": "Canada Dry",
+        "productHash": "bd917bd0de264fca1301160460426c728e3564b308c5eb3fae41c5a1f0cade3c"
+      },
+      "verified": true
+    },
+    {
+      "id": 20829,
+      "textHash": "29df6dffe36d",
+      "sentiment": 0,
+      "product": "",
+      "title": "Stellantis CEO Antonio Filosa Keynote at CES 2027 on 6 January",
+      "company": "Stellantis",
+      "readback": {
+        "pinId": 20829,
+        "sentiment": 0,
+        "textHash": "29df6dffe36dd8c4f1a48dc22bc5080ac1a30999d430405d6951ecf64ff93a6f",
+        "utcScoredDateTime": "2026-11-07T14:16:59.854Z",
+        "product": null,
+        "productHash": "29df6dffe36dd8c4f1a48dc22bc5080ac1a30999d430405d6951ecf64ff93a6f"
+      },
+      "verified": true
+    },
+    {
+      "id": 20830,
+      "textHash": "bc33d6f7b336",
+      "sentiment": 0,
+      "product": "",
+      "title": "Waymo Co-CEO Tekedra Mawakana Keynote at CES 2027 on 5 January",
+      "company": "Waymo",
+      "readback": {
+        "pinId": 20830,
+        "sentiment": 0,
+        "textHash": "bc33d6f7b3367a4a3d6d4a4470dffa4aa8a1eb05b2e4a7107ba1cd64dc5066fe",
+        "utcScoredDateTime": "2026-11-07T14:16:59.858Z",
+        "product": null,
+        "productHash": "bc33d6f7b3367a4a3d6d4a4470dffa4aa8a1eb05b2e4a7107ba1cd64dc5066fe"
+      },
+      "verified": true
+    },
+    {
+      "id": 20831,
+      "textHash": "521ba1fe755b",
+      "sentiment": 0.3,
+      "product": "C-Class",
+      "title": "Mercedes-Benz Electric C-Class C 400 4MATIC Due in US Showrooms in First Half of 2027",
+      "company": "Mercedes-Benz",
+      "readback": {
+        "pinId": 20831,
+        "sentiment": 0.3,
+        "textHash": "521ba1fe755b33773fdffb526fe49e4e01abe1d90583809423ac539cbb3c18a3",
+        "utcScoredDateTime": "2026-11-07T14:16:59.861Z",
+        "product": "C-Class",
+        "productHash": "521ba1fe755b33773fdffb526fe49e4e01abe1d90583809423ac539cbb3c18a3"
+      },
+      "verified": true
+    },
+    {
+      "id": 20832,
+      "textHash": "bfa38fd7da52",
+      "sentiment": 0.3,
+      "product": "Apple TV",
+      "title": "Apple TV 4K (4th Generation) With A19 Chip Goes on Sale 13 November at $299",
+      "company": "Apple",
+      "readback": {
+        "pinId": 20832,
+        "sentiment": 0.3,
+        "textHash": "bfa38fd7da52f378c61a23161942e2f92f05a9536ba26ebdcf4f154a062a36de",
+        "utcScoredDateTime": "2026-11-07T14:16:59.864Z",
+        "product": "Apple TV",
+        "productHash": "bfa38fd7da52f378c61a23161942e2f92f05a9536ba26ebdcf4f154a062a36de"
+      },
+      "verified": true
+    },
+    {
+      "id": 20833,
+      "textHash": "877bc7c77d83",
+      "sentiment": 0.3,
+      "product": "Home Collection",
+      "title": "Apple Home Collection Cameras, Thermostats and Smart Lock Go on Sale From December 2026",
+      "company": "Apple",
+      "readback": {
+        "pinId": 20833,
+        "sentiment": 0.3,
+        "textHash": "877bc7c77d83cbe688f2fae9d6f49ee66de05400eb14588a89f53ce67ed27ce0",
+        "utcScoredDateTime": "2026-11-07T14:16:59.867Z",
+        "product": "Home Collection",
+        "productHash": "877bc7c77d83cbe688f2fae9d6f49ee66de05400eb14588a89f53ce67ed27ce0"
+      },
+      "verified": true
+    },
+    {
+      "id": 20834,
+      "textHash": "fb6b9f602e3e",
+      "sentiment": 0.3,
+      "product": "Blue Eye Samurai",
+      "title": "Blue Eye Samurai Season 2 Premieres on Netflix",
+      "company": "Netflix",
+      "readback": {
+        "pinId": 20834,
+        "sentiment": 0.3,
+        "textHash": "fb6b9f602e3e2811803c07184bbaa43237f61680ddd4b16925d73e1810786832",
+        "utcScoredDateTime": "2026-11-07T14:16:59.871Z",
+        "product": "Blue Eye Samurai",
+        "productHash": "fb6b9f602e3e2811803c07184bbaa43237f61680ddd4b16925d73e1810786832"
+      },
+      "verified": true
+    },
+    {
+      "id": 20835,
+      "textHash": "60fd1dc5ebb8",
+      "sentiment": 0.3,
+      "product": "Mayor of Kingstown",
+      "title": "Mayor of Kingstown Final Season 5 Premieres on Paramount+",
+      "company": "Paramount+",
+      "readback": {
+        "pinId": 20835,
+        "sentiment": 0.3,
+        "textHash": "60fd1dc5ebb8a8ecb1a7675a4c68d52c1be52ade91bd73fd234f9a413e34d345",
+        "utcScoredDateTime": "2026-11-07T14:16:59.874Z",
+        "product": "Mayor of Kingstown",
+        "productHash": "60fd1dc5ebb8a8ecb1a7675a4c68d52c1be52ade91bd73fd234f9a413e34d345"
+      },
+      "verified": true
+    },
+    {
+      "id": 20836,
+      "textHash": "45946e5cd1ce",
+      "sentiment": 0.3,
+      "product": "Maxton Hall",
+      "title": "Maxton Hall Season 3 Premieres on Prime Video as the Final Season",
+      "company": "Amazon",
+      "readback": {
+        "pinId": 20836,
+        "sentiment": 0.3,
+        "textHash": "45946e5cd1ce14820fc2548a3a07c56f75de0cebccf97791ee7ca10fe861482f",
+        "utcScoredDateTime": "2026-11-07T14:17:01.995Z",
+        "product": "Maxton Hall",
+        "productHash": "45946e5cd1ce14820fc2548a3a07c56f75de0cebccf97791ee7ca10fe861482f"
+      },
+      "verified": true
+    },
+    {
+      "id": 20837,
+      "textHash": "55312db7bdb2",
+      "sentiment": 0.3,
+      "product": "The Murder of JonBenét Ramsey",
+      "title": "The Murder of JonBenét Ramsey Premieres on Netflix",
+      "company": "Netflix",
+      "readback": {
+        "pinId": 20837,
+        "sentiment": 0.3,
+        "textHash": "55312db7bdb25ceb3fc6dcf2ae33e52922d540d95e9917d89d55681bf2276ccc",
+        "utcScoredDateTime": "2026-11-07T14:17:02.046Z",
+        "product": "The Murder of JonBenét Ramsey",
+        "productHash": "55312db7bdb25ceb3fc6dcf2ae33e52922d540d95e9917d89d55681bf2276ccc"
+      },
+      "verified": true
+    },
+    {
+      "id": 20838,
+      "textHash": "535362941d18",
+      "sentiment": 0.3,
+      "product": "PlayStation",
+      "title": "PlayStation Prism Collection Transparent DualSense Controllers and PS5 Covers Launch 4 February 2027",
+      "company": "Sony Interactive Entertainment",
+      "readback": {
+        "pinId": 20838,
+        "sentiment": 0.3,
+        "textHash": "535362941d18670f7e522ceeed27f0109146288ad33246f36abc73e6f7d182b8",
+        "utcScoredDateTime": "2026-11-07T14:17:02.082Z",
+        "product": "PlayStation",
+        "productHash": "535362941d18670f7e522ceeed27f0109146288ad33246f36abc73e6f7d182b8"
+      },
+      "verified": true
+    },
+    {
+      "id": 20839,
+      "textHash": "1d60700ea8c4",
+      "sentiment": 0.3,
+      "product": "Pride and Prejudice",
+      "title": "Netflix's Pride and Prejudice Limited Series Premieres With Emma Corrin and Jack Lowden",
+      "company": "Netflix",
+      "readback": {
+        "pinId": 20839,
+        "sentiment": 0.3,
+        "textHash": "1d60700ea8c45bca7ffaa4a55d395d4d0759cefdeddbd553fac2a267d18b1279",
+        "utcScoredDateTime": "2026-11-07T14:17:02.111Z",
+        "product": "Pride and Prejudice",
+        "productHash": "1d60700ea8c45bca7ffaa4a55d395d4d0759cefdeddbd553fac2a267d18b1279"
+      },
+      "verified": true
+    },
+    {
+      "id": 20840,
+      "textHash": "f5a8f046b2bd",
+      "sentiment": 0.3,
+      "product": "American Idol",
+      "title": "American Idol Season 25 Premieres on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20840,
+        "sentiment": 0.3,
+        "textHash": "f5a8f046b2bd7071448484f8fd4b4d4c98cf2cbc54a5654b97d5fe7eec29f22b",
+        "utcScoredDateTime": "2026-11-07T14:17:02.118Z",
+        "product": "American Idol",
+        "productHash": "f5a8f046b2bd7071448484f8fd4b4d4c98cf2cbc54a5654b97d5fe7eec29f22b"
+      },
+      "verified": true
+    },
+    {
+      "id": 20841,
+      "textHash": "f026588521df",
+      "sentiment": 0.3,
+      "product": "Clicks Communicator",
+      "title": "Clicks Communicator Keyboard Phone Begins Shipping in December 2026 at US$649",
+      "company": "Clicks Technology",
+      "readback": {
+        "pinId": 20841,
+        "sentiment": 0.3,
+        "textHash": "f026588521dfef499f38fd761f0499a88fe2e938a61a465dae87fdb7f3299175",
+        "utcScoredDateTime": "2026-11-07T14:17:02.124Z",
+        "product": "Clicks Communicator",
+        "productHash": "f026588521dfef499f38fd761f0499a88fe2e938a61a465dae87fdb7f3299175"
+      },
+      "verified": true
+    },
+    {
+      "id": 20842,
+      "textHash": "c0db30ea3403",
+      "sentiment": 0.3,
+      "product": "Ritz",
+      "title": "Ritz Gluten Free Crackers Expand Nationwide in February 2027 at US$4.49",
+      "company": "Mondelez International",
+      "readback": {
+        "pinId": 20842,
+        "sentiment": 0.3,
+        "textHash": "c0db30ea34033f8f56a36848eb9b101f98f862b8992b49bf7bb9c186dc2755d1",
+        "utcScoredDateTime": "2026-11-07T14:17:02.132Z",
+        "product": "Ritz",
+        "productHash": "c0db30ea34033f8f56a36848eb9b101f98f862b8992b49bf7bb9c186dc2755d1"
+      },
+      "verified": true
+    },
+    {
+      "id": 20843,
+      "textHash": "88e0bd577016",
+      "sentiment": 0,
+      "product": "9-1-1",
+      "title": "9-1-1 Season 10 Returns From Its Winter Break on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20843,
+        "sentiment": 0,
+        "textHash": "88e0bd5770168da3840701651dfad47adb30a065b7941e5fb179ed7b26c4c37e",
+        "utcScoredDateTime": "2026-11-07T14:17:02.136Z",
+        "product": "9-1-1",
+        "productHash": "88e0bd5770168da3840701651dfad47adb30a065b7941e5fb179ed7b26c4c37e"
+      },
+      "verified": true
+    },
+    {
+      "id": 20844,
+      "textHash": "acf3be0a2d8c",
+      "sentiment": 0,
+      "product": "Abbott Elementary",
+      "title": "Abbott Elementary Season 6 Returns From Its Winter Break on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20844,
+        "sentiment": 0,
+        "textHash": "acf3be0a2d8c910b93a7ebead25e33c5c56ee619afb80fb34a6432b4df15aaca",
+        "utcScoredDateTime": "2026-11-07T14:17:02.141Z",
+        "product": "Abbott Elementary",
+        "productHash": "acf3be0a2d8c910b93a7ebead25e33c5c56ee619afb80fb34a6432b4df15aaca"
+      },
+      "verified": true
+    },
+    {
+      "id": 20845,
+      "textHash": "0fd18653afa8",
+      "sentiment": 0,
+      "product": "Grey's Anatomy",
+      "title": "Grey's Anatomy Season 23 Returns From Its Winter Break on ABC",
+      "company": "ABC",
+      "readback": {
+        "pinId": 20845,
+        "sentiment": 0,
+        "textHash": "0fd18653afa87599934f9a39fc836094ceef8fe0cf3bd914054d35473f21e865",
+        "utcScoredDateTime": "2026-11-07T14:17:02.145Z",
+        "product": "Grey's Anatomy",
+        "productHash": "0fd18653afa87599934f9a39fc836094ceef8fe0cf3bd914054d35473f21e865"
+      },
+      "verified": true
+    },
+    {
+      "id": 20846,
+      "textHash": "e8fb2d5bef72",
+      "sentiment": 0.3,
+      "product": "Apple Intelligence",
+      "title": "Apple Intelligence With Alibaba Qwen Rolls Out to iPhones in China With iOS 27.3 in December",
+      "company": "Apple",
+      "readback": {
+        "pinId": 20846,
+        "sentiment": 0.3,
+        "textHash": "e8fb2d5bef7257e478c7204c8c3169790b21f7a5ebef7387ad0f77a6f26d884c",
+        "utcScoredDateTime": "2026-11-07T14:17:04.199Z",
+        "product": "Apple Intelligence",
+        "productHash": "e8fb2d5bef7257e478c7204c8c3169790b21f7a5ebef7387ad0f77a6f26d884c"
+      },
+      "verified": true
+    }
+  ],
+  "batches": [
+    {
+      "saved": 10,
+      "refused": []
+    },
+    {
+      "saved": 10,
+      "refused": []
+    },
+    {
+      "saved": 10,
+      "refused": []
+    },
+    {
+      "saved": 1,
+      "refused": []
+    }
+  ],
+  "pendingFinal": [
+    {
+      "id": 17731,
+      "textHash": "6bafc5b4a2be"
+    },
+    {
+      "id": 20807,
+      "textHash": "c4d0cf1374e1"
+    }
+  ]
+}

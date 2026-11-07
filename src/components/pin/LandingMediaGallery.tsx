@@ -82,7 +82,7 @@ export function LandingMediaGallery({ name, href, photos = [], media = [], badge
         return <div key={photo.src} className={`${styles.photoSlide} ${styles.landingSlide}`}>
           {isClip && playing === photo.src && position === index ? <div className={styles.landingPlayer}><PinMedia medium={medium} title={name} sizes="(max-width: 600px) 100vw, 33vw" /></div> : isClip ? <button type="button" className={`${styles.photoLink} ${styles.landingSlideLink}`} aria-label={`Play media ${position + 1} of ${name}`} tabIndex={position === index ? 0 : -1} onClick={() => setPlaying(photo.src)}>{image}<span className={styles.landingPlay} aria-hidden="true">▶</span></button> : <Link href={href} className={`${styles.photoLink} ${styles.landingSlideLink}`} aria-label={`View ${name}: ${photo.alt} (${position + 1} of ${slides.length})`} tabIndex={position === index ? 0 : -1} draggable={false}>{image}</Link>}
           {photo.caption && <span className={styles.slideCaption}>{photo.caption}</span>}
-          {photo.credit && <span className={styles.imageNote}>{photo.credit}</span>}
+          {photo.credit && !photo.caption && <span className={styles.imageNote}>{photo.credit}</span>}
         </div>;
       }) : <Link href={href} className={`${styles.photoLink} ${styles.photoSlide}`} aria-label={`View ${name}`}><span className={styles.photoPlaceholder} aria-hidden="true">✳</span></Link>}
 

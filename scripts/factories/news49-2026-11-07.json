@@ -1,0 +1,401 @@
+[
+  {
+    "key": "news49-15668",
+    "pinIds": {
+      "local": 15668,
+      "production": 15668
+    },
+    "title": "Novartis Breaks Ground on US$1.1 Billion San Diego Biomedical Research Hub",
+    "sourceUrl": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+    "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer benchmark or quantified capability axis in the opened project source."
+        }
+      },
+      "sector": "Biomedical research hub",
+      "source": "session",
+      "status": "construction",
+      "metrics": [
+        {
+          "key": "floorArea",
+          "basis": "planned",
+          "label": "Planned research floor area",
+          "value": "466,000 square feet at 10210 Campus Point Drive",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "Novartis will construct a state-of-the-art, 466,000-square-foot facility at 10210 Campus Point Drive.",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        },
+        {
+          "key": "employment",
+          "basis": "planned",
+          "label": "Planned employees",
+          "value": "Approximately 1,000 employees once complete",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "Once complete, it will house approximately 1,000 employees",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        },
+        {
+          "key": "timeline",
+          "basis": "planned",
+          "label": "Operating target",
+          "value": "Expected to become operational in 2029; not a confirmed commissioning date",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "the center is expected to become operational in 2029.",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        },
+        {
+          "key": "stage",
+          "basis": "demonstrated",
+          "label": "Construction milestone",
+          "value": "Groundbreaking ceremony held February 6, 2026",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "On February 6, 2026, Jonas Brunschwig , Consul General of Switzerland in San Francisco, participated in the groundbreaking ceremony",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Research focus",
+          "value": "Drug discovery: neuroscience, oncology, global health and regenerative medicine",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "including neuroscience, oncology, global health, and regenerative medicine.",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-02-06",
+          "basis": "demonstrated",
+          "label": "Groundbreaking ceremony",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "On February 6, 2026, Jonas Brunschwig , Consul General of Switzerland in San Francisco, participated in the groundbreaking ceremony",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        },
+        {
+          "date": "2029",
+          "basis": "planned",
+          "label": "Expected operational year",
+          "source": {
+            "url": "https://swissimpactusa.com/groundbreaking-ceremony-for-new-novartis-biomedical-research-hub-in-san-diego/",
+            "quote": "the center is expected to become operational in 2029.",
+            "title": "Groundbreaking Ceremony for New Novartis Biomedical Research Hub in San Diego",
+            "publishedDate": "2026-02-06"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-11-07",
+      "checkedAt": "2026-11-07T14:17:35.171Z"
+    }
+  },
+  {
+    "key": "news49-15656",
+    "pinIds": {
+      "local": 15656,
+      "production": 15656
+    },
+    "title": "Roche and Genentech Raise North Carolina Manufacturing Investment to About US$2 Billion",
+    "sourceUrl": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+    "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No published peer benchmark or quantified axis score in the opened plant announcement."
+        }
+      },
+      "sector": "Biomanufacturing: metabolic treatments",
+      "source": "session",
+      "status": "construction",
+      "metrics": [
+        {
+          "key": "investment",
+          "basis": "planned",
+          "label": "Plant investment",
+          "value": "Approximately USD 2 billion total commitment; expanded from initial project investment",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "total commitment for the company’s first-ever East Coast manufacturing facility to approximately $2 billion.",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "key": "employment",
+          "basis": "planned",
+          "label": "Planned workforce",
+          "value": "More than 500 high-wage manufacturing jobs plus 1,500 construction jobs",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "more than 500 high-wage manufacturing jobs and 1,500 construction jobs",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "key": "timeline",
+          "basis": "planned",
+          "label": "Operating target",
+          "value": "Set to be operational by 2029",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "Set to be operational by 2029",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "key": "stage",
+          "basis": "demonstrated",
+          "label": "Construction",
+          "value": "Construction began in August 2025",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "where construction began in August 2025",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Planned output",
+          "value": "Next-generation treatments for metabolic conditions, including obesity; no numerical volume published",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "the state-of-the-art facility will produce next-generation treatments for metabolic conditions, such as obesity.",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-08",
+          "basis": "demonstrated",
+          "label": "Groundbreaking",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "where construction began in August 2025",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "date": "2026-01-20",
+          "basis": "demonstrated",
+          "label": "Expanded plant investment announced",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "total commitment for the company’s first-ever East Coast manufacturing facility to approximately $2 billion.",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        },
+        {
+          "date": "2029",
+          "basis": "planned",
+          "label": "Operational target (year precision)",
+          "source": {
+            "url": "https://www.gene.com/media/press-releases/15096/2026-01-20/genentech-more-than-doubles-investment-i",
+            "quote": "Set to be operational by 2029",
+            "title": "Genentech More than Doubles Investment in Holly Springs, North Carolina Manufacturing Facility",
+            "publishedDate": "2026-01-20"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-11-07",
+      "checkedAt": "2026-11-07T14:18:12.851Z"
+    }
+  },
+  {
+    "key": "news49-3369",
+    "pinIds": {
+      "local": 3369,
+      "production": 3369
+    },
+    "title": "Metro Picks an Underground Subway for the Sepulveda Pass",
+    "sourceUrl": "https://www.metro.net/about/media-relations/metro-boards-initial-approval-sets-stage-for-generational-transformation-of-sepulveda-pass-corridor/",
+    "profile": {
+      "axes": {
+        "scale": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        },
+        "technical": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        },
+        "workforce": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        },
+        "automation": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        },
+        "efficiency": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        },
+        "supplyChain": {
+          "basis": "unknown",
+          "score": null,
+          "sources": [],
+          "reasoning": "No verified peer cohort or quantified axis benchmark; driverless operation is a design claim, not installed capability."
+        }
+      },
+      "sector": "Underground heavy-rail transit",
+      "source": "session",
+      "status": "announced",
+      "metrics": [
+        {
+          "key": "investment",
+          "basis": "planned",
+          "label": "Preliminary project cost",
+          "value": "About USD 25 billion; estimate to be updated during design and phased construction planning",
+          "source": {
+            "url": "https://www.enr.com/articles/62427-la-metro-advances-25b-sepulveda-pass-subway-project",
+            "quote": "The project is currently estimated to cost about $25 billion.",
+            "title": "LA Metro Advances $25B Sepulveda Pass Subway Project",
+            "publishedDate": "2026-01-28"
+          }
+        },
+        {
+          "key": "products",
+          "basis": "planned",
+          "label": "Planned route scope",
+          "value": "13-mile fully underground single-bore subway with seven stations, Van Nuys Metrolink to the E Line",
+          "source": {
+            "url": "https://www.enr.com/articles/62427-la-metro-advances-25b-sepulveda-pass-subway-project",
+            "quote": "The project would include a fully underground, single-bore, 13-mile subway with seven stations, connecting the Van Nuys Metrolink station to the E Line on the Westside.",
+            "title": "LA Metro Advances $25B Sepulveda Pass Subway Project",
+            "publishedDate": "2026-01-28"
+          }
+        },
+        {
+          "key": "stage",
+          "basis": "planned",
+          "label": "Next development phase",
+          "value": "Final Environmental Impact Report and initial operating segment/phasing plan; no confirmed construction start in the opened evidence",
+          "source": {
+            "url": "https://www.enr.com/articles/62427-la-metro-advances-25b-sepulveda-pass-subway-project",
+            "quote": "The board's decision allows Metro to move forward in developing the final Environmental Impact Report",
+            "title": "LA Metro Advances $25B Sepulveda Pass Subway Project",
+            "publishedDate": "2026-01-28"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-01-22",
+          "basis": "demonstrated",
+          "label": "Board unanimously selects locally preferred alternative",
+          "source": {
+            "url": "https://www.enr.com/articles/62427-la-metro-advances-25b-sepulveda-pass-subway-project",
+            "quote": "The locally preferred alternative, approved unanimously by the board Jan. 22, would cut that travel time to about 20 minutes, Metro officials said.",
+            "title": "LA Metro Advances $25B Sepulveda Pass Subway Project",
+            "publishedDate": "2026-01-28"
+          }
+        }
+      ],
+      "rubricYear": 2026,
+      "assessmentDate": "2026-11-07",
+      "checkedAt": "2026-11-07T14:19:54.891Z"
+    }
+  }
+]
