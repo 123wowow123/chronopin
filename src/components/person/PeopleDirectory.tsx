@@ -1,9 +1,13 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { PeopleSidePanel, type PeopleSidebarData } from '@/components/person/PeopleSidePanel';
 import { WatchAllTradesButton } from '@/components/person/WatchAllTradesButton';
+import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
+import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
+import { useSession } from '@/lib/client/session';
 import { CHART_COLORS, OCTAGON_AXES, octagonPoints, octagonRing, personPath, type OctagonAxis } from '@/lib/people';
 
 // One person on the index: just what a card shows.

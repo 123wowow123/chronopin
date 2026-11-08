@@ -13,7 +13,7 @@ type Status = { watcherCount: number; watching: boolean };
 
 // Register for every stock trade alert: each new filing by any person lands in
 // the bell. TradeWatchButton does the same for one person.
-export function WatchAllTradesButton() {
+export function WatchAllTradesButton({ onChange }: { onChange?: (watching: boolean) => void } = {}) {
   const router = useRouter();
   const { isLoggedIn, status: sessionStatus, user } = useSession();
   const [status, setStatus] = useState<Status | null>(null);
@@ -38,8 +38,11 @@ export function WatchAllTradesButton() {
     isLoggedIn,
     useCallback(() => {
       acted.current = true;
-      return api.post<Status>('/api/people/trade-watch').then(setStatus);
-    }, []),
+      return api.post<Status>('/api/people/trade-watch').then((s) => {
+        setStatus(s);
+        onChange?.(s.watching);
+      });
+    }, [onChange]),
   );
 
   async function toggle() {
@@ -54,7 +57,9 @@ export function WatchAllTradesButton() {
     acted.current = true;
     setBusy(true);
     try {
-      setStatus(status.watching ? await api.delete<Status>('/api/people/trade-watch') : await api.post<Status>('/api/people/trade-watch'));
+      const next = status.watching ? await api.delete<Status>('/api/people/trade-watch') : await api.post<Status>('/api/people/trade-watch');
+      setStatus(next);
+      onChange?.(next.watching);
     } finally {
       setBusy(false);
     }

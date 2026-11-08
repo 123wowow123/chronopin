@@ -133,6 +133,14 @@ Technical follow-ups from the expanded San Diego pass:
   read it back, and resume the idempotent photo save. Never assume local numeric IDs match production.
 - Do not split responsive source URLs blindly on every comma: image CDNs can use commas inside the URL.
   Prefer an observed original URL or parse source candidates without truncating transformation paths.
+- A correctly named official card can still contain the wrong photograph. Check the food itself and
+  exclude dietary/spice icons (`food_item_labels`), added proteins, sandwiches in place of plated dinners,
+  and incompatible toppings. Wheat & Water's Alfredo card exposed a chili icon rather than a dish photo.
+- When search results miss a local review, try the publisher's own search and follow its article links.
+  Verify the address and publication date before using historical photos or excerpts. Harumama Little
+  Italy's February 6, 2018 Kirbie's Cravings review labels the pig/chicken bun fillings and Fat Duck ramen;
+  its old prices and soft-opening promotion do not establish today's offer. A retired operator photo-menu
+  URL may now render an Archives page even while search results retain the old menu: inspect the live body.
 
 Keep per-item source URLs, search terms, candidates/rejections and the **next unperformed research step**.
 A bulk scan or empty caption match is only a candidate-discovery step. Distinguish pending manual

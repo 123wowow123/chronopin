@@ -15,6 +15,32 @@ export type TradeFiling = {
 
 export type WatchStatus = { watcherCount: number; watching: boolean };
 
+export type WatchedPersonDetail = {
+  id: number;
+  name: string;
+  slug: string;
+  photoUrl: string | null;
+  role: string;
+  office: string | null;
+  party: string | null;
+  jurisdiction: string | null;
+  tradeCount: number;
+  lastFiledDate: string | null;
+  pinCount: number;
+};
+
+export type WatchedPersonPin = {
+  id: number;
+  title: string;
+  utcStartDateTime: string;
+  utcCreatedDateTime: string;
+  personId: number;
+  personName: string;
+  personSlug: string;
+  personPhotoUrl: string | null;
+  watched: boolean;
+};
+
 // The committee seats whose sectors include the traded ticker's sector (src/lib/conflicts.ts), as
 // [{committee, sector}]; `t` names the PersonTrade row (or alias) the subquery reads.
 export const CONFLICTS = (t: string) => `COALESCE((SELECT jsonb_agg(DISTINCT jsonb_build_object('committee', pc."name", 'sector', x."sector"))
@@ -162,6 +188,43 @@ export default class PersonTrade {
        WHERE w."userId" = $1 AND w."utcDeletedDateTime" IS NULL
        ORDER BY w."utcCreatedDateTime" DESC`,
       [userId],
+    );
+  }
+
+  // Enriched watched-people list for the /people signed-in side panel.
+  static async listWatchedDetails(userId: number): Promise<WatchedPersonDetail[]> {
+    return db.query<WatchedPersonDetail>(
+      `SELECT pe."id", pe."name", pe."slug", pe."photoUrl", pe."role", pe."office", pe."party", pe."jurisdiction",
+              (SELECT COUNT(*)::int FROM "PersonTrade" t WHERE t."personId" = pe."id") AS "tradeCount",
+              (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = pe."id") AS "lastFiledDate",
+              (SELECT COUNT(*)::int FROM "PinPerson" pp JOIN "Pin" p ON p."id" = pp."pinId" AND p."utcDeletedDateTime" IS NULL WHERE pp."personId" = pe."id") AS "pinCount"
+       FROM "PersonTradeWatch" w
+       JOIN "Person" pe ON pe."id" = w."personId"
+       WHERE w."userId" = $1 AND w."utcDeletedDateTime" IS NULL
+       ORDER BY w."utcCreatedDateTime" DESC`,
+      [userId],
+    );
+  }
+
+  // Recent pins linked to people (prioritizing people the viewer watches).
+  static async listRecentPeoplePins(userId: number, limit = 8): Promise<WatchedPersonPin[]> {
+    return db.query<WatchedPersonPin>(
+      `WITH matched AS (
+         SELECT DISTINCT ON (p."id")
+           p."id", p."title", p."utcStartDateTime"::text AS "utcStartDateTime",
+           p."utcCreatedDateTime"::text AS "utcCreatedDateTime",
+           pe."id" AS "personId", pe."name" AS "personName", pe."slug" AS "personSlug", pe."photoUrl" AS "personPhotoUrl",
+           (w."userId" IS NOT NULL) AS "watched"
+         FROM "PinPerson" pp
+         JOIN "Pin" p ON p."id" = pp."pinId" AND p."utcDeletedDateTime" IS NULL
+         JOIN "Person" pe ON pe."id" = pp."personId"
+         LEFT JOIN "PersonTradeWatch" w ON w."userId" = $1 AND w."personId" = pe."id" AND w."utcDeletedDateTime" IS NULL
+         ORDER BY p."id", (w."userId" IS NOT NULL) DESC, pe."id"
+       )
+       SELECT * FROM matched
+       ORDER BY "watched" DESC, "utcCreatedDateTime" DESC, "id" DESC
+       LIMIT $2`,
+      [userId, limit],
     );
   }
 

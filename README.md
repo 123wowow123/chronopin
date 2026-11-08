@@ -504,3 +504,15 @@ authentic cuisine section by cuisine type
 
 
 pin dam construction in USA and add stas panel and map agregate for main stats
+
+
+- add large USA construction project
+
+
+
+project pin such as construction project should have widget that states why problem it solves
+
+
+
+stats like how many housing unites like in this pin should be shown like spec like with datacenter pins. do that for all other applicable pins too
+https://www.chronopin.com/pin/20881/plans-reported-for-600-unit-housing-at-clairemont-s-garfield-shopping-center

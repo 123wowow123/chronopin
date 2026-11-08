@@ -600,6 +600,41 @@ export default class Notification {
     );
   }
 
+  // Recent stock-trade filings in the notification shape, either restricted to
+  // the viewer's watched people (including filings disclosed before the watch
+  // was created) or across everyone on /people.
+  static listRecentTradeFilings({ userId, watchedOnly = false, limit = 15 }: { userId: number; watchedOnly?: boolean; limit?: number }) {
+    return db.query<NotificationItem>(
+      `
+      WITH e AS (
+        SELECT t."personId", t."filingId" AS "tradeFiling", MAX(t."filedDate") AS "filedDate",
+               MAX(t."filedDate")::timestamptz AS "utcCreatedDateTime",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl"
+        FROM "PersonTrade" t
+        JOIN "Person" pe ON pe."id" = t."personId"
+        WHERE ($2::boolean = false OR EXISTS (
+          SELECT 1 FROM "PersonTradeWatch" w
+          WHERE w."userId" = $1 AND w."personId" = t."personId" AND w."utcDeletedDateTime" IS NULL
+        ))
+        GROUP BY t."personId", t."filingId", pe."name", pe."photoUrl"
+        ORDER BY MAX(t."filedDate") DESC, t."personId"
+        LIMIT $3::int
+      )
+      SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
+             NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", NULL::jsonb AS "move",
+             NULL::int AS "searchAlertId", NULL::text AS "searchName", NULL::text AS "searchQuery",
+             ${TRADE_COLUMNS},
+             e."utcCreatedDateTime", true AS "read",
+             json_build_object('id', 0, 'userName', '', 'firstName', NULL, 'lastName', NULL, 'pictureUrl', NULL) AS "actor",
+             false AS "followingBack", 1 AS "groupCount", e."filedDate"::text AS "groupDay",
+             '{}'::int[] AS "pinIds", '{}'::timestamptz[] AS "pinStarts", '{}'::text[] AS "pinTitles"
+      FROM e
+      ORDER BY e."filedDate" DESC, e."personId"`,
+      [userId, watchedOnly, limit],
+    );
+  }
+
   // Entries, not rows, so the badge agrees with what the list shows.
   static async unreadCount(userId: number, timeZone = 'UTC'): Promise<number> {
     const rows = await inZone(timeZone, (zone) =>
