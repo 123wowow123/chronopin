@@ -168,6 +168,8 @@ function facetsFor(people: DirectoryPerson[], t: ReturnType<typeof useT>): Facet
 // Recent keeps the server's office chronology (current holder, then newest exits).
 type SortKey = 'recent' | 'name' | OctagonAxis;
 
+let cachedSidebar: { userId: number; data: PeopleSidebarData } | null = null;
+
 // The people index in tabs: one tab per group (the executive, senators,
 // representatives, governors, former officeholders, then the other fields),
 // with a count on each, a name filter, and the cards of the open tab only.
@@ -194,7 +196,9 @@ export function PeopleDirectory({
   const [descending, setDescending] = useState(true);
   // Signed-in side panel: loaded per viewer on the client so the page itself stays cacheable.
   const { isLoggedIn, status: sessionStatus, user } = useSession();
-  const [sidebar, setSidebar] = useState<PeopleSidebarData | null>(null);
+  const [sidebar, setSidebar] = useState<PeopleSidebarData | null>(() =>
+    user?.id && cachedSidebar?.userId === user.id ? cachedSidebar.data : null,
+  );
   const [sidebarFailed, setSidebarFailed] = useState(false);
 
   const loadSidebar = useCallback(() => {
@@ -202,13 +206,15 @@ export function PeopleDirectory({
     api
       .get<PeopleSidebarData>('/api/people/sidebar')
       .then((d) => {
+        if (user?.id) cachedSidebar = { userId: user.id, data: d };
         setSidebar(d);
       })
       .catch(() => setSidebarFailed(true));
-  }, []);
+  }, [user?.id]);
 
   useEffect(() => {
     if (sessionStatus !== 'ready' || !isLoggedIn) return;
+    if (user?.id && cachedSidebar?.userId === user.id) setSidebar(cachedSidebar.data);
     const id = window.setTimeout(loadSidebar, 0);
     return () => window.clearTimeout(id);
   }, [sessionStatus, isLoggedIn, user?.id, loadSidebar]);

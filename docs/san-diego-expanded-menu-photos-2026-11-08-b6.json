@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-08",
+  "region": "san-diego",
+  "before": {
+    "rows": 4882,
+    "withPhotos": 1575,
+    "withReviews": 76
+  },
+  "after": {
+    "rows": 4882,
+    "withPhotos": 1577,
+    "withReviews": 76
+  },
+  "changes": [
+    {
+      "kind": "specials",
+      "id": 1064,
+      "restaurant": "Fogo de Chão - San Diego",
+      "pinSourceUrl": "https://fogodechao.com/location/san-diego/",
+      "menuLabel": "Lunch menu",
+      "itemName": "Blistered Branzino",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b6/485a31e25ceec487-7cb886b02d22f842.webp",
+        "width": 1200,
+        "credit": "Fogo de Chão / official press photograph",
+        "height": 800,
+        "caption": "Blistered Branzino — official chain press photograph published August 12, 2026, not presented as photographed at the San Diego branch. Pictured yuca bites accompany the fish; background drinks and dishes are separate.",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/12/3343564/0/en/fogo-de-ch%C3%A3o-brings-the-best-of-fall-to-the-table-with-new-seasonal-menu-offerings.html"
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 1064,
+      "restaurant": "Fogo de Chão - San Diego",
+      "pinSourceUrl": "https://fogodechao.com/location/san-diego/",
+      "menuLabel": "Lunch menu",
+      "itemName": "Lobster Mac & Cheese",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b6/21138592f73ffae2-a917faeb34f56ef7.webp",
+        "width": 1200,
+        "credit": "Fogo de Chão / official press photograph",
+        "height": 917,
+        "caption": "Lobster Mac & Cheese — official chain press photograph published November 25, 2025, not presented as photographed at the San Diego branch. Historical promotional photograph of the named lobster side; presentation may vary.",
+        "sourceUrl": "https://markets.financialcontent.com/prnews.pre/article/gnwcq-2025-11-25-fogo-de-cho-invites-guests-to-heat-up-their-holiday-season-with-new-indulgent-offerings"
+      }
+    }
+  ],
+  "publicChecks": [
+    {
+      "source": "https://fogodechao.com/location/san-diego/",
+      "pins": [
+        {
+          "id": 20573,
+          "url": "https://www.chronopin.com/pin/20573/fogo-de-chao-san-diego-san-diego-restaurant-guide",
+          "expectedImages": 2,
+          "imagesInHTML": 2
+        }
+      ]
+    }
+  ],
+  "sourceChecks": [
+    {
+      "name": "holiday",
+      "url": "https://markets.financialcontent.com/prnews.pre/article/gnwcq-2025-11-25-fogo-de-cho-invites-guests-to-heat-up-their-holiday-season-with-new-indulgent-offerings",
+      "status": 200,
+      "images": [
+        {
+          "alt": "Return to PR Newswire homepage",
+          "src": "/content/dam/prnewswire/homepage/LIGHT_PRNewswire_By-Cision_Stacked.svg"
+        },
+        {
+          "alt": "PR Newswire: news distribution, targeting and monitoring",
+          "src": "/content/dam/prnewswire/homepage/MONO_PRNewswire_By-Cision_Stacked.svg"
+        },
+        {
+          "alt": "Holiday",
+          "src": "https://ml.globenewswire.com/Resource/Download/fec21c4f-2129-4883-8579-e333c3135196/holiday.png"
+        },
+        {
+          "alt": "2025_09_18_FOGO_LOBSTER_MAC_N_CHEESE_922_2_Evening_RTS (1) (1)",
+          "src": "https://ml.globenewswire.com/Resource/Download/4ff259df-c516-4e14-9e4b-f5b84885e025/2025-09-18-fogo-lobster-mac-n-cheese-922-2-evening-rts-1-1-.jpg"
+        },
+        {
+          "alt": "Picture1",
+          "src": "https://ml.globenewswire.com/Resource/Download/59635b61-2c94-4fb8-a027-cf6f637695c4/picture1.png"
+        },
+        {
+          "alt": "Wagyu Porterhouse Grabbing Piece (1)",
+          "src": "https://ml.globenewswire.com/Resource/Download/a905f2d4-a0a1-4737-b30d-f73c910512a3/wagyu-porterhouse-grabbing-piece-1-.jpg"
+        },
+        {
+          "alt": "",
+          "src": "https://www.globenewswire.com/newsroom/ti?nf=OTU4MDA4NiM3Mjc2NDA4IzIwMTQ0NDc="
+        },
+        {
+          "alt": "",
+          "src": "https://ml.globenewswire.com/media/ZTQzZDE0N2EtMDIzMi00ZmI5LThiZjMtOGYyNGFkYmU3NzBjLTEwMjUwNjUtMjAyNS0xMS0yNS1lbg==/tiny/Fogo-de-Chao.png"
+        },
+        {
+          "alt": "Primary Logo",
+          "src": "https://ml.globenewswire.com/media/5891c7dd-c027-4959-8d03-40a109416952/small/fogo-logo-003-jpg.jpg"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543532?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543556?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543537?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543536?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543533?maxWidth=300"
+        }
+      ],
+      "links": [
+        "https://www.globenewswire.com/Tracker?data=cgvJcCygPuYB9JZXwaPVDIPA2zuadoq35VRvDeCGNOtrigcqaJ4cG5aWM-XJNn3bv8xkwVQoppGs7HZ88OAruG-wZZGf_kEwn0u5F88RiJc5cBVvUK0uewOb9eIgjR-JZfImxPhY1-cSrqyDF6dj0ev_Own_w0w3X1qOFrEnOWE1uib7P7die7c5WUCkCwy4hFm9TXXkT0HpG2wXC86zNAtX8FkKWMAEFQW1x3zmpYXEcpPIk12Js20XWWAnzYBkr7Ze9RdM5jHMYL0wra6FLkMjMMLEP2-D17pclXOylF2zyxZCAiykyhhcnx5Ea6F4UqONj1NX8grCcxevouIrfktk7PiXhaGvtbDXCkk81qDGZxdqVu-tkCaoIZZ9OCqm",
+        "https://www.globenewswire.com/Tracker?data=D5YFcKgBa1tFRidBLsipPXJk0sy1tAkq-36ztfbkQssotkHLa06oGm37xaF9DoLyocf-eMfa9mmg5e-1PidRCQ==",
+        "https://www.globenewswire.com/Tracker?data=tuztQfx-uKMvLEgHw-r1OYzRtxDEhvaHkq2HRtFOMvibHq7a9Rg9aWsqtztvSLHr55jaUPJUe5kl_T6qmdhrzg==",
+        "https://www.globenewswire.com/Tracker?data=D5YFcKgBa1tFRidBLsipPYE_bbsF-7y8M3FuSio8DY_xSqw9Esk8ByufKOCTuxFgB9AUB88lBAgNHAavt_czxQ==",
+        "https://www.globenewswire.com/Tracker?data=D5YFcKgBa1tFRidBLsipPRPC4Po4romzap-hc26Pc0gtiYW9ThU4MiuFSzUv25jBmSiTli4c7LSY7rMQ42RaHQ==",
+        "https://www.globenewswire.com/Tracker?data=D5YFcKgBa1tFRidBLsipPbikPLNemtK2uNGIOpuBY2w4CBsdIhOvSC09DMuem873wNdMFwmF2EZXPi77Mb_idw==",
+        "https://www.globenewswire.com/Tracker?data=D5YFcKgBa1tFRidBLsipPW3VNhQz3vQCbqghbUr-v7MmWxR-t06HzG8KaHjozTWj9NGX5bsj87toyq_ugBDeig==",
+        "https://www.globenewswire.com/Tracker?data=uUDOOwgY8SGp0GMERMhrDq9vMht2z-bWJo7xDf6pIGbpesWyMuka85obyudFcq9DbDNGyQEsua2A9wtST_gTM0ux3PWsRmrNUsiOXuSzC6SQuwFwaTh12B4pZyzKF0fMx39hKcW1CzatQjUv5KcnsmnCTWd-_Vf9TCV_zTaaGalZSfXZMJaOSF4s40v-vorubNrM3rN-Mec_rSXTRsCy31EG2iyPMcdYRPU1bxIPLynMi6QBPv7kQbTxgDMJbIxdGbzocN6fm0W25ZbHCS4yZg==",
+        "https://www.globenewswire.com/Tracker?data=uUDOOwgY8SGp0GMERMhrDq9vMht2z-bWJo7xDf6pIGbpesWyMuka85obyudFcq9DcM0FFcoqRpkX2JwBD9uOQqej02rlHMOk2iETnd3G2xg3Hrf2UMt-EUnenN9yWLPn29dyRL2MCMC1UboCv5kEhBlMcqakdVo6JV0_LUBhOFkWuEAxNu9UcAM6MEEMsQgB11Ym1lj_rM40w0wnczusiTeMpg9aiIykkNxeo9lBCFuoPOcnTyNtHnyFoLgSwswtWVSJ8bsj7a5LqCm9Pu5zkg==",
+        "https://www.globenewswire.com/Tracker?data=uUDOOwgY8SGp0GMERMhrDq9vMht2z-bWJo7xDf6pIGbpesWyMuka85obyudFcq9DP1F9LBOcN55x00DnxSv_nc1wab8evi4m7CF-nEffWpbEnzfyGfT7yFnDUw_sN-12RnqpHf5MyY-1A6WxzGgwHelWNLgtHxZ2MpJ9d8GMsOajILH146IATnWvWNSPpPkB15X0JIGQ_fVn8W5Ut2vTMuA7XWVeQilMpBcicr7kug3hTn7BLbLzEf_SDup1V5iBJbFLbvAQq73HAiHnfikPiA==",
+        "https://www.globenewswire.com/Tracker?data=uUDOOwgY8SGp0GMERMhrDq9vMht2z-bWJo7xDf6pIGbpesWyMuka85obyudFcq9DjaOZM_ClnJzxan-7lAS3ODxXTGk5EaMnEo2xk399syavq73S8uQgmzZCeiRfr93GSTfnPnpTKLSvrHwiRh1YB6x14Z3f3OR8ePYdrlN966RjFt8odeyjQRxnRweKy7UxbGobv2_Ts75wkPz1wrJxCg48d0iFBRh2pKSM9vXCxr0JKI7N_7c5fiJVeXGvqjbNntaGwH6HKiuZK4fWXfTPtA==",
+        "https://www.globenewswire.com/NewsRoom/AttachmentNg/5891c7dd-c027-4959-8d03-40a109416952"
+      ]
+    },
+    {
+      "name": "fall2025",
+      "url": "https://markets.financialcontent.com/prnews.pre/article/gnwcq-2025-8-5-fogo-de-cho-ignites-fall-with-new-seasonal-menu-offerings",
+      "status": 200,
+      "images": [
+        {
+          "alt": "Return to PR Newswire homepage",
+          "src": "/content/dam/prnewswire/homepage/LIGHT_PRNewswire_By-Cision_Stacked.svg"
+        },
+        {
+          "alt": "PR Newswire: news distribution, targeting and monitoring",
+          "src": "/content/dam/prnewswire/homepage/MONO_PRNewswire_By-Cision_Stacked.svg"
+        },
+        {
+          "alt": "image (14)",
+          "src": "https://ml.globenewswire.com/Resource/Download/ef96192f-39f4-4b86-b172-3b44c41645a1/image-14-.png"
+        },
+        {
+          "alt": "image (15)",
+          "src": "https://ml.globenewswire.com/Resource/Download/449ba551-a1ad-4350-a9fa-83e1cb5b0ca5/image-15-.png"
+        },
+        {
+          "alt": "",
+          "src": "https://www.globenewswire.com/newsroom/ti?nf=OTUwNjA2NCM3MDgxMzYyIzIwMTQ0NDc="
+        },
+        {
+          "alt": "",
+          "src": "https://ml.globenewswire.com/media/MWY4ZWZlZWMtNWM2ZS00NmU5LTlkOGMtNzgzNzExYmViNDExLTEwMjUwNjUtMjAyNS0wOC0wNS1lbg==/tiny/Fogo-de-Chao.png"
+        },
+        {
+          "alt": "Primary Logo",
+          "src": "https://ml.globenewswire.com/media/5891c7dd-c027-4959-8d03-40a109416952/small/fogo-logo-003-jpg.jpg"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543532?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543556?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543537?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543536?maxWidth=300"
+        },
+        {
+          "alt": "News headline image",
+          "src": "https://cdn.newsrpm.com/image/543533?maxWidth=300"
+        }
+      ],
+      "links": [
+        "https://www.globenewswire.com/Tracker?data=Ul7gdJw0CUKp6U4xRdh1OT_L3JppqqHlfLEsOMrsT23Q5Wm9zYeekbFEK18acPmPlsRUGP-I__VrVEmvb2n9vVKh5U5-q3UpqND4cz_5azVXZT_aNr4LbaFeIVUbq1k_JoOtuKIRk-iI_HNWvBRQ5SFUfrXBtXl1ICaCINqh_Oqu-UMy-2hl5ZC7F2qDXC6akGX4toWAm1igqwI6GVKJCsQyB1ljGoeiekJodLH09NI4xlDMuLPYMOjSBIqX3E-GgFUe3_110pJBWiyQe9NJpVbb2LZPFrXwaojC02NSxlrmH9rQuNrQisWWKxWPjCW0_oMrt0G_Nj4hsL1lkiiAVQiNJP_rG_Iw6x6Zm2x_x6_3poVSaX6oOPxm8TyUONGb",
+        "https://www.globenewswire.com/Tracker?data=UBT85oi5IbvXh_ohrhcxSV32iYq_9o1P2RVGeo_uqkCTnCX9g8S1PlBju29pxwAlHSeEhOSfUZJJ8b0qyq5EaGQuSaDOV5d6HF7sIses_581xO3j6Xrm3q70iRlHFwjwXILGKdwWEhdHr41lmC6mSVpQCJ1CSu3cYOMLnvflqIpXDpWn3MqX6xb1vtTityYiqhySi6iAZO71tUmqmuW9WEzAVfJYr-VuJCPTVNRaM_XuDfgvYyW0ypsCSfSI0v-44klru9mU5nlGdtq2_mFEk1y6UoHSb0-EK-yRlsiSr-Ai2ylTCzP4n2MbGAWWVJKNz02R6qSnq3VTjoPvwwq8KqCX5RaXCXS_4_mWchb1w1w=",
+        "https://www.globenewswire.com/Tracker?data=fPCUvzjuc67W3zxdfl29JG-rEy-wcerEYTO1dX5clKoZ_a8NlvyIuCRukHJLfQIxacL1HE3BRNFaEe9UaZiMDtrxEcLKIIVgehWYeqgyKKmKrLF9sItezHTlLAmO86JyDzRVBv3du4L-a0oBxPXdqb9b4bgDYOSou73ONK5XhghyGx4b3wUXcCE3UdMmluy0E17WOaE6c6NPJidk64gUw-kizzcWWRDrlTwlaKh6tHGTnLLSPae8cwE-AoLMbXzQ3vWfHnZbUTCHP5OS6jPHmviLkEFnLbDDrz0COYE_UDOb1DpJSZ8WrUioEBVHxmxSX7K94ZTb_ntkX8Sti9b54woj_vjPfBuTHTcKF2vAGRPrQMmv3Dl6MxE9N_vMhfD7",
+        "https://www.globenewswire.com/Tracker?data=UBT85oi5IbvXh_ohrhcxSQpHiOxYnOij1FGrWmisWjRsP6Hdywh5s_8B-K4IKII-64lLBfS8cv0kYqpEBEmGd-wXrSdtBF_qcIMuKmYf9UK5ZR-ktXugt1_pqDt22ha6IN1K3BQXP7uR67BqWLJN6HLj-x2VuRFgBeY79pDud4TYwsZ8BNDeyz1ALoEg1usODJbEtFqwTF9CtlyVODhKk-9p_uRdpgkLBh-n0bMUgpFuNs4NIS7nL_QIw9vv4nvnQOOlbTpZ18q5UpKl0wkGZGRZZfY_-tCeMbXCW-tKeGxr54mF0r1MjXq861tSnwxgYrZNWbjbt1tceMcJKXSs-yLQsmGpN_NehKmSVw3lABk=",
+        "https://www.globenewswire.com/Tracker?data=UBT85oi5IbvXh_ohrhcxSSxKvHV_ybckPwv1xUc88N2prtgF2e_3tVgfABQH1yeahDVIUzT_sNdKiqok7C14vxLMihdET6vpr4d1LDd4s7JgD_XTQzJO_negjl1SghrCmSxQZkrwLdOof2SaXFPUIXrPachqUxgxJG0T8I1XxB-DuzrVGipaPjfVjfq5azmxrcr0SD8LXZRtW6Lxo4EWCO382GzPbnyx_TFeOXG5Z9V96jUl-iInSwpdu4rq0JW8cei7SuBU6IHVF8VZynAZFlDiQWaM6ceCtTYxhgsyPMaPmxNHgaQZ3ASGrmF0tKYUUlcSS-uQcCLmjNXm_fKIT5k6tHUxsMyBYflF9GiuLPI=",
+        "https://www.globenewswire.com/Tracker?data=gUSkUZD46YOr-U0EjuMPwQN6ZNwh3Wo-Rvku179GOMoK5F2jrhoEHnoMpMaTG6C-YTK2CsYvInxIei39caKPtpi6wcpLMdpnjVZ19Tb3ovQejlvbglBT2weeBHmWzfCMmEzdxU5CtkxC9WQEX_zT12m4d0TtwZxV2-uFIreGfGR4bYqqcpxZoeLRDhtEzOvKVreuuSRYq8dxL7boU0f8vyW6KTdYKSEvpQ-9ohOLf6h00_hDxs4BsPIhUeBEY_hDTIOOzguqF6yU6xfMF18m_g==",
+        "https://www.globenewswire.com/Tracker?data=G9peA6HnLVlQ61vZmyCi-ViCNY_QwOPhdJK4lXYUpeV0n58aRzenOXXCifhYX-Crr4ZwbtMOLVC0LxT89sjzsjdc-GVV9T4G297O5J8i1IzWU1j8z_EYuWNsCGe2k3WviQ3can5m0FmFE4JGgYgq9WctSHuUO3amxA4waZrzMfc=",
+        "https://www.globenewswire.com/Tracker?data=gUSkUZD46YOr-U0EjuMPwQN6ZNwh3Wo-Rvku179GOMoK5F2jrhoEHnoMpMaTG6C-fhNkA8cpX-dFuPfzFjy6l5EXOfI03jK_Ndu0Nd1S99eO6mW926WV6JWuYzj-wkx_tP1IpX8DfyKaveM4h90f9SkSbRu0ibA_Hp4p9pZLSIEmXxWlKkDj0MBRpGiVrZEFXul8hp_W9UpvinDM3HN9E0Xxv7X1Gb0pbE_BPHqFlYWQ_poWa4gDpoxEuLJxvFfwSHp4Ic4s2ne1KkmlBkkF4g==",
+        "https://www.globenewswire.com/Tracker?data=Zphjec8dQCHytcjY9VHwQcl5cCbFO4vUlCd_98x9w1LquxM8ZSR3uXebOLwW7DXVHz1S9z-yZfvQCuyZVa21808-An9V_XvAH3J1KSt1YFehH7sudr88C1ljjS7i-UCg",
+        "https://www.globenewswire.com/NewsRoom/AttachmentNg/5891c7dd-c027-4959-8d03-40a109416952"
+      ]
+    }
+  ],
+  "rejections": [
+    {
+      "item": "Crispy Yuca Fries",
+      "reason": "The release mentions fries, but its two actual photo captions identify Fall Fashioned cocktail and Pear & Arugula Salad. Neither image illustrates fries."
+    }
+  ],
+  "notes": [
+    "Two exact named Fogo dishes; official chain press photos with original publication dates retained.",
+    "The 2026 GlobeNewswire article returned 403 over direct HTTP, but web reader exposed its captioned original media URL, which downloaded successfully.",
+    "No reviews, prices, item identities, translations or deployment changed."
+  ]
+}

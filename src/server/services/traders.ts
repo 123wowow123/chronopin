@@ -3,7 +3,7 @@ import { closeOnOrBefore } from '@/lib/stocks';
 import PremiumSubscription from '../model/premiumSubscription';
 import TraderPosition from '../model/traderPosition';
 import { pushToUser } from '../push';
-import { fetchCloses, identify } from '../stocks';
+import { fetchCloses, identifyCached } from '../stocks';
 import log from '../util/log';
 
 // Positions of a published trader with the estimated PnL: entry price is the
@@ -11,25 +11,31 @@ import log from '../util/log';
 // Nasdaq's delayed quote. Both are estimates, not the trader's own fills.
 export async function positionsWithPnl(traderSlug: string): Promise<TraderPositionRow[]> {
   const rows = await TraderPosition.list(traderSlug);
-  const lastBySymbol = new Map<string, number | null>();
-  for (const row of rows) {
-    if (!lastBySymbol.has(row.ticker)) {
-      const found = await identify(row.ticker).catch(() => null);
-      lastBySymbol.set(row.ticker, found?.quote.price ?? null);
-    }
-    if (row.entryPrice == null) {
-      const entry = await entryPriceFor(row.ticker, row.tradeDate);
-      if (entry != null) {
-        row.entryPrice = entry;
-        await TraderPosition.setEntryPrice(row.id, entry);
+  const symbols = [...new Set(rows.map((r) => r.ticker))];
+  const lastBySymbol = new Map(
+    await Promise.all(
+      symbols.map(async (ticker) => {
+        const found = await identifyCached(ticker).catch(() => null);
+        return [ticker, found?.quote.price ?? null] as const;
+      }),
+    ),
+  );
+  await Promise.all(
+    rows.map(async (row) => {
+      if (row.entryPrice == null) {
+        const entry = await entryPriceFor(row.ticker, row.tradeDate);
+        if (entry != null) {
+          row.entryPrice = entry;
+          await TraderPosition.setEntryPrice(row.id, entry);
+        }
       }
-    }
-    row.lastPrice = lastBySymbol.get(row.ticker) ?? null;
-    row.estimatedPnlPercent = estimatePnlPercent(row, row.lastPrice);
-    const range = pnlExtremes(row, await closesFor(row.ticker), row.lastPrice);
-    row.maxGainPercent = range?.maxGainPercent ?? null;
-    row.maxDrawdownPercent = range?.maxDrawdownPercent ?? null;
-  }
+      row.lastPrice = lastBySymbol.get(row.ticker) ?? null;
+      row.estimatedPnlPercent = estimatePnlPercent(row, row.lastPrice);
+      const range = pnlExtremes(row, await closesFor(row.ticker), row.lastPrice);
+      row.maxGainPercent = range?.maxGainPercent ?? null;
+      row.maxDrawdownPercent = range?.maxDrawdownPercent ?? null;
+    }),
+  );
   return rows;
 }
 
@@ -37,12 +43,16 @@ export async function positionsWithPnl(traderSlug: string): Promise<TraderPositi
 // Only the last price is fetched (not the daily range), one lookup per ticker.
 export async function recentPositions(since: string, limit: number): Promise<TraderPositionRow[]> {
   const rows = await TraderPosition.since(since, limit);
-  const lastBySymbol = new Map<string, number | null>();
+  const symbols = [...new Set(rows.filter((r) => r.entryPrice && r.entryPrice > 0).map((r) => r.ticker))];
+  const lastBySymbol = new Map(
+    await Promise.all(
+      symbols.map(async (ticker) => {
+        const found = await identifyCached(ticker).catch(() => null);
+        return [ticker, found?.quote.price ?? null] as const;
+      }),
+    ),
+  );
   for (const row of rows) {
-    if (!lastBySymbol.has(row.ticker)) {
-      const found = await identify(row.ticker).catch(() => null);
-      lastBySymbol.set(row.ticker, found?.quote.price ?? null);
-    }
     row.lastPrice = lastBySymbol.get(row.ticker) ?? null;
     row.estimatedPnlPercent = estimatePnlPercent(row, row.lastPrice);
   }
@@ -51,7 +61,7 @@ export async function recentPositions(since: string, limit: number): Promise<Tra
 
 async function closesFor(ticker: string) {
   try {
-    const found = await identify(ticker);
+    const found = await identifyCached(ticker);
     return found ? await fetchCloses(ticker, found.assetClass) : [];
   } catch {
     return [];
@@ -60,7 +70,7 @@ async function closesFor(ticker: string) {
 
 export async function entryPriceFor(ticker: string, day: string): Promise<number | null> {
   try {
-    const found = await identify(ticker);
+    const found = await identifyCached(ticker);
     if (!found) return null;
     const closes = await fetchCloses(ticker, found.assetClass);
     return closeOnOrBefore(closes, day)?.close ?? null;

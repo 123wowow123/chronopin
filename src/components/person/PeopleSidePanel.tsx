@@ -440,8 +440,8 @@ export function PeopleSidePanel({
                           ) : null}
                         </span>
                         {p.tradeDate ? (
-                          <span className="shrink-0 tabular-nums text-subtle" title={p.tradeDate.slice(0, 10)}>
-                            {daysAgoLabel(p.tradeDate)}
+                          <span className="shrink-0 tabular-nums text-subtle" title={daysAgoLabel(p.tradeDate)}>
+                            {p.tradeDate.slice(0, 10)}
                           </span>
                         ) : null}
                         <span className={`w-12 shrink-0 text-end font-semibold tabular-nums ${pnl == null ? '' : pnl >= 0 ? 'text-success' : 'text-danger'}`}>

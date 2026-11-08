@@ -1,0 +1,652 @@
+{
+  "date": "2026-11-08",
+  "region": "san-diego",
+  "before": {
+    "rows": 4882,
+    "withPhotos": 1573,
+    "withReviews": 76
+  },
+  "after": {
+    "rows": 4882,
+    "withPhotos": 1575,
+    "withReviews": 76
+  },
+  "changes": [
+    {
+      "kind": "specials",
+      "id": 974,
+      "restaurant": "Harumama Noodles + Buns - Little Italy",
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Happy hour",
+      "itemName": "Tsingtao Classic (bottle)",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b5/tsingtao-7646a5f6c4b690d9.webp",
+        "width": 388,
+        "credit": "Tsingtao Brewery / official product photograph",
+        "height": 781,
+        "caption": "Tsingtao Classic Lager bottle — official producer product illustration, not photographed at Harumama. The pictured 330 ml packaging does not establish the restaurant’s bottle size or packaging.",
+        "sourceUrl": "https://www.tsingtao.com/lager.html"
+      }
+    },
+    {
+      "kind": "specials",
+      "id": 974,
+      "restaurant": "Harumama Noodles + Buns - Little Italy",
+      "pinSourceUrl": "https://www.harumamasd.com/little-italy-menu/",
+      "menuLabel": "Happy hour",
+      "itemName": "Asahi Super Dry (bottle)",
+      "image": {
+        "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b5/asahi-00f51ba6fe71380e.webp",
+        "width": 445,
+        "credit": "Asahi UK / official product photograph",
+        "height": 1000,
+        "caption": "Asahi Super Dry bottle — official producer product illustration from Asahi UK, not photographed at Harumama. The pictured UK 330 ml packaging does not establish the restaurant’s bottle size or packaging.",
+        "sourceUrl": "https://uk.asahibeer.co.uk/products/asahi-super-dry"
+      }
+    }
+  ],
+  "publicChecks": [
+    {
+      "source": "https://www.harumamasd.com/little-italy-menu/",
+      "pins": [
+        {
+          "id": 20528,
+          "url": "https://www.chronopin.com/pin/20528/harumama-noodles-buns-little-italy-san-diego-restaurant-guide",
+          "expectedImages": 2,
+          "imagesInHTML": 2
+        }
+      ]
+    }
+  ],
+  "sourceChecks": [
+    {
+      "name": "tsingtao",
+      "url": "https://www.tsingtao.com/tsingtao-products.html",
+      "status": 200,
+      "title": "OUR PRODUCTS - Tsingtao Brewery Co.,Ltd.",
+      "images": [
+        {
+          "class": [
+            "img-default-bgc"
+          ],
+          "data-src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSkjqnillqk/yetoulogo.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSkjqnillqk/yetoulogo.png",
+          "alt": "页头logo",
+          "title": "",
+          "phoenixlazyload": "true"
+        },
+        {
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSkjqnillqk/yetoulogo.png",
+          "alt": "页头logo",
+          "title": "",
+          "class": [
+            "logo-pic"
+          ]
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSpjnqrjlnk/LAGER.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSpjnqrjlnk/LAGER.png",
+          "alt": "LAGER",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mqBpjKppRliSpjoqlolik/0.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mqBpjKppRliSpjoqlolik/0.png",
+          "alt": "0",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mkBpjKppRliSpjqqmilol/PURE-DRAFT.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mkBpjKppRliSpjqqmilol/PURE-DRAFT.png",
+          "alt": "PURE DRAFT ",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/moBpjKppRliSkkqliolmk/fenzu-2-copy.jpg",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/moBpjKppRliSkkqliolmk/fenzu-2-copy.jpg",
+          "alt": "LAGER",
+          "title": "LAGER",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mlBpjKppRliSkkqljolok/fenzu-2-copy.jpg",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mlBpjKppRliSkkqljolok/fenzu-2-copy.jpg",
+          "alt": "分组 2 copy 4",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mnBpjKppRliSkkqlkolok/fenzu-2-copy.jpg",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mnBpjKppRliSkkqlkolok/fenzu-2-copy.jpg",
+          "alt": "分组 2 copy 5",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mlBpjKppRliSrkoqpnljk/1903.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mlBpjKppRliSrkoqpnljk/1903.png",
+          "alt": "1903",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSrkoqlnllk/Stout.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mjBpjKppRliSrkoqlnllk/Stout.png",
+          "alt": "Stout",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mmBpjKppRliSrkoqnnlrj/Strong.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mmBpjKppRliSrkoqnnlrj/Strong.png",
+          "alt": "Strong",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/miBpjKppRllSrmmlkoprl/0c0dd1f2334f7c35c05437e906b2e61c.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/miBpjKppRllSrmmlkoprl/0c0dd1f2334f7c35c05437e906b2e61c.png",
+          "alt": "0c0dd1f2334f7c35c05437e906b2e61c",
+          "title": "0c0dd1f2334f7c35c05437e906b2e61c",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mnBpjKppRliSrkoqlnlqk/Wheat-Beer.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/mnBpjKppRliSrkoqlnlqk/Wheat-Beer.png",
+          "alt": "Wheat Beer",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "lazy",
+            "mb4",
+            "img-default-bgc"
+          ],
+          "phoenix-lazyload": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/moBpjKppRliSrkoqqnlnk/IPA.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/moBpjKppRliSrkoqqnlnk/IPA.png",
+          "alt": "IPA",
+          "title": "",
+          "style": "visibility:visible;"
+        },
+        {
+          "class": [
+            "img-default-bgc"
+          ],
+          "data-src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/miBpjKppRliSkjlnnllnk/yejiaologo.png",
+          "src": "//iprorwxhjjirlj5o.leadongcdn.com/cloud/miBpjKppRliSkjlnnllnk/yejiaologo.png",
+          "alt": "页脚logo",
+          "title": "",
+          "phoenixlazyload": "true"
+        }
+      ],
+      "links": [
+        [
+          "OUR PRODUCTS",
+          "/tsingtao-products.html"
+        ],
+        [
+          "OUR PRODUCTS",
+          "/tsingtao-products.html"
+        ],
+        [
+          "OUR BRAND",
+          "/tsingtao-products.html"
+        ]
+      ]
+    },
+    {
+      "name": "asahi",
+      "url": "https://www.asahibeer.co.jp/superdry/",
+      "status": 200,
+      "title": "アサヒスーパードライ | アサヒビール",
+      "images": [
+        {
+          "src": "/common/image/nav/img-nav-recipe.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-event.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-brewery.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-tarunama.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-enjoy-drafters.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-sustainability.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-drinking.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-environment.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-foodsafety.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-comunity.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-people.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-message.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-summary.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-company-business.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-branch.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-philosophy.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-news.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-careers.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-ir.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-group.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-group-hd.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/common/image/nav/img-nav-history.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/brand/superdry/assets/img/header/logo.svg",
+          "alt": "SUPER ”DRY”"
+        },
+        {
+          "src": "/brand/superdry/assets/img/header/burger_menu.svg",
+          "alt": "MENU",
+          "class": [
+            "p-top-nav__burger__menu"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/header/burger_close.svg",
+          "alt": "CLOSE",
+          "class": [
+            "p-top-nav__burger__close"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/kv/kv_19_pc.jpg",
+          "alt": "ビールのど真ん中へ。冷やすほどに極まる。新辛口〈生〉スーパードライ"
+        },
+        {
+          "src": "/brand/superdry/assets/img/kv/kv_15_pc.jpg",
+          "alt": "刷新！新・辛口×冷え 冷やすほどに極まる。新辛口〈生〉スーパードライ"
+        },
+        {
+          "src": "/brand/superdry/assets/img/kv/kv_18_pc.jpg",
+          "alt": "イチローさんがアサヒスーパードライのブランドアンバサダーに就任！挑戦が好きなんです。スーパードライも、僕も。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/kv/kv_09_pc.jpg",
+          "alt": "世界最高峰のバーテンダーが評価 最高賞2部門で獲得！ ドリンクス・インターナショナル2025"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature04/title-01_pc.svg",
+          "alt": "刷新！新しいスーパードライ新・辛口〈生〉"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature04/graph-01_pc.jpg",
+          "alt": "おいしさ向上のため2つの見直しを実施。麦芽使用比率の向上でトップの飲みごたえを高め、煮上添加ホップ品種の最適化によりキレのよさを向上させています。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature04/graph-02_pc.jpg",
+          "alt": "新処方は全温度帯で辛口のうまさが向上。特に冷やした飲みはじめ（3℃）で指数125.3とおいしさ評価が高まり、温まりやすい飲み終わり（10℃）でも103.4と、最後までおいしさが続きます。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/hdg_02_pc.svg",
+          "alt": "「冷え」がスーパードライの辛口を際立たせる。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/img_05_pc.png",
+          "alt": "ビールを冷やすことでスーパードライの辛口は際立ちます。温度を低く（8℃〜-2℃）下げるほど、後味がすっきりして渋味が抑えられキレの良さが向上します。さらに、冷やすほど炭酸の刺激感の強さもアップします。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature01/bnr_01_pc.jpg",
+          "alt": "解禁！仕上げに3分 冷凍庫DRY 詳細はこちら"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/title-01.svg",
+          "alt": "スーパードライ進化の歴史、そして2026年へ。"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/copy_txt.svg",
+          "alt": "HISTORY",
+          "class": [
+            "p-top-feature03__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/copy_txt.svg",
+          "alt": "HISTORY",
+          "class": [
+            "p-top-feature03__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/copy_txt.svg",
+          "alt": "HISTORY",
+          "class": [
+            "p-top-feature03__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/thumb_01.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/title-02_pc.svg",
+          "alt": "スーパードライの歴史年表 新・辛口×冷えに辿り着くまで"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/txt_01_pc.svg",
+          "alt": "スーパードライ 1.0（1987〜2021年）挑戦の歴史のはじまり"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_1987.jpg",
+          "alt": "アサヒ スーパードライ 1987年"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_1993.png",
+          "alt": "フレッシュマネジメント"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_2009.jpg",
+          "alt": "エクストラコールド"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_2021.jpg",
+          "alt": "生ジョッキ缶"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/txt_02_pc.svg",
+          "alt": "スーパードライ 2.0（2022〜2025年）辛口のアップデート"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_2022.jpg",
+          "alt": "アサヒ スーパードライ 2022年"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_2023.jpg",
+          "alt": "アサヒ スーパードライ 2023年"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/history_2025.jpg",
+          "alt": "アサヒ スーパードライ 2025年"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/txt_03_pc.svg",
+          "alt": "スーパードライ 3.0（2026年〜）“新・辛口”への刷新"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/can_01_pc.png",
+          "alt": "スーパードライ 3.0 缶"
+        },
+        {
+          "src": "/brand/superdry/assets/img/feature03/txt_04_pc.svg",
+          "alt": "「辛口」×「冷え」＝独自価値"
+        },
+        {
+          "src": "/brand/superdry/assets/img/colorChange/title-01-pc.svg",
+          "alt": "キンキンに冷やすと色が変わる"
+        },
+        {
+          "src": "/brand/superdry/assets/img/colorChange/copy_txt.svg",
+          "alt": "KARAKUCHI",
+          "class": [
+            "p-top-colorChange__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/colorChange/copy_txt.svg",
+          "alt": "KARAKUCHI",
+          "class": [
+            "p-top-colorChange__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/colorChange/copy_txt.svg",
+          "alt": "KARAKUCHI",
+          "class": [
+            "p-top-colorChange__copy__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/hdg_01_pc.png",
+          "alt": "“キンキンDRY”体験"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/img_01_pc.png",
+          "alt": "“キンキンDRY”体験"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/hdg_03_pc.svg",
+          "alt": "お店で体感！キンキンDRY"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/txt_04_pc.png",
+          "alt": "コンセプトショップ"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/img_04_pc.jpg",
+          "alt": ""
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/txt_05_pc.svg",
+          "alt": "BEER DINER SUPERDRY TOKYO"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/txt_01_pc.png",
+          "alt": "プロが注ぐ樽生ビールで体験"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/img_02_pc.png",
+          "alt": ""
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/btn_01_pc.png",
+          "alt": "エクストラコールド"
+        },
+        {
+          "src": "/brand/superdry/assets/img/experience02/btn_02_pc.png",
+          "alt": "スーパーコールド"
+        },
+        {
+          "src": "/brand/superdry/assets/img/about/about_kv_hdg_pc.svg",
+          "alt": "ABOUT SUPER DRY スーパードライの特長やこだわりをご紹介。",
+          "class": [
+            "p-top-about__kv__hdg"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/about/about_copy_img.svg",
+          "alt": "辛口を磨き上げたスーパードライへ",
+          "class": [
+            "p-top-about__copy__img__txt"
+          ]
+        },
+        {
+          "src": "/brand/superdry/assets/img/about/about_copy_txt.svg",
+          "alt": "KARAKUCHI",
+          "class": [
+            "p-top-about__copy__txt"
+          ]
+        }
+      ],
+      "links": [
+        [
+          "商品情報",
+          "/products/"
+        ],
+        [
+          "",
+          "#product"
+        ],
+        [
+          "工場できたてのうまさ実感パック",
+          "https://www.asahibeer.co.jp/products/beer/superdry/sendopack/"
+        ],
+        [
+          "エクストラコールド",
+          "https://www.asahibeer.co.jp/brand/superdry/extracold/"
+        ],
+        [
+          "うまい！樽生 「うまい！樽生」のお店検索",
+          "https://www.asahibeer.co.jp/enjoy/umadaru/main.html"
+        ],
+        [
+          "Spotify On Stage LIVEペアチケットが当たる！キャンペーン",
+          "https://www.asahibeer.co.jp/brand/superdry/cp/261110-270106/"
+        ],
+        [
+          "商品情報",
+          "https://www.asahibeer.co.jp/products/beer/superdry/"
+        ],
+        [
+          "商品情報",
+          "https://www.asahibeer.co.jp/products/beer/superdry/"
+        ],
+        [
+          "商品情報TOP",
+          "/products/"
+        ],
+        [
+          "ビール類",
+          "/products/beer/"
+        ],
+        [
+          "商品情報",
+          "/products/"
+        ],
+        [
+          "飲食店様向けサイト「ご繁盛サポートネット」",
+          "https://snet.asahibeer.co.jp/"
+        ],
+        [
+          "",
+          "https://twitter.com/asahibeer_jp"
+        ],
+        [
+          "",
+          "https://www.instagram.com/asahibeer_jp/"
+        ],
+        [
+          "",
+          "https://www.facebook.com/asahibeer.japan"
+        ]
+      ]
+    },
+    {
+      "name": "805",
+      "url": "https://www.805beer.com/",
+      "error": "HTTPSConnectionPool(host='www.805beer.com', port=443): Read timed out. (read timeout=25)"
+    }
+  ],
+  "notes": [
+    "Small pass: two exact named bottled products at Harumama Little Italy.",
+    "Producer product illustrations; actual branch bottle size and packaging not established.",
+    "Asahi Japan landing page showed cans; alcoholic Super Dry bottle taken from the UK producer product page, excluding its related alcohol-free variant.",
+    "805 producer website failed to load; no 805 photo assigned.",
+    "No new reviews, prices, branch availability claims, translations or deployment."
+  ]
+}
