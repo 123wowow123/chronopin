@@ -272,9 +272,9 @@ export function PinEarningsTrends({ pinId, symbol }: { pinId: number; symbol?: s
   if (!trends) return null;
   const ticker = symbol ?? trends.symbol;
   return (
-    <section aria-labelledby="earnings-trends-heading" className="mb-4">
+    <section aria-labelledby="earnings-trends-heading" className="mt-4">
       <div className="mb-2 flex items-baseline justify-between gap-3">
-        <h2 id="earnings-trends-heading" className="text-lg font-semibold text-ink">
+        <h2 id="earnings-trends-heading" className="text-base font-semibold text-ink">
           {t('earningsTrends.heading')}
         </h2>
         <Anchor href={`https://finance.yahoo.com/quote/${encodeURIComponent(ticker.replace('.', '-'))}/financials/`} target="_blank" rel="noopener nofollow" className="text-xs text-subtle hover:text-link hover:no-underline">
