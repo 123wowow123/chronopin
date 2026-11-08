@@ -452,5 +452,193 @@
     "earnings": 42947902000000
    }
   ]
+ },
+ "Geely Auto": {
+  "source": "manual",
+  "currency": "CNY",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 163193182000.0,
+    "earnings": 5297400000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 224823177000.0,
+    "earnings": 5494494000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 275910484000.0,
+    "earnings": 16811878000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 345232201000.0,
+    "earnings": 16852231000.0
+   }
+  ],
+  "urls": [
+   "https://www.geelyauto.com.hk/wp-content/uploads/2026/04/e00175_2025-annual-report.pdf"
+  ],
+  "note": "Annual Report 2025, Five Years Financial Summary (RMB thousands; 2021-2024 restated). Earnings: profit attributable to owners of the parent."
+ },
+ "Fast Retailing": {
+  "source": "manual",
+  "currency": "JPY",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 2301122000000.0,
+    "earnings": 273335000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 2766557000000.0,
+    "earnings": 296229000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 3103836000000.0,
+    "earnings": 371999000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 3400539000000.0,
+    "earnings": 433009000000.0
+   }
+  ],
+  "urls": [
+   "https://www.fastretailing.com/eng/ir/financial/past_5yrs.html",
+   "https://www.fastretailing.com/eng/ir/financial/pl_5yrs.html"
+  ],
+  "note": "Fiscal years ended August. Earnings: profit attributable to owners of the parent."
+ },
+ "Inditex": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2023,
+    "revenue": 35947000000.0,
+    "earnings": 5381000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 38632000000.0,
+    "earnings": 5866000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 39864000000.0,
+    "earnings": 6220000000.0
+   }
+  ],
+  "urls": [
+   "https://www.inditex.com/itxcomweb/api/media/16843322-c524-4f36-b84f-133989e4e569/INDITEXFullYear2024Results.pdf?t=1741760450878",
+   "https://www.inditex.com/itxcomweb/api/media/1da2c9d1-dbca-49fb-9563-982a8a27fae6/INDITEXFullYear2025.pdf?t=1778165179176"
+  ],
+  "note": "Fiscal years ended 31 January of the following year (FY2025 = to 31 Jan 2026). Earnings: net profit attributable to the parent."
+ },
+ "H&M": {
+  "source": "manual",
+  "currency": "SEK",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 223553000000.0,
+    "earnings": 3566000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 236035000000.0,
+    "earnings": 8716000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 234478000000.0,
+    "earnings": 11584000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 228285000000.0,
+    "earnings": 12085000000.0
+   }
+  ],
+  "urls": [
+   "https://hmgroup.com/wp-content/uploads/2025/01/H-M-Hennes-Mauritz-AB-Full-year-report-2024.pdf",
+   "https://hmgroup.com/wp-content/uploads/2026/01/H-M-Hennes-Mauritz-AB-Full-year-report-2025.pdf"
+  ],
+  "note": "Fiscal years 1 Dec - 30 Nov. Earnings: profit after tax (the Group result, before minorities); 2023 marked * in the 2024 report (restated, note 5)."
+ },
+ "Xiaomi": {
+  "source": "manual",
+  "currency": "CNY",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 280044016000.0,
+    "earnings": 2474030000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 270970141000.0,
+    "earnings": 17475173000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 365906350000.0,
+    "earnings": 23658126000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 457286687000.0,
+    "earnings": 41643389000.0
+   }
+  ],
+  "urls": [
+   "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042800526.pdf"
+  ],
+  "note": "2025 Annual Report, Five-Year Financial Summary (RMB thousands). Earnings: profit attributable to owners of the Company."
+ },
+ "Heineken N.V.": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 29821000000.0,
+    "earnings": 978000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 28753000000.0,
+    "earnings": 1885000000.0
+   }
+  ],
+  "urls": [
+   "https://ml-eu.globenewswire.com/Resource/Download/b59c46f2-b620-4e4b-a8eb-44cf592cefe8"
+  ],
+  "note": "2025 full year results release: net revenue and net profit (reported, after non-controlling interests). Two years only."
+ },
+ "Wilmar International": {
+  "source": "manual",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 67379083000.0,
+    "earnings": 1169814000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 70415698000.0,
+    "earnings": 1410872000.0
+   }
+  ],
+  "urls": [
+   "http://ir-media.wilmar-international.com/financial-highlights/"
+  ],
+  "note": "Annual Report 2025 extract (US$ thousands): revenue and profit attributable to owners of the Company. FY2025 includes a large one-off fair-value gain. Two years only."
  }
 }
