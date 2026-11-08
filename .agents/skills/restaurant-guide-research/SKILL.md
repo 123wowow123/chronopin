@@ -176,6 +176,13 @@ JSON catalogs are snapshots; content updates don't need a deployment. Preserve s
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.
 
 ## Menu-item reviews
+Research follow-up (November 8): ordinary-content `?region=` filters tile regions and omits menu-only profiles.
+For coverage/replay, paginate all ordinary profiles, join the city’s exact branch sources, and keep enabled-only
+semantics. Local IDs can differ; match sources before saving. Always round-trip top-level `regionSlug` for
+specials, including gallery-only saves. Original named Wix menu images can be found in the page’s embedded
+menu JSON; visually inspect them and reject logos, stock/product illustrations and explicit portion mismatches.
+Full audit and remaining-item inventory: `docs/restaurant-menu-coverage-2026-11-08.md` and `.json`.
+
 Landing cards retain every saved menu and item, with menu/category selection and an expandable six-item preview.
 Do not truncate menus in `restaurantGuideDetails`: later dishes carry photos and reviews too. Merge enabled
 ordinary/specials menus using native-pin label precedence; deleted ordinary menus must not return from

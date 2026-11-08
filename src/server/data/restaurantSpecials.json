@@ -72,11 +72,31 @@
           },
           {
             "name": "Lemon drop",
-            "price": 10
+            "price": 10,
+            "reviews": [
+              {
+                "quote": "light, tangy and not overly sweet.",
+                "title": "Fort Oak in Mission Hills adds happy hour to its weekday deals",
+                "provider": "Axios San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/08/04/fort-oak-new-happy-hour-mission-hills",
+                "publishedDate": "2025-08-04"
+              }
+            ]
           },
           {
             "name": "Gimlet",
-            "price": 10
+            "price": 10,
+            "reviews": [
+              {
+                "quote": "light, tangy and not overly sweet.",
+                "title": "Fort Oak in Mission Hills adds happy hour to its weekday deals",
+                "provider": "Axios San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.axios.com/local/san-diego/2025/08/04/fort-oak-new-happy-hour-mission-hills",
+                "publishedDate": "2025-08-04"
+              }
+            ]
           },
           {
             "name": "Old fashioned",
@@ -212,7 +232,17 @@
           {
             "name": "Chef Deborah's pepita & sesame crusted brie",
             "category": "Food",
-            "price": 11
+            "price": 11,
+            "reviews": [
+              {
+                "quote": "The brie was decadent, perfect for two bites",
+                "title": "C-Level Lounging",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/weblogs/feast/2011/sep/21/c-level-lounging/",
+                "publishedDate": "2011-09-21"
+              }
+            ]
           },
           {
             "name": "Steamed mussels",

@@ -19,7 +19,14 @@ async function request<T>(path: string, body?: unknown): Promise<T> {
   return response.json() as Promise<T>;
 }
 async function run() {
-  const ordinary = await request<{ content: RecordRow[] }>('restaurant-content?region=san-diego&limit=1000');
+  // Region filters select guide tiles, excluding menu-only profiles for the same city.
+  // Read every page, then match the researched exact-branch source below.
+  const ordinary: { content: RecordRow[] } = { content: [] };
+  for (let offset = 0; ; offset += 1000) {
+    const page = await request<{ content: RecordRow[] }>(`restaurant-content?limit=1000&offset=${offset}`);
+    ordinary.content.push(...page.content);
+    if (page.content.length < 1000) break;
+  }
   const specials = await request<{ venues: RecordRow[] }>('restaurant-specials?region=san-diego');
   const matched = new Set<number>();
   const pending: { path: string; row: RecordRow; profile: RecordRow['profile'] }[] = [];

@@ -2003,20 +2003,44 @@
             "note": "Per person; seasonal courses.",
             "reviews": [
               {
-                "provider": "MICHELIN Guide",
-                "title": "Addison",
-                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/addison",
                 "quote": "Skillful execution and creativity transform excellent quality product",
-                "publishedDate": null,
-                "checkedAt": "2026-11-07"
+                "title": "Addison",
+                "provider": "MICHELIN Guide",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/addison",
+                "publishedDate": null
+              },
+              {
+                "quote": "less focused but technically impressive.",
+                "title": "Addison",
+                "provider": "The Infatuation",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/addison",
+                "publishedDate": "2026-05-28"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/addison-infatuation-13-7ae8b3de65c9e370.webp",
+              "width": 1200,
+              "credit": "Andrew Ryce / The Infatuation",
+              "height": 900,
+              "caption": "Cantonese barbecue quail course from Addison’s ten-course tasting menu — historical review photograph published May 28, 2026. Seasonal courses change.",
+              "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/addison"
+            }
           },
           {
             "name": "Tartelette menu",
             "category": "Champagne Lounge",
             "price": 198,
-            "note": "Per guest; walk-in seating subject to availability."
+            "note": "Per guest; walk-in seating subject to availability.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/addison-champagne-13-308050eb91fce17b.webp",
+              "width": 1200,
+              "credit": "Addison by William Bradley",
+              "height": 640,
+              "caption": "Bites pictured by Addison for its Champagne Lounge Tartelette Menu. Operator photograph; selection changes.",
+              "sourceUrl": "https://www.addisondelmar.com/the-champagne-lounge/"
+            }
           },
           {
             "name": "Champagne pairing",
@@ -2046,14 +2070,30 @@
             "priceLabel": "Price not published",
             "reviews": [
               {
-                "provider": "MICHELIN Guide",
-                "title": "Lucien",
-                "sourceUrl": "https://guide.michelin.com/us/en/california/la-jolla/restaurant/lucien",
                 "quote": "the region's bounty is celebrated on a menu that reflects French and Japanese influences.",
-                "publishedDate": null,
-                "checkedAt": "2026-11-07"
+                "title": "Lucien",
+                "provider": "MICHELIN Guide",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/la-jolla/restaurant/lucien",
+                "publishedDate": null
+              },
+              {
+                "quote": "highlights include caviar on top of silky egg custard",
+                "title": "Lucien",
+                "provider": "The Infatuation",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/lucien-girard-ave",
+                "publishedDate": "2026-01-14"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lucien-infatuation-14-87e0a58d7fbc2bb4.webp",
+              "width": 1200,
+              "credit": "James Tran / The Infatuation",
+              "height": 900,
+              "caption": "Canapés from Lucien’s seasonal tasting experience — review photograph published January 14, 2026. Seasonal courses change.",
+              "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/lucien-girard-ave"
+            }
           }
         ],
         "note": "The restaurant publishes the tasting-menu format, but does not list its current courses or price on this page."
@@ -2082,62 +2122,168 @@
           {
             "name": "Full Omakase (Dine in version)",
             "category": "Omakase",
-            "price": 189
+            "price": 189,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-8c6f28702841c84b-d8153d9c5e0a0699.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Full Omakase (Dine in version) — Soichi, 2121 Adams Avenue. Operator photograph of a selection from the seasonal course; not the complete meal.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "We recommend arriving hungry and ordering the full omakase",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Nigiri Omakase (Dine in Version)",
             "category": "Omakase",
-            "price": 140
+            "price": 140,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-432094a71c74b697-ba085accfd147721.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Nigiri Omakase (Dine in Version) — Soichi, 2121 Adams Avenue. Operator photograph of a selection from the seasonal course; not the complete meal.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Petite Omakase (Dine in only)",
             "category": "Omakase",
-            "price": 65
+            "price": 65,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-5f95c944274c0673-e056a814149ab5c4.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 414,
+              "caption": "Petite Omakase (Dine in only) — Soichi, 2121 Adams Avenue. Operator photograph of a selection from the seasonal course; not the complete meal.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "CHIRASHI BOWL",
             "category": "Specials",
-            "price": 72
+            "price": 72,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-f6200f3771668d8a-3dec03c1471c5a93.webp",
+              "width": 1000,
+              "credit": "Soichi",
+              "height": 750,
+              "caption": "CHIRASHI BOWL — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "NIGIRI BOX A (Takeout Only)",
             "category": "Specials",
-            "price": 80
+            "price": 80,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-07f489cb570e61d3-b714f27e65bda33c.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 621,
+              "caption": "NIGIRI BOX A (Takeout Only) — Soichi. Operator menu photograph of the sushi selection, shown plated; takeout packaging differs.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "NIGIRI BOX B (Takeout Only)",
             "category": "Specials",
-            "price": 72
+            "price": 72,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-56d8b9ea2dd663a3-2b49000f2705e950.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 554,
+              "caption": "NIGIRI BOX B (Takeout Only) — Soichi. Operator menu photograph of the sushi selection, shown plated; takeout packaging differs.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Nigiri Box C (Takeout Only)",
             "category": "Specials",
-            "price": 64
+            "price": 64,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-b091d61c900da31d-82200267c292ec96.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 700,
+              "caption": "Nigiri Box C (Takeout Only) — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "SPECIAL FUTOMAKI ROLL",
             "category": "Specials",
-            "price": 33
+            "price": 33,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-5d3e00e7779a02a9-d1945bc0022a28fe.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "SPECIAL FUTOMAKI ROLL — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "VEGETABLE ROLL",
             "category": "Specials",
-            "price": 16
+            "price": 16,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-0a75ffc05a13552f-984c362b0504907f.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1003,
+              "caption": "VEGETABLE ROLL — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "VEGETABLE TEMPURA",
             "category": "Specials",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-5f57e7df7f3d6a1e-25adc130dd1050b2.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "VEGETABLE TEMPURA — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "MIXED TEMPURA",
             "category": "Specials",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-a8916a48e82e11df-e699785ab630d5b2.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 643,
+              "caption": "MIXED TEMPURA — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Negitoro Temaki",
             "category": "Specials",
-            "price": 18
+            "price": 18,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c47cd476f588cb50-6a16c3baad990b61.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Negitoro Temaki — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "CHILEAN SEA BASS",
@@ -2152,22 +2298,64 @@
                 "publishedDate": null,
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-3856fccc1436675d-a5bb64b7e02bdcb1.webp",
+              "width": 1084,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "CHILEAN SEA BASS — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "CHAWAN MUSHI",
             "category": "Specials",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-e4f4ef7484d67bb2-c2f8ba11549c78dc.webp",
+              "width": 750,
+              "credit": "Soichi",
+              "height": 1000,
+              "caption": "CHAWAN MUSHI — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "a savory chawanmushi",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu",
             "category": "Specials",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-aa8149459533fd11-e28a868fdeb2876b.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1056,
+              "caption": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Assorted Japanese Pickles",
             "category": "Specials",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-fd1894c0f526cd48-6bb2c4a051688691.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Assorted Japanese Pickles — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Blue Fin Tuna",
@@ -2183,7 +2371,15 @@
                 "publishedDate": null,
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-671e4a40a059a20b-a928c6a11d1a0472.webp",
+              "width": 1185,
+              "credit": "Soichi",
+              "height": 1185,
+              "caption": "Blue Fin Tuna — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Toro",
@@ -2199,223 +2395,595 @@
                 "publishedDate": null,
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c956fb1cc646631e-c0f3196fa9a20a10.webp",
+              "width": 1058,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Toro — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Scallop",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 8,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-a383b4d69243de9e-1a4c4c99e2377157.webp",
+              "width": 1124,
+              "credit": "Soichi",
+              "height": 1112,
+              "caption": "Scallop — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Zuke",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 9,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-990bd6ba64a21678-c26148d36752efac.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 677,
+              "caption": "Zuke — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Seki Aji",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 8,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-975a8e6a66bbcae8-0d9b70b4e49e64ba.webp",
+              "width": 1095,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Seki Aji — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Hirame",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 7,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-3cb32b26a1b5dfdc-d07c6915b0baf27e.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Hirame — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "hirame (halibut) cured in seaweed",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Salmon",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 7,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-ed3e62ff3d9f8df1-e49a8d677ce75cec.webp",
+              "width": 1041,
+              "credit": "Soichi",
+              "height": 646,
+              "caption": "Salmon — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kohada",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 7,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-0888a69cfc3616b0-b195cb159db2a456.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Kohada — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "silky gizzard shad marinated in a homemade vinegar sauce",
+                "title": "Soichi Sushi",
+                "provider": "The Infatuation",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/soichi-sushi",
+                "publishedDate": "2026-01-06"
+              }
+            ]
           },
           {
             "name": "Ikura",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 10,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-f0ac03dfc82af20c-f663c7058515a536.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Ikura — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kinmedai",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 13,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-bef3f64af55e7d86-9ce4a40e62a1718a.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 695,
+              "caption": "Kinmedai — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "lightly seared kinmedai",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Kanpachi",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 8,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-0fa3422cfbb296da-59c9dbb1bec6037a.webp",
+              "width": 1073,
+              "credit": "Soichi",
+              "height": 691,
+              "caption": "Kanpachi — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kawahagi",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 12,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-9c7a1ed57adcead1-77dbe8bd5b493dda.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 902,
+              "caption": "Kawahagi — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Sweet Shrimp (Seasonal)",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 20,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c6e01eb21a2fe7a1-784aba36bd37eeb0.webp",
+              "width": 1093,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Sweet Shrimp (Seasonal) — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kamasu",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 7,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-8178e449e2403745-12aa586c1a56ee6e.webp",
+              "width": 1055,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Kamasu — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Tamago",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 5,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-74724f13f538c512-94aed427135b1e74.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 906,
+              "caption": "Tamago — Soichi. Operator photograph shows two slices of the egg preparation; menu prices are per piece.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Shrimp Nigiri",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 7,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-9ae2da09c71854bc-29893e02e17172c4.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Shrimp Nigiri — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Saba",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 9,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-6de64e74f8585b64-48eef0200f9a552e.webp",
+              "width": 750,
+              "credit": "Soichi",
+              "height": 1000,
+              "caption": "Saba — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Hokkaido Uni",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 21,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-65bdcc0963c089a3-dd77ee3f853fbe9c.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Hokkaido Uni — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Anago",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 9,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c4041cb53fd56c9b-643c3443fbd518f8.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 900,
+              "caption": "Anago — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Engawa",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 9,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-4a90359580d53eac-2c7015f2457b07d3.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Engawa — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "engawa, a prized portion of muscle from the fin of a flatfish.",
+                "title": "Soichi Sushi",
+                "provider": "The Infatuation",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.theinfatuation.com/san-diego/reviews/soichi-sushi",
+                "publishedDate": "2026-01-06"
+              }
+            ]
           },
           {
             "name": "Nodoguro",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 17,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-b4720fdbfe30ad8d-46568147da84173c.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Nodoguro — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Katsuo",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 8,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-6dc9b3dddd4d9218-244d4880b11a42fd.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Katsuo — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Iwashi",
             "category": "À La Carte - Nigiri or Sashimi",
             "price": 8,
-            "note": "Price per piece."
+            "note": "Price per piece.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-6da442b45e841524-7672a84cedd533c6.webp",
+              "width": 942,
+              "credit": "Soichi",
+              "height": 713,
+              "caption": "Iwashi — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Tuna Roll",
             "category": "Traditional Small Cut Rolls",
             "price": 14,
-            "note": "Six pieces."
+            "note": "Six pieces.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-31bdbbebc6f63413-f32b50348ae7bca8.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1052,
+              "caption": "Tuna Roll — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Chopped Fatty Tuna Roll",
             "category": "Traditional Small Cut Rolls",
             "price": 18,
-            "note": "Six pieces."
+            "note": "Six pieces.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-ec4bebfbdae2e9ad-8c12e00dbf092dcb.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Chopped Fatty Tuna Roll — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Chopped Amberjack Roll",
             "category": "Traditional Small Cut Rolls",
             "price": 13,
-            "note": "Six pieces."
+            "note": "Six pieces.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-636991d9abb94bdc-c98b79b8c489541a.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Chopped Amberjack Roll — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Cucumber Roll",
             "category": "Traditional Small Cut Rolls",
             "price": 9,
-            "note": "Six pieces."
+            "note": "Six pieces.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-f093cb2b635b476d-8c5e1cb2d77a47e7.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Cucumber Roll — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Salmon Roll",
             "category": "Traditional Small Cut Rolls",
             "price": 14,
-            "note": "Six pieces."
+            "note": "Six pieces.",
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-eb683024fa166e47-51da9db33c0d724e.webp",
+              "width": 970,
+              "credit": "Soichi",
+              "height": 725,
+              "caption": "Salmon Roll — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Japanese Tapas (Dine in only)",
             "category": "Appetizers and Sides",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-916c67d1eb8ad9d3-1f5c78370deecc57.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 705,
+              "caption": "Japanese Tapas (Dine in only) — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Mixed Tempura",
             "category": "Appetizers and Sides",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-a8916a48e82e11df-e699785ab630d5b2.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 643,
+              "caption": "Mixed Tempura — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "VEGETABLE TEMPURA",
             "category": "Appetizers and Sides",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-5f57e7df7f3d6a1e-25adc130dd1050b2.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "VEGETABLE TEMPURA — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Chilean Sea Bass",
             "category": "Appetizers and Sides",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-3856fccc1436675d-a5bb64b7e02bdcb1.webp",
+              "width": 1084,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Chilean Sea Bass — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Soichi's Miso Soup",
             "category": "Appetizers and Sides",
-            "price": 5
+            "price": 5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-0b91beee9ce35c96-759144a5b617d51b.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Soichi's Miso Soup — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Shirumono",
             "category": "Appetizers and Sides",
-            "price": 5
+            "price": 5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-104e3cf81a0dacec-87c033dba98ebe95.webp",
+              "width": 1114,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Shirumono — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "a clear fish soup",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Oyster 1/2 shell (Dine in Only)",
             "category": "Appetizers and Sides",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-5a1f9989c140b440-86176e809b4df93b.webp",
+              "width": 1124,
+              "credit": "Soichi",
+              "height": 1121,
+              "caption": "Oyster 1/2 shell (Dine in Only) — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu",
             "category": "Appetizers and Sides",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-aa8149459533fd11-e28a868fdeb2876b.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 1056,
+              "caption": "Ankimo- Handcrafted Monkfish Liver with Signature Ponzu — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "CHAWAN MUSHI",
             "category": "Appetizers and Sides",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-e4f4ef7484d67bb2-c2f8ba11549c78dc.webp",
+              "width": 750,
+              "credit": "Soichi",
+              "height": 1000,
+              "caption": "CHAWAN MUSHI — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            },
+            "reviews": [
+              {
+                "quote": "a savory chawanmushi",
+                "title": "Soichi Sushi",
+                "provider": "Condé Nast Traveler",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.cntraveler.com/restaurants/san-diego/soichi-sushi",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Negitoro Temaki",
             "category": "Appetizers and Sides",
-            "price": 18
+            "price": 18,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c47cd476f588cb50-6a16c3baad990b61.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Negitoro Temaki — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Assorted Japanese Pickles",
             "category": "Appetizers and Sides",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-fd1894c0f526cd48-6bb2c4a051688691.webp",
+              "width": 899,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Assorted Japanese Pickles — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Yubadofu—Imperial Silken Tofu with Signature Ponzu",
             "category": "Appetizers and Sides",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-133fa42310cd134a-e64d14a8641b562f.webp",
+              "width": 489,
+              "credit": "Soichi",
+              "height": 489,
+              "caption": "Yubadofu—Imperial Silken Tofu with Signature Ponzu — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Bowl of Sushi Rice",
@@ -2425,7 +2993,15 @@
           {
             "name": "Daniel's Homemade Ice Cream",
             "category": "Dessert",
-            "price": 7
+            "price": 7,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-c0829173c1132d0a-02caad5211e2a335.webp",
+              "width": 1000,
+              "credit": "Soichi",
+              "height": 750,
+              "caption": "Daniel's Homemade Ice Cream — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Asahi — Draft",
@@ -2450,7 +3026,15 @@
           {
             "name": "Orion Draft",
             "category": "Beer",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-16ff6d1ae365aeea-3b00be9e55cb52c6.webp",
+              "width": 900,
+              "credit": "Soichi",
+              "height": 1200,
+              "caption": "Orion Draft — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Hitotsubu-No Mugi — Glass",
@@ -2763,7 +3347,15 @@
           {
             "name": "\"Silk Dragon\" Kuzuryu Daiginjo",
             "category": "The Emperor",
-            "price": 151
+            "price": 151,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-e2c90a357aac11de-610b649a1eae143b.webp",
+              "width": 1200,
+              "credit": "Soichi",
+              "height": 800,
+              "caption": "\"Silk Dragon\" Kuzuryu Daiginjo — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Hoyo Yamadanishiki Junmai Daiginjo, “Last Chance at Love” - 720ml",
@@ -2783,7 +3375,15 @@
           {
             "name": "Sake Flight",
             "category": "The Emperor",
-            "price": 40
+            "price": 40,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ordinary-f784c4611819367d-2a727e3dbbb25631.webp",
+              "width": 1024,
+              "credit": "Soichi",
+              "height": 1024,
+              "caption": "Sake Flight — Soichi. Operator menu photograph; pictured serving count is not a price or portion claim.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kamoizumi Ginjo Nigori, “Summer Snow” - 500ml",
@@ -3048,20 +3648,28 @@
             "price": 16.9,
             "reviews": [
               {
-                "provider": "MICHELIN Guide",
-                "title": "Ciccia Osteria",
-                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
                 "quote": "decadently cheesy mushroom flan",
-                "publishedDate": null,
-                "checkedAt": "2026-11-07"
+                "title": "Ciccia Osteria",
+                "provider": "MICHELIN Guide",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+                "publishedDate": null
               },
               {
-                "provider": "San Diego Magazine",
-                "title": "The Perfect Order at Ciccia Osteria",
-                "sourceUrl": "https://sandiegomagazine.com/food-drink/ciccia-osteria-menu-perfect-order/",
                 "quote": "This dish is why I could go vegetarian, but never vegan.",
-                "publishedDate": "2024-06-06",
-                "checkedAt": "2026-11-07"
+                "title": "The Perfect Order at Ciccia Osteria",
+                "provider": "San Diego Magazine",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://sandiegomagazine.com/food-drink/ciccia-osteria-menu-perfect-order/",
+                "publishedDate": "2024-06-06"
+              },
+              {
+                "quote": "Very delicate, pretty, small, surprisingly filling, but not a meal.",
+                "title": "Ciccia Osteria: Italian in Barrio Logan",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/news/2019/jun/27/tin-fork-ciccia-osteria-italian-barrio-logan/",
+                "publishedDate": "2019-06-27"
               }
             ]
           },
@@ -3111,19 +3719,55 @@
             "name": "Roasted Vegetable Salad",
             "category": "Salads",
             "note": "Mixed leaf / turmeric shrimp / ginger & rice vinegar dressing",
-            "price": 16.6
+            "price": 16.6,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ciccia-reader-first-Roast-1a4cf4d8778d790d.webp",
+              "width": 720,
+              "credit": "San Diego Reader",
+              "height": 480,
+              "caption": "Roasted Vegetable Salad — Ciccia Osteria, 2233 Logan Avenue. Historical photograph published June 27, 2019.",
+              "sourceUrl": "https://www.sandiegoreader.com/news/2019/jun/27/tin-fork-ciccia-osteria-italian-barrio-logan/"
+            }
           },
           {
             "name": "Ubriaca",
             "category": "Homemade Pasta",
             "note": "Red wine infused gemelli pasta / sausage / ricotta / shallot",
-            "price": 23.85
+            "price": 23.85,
+            "reviews": [
+              {
+                "quote": "Those Ubriaca are totally, darkly delicious.",
+                "title": "Ciccia Osteria: Italian in Barrio Logan",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/news/2019/jun/27/tin-fork-ciccia-osteria-italian-barrio-logan/",
+                "publishedDate": "2019-06-27"
+              }
+            ]
           },
           {
             "name": "Mafalde Ragu dell'Aia",
             "category": "Homemade Pasta",
             "note": "Farm house white stew / chicken / rabbit / quail / duck",
-            "price": 23.85
+            "price": 23.85,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ciccia-reader-pasta-Mafal-efe5ac3eac506a91.webp",
+              "width": 720,
+              "credit": "San Diego Reader",
+              "height": 479,
+              "caption": "Mafalde Ragu dell’Aia — Ciccia Osteria, 2233 Logan Avenue. Historical photograph published November 26, 2019.",
+              "sourceUrl": "https://www.sandiegoreader.com/news/2019/nov/26/feast-fine-casual-pasta-shapes-ciccia-osteria/"
+            },
+            "reviews": [
+              {
+                "quote": "a distinctive and satisfying chew",
+                "title": "Fine casual pasta shapes at Ciccia Osteria",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/news/2019/nov/26/feast-fine-casual-pasta-shapes-ciccia-osteria/",
+                "publishedDate": "2019-11-26"
+              }
+            ]
           },
           {
             "name": "Pappardelle",
@@ -3146,7 +3790,17 @@
             "name": "Sombreri",
             "category": "Homemade Pasta",
             "note": "Sausage / saffron / delicate bell pepper sauce / mascarpone cheese",
-            "price": 23.85
+            "price": 23.85,
+            "reviews": [
+              {
+                "quote": "Sweet pasta! It’s a nice contrast.",
+                "title": "Ciccia Osteria: Italian in Barrio Logan",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/news/2019/jun/27/tin-fork-ciccia-osteria-italian-barrio-logan/",
+                "publishedDate": "2019-06-27"
+              }
+            ]
           },
           {
             "name": "Frutti di Mare",
@@ -3182,7 +3836,17 @@
             "name": "Fettuccine",
             "category": "Homemade Filled Pasta",
             "note": "Bolognese sauce",
-            "price": 23.85
+            "price": 23.85,
+            "reviews": [
+              {
+                "quote": "it’s already one of my favorite pastas in town.",
+                "title": "Fine casual pasta shapes at Ciccia Osteria",
+                "provider": "San Diego Reader",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.sandiegoreader.com/news/2019/nov/26/feast-fine-casual-pasta-shapes-ciccia-osteria/",
+                "publishedDate": "2019-11-26"
+              }
+            ]
           },
           {
             "name": "Lasagna",
@@ -3210,7 +3874,15 @@
                 "publishedDate": "2024-06-06",
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/ciccia-mag-Gnocc-83e0251d497ed4ec.webp",
+              "width": 1200,
+              "credit": "Ciccia Osteria via San Diego Magazine",
+              "height": 800,
+              "caption": "Gnocchi al Pesto — Ciccia Osteria. Operator photograph published by San Diego Magazine on June 6, 2024.",
+              "sourceUrl": "https://sandiegomagazine.com/food-drink/ciccia-osteria-menu-perfect-order/"
+            }
           },
           {
             "name": "Ciccio",
@@ -3426,12 +4098,30 @@
                 "publishedDate": null,
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-joy-0-7c654d46a94da095.webp",
+              "width": 930,
+              "credit": "Joy / The Joy of Food",
+              "height": 620,
+              "caption": "Steak — LOLA 55, East Village. Historical photograph from The Joy of Food review published July 14, 2026; photograph date not stated.",
+              "sourceUrl": "https://thejoyoffood.life/lola-55/"
+            }
           },
           {
             "name": "Mesquite Chicken",
             "category": "Tacos",
-            "price": 7
+            "price": 7,
+            "reviews": [
+              {
+                "quote": "Very unbalanced and also overloaded.",
+                "title": "Lola 55",
+                "provider": "The Boy Who Ate San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "publishedDate": "2024-02-15"
+              }
+            ]
           },
           {
             "name": "Baja Style Fish",
@@ -3439,12 +4129,38 @@
             "price": 7.5,
             "reviews": [
               {
-                "provider": "The Boy Who Ate San Diego",
-                "title": "Lola 55",
-                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
                 "quote": "The balance was nonexistent for me.",
-                "publishedDate": "2024-02-15",
-                "checkedAt": "2026-11-07"
+                "title": "Lola 55",
+                "provider": "The Boy Who Ate San Diego",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "publishedDate": "2024-02-15"
+              },
+              {
+                "quote": "one of the best in town.",
+                "title": "Bridgeworthy: Lola 55, One of the Best Tacos in San Diego Just Might Be Vegan",
+                "provider": "Coronado Times",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://coronadotimes.com/news/2023/03/03/bridgeworthy-lola-55-one-of-the-best-tacos-in-san-diego-just-might-be-vegan/",
+                "publishedDate": "2023-03-03"
+              }
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-joy-2-00dc2494e9a6af75.webp",
+              "width": 930,
+              "credit": "Joy / The Joy of Food",
+              "height": 620,
+              "caption": "Baja Style Fish — LOLA 55, East Village. Historical photograph from The Joy of Food review published July 14, 2026; photograph date not stated.",
+              "sourceUrl": "https://thejoyoffood.life/lola-55/"
+            },
+            "images": [
+              {
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-joy-2-00dc2494e9a6af75.webp",
+                "width": 930,
+                "credit": "Joy / The Joy of Food",
+                "height": 620,
+                "caption": "Baja Style Fish — LOLA 55, East Village. Historical photograph from The Joy of Food review published July 14, 2026; photograph date not stated.",
+                "sourceUrl": "https://thejoyoffood.life/lola-55/"
               }
             ]
           },
@@ -3454,29 +4170,101 @@
             "price": 7,
             "reviews": [
               {
-                "provider": "MICHELIN Guide",
-                "title": "LOLA 55",
-                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
                 "quote": "smoked pork shoulder with tomatillos",
-                "publishedDate": null,
-                "checkedAt": "2026-11-07"
+                "title": "LOLA 55",
+                "provider": "MICHELIN Guide",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/lola-55",
+                "publishedDate": null
+              },
+              {
+                "quote": "great flavor",
+                "title": "Lola 55",
+                "provider": "The Boy Who Ate San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "publishedDate": "2024-02-15"
               }
             ]
           },
           {
             "name": "Cauliflower",
             "category": "Tacos",
-            "price": 7
+            "price": 7,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-extra-0-0ac5d937bb41f811.webp",
+              "width": 720,
+              "credit": "San Diego Reader",
+              "height": 480,
+              "caption": "Cauliflower — LOLA 55, East Village. Historical photograph published July 1, 2021.",
+              "sourceUrl": "https://www.sandiegoreader.com/news/2021/jul/01/tin-fork-lola-55-respectful-oaxacan-tortilla/"
+            },
+            "reviews": [
+              {
+                "quote": "Rainbow Cauliflower won my heart this time",
+                "title": "Bridgeworthy: Lola 55, One of the Best Tacos in San Diego Just Might Be Vegan",
+                "provider": "Coronado Times",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://coronadotimes.com/news/2023/03/03/bridgeworthy-lola-55-one-of-the-best-tacos-in-san-diego-just-might-be-vegan/",
+                "publishedDate": "2023-03-03"
+              }
+            ]
           },
           {
             "name": "Pork Belly Al Pastor",
             "category": "Tacos",
-            "price": 7
+            "price": 7,
+            "reviews": [
+              {
+                "quote": "pork belly wasn’t tender.",
+                "title": "Lola 55",
+                "provider": "The Boy Who Ate San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "publishedDate": "2024-02-15"
+              }
+            ]
           },
           {
             "name": "Squa-shroom",
             "category": "Tacos",
-            "price": 7.5
+            "price": 7.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-extra-1-4fd5bfbf20addd48.webp",
+              "width": 768,
+              "credit": "The Boy Who Ate San Diego",
+              "height": 1024,
+              "caption": "Squa-shroom — LOLA 55, East Village. Historical photograph published February 15, 2024.",
+              "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/"
+            },
+            "images": [
+              {
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-research-2026-11-08/lola-extra-1-4fd5bfbf20addd48.webp",
+                "width": 768,
+                "credit": "The Boy Who Ate San Diego",
+                "height": 1024,
+                "caption": "Squa-shroom — LOLA 55, East Village. Historical photograph published February 15, 2024.",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/"
+              }
+            ],
+            "reviews": [
+              {
+                "quote": "great combination of flavors and textures.",
+                "title": "Lola 55",
+                "provider": "The Boy Who Ate San Diego",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://theboywhoatesd.com/2024/02/15/lola-55/",
+                "publishedDate": "2024-02-15"
+              },
+              {
+                "quote": "it’s better than you would think, but not as good as you would hope.",
+                "title": "Lola 55",
+                "provider": "The Joy of Food",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://thejoyoffood.life/lola-55/",
+                "publishedDate": "2026-07-14"
+              }
+            ]
           },
           {
             "name": "Quesa Birria Taco",
@@ -3542,12 +4330,48 @@
           {
             "name": "Chipotle Rice",
             "category": "Sides",
-            "price": 5.5
+            "price": 5.5,
+            "reviews": [
+              {
+                "quote": "The rice is light and fluffy",
+                "title": "Bridgeworthy: Lola 55, One of the Best Tacos in San Diego Just Might Be Vegan",
+                "provider": "Coronado Times",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://coronadotimes.com/news/2023/03/03/bridgeworthy-lola-55-one-of-the-best-tacos-in-san-diego-just-might-be-vegan/",
+                "publishedDate": "2023-03-03"
+              },
+              {
+                "quote": "under-seasoned and bland.",
+                "title": "Lola 55",
+                "provider": "The Joy of Food",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://thejoyoffood.life/lola-55/",
+                "publishedDate": "2026-07-14"
+              }
+            ]
           },
           {
             "name": "Lolas Beans",
             "category": "Sides",
-            "price": 5.5
+            "price": 5.5,
+            "reviews": [
+              {
+                "quote": "these refried beans move me.",
+                "title": "Bridgeworthy: Lola 55, One of the Best Tacos in San Diego Just Might Be Vegan",
+                "provider": "Coronado Times",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://coronadotimes.com/news/2023/03/03/bridgeworthy-lola-55-one-of-the-best-tacos-in-san-diego-just-might-be-vegan/",
+                "publishedDate": "2023-03-03"
+              },
+              {
+                "quote": "more watery than you’d expect",
+                "title": "Lola 55",
+                "provider": "The Joy of Food",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://thejoyoffood.life/lola-55/",
+                "publishedDate": "2026-07-14"
+              }
+            ]
           },
           {
             "name": "Quesadillas Oaxaca",
@@ -3674,7 +4498,15 @@
           {
             "name": "Thai Tacos",
             "category": "Appetizer",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-thai-tacos-0361b7e7e91e59f1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Thai Tacos — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Spring Sticks",
@@ -3689,7 +4521,17 @@
           {
             "name": "Crispy Pork Belly",
             "category": "Appetizer",
-            "price": 17
+            "price": 17,
+            "reviews": [
+              {
+                "quote": "We also ordered the pork belly and the beef soup, which we thought were ok.",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/PadSeeEwQueen",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Chicken Wings",
@@ -3699,7 +4541,25 @@
           {
             "name": "Pomelo Salad",
             "category": "Soup & Salad",
-            "price": 18
+            "price": 18,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-pomelo-salad-878d42893798a0e5.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Pomelo Salad — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            },
+            "reviews": [
+              {
+                "quote": "It was so refreshing, slightly tangy, sweet, a tiny bit bitter, crunchy, just 1000/10.",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/PadSeeEwQueen",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Thai Chicken Larb",
@@ -3709,37 +4569,105 @@
           {
             "name": "Lao Papaya Salad",
             "category": "Soup & Salad",
-            "price": 24
+            "price": 24,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-lao-papaya-salad-de62a047a60b7561.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Lao Papaya Salad — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Creamy Coconut Chicken Soup",
             "category": "Soup & Salad",
-            "price": 24
+            "price": 24,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-creamy-coconut-chicken-soup-667be250d972c873.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Creamy Coconut Chicken Soup — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Isaan Beef Soup",
             "category": "Soup & Salad",
-            "price": 27
+            "price": 27,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-isaan-beef-soup-24c76e820638f8ff.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Isaan Beef Soup — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            },
+            "reviews": [
+              {
+                "quote": "that beef in the soup was so incredibly tender.",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/PadSeeEwQueen",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Turmeric Garlic Shrimp",
             "category": "Classics",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-turmeric-garlic-shrimp-399373b003943dbe.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Turmeric Garlic Shrimp — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Tom Yum Ramen",
             "category": "Classics",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-tom-yum-ramen-978a30bdbd9ca47a.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Tom Yum Ramen — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Dried Red Curry Chicken",
             "category": "Classics",
-            "price": 25
+            "price": 25,
+            "reviews": [
+              {
+                "quote": "my husband had the red curry chicken and really liked it!",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/PadSeeEwQueen",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Spicy Thai Basil Beef",
             "category": "Classics",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-spicy-thai-basil-beef-e02dd3db2f4ee213.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Spicy Thai Basil Beef — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Pad See Ew",
@@ -3749,7 +4677,17 @@
           {
             "name": "Pad Thai Shrimp",
             "category": "Classics",
-            "price": 28
+            "price": 28,
+            "reviews": [
+              {
+                "quote": "Pad Thai, best I’ve had.",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/PadSeeEwQueen",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
+              }
+            ]
           },
           {
             "name": "Hat Yai Chicken",
@@ -3764,7 +4702,15 @@
           {
             "name": "Massaman Lamb Curry",
             "category": "Signatures",
-            "price": 33
+            "price": 33,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-massaman-lamb-curry-8d4715a866020461.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Massaman Lamb Curry — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Duck Curry Noodles",
@@ -3772,19 +4718,43 @@
             "price": 33,
             "reviews": [
               {
-                "provider": "MICHELIN Guide",
-                "title": "Sovereign",
-                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
                 "quote": "a crispy leg of duck confit",
-                "publishedDate": null,
-                "checkedAt": "2026-11-07"
+                "title": "Sovereign",
+                "provider": "MICHELIN Guide",
+                "checkedAt": "2026-11-07",
+                "sourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/sovereign",
+                "publishedDate": null
+              },
+              {
+                "quote": "Duck curry noodles - yum",
+                "title": "Sovereign Modern Thai",
+                "provider": "Reddit · u/Carefree_Highway",
+                "checkedAt": "2026-11-08",
+                "sourceUrl": "https://www.reddit.com/r/FoodSanDiego/comments/1vzk8wq/sovereign_modern_thai/",
+                "publishedDate": null
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-duck-curry-noodles-46c1e0da976ae846.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Duck Curry Noodles — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Three Musketeers",
             "category": "Signatures",
-            "price": 35
+            "price": 35,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-three-musketeers-ea2b38c630b025a8.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Three Musketeers — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Lao BBQ Ribs",
@@ -3794,42 +4764,106 @@
           {
             "name": "NY Steak & Beef Tallow",
             "category": "Signatures",
-            "price": 42
+            "price": 42,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-ny-steak-beef-tallow-c99b41adf66ed4a6.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "NY Steak & Beef Tallow — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish 35",
             "category": "Signatures",
-            "price": 35
+            "price": 35,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish 40",
             "category": "Signatures",
-            "price": 40
+            "price": 40,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish 45",
             "category": "Signatures",
-            "price": 45
+            "price": 45,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish 50",
             "category": "Signatures",
-            "price": 50
+            "price": 50,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish 55",
             "category": "Signatures",
-            "price": 55
+            "price": 55,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Rockfish  60",
             "category": "Signatures",
-            "price": 60
+            "price": 60,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-rockfish-35-af534761111ffbd1.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Rockfish — Sovereign Thai Cuisine, 1460 J Street. Operator uses this photograph for its Rockfish options; pictured fish size is not specified.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Crispy Baby Crab",
             "category": "Special",
-            "price": 10
+            "price": 10,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-crispy-baby-crab-74abee719765ec39.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Crispy Baby Crab — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Isan Sausage",
@@ -3849,22 +4883,54 @@
           {
             "name": "Wasabi Scallop Ceviche",
             "category": "Special",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-wasabi-scallop-ceviche-0172fec9a819626e.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Wasabi Scallop Ceviche — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Taro Fritters",
             "category": "Special",
-            "price": 12
+            "price": 12,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-taro-fritters-2dbd428f023cb5d5.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Taro Fritters — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Bangkok Street Noodles",
             "category": "Special",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-bangkok-street-noodles-f5fcd5cfc255d572.webp",
+              "width": 600,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Bangkok Street Noodles — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Southern Salmon Curry",
             "category": "Special",
-            "price": 28
+            "price": 28,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-southern-salmon-curry-fd393d94d10af115.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Southern Salmon Curry — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Bok Choy",
@@ -3949,17 +5015,41 @@
           {
             "name": "Banana Rolls",
             "category": "Dessert",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-banana-rolls-200788f212b595c8.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Banana Rolls — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Mango Sticky Rice",
             "category": "Dessert",
-            "price": 16
+            "price": 16,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-mango-sticky-rice-3e76c3d93cefcfbc.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Mango Sticky Rice — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Banana Boat",
             "category": "Dessert",
-            "price": 16
+            "price": 16,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-banana-boat-bce9c5be481f9ade.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Banana Boat — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Sovereign Ice Cream",
@@ -3991,12 +5081,28 @@
           {
             "name": "Raspberry Lychee Cooler",
             "category": "Mocktails",
-            "price": 13
+            "price": 13,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-raspberry-lychee-cooler-56165ea533300ca7.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Raspberry Lychee Cooler — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Cucumber Mint Lemonade",
             "category": "Mocktails",
-            "price": 13
+            "price": 13,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-cucumber-mint-lemonade-eeb1c532037b3bff.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Cucumber Mint Lemonade — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Sunset Colada",
@@ -4026,7 +5132,15 @@
           {
             "name": "Mango Mint Refresher",
             "category": "Mocktails",
-            "price": 13
+            "price": 13,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/sovereign-san-diego/sovereign-mango-mint-refresher-d84e264fea452a07.webp",
+              "width": 800,
+              "credit": "Sovereign Thai Cuisine",
+              "height": 800,
+              "caption": "Mango Mint Refresher — Sovereign Thai Cuisine, 1460 J Street. Operator menu photograph.",
+              "sourceUrl": "https://sovereignsandiego.com/"
+            }
           },
           {
             "name": "Thai Tea",
