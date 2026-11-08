@@ -79,3 +79,17 @@ Read the pin back, confirm each media URL loads, and note undownloadable images 
 - For responsive `srcset` galleries, select the largest listed variant before applying a URL limit. Trying every tiny variant first can exhaust the limit on headers and recommendations while missing the article's actual restaurant gallery.
 - Cached public source pages may expose working original image URLs even when the article itself returns 403. Download only URLs observed in the source, retain its caption/credit, and send the source page as `Referer` when required. Visually verify the downloaded file; a successful download alone does not establish branch identity.
 - Exact restaurant listings can contain hotel-room photos and adjacent outlets. Check each photo separately; do not accept an entire Trip/Dianping gallery solely because the listing name matches. Future-opening coverage may contain only previous-location or service-concept images; label those accurately or record the missing venue media.
+
+## Manual browser look is the standard step for thin pins (Ian, 2026-11-07, Groq thread)
+When scraping and `curl` leave a pin with no usable picture (publisher CDNs that block curl, Cloudflare walls), do not
+stop and report a gap: open the source in Chrome (`@browser`) and look. Order that worked for the Groq pins 20857-20862:
+1. Navigate to the article, then run JS for `meta[property="og:image"]` and `document.images` (natural width over 400).
+   DCD's og image was a real booth photo that `curl` never returned.
+2. Search the topic in Google News in the same tab and open the linked publisher and the company's own newsroom
+   (groq.com/newsroom pages expose a 2400px `cdn.sanity.io` og image).
+3. Judge it: Chrome's `computer` screenshot is denied on some CDN hosts ("Permission denied on this domain"); then `curl`
+   the image into the scratchpad and `Read` it. Reject stock banners (Tom's Hardware "premium" card, Shutterstock),
+   AVIF/MP4 saved as .jpg, and anything under about 400px (DCD `groq_chip` was 315px).
+4. `update_pin addMedia`, then `PATCH /api/admin/db/Medium?id=` with `authorName`/`authorUrl` on prod, read back.
+5. Close your tab (`tabs_close_mcp`) when done.
+If the only match is a related-event graphic, credit it exactly (event and date) and say so in the report.

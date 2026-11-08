@@ -227,10 +227,10 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
-  // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || gamePerf || aircraftPerf || videoPerf || llmPerf || dining || hasFactoryBuildout(factory) || hasFactoryRubric(factory) || hotel || criticReviews || modelChart ? 'mt-4' : '';
+  // Keep a gap after any preceding panel, including the streamed thread tree.
+  const tagsClass = 'mt-4';
 
   const isPredicted = isPredictedPin(pin);
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
