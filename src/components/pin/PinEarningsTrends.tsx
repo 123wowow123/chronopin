@@ -2,6 +2,7 @@
 
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useState } from 'react';
+import { RefineLink } from '@/components/pin/RefineLink';
 import { api } from '@/lib/client/api';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import { margin, niceStep, verdict, type EarningsTrends, type EpsQuarter, type RevenuePeriod } from '@/lib/earningsTrends';
@@ -56,11 +57,22 @@ function Toggle<T extends string>({ value, options, onChange, label }: { value: 
   );
 }
 
-function Card({ title, aside, children }: { title: string; aside?: React.ReactNode; children: React.ReactNode }) {
+const PILL = 'inline-flex items-center rounded-full border border-line bg-field px-3 py-1 font-semibold text-ink transition-colors hover:bg-raised hover:text-link hover:no-underline';
+
+// A heading that is also a search: the pill finds the pins sharing the term.
+function HeadingPill({ field, value, title, className = 'text-base', children }: { field: 'tag' | 'ticker'; value: string; title: string; className?: string; children: React.ReactNode }) {
+  return (
+    <RefineLink field={field} value={value} title={title} className={`${PILL} ${className}`}>
+      {children}
+    </RefineLink>
+  );
+}
+
+function Card({ title, aside, children }: { title: React.ReactNode; aside?: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="surface min-w-0 rounded-xl border border-line bg-raised/40 p-4">
       <div className="flex items-center justify-between gap-3">
-        <h3 className="text-base font-semibold text-ink">{title}</h3>
+        <h3 className="min-w-0">{title}</h3>
         {aside}
       </div>
       {children}
@@ -75,7 +87,7 @@ function shownEps(all: EpsQuarter[]): EpsQuarter[] {
   return next ? [...reported, next] : reported;
 }
 
-function EpsCard({ quarters, t }: { quarters: EpsQuarter[]; t: Translator }) {
+function EpsCard({ quarters, symbol, t }: { quarters: EpsQuarter[]; symbol: string; t: Translator }) {
   const f = useFormats();
   const shown = useMemo(() => shownEps(quarters), [quarters]);
   const [hover, setHover] = useState<number | null>(null);
@@ -98,7 +110,7 @@ function EpsCard({ quarters, t }: { quarters: EpsQuarter[]; t: Translator }) {
   };
   const summary = shown.map((q) => `${q.label}: ${q.estimate != null ? `${t('earningsTrends.estimate')} ${f.eps.format(q.estimate)}` : ''} ${q.actual != null ? `${t('earningsTrends.actual')} ${f.eps.format(q.actual)}` : ''}`.trim()).join('; ');
   return (
-    <Card title={t('earningsTrends.eps')}>
+    <Card title={<HeadingPill field="ticker" value={symbol} title={t('stocks.searchPins', { symbol })}>{t('earningsTrends.eps')}</HeadingPill>}>
       <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
         <span className="font-semibold text-ink">{a.label}</span>
         <span className="inline-flex items-center gap-1.5 text-muted">
@@ -155,7 +167,7 @@ function EpsCard({ quarters, t }: { quarters: EpsQuarter[]; t: Translator }) {
   );
 }
 
-function RevenueCard({ quarterly, annual, t }: { quarterly: RevenuePeriod[]; annual: RevenuePeriod[]; t: Translator }) {
+function RevenueCard({ quarterly, annual, symbol, t }: { quarterly: RevenuePeriod[]; annual: RevenuePeriod[]; symbol: string; t: Translator }) {
   const f = useFormats();
   const [mode, setMode] = useState<'annual' | 'quarterly'>(quarterly.length ? 'quarterly' : 'annual');
   const [hover, setHover] = useState<number | null>(null);
@@ -188,7 +200,7 @@ function RevenueCard({ quarterly, annual, t }: { quarterly: RevenuePeriod[]; ann
   const summary = periods.map((q) => `${q.label}: ${t('earningsTrends.revenue')} ${f.compact.format(q.revenue)}${q.earnings != null ? `, ${t('earningsTrends.earnings')} ${f.compact.format(q.earnings)}` : ''}`).join('; ');
   return (
     <Card
-      title={t('earningsTrends.revenueVsEarnings')}
+      title={<HeadingPill field="ticker" value={symbol} title={t('stocks.searchPins', { symbol })}>{t('earningsTrends.revenueVsEarnings')}</HeadingPill>}
       aside={
         <Toggle
           value={mode}
@@ -274,16 +286,18 @@ export function PinEarningsTrends({ pinId, symbol }: { pinId: number; symbol?: s
   return (
     <section aria-labelledby="earnings-trends-heading" className="mt-4">
       <div className="mb-2 flex items-baseline justify-between gap-3">
-        <h2 id="earnings-trends-heading" className="text-base font-semibold text-ink">
-          {t('earningsTrends.heading')}
+        <h2 id="earnings-trends-heading">
+          <HeadingPill field="tag" value="Earnings" title={t('pin.showTagged', { name: 'Earnings' })} className="text-lg">
+            {t('earningsTrends.heading')}
+          </HeadingPill>
         </h2>
         <Anchor href={`https://finance.yahoo.com/quote/${encodeURIComponent(ticker.replace('.', '-'))}/financials/`} target="_blank" rel="noopener nofollow" className="text-xs text-subtle hover:text-link hover:no-underline">
           {t('stocks.onYahoo', { symbol: ticker })}
         </Anchor>
       </div>
       <div className="grid gap-4">
-        <EpsCard quarters={trends.eps} t={t} />
-        <RevenueCard quarterly={trends.quarterly} annual={trends.annual} t={t} />
+        <EpsCard quarters={trends.eps} symbol={ticker} t={t} />
+        <RevenueCard quarterly={trends.quarterly} annual={trends.annual} symbol={ticker} t={t} />
       </div>
       <p className="mt-1 text-xs text-subtle">{t('earningsTrends.source')}</p>
     </section>
