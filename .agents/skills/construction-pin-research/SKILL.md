@@ -121,6 +121,12 @@ page keeps the old reading for hours. Docs: `docs/okf/api/pin-expire.md`.
   that plant's own milestone, each with its own profile.
 - Radar scores stay null unless a peer cohort or named capability is published.
 
+## 4b. Project specs: `PinProject` (homes, rooms, seats, stories, area, parking)
+Any build pin with a sourced quantity gets a "Project specs" tile panel (like the data-centre one). Save via
+`PUT /api/pins/:id/project {units, affordableUnits, rooms, seats, beds, stories, sqft, acres, parking, basis, sourceUrl, note}`
+(locally and on prod, then expire the cache). `basis` is `published`, `planned` or `reported` (press report of a proposal).
+Never invent a count; `scripts/construction/backfillProjectSpecs.ts` only fills what the title states. Docs: `docs/okf/tables/pin-project.md`.
+
 ## 5. Large profile rounds: identity and source precision
 - Research a raw gap candidate before counting it as a missing eligible project. Skip repeated milestones when
   the same physical scope already has a project profile; record the profiled pin and the specific overlap.
@@ -344,3 +350,29 @@ Applies to a batch of pins generated from tracker listings (the EnergyDesk Clean
   (>= 3 searches and only a withdrawn/label/aggregator neighbour) and logs the rest to `held.json`; (4) a patch with
   `startDate: null` keeps the pin's old date and sets `dateConfidence: unknown`; (5) `http://` references must be
   upgraded to `https://` and reference `publishedDate` must be a full YYYY-MM-DD or omitted.
+
+## 11. A phase or segment of a larger project is a thread under the whole project (owner instruction, 2026-11-08)
+When the thing being pinned is one segment, phase, stage or section of a bigger named project (a Barrio Logan stretch of the
+24-mile Bayshore Bikeway, a plant of a multi-plant campus, a station of a line), do not post it as a free-standing pin.
+- **Find or create the parent first.** `find_pins` on the whole project's name. If none exists, create a parent pin for the
+  full project (its own sourced scope, plan or programme date, per-segment progress list, no invented total cost or finish
+  date), then set the segment pin's `parentId` to it (`update_pin {parentId}`). Same desk as the segment. Done for the
+  Bayshore Bikeway: parent 20883, Barrio Logan segment 20882.
+- **Parent dating.** Date it to a sourced programme event (plan adoption, approval). If there is no sourced construction
+  start, leave the parent without a status tag (a tag makes the page label its start "Groundbreaking"); the segments carry
+  their own tags and dates.
+- **Every segment gets its own pin,** with its own start, completion, status and cost; the parent lists them. Sibling
+  segments from the same page (an already-built stretch) can be added later as further children.
+- **Listing pages go stale.** A visitor-bureau or convention-centre "nearby construction" page (visitsandiego.com, sdccc.org)
+  lags the agency: the Bayshore Bikeway entry still said "Fall 2024", and COASTER/Park Boulevard dates differed from NCTD
+  and the developer. Read the agency or developer page before dating, and say which source gives which date.
+- **Check a status label's scope.** SANDAG's "Open to Public" sat on the *Barrio Logan Intersection Improvements* entry
+  (Phase 2, rail-signal work per the CEQA notice), not on the path itself; do not tag a project Completed from a label
+  whose entry title names different work. Phase budgets on a page may not map to the pin's scope: keep `price` null and
+  state the conflict (release $19M vs page $44.9M/$13M/$4.8M).
+- **Traps hit this session.** `mark_revisit` fails with a `PinRevisit_pinId_fkey` error for a pin created on production only
+  (the queue reads the local DB); record the gap in the pin's own summary. A developer site behind a bot challenge
+  (civiccommunities.com) loads in the user's Chrome but not for curl or the pin API ("Image download failed"): do not
+  bypass it; ask the owner to save the image, then upload it to Azure with
+  `scripts/construction/park-blvd-media-2026-11-08.mjs` (main image = first in the PUT, then the rest) and credit the page.
+  `create_pin` may answer `needs: thin: One source`: add references and media.

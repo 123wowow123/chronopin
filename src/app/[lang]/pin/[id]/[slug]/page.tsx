@@ -118,13 +118,14 @@ import { entityJsonLd, isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadat
 import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
+import { BASIS_WORDS, projectTiles, type PinProjectJson } from '@/lib/projectSpecs';
 import { formatMegawatts, type PinPowerJson } from '@/lib/power';
 import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/lib/energy';
 import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSearchPills, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -193,7 +194,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
     soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -203,6 +204,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinPower(pin.id), null, 'pinPower'),
     soft(pinEnergy(pin.id), null, 'pinEnergy'),
     soft(pinDatacenter(pin.id), null, 'pinDatacenter'),
+    soft(pinProject(pin.id), null, 'pinProject'),
     soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),
     soft(pinPerf(pin.id), null, 'pinPerf'),
     pin.categories?.includes('Gaming') ? soft(pinGameInfo(pin.id), null, 'pinGameInfo') : null,
@@ -254,7 +256,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} project={project} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -385,6 +387,7 @@ async function PinBody({
   power,
   energy,
   datacenter,
+  project,
   venue,
   candidates,
   competitors,
@@ -402,6 +405,7 @@ async function PinBody({
   power?: PinPowerJson | null;
   energy?: PinEnergyJson | null;
   datacenter?: PinDatacenterJson | null;
+  project?: PinProjectJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
   competitors?: PinCompetitorJson[];
@@ -711,6 +715,40 @@ async function PinBody({
           <PinAdminLink pinId={pin.id} />
         </div>
       </div>
+
+      {project && !datacenter ? (() => {
+        const tiles = projectTiles(project);
+        return tiles.length ? (
+          <section data-project-panel aria-label="Project specifications" className="surface mt-3 rounded-2xl border border-line bg-raised/40 p-4 shadow-sm">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-xs font-semibold tracking-wider text-subtle uppercase">Project specs</h2>
+              {project.sourceUrl ? (
+                <a href={project.sourceUrl} rel="noopener nofollow" target="_blank" className="inline-flex items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-link ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:no-underline">
+                  Source
+                  <Icon name="external" className="size-3 opacity-70" />
+                </a>
+              ) : null}
+            </div>
+            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+              {tiles.map((tile) => (
+                <div key={tile.key} className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+                  <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+                    <span className={`size-2 rounded-full ${tile.dot}`} aria-hidden />
+                    {tile.label}
+                  </div>
+                  <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-ink tabular-nums">{tile.value}</div>
+                  {tile.sub ? <div className="mt-1 text-xs text-muted tabular-nums">{tile.sub}</div> : null}
+                </div>
+              ))}
+            </div>
+            {project.basis || project.note ? (
+              <p className="mt-3 border-t border-line/70 pt-3 text-xs text-muted">
+                {[project.basis ? BASIS_WORDS[project.basis][0].toUpperCase() + BASIS_WORDS[project.basis].slice(1) : null, project.note].filter(Boolean).join(' · ')}
+              </p>
+            ) : null}
+          </section>
+        ) : null;
+      })() : null}
 
       {datacenter ? (
         <section data-datacenter-panel aria-label="Datacenter and infrastructure specifications" className="surface mt-3 rounded-2xl border border-line bg-raised/40 p-4 shadow-sm">

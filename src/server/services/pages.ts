@@ -16,6 +16,8 @@ import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
+import { projectForPin } from '../model/pinProject';
+import type { PinProjectJson } from '@/lib/projectSpecs';
 import { hasSiteShape, siteShapeForPin } from '../model/pinSiteShape';
 import { simplifyForDisplay, type PinSiteShapeJson } from '@/lib/siteShape';
 import { perfForPin } from '../model/pinPerf';
@@ -274,6 +276,14 @@ export async function pinDatacenter(id: number): Promise<PinDatacenterJson | nul
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return datacenterForPin(id);
+}
+
+// The pin's homes / rooms / seats / height / area / parking quantities.
+export async function pinProject(id: number): Promise<PinProjectJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return projectForPin(id);
 }
 
 // The pin's mapped site outline and parts (campus, buildings, cooling, generators,
