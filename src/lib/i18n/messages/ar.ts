@@ -2595,6 +2595,7 @@ const ar: Messages = {
     filter: 'تصفية بالاسم',
     sort: 'ترتيب',
     sortName: 'الاسم',
+    sortRecent: 'الأحدث',
     sortAscending: 'ترتيب تصاعدي',
     sortDescending: 'ترتيب تنازلي',
     noMatches: 'لا أحد يطابق هذا الاسم.',

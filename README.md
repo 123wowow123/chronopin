@@ -478,9 +478,6 @@ https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_sourc
 
 
 
-restaurant pins should have food image with captions of what they are on pin
-
-
 
 Start
 Nov 19, 2025
@@ -504,3 +501,6 @@ mark menu items with largest discount on special deal on restaurant landing page
 
 authentic cuisine section by cuisine type
 
+
+
+pin dam construction in USA and add stas panel and map agregate for main stats

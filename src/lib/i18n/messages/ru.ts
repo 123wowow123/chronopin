@@ -2317,6 +2317,7 @@ const ru: Messages = {
     filter: 'Фильтр по имени',
     sort: 'Сортировка',
     sortName: 'Имя',
+    sortRecent: 'Самые последние',
     sortAscending: 'Сортировать по возрастанию',
     sortDescending: 'Сортировать по убыванию',
     noMatches: 'Нет никого с таким именем.',

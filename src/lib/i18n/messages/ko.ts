@@ -2225,6 +2225,7 @@ const ko: Messages = {
     filter: '이름으로 필터',
     sort: '정렬',
     sortName: '이름',
+    sortRecent: '최신순',
     sortAscending: '오름차순 정렬',
     sortDescending: '내림차순 정렬',
     noMatches: '해당 이름과 일치하는 사람이 없습니다.',

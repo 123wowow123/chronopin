@@ -162,8 +162,8 @@ function facetsFor(people: DirectoryPerson[], t: ReturnType<typeof useT>): Facet
   return out;
 }
 
-// 'name' or an axis name: what the cards are ordered by.
-type SortKey = 'name' | OctagonAxis;
+// Recent keeps the server's office chronology (current holder, then newest exits).
+type SortKey = 'recent' | 'name' | OctagonAxis;
 
 // The people index in tabs: one tab per group (the executive, senators,
 // representatives, governors, former officeholders, then the other fields),
@@ -184,7 +184,7 @@ export function PeopleDirectory({
   const [active, setActive] = useState(defaultKey ?? groups[0]?.key ?? '');
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(PAGE);
-  const [sort, setSort] = useState<SortKey>('name');
+  const [sort, setSort] = useState<SortKey>('recent');
   // The second row's chip (a Facet key); none: everyone in the tab.
   const [facet, setFacet] = useState<string | null>(null);
   // Every sort opens descending (Z to A, highest first); the toggle flips it.
@@ -210,7 +210,7 @@ export function PeopleDirectory({
   // chosen sort and direction order either list; ties fall back to the name.
   const list = useMemo(() => {
     const byName = (a: DirectoryPerson, b: DirectoryPerson) => a.name.localeCompare(b.name);
-    const axis = sort === 'name' ? -1 : OCTAGON_AXES.indexOf(sort);
+    const axis = sort === 'name' || sort === 'recent' ? -1 : OCTAGON_AXES.indexOf(sort);
     // People with no evidence on the axis stay last in either direction.
     const order = (a: DirectoryPerson, b: DirectoryPerson) => {
       if (axis < 0) return 0;
@@ -223,8 +223,8 @@ export function PeopleDirectory({
     const named = (a: DirectoryPerson, b: DirectoryPerson) => (sort === 'name' && descending ? byName(b, a) : byName(a, b));
     if (!searching) {
       const people = activeFacet ? (group?.people ?? []).filter(activeFacet.test) : (group?.people ?? []);
-      if (sort !== 'name') return [...people].sort((a, b) => order(a, b) || byName(a, b));
-      return descending ? [...people].reverse() : people;
+      if (sort === 'recent') return descending ? people : [...people].reverse();
+      return [...people].sort((a, b) => order(a, b) || named(a, b));
     }
     const seen = new Set<number>();
     const starts = (p: DirectoryPerson) => Number(fold(p.name).startsWith(needle));
@@ -278,6 +278,7 @@ export function PeopleDirectory({
               }}
               className="appearance-none rounded-full bg-field py-1.5 pr-8 pl-3 text-sm leading-5 text-ink ring-1 ring-line ring-inset outline-none focus:ring-2 focus:ring-accent"
             >
+              <option value="recent">{t('person.sortRecent')}</option>
               <option value="name">{t('person.sortName')}</option>
               {OCTAGON_AXES.map((a) => (
                 <option key={a} value={a}>

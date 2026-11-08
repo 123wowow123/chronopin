@@ -55,14 +55,91 @@ photographer/operator, keep captions accurate, distinguish the venue's own photo
 branches, don't infer dish names from unlabelled photos.
 
 ## Dish photos
-Try to find a photo for every menu item. Each item may carry `image: { src, caption, credit, sourceUrl }` (Azure
+Owner instruction (November 8, 2026): aim for **at least one verified picture per menu item**.
+Inspect the item’s official detail page beyond `<img>` tags: CSS `background-image`, inline styles,
+lazy `data-*` attributes, responsive sources and embedded page data (`__NEXT_DATA__` / product JSON)
+can hold the actual food photograph even when a plain text or image scan is empty. BJ’s
+[Personal Deep-Dish Pizza & House Salad Combo](https://www.bjsrestaurants.com/menu-item/personal-deep-dish-pizza-house-salad-combo-2-2)
+is an example: `product.image` and `product.altText` identify the Scene7 picture.
+Use Yelp **and Google Images / Google Maps** to research remaining items; verify the selected photo’s
+original source, caption, exact restaurant/branch, dish and portion before saving. A first gallery-page
+scan or no exact alt-text match does not finish the search. Keep searching targeted dish galleries and
+operator pages; record specific gaps only after these avenues have been checked.
+An operator’s chain-wide photo of the exact menu item may illustrate a chain-shared menu when clearly
+credited and captioned as a chain menu photo; do not present it as photographed at the saved branch.
+For combo shots, name the pictured extras and explicitly say when they are not included in the saved
+item’s offer. Keep verified branch-local photos distinct, and never substitute stock/other-branch photos.
+For operator product sites, inspect the public sitemap for exact product-detail URLs before declaring a
+missing image. BJ’s Dark Horse Cabernet Sauvignon and Chardonnay pages contain labelled product images even
+when the main menu scrape omits them. Wine bottle photos may identify the offered wine with an explicit
+caption that the happy-hour price is not for the whole bottle. Check the actual **Drink** gallery as well as
+Food and targeted searches: BJ’s La Jolla’s 88-photo Drink gallery contained a named Brewhouse Margarita
+missing from the initial Food pass. A search hit may come from review prose or an uploader name; visually
+inspect it (a `Bud` hit showed draught beer, not a domestic bottle). For call drinks, verify the eligible
+spirit/brand; a named signature cocktail alone does not establish call-drink eligibility.
+Each item may carry `image: { src, caption, credit, sourceUrl }` (Azure
 blob `src`; optional `width`/`height`), saved through the same restaurant-content / restaurant-specials APIs
 (validated; all four fields are required). On the pin a photo shows as a thumbnail beside the dish; clicking it
 opens the photo large with its caption and credit, and every restaurant pin with dish photos also gets a captioned
-"Food photos" strip above the menu. Only use a photo that really shows that dish at that restaurant (official
+"Food photos" strip above the menu. Use verified official chain photos only under the explicit chain-menu exception above. Otherwise use a photo that really shows that dish at that restaurant (official
 site, the venue's own social/press kit, Yelp/Tripadvisor/Google photos of that branch); never infer a dish from an
 unlabelled photo or use another branch's or a stock image, and leave the item without one rather than guess. The
 caption names the dish as the restaurant does. Upload with `npx tsx scripts/restaurants/uploadDishPhotos.ts restaurant-dishes/<slug> <files>` (WebP, public-blob check, prints `src`/`width`/`height`). Yelp's branch photo gallery (`/biz_photos/<slug>?tab=food&start=N`, reader-captioned) is a usable source when the restaurant's own site has no dish photos; credit it as a Yelp reviewer photo and link the photo's `?select=` page. Record items left without a photo in the guide notes.
+
+### City-wide expanded photo research (owner instruction, November 8, 2026)
+
+Apply the expanded strategy to **every saved San Diego menu item**, including ordinary menus and all
+specials, rather than stopping after a restaurant gets its first picture. Maintain a resumable inventory
+by exact branch source, menu label and item; count effective menus separately from duplicate stored rows.
+For each uncovered item:
+
+1. Inspect the branch’s official menu, ordering page, galleries and item-detail pages. Follow public
+   sitemaps and linked product pages. Read CSS backgrounds, lazy attributes, responsive images and
+   embedded product/menu JSON, not only `<img alt>` matches. Match names, variants and portions.
+2. Search the verified branch’s Yelp **All, Food and Drink** categories and dish-specific searches,
+   including later pages. Verify address/branch. A result may match review prose or uploader names;
+   its caption and visual content still need inspection.
+3. Search Google Images and Maps using restaurant + exact branch/address + dish, then shorter aliases
+   and eligible named variants. Follow results to their original source and retain direct provenance.
+4. Download and visually inspect each candidate. Clearly caption chain operator photos, historical
+   images, bottle-versus-pour illustrations, and pictured combo extras. Reject unresolved identity,
+   eligibility or portion mismatches. Never copy a reviewer’s branch photo to another branch.
+5. Save verified photos in Azure and through the management APIs in local and production, preserving
+   existing media, reviews, item fields, enabled state and specials `regionSlug`. Match local records
+   by source; verify complete readbacks and native-pin/landing rendering.
+
+Technical follow-ups from the expanded San Diego pass:
+- BentoBox can put the named `<img alt>` inside an `.image-thumbnail` whose parent `style` carries the
+  background URL. Pair those elements; a source-less hidden image does not mean there is no photo.
+- Normalize decorative `*`, trailing `photo`, Unicode punctuation and whitespace when discovering
+  candidates. Alias matches remain review leads; keep flavor, serving count and portion words significant.
+- Operator-published pictures of the exact named packaged beverage can identify it when captioned as
+  **product/bottle illustrations**. For a glass/pour entry, explicitly say the pictured bottle does not
+  define the saved serving size or include the whole bottle. Do not treat generic rice/tea stock images,
+  beer logos or a conflicting vintage/variant as a matching restaurant photograph.
+- When an ordering menu returns 403 over HTTP, open its exact branch in the browser. Dismiss scheduling
+  prompts to browse without placing an order. A labelled product image’s context menu can open the image
+  in a new tab, exposing its source URL for download and review. Islands Mira Mesa’s ordering menu worked
+  this way after direct requests failed. Record browser access separately from HTTP failures.
+- Empty image alt text is common on SpotHopper menus. Read the nearest complete `.food-item-holder`
+  with its exact heading, image and description together. Never broaden a source-less item to the whole
+  section’s first image: it can associate a salad with pasta, beer with sangria, or several dishes with one
+  unrelated photograph. Broad context matches are candidates only and need visual/variant rejection.
+- An exposed WordPress media library can supply exact named pictures, but library names and nearby
+  captions are not branch/serving proof. Inspect original title/alt/caption plus the actual photo and
+  source page; preserve photo dates and reject generic filenames, logos, menus and unrelated branches.
+- A local ordinary-menu profile may be absent even when production has it. Check exact source and
+  create the missing local copy through `restaurant-content`, preserve the complete production profile,
+  read it back, and resume the idempotent photo save. Never assume local numeric IDs match production.
+- Do not split responsive source URLs blindly on every comma: image CDNs can use commas inside the URL.
+  Prefer an observed original URL or parse source candidates without truncating transformation paths.
+
+Keep per-item source URLs, search terms, candidates/rejections and the **next unperformed research step**.
+A bulk scan or empty caption match is only a candidate-discovery step. Distinguish pending manual
+research from an avenue actually checked; do not call the whole city complete or a gap exhausted until
+all applicable avenues have been worked. Reuse official chain photography only after verifying the
+same named item is offered by each saved branch, with chain-photo attribution and accurate offer captions.
+This instruction broadens photo research; it does not authorize invented reviews, prices or availability.
 
 ### Bulk Yelp matcher (San Diego run, 2026-10-30)
 Yelp returns 403 to plain HTTP, so run it inside a Chrome tab on yelp.com (`javascript_tool`; calls over 45 s time out, so
@@ -80,12 +157,12 @@ Scripts live in `scripts/restaurants/yelpDishes/` (`matcher.browser.js` pasted i
 Retrying unmatched venues (2026-10-30): Yelp's own search misses names with a location suffix, so find the page with Google
 (`fetch('/search?q=yelp <name> <city>')` from a google.com tab, regex `yelp.com/biz/<slug>`) or take the second search hit for a
 chain. Yelp answers 403 (bot check) after a fast burst; the user clears it in the tab, then pace requests ~5 s apart (one venue ~1 min).
-Drop matches whose caption is a different or multi-dish photo (check the caption, not just the tokens). The admin token in
+Drop matches whose caption names a different dish or leaves the subject ambiguous (check the caption, not just the tokens). Clearly identified multi-dish photos require the explicit portion/extra disclosures above. The admin token in
 `.scrape/admin.token` expires after ~2 h: re-sign in with `ADMIN_PASSWORD` from `.env.local` (email in `feedback_admin_email_in_scripts`).
 Never shorten a Yelp slug when listing candidates (a trimmed `-san-diego` gave 'page not found' and looked like 'no photos'); if a slug
 returns 0 photos try inserting or appending `-san-diego`. The loose pass (caption words a subset of the item, or two-thirds of its
-words) finds ~3x more photos but needs a by-eye review: drop captions naming several dishes, combos, or a different dish.
-Restaurant sites and Instagram rarely name dishes in alt text, so they gave ~no matches; not worth the per-photo credit work.
+words) finds ~3x more photos but needs a by-eye review: drop different dishes and ambiguous combinations; use clearly identified combo photos only with the disclosures above.
+The old alt-text pass found few operator/Instagram matches; that is not a reason to stop. Inspect rendered backgrounds and embedded product data, then verify individual post captions.
 
 ### Reviewed saves and ordinary menus (October 30 follow-up)
 

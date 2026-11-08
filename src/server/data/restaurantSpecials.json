@@ -22,7 +22,15 @@
         "items": [
           {
             "name": "Kennebec fries",
-            "price": 8
+            "price": 8,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b2/fort-oak-fries-689351f362630bc3.webp",
+              "width": 750,
+              "credit": "An L. / Yelp reviewer photo",
+              "height": 1000,
+              "caption": "Kennebec Fries w/ Togarashi Ranch at Fort Oak — reviewer photograph, December 20, 2025. Historical presentation; current serving may vary.",
+              "sourceUrl": "https://www.yelp.com/biz_photos/fort-oak-san-diego-2?select=cBfFgEMEGzcYzyiftW33Pw"
+            }
           },
           {
             "name": "Al pastor tostada",
@@ -68,7 +76,15 @@
                 "publishedDate": "2025-08-04",
                 "checkedAt": "2026-11-07"
               }
-            ]
+            ],
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b2/fort-oak-crispy-wings-c14ba0dd857e103a.webp",
+              "width": 750,
+              "credit": "Ryan M. / Yelp reviewer photo",
+              "height": 1000,
+              "caption": "Crispy fried chicken wings at Fort Oak — reviewer photograph, July 28, 2026. Historical presentation; current serving may vary.",
+              "sourceUrl": "https://www.yelp.com/biz_photos/fort-oak-san-diego-2?select=Lvu6SDEwcaIYjKt1XAriqQ"
+            }
           },
           {
             "name": "Lemon drop",
@@ -115,7 +131,15 @@
           },
           {
             "name": "Gin + tonic",
-            "price": 10
+            "price": 10,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b2/fort-oak-gin-tonic-6c2867edf922ef0a.webp",
+              "width": 750,
+              "credit": "Lance F. / Yelp reviewer photo",
+              "height": 1000,
+              "caption": "Gin and tonic at Fort Oak — historical reviewer photograph, August 19, 2025. Presentation may vary; the old photo-caption price is not copied into the current menu.",
+              "sourceUrl": "https://www.yelp.com/biz_photos/fort-oak-san-diego-2?select=hhgfMXnCXGdYhNg7ux7ePQ&tab=drink"
+            }
           },
           {
             "name": "Hugo spritz",
@@ -3481,7 +3505,15 @@
           },
           {
             "name": "Crispy calamari",
-            "price": 6
+            "price": 6,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b2/347c59aa24e30874-e961a9e29c33158e.webp",
+              "width": 800,
+              "credit": "Waterbar San Diego / official menu",
+              "height": 800,
+              "caption": "Crispy calamari — Waterbar San Diego. Photograph published with the named item on the official menu.",
+              "sourceUrl": "https://waterbarsd.com/food-menu"
+            }
           },
           {
             "name": "Sushi roll selections",
@@ -19253,7 +19285,15 @@
           {
             "name": "Beer Battered Onion Rings",
             "category": "Food",
-            "price": 9
+            "price": 9,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-b2/498197badddf49e5-48ea513903c11eab.webp",
+              "width": 800,
+              "credit": "Jimmy's Famous American Tavern / official menu",
+              "height": 1200,
+              "caption": "Beer Battered Onion Rings — Jimmy's Famous American Tavern. Photograph published with the named item on the official menu. Official Jimmy’s chain product photograph; not claimed as photographed at the saved branch.",
+              "sourceUrl": "https://www.jfamous.com/beer-battered-onion-rings_2/"
+            }
           }
         ],
         "note": "Page says Mon-Fri 3-6pm, in-house dining; it does not name the branch (lists Dana Point and San Diego), so assumed to apply to San Diego."

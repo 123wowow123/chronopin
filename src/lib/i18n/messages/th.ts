@@ -2220,6 +2220,7 @@ const th: Messages = {
     filter: 'กรองตามชื่อ',
     sort: 'เรียงลำดับ',
     sortName: 'ชื่อ',
+    sortRecent: 'ล่าสุด',
     sortAscending: 'เรียงจากน้อยไปมาก',
     sortDescending: 'เรียงจากมากไปน้อย',
     noMatches: 'ไม่มีใครตรงกับชื่อนี้',

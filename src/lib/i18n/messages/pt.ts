@@ -2221,6 +2221,7 @@ const pt: Messages = {
     filter: 'Filtrar por nome',
     sort: 'Ordenar',
     sortName: 'Nome',
+    sortRecent: 'Mais recentes',
     sortAscending: 'Ordem crescente',
     sortDescending: 'Ordem decrescente',
     noMatches: 'Ninguém corresponde a esse nome.',

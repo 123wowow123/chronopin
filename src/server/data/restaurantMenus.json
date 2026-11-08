@@ -3016,7 +3016,15 @@
           {
             "name": "Sapporo — Draft",
             "category": "Beer",
-            "price": 10
+            "price": 10,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/787bb1815930997e-85b1a8f2e6b3526e.webp",
+              "width": 1193,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Sapporo — photograph published with this item on Soichi’s official menu.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Sapporo — Bottle",
@@ -3039,47 +3047,119 @@
           {
             "name": "Hitotsubu-No Mugi — Glass",
             "category": "Shochu",
-            "price": 13
+            "price": 13,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/12702dfb7cb0943d-b771f75b18af5396.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Hitotsubu-No Mugi — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Hitotsubu-No Mugi — Bottle",
             "category": "Shochu",
-            "price": 65
+            "price": 65,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/12702dfb7cb0943d-b771f75b18af5396.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Hitotsubu-No Mugi — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kawabe — Glass",
             "category": "Shochu",
-            "price": 12
+            "price": 12,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1f4f715f2b95629d-819412f0031dff9c.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 1113,
+              "caption": "Kawabe — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Kawabe — Bottle",
             "category": "Shochu",
-            "price": 65
+            "price": 65,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1f4f715f2b95629d-819412f0031dff9c.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 1113,
+              "caption": "Kawabe — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Akaruinouson — Glass",
             "category": "Shochu",
-            "price": 12
+            "price": 12,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/413a4d958198cf5a-13bc9e4948395c52.webp",
+              "width": 1196,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Akaruinouson — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Akaruinouson — Bottle",
             "category": "Shochu",
-            "price": 100
+            "price": 100,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/413a4d958198cf5a-13bc9e4948395c52.webp",
+              "width": 1196,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Akaruinouson — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Ume Shu — Glass",
             "category": "Shochu",
-            "price": 10
+            "price": 10,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/c4751aeea1fe80f8-1122891d24656696.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Ume Shu — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Ume Shu — Bottle",
             "category": "Shochu",
-            "price": 65
+            "price": 65,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/c4751aeea1fe80f8-1122891d24656696.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Ume Shu — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Ramune",
             "category": "Japanese Soft Drinks",
-            "price": 5
+            "price": 5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/62dbe32b5d36035d-83d2dee151acda8c.webp",
+              "width": 270,
+              "credit": "Soichi / official menu",
+              "height": 270,
+              "caption": "Ramune — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Oolong Tea",
@@ -3099,32 +3179,80 @@
           {
             "name": "Melon Cream Soda",
             "category": "Japanese Soft Drinks",
-            "price": 5
+            "price": 5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/ceb88c568e739d4e-d097d9417dbf575e.webp",
+              "width": 1024,
+              "credit": "Soichi / official menu",
+              "height": 1024,
+              "caption": "Melon Cream Soda — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Perrier",
             "category": "Soft Drinks",
-            "price": 4.5
+            "price": 4.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/356440d64b420cbe-d7cd30ef957da0ae.webp",
+              "width": 800,
+              "credit": "Soichi / official menu",
+              "height": 800,
+              "caption": "Perrier — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Coke",
             "category": "Soft Drinks",
-            "price": 4.5
+            "price": 4.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/d31887eb5a068ec1-8a6525412028ab55.webp",
+              "width": 196,
+              "credit": "Soichi / official menu",
+              "height": 196,
+              "caption": "Coke — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Diet Coke",
             "category": "Soft Drinks",
-            "price": 4.5
+            "price": 4.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/d940d50052129099-07ac8387927988fb.webp",
+              "width": 196,
+              "credit": "Soichi / official menu",
+              "height": 196,
+              "caption": "Diet Coke — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Sprite",
             "category": "Soft Drinks",
-            "price": 4.5
+            "price": 4.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/00e61bdad0f6346e-0732d5fa387c53c1.webp",
+              "width": 196,
+              "credit": "Soichi / official menu",
+              "height": 196,
+              "caption": "Sprite — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           },
           {
             "name": "Apple Juice",
             "category": "Soft Drinks",
-            "price": 4.5
+            "price": 4.5,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/96aa9bb60cdff627-091df55a83a7f69b.webp",
+              "width": 225,
+              "credit": "Soichi / official menu",
+              "height": 225,
+              "caption": "Apple Juice — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue"
+            }
           }
         ],
         "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."
@@ -3137,212 +3265,548 @@
           {
             "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 6oz",
             "category": "Samurai",
-            "price": 23
+            "price": 23,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/82ea6c5a44d1a504-1bf9f3b7bc1f76a4.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 12oz",
             "category": "Samurai",
-            "price": 41
+            "price": 41,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/82ea6c5a44d1a504-1bf9f3b7bc1f76a4.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — 720ml",
             "category": "Samurai",
-            "price": 76
+            "price": 76,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/82ea6c5a44d1a504-1bf9f3b7bc1f76a4.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Tamagawa Heirloom Yamahai Genshu, “Red Label” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 6oz",
             "category": "Samurai",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/482d6eab0ab334cf-8950f38ce83e7e82.webp",
+              "width": 226,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 12oz",
             "category": "Samurai",
-            "price": 39
+            "price": 39,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/482d6eab0ab334cf-8950f38ce83e7e82.webp",
+              "width": 226,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — 720ml",
             "category": "Samurai",
-            "price": 71
+            "price": 71,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/482d6eab0ab334cf-8950f38ce83e7e82.webp",
+              "width": 226,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Seitoku Junmai Ginjo Genshu, “Trapeza Cask release” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 6oz",
             "category": "Samurai",
-            "price": 24
+            "price": 24,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f924fb6aa9d93dd1-e9804a465a4dfa66.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 12oz",
             "category": "Samurai",
-            "price": 43
+            "price": 43,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f924fb6aa9d93dd1-e9804a465a4dfa66.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — 720ml",
             "category": "Samurai",
-            "price": 80
+            "price": 80,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f924fb6aa9d93dd1-e9804a465a4dfa66.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Izumi Judan Ginjo, “Tenth Degree” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 6oz",
             "category": "Samurai",
-            "price": 29
+            "price": 29,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/9a45c94ce735f07c-d3ce0e1bc8bb0b3f.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 263,
+              "caption": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 12oz",
             "category": "Samurai",
-            "price": 52
+            "price": 52,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/9a45c94ce735f07c-d3ce0e1bc8bb0b3f.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 263,
+              "caption": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — 720ml",
             "category": "Samurai",
-            "price": 94
+            "price": 94,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/9a45c94ce735f07c-d3ce0e1bc8bb0b3f.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 263,
+              "caption": "Kokuryu Junmai Daiinjo, “Crystal Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 6oz",
             "category": "Samurai",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/441f96b4a3c07683-5ec76d071e663669.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 301,
+              "caption": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 12oz",
             "category": "Samurai",
-            "price": 39
+            "price": 39,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/441f96b4a3c07683-5ec76d071e663669.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 301,
+              "caption": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — 720ml",
             "category": "Samurai",
-            "price": 71
+            "price": 71,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/441f96b4a3c07683-5ec76d071e663669.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 301,
+              "caption": "Kokuryu Kuzuryu Junmai, “9-Headed Dragon” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 6oz",
             "category": "Geisha",
-            "price": 31
+            "price": 31,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2fe6234028fd9004-085c3e0ed369bf54.webp",
+              "width": 231,
+              "credit": "Soichi / official menu",
+              "height": 314,
+              "caption": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 12oz",
             "category": "Geisha",
-            "price": 56
+            "price": 56,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2fe6234028fd9004-085c3e0ed369bf54.webp",
+              "width": 231,
+              "credit": "Soichi / official menu",
+              "height": 314,
+              "caption": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — 500ml",
             "category": "Geisha",
-            "price": 72
+            "price": 72,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2fe6234028fd9004-085c3e0ed369bf54.webp",
+              "width": 231,
+              "credit": "Soichi / official menu",
+              "height": 314,
+              "caption": "Hoyo Kura no Hana Junmai Daiginjo, “Fair Maiden” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 6oz",
             "category": "Geisha",
-            "price": 26
+            "price": 26,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/aa2b409b6d25b963-f372fef96098315b.webp",
+              "width": 211,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 12oz",
             "category": "Geisha",
-            "price": 47
+            "price": 47,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/aa2b409b6d25b963-f372fef96098315b.webp",
+              "width": 211,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — 720ml",
             "category": "Geisha",
-            "price": 86
+            "price": 86,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/aa2b409b6d25b963-f372fef96098315b.webp",
+              "width": 211,
+              "credit": "Soichi / official menu",
+              "height": 331,
+              "caption": "Dewazakura Dewasansan Junmai Ginjo “Green Ridge” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 6oz",
             "category": "Geisha",
-            "price": 25
+            "price": 25,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/bf49a9554cc387c8-964840a73bde9442.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 12oz",
             "category": "Geisha",
-            "price": 45
+            "price": 45,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/bf49a9554cc387c8-964840a73bde9442.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — 720ml",
             "category": "Geisha",
-            "price": 83
+            "price": 83,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/bf49a9554cc387c8-964840a73bde9442.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Dewazakura Ginjo Oka, “Cherry Bouquet” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 6oz",
             "category": "Geisha",
-            "price": 23
+            "price": 23,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1a423d8d3e496f58-20a9fd71751f1fb4.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 800,
+              "caption": "Miyasaka Shiro, “Sake Matinee”  -720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 12oz",
             "category": "Geisha",
-            "price": 41
+            "price": 41,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1a423d8d3e496f58-20a9fd71751f1fb4.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 800,
+              "caption": "Miyasaka Shiro, “Sake Matinee”  -720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Miyasaka Shiro, “Sake Matinee”  -720ml — 720ml",
             "category": "Geisha",
-            "price": 76
+            "price": 76,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1a423d8d3e496f58-20a9fd71751f1fb4.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 800,
+              "caption": "Miyasaka Shiro, “Sake Matinee”  -720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 6oz",
             "category": "Ninja",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1c6960ba81481f22-cccff4bfa223ff4d.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 12oz",
             "category": "Ninja",
-            "price": 40
+            "price": 40,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1c6960ba81481f22-cccff4bfa223ff4d.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — 720ml",
             "category": "Ninja",
-            "price": 74
+            "price": 74,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/1c6960ba81481f22-cccff4bfa223ff4d.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "Sohomare Karakuchi Junmai, “Premium Dry” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 6oz",
             "category": "Ninja",
-            "price": 24
+            "price": 24,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/165718c264abd9b4-061e4b6dab4a144b.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 12oz",
             "category": "Ninja",
-            "price": 44
+            "price": 44,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/165718c264abd9b4-061e4b6dab4a144b.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — 750ml",
             "category": "Ninja",
-            "price": 80
+            "price": 80,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/165718c264abd9b4-061e4b6dab4a144b.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Sohomare Junmai Ginjo, Tochigi “Indigo” - 750ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 6oz",
             "category": "Ninja",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f206fde72b241708-d4aaed2f1718d731.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 12oz",
             "category": "Ninja",
-            "price": 40
+            "price": 40,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f206fde72b241708-d4aaed2f1718d731.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — 720ml",
             "category": "Ninja",
-            "price": 73
+            "price": 73,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f206fde72b241708-d4aaed2f1718d731.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Tedorigawa Yamahai Junmai Ishikawa, “Silver Mountain” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 6oz",
             "category": "Ninja",
-            "price": 30
+            "price": 30,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5eb1fd3eec026ad5-6e149b5c98b38548.webp",
+              "width": 204,
+              "credit": "Soichi / official menu",
+              "height": 268,
+              "caption": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 12oz",
             "category": "Ninja",
-            "price": 55
+            "price": 55,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5eb1fd3eec026ad5-6e149b5c98b38548.webp",
+              "width": 204,
+              "credit": "Soichi / official menu",
+              "height": 268,
+              "caption": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — 500ml",
             "category": "Ninja",
-            "price": 70
+            "price": 70,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5eb1fd3eec026ad5-6e149b5c98b38548.webp",
+              "width": 204,
+              "credit": "Soichi / official menu",
+              "height": 268,
+              "caption": "Koshi no Kanbai Tokusen Ginjo, “Vanishing Point” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 6oz",
             "category": "Ninja",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/a59074047dd6fa55-c7088f2cae1860e2.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "“Summer Breeze”  Hoyo Sawayaka Junmai — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 12oz",
             "category": "Ninja",
-            "price": 37
+            "price": 37,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/a59074047dd6fa55-c7088f2cae1860e2.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "“Summer Breeze”  Hoyo Sawayaka Junmai — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "“Summer Breeze”  Hoyo Sawayaka Junmai — 720ml",
             "category": "Ninja",
-            "price": 66
+            "price": 66,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/a59074047dd6fa55-c7088f2cae1860e2.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 375,
+              "caption": "“Summer Breeze”  Hoyo Sawayaka Junmai — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "\"Silk Dragon\" Kuzuryu Daiginjo",
@@ -3360,17 +3824,41 @@
           {
             "name": "Hoyo Yamadanishiki Junmai Daiginjo, “Last Chance at Love” - 720ml",
             "category": "The Emperor",
-            "price": 170
+            "price": 170,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/ee78f7d007ebdb3f-19aaa25c46b9024f.webp",
+              "width": 206,
+              "credit": "Soichi / official menu",
+              "height": 291,
+              "caption": "Hoyo Yamadanishiki Junmai Daiginjo, “Last Chance at Love” - 720ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — 6oz",
             "category": "The Emperor",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5698c5c78b2c2895-4bb5d0c6f0fa86e2.webp",
+              "width": 160,
+              "credit": "Soichi / official menu",
+              "height": 240,
+              "caption": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — 12oz",
             "category": "The Emperor",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5698c5c78b2c2895-4bb5d0c6f0fa86e2.webp",
+              "width": 160,
+              "credit": "Soichi / official menu",
+              "height": 240,
+              "caption": "Futsushu Seitoku-Bessen, “Special Select Sake Ordinaire” — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Sake Flight",
@@ -3388,12 +3876,28 @@
           {
             "name": "Kamoizumi Ginjo Nigori, “Summer Snow” - 500ml",
             "category": "Nigori - Unfiltered",
-            "price": 63
+            "price": 63,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/7a8995984bc2f608-6827e2bd93f57647.webp",
+              "width": 240,
+              "credit": "Soichi / official menu",
+              "height": 360,
+              "caption": "Kamoizumi Ginjo Nigori, “Summer Snow” - 500ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           },
           {
             "name": "Uka Sparkling Organic Junmai Daiginjo 300ml",
             "category": "Nigori - Unfiltered",
-            "price": 45
+            "price": 45,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/dbaf426a7d808035-ac228773784d5857.webp",
+              "width": 201,
+              "credit": "Soichi / official menu",
+              "height": 251,
+              "caption": "Uka Sparkling Organic Junmai Daiginjo 300ml — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=sake"
+            }
           }
         ],
         "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."
@@ -3406,202 +3910,522 @@
           {
             "name": "NV 375ml Champagne Dervin Brut France",
             "category": "Sparkling Wine",
-            "price": 36
+            "price": 36,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/4deb8de3d9297b0d-07b2498a6ad80f15.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 504,
+              "caption": "NV 375ml Champagne Dervin Brut France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "NV 750ml Sparkling Brut Ovum Day Moon Oregon",
             "category": "Sparkling Wine",
-            "price": 140
+            "price": 140,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/3b30f42dc99cd9be-5e8b50b927a98d1d.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 456,
+              "caption": "NV 750ml Sparkling Brut Ovum Day Moon Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — Glass",
             "category": "Rosé",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/4cfd976d53ebe3af-57f8e04fd664ef7b.webp",
+              "width": 300,
+              "credit": "Soichi / official menu",
+              "height": 300,
+              "caption": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — Bottle",
             "category": "Rosé",
-            "price": 36
+            "price": 36,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/4cfd976d53ebe3af-57f8e04fd664ef7b.webp",
+              "width": 300,
+              "credit": "Soichi / official menu",
+              "height": 300,
+              "caption": "2021 Flanagan \"Riley's Rows\" Rose Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2019 Skinner Native Red Central Valley CA — Glass",
             "category": "Rosé",
-            "price": 11
+            "price": 11,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/16e97aaa4b0d3bea-273d6c0a952d10b9.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 429,
+              "caption": "2019 Skinner Native Red Central Valley CA — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2019 Skinner Native Red Central Valley CA — Bottle",
             "category": "Rosé",
-            "price": 33
+            "price": 33,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/16e97aaa4b0d3bea-273d6c0a952d10b9.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 429,
+              "caption": "2019 Skinner Native Red Central Valley CA — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — Glass",
             "category": "Fresh Light Wine",
-            "price": 14
+            "price": 14,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/357c0a05bb4dd3fa-7a510e32239c6c6f.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 998,
+              "caption": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — Bottle",
             "category": "Fresh Light Wine",
-            "price": 36
+            "price": 36,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/357c0a05bb4dd3fa-7a510e32239c6c6f.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 998,
+              "caption": "2022 Hunter's Sauvignon Blanc New Zealand Marlborough — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Handley Pinot Gris Anderson Valley California — Glass",
             "category": "Fresh Light Wine",
-            "price": 13
+            "price": 13,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/62cfea1435aa02f9-bee970ac03aa084b.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 505,
+              "caption": "2018 Handley Pinot Gris Anderson Valley California — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Handley Pinot Gris Anderson Valley California — Bottle",
             "category": "Fresh Light Wine",
-            "price": 33
+            "price": 33,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/62cfea1435aa02f9-bee970ac03aa084b.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 505,
+              "caption": "2018 Handley Pinot Gris Anderson Valley California — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — Glass",
             "category": "Fresh Light Wine",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/4805b6f4f14fb0d0-a9d4eb8c13761390.webp",
+              "width": 1032,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — Bottle",
             "category": "Fresh Light Wine",
-            "price": 42
+            "price": 42,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/4805b6f4f14fb0d0-a9d4eb8c13761390.webp",
+              "width": 1032,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2018 Harper Voit Pinot Blanc “Sur Lie” Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — Glass",
             "category": "Fresh Light Wine",
-            "price": 20
+            "price": 20,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/57e3d6ef43a01aa4-15e4f6ceca04255b.webp",
+              "width": 1153,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — Bottle",
             "category": "Fresh Light Wine",
-            "price": 59
+            "price": 59,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/57e3d6ef43a01aa4-15e4f6ceca04255b.webp",
+              "width": 1153,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2021 Hardin Ranch Sauvignon Blanc Napa Valley — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Ovum Off the Grid Riesling Oregon — Glass",
             "category": "Fresh Light Wine",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/6aa992cdeef5d8fc-39539c0bed1eae0b.webp",
+              "width": 996,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2021 Ovum Off the Grid Riesling Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Ovum Off the Grid Riesling Oregon — Bottle",
             "category": "Fresh Light Wine",
-            "price": 71
+            "price": 71,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/6aa992cdeef5d8fc-39539c0bed1eae0b.webp",
+              "width": 996,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "2021 Ovum Off the Grid Riesling Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — Glass",
             "category": "Rich White Wine",
-            "price": 23
+            "price": 23,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/db14f3f0628a888e-1095103ffb6bec94.webp",
+              "width": 260,
+              "credit": "Soichi / official menu",
+              "height": 260,
+              "caption": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — Bottle",
             "category": "Rich White Wine",
-            "price": 60
+            "price": 60,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/db14f3f0628a888e-1095103ffb6bec94.webp",
+              "width": 260,
+              "credit": "Soichi / official menu",
+              "height": 260,
+              "caption": "2020 Walter Hansel Chardonnay \"North Slope\" Russian River Valley — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — Glass",
             "category": "Rich White Wine",
-            "price": 18
+            "price": 18,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/9d1c10e02ccf36c0-31962d30c8e39ad3.webp",
+              "width": 593,
+              "credit": "Soichi / official menu",
+              "height": 472,
+              "caption": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — Bottle",
             "category": "Rich White Wine",
-            "price": 53
+            "price": 53,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/9d1c10e02ccf36c0-31962d30c8e39ad3.webp",
+              "width": 593,
+              "credit": "Soichi / official menu",
+              "height": 472,
+              "caption": "2018 Domaine Bernard Millot Bourgogne Chardonnay France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — Glass",
             "category": "Rich White Wine",
-            "price": 20
+            "price": 20,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f7ec85df2a03d562-cb5fe0274f75da9c.webp",
+              "width": 641,
+              "credit": "Soichi / official menu",
+              "height": 389,
+              "caption": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — Bottle",
             "category": "Rich White Wine",
-            "price": 55
+            "price": 55,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/f7ec85df2a03d562-cb5fe0274f75da9c.webp",
+              "width": 641,
+              "credit": "Soichi / official menu",
+              "height": 389,
+              "caption": "2020 Samsara Chardonnay Santa Rita Hill Santa Barbara — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Carson Phillips Chardonnay Oregon — Glass",
             "category": "Rich White Wine",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5fa3e08231b56a00-9e4769cb38533b61.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 285,
+              "caption": "2018 Carson Phillips Chardonnay Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Carson Phillips Chardonnay Oregon — Bottle",
             "category": "Rich White Wine",
-            "price": 60
+            "price": 60,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/5fa3e08231b56a00-9e4769cb38533b61.webp",
+              "width": 250,
+              "credit": "Soichi / official menu",
+              "height": 285,
+              "caption": "2018 Carson Phillips Chardonnay Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Rivers-Marie Chardonnay Sonoma Coast — Glass",
             "category": "Rich White Wine",
-            "price": 20
+            "price": 20,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2d5fd25c42a02bbc-133d55fd5d7626bf.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 763,
+              "caption": "2020 Rivers-Marie Chardonnay Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2020 Rivers-Marie Chardonnay Sonoma Coast — Bottle",
             "category": "Rich White Wine",
-            "price": 55
+            "price": 55,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2d5fd25c42a02bbc-133d55fd5d7626bf.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 763,
+              "caption": "2020 Rivers-Marie Chardonnay Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — Glass",
             "category": "Light Red Wine",
-            "price": 15
+            "price": 15,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/611afb9cbe5699a6-9251d970964fe3b5.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 359,
+              "caption": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — Bottle",
             "category": "Light Red Wine",
-            "price": 42
+            "price": 42,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/611afb9cbe5699a6-9251d970964fe3b5.webp",
+              "width": 600,
+              "credit": "Soichi / official menu",
+              "height": 359,
+              "caption": "2018 Domaine Bel Air Beaujolais Morgon \"Les Charmes\" France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — Glass",
             "category": "Light Red Wine",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/581379c2c526a008-cffa02e20a9f8e4b.webp",
+              "width": 551,
+              "credit": "Soichi / official menu",
+              "height": 301,
+              "caption": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — Bottle",
             "category": "Light Red Wine",
-            "price": 66
+            "price": 66,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/581379c2c526a008-cffa02e20a9f8e4b.webp",
+              "width": 551,
+              "credit": "Soichi / official menu",
+              "height": 301,
+              "caption": "2019 Domaine Masse Givry 1er Cru Pinot Noir France — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — Glass",
             "category": "Light Red Wine",
-            "price": 31
+            "price": 31,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/8b896dd53c601845-b6548c54d483119d.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 996,
+              "caption": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — Bottle",
             "category": "Light Red Wine",
-            "price": 98
+            "price": 98,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/8b896dd53c601845-b6548c54d483119d.webp",
+              "width": 1200,
+              "credit": "Soichi / official menu",
+              "height": 996,
+              "caption": "2017 Limited Eyrie Vinyards Pinot Meunier Willamette Valley Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2017 Carson Phillips Pinot Noir Oregon — Glass",
             "category": "Light Red Wine",
-            "price": 22
+            "price": 22,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/49c1abdbf1ed12da-86ccaec71add7241.webp",
+              "width": 500,
+              "credit": "Soichi / official menu",
+              "height": 500,
+              "caption": "2017 Carson Phillips Pinot Noir Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2017 Carson Phillips Pinot Noir Oregon — Bottle",
             "category": "Light Red Wine",
-            "price": 60
+            "price": 60,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/49c1abdbf1ed12da-86ccaec71add7241.webp",
+              "width": 500,
+              "credit": "Soichi / official menu",
+              "height": 500,
+              "caption": "2017 Carson Phillips Pinot Noir Oregon — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Peter Paul Pinot Noir Sonoma Coast — Glass",
             "category": "Light Red Wine",
-            "price": 21
+            "price": 21,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/ad674a6fa1ef80ab-50836140801f3521.webp",
+              "width": 641,
+              "credit": "Soichi / official menu",
+              "height": 590,
+              "caption": "2021 Peter Paul Pinot Noir Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2021 Peter Paul Pinot Noir Sonoma Coast — Bottle",
             "category": "Light Red Wine",
-            "price": 54
+            "price": 54,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/ad674a6fa1ef80ab-50836140801f3521.webp",
+              "width": 641,
+              "credit": "Soichi / official menu",
+              "height": 590,
+              "caption": "2021 Peter Paul Pinot Noir Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Aston Estate Pinot Noir Sonoma Coast — Glass",
             "category": "Light Red Wine",
-            "price": 24
+            "price": 24,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/13f4908525ee2c80-5ed93891eaf103a2.webp",
+              "width": 470,
+              "credit": "Soichi / official menu",
+              "height": 273,
+              "caption": "2018 Aston Estate Pinot Noir Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "2018 Aston Estate Pinot Noir Sonoma Coast — Bottle",
             "category": "Light Red Wine",
-            "price": 71
+            "price": 71,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/13f4908525ee2c80-5ed93891eaf103a2.webp",
+              "width": 470,
+              "credit": "Soichi / official menu",
+              "height": 273,
+              "caption": "2018 Aston Estate Pinot Noir Sonoma Coast — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "Kuramoto No Umeshu — Glass",
             "category": "Plum Wine",
-            "price": 10
+            "price": 10,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2c5ab7eff4d6218d-749ada3e91e55c4a.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Kuramoto No Umeshu — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           },
           {
             "name": "Kuramoto No Umeshu — Bottle",
             "category": "Plum Wine",
-            "price": 65
+            "price": 65,
+            "image": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-dishes/san-diego-expanded-2026-11-08/2c5ab7eff4d6218d-749ada3e91e55c4a.webp",
+              "width": 900,
+              "credit": "Soichi / official menu",
+              "height": 1200,
+              "caption": "Kuramoto No Umeshu — photograph published with this item on Soichi’s official menu. Product/bottle illustration; pictured packaging and glasses do not define the saved serving size or whole-bottle inclusion.",
+              "sourceUrl": "https://www.soichisushi.com/copy-of-menu?location=Adams+Avenue&menu=wine"
+            }
           }
         ],
         "note": "Published Adams Avenue menu. Omakase courses vary with seasonal availability. Dine-in and takeout restrictions are shown in item names."

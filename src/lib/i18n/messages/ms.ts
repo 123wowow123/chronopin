@@ -2234,6 +2234,7 @@ const ms: Messages = {
     filter: 'Tapis mengikut nama',
     sort: 'Isih',
     sortName: 'Nama',
+    sortRecent: 'Terbaharu',
     sortAscending: 'Isih menaik',
     sortDescending: 'Isih menurun',
     noMatches: 'Tiada sesiapa yang sepadan dengan nama itu.',

@@ -2230,6 +2230,7 @@ const fr: Messages = {
     filter: 'Filtrer par nom',
     sort: 'Trier',
     sortName: 'Nom',
+    sortRecent: 'Les plus récents',
     sortAscending: 'Tri croissant',
     sortDescending: 'Tri décroissant',
     noMatches: 'Personne ne correspond à ce nom.',

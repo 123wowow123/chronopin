@@ -2241,6 +2241,7 @@ const hi: Messages = {
     filter: 'नाम से छाँटें',
     sort: 'क्रमबद्ध करें',
     sortName: 'नाम',
+    sortRecent: 'सबसे हाल के',
     sortAscending: 'आरोही क्रम में क्रमबद्ध करें',
     sortDescending: 'अवरोही क्रम में क्रमबद्ध करें',
     noMatches: 'इस नाम से कोई मेल नहीं खाता।',

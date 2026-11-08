@@ -2233,6 +2233,7 @@ const vi: Messages = {
     filter: 'Lọc theo tên',
     sort: 'Sắp xếp',
     sortName: 'Tên',
+    sortRecent: 'Gần đây nhất',
     sortAscending: 'Sắp xếp tăng dần',
     sortDescending: 'Sắp xếp giảm dần',
     noMatches: 'Không có ai khớp với tên đó.',

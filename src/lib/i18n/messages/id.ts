@@ -2234,6 +2234,7 @@ const id: Messages = {
     filter: 'Saring menurut nama',
     sort: 'Urutkan',
     sortName: 'Nama',
+    sortRecent: 'Terbaru',
     sortAscending: 'Urutkan naik',
     sortDescending: 'Urutkan turun',
     noMatches: 'Tidak ada yang cocok dengan nama itu.',

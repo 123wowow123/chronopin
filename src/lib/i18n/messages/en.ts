@@ -2234,6 +2234,7 @@ const en = {
     filter: 'Filter by name',
     sort: 'Sort',
     sortName: 'Name',
+    sortRecent: 'Most recent',
     sortAscending: 'Sort ascending',
     sortDescending: 'Sort descending',
     noMatches: 'No one matches that name.',
