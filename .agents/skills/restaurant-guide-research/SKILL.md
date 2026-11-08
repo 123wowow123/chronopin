@@ -192,9 +192,15 @@ The empty item key is the whole-pin review; exclude dish ratings from restaurant
 The dialog loads reader reviews only when opened, uses native focus containment, and installs
 an Escape handler on window capture because the navbar's document capture handler otherwise
 consumes native Escape dismissal (including when the navbar hydrates after the dialog opens).
-The menu review star is filled only when a numeric reader rating exists. Show the
-reader rating average as `4.5/5`, never the review count as a score. Unscored external reviews
-show only an outlined star without visible text; never infer a numeric dish rating from prose or a restaurant-wide rating.
+Owner instruction (2026-11-07): infer menu-item scores from external review prose. Editorial
+estimates in `src/lib/restaurantReviewRatings.ts` assess saved excerpts on a 1–5 scale. Add
+estimates only for clear dish-specific praise or criticism; descriptive excerpts remain unscored.
+Display inferred averages as `4.5/5` without an approximation symbol; source cards show a compact gold star badge at the top right
+with the inference explained in its tooltip and accessible label, rather than a paragraph below the quote,
+and never attribute the estimate to the source. Reader averages take precedence and remain separate.
+Use a half-filled star for inferred ratings on menu badges and source cards; reader ratings
+use a solid star. The fill distinguishes rating provenance, not its numeric value. Unscored excerpts show an outline
+without visible text. Never use the review count or a restaurant-wide rating as a dish score.
 Landing tiles and native pin menus hide the star when empty (and while counts are unknown);
 clicking the menu text still lets readers add the first review. Tooltips/accessibility labels explain the state. Reader averages and counts
 are batched across restaurants via `/api/pins/review-summaries?items=1&ids=...`, shared by all menu

@@ -51,6 +51,7 @@ import { PinPlace } from '@/components/pin/PinPlace';
 import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
 import { PinRestaurantDetails } from '@/components/pin/PinRestaurantDetails';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
+import { PinEarningsTrends } from '@/components/pin/PinEarningsTrends';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinCandidates } from '@/components/pin/PinCandidates';
@@ -610,6 +611,8 @@ async function PinBody({
       {candidates?.length ? <PinCandidates candidates={candidates} t={t} /> : null}
       {competitors?.length ? <PinCompetitors competitors={competitors} t={t} /> : null}
       <PinStocks pinId={pin.id} />
+      {/* An earnings pin's EPS-vs-estimate and revenue-vs-earnings charts (Nasdaq), as on Yahoo Finance. */}
+      {pin.tags?.some((tag) => tag.name === 'Earnings') ? <PinEarningsTrends pinId={pin.id} /> : null}
       {/* The publisher's own chart for a series this event moves (PinSeries,
           0062). The pin's JSON says whether it has one, so a pin without a
           series never makes the request. */}

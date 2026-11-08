@@ -7,6 +7,7 @@ import Anchor from '@/components/ui/Anchor';
 import { useMenuItemReviewSummary } from '@/lib/client/menuItemReviewSummaries';
 import { Icon } from '@/components/ui/Icon';
 import { restaurantDishImages, type RestaurantMenuItem } from '@/lib/restaurantMenus';
+import { inferredMenuItemRating, inferredReviewRating } from '@/lib/restaurantReviewRatings';
 import { PinMediaFrame } from './PinMedia';
 import { PinReviews } from './PinReviews';
 import styles from './RestaurantMenu.module.css';
@@ -18,8 +19,11 @@ export function MenuItemReviews({ pinId, item, children, gallery = [], photoOnly
   const [open, setOpen] = useState(false);
   const summary = useMenuItemReviewSummary(pinId, item.name.trim());
   const count = (item.reviews?.length ?? 0) + (summary?.count ?? 0);
-  const rating = summary?.average;
-  const label = rating != null ? `${item.name}: ${rating.toFixed(1)} out of 5 from ${summary!.count} reader ${summary!.count === 1 ? 'rating' : 'ratings'}`
+  const inferred = summary?.average == null;
+  const rating = summary?.average ?? inferredMenuItemRating(item.reviews);
+  const label = rating != null ? inferred
+    ? `${item.name}: approximately ${rating.toFixed(1)} out of 5, inferred from external review text; not a source-published rating`
+    : `${item.name}: ${rating.toFixed(1)} out of 5 from ${summary!.count} reader ${summary!.count === 1 ? 'rating' : 'ratings'}`
     : count ? `${count} ${count === 1 ? 'review' : 'reviews'} for ${item.name} — not yet rated`
     : summary === undefined ? `Check reviews for ${item.name}` : `No reviews yet for ${item.name} — be the first`;
   const image = restaurantDishImages(item)[0];
@@ -30,7 +34,7 @@ export function MenuItemReviews({ pinId, item, children, gallery = [], photoOnly
     </button> : null}
     {children ? <button type="button" className={styles.reviewText} aria-haspopup="dialog" aria-label={`View ${image ? 'photo and ' : ''}reviews for ${item.name}`} onClick={() => setOpen(true)}>{children}</button> : null}
     {!photoOnly && canReview && (!hideEmpty || count > 0) ? <button type="button" className={styles.reviewButton} data-has-reviews={count > 0} data-rated={rating != null} aria-label={label} title={label} aria-haspopup="dialog" onClick={() => setOpen(true)}>
-      <Icon name="star" className={styles.reviewStar} />
+      <RatingStar fill={rating == null ? 'empty' : inferred ? 'half' : 'solid'} />
       {rating != null ? <span className={styles.reviewRating} aria-hidden="true">{rating.toFixed(1)}<small>/5</small></span> : null}
     </button> : null}
     {open && createPortal(<ReviewDialog dialogRef={dialog} heading={heading} item={item} gallery={gallery} pinId={pinId} onClose={() => setOpen(false)} />, document.body)}
@@ -87,7 +91,10 @@ function ReviewDialog({ dialogRef, heading, item: initialItem, gallery, pinId, o
       <div className={styles.reviewDialogReviews}>
       <h3 className={styles.reviewSectionTitle}>External reviews</h3>
       {item.reviews?.length ? <ul className={styles.reviewSources}>{item.reviews.map((review) => <li key={review.sourceUrl} className={styles.reviewSourceCard}>
-        <div className={styles.reviewSourceMeta}><span>{review.provider}</span>{review.publishedDate && <time dateTime={review.publishedDate}>{review.publishedDate}</time>}</div>
+        <div className={styles.reviewSourceHeader}>
+          <div className={styles.reviewSourceMeta}><span>{review.provider}</span>{review.publishedDate && <time dateTime={review.publishedDate}>{review.publishedDate}</time>}</div>
+          <InferredRatingBadge rating={inferredReviewRating(review)} />
+        </div>
         <blockquote>“{review.quote}”</blockquote>
         <Anchor href={review.sourceUrl} target="_blank" rel="noopener noreferrer" className={styles.reviewSourceLink}><span>{review.title}</span><span aria-hidden="true">↗</span></Anchor>
       </li>)}</ul> : <p className={styles.reviewEmpty}>No external reviews yet.</p>}
@@ -96,6 +103,22 @@ function ReviewDialog({ dialogRef, heading, item: initialItem, gallery, pinId, o
       </div>
     </div>
   </dialog>;
+}
+
+function RatingStar({ fill }: { fill: 'empty' | 'half' | 'solid' }) {
+  return <span className={styles.reviewStar} data-fill={fill} aria-hidden="true">
+    <Icon name="star" />
+    {fill === 'half' ? <Icon name="star" className={styles.reviewStarHalf} /> : null}
+  </span>;
+}
+
+function InferredRatingBadge({ rating }: { rating: number | null }) {
+  if (rating == null) return null;
+  const label = `Approximately ${rating.toFixed(1)} out of 5 — inferred from this excerpt, not rated by the source`;
+  return <span className={styles.reviewEstimate} role="img" aria-label={label} title={label}>
+    <RatingStar fill="half" />
+    <span aria-hidden="true">{rating.toFixed(1)}<small>/5</small></span>
+  </span>;
 }
 
 function DishPhotoGallery({ item }: { item: RestaurantMenuItem }) {

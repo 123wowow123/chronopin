@@ -6,6 +6,7 @@
 // Live quotes follow the market odds' shape: one feed per symbol, re-read on a
 // timer while anyone watches, pushed to every watcher (src/server/liveFeed.ts).
 
+import { parseTrends, type EarningsTrends } from '@/lib/earningsTrends';
 import { isCompanyListing, nasdaqChartInstant, nasdaqDay, nasdaqNumber, type AssetClass, type DailyClose, type StockQuote } from '@/lib/stocks';
 import log from './util/log';
 
@@ -203,4 +204,25 @@ export function subscribeQuote(symbol: string, assetClass: AssetClass, listener:
       if (feeds.get(symbol) === joined) feeds.delete(symbol);
     }
   };
+}
+
+// EPS against the consensus and revenue against earnings, from Nasdaq's
+// earnings-surprise, forecast and income-statement endpoints (stocks only).
+// Each endpoint may fail alone: what is left still charts. Null when none do.
+export function fetchEarningsTrends(symbol: string): Promise<EarningsTrends | null> {
+  return cached(`earnings:${symbol}`, async () => {
+    const ok = async <T>(path: string): Promise<T | null> => get<T>(path).catch(() => null);
+    const [surprise, forecast, quarterly, annual] = await Promise.all([
+      ok<{ earningsSurpriseTable?: { rows?: any[] } }>(`/company/${q(symbol)}/earnings-surprise`),
+      ok<{ quarterlyForecast?: { rows?: any[] } }>(`/analyst/${q(symbol)}/earnings-forecast`),
+      ok<{ incomeStatementTable?: any }>(`/company/${q(symbol)}/financials?frequency=2`),
+      ok<{ incomeStatementTable?: any }>(`/company/${q(symbol)}/financials?frequency=1`),
+    ]);
+    return parseTrends(symbol, {
+      surprise: surprise?.earningsSurpriseTable?.rows,
+      forecast: forecast?.quarterlyForecast?.rows,
+      quarterly: quarterly?.incomeStatementTable,
+      annual: annual?.incomeStatementTable,
+    });
+  });
 }
