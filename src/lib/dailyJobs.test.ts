@@ -9,7 +9,7 @@ const weekly = DEFAULT_DAILY_JOBS.jobs[3];
 describe('parseDailyJobs', () => {
   it('accepts its own default: off, at the top limits', () => {
     expect(parseDailyJobs(DEFAULT_DAILY_JOBS)).toEqual({ setting: DEFAULT_DAILY_JOBS });
-    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxUpdates === (j.id === 'weekly' ? 100 : 250))).toBe(true);
+    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxUpdates === (j.id === 'weekly' ? 100 : null))).toBe(true);
     expect([midnight, news].every((j) => j.maxNewPins === 100 && j.dayOfMonth === null)).toBe(true);
   });
 
@@ -61,8 +61,10 @@ describe('parseDailyJobs', () => {
       { tasks: [] },
       { driver: 'gpt' },
       { maxNewPins: 101 },
-      { maxUpdates: 251 },
+      { maxUpdates: 1.5 },
       { maxUpdates: -1 },
+      { maxUpdates: '250' },
+      { maxUpdates: undefined },
       { id: 'Has Space' },
       { enabled: 'yes' },
       { dayOfMonth: 0 },
@@ -73,6 +75,22 @@ describe('parseDailyJobs', () => {
     }
     expect(parseDailyJobs({ jobs: [news, news] })).toHaveProperty('problem');
     expect(parseDailyJobs(null)).toHaveProperty('problem');
+  });
+
+  it('accepts no limit on pin updates (null) and any whole number', () => {
+    for (const maxUpdates of [null, 0, 100, 250, 5000]) {
+      const parsed = parseDailyJobs({ jobs: [{ ...news, maxUpdates }] });
+      expect(parsed).toHaveProperty('setting');
+      expect((parsed as { setting: { jobs: { maxUpdates: number | null }[] } }).setting.jobs[0].maxUpdates).toBe(maxUpdates);
+    }
+  });
+
+  it('gives the daily jobs no update limit by default and keeps the weekly job at 100', () => {
+    const byId = Object.fromEntries(DEFAULT_DAILY_JOBS.jobs.map((j) => [j.id, j.maxUpdates]));
+    expect(byId.midnight).toBeNull();
+    expect(byId.news).toBeNull();
+    expect(byId.monthly).toBeNull();
+    expect(byId.weekly).toBe(100);
   });
 });
 

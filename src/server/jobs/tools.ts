@@ -81,7 +81,8 @@ export type JobContext = {
   runId: number;
   jobId: string;
   maxNewPins: number;
-  maxUpdates: number;
+  // null: no limit on pin updates.
+  maxUpdates: number | null;
   created: number;
   updated: number;
   // When this job last finished a run, for "since the last run".
@@ -303,7 +304,7 @@ export const TOOLS: JobTool[] = [
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
       if (String(input.blurb).trim().length > 220) throw new Error('Keep the line to 220 characters');
-      if (ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
+      if (ctx.maxUpdates !== null && ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
       const listed = (await Products.needingReview(PRODUCT_SHELVES.map((s) => s.name), SHELF_SIZE, 365, await timelineMinConfidence())).some((p) => p.pinId === pinId);
       if (!listed) throw new Error('That pin is not a product on the products page, or is not one product_candidates lists');
       await Products.saveBlurb({ pinId, blurb: String(input.blurb), sourceUrl: input.sourceUrl ?? null, rating: input.rating ?? null });
@@ -383,7 +384,7 @@ export const TOOLS: JobTool[] = [
     description: 'Merge verified reviews into an existing rubric, or create/extend PinCriticReview. Uses native pin APIs locally and in production, resolves production ids by unique sourceUrl, preserves author, rubric axes and existing reviews, refuses hand rows, and reads back to verify. Each source must be an opened HTTPS page with exact title, verbatim quote <=300 characters, explicit publishedDate (YYYY-MM-DD or empty when genuinely unpublished), and sentiment from reviewRubric (-1..1). Supply a basis explaining exact product matching, sources checked and any gaps. Up to 6 reviews for rubrics or 8 for critics. Retain source evidence in references/source wikis and synchronize replay catalogs before reporting completion.',
     input_schema: obj({ table: str('One of the nine review table names, e.g. PinCriticReview or PinCarPerf'), pinId: num('Local pin id'), basis: str('Research basis, at most 1000 characters'), reviews: { type: 'array', items: obj({ url: str('Opened HTTPS review'), title: str('Exact article title'), publishedDate: str('Explicit publication day or empty'), quote: str('Verbatim extract, at most 300 characters'), sentiment: { type: 'number', description: '-1 to 1 from reviewRubric' } }, ['url','title','publishedDate','quote','sentiment']) } }, ['table','pinId','basis','reviews']),
     run: async (input, ctx) => {
-      if (ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
+      if (ctx.maxUpdates !== null && ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached.`);
       const result = await saveResearchedReviews(input.table as ReviewTable, int(input.pinId, 0, 1, 2 ** 31 - 1), (input.reviews ?? []).map((r: Record<string, unknown>) => ({ ...r, publishedDate: r.publishedDate || null })), String(input.basis ?? ''));
       ctx.updated++;
       await act(ctx, { tool: 'save_researched_reviews', pinId: input.pinId, title: result.title, detail: JSON.stringify(result.saved) });
@@ -1175,7 +1176,7 @@ export const TOOLS: JobTool[] = [
     input_schema: obj({ pinId: num('Pin id'), patch: { type: 'object', description: 'Changed fields and helpers' }, reason: str('What changed and on what evidence') }, ['pinId', 'patch', 'reason']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
-      if (ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached; mark the rest for revisiting.`);
+      if (ctx.maxUpdates !== null && ctx.updated >= ctx.maxUpdates) throw new Error(`This run's limit of ${ctx.maxUpdates} updates is reached; mark the rest for revisiting.`);
       const patch = (input.patch ?? {}) as PinPatch;
       ctx.updated++;
       const saved = await updatePin(pinId, patch).catch((err) => {
@@ -1238,7 +1239,7 @@ export async function runTool(name: string, input: Record<string, any>, ctx: Job
 
 // The run's context from its row, so a second process (the MCP server)
 // counts what the run has already written against the same limits.
-export async function contextForRun(runId: number, job: { maxNewPins: number; maxUpdates: number }): Promise<JobContext> {
+export async function contextForRun(runId: number, job: { maxNewPins: number; maxUpdates: number | null }): Promise<JobContext> {
   const run = await JobRun.get(runId);
   if (!run) throw new Error(`No job run ${runId}`);
   const count = (tool: string) => run.actions.filter((a) => a.tool === tool).length;

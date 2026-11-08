@@ -238,13 +238,13 @@ export type JobSetting = {
   // auto: the app's API key when it has credit, else a Claude Code session.
   driver: DriverChoice;
   maxNewPins: number;
-  maxUpdates: number;
+  // null: no limit on pin updates in a run (owner, 2026-11-08).
+  maxUpdates: number | null;
 };
 
 export type DailyJobsSetting = { jobs: JobSetting[] };
 
 export const MAX_NEW_PINS = 100;
-export const MAX_UPDATES = 250;
 export const MAX_TIMES = 6;
 export const MAX_DAY_OF_MONTH = 28;
 export const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] as const;
@@ -270,7 +270,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       tasks: ['revisits', 'pinHealth', 'thinPins', 'adTranslations', 'restaurantRegions', 'personCampaigns', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
-      maxUpdates: MAX_UPDATES,
+      maxUpdates: null,
     },
     {
       id: 'news',
@@ -293,7 +293,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'breakingNews', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
-      maxUpdates: MAX_UPDATES,
+      maxUpdates: null,
     },
     {
       id: 'monthly',
@@ -307,7 +307,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       tasks: ['lowConfidence'],
       driver: 'auto',
       maxNewPins: 0,
-      maxUpdates: MAX_UPDATES,
+      maxUpdates: null,
     },
     {
       // Monday early, so the week opens with the page refreshed (owner,
@@ -395,8 +395,10 @@ function parseJob(value: unknown, index: number): { job: JobSetting } | { proble
   };
   const maxNewPins = count('maxNewPins', MAX_NEW_PINS);
   if (maxNewPins === null) return { problem: `${at}.maxNewPins must be a whole number from 0 to ${MAX_NEW_PINS}` };
-  const maxUpdates = count('maxUpdates', MAX_UPDATES);
-  if (maxUpdates === null) return { problem: `${at}.maxUpdates must be a whole number from 0 to ${MAX_UPDATES}` };
+  // A whole number of updates, or null for no limit.
+  const rawUpdates = raw.maxUpdates;
+  const maxUpdates = rawUpdates === null ? null : Number.isInteger(rawUpdates) && (rawUpdates as number) >= 0 ? (rawUpdates as number) : undefined;
+  if (maxUpdates === undefined) return { problem: `${at}.maxUpdates must be null (no limit) or a whole number from 0` };
   return {
     job: {
       id: raw.id,

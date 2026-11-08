@@ -10,7 +10,6 @@ import {
   WEEKDAYS,
   MAX_NEW_PINS,
   MAX_TIMES,
-  MAX_UPDATES,
   TASK_GROUPS,
   TASK_IDS,
   TASKS,
@@ -351,13 +350,13 @@ function JobCard({
           />
         </label>
         <label className="flex flex-col gap-1 text-sm">
-          Pin updates per run, at most
+          Pin updates per run, at most (blank: no limit)
           <input
             type="number"
             min={0}
-            max={MAX_UPDATES}
-            value={job.maxUpdates}
-            onChange={(e) => onChange({ maxUpdates: Math.max(0, Math.min(MAX_UPDATES, Math.round(Number(e.target.value) || 0))) })}
+            placeholder="No limit"
+            value={job.maxUpdates ?? ''}
+            onChange={(e) => onChange({ maxUpdates: e.target.value.trim() === '' ? null : Math.max(0, Math.round(Number(e.target.value) || 0)) })}
             className="field"
           />
         </label>

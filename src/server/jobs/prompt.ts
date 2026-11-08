@@ -61,7 +61,7 @@ export async function kickoff(job: JobSetting, ctx: JobContext, now = new Date()
   return [
     `Run the "${job.label}" job (${job.id}) now: ${now.toISOString()} (${now.toLocaleString('en-US', { timeZone: job.timeZone, dateStyle: 'full', timeStyle: 'short' })} in ${job.timeZone}).`,
     `Tasks, in this order:\n${tasks.join('\n')}`,
-    `Limits for this run: at most ${ctx.maxNewPins} new pins and ${ctx.maxUpdates} pin updates.`,
+    `Limits for this run: at most ${ctx.maxNewPins} new pins and ${ctx.maxUpdates === null ? 'no limit on' : `${ctx.maxUpdates}`} pin updates.`,
     ctx.since ? `This job last completed a run at ${ctx.since.toISOString()}; "since the last update" means since then.` : 'This is the first run of this job; "since the last update" means the last 24 hours.',
     learnings.length
       ? `What earlier runs learned, newest first (act on these):\n${learnings.map((l) => `- [${l.at.slice(0, 10)} ${l.jobId}] ${l.topic}: ${l.text}`).join('\n')}`
