@@ -1,5 +1,15 @@
 # To Do
 
+## Project specs panel `PinProject` (November 8, 2026)
+
+**Done:** table 0249, `GET|PUT|DELETE /api/pins/:id/project`, "Project specs" tile panel on the pin page (hidden on data-centre pins), docs `docs/okf/tables/pin-project.md`, skill section 4b. Prod: 6 title rows, 442 rows mapped from existing sourced `PinFactory` metrics (12 agents, 26 held), 25 rows from web research (hotel rooms, housing, Chicago Fire stadium; every quote checked against the raw page). About 473 rows on prod. Scripts: `scripts/construction/backfillProjectSpecs{,Prod}.ts`, `applyProjectSpecsProd.ts`.
+
+- [ ] **Held from the factory-metric pass (26):** 18092, 18852, 18602, 18966, 18817, 16331, 2295, 2198, 15754, 15660, 19010, 18988, 7195, 20654, 20876, 20651, 7109, 549, 539, 135, 105 (7034, 7028, 7058, 7066, 7212 were re-researched): scope or definition doubts (campus vs phase, "more than", footprint vs floor area). Re-read each source before saving.
+- [ ] **No figure found / unverified quote:** hotels 15274, 15275, 15281, 15284, 15287, 15288, 15289, 15292, 15294 (pages blocked the check), 15296, 15300, 15303, 15802-15805, 15807, 15808 rooms; held for judgment 15276, 15277, 15283, 15301, 15801. Housing 7102, 7109, 7137, 7141, 7171, 7191, 7192, 7195, 7212, 7218, 7220, 7225, 7236, 20876: conflicting or phase-specific counts.
+- [ ] **Tile search terms:** tiles are not links because `units:`, `rooms:`, `seats:` search terms do not exist; add them (like `mw:`) if wanted.
+- [ ] **~850 tagged build pins have no factory profile and no spec row:** needs a web-research pass (units, rooms, seats, stories, area, parking), not title parsing.
+- [ ] **Uncommitted:** this ToDo edit only; the feature code and scripts are committed and deployed (prod rows exist; local DB has only the 5 title rows).
+
 ## News run 45 (November 4, 2026): open items
 
 **Done:** WTI month-end thread 20725-20727 and October CPI 20728 on production; 25 revisits checked (9 resolved or edited); about 60 model rubric/table saves, 7 factory profiles, construction reviews, 12 product blurbs, pin and holiday ads. Details: `docs/okf/scraping/news-2026-11-04-am.md`. Rule added to `run-news-job`: every lane every run.

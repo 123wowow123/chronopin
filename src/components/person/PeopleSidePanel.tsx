@@ -422,7 +422,7 @@ export function PeopleSidePanel({
                     const kindKey = PREMIUM_KIND_LABEL[p.instrument];
                     return (
                       <li key={p.id} className="flex items-baseline gap-2 text-xs" title={p.summary ?? undefined}>
-                        <span className="w-20 shrink-0 text-muted">{t(PREMIUM_MOVE_LABEL[p.action] ?? 'premium.bought')}</span>
+                        <span className="w-16 shrink-0 text-muted">{t(PREMIUM_MOVE_LABEL[p.action] ?? 'premium.bought')}</span>
                         <span className="flex min-w-0 flex-1 items-baseline gap-1.5">
                           <Link href={tickerHref(p.ticker)} className="truncate font-semibold text-ink hover:underline">
                             {p.ticker}
@@ -439,12 +439,14 @@ export function PeopleSidePanel({
                             </span>
                           ) : null}
                         </span>
-                        {pnl != null ? (
-                          <span className={`shrink-0 font-semibold tabular-nums ${pnl >= 0 ? 'text-success' : 'text-danger'}`}>
-                            {pnl > 0 ? '+' : ''}
-                            {pnl}%
+                        {p.tradeDate ? (
+                          <span className="shrink-0 tabular-nums text-subtle" title={p.tradeDate.slice(0, 10)}>
+                            {daysAgoLabel(p.tradeDate)}
                           </span>
                         ) : null}
+                        <span className={`w-12 shrink-0 text-end font-semibold tabular-nums ${pnl == null ? '' : pnl >= 0 ? 'text-success' : 'text-danger'}`}>
+                          {pnl != null ? `${pnl > 0 ? '+' : ''}${pnl}%` : null}
+                        </span>
                       </li>
                     );
                   })}

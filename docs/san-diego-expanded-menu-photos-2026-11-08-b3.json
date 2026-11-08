@@ -33758,5 +33758,51 @@
       "menuSource": "https://www.eatwithbacari.com/north-park",
       "nextStep": "Exact-item official/Yelp/Google source research pending; prior scan nonmatch does not establish absence."
     }
+  ],
+  "titlePinChecks": [
+    [
+      "Common Stock",
+      []
+    ],
+    [
+      "Oggi",
+      [
+        {
+          "id": 10200,
+          "title": "Logging Swamp North — approved; not under construction (Aug 2026 inventory)",
+          "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-70402"
+        },
+        {
+          "id": 10201,
+          "title": "Logging Swamp South — approved; not under construction (Aug 2026 inventory)",
+          "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-70404"
+        },
+        {
+          "id": 16470,
+          "title": "Jay Androscoggin Mill Data Center Plan Put on Hold After Sentinel Withdrawal",
+          "sourceUrl": "https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/"
+        },
+        {
+          "id": 17122,
+          "title": "Jay Androscoggin Mill Data Center Proposal on Hold",
+          "sourceUrl": null
+        },
+        {
+          "id": 18750,
+          "title": "Auburn Solar Project: 50 MWac Solar in Androscoggin County, Maine",
+          "sourceUrl": "https://www.androscoggincountymaine.gov/"
+        },
+        {
+          "id": 19796,
+          "title": "DJI Osmo Pocket 3 — Mainland China’s Ultimate Lifestyle Vlogging Camera",
+          "sourceUrl": "https://www.dji.com/osmo-pocket-3"
+        },
+        {
+          "id": 20551,
+          "title": "Oggi's Sports Brewhouse & Pizza - Vista — San Diego restaurant guide",
+          "sourceUrl": "https://www.oggis.com/location/oggis-sports-brewhouse-pizza-vista/"
+        }
+      ]
+    ]
   ]
 }

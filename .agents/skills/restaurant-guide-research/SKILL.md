@@ -141,6 +141,12 @@ Technical follow-ups from the expanded San Diego pass:
   Italy's February 6, 2018 Kirbie's Cravings review labels the pig/chicken bun fillings and Fat Duck ramen;
   its old prices and soft-opening promotion do not establish today's offer. A retired operator photo-menu
   URL may now render an Archives page even while search results retain the old menu: inspect the live body.
+- If an operator's saved branch URL returns 404, follow the live site's location/menu navigation before
+  declaring its photos unavailable. Sammy's old `Location-Details/client/...` pages now link through the
+  navigation to `/sammys-chula-vista-menu/`, `/imperial-beach-menu/` and `/san-marcos-menu/`, whose
+  `.sammys-mg-card` elements pair exact dish names, descriptions and images. Keep the saved profile's
+  identity source intact while recording the new photo source. Verify branch and variant independently;
+  a Carne Asada card using a `Carnitas-Tacos` file remains ambiguous.
 
 Keep per-item source URLs, search terms, candidates/rejections and the **next unperformed research step**.
 A bulk scan or empty caption match is only a candidate-discovery step. Distinguish pending manual
