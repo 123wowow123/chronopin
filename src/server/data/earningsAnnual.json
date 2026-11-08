@@ -640,5 +640,236 @@
    "http://ir-media.wilmar-international.com/financial-highlights/"
   ],
   "note": "Annual Report 2025 extract (US$ thousands): revenue and profit attributable to owners of the Company. FY2025 includes a large one-off fair-value gain. Two years only."
+ },
+ "Victoria's Secret & Co.": {
+  "source": "manual",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 6344000000.0,
+    "earnings": 348000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 6182000000.0,
+    "earnings": 109000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 6230000000.0,
+    "earnings": 165000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 6553000000.0,
+    "earnings": 161000000.0
+   }
+  ],
+  "urls": [
+   "https://data.sec.gov/api/xbrl/companyfacts/CIK0001856437.json"
+  ],
+  "note": "SEC XBRL company facts, 10-K annual net sales and net income. Fiscal years named as the company does (fiscal 2025 ended 31 Jan 2026)."
+ },
+ "Richemont": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2025,
+    "revenue": 21399000000.0,
+    "earnings": 2750000000.0
+   },
+   {
+    "year": 2026,
+    "revenue": 22420000000.0,
+    "earnings": 3484000000.0
+   }
+  ],
+  "urls": [
+   "https://www.richemont.com/media/ovfnkffy/ad-hoc-announcement-pursuant-to-art-53-lr-fy26-annual-results-en.pdf"
+  ],
+  "note": "FY26 annual results announcement (years ended 31 March): sales and profit for the year attributable to owners of the parent (includes discontinued operations). Two years only."
+ },
+ "Prada": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 5432000000.0,
+    "earnings": 839000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 5718000000.0,
+    "earnings": 852000000.0
+   }
+  ],
+  "urls": [
+   "https://www.pradagroup.com/content/dam/pradagroup/documents/investors/FY-2025/Prada-Group-FY25-PR.pdf"
+  ],
+  "note": "FY25 press release, condensed P&L (EUR millions, rounded as printed): net revenues and group net income. Two years only."
+ },
+ "Universal Music Group": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 11834000000.0,
+    "earnings": 2086000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 12507000000.0,
+    "earnings": 1533000000.0
+   }
+  ],
+  "urls": [
+   "https://tools.prnewswire.com/en-us/live/20823/release/20260305EN02412"
+  ],
+  "note": "FY2025 results release: revenue and net profit attributable to equity holders of the parent. Two years only."
+ },
+ "Carlsberg Group": {
+  "source": "manual",
+  "currency": "DKK",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 70265000000.0,
+    "earnings": 1000000000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 73585000000.0,
+    "earnings": -40814000000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 75011000000.0,
+    "earnings": 9225000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 89095000000.0,
+    "earnings": 5812000000.0
+   }
+  ],
+  "urls": [
+   "https://www.carlsberggroup.com/media/54biax2j/carlsberg-breweries-group_2025-annual-report.pdf"
+  ],
+  "note": "Carlsberg Breweries Group Annual Report 2025, 5-year key figures: revenue and net profit attributable to shareholders in Carlsberg Breweries A/S. 2023 includes the loss on the exit from Russia (discontinued operations)."
+ },
+ "Swatch Group": {
+  "source": "manual",
+  "currency": "CHF",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 6735000000.0,
+    "earnings": 219000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 6280000000.0,
+    "earnings": 25000000.0
+   }
+  ],
+  "urls": [
+   "https://www.swatchgroup.com/en/services/archive/2026/key-figures-2025",
+   "https://www.swatchgroup.com/en/services/archive/2025/key-figures-2024"
+  ],
+  "note": "Swatch Group key figures pages: net sales and net profit. Two years only."
+ },
+ "Treasury Wine Estates": {
+  "source": "manual",
+  "currency": "AUD",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 2739800000.0,
+    "earnings": 98900000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 2938100000.0,
+    "earnings": 436900000.0
+   }
+  ],
+  "urls": [
+   "https://announcements.asx.com.au/asxpdf/20250813/pdf/06mt6g6f8jsktk.pdf"
+  ],
+  "note": "Annual Report FY25 (years to 30 June): net sales revenue and statutory net profit after tax attributable to shareholders (FY24 after material items). Two years only."
+ },
+ "SalMar": {
+  "source": "manual",
+  "currency": "NOK",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 26426000000.0,
+    "earnings": 3105000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 27394000000.0,
+    "earnings": 1121000000.0
+   }
+  ],
+  "urls": [
+   "https://ml-eu.globenewswire.com/Resource/Download/d7c13774-e5cf-4a3a-9be7-b4aab1a012df"
+  ],
+  "note": "Q4 2025 report: gross operating revenues and profit for the period (Group total). Two years only."
+ },
+ "Mowi": {
+  "source": "manual",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 4940800000.0,
+    "earnings": 785300000.0
+   },
+   {
+    "year": 2023,
+    "revenue": 5505700000.0,
+    "earnings": 439500000.0
+   },
+   {
+    "year": 2024,
+    "revenue": 5603800000.0,
+    "earnings": 474800000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 5720200000.0,
+    "earnings": 706600000.0
+   }
+  ],
+  "urls": [
+   "https://ml-eu.globenewswire.com/Resource/Download/96c5e442-0aa6-4e23-91e0-60d4c12dd67d"
+  ],
+  "note": "Mowi Integrated Annual Report 2025, key figures: revenue and profit or loss for the year (group total)."
+ },
+ "Asics": {
+  "source": "manual",
+  "currency": "JPY",
+  "periods": [
+   {
+    "year": 2024,
+    "revenue": 678500000000.0,
+    "earnings": 63800000000.0
+   },
+   {
+    "year": 2025,
+    "revenue": 810900000000.0,
+    "earnings": 98700000000.0
+   }
+  ],
+  "urls": [
+   "https://assets.asics.com/system/libraries/4140/Consolidated%20Financial%20Summary%20For%20The%20Fiscal%20Year%20Ended%20December%2031,%202025%28with%20script%29.pdf"
+  ],
+  "note": "FY2025 consolidated financial summary: net sales and profit attributable to owners of parent (billions of yen, rounded as printed). Two years only."
  }
 }
