@@ -23,8 +23,8 @@ it('uses current database menu prices on cards and removes deleted menus', async
   listRestaurantContent.mockResolvedValueOnce([{ profile: updated }]).mockResolvedValueOnce([]);
   query.mockResolvedValue([]);
   const tops = [{ ...profile.tile!, sourceUrl: profile.pinSourceUrl, pinId: 12, pinTitle: 'Pin title' }];
-  expect((await restaurantGuideDetails([], tops))[12].menu?.items[0].price).toBe(3990);
-  expect((await restaurantGuideDetails([], tops))[12]?.menu).toBeUndefined();
+  expect((await restaurantGuideDetails([], tops))[12].menus?.[0].items[0].price).toBe(3990);
+  expect((await restaurantGuideDetails([], tops))[12]?.menus).toEqual([]);
 });
 it('identifies kids menus accurately without false positives', () => {
   expect(hasKidsMenu({ label: "Kids' Menu", items: [] })).toBe(true);

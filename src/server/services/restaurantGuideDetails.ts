@@ -38,8 +38,6 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
     const record = content.find((record) => restaurantSourceKey(record.profile.pinSourceUrl) === restaurantSourceKey(source.source ?? ''));
     const detailsProfile = record?.profile.details ?? (source.source ? restaurantDetailsFor(source.source) : undefined);
     const tileProfile = record?.profile.tile;
-    const menu = record?.profile.menu?.menus.find((menu) => menu.items.length);
-    if (menu) result[source.id] = { ...result[source.id], menu: { ...menu, coverage: 'sample', items: menu.items.slice(0, 6) } };
     const allMenus = record?.profile.menu?.menus ?? (source.source ? restaurantMenuFor(source.source)?.menus : undefined) ?? [];
     const kidsMenuPresent = allMenus.some(hasKidsMenu);
     const explicitKids = source.kidsFriendly ?? detailsProfile?.kidsFriendly ?? tileProfile?.kidsFriendly;
@@ -51,6 +49,11 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
     result[source.id] = { ...result[source.id], photos: restaurantCardPhotos([
       ...photos[source.id] ?? [], ...restaurantProfilePhotos(record?.profile.menu), ...restaurantProfilePhotos(profile),
     ]) };
+    // Match native pin precedence without discarding later dishes or menus.
+    const mergedMenus = new Map((record?.profile.menu?.menus ?? []).map((menu) => [menu.label, menu]));
+    for (const menu of profile?.menus ?? []) mergedMenus.set(menu.label, menu);
+    const menus = [...mergedMenus.values()].filter((menu) => menu.items.length || menu.pages?.length || menu.coverage === 'link');
+    result[source.id] = { ...result[source.id], menus };
     if (!profile) continue;
     const venueKids = profile.menus?.some(hasKidsMenu);
     result[source.id] = {

@@ -176,6 +176,11 @@ JSON catalogs are snapshots; content updates don't need a deployment. Preserve s
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.
 
 ## Menu-item reviews
+Landing cards retain every saved menu and item, with menu/category selection and an expandable six-item preview.
+Do not truncate menus in `restaurantGuideDetails`: later dishes carry photos and reviews too. Merge enabled
+ordinary/specials menus using native-pin label precedence; deleted ordinary menus must not return from
+bundled snapshots. The landing dish viewer navigates all items in the selected menu, including unphotographed dishes.
+
 Menu rows on landing tiles and native pin menus share `MenuItemReviews`: a star icon opens
 sourced external excerpts and reader ratings/comments for that exact dish on that backing pin.
 `RestaurantMenuItem.reviews` entries require `provider`, exact article `title`, HTTPS `sourceUrl`,

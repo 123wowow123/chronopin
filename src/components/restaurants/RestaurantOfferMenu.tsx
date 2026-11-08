@@ -3,8 +3,9 @@
 import { useId, useState } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
+import { RestaurantMenuTabs } from '@/components/pin/RestaurantMenuTabs';
 import { MenuItemReviews } from '@/components/pin/MenuItemReviews';
-import { restaurantMenuAmount, restaurantMenuCategories, restaurantDishImages, type RestaurantMenu } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuCategories, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
 export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }: { menu?: RestaurantMenu; pinId?: number | null; restaurant: string; specials?: boolean }) {
@@ -16,7 +17,7 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }
   const category = categories.find((category) => category === selected) ?? categories[0];
   const items = menu.items.filter((item) => (item.category || 'Menu') === category);
   const shown = expanded ? items : items.slice(0, 6);
-  const gallery = shown.filter((item) => restaurantDishImages(item).length);
+  const gallery = menu.items;
   const amount = (price: number) => restaurantMenuAmount(price, menu.currency);
   const source = menu.documentUrl || menu.url;
 
@@ -37,4 +38,13 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }
       {menu.pages.map((page, index) => <Anchor key={page.src} href={page.src} target="_blank" rel="noopener noreferrer"><Image src={page.src} width={page.width} height={page.height} unoptimized alt={`${restaurant} ${menu.label} — ${page.label || `page ${index + 1}`}`} /></Anchor>)}
     </div> : <p className={styles.offerMenuMissing}>Item details haven’t been added yet. <Anchor href={source} target="_blank" rel="noopener noreferrer">Open the published menu ↗</Anchor></p>}
   </div>;
+}
+
+// Keep the card compact while making every saved menu and dish reachable.
+export function RestaurantCardMenus({ menus = [], restaurant, pinId }: { menus?: RestaurantMenu[]; restaurant: string; pinId: number }) {
+  if (!menus.length) return null;
+  return <div className={styles.cardMenus}><RestaurantMenuTabs label={`${restaurant} menus`} tabs={menus.map((menu) => ({
+    label: menu.label,
+    content: <><RestaurantOfferMenu menu={menu} pinId={pinId} restaurant={restaurant} specials={false} />{menu.note && <p className={styles.offerSchedule}>{menu.note}</p>}</>,
+  }))} /></div>;
 }

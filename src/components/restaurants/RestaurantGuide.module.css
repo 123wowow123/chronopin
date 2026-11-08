@@ -235,3 +235,5 @@
   .statusFilters a:focus-visible { outline-offset:-3px; }
 }
 @media(prefers-reduced-motion:reduce) { .filterFields select { transition:none; } .offerSort button,.offerSort .offerMapButton,.countryNav a,.statusFilters a,.cardArrow { transition:none; } .offerSort button:active,.offerSort .offerMapButton:active,.countryNav a:active,.statusFilters a:active,.cardArrow:active { transform:none; } .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }
+
+.cardMenus { --menu-paper:var(--paper); --menu-ink:var(--text); --menu-muted:var(--soft); --menu-rule:var(--rule); --menu-accent:var(--green); margin-top:16px; }

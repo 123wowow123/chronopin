@@ -89,7 +89,7 @@ function ReviewDialog({ dialogRef, heading, item: initialItem, gallery, pinId, o
       <div className={styles.reviewDialogColumns}>
       <div className={styles.reviewDialogMedia}>
       <DishPhotoGallery key={item.name} item={item} />
-      {canNavigate ? <nav aria-label="Dish photos" className={styles.reviewPhotoNavigation}>
+      {canNavigate ? <nav aria-label="Menu items" className={styles.reviewPhotoNavigation}>
         <button type="button" aria-label="Previous dish" onClick={() => step(-1)}>‹ Previous</button>
         <button type="button" aria-label="Next dish" onClick={() => step(1)}>Next ›</button>
       </nav> : null}
