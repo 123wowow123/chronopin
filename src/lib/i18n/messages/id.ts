@@ -1222,6 +1222,7 @@ const id: Messages = {
     earnings: 'Laba',
     profitMargin: 'Margin Laba',
     source: 'Angka dari Nasdaq: EPS dibandingkan konsensus analis; laba adalah laba bersih bagi pemegang saham biasa. Kuartal diberi label menurut akhir periode fiskalnya.',
+    sourceAnnual: 'Angka tahunan dari Wikidata, diambil dari laporan perusahaan sendiri, dalam {currency}. Tidak ada perkiraan analis untuk saham ini.',
   },
   ratings: {
     averageLabel: 'Rata-rata dari {count} peringkat: {average} persen',

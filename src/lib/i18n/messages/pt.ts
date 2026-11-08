@@ -1212,6 +1212,7 @@ const pt: Messages = {
     earnings: 'Lucro',
     profitMargin: 'Margem de lucro',
     source: 'Números da Nasdaq: LPA frente ao consenso dos analistas; o lucro é o lucro líquido atribuível aos acionistas ordinários. Os trimestres são identificados pelo fim do período fiscal.',
+    sourceAnnual: 'Números anuais do Wikidata, retirados dos relatórios da própria empresa, em {currency}. Não há estimativas de analistas para este papel.',
   },
   ratings: {
     averageLabel: 'Média de {count} avaliações: {average} por cento',

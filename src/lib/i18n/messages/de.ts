@@ -1221,6 +1221,7 @@ const de: Messages = {
     earnings: 'Gewinn',
     profitMargin: 'Gewinnmarge',
     source: 'Zahlen von Nasdaq: EPS gegen den Analystenkonsens; der Gewinn ist der Nettogewinn für die Stammaktionäre. Quartale sind nach dem Ende ihrer Fiskalperiode benannt.',
+    sourceAnnual: 'Jahreszahlen von Wikidata aus den eigenen Berichten des Unternehmens, in {currency}. Für diese Aktie liegen keine Analystenschätzungen vor.',
   },
   ratings: {
     averageLabel: 'Durchschnitt aus {count} Bewertungen: {average} Prozent',

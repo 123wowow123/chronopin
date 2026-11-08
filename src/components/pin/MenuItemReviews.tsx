@@ -19,9 +19,15 @@ export function MenuItemReviews({ pinId, item, children, gallery = [], photoOnly
   const [open, setOpen] = useState(false);
   const summary = useMenuItemReviewSummary(pinId, item.name.trim());
   const count = (item.reviews?.length ?? 0) + (summary?.count ?? 0);
-  const inferred = summary?.average == null;
-  const rating = summary?.average ?? inferredMenuItemRating(item.reviews);
-  const label = rating != null ? inferred
+  const estimates = (item.reviews ?? []).map(inferredReviewRating).filter((r): r is number => r != null);
+  const readerCount = summary?.average == null ? 0 : summary.count;
+  const fill: 'empty' | 'half' | 'solid' = readerCount && estimates.length ? 'half' : readerCount ? 'solid' : 'empty';
+  const rating = readerCount && estimates.length
+    ? (summary!.average! * readerCount + estimates.reduce((t, r) => t + r, 0)) / (readerCount + estimates.length)
+    : summary?.average ?? inferredMenuItemRating(item.reviews);
+  const label = rating != null ? fill === 'half'
+    ? `${item.name}: approximately ${rating.toFixed(1)} out of 5, mixing ${readerCount} reader ${readerCount === 1 ? 'rating' : 'ratings'} with ${estimates.length} ${estimates.length === 1 ? 'estimate' : 'estimates'} inferred from external review text`
+    : fill === 'empty'
     ? `${item.name}: approximately ${rating.toFixed(1)} out of 5, inferred from external review text; not a source-published rating`
     : `${item.name}: ${rating.toFixed(1)} out of 5 from ${summary!.count} reader ${summary!.count === 1 ? 'rating' : 'ratings'}`
     : count ? `${count} ${count === 1 ? 'review' : 'reviews'} for ${item.name} — not yet rated`
@@ -34,7 +40,7 @@ export function MenuItemReviews({ pinId, item, children, gallery = [], photoOnly
     </button> : null}
     {children ? <button type="button" className={styles.reviewText} aria-haspopup="dialog" aria-label={`View ${image ? 'photo and ' : ''}reviews for ${item.name}`} onClick={() => setOpen(true)}>{children}</button> : null}
     {!photoOnly && canReview && (!hideEmpty || count > 0) ? <button type="button" className={styles.reviewButton} data-has-reviews={count > 0} data-rated={rating != null} aria-label={label} title={label} aria-haspopup="dialog" onClick={() => setOpen(true)}>
-      <RatingStar fill={rating == null ? 'empty' : inferred ? 'half' : 'solid'} />
+      <RatingStar fill={rating == null ? 'empty' : fill} />
       {rating != null ? <span className={styles.reviewRating} aria-hidden="true">{rating.toFixed(1)}<small>/5</small></span> : null}
     </button> : null}
     {open && createPortal(<ReviewDialog dialogRef={dialog} heading={heading} item={item} gallery={gallery} pinId={pinId} onClose={() => setOpen(false)} />, document.body)}
@@ -116,7 +122,7 @@ function InferredRatingBadge({ rating }: { rating: number | null }) {
   if (rating == null) return null;
   const label = `Approximately ${rating.toFixed(1)} out of 5 — inferred from this excerpt, not rated by the source`;
   return <span className={styles.reviewEstimate} role="img" aria-label={label} title={label}>
-    <RatingStar fill="half" />
+    <RatingStar fill="empty" />
     <span aria-hidden="true">{rating.toFixed(1)}<small>/5</small></span>
   </span>;
 }

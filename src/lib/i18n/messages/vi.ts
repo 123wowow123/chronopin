@@ -1221,6 +1221,7 @@ const vi: Messages = {
     earnings: 'Lợi nhuận',
     profitMargin: 'Biên lợi nhuận',
     source: 'Số liệu từ Nasdaq: EPS so với đồng thuận của các nhà phân tích; lợi nhuận là lợi nhuận ròng thuộc cổ đông phổ thông. Các quý được ghi theo thời điểm kết thúc kỳ tài chính.',
+    sourceAnnual: 'Số liệu hằng năm từ Wikidata, lấy từ báo cáo của chính công ty, tính bằng {currency}. Không có ước tính của giới phân tích cho mã này.',
   },
   ratings: {
     averageLabel: 'Trung bình của {count} đánh giá: {average} phần trăm',

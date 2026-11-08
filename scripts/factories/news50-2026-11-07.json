@@ -1,0 +1,194 @@
+[
+  {
+    "pinId": 2634,
+    "profile": {
+      "sector": "Hydroelectric dam",
+      "status": "production",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project peer cohort and percentile published in the opened sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented operational automation capability benchmark published.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published design facts do not establish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable measured resource-efficiency outcome published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified supply-chain bottleneck-relief result published.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Workforce counts do not establish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "capacity",
+          "label": "Installed generating capacity",
+          "value": "More than 5,000 MW; contractor-reported installed capacity",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.webuildgroup.com/en/media/press-releases/grand-ethopian-renaissance-dam-gerd-inaugurated/",
+            "title": "Webuild: Grand Ethiopian Renaissance Dam (GERD) inaugurated, biggest hydropower project ever built in Africa",
+            "publishedDate": "2025-09-09",
+            "quote": "installed production capacity of more than 5,000 MW"
+          }
+        },
+        {
+          "key": "employment",
+          "label": "Construction workforce",
+          "value": "Over 25,000 people worked on the project; not permanent operating jobs",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.webuildgroup.com/en/media/press-releases/grand-ethopian-renaissance-dam-gerd-inaugurated/",
+            "title": "Webuild: Grand Ethiopian Renaissance Dam (GERD) inaugurated, biggest hydropower project ever built in Africa",
+            "publishedDate": "2025-09-09",
+            "quote": "Over 25,000 people"
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Inauguration",
+          "value": "Inaugurated 9 September 2025",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.webuildgroup.com/en/media/press-releases/grand-ethopian-renaissance-dam-gerd-inaugurated/",
+            "title": "Webuild: Grand Ethiopian Renaissance Dam (GERD) inaugurated, biggest hydropower project ever built in Africa",
+            "publishedDate": "2025-09-09",
+            "quote": "Ethiopia made history today with the inauguration of the"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Dam inaugurated",
+          "date": "2025-09-09",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.webuildgroup.com/en/media/press-releases/grand-ethopian-renaissance-dam-gerd-inaugurated/",
+            "title": "Webuild: Grand Ethiopian Renaissance Dam (GERD) inaugurated, biggest hydropower project ever built in Africa",
+            "publishedDate": "2025-09-09",
+            "quote": "Ethiopia made history today with the inauguration of the"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "pinId": 2177,
+    "profile": {
+      "sector": "Regional passenger railway",
+      "status": "production",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No normalized project peer cohort and percentile published in the opened sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No documented operational automation capability benchmark published.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Published design facts do not establish a scored sector capability benchmark.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable measured resource-efficiency outcome published.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No quantified supply-chain bottleneck-relief result published.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "Workforce counts do not establish measured credential or training outcomes.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "investment",
+          "label": "Reported project cost",
+          "value": "About USD 2 billion; Dallas Observer reporting",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.dallasobserver.com/news/dallas-silver-line-launches-as-suburbs-challenge-darts-future-23287467/",
+            "title": "Dallas’ New Silver Line Launches As Suburbs Challenge DART’s Future",
+            "publishedDate": "2025-09-17",
+            "quote": "cost the public transportation entity about $2 billion after 40 years of planning."
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opened rail corridor",
+          "value": "26-mile regional line with ten stations",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://dart.org/about/news-and-events/newsreleases/newsrelease-detail/riders-and-communities-celebrate-one-year-of-dart-silver-line",
+            "title": "RIDERS AND COMMUNITIES CELEBRATE ONE YEAR OF DART SILVER LINE",
+            "publishedDate": "2026-10-29",
+            "quote": "The 26-mile regional rail service opened October 25, 2025, in a day-long multi-city celebration, highlighting the unique attributes in the neighborhoods of each of the ten stations along the line."
+          }
+        },
+        {
+          "key": "stage",
+          "label": "Passenger service opening",
+          "value": "Passenger service opened 25 October 2025; first anniversary confirmed by DART",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://dart.org/about/news-and-events/newsreleases/newsrelease-detail/riders-and-communities-celebrate-one-year-of-dart-silver-line",
+            "title": "RIDERS AND COMMUNITIES CELEBRATE ONE YEAR OF DART SILVER LINE",
+            "publishedDate": "2026-10-29",
+            "quote": "The 26-mile regional rail service opened October 25, 2025, in a day-long multi-city celebration, highlighting the unique attributes in the neighborhoods of each of the ten stations along the line."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Regional rail service opened",
+          "date": "2025-10-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://dart.org/about/news-and-events/newsreleases/newsrelease-detail/riders-and-communities-celebrate-one-year-of-dart-silver-line",
+            "title": "RIDERS AND COMMUNITIES CELEBRATE ONE YEAR OF DART SILVER LINE",
+            "publishedDate": "2026-10-29",
+            "quote": "The 26-mile regional rail service opened October 25, 2025, in a day-long multi-city celebration, highlighting the unique attributes in the neighborhoods of each of the ten stations along the line."
+          }
+        }
+      ]
+    }
+  }
+]

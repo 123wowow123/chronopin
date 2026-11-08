@@ -1212,6 +1212,7 @@ const it: Messages = {
     earnings: 'Utili',
     profitMargin: 'Margine di profitto',
     source: 'Dati del Nasdaq: EPS rispetto al consenso degli analisti; gli utili sono l\'utile netto attribuibile agli azionisti ordinari. I trimestri sono indicati dalla fine del periodo fiscale.',
+    sourceAnnual: 'Dati annuali da Wikidata, tratti dai rapporti della stessa società, in {currency}. Per questo titolo non sono disponibili stime degli analisti.',
   },
   ratings: {
     averageLabel: 'Media di {count} valutazioni: {average} percento',

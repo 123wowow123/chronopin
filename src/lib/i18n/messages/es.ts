@@ -1221,6 +1221,7 @@ const es: Messages = {
     earnings: 'Beneficios',
     profitMargin: 'Margen de beneficio',
     source: 'Cifras de Nasdaq: BPA frente al consenso de analistas; los beneficios son el resultado neto atribuible a los accionistas comunes. Los trimestres se indican por el fin de su periodo fiscal.',
+    sourceAnnual: 'Cifras anuales de Wikidata, tomadas de los informes de la propia empresa, en {currency}. No hay estimaciones de analistas para este valor.',
   },
   ratings: {
     averageLabel: 'Media de {count} valoraciones: {average} por ciento',

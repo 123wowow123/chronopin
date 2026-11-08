@@ -211,18 +211,26 @@ export function subscribeQuote(symbol: string, assetClass: AssetClass, listener:
 // Each endpoint may fail alone: what is left still charts. Null when none do.
 export function fetchEarningsTrends(symbol: string): Promise<EarningsTrends | null> {
   return cached(`earnings:${symbol}`, async () => {
-    const ok = async <T>(path: string): Promise<T | null> => get<T>(path).catch(() => null);
+    let failed = 0;
+    const ok = async <T>(path: string): Promise<T | null> =>
+      get<T>(path).catch(() => {
+        failed++;
+        return null;
+      });
     const [surprise, forecast, quarterly, annual] = await Promise.all([
       ok<{ earningsSurpriseTable?: { rows?: any[] } }>(`/company/${q(symbol)}/earnings-surprise`),
       ok<{ quarterlyForecast?: { rows?: any[] } }>(`/analyst/${q(symbol)}/earnings-forecast`),
       ok<{ incomeStatementTable?: any }>(`/company/${q(symbol)}/financials?frequency=2`),
       ok<{ incomeStatementTable?: any }>(`/company/${q(symbol)}/financials?frequency=1`),
     ]);
-    return parseTrends(symbol, {
+    const trends = parseTrends(symbol, {
       surprise: surprise?.earningsSurpriseTable?.rows,
       forecast: forecast?.quarterlyForecast?.rows,
       quarterly: quarterly?.incomeStatementTable,
       annual: annual?.incomeStatementTable,
     });
+    // Nothing because Nasdaq failed is not "no figures": throw so it is not kept for ten minutes.
+    if (!trends && failed) throw new Error(`nasdaq earnings trends failed for ${symbol}`);
+    return trends;
   });
 }

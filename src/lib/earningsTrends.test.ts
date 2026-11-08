@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { epsQuarters, margin, nasdaqThousands, parseTrends, revenuePeriods, verdict } from './earningsTrends';
+import { annualPeriods, epsQuarters, margin, withAnnual, nasdaqThousands, parseTrends, revenuePeriods, verdict, type EarningsTrends } from './earningsTrends';
 
 describe('earnings trends', () => {
   it('reads Nasdaq money cells in thousands', () => {
@@ -47,5 +47,17 @@ describe('earnings trends', () => {
 
   it('is null when nothing was reported', () => {
     expect(parseTrends('X', {})).toBeNull();
+  });
+
+  const entry = { source: 'wikidata' as const, currency: 'CHF', periods: [{ year: 2025, revenue: 89e9, earnings: 9e9 }, { year: 2024, revenue: 91e9, earnings: null }] };
+  it('fills annual figures only where Nasdaq has no income statement', () => {
+    expect(annualPeriods(entry).map((p) => p.label)).toEqual(['2024', '2025']);
+    const none = withAnnual(null, entry, 'Nestlé', '');
+    expect(none).toMatchObject({ symbol: '', company: 'Nestlé', currency: 'CHF', source: 'wikidata', quarterly: [] });
+    const adr: EarningsTrends = { symbol: 'TSM', eps: [{ label: 'Jun 2026', end: '2026-06-30', reported: null, estimate: 1, actual: 2 }], quarterly: [], annual: [] };
+    expect(withAnnual(adr, entry, 'TSMC', 'TSM')?.eps).toHaveLength(1);
+    const full: EarningsTrends = { ...adr, quarterly: [{ label: 'Jun 2026', end: '2026-06-30', revenue: 1, earnings: 1 }] };
+    expect(withAnnual(full, entry, 'X', 'TSM')?.currency).toBeUndefined();
+    expect(withAnnual(null, null, 'X', '')).toBeNull();
   });
 });

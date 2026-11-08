@@ -1222,6 +1222,7 @@ const ms: Messages = {
     earnings: 'Pendapatan',
     profitMargin: 'Margin Keuntungan',
     source: 'Angka dari Nasdaq: EPS berbanding konsensus penganalisis; pendapatan ialah untung bersih kepada pemegang saham biasa. Suku tahun dilabel mengikut akhir tempoh fiskalnya.',
+    sourceAnnual: 'Angka tahunan dari Wikidata, diambil daripada laporan syarikat sendiri, dalam {currency}. Tiada anggaran penganalisis untuk penyenaraian ini.',
   },
   ratings: {
     averageLabel: 'Purata {count} penilaian: {average} peratus',

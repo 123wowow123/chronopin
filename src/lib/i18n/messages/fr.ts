@@ -1221,6 +1221,7 @@ const fr: Messages = {
     earnings: 'Bénéfices',
     profitMargin: 'Marge bénéficiaire',
     source: 'Chiffres du Nasdaq : BPA face au consensus des analystes ; les bénéfices sont le résultat net revenant aux actionnaires ordinaires. Les trimestres sont désignés par la fin de leur période fiscale.',
+    sourceAnnual: 'Chiffres annuels de Wikidata, issus des rapports de l\'entreprise, en {currency}. Aucune estimation d\'analystes n\'est disponible pour cette valeur.',
   },
   ratings: {
     averageLabel: 'Moyenne de {count} notes : {average} pour cent',

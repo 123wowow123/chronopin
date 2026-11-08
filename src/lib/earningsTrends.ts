@@ -23,7 +23,13 @@ export type RevenuePeriod = {
 };
 
 export type EarningsTrends = {
+  // The company ticker, empty for a company with no US listing.
   symbol: string;
+  // The company's name, for the search pills of an unlisted company.
+  company?: string;
+  // Where the money figures come from and their currency; Nasdaq's are US dollars and carry neither.
+  source?: 'wikidata' | 'manual';
+  currency?: string;
   eps: EpsQuarter[];
   quarterly: RevenuePeriod[];
   annual: RevenuePeriod[];
@@ -128,4 +134,22 @@ export function parseTrends(symbol: string, data: { surprise?: SurpriseRow[]; fo
   const annual = revenuePeriods(data.annual);
   if (!eps.some((q) => q.actual != null) && !quarterly.length) return null;
   return { symbol, eps, quarterly, annual };
+}
+
+// Annual revenue and earnings kept in src/server/data/earningsAnnual.json for companies Nasdaq cannot chart.
+export type AnnualEntry = { source: 'wikidata' | 'manual'; currency: string; periods: { year: number; revenue: number; earnings: number | null }[] };
+
+export function annualPeriods(entry: AnnualEntry): RevenuePeriod[] {
+  return [...entry.periods]
+    .sort((a, b) => a.year - b.year)
+    .map((p) => ({ label: String(p.year), end: `${p.year}-12-31`, revenue: p.revenue, earnings: p.earnings }));
+}
+
+// Nasdaq's figures, with the kept annual ones filling what Nasdaq lacks: all of it for an
+// unlisted company, the income statement for an ADR that has only EPS. Nasdaq's own
+// income statement always wins (it is quarterly and current).
+export function withAnnual(trends: EarningsTrends | null, entry: AnnualEntry | null, company: string, symbol: string): EarningsTrends | null {
+  if (trends && (trends.quarterly.length || trends.annual.length)) return { ...trends, company };
+  if (!entry) return trends ? { ...trends, company } : null;
+  return { symbol, company, eps: trends?.eps ?? [], quarterly: [], annual: annualPeriods(entry), source: entry.source, currency: entry.currency };
 }

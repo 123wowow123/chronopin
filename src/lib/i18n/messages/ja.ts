@@ -1215,6 +1215,7 @@ const ja: Messages = {
     earnings: '利益',
     profitMargin: '利益率',
     source: '出典はNasdaq：EPSはアナリストのコンセンサスとの比較。利益は普通株主に帰属する純利益。四半期は会計期間の終了月で表示しています。',
+    sourceAnnual: '年次の数値はWikidata（企業自身の報告に基づく）で、通貨は{currency}です。この銘柄にはアナリスト予想がありません。',
   },
   ratings: {
     averageLabel: '{count} 件の評価の平均：{average}%',

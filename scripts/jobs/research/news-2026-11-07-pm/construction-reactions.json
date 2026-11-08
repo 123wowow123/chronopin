@@ -1,0 +1,51 @@
+[
+  {
+    "table": "PinCriticReview",
+    "pinId": 2299,
+    "basis": "Opened and string-matched dated project reaction excerpts. These are explicitly owner/designer/agency statements, not independent product tests. Port president, airport official in KIRO reporting, and HOK designer on the exact SEA Gateway scope.",
+    "reviews": [
+      {
+        "url": "https://www.portseattle.org/news/sea-airport-and-alaska-airlines-celebrate-completion-sea-gateway-project",
+        "title": "SEA Airport and Alaska Airlines Celebrate Completion of SEA Gateway Project",
+        "publishedDate": "2026-01-28",
+        "quote": "This level of customer service and ease is what people have come to expect of a top-tier international airport, and together, we’ve delivered.",
+        "sentiment": 0.7
+      },
+      {
+        "url": "https://www.kiro7.com/news/local/sea-airport-completes-major-gateway-project/W7YRCVOTBRHELLHMJUZING5C3I/",
+        "title": "SEA Airport completes major Gateway project",
+        "publishedDate": "2026-01-28",
+        "quote": "It is a product that we really looked at from the curb, all the way through the checkpoint and to the gates, that is really about customer service and friendliness and flow through,",
+        "sentiment": 0.6
+      },
+      {
+        "url": "https://www.hok.com/news/2023-05/hok-and-hensel-phelps-lead-seattle-tacoma-international-airports-north-main-terminal-modernization/",
+        "title": "HOK and Hensel Phelps Lead Seattle-Tacoma International Airport’s North Main Terminal Modernization",
+        "publishedDate": "2023-05-25",
+        "quote": "From the curbside through security and to baggage claim, the design will increase passenger throughput and enhance the overall travel experience.",
+        "sentiment": 0.6
+      }
+    ]
+  },
+  {
+    "table": "PinCriticReview",
+    "pinId": 2237,
+    "basis": "Opened and string-matched dated project reaction excerpts. These are explicitly owner/designer/agency statements, not independent product tests. Agency toll rationale and Transport Secretary Mable Chan on the exact Kowloon Bay section / full Route6 commissioning. Two sources verified; additional independent reactions remain a research gap.",
+    "reviews": [
+      {
+        "url": "https://www.tlb.gov.hk/eng/psp/pressreleases/transport/2026/20261014a.html",
+        "title": "Toll rate for Central Kowloon Bypass to take effect from December 6",
+        "publishedDate": "2026-10-14",
+        "quote": "It is expected to recover part of the operating costs while achieving the intended traffic diversion effect, thereby alleviating traffic on major roads in Kowloon.",
+        "sentiment": 0.5
+      },
+      {
+        "url": "https://news.rthk.hk/rthk/en/component/k2/1872154-20260930.htm?spTabChangeable=0",
+        "title": "New part of Central Kowloon Bypass to open on Dec 6",
+        "publishedDate": "2026-09-30",
+        "quote": "It will shorten the travel time from the current 65 minutes – before the commissioning of Route 6 – to just 12 minutes.",
+        "sentiment": 0.6
+      }
+    ]
+  }
+]

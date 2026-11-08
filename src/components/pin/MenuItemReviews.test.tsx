@@ -29,11 +29,15 @@ it('marks estimates from review prose and prefers reader ratings when available'
   expect(html).toContain('2.0<small>/5</small>');
   expect(html).not.toContain('≈');
   expect(html).toContain('inferred from external review text');
-  expect(html).toContain('data-fill="half"');
+  expect(html).toContain('data-fill="empty"');
+  expect(html).not.toContain('data-fill="solid"');
   summary.mockReturnValue({ average: 4, count: 1 });
-  const rated = renderToStaticMarkup(<MenuItemReviews pinId={1} item={item} />);
+  const mixed = renderToStaticMarkup(<MenuItemReviews pinId={1} item={item} />);
+  expect(mixed).toContain('mixing 1 reader rating with 1 estimate');
+  expect(mixed).toContain('3.0<small>/5</small>');
+  expect(mixed).toContain('data-fill="half"');
+  const rated = renderToStaticMarkup(<MenuItemReviews pinId={1} item={{ name: 'Fish' }} />);
   expect(rated).toContain('4.0 out of 5 from 1 reader rating');
-  expect(rated).not.toContain('≈');
   expect(rated).toContain('data-fill="solid"');
   expect(rated).not.toContain('data-fill="half"');
 });

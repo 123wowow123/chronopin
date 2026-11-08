@@ -1215,6 +1215,7 @@ const zh: Messages = {
     earnings: '盈利',
     profitMargin: '利润率',
     source: '数据来自纳斯达克：每股收益对比分析师一致预期；盈利为归属普通股股东的净利润。季度按其财季结束月份标注。',
+    sourceAnnual: '年度数据来自维基数据，取自公司自身报告，币种为{currency}。该证券暂无分析师预期。',
   },
   ratings: {
     averageLabel: '{count} 个评分的平均值：{average}%',

@@ -1222,6 +1222,7 @@ const en = {
     earnings: 'Earnings',
     profitMargin: 'Profit Margin',
     source: 'Figures from Nasdaq: EPS against the analyst consensus; earnings are net income to common shareholders. Quarters are labelled by their fiscal period end.',
+    sourceAnnual: 'Annual figures from Wikidata, taken from the company\'s own reports, in {currency}. No analyst estimates are available for this listing.',
   },
   ratings: {
     averageLabel: 'Average of {count} ratings: {average} percent',

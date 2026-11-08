@@ -1,0 +1,456 @@
+{
+ "AB InBev": {
+  "source": "wikidata",
+  "qid": "Q128738",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 57786000000,
+    "earnings": 7597000000
+   },
+   {
+    "year": 2023,
+    "revenue": 59380000000,
+    "earnings": 6891000000
+   },
+   {
+    "year": 2024,
+    "revenue": 59768000000,
+    "earnings": 7416000000
+   },
+   {
+    "year": 2025,
+    "revenue": 59320000000,
+    "earnings": 8477000000
+   }
+  ]
+ },
+ "Adidas": {
+  "source": "wikidata",
+  "qid": "Q3895",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2020,
+    "revenue": 19844000000,
+    "earnings": 432000000
+   },
+   {
+    "year": 2021,
+    "revenue": 21234000000,
+    "earnings": 2116000000
+   },
+   {
+    "year": 2022,
+    "revenue": 22511000000,
+    "earnings": 612000000
+   },
+   {
+    "year": 2023,
+    "revenue": 21427000000,
+    "earnings": -75000000
+   }
+  ]
+ },
+ "Berkshire Hathaway": {
+  "source": "wikidata",
+  "qid": "Q217583",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 276094000000,
+    "earnings": 89795000000
+   },
+   {
+    "year": 2022,
+    "revenue": 302089000000,
+    "earnings": -22819000000
+   },
+   {
+    "year": 2023,
+    "revenue": 364482000000,
+    "earnings": 96223000000
+   },
+   {
+    "year": 2024,
+    "revenue": 371433000000,
+    "earnings": 88995000000
+   }
+  ]
+ },
+ "Brown-Forman": {
+  "source": "wikidata",
+  "qid": "Q392221",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 3933000000,
+    "earnings": 838000000
+   },
+   {
+    "year": 2022,
+    "revenue": 4228000000,
+    "earnings": 783000000
+   },
+   {
+    "year": 2023,
+    "revenue": 4178000000,
+    "earnings": 1024000000
+   },
+   {
+    "year": 2024,
+    "revenue": 3975000000,
+    "earnings": 869000000
+   }
+  ]
+ },
+ "BYD Company": {
+  "source": "wikidata",
+  "qid": "Q2608329",
+  "currency": "CNY",
+  "periods": [
+   {
+    "year": 2020,
+    "revenue": 156597691000,
+    "earnings": 4234267000
+   },
+   {
+    "year": 2021,
+    "revenue": 216142395000,
+    "earnings": 3045188000
+   },
+   {
+    "year": 2022,
+    "revenue": 424060635000,
+    "earnings": 17713104000
+   },
+   {
+    "year": 2023,
+    "revenue": 602315354000,
+    "earnings": 31344070000
+   }
+  ]
+ },
+ "Chanel": {
+  "source": "wikidata",
+  "qid": "Q218115",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2020,
+    "revenue": 10108000000,
+    "earnings": 1388000000
+   },
+   {
+    "year": 2021,
+    "revenue": 15639000000,
+    "earnings": 4026000000
+   },
+   {
+    "year": 2022,
+    "revenue": 17224000000,
+    "earnings": 4596000000
+   },
+   {
+    "year": 2023,
+    "revenue": 19744000000,
+    "earnings": 4732000000
+   }
+  ]
+ },
+ "Diageo": {
+  "source": "wikidata",
+  "qid": "Q161140",
+  "currency": "USD",
+  "periods": [
+   {
+    "year": 2023,
+    "revenue": 28270000000,
+    "earnings": 4479000000
+   },
+   {
+    "year": 2024,
+    "revenue": 27891000000,
+    "earnings": 4166000000
+   },
+   {
+    "year": 2025,
+    "revenue": 27964000000,
+    "earnings": 2538000000
+   }
+  ]
+ },
+ "Hermès": {
+  "source": "wikidata",
+  "qid": "Q843887",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 8982000000,
+    "earnings": 2445000000
+   },
+   {
+    "year": 2022,
+    "revenue": 11602000000,
+    "earnings": 3367000000
+   },
+   {
+    "year": 2023,
+    "revenue": 13427000000,
+    "earnings": 4311000000
+   },
+   {
+    "year": 2024,
+    "revenue": 15170000000,
+    "earnings": 4603000000
+   }
+  ]
+ },
+ "Kering": {
+  "source": "wikidata",
+  "qid": "Q931207",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2020,
+    "revenue": 13100000000,
+    "earnings": 2150000000
+   },
+   {
+    "year": 2021,
+    "revenue": 17645000000,
+    "earnings": 3176000000
+   },
+   {
+    "year": 2022,
+    "revenue": 20351000000,
+    "earnings": 3614000000
+   },
+   {
+    "year": 2023,
+    "revenue": 19566000000,
+    "earnings": 2983000000
+   }
+  ]
+ },
+ "Lufthansa Group": {
+  "source": "wikidata",
+  "qid": "Q9325",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 16811000000,
+    "earnings": -2191000000
+   },
+   {
+    "year": 2022,
+    "revenue": 30895000000,
+    "earnings": 791000000
+   },
+   {
+    "year": 2023,
+    "revenue": 35442000000,
+    "earnings": 1673000000
+   },
+   {
+    "year": 2024,
+    "revenue": 37581000000,
+    "earnings": 1380000000
+   }
+  ]
+ },
+ "LVMH": {
+  "source": "wikidata",
+  "qid": "Q504998",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 79184000000,
+    "earnings": 14084000000
+   },
+   {
+    "year": 2023,
+    "revenue": 86153000000,
+    "earnings": 15174000000
+   },
+   {
+    "year": 2024,
+    "revenue": 84683000000,
+    "earnings": 12550000000
+   },
+   {
+    "year": 2025,
+    "revenue": 80807000000,
+    "earnings": 10878000000
+   }
+  ]
+ },
+ "Nestlé": {
+  "source": "wikidata",
+  "qid": "Q160746",
+  "currency": "CHF",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 94424000000,
+    "earnings": 9270000000
+   },
+   {
+    "year": 2023,
+    "revenue": 92998000000,
+    "earnings": 11209000000
+   },
+   {
+    "year": 2024,
+    "revenue": 91354000000,
+    "earnings": 10884000000
+   },
+   {
+    "year": 2025,
+    "revenue": 89490000000,
+    "earnings": 9033000000
+   }
+  ]
+ },
+ "Pernod Ricard": {
+  "source": "wikidata",
+  "qid": "Q837049",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 10701000000,
+    "earnings": 1996000000
+   },
+   {
+    "year": 2023,
+    "revenue": 12137000000,
+    "earnings": 2262000000
+   },
+   {
+    "year": 2024,
+    "revenue": 11598000000,
+    "earnings": 1476000000
+   },
+   {
+    "year": 2025,
+    "revenue": 10959000000,
+    "earnings": 1626000000
+   }
+  ]
+ },
+ "Puma": {
+  "source": "wikidata",
+  "qid": "Q157064",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 6805400000,
+    "earnings": 309600000
+   },
+   {
+    "year": 2022,
+    "revenue": 8465100000,
+    "earnings": 353500000
+   },
+   {
+    "year": 2023,
+    "revenue": 8601700000,
+    "earnings": 360600000
+   },
+   {
+    "year": 2024,
+    "revenue": 8817200000,
+    "earnings": 342300000
+   }
+  ]
+ },
+ "Sanofi": {
+  "source": "wikidata",
+  "qid": "Q158205",
+  "currency": "EUR",
+  "periods": [
+   {
+    "year": 2021,
+    "revenue": 37761000000,
+    "earnings": 6223000000
+   },
+   {
+    "year": 2022,
+    "revenue": 42997000000,
+    "earnings": 6720000000
+   },
+   {
+    "year": 2023,
+    "revenue": 43070000000,
+    "earnings": 5400000000
+   },
+   {
+    "year": 2024,
+    "revenue": 41081000000,
+    "earnings": null
+   }
+  ]
+ },
+ "Saudi Aramco": {
+  "source": "wikidata",
+  "qid": "Q679322",
+  "currency": "SAR",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 2006955000000,
+    "earnings": 604005000000
+   },
+   {
+    "year": 2023,
+    "revenue": 1653281000000,
+    "earnings": 454764000000
+   },
+   {
+    "year": 2024,
+    "revenue": 1637299000000,
+    "earnings": 398422000000
+   },
+   {
+    "year": 2025,
+    "revenue": 1559342000000,
+    "earnings": 350210000000
+   }
+  ]
+ },
+ "SK hynix": {
+  "source": "wikidata",
+  "qid": "Q370719",
+  "currency": "KRW",
+  "periods": [
+   {
+    "year": 2022,
+    "revenue": 44621568000000,
+    "earnings": 2241669000000
+   },
+   {
+    "year": 2023,
+    "revenue": 32765719000000,
+    "earnings": -9137547000000
+   },
+   {
+    "year": 2024,
+    "revenue": 66192960000000,
+    "earnings": 19796902000000
+   },
+   {
+    "year": 2025,
+    "revenue": 97146675000000,
+    "earnings": 42947902000000
+   }
+  ]
+ }
+}

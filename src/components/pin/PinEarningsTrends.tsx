@@ -20,22 +20,22 @@ import type { Translator } from '@/lib/i18n/translate';
 
 const W = 440;
 const H = 220;
-const PAD = { top: 14, right: 44, bottom: 54, left: 44 };
+const PAD = { top: 14, right: 44, bottom: 54, left: 66 };
 const PW = W - PAD.left - PAD.right;
 const PH = H - PAD.top - PAD.bottom;
 
-function useFormats() {
+function useFormats(currency?: string) {
   const loc = useIntlLocale();
   return useMemo(
     () => ({
-      compact: new Intl.NumberFormat(loc, { notation: 'compact', maximumFractionDigits: 1 }),
+      compact: new Intl.NumberFormat(loc, { notation: 'compact', maximumFractionDigits: 1, ...(currency ? { style: 'currency', currency } : {}) }),
       pct: new Intl.NumberFormat(loc, { maximumFractionDigits: 2, minimumFractionDigits: 2 }),
       pct0: new Intl.NumberFormat(loc, { maximumFractionDigits: 0 }),
       eps: new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
       signed: new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: 'exceptZero' }),
       day: new Intl.DateTimeFormat(loc, { month: 'short', day: '2-digit', timeZone: 'UTC' }),
     }),
-    [loc],
+    [loc, currency],
   );
 }
 
@@ -60,7 +60,7 @@ function Toggle<T extends string>({ value, options, onChange, label }: { value: 
 const PILL = 'inline-flex items-center rounded-full border border-line bg-field px-3 py-1 font-semibold text-ink transition-colors hover:bg-raised hover:text-link hover:no-underline';
 
 // A heading that is also a search: the pill finds the pins sharing the term.
-function HeadingPill({ field, value, title, className = 'text-base', children }: { field: 'tag' | 'ticker'; value: string; title: string; className?: string; children: React.ReactNode }) {
+function HeadingPill({ field, value, title, className = 'text-base', children }: { field: 'tag' | 'ticker' | 'company'; value: string; title: string; className?: string; children: React.ReactNode }) {
   return (
     <RefineLink field={field} value={value} title={title} className={`${PILL} ${className}`}>
       {children}
@@ -87,7 +87,10 @@ function shownEps(all: EpsQuarter[]): EpsQuarter[] {
   return next ? [...reported, next] : reported;
 }
 
-function EpsCard({ quarters, symbol, t }: { quarters: EpsQuarter[]; symbol: string; t: Translator }) {
+// What a card heading searches: the ticker's pins, or the company's when it has no ticker.
+type Find = { field: 'ticker' | 'company'; value: string; title: string };
+
+function EpsCard({ quarters, find, t }: { quarters: EpsQuarter[]; find: Find; t: Translator }) {
   const f = useFormats();
   const shown = useMemo(() => shownEps(quarters), [quarters]);
   const [hover, setHover] = useState<number | null>(null);
@@ -110,7 +113,7 @@ function EpsCard({ quarters, symbol, t }: { quarters: EpsQuarter[]; symbol: stri
   };
   const summary = shown.map((q) => `${q.label}: ${q.estimate != null ? `${t('earningsTrends.estimate')} ${f.eps.format(q.estimate)}` : ''} ${q.actual != null ? `${t('earningsTrends.actual')} ${f.eps.format(q.actual)}` : ''}`.trim()).join('; ');
   return (
-    <Card title={<HeadingPill field="ticker" value={symbol} title={t('stocks.searchPins', { symbol })}>{t('earningsTrends.eps')}</HeadingPill>}>
+    <Card title={<HeadingPill field={find.field} value={find.value} title={find.title}>{t('earningsTrends.eps')}</HeadingPill>}>
       <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
         <span className="font-semibold text-ink">{a.label}</span>
         <span className="inline-flex items-center gap-1.5 text-muted">
@@ -167,8 +170,8 @@ function EpsCard({ quarters, symbol, t }: { quarters: EpsQuarter[]; symbol: stri
   );
 }
 
-function RevenueCard({ quarterly, annual, symbol, t }: { quarterly: RevenuePeriod[]; annual: RevenuePeriod[]; symbol: string; t: Translator }) {
-  const f = useFormats();
+function RevenueCard({ quarterly, annual, currency, find, t }: { quarterly: RevenuePeriod[]; annual: RevenuePeriod[]; currency?: string; find: Find; t: Translator }) {
+  const f = useFormats(currency);
   const [mode, setMode] = useState<'annual' | 'quarterly'>(quarterly.length ? 'quarterly' : 'annual');
   const [hover, setHover] = useState<number | null>(null);
   const periods = mode === 'quarterly' ? quarterly : annual;
@@ -200,8 +203,9 @@ function RevenueCard({ quarterly, annual, symbol, t }: { quarterly: RevenuePerio
   const summary = periods.map((q) => `${q.label}: ${t('earningsTrends.revenue')} ${f.compact.format(q.revenue)}${q.earnings != null ? `, ${t('earningsTrends.earnings')} ${f.compact.format(q.earnings)}` : ''}`).join('; ');
   return (
     <Card
-      title={<HeadingPill field="ticker" value={symbol} title={t('stocks.searchPins', { symbol })}>{t('earningsTrends.revenueVsEarnings')}</HeadingPill>}
+      title={<HeadingPill field={find.field} value={find.value} title={find.title}>{t('earningsTrends.revenueVsEarnings')}</HeadingPill>}
       aside={
+        quarterly.length && annual.length ? (
         <Toggle
           value={mode}
           label={t('earningsTrends.revenueVsEarnings')}
@@ -214,6 +218,7 @@ function RevenueCard({ quarterly, annual, symbol, t }: { quarterly: RevenuePerio
             { id: 'quarterly', text: t('earningsTrends.quarterly') },
           ]}
         />
+        ) : null
       }
     >
       <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
@@ -283,6 +288,13 @@ export function PinEarningsTrends({ pinId, symbol }: { pinId: number; symbol?: s
   }, [pinId]);
   if (!trends) return null;
   const ticker = symbol ?? trends.symbol;
+  const company = trends.company;
+  const find: Find | null = ticker
+    ? { field: 'ticker', value: ticker, title: t('stocks.searchPins', { symbol: ticker }) }
+    : company
+      ? { field: 'company', value: company, title: t('card.showAllValue', { value: company }) }
+      : null;
+  if (!find) return null;
   return (
     <section aria-labelledby="earnings-trends-heading" className="mt-4">
       <div className="mb-2 flex items-baseline justify-between gap-3">
@@ -291,15 +303,17 @@ export function PinEarningsTrends({ pinId, symbol }: { pinId: number; symbol?: s
             {t('earningsTrends.heading')}
           </HeadingPill>
         </h2>
-        <Anchor href={`https://finance.yahoo.com/quote/${encodeURIComponent(ticker.replace('.', '-'))}/financials/`} target="_blank" rel="noopener nofollow" className="text-xs text-subtle hover:text-link hover:no-underline">
-          {t('stocks.onYahoo', { symbol: ticker })}
-        </Anchor>
+        {ticker ? (
+          <Anchor href={`https://finance.yahoo.com/quote/${encodeURIComponent(ticker.replace('.', '-'))}/financials/`} target="_blank" rel="noopener nofollow" className="text-xs text-subtle hover:text-link hover:no-underline">
+            {t('stocks.onYahoo', { symbol: ticker })}
+          </Anchor>
+        ) : null}
       </div>
       <div className="grid gap-4">
-        <EpsCard quarters={trends.eps} symbol={ticker} t={t} />
-        <RevenueCard quarterly={trends.quarterly} annual={trends.annual} symbol={ticker} t={t} />
+        <EpsCard quarters={trends.eps} find={find} t={t} />
+        <RevenueCard quarterly={trends.quarterly} annual={trends.annual} currency={trends.currency} find={find} t={t} />
       </div>
-      <p className="mt-1 text-xs text-subtle">{t('earningsTrends.source')}</p>
+      <p className="mt-1 text-xs text-subtle">{trends.source ? t('earningsTrends.sourceAnnual', { currency: trends.currency ?? '' }) : t('earningsTrends.source')}</p>
     </section>
   );
 }

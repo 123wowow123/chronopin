@@ -1215,6 +1215,7 @@ const ko: Messages = {
     earnings: '순이익',
     profitMargin: '이익률',
     source: '출처는 나스닥: EPS와 애널리스트 컨센서스 비교이며, 순이익은 보통주주 귀속 순이익입니다. 분기는 회계기간 종료월로 표시합니다.',
+    sourceAnnual: '연간 수치는 기업 자체 보고서를 바탕으로 한 위키데이터 자료이며 통화는 {currency}입니다. 이 종목은 애널리스트 추정치가 없습니다.',
   },
   ratings: {
     averageLabel: '평점 {count}건 평균: {average}%',
