@@ -1,5 +1,5 @@
 import { PinFactoryBuildout } from '@/components/pin/PinFactoryBuildout';
-import { buildMarks, type FactoryMilestone, hasEstimatedCost, hasWholeProjectCost, hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
+import { buildMarks, type FactoryMilestone, hasEstimatedCost, hasWholeProjectCost } from '@/lib/pinFactory';
 import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
