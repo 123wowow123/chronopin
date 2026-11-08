@@ -9,7 +9,7 @@ import type { Restaurant, TopRestaurant } from './restaurants';
 export const GUIDE_PAGE_SIZE = 25;
 export type GuideView = 'upcoming' | 'new' | 'top' | 'discounts';
 export type GuideSection = 'available' | 'next';
-export const GUIDE_VIEWS: GuideView[] = ['upcoming', 'new', 'top', 'discounts'];
+export const GUIDE_VIEWS: GuideView[] = ['discounts', 'upcoming', 'new', 'top'];
 
 // The view a guide page really shows: the requested one when it has content,
 // otherwise the first populated one (what the bare city URL opens on).

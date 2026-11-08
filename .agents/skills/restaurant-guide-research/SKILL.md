@@ -11,7 +11,8 @@ description: >-
 Docs: `docs/okf/api/restaurant-content.md`, `restaurant-specials.md`, `restaurant-seed.md`.
 
 ## Landing page sections
-Every guide (including Japan city guides) supports **Coming soon, Just opened, Top restaurants, Specials**.
+Every guide (including Japan city guides) supports **Specials, Coming soon, Just opened, Top restaurants**, in that order.
+- Open the first populated tab by default, prioritizing Specials when offers exist.
 - Hide tabs with no eligible content; links to empty tabs fall back to a populated view.
 - Specials stays visible whenever verified active or upcoming offers exist, even outside service hours or without
   a published rating. Upcoming offers show the next local start time; active ones show "available now". Expired

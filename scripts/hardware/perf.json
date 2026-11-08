@@ -14861,5 +14861,1183 @@
         "current": 2
       }
     ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Workload",
+            "Inference only",
+            "Google historical account",
+            "Google Cloud"
+          ],
+          [
+            "Deployment",
+            "2015 internally; disclosed May 18, 2016",
+            "Deployment year and public announcement differ",
+            "Google Cloud"
+          ],
+          [
+            "Packaging",
+            "Board fits a hard-drive slot",
+            "2016 maker description",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "2015",
+            "First internal deployments",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "May 18, 2016",
+            "Public TPU announcement",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Internal deployment",
+          "Public reveal"
+        ],
+        "current": 1,
+        "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Tesla P100",
+            "Pascal data-center accelerator announced April 2016; a contemporary general-purpose GPU alternative.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      },
+      {
+        "title": "Google TPU generation guide",
+        "columns": [
+          "Generation",
+          "Public milestone",
+          "Role",
+          "Source"
+        ],
+        "rows": [
+          [
+            "v1",
+            "2016-05-18",
+            "Inference only",
+            "Google Cloud"
+          ],
+          [
+            "v2",
+            "2017-05-17",
+            "Training and inference",
+            "Google Cloud"
+          ],
+          [
+            "v3",
+            "2018-05-08",
+            "Training and inference",
+            "9to5Google"
+          ],
+          [
+            "v4",
+            "2021-05-18",
+            "Training and inference",
+            "Google"
+          ],
+          [
+            "v5e",
+            "2023-08-29",
+            "Training and inference",
+            "Google Cloud"
+          ],
+          [
+            "v5p",
+            "2023-12-06",
+            "Training and inference",
+            "Google Cloud"
+          ],
+          [
+            "v6",
+            "2024-05-14",
+            "Training and inference",
+            "Google Cloud"
+          ],
+          [
+            "v7",
+            "2025-04-09",
+            "Training and inference",
+            "Google"
+          ],
+          [
+            "v8t",
+            "2026-04-22",
+            "Training optimized",
+            "Google Cloud"
+          ],
+          [
+            "v8i",
+            "2026-04-22",
+            "Inference optimized",
+            "Google"
+          ]
+        ],
+        "note": "Main thread follows public generation reveals, with 8t and 8i announced together. Availability dates belong to each pin timeline."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/topics/inside-google-cloud/google-cloud-offer-tpus-machine-learning",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Workload",
+            "Training and inference",
+            "2017 launch",
+            "Google Cloud"
+          ],
+          [
+            "Cloud TPU device",
+            "Up to 180 TFLOPS",
+            "Per device, not per chip",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "256 chips / 512 TensorCores",
+            "Current Google Cloud documentation",
+            "Google Cloud"
+          ],
+          [
+            "Pod compute",
+            "11.5 PFLOPS",
+            "2019 release notes",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v2"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "May 17, 2017",
+            "Second-generation Cloud TPU announced",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Feb 12, 2018",
+            "Cloud TPU beta",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Jun 27, 2018",
+            "Cloud TPU general availability",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Dec 5, 2019",
+            "v2 and v3 Pods generally available",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "Cloud beta",
+          "Cloud GA",
+          "Pod GA"
+        ],
+        "current": 3,
+        "sourceUrl": "https://cloud.google.com/blog/topics/inside-google-cloud/google-cloud-offer-tpus-machine-learning"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Tesla V100",
+            "Volta training and inference GPU, announced May 10, 2017; maker launch states 120 deep-learning teraflops.",
+            "NVIDIA"
+          ],
+          [
+            "Tesla P100",
+            "Pascal data-center accelerator announced April 2016; a contemporary general-purpose GPU alternative.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v3",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "123 TFLOPS BF16",
+            "Current Google Cloud documentation",
+            "Google Cloud"
+          ],
+          [
+            "HBM2 capacity",
+            "32 GiB per chip",
+            "Nominal capacity",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "900 GB/s per chip",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "1,024 chips",
+            "2D torus",
+            "Google Cloud"
+          ],
+          [
+            "Peak pod compute",
+            "126 PFLOPS BF16",
+            "Current spec; 2019 release notes rounded to 100 PFLOPS",
+            "Google Cloud"
+          ],
+          [
+            "Cooling",
+            "Liquid cooling",
+            "2019 release notes",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v3"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "May 8, 2018",
+            "TPU 3.0 revealed at Google I/O",
+            "Demonstrated",
+            "9to5Google"
+          ],
+          [
+            "Oct 10, 2018",
+            "Cloud TPU v3 beta",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Jan 31, 2019",
+            "Cloud TPU v3 general availability",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Dec 5, 2019",
+            "v3 Pods generally available",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "Cloud beta",
+          "Cloud GA",
+          "Pod GA"
+        ],
+        "current": 3,
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v3"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Tesla V100",
+            "Volta training and inference GPU, announced May 10, 2017; maker launch states 120 deep-learning teraflops.",
+            "NVIDIA"
+          ],
+          [
+            "Tesla P100",
+            "Pascal data-center accelerator announced April 2016; a contemporary general-purpose GPU alternative.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://blog.google/intl/en-in/company-news/inside-google/google-io-2021-being-helpful-moments-matter/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "275 TFLOPS BF16 or INT8",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "HBM2 capacity",
+            "32 GiB per chip",
+            "Nominal capacity",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "1,200 GB/s per chip",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "4,096 chips",
+            "3D mesh in current documentation",
+            "Google Cloud"
+          ],
+          [
+            "Peak pod compute",
+            "1.1 exaFLOPS BF16 or INT8",
+            "Maker specification",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v4"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "May 18, 2021",
+            "TPU v4 announced at I/O",
+            "Demonstrated",
+            "Google"
+          ],
+          [
+            "May 11, 2022",
+            "Cloud TPU v4 hub opened in Preview",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "Cloud preview"
+        ],
+        "current": 1,
+        "sourceUrl": "https://blog.google/intl/en-in/company-news/inside-google/google-io-2021-being-helpful-moments-matter/"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "A100",
+            "Ampere training and inference accelerator shipping from May 2020; supports multi-instance GPU partitioning.",
+            "NVIDIA"
+          ],
+          [
+            "Tesla V100",
+            "Volta training and inference GPU, announced May 10, 2017; maker launch states 120 deep-learning teraflops.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "197 TFLOPS BF16; 393 TOPS INT8",
+            "Different precisions; not interchangeable",
+            "Google Cloud"
+          ],
+          [
+            "HBM capacity",
+            "16 GB per chip",
+            "Documentation unit retained",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "800 GiB/s per chip",
+            "Documentation unit retained",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "256 chips",
+            "2D torus",
+            "Google Cloud"
+          ],
+          [
+            "Training performance / dollar",
+            "Up to 2x TPU v4",
+            "2023 maker claim; workload dependent",
+            "Google Cloud"
+          ],
+          [
+            "Inference performance / dollar",
+            "Up to 2.5x TPU v4",
+            "2023 maker claim; workload dependent",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v5e"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Aug 29, 2023",
+            "TPU v5e preview announced",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Dec 6, 2023",
+            "Google confirms v5e is generally available",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Preview",
+          "GA confirmed"
+        ],
+        "current": 1,
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "H100 SXM",
+            "Hopper GPU with 80 GB HBM and 3.35 TB/s bandwidth; framework and precision choices affect comparisons.",
+            "NVIDIA"
+          ],
+          [
+            "A100",
+            "Ampere training and inference accelerator shipping from May 2020; supports multi-instance GPU partitioning.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer",
+    "charts": [
+      {
+        "title": "GPT-3 175B training speed vs TPU v4",
+        "unit": "relative training speed",
+        "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer",
+        "bars": [
+          {
+            "label": "TPU v4",
+            "value": 1
+          },
+          {
+            "label": "TPU v5p",
+            "value": 2.8,
+            "highlight": true
+          }
+        ],
+        "note": "Google internal data, November 2023; normalized per chip, sequence length 2048. Workload-specific."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "459 TFLOPS BF16",
+            "Current documentation",
+            "Google Cloud"
+          ],
+          [
+            "Physical HBM",
+            "96 GiB per chip",
+            "95 GiB usable in documentation table",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "2,765 GB/s per chip",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "8,960 chips",
+            "3D torus",
+            "Google Cloud"
+          ],
+          [
+            "GPT-3 175B training speed",
+            "2.8x TPU v4",
+            "Maker internal run, November 2023; per-chip normalized",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v5p"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Dec 6, 2023",
+            "TPU v5p announced; access by request",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Apr 9, 2024",
+            "TPU v5p generally available",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "General availability"
+        ],
+        "current": 1,
+        "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-cloud-tpu-v5p-and-ai-hypercomputer"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "H100 SXM",
+            "Hopper GPU with 80 GB HBM and 3.35 TB/s bandwidth; framework and precision choices affect comparisons.",
+            "NVIDIA"
+          ],
+          [
+            "A100",
+            "Ampere training and inference accelerator shipping from May 2020; supports multi-instance GPU partitioning.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/products/compute/introducing-trillium-6th-gen-tpus",
+    "charts": [
+      {
+        "title": "Trillium peak compute relative to TPU v5e",
+        "unit": "relative peak per chip",
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/introducing-trillium-6th-gen-tpus",
+        "bars": [
+          {
+            "label": "TPU v5e",
+            "value": 1
+          },
+          {
+            "label": "Trillium",
+            "value": 4.7,
+            "highlight": true
+          }
+        ],
+        "note": "Google launch claim; not application speed or relative to TPU v5p."
+      }
+    ],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "918 TFLOPS BF16; 1,836 TOPS INT8",
+            "Current v6e documentation",
+            "Google Cloud"
+          ],
+          [
+            "HBM capacity",
+            "32 GB per chip",
+            "31.25 GiB usable per runtime note",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "1,638 GB/s per chip",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "256 chips",
+            "2D torus",
+            "Google Cloud"
+          ],
+          [
+            "Peak compute improvement",
+            "4.7x TPU v5e",
+            "Maker claim; not relative to v5p",
+            "Google Cloud"
+          ],
+          [
+            "Energy efficiency improvement",
+            "Over 67% versus TPU v5e",
+            "Launch maker claim",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v6e"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "May 14, 2024",
+            "Trillium announced",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Dec 11, 2024",
+            "Blog announces general availability",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Dec 16, 2024",
+            "Release notes record GA and capacity deliveries",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "General availability"
+        ],
+        "current": 1,
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/introducing-trillium-6th-gen-tpus"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "H200",
+            "Hopper GPU with 141 GB HBM3e and 4.8 TB/s bandwidth.",
+            "NVIDIA"
+          ],
+          [
+            "H100 SXM",
+            "Hopper GPU with 80 GB HBM and 3.35 TB/s bandwidth; framework and precision choices affect comparisons.",
+            "NVIDIA"
+          ],
+          [
+            "B200",
+            "Blackwell GPU with up to 180 GB HBM3/3e according to the NVIDIA tuning guide.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Peak compute per chip",
+            "2,307 TFLOPS BF16; 4,614 TFLOPS FP8",
+            "Current TPU7x documentation",
+            "Google Cloud"
+          ],
+          [
+            "HBM capacity",
+            "192 GiB per chip",
+            "Current documentation; launch graphic says GB",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "7,380 GB/s per chip",
+            "Current documentation; prose rounds to 7.37 TB/s",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "9,216 chips",
+            "Maker specification",
+            "Google Cloud"
+          ],
+          [
+            "Pod compute",
+            "42.5 exaFLOPS FP8",
+            "Precision differs from earlier BF16 pod figures",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://docs.cloud.google.com/tpu/docs/tpu7x"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 9, 2025",
+            "Ironwood announced",
+            "Demonstrated",
+            "Google"
+          ],
+          [
+            "Nov 24, 2025",
+            "TPU7x preview in release notes",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "Mar 31, 2026",
+            "TPU7x general availability in release notes",
+            "Demonstrated",
+            "Google Cloud"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "Cloud preview",
+          "Cloud GA"
+        ],
+        "current": 2,
+        "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "B200",
+            "Blackwell GPU with up to 180 GB HBM3/3e according to the NVIDIA tuning guide.",
+            "NVIDIA"
+          ],
+          [
+            "H200",
+            "Hopper GPU with 141 GB HBM3e and 4.8 TB/s bandwidth.",
+            "NVIDIA"
+          ],
+          [
+            "Trainium2 / EC2 Trn2",
+            "EC2 Trn2 training instances scale to 16 Trainium2 chips and 1.5 TB total HBM3 per instance.",
+            "AWS"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Design target",
+            "Pre-training and embedding-heavy workloads",
+            "Announced architecture, not a GA claim",
+            "Google Cloud"
+          ],
+          [
+            "Peak compute per chip",
+            "12.6 PFLOPS FP4",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "HBM capacity",
+            "216 GB per chip",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "6,528 GB/s per chip",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "On-chip SRAM",
+            "128 MB",
+            "Vmem in maker table",
+            "Google Cloud"
+          ],
+          [
+            "Superpod size",
+            "9,600 chips",
+            "3D torus",
+            "Google Cloud"
+          ],
+          [
+            "Host CPU",
+            "Arm Axion",
+            "Maker architecture table",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 22, 2026",
+            "TPU 8t architecture announced",
+            "Demonstrated",
+            "Google Cloud"
+          ],
+          [
+            "2026",
+            "General availability targeted later in the year",
+            "Planned",
+            "Google"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "General availability"
+        ],
+        "current": 0,
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Trainium2 / EC2 Trn2",
+            "EC2 Trn2 training instances scale to 16 Trainium2 chips and 1.5 TB total HBM3 per instance.",
+            "AWS"
+          ],
+          [
+            "B200",
+            "Blackwell GPU with up to 180 GB HBM3/3e according to the NVIDIA tuning guide.",
+            "NVIDIA"
+          ],
+          [
+            "H200",
+            "Hopper GPU with 141 GB HBM3e and 4.8 TB/s bandwidth.",
+            "NVIDIA"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/",
+    "charts": [],
+    "tables": [
+      {
+        "title": "Published specifications",
+        "columns": [
+          "Measure",
+          "Figure",
+          "Basis",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Design target",
+            "Post-training and low-latency inference",
+            "Announced architecture, not a GA claim",
+            "Google Cloud"
+          ],
+          [
+            "Peak compute per chip",
+            "10.1 PFLOPS FP4",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "HBM capacity",
+            "288 GB per chip",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "HBM bandwidth",
+            "8,601 GB/s per chip",
+            "Maker architecture table",
+            "Google Cloud"
+          ],
+          [
+            "On-chip SRAM",
+            "384 MB",
+            "Vmem in maker table",
+            "Google Cloud"
+          ],
+          [
+            "Pod size",
+            "Up to 1,152 chips",
+            "Boardfly topology",
+            "Google Cloud"
+          ],
+          [
+            "Host CPU",
+            "Arm Axion",
+            "Maker architecture table",
+            "Google Cloud"
+          ]
+        ],
+        "sourceUrl": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive"
+      },
+      {
+        "title": "Research to commercialization",
+        "display": "timeline",
+        "columns": [
+          "Date",
+          "Milestone",
+          "Status",
+          "Source"
+        ],
+        "rows": [
+          [
+            "Apr 22, 2026",
+            "TPU 8i architecture announced",
+            "Demonstrated",
+            "Google"
+          ],
+          [
+            "2026",
+            "General availability targeted later in the year",
+            "Planned",
+            "Google"
+          ]
+        ],
+        "stages": [
+          "Announced",
+          "General availability"
+        ],
+        "current": 0,
+        "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/"
+      },
+      {
+        "title": "Contemporary alternatives — different platforms and workloads",
+        "columns": [
+          "Product",
+          "Published context",
+          "Source"
+        ],
+        "rows": [
+          [
+            "B200",
+            "Blackwell GPU with up to 180 GB HBM3/3e according to the NVIDIA tuning guide.",
+            "NVIDIA"
+          ],
+          [
+            "H200",
+            "Hopper GPU with 141 GB HBM3e and 4.8 TB/s bandwidth.",
+            "NVIDIA"
+          ],
+          [
+            "Trainium2 / EC2 Trn2",
+            "EC2 Trn2 training instances scale to 16 Trainium2 chips and 1.5 TB total HBM3 per instance.",
+            "AWS"
+          ]
+        ],
+        "note": "Product context, not a benchmark ranking. GPU, TPU and cloud-instance peak rates and memory units may differ."
+      }
+    ]
   }
 ]

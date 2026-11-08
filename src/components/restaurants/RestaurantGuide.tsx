@@ -37,10 +37,10 @@ type Props = {
 };
 
 const VIEWS = [
+  { key: 'discounts', label: 'Specials', mobileLabel: 'Specials', hash: '#available-now' },
   { key: 'upcoming', label: 'Coming soon', mobileLabel: 'Soon', hash: '#upcoming' },
   { key: 'new', label: 'Just opened', mobileLabel: 'New', hash: '#new' },
   { key: 'top', label: 'Top restaurants', mobileLabel: 'Top', hash: '#top-restaurants' },
-  { key: 'discounts', label: 'Specials', mobileLabel: 'Specials', hash: '#available-now' },
 ] as const;
 
 function subscribeToHash(listener: () => void) {

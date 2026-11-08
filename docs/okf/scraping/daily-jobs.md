@@ -1218,6 +1218,8 @@ local's, so keys must be computed against prod's `horoscopes_needed`.
 
 ### modelRubrics
 
+Hardware reference pass (2026-11-07): [Google TPU generation thread](../../tpu-thread-2026-11-07.md), production pins 20863–20872, has native specs, timelines, sourced alternatives and Azure media. Catalogs: `scripts/hardware/tpu-thread.json` and `scripts/hardware/perf.json`. TPU 8t/8i GA remains planned until a dated confirmation is opened; commentary is labeled manufacturer material, not independent review.
+
 **Reads** `model_rubric_gaps` (a few pins per call, newest first): AI language/video model release and announcement pins (tag `AI Models`, dated today or earlier, not predicted, not retirements and not image, speech or live models) missing a rubric (`PinLlmPerf` / `PinVideoPerf`), a nonempty spec panel (`PinPerf` charts or tables), or a live picture. Existing rubrics do not hide missing spec panels or media. Each comes with its `kind`, what it `needs` (`rubric`, `tables`, `media`) and its author. "Announces" titles are included.
 **Does** for each pin, in this order, one at a time:
 1. `get_pin` for what the pin covers and its references, then research with `web_fetch` and `web_search` by the rules in [strategy.md](strategy.md) ("Language model rubric", "Video model rubric", "Which results table"): the model **as launched**, scored on its published figures (maker page, docs, Artificial Analysis, API providers), `null` for what was not published then, never borrowed from a sibling model or from today's price.
