@@ -31,6 +31,7 @@ import { PinGamePerf } from '@/components/pin/PinGamePerf';
 import { PinAircraftPerf } from '@/components/pin/PinAircraftPerf';
 import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
+import { PinServiceStatus } from '@/components/pin/PinServiceStatus';
 import { BUILD_STATUSES, pinDateKind } from '@/lib/pinDateKind';
 import { timelineSpan } from '@/lib/pinPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
@@ -125,7 +126,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -194,7 +195,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
     soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -226,6 +227,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     adsenseSlots(),
     viewerUser(),
     soft(pinAlternateNames(pin.id), [], 'pinAlternateNames'),
+    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.title), null, 'pinServiceStatus') : null,
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
@@ -310,6 +312,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {gamePerf ? <PinGamePerf perf={gamePerf} t={t} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {aircraftPerf ? <PinAircraftPerf perf={aircraftPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {videoPerf ? <PinVideoPerf perf={videoPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {serviceStatus ? <PinServiceStatus status={serviceStatus} className="mt-4" /> : null}
           {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}

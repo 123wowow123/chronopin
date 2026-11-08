@@ -31,6 +31,7 @@ function toNewPin(pin: CardPin): NewPin {
     // guards the same gap); it was created now, so that is the best answer.
     utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
     ...pinPicture(pin.media),
+    ...(!pin.media?.length && pin.companyLogoUrl ? { originalUrl: pin.companyLogoUrl, logo: true } : {}),
     hasMarket: pinMarketRefs(pin).length > 0,
   };
 }
@@ -99,9 +100,9 @@ export function NewPinRow({ pin }: { pin: NewPin }) {
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
       {pin.hasMarket && !pin.thumbName && !pin.originalUrl ? (
-        <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />} />
+        <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} logo={pin.logo} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />} />
       ) : (
-        <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />
+        <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} logo={pin.logo} title={pin.title} category={pin.category} className="h-12 w-[4.5rem]" />
       )}
       <span className="flex min-w-0 flex-col">
         <span dir={pinTextDir(pin)} className="truncate leading-snug text-ink" title={pin.title}>

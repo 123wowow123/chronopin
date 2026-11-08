@@ -35,7 +35,7 @@ function newestPins(): Promise<NewPin[]> {
 
 async function readNewestPins(): Promise<NewPin[]> {
   const pins = await Pins.newest(12, await timelineMinConfidence());
-  const pictures = await PinView.pictures(pins.map((p) => p.id));
+  const pictures = await PinView.pictures(pins.map((p) => p.id), { companyLogo: true });
   return pins.map(({ sourceUrl, referenceUrls, address, ...p }) => ({
     ...p,
     city: cityOf(address),

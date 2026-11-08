@@ -514,16 +514,7 @@ project pin such as construction project should have widget that states why prob
 
 
 
-stats like how many housing unites like in this pin should be shown like spec like with datacenter pins. do that for all other applicable pins too
-https://www.chronopin.com/pin/20881/plans-reported-for-600-unit-housing-at-clairemont-s-garfield-shopping-center
-
-
-Save pin 20881 with 600 homes, basis "reported". Affordable share, floor area and parking stay out until I find a source for them.
-
-
-model should have uptime percentage and if current experiencing outage should show on pin
-https://statusgator.com/services/google-antigravity
 
 
 "SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
-"Project specs panel"
+"Project specs panel" resreach

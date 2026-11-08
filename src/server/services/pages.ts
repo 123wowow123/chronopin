@@ -35,6 +35,8 @@ import { gamePerfForPin } from '../model/pinGamePerf';
 import { aircraftPerfForPin } from '../model/pinAircraftPerf';
 import { videoPerfForPin } from '../model/pinVideoPerf';
 import { llmPerfForPin } from '../model/pinLlmPerf';
+import { serviceStatusForTitle } from '../model/serviceStatus';
+import type { ServiceStatusJson } from '@/lib/serviceStatus';
 import { diningForPin } from '../model/pinDining';
 import { hotelForPin } from '../model/pinHotel';
 import { criticReviewsForPin } from '../model/pinCriticReview';
@@ -396,6 +398,14 @@ export async function pinLlmPerf(id: number): Promise<PinLlmPerfJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return llmPerfForPin(id);
+}
+
+// The vendor health (uptime + any ongoing outage) behind an AI model pin, or null
+// when the title names no tracked service. Short-lived so an outage shows within minutes.
+export async function pinServiceStatus(title: string): Promise<ServiceStatusJson | null> {
+  'use cache';
+  cacheLife('minutes');
+  return serviceStatusForTitle(title);
 }
 
 // A restaurant pin's dining rubric, or null when it has none.

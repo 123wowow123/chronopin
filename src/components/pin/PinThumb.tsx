@@ -28,12 +28,15 @@ export function PinThumb({
   originalUrl,
   title,
   category,
+  logo,
   className = 'h-9 w-16',
 }: {
   thumbName?: string | null;
   originalUrl?: string | null;
   title?: string | null;
   category?: string | null;
+  // originalUrl is a company logo: shown whole on a light tile, not cropped.
+  logo?: boolean;
   className?: string;
 }) {
   const [failedSources, setFailedSources] = useState<string[]>([]);
@@ -65,8 +68,9 @@ export function PinThumb({
       </span>
     );
   }
+  const asLogo = logo && src === originalUrl;
   return (
-    <span className={`relative block shrink-0 overflow-hidden rounded bg-raised-2 hover:[&_img]:scale-[1.08] motion-reduce:hover:[&_img]:scale-100 ${className}`}>
+    <span className={`relative block shrink-0 overflow-hidden rounded ${asLogo ? 'bg-white p-1.5' : 'bg-raised-2'} hover:[&_img]:scale-[1.08] motion-reduce:hover:[&_img]:scale-100 ${className}`}>
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element -- already sized and cached in blob storage
         <img
@@ -77,7 +81,7 @@ export function PinThumb({
           height={108}
           loading="lazy"
           referrerPolicy="no-referrer"
-          className="size-full object-cover transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] [button:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100 motion-reduce:[button:hover_&]:scale-100"
+          className={`size-full ${asLogo ? 'min-w-0 object-contain' : 'object-cover'} transition-transform duration-[400ms] ease-out [a:hover_&]:scale-[1.08] [button:hover_&]:scale-[1.08] motion-reduce:transition-none motion-reduce:[a:hover_&]:scale-100 motion-reduce:[button:hover_&]:scale-100`}
           ref={imgRef}
           onError={() => setFailedSources((current) => current.includes(src) ? current : [...current, src])}
         />

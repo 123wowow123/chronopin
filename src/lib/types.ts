@@ -301,6 +301,8 @@ export type TrendingPin = {
   previousViews: number;
   thumbName?: string | null;
   originalUrl?: string | null;
+  // originalUrl is its company's logo, standing in for a picture it lacks.
+  logo?: boolean;
 };
 
 // A recently added pin, for the timeline's new pins panel.
@@ -319,6 +321,8 @@ export type NewPin = {
   utcCreatedDateTime: string;
   thumbName?: string | null;
   originalUrl?: string | null;
+  // originalUrl is its company's logo, standing in for a picture it lacks.
+  logo?: boolean;
   // Whether it links a Kalshi or Polymarket market, so has live odds.
   hasMarket?: boolean;
 };

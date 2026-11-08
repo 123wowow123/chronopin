@@ -191,14 +191,18 @@ export default class PinView {
        LIMIT $2`,
       [days, limit, minConfidence],
     );
-    const pictures = await PinView.pictures(top.map((p) => p.id));
+    const pictures = await PinView.pictures(top.map((p) => p.id), { companyLogo: true });
     return top.map(({ address, ...p }) => ({ ...p, city: cityOf(address), utcStartDateTime: p.utcStartDateTime.toISOString(), ...pictures.get(p.id) }));
   }
 
   // Each pin's picture as the map popup picks it: a video's still first, else
   // its first medium. originalUrl is only set for images (a fallback when the
   // thumb is missing); a video's is the page, not a picture.
-  static async pictures(pinIds: number[]) {
+  //
+  // With companyLogo, a pin with no medium of its own gets its company's logo
+  // (logo: true, the logo URL as originalUrl) so a list shows the brand rather
+  // than a letter tile. A real picture, such as the founding site, always wins.
+  static async pictures(pinIds: number[], { companyLogo = false }: { companyLogo?: boolean } = {}) {
     const rows = pinIds.length
       ? await db.query<{ pinId: number; thumbName: string | null; originalUrl: string | null }>(
           `SELECT DISTINCT ON ("pm"."pinId") "pm"."pinId", "m"."thumbName",
@@ -210,6 +214,18 @@ export default class PinView {
           [pinIds],
         )
       : [];
-    return new Map(rows.map(({ pinId, ...picture }) => [pinId, picture]));
+    const pictures = new Map<number, { thumbName: string | null; originalUrl: string | null; logo?: boolean }>(
+      rows.map(({ pinId, ...picture }) => [pinId, picture]),
+    );
+    const bare = pinIds.filter((id) => !pictures.get(id)?.thumbName && !pictures.get(id)?.originalUrl);
+    if (companyLogo && bare.length) {
+      const logos = await db.query<{ id: number; logoUrl: string }>(
+        `SELECT "p"."id", "c"."logoUrl" FROM "Pin" AS "p" JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
+         WHERE "p"."id" = ANY($1::integer[]) AND "c"."logoUrl" IS NOT NULL AND "c"."logoUrl" <> ''`,
+        [bare],
+      );
+      for (const { id, logoUrl } of logos) pictures.set(id, { thumbName: null, originalUrl: logoUrl, logo: true });
+    }
+    return pictures;
   }
 }
