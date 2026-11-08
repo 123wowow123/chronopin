@@ -196,8 +196,6 @@ export function PeopleDirectory({
   const { isLoggedIn, status: sessionStatus, user } = useSession();
   const [sidebar, setSidebar] = useState<PeopleSidebarData | null>(null);
   const [sidebarFailed, setSidebarFailed] = useState(false);
-  const [unwatchedIds, setUnwatchedIds] = useState<Set<number>>(new Set());
-  const [watchedOnly, setWatchedOnly] = useState(false);
 
   const loadSidebar = useCallback(() => {
     setSidebarFailed(false);
@@ -205,7 +203,6 @@ export function PeopleDirectory({
       .get<PeopleSidebarData>('/api/people/sidebar')
       .then((d) => {
         setSidebar(d);
-        setUnwatchedIds(new Set());
       })
       .catch(() => setSidebarFailed(true));
   }, []);
@@ -216,21 +213,6 @@ export function PeopleDirectory({
     return () => window.clearTimeout(id);
   }, [sessionStatus, isLoggedIn, user?.id, loadSidebar]);
 
-  const togglePersonWatch = useCallback(async (personId: number, next: boolean) => {
-    if (next) await api.post(`/api/people/${personId}/trade-watch`);
-    else await api.delete(`/api/people/${personId}/trade-watch`);
-    setUnwatchedIds((prev) => {
-      const s = new Set(prev);
-      if (next) s.delete(personId);
-      else s.add(personId);
-      return s;
-    });
-  }, []);
-
-  const watchedIds = useMemo(
-    () => new Set((sidebar?.watchedPeople ?? []).filter((p) => !unwatchedIds.has(p.id)).map((p) => p.id)),
-    [sidebar, unwatchedIds],
-  );
   const showPanel = sessionStatus === 'ready' && isLoggedIn;
 
   // A link to /people#senator opens that tab. Read after hydration, so the
@@ -265,8 +247,7 @@ export function PeopleDirectory({
     // Name order is A to Z; "descending" is Z to A.
     const named = (a: DirectoryPerson, b: DirectoryPerson) => (sort === 'name' && descending ? byName(b, a) : byName(a, b));
     if (!searching) {
-      let people = activeFacet ? (group?.people ?? []).filter(activeFacet.test) : (group?.people ?? []);
-      if (watchedOnly) people = people.filter((p) => watchedIds.has(p.id));
+      const people = activeFacet ? (group?.people ?? []).filter(activeFacet.test) : (group?.people ?? []);
       if (sort === 'recent') return descending ? people : [...people].reverse();
       return [...people].sort((a, b) => order(a, b) || named(a, b));
     }
@@ -276,7 +257,7 @@ export function PeopleDirectory({
       .flatMap((g) => g.people)
       .filter((p) => !seen.has(p.id) && seen.add(p.id) && (fold(p.name).includes(needle) || fold(p.line).includes(needle)))
       .sort((a, b) => order(a, b) || starts(b) - starts(a) || named(a, b));
-  }, [groups, group, activeFacet, needle, searching, sort, descending, watchedOnly, watchedIds]);
+  }, [groups, group, activeFacet, needle, searching, sort, descending]);
   if (!group) return null;
 
   const pick = (key: string) => {
@@ -290,13 +271,13 @@ export function PeopleDirectory({
     <div className={showPanel ? 'lg:grid lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-8 xl:grid-cols-[minmax(0,1fr)_24rem]' : undefined}>
     <div className="min-w-0">
       {/* The page's header: its title and description, and the name filter at the top right. */}
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-        <div className="min-w-0">
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+        <div className="min-w-[min(100%,24rem)] flex-1">
           <div className="mb-3 flex flex-wrap items-center gap-x-5 gap-y-2">
             <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
             <WatchAllTradesButton onChange={showPanel ? loadSidebar : undefined} />
           </div>
-          <p className="max-w-3xl text-base text-muted">{description}</p>
+          <p className="text-base text-muted">{description}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:pt-1">
           <input
@@ -355,7 +336,7 @@ export function PeopleDirectory({
       </div>
 
       {searching ? null : (
-      <div role="tablist" aria-label={title} className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6">
+      <div role="tablist" aria-label={title} className={`no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 ${showPanel ? 'lg:mr-0 lg:pr-0' : ''}`}>
         {groups.map((g) => {
           const selected = g.key === group.key;
           return (
@@ -381,7 +362,7 @@ export function PeopleDirectory({
 
       {searching || !facets.length ? null : (
         // The second row slides sideways like the first: narrowings of the open tab.
-        <div role="group" aria-label={t('person.facet.label')} className="no-scrollbar -mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6">
+        <div role="group" aria-label={t('person.facet.label')} className={`no-scrollbar -mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 ${showPanel ? 'lg:mr-0 lg:pr-0' : ''}`}>
           {[{ key: '', label: t('person.all'), count: group.people.length }, ...facets].map((f) => {
             const selected = (facet ?? '') === f.key || (!activeFacet && f.key === '');
             return (
@@ -413,7 +394,7 @@ export function PeopleDirectory({
         {searching ? <p className="mb-4 text-sm text-muted">{t('person.results', { count: list.length })}</p> : null}
         {list.length ? (
           <>
-            <ul className={`grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 ${showPanel ? 'lg:grid-cols-3 xl:grid-cols-4' : 'lg:grid-cols-5'}`}>
+            <ul className="grid grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(10.5rem,1fr))]">
               {list.slice(0, shown).map((p) => (
                 <li key={p.id}>
                   <Link
@@ -459,13 +440,6 @@ export function PeopleDirectory({
           data={sidebar}
           failed={sidebarFailed}
           onRetry={loadSidebar}
-          unwatchedIds={unwatchedIds}
-          onTogglePersonWatch={togglePersonWatch}
-          filteringWatched={watchedOnly}
-          onToggleFilterWatched={() => {
-            setWatchedOnly((v) => !v);
-            setShown(PAGE);
-          }}
         />
       </div>
     ) : null}

@@ -519,3 +519,7 @@ https://www.chronopin.com/pin/20881/plans-reported-for-600-unit-housing-at-clair
 
 
 Save pin 20881 with 600 homes, basis "reported". Affordable share, floor area and parking stay out until I find a source for them.
+
+
+model should have uptime percentage and if current experiencing outage should show on pin
+https://statusgator.com/services/google-antigravity

@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import Link from '@/components/ui/Link';
-import { UserAvatar } from '@/components/ui/UserAvatar';
+import { PopMenu, PopMenuItem } from '@/components/ui/PopMenu';
 import { api } from '@/lib/client/api';
+import Link from '@/components/ui/Link';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import { timeAgo } from '@/lib/format';
 import { personPath } from '@/lib/people';
@@ -39,6 +39,9 @@ export type SidebarTradeNotification = {
   personName: string | null;
   personPhotoUrl: string | null;
   tradeFiling?: string | null;
+  personId?: number;
+  // The viewer watches this person individually (not just through watch-all).
+  watched?: boolean;
   tradeFiledDate: string | null;
   tradeCount: number | null;
   tradeTickers: string[] | null;
@@ -52,6 +55,7 @@ export type SidebarTradeNotification = {
   tradeSellAssets: string[] | null;
   tradeBuyOtherValue: number | null;
   tradeSellOtherValue: number | null;
+  tradeTickerTypes?: Record<string, string> | null;
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   utcCreatedDateTime: string;
   read: boolean;
@@ -83,18 +87,42 @@ export type PeopleSidebarData = {
   recentPins: SidebarPersonPin[];
   traderMoves: {
     locked: boolean;
+    recentSince?: string;
     positions: TraderPositionRow[];
+    // Each tracked investor's person id and whether the viewer watches their trades.
+    people?: Record<string, { id: number; watching: boolean }>;
   };
 };
 
 const tickerHref = (ticker: string) => `/search?q=${encodeURIComponent(term('ticker', ticker))}`;
-const userHref = (handle: string) => `/search?q=user:${encodeURIComponent(handle.replace(/^@+/, ''))}`;
 
-const PREMIUM_MOVE: Record<string, 'notifications.premiumBuy' | 'notifications.premiumSell' | 'notifications.premiumHold' | 'notifications.premiumSwap'> = {
-  buy: 'notifications.premiumBuy',
-  sell: 'notifications.premiumSell',
-  hold: 'notifications.premiumHold',
-  swap: 'notifications.premiumSwap',
+const PREMIUM_MOVE_LABEL: Record<string, 'premium.bought' | 'premium.sold' | 'premium.holding' | 'premium.swapped'> = {
+  buy: 'premium.bought',
+  sell: 'premium.sold',
+  hold: 'premium.holding',
+  swap: 'premium.swapped',
+};
+
+const PREMIUM_KIND_LABEL: Record<string, 'premium.kindCalls' | 'premium.kindPuts' | 'premium.kindShort'> = {
+  call: 'premium.kindCalls',
+  put: 'premium.kindPuts',
+  short: 'premium.kindShort',
+};
+
+const ASSET_TYPE_LABEL: Record<string, string> = {
+  OP: 'Options',
+  CS: 'Bond',
+  GS: 'Gov Bond',
+  CT: 'Crypto',
+  PS: 'Preferred',
+  ET: 'ETF',
+  AB: 'ABS',
+  VA: 'Annuity',
+  HN: 'Fund',
+  OI: 'Equity',
+  OL: 'LLC',
+  RS: 'Restricted',
+  OT: 'Other',
 };
 
 function initials(name: string): string {
@@ -155,135 +183,23 @@ function ConflictBadge({ n }: { n: SidebarTradeNotification }) {
   );
 }
 
-function WatchedPersonRow({
-  person,
-  watching,
-  onToggle,
-}: {
-  person: SidebarWatchedPerson;
-  watching: boolean;
-  onToggle: (personId: number, next: boolean) => Promise<void>;
-}) {
-  const t = useT();
-  const [busy, setBusy] = useState(false);
-  const roleLabel = t.dynamic(`person.roles.${person.role}`, person.role);
-  const subtitle = [person.office || roleLabel, person.party, person.jurisdiction].filter(Boolean).join(' · ');
-
-  async function handleClick() {
-    if (busy) return;
-    setBusy(true);
-    try {
-      await onToggle(person.id, !watching);
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  return (
-    <li className="flex items-center gap-3 px-4 py-2.5 text-sm">
-      <Link href={`/person/${person.slug}`} className="shrink-0">
-        <SmallPersonAvatar name={person.name} photoUrl={person.photoUrl} />
-      </Link>
-      <div className="min-w-0 flex-1">
-        <Link href={`/person/${person.slug}`} className="block truncate font-semibold text-ink hover:text-link hover:no-underline">
-          {person.name}
-        </Link>
-        {subtitle ? <div className="truncate text-xs text-muted">{subtitle}</div> : null}
-        {person.tradeCount > 0 || person.pinCount > 0 ? (
-          <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-subtle">
-            {person.tradeCount > 0 ? (
-              <Link href={`/person/${person.slug}#trades`} className="font-medium text-subtle hover:text-ink">
-                {t('person.trades.title')}: {person.tradeCount}
-                {person.lastFiledDate ? ` · ${person.lastFiledDate}` : ''}
-              </Link>
-            ) : null}
-            {person.pinCount > 0 ? (
-              <span>{t('search.pinCount', { count: person.pinCount })}</span>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
-      <button
-        type="button"
-        onClick={handleClick}
-        disabled={busy}
-        aria-pressed={watching}
-        title={t(watching ? 'person.trades.unwatchHint' : 'person.trades.watchHint', { name: person.name })}
-        className={`btn shrink-0 rounded-full px-3 py-1 text-xs ${
-          watching ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'
-        }`}
-      >
-        {t(watching ? 'follow.unfollow' : 'follow.follow')}
-      </button>
-    </li>
-  );
-}
-
-function FollowedUserRow({ user }: { user: SidebarFollowedUser }) {
-  const t = useT();
-  const [following, setFollowing] = useState(true);
-  const [busy, setBusy] = useState(false);
-
-  async function toggle() {
-    if (busy) return;
-    setBusy(true);
-    try {
-      if (following) await api.delete(`/api/users/${user.id}/follow`);
-      else await api.post(`/api/users/${user.id}/follow`);
-      setFollowing(!following);
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  return (
-    <li className="flex items-center gap-3 px-4 py-2 text-sm">
-      <Link href={userHref(user.userName)} className="shrink-0">
-        <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-8 text-xs" />
-      </Link>
-      <Link href={userHref(user.userName)} className="min-w-0 flex-1 truncate font-semibold text-ink hover:text-link hover:no-underline">
-        {user.userName}
-      </Link>
-      <button
-        type="button"
-        onClick={toggle}
-        disabled={busy}
-        title={t(following ? 'follow.unfollowName' : 'follow.followName', { name: user.userName })}
-        className={`btn shrink-0 rounded-full px-3 py-1 text-xs ${
-          following ? 'btn-secondary hover:text-danger-soft' : 'btn-primary'
-        }`}
-      >
-        {t(following ? 'follow.unfollow' : 'follow.follow')}
-      </button>
-    </li>
-  );
-}
-
-const INITIAL_PEOPLE = 6;
 const INITIAL_TRADES = 5;
 
 export function PeopleSidePanel({
   data,
   failed,
   onRetry,
-  unwatchedIds,
-  onTogglePersonWatch,
-  filteringWatched,
-  onToggleFilterWatched,
 }: {
   data: PeopleSidebarData | null;
   failed: boolean;
   onRetry: () => void;
-  unwatchedIds: Set<number>;
-  onTogglePersonWatch: (personId: number, nextWatching: boolean) => Promise<void>;
-  filteringWatched?: boolean;
-  onToggleFilterWatched?: () => void;
 }) {
   const t = useT();
   const locale = useIntlLocale();
-  const [showAllPeople, setShowAllPeople] = useState(false);
-  const [showAllUsers, setShowAllUsers] = useState(false);
+  const [showAllPremium, setShowAllPremium] = useState(false);
   const [showAllTrades, setShowAllTrades] = useState(false);
+  // Watch changes made from the row menus, by person id, over what the server sent.
+  const [watchOverride, setWatchOverride] = useState<Record<number, boolean>>({});
   const [tradeScope, setTradeScope] = useState<'watched' | 'all' | null>(null);
 
   if (failed) {
@@ -302,15 +218,48 @@ export function PeopleSidePanel({
   if (!data) {
     return (
       <aside aria-label={t('profile.following')} className="space-y-4">
-        <div className="floating px-4 py-8 text-center text-sm text-subtle">{t('common.loading')}</div>
+        <div role="status" aria-busy="true" aria-label={t('common.loading')} className="space-y-5">
+          {[3, 4].map((rows) => (
+            <div key={rows} className="floating animate-pulse overflow-hidden">
+              <div className="flex items-center gap-2 border-b border-line bg-raised/40 px-4 py-3">
+                <div className="size-4 rounded bg-raised" />
+                <div className="h-3 w-32 rounded bg-raised" />
+              </div>
+              <div className="divide-y divide-line">
+                {Array.from({ length: rows }, (_, i) => (
+                  <div key={i} className="flex items-start gap-3 px-4 py-3">
+                    <div className="size-9 shrink-0 rounded-full bg-raised" />
+                    <div className="min-w-0 flex-1 space-y-2 pt-1">
+                      <div className="h-3 w-3/4 rounded bg-raised" />
+                      <div className="h-3 w-1/2 rounded bg-raised" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </aside>
     );
   }
 
-  const activeWatchedCount = data.watchedPeople.filter((p) => !unwatchedIds.has(p.id)).length;
   const hasWatchedTrades = data.watchedTrades.length > 0;
   const effectiveScope: 'watched' | 'all' = tradeScope ?? (hasWatchedTrades ? 'watched' : 'all');
-  const trades = effectiveScope === 'watched' && hasWatchedTrades ? data.watchedTrades : data.recentTrades;
+  const isWatched = (n: SidebarTradeNotification) => (n.personId != null && n.personId in watchOverride ? watchOverride[n.personId] : !!n.watched);
+  const trades = (effectiveScope === 'watched' && hasWatchedTrades ? data.watchedTrades : data.recentTrades).filter(
+    (n) => effectiveScope !== 'watched' || !hasWatchedTrades || isWatched(n),
+  );
+  const daysAgoLabel = (date: string) => {
+    const [y, m, d] = date.slice(0, 10).split('-').map(Number);
+    const now = new Date();
+    const days = Math.max(0, Math.round((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) - Date.UTC(y, m - 1, d)) / 86_400_000));
+    return days === 0 ? t('time.today') : t('time.daysAgo', { count: days });
+  };
+  async function setWatching(personId: number, next: boolean) {
+    if (next) await api.post(`/api/people/${personId}/trade-watch`);
+    else await api.delete(`/api/people/${personId}/trade-watch`);
+    setWatchOverride((m) => ({ ...m, [personId]: next }));
+  }
 
   const money = new Intl.NumberFormat(locale, {
     style: 'currency',
@@ -355,30 +304,31 @@ export function PeopleSidePanel({
   const topBuys = rankTickers('Buy').slice(0, 4);
   const topSells = rankTickers('Sell').slice(0, 4);
 
-  const visiblePeople = showAllPeople ? data.watchedPeople : data.watchedPeople.slice(0, INITIAL_PEOPLE);
-  const visibleUsers = showAllUsers
-    ? data.followingUsers.following
-    : data.followingUsers.following.slice(0, INITIAL_PEOPLE);
   const visibleTrades = showAllTrades ? trades : trades.slice(0, INITIAL_TRADES);
 
-  const renderTickerChips = (tickers: string[] | null, cls: string) =>
+  const renderTickerChips = (tickers: string[] | null, cls: string, tickerTypes?: Record<string, string> | null) =>
     [...(tickers ?? [])]
       .sort((a, b) => Number(conflictsByTicker.has(b)) - Number(conflictsByTicker.has(a)) || a.localeCompare(b))
-      .map((tk) => (
-        <Link
-          key={tk}
-          href={tickerHref(tk)}
-          title={
-            conflictsByTicker.has(tk)
-              ? `${t('notifications.conflict')}: ${[...conflictsByTicker.get(tk)!].slice(0, 3).join(', ')}`
-              : undefined
-          }
-          className={`relative z-10 inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}
-        >
-          {conflictsByTicker.has(tk) ? <Icon name="warning" className="size-3 shrink-0 text-warning-soft" /> : null}
-          {tk}
-        </Link>
-      ));
+      .map((tk) => {
+        const typeCode = tickerTypes?.[tk];
+        const typeLabel = typeCode ? (ASSET_TYPE_LABEL[typeCode] ?? typeCode) : null;
+        return (
+          <Link
+            key={tk}
+            href={tickerHref(tk)}
+            title={
+              conflictsByTicker.has(tk)
+                ? `${t('notifications.conflict')}: ${[...conflictsByTicker.get(tk)!].slice(0, 3).join(', ')}`
+                : undefined
+            }
+            className={`relative z-10 inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}
+          >
+            {conflictsByTicker.has(tk) ? <Icon name="warning" className="size-3 shrink-0 text-warning-soft" /> : null}
+            <span>{tk}</span>
+            {typeLabel ? <span className="font-normal opacity-80">· {typeLabel}</span> : null}
+          </Link>
+        );
+      });
 
   const renderAssetChips = (assets: string[] | null, side: 'buy' | 'sell') =>
     assets?.map((a) => (
@@ -395,104 +345,117 @@ export function PeopleSidePanel({
 
   return (
     <aside aria-label={t('profile.following')} className="space-y-5 lg:sticky lg:top-20">
-      {/* Section 1: Followed / Watched People & Users */}
-      <section className="floating overflow-hidden">
-        <header className="flex items-center justify-between gap-2 border-b border-line bg-raised/40 px-4 py-3">
-          <div className="flex min-w-0 items-center gap-2">
-            <Icon name="eye" className="size-4 shrink-0 text-accent" />
-            <h2 className="truncate text-sm font-semibold text-ink">{t('profile.tradeWatches')}</h2>
-            <span className="rounded-full bg-raised px-2 py-0.5 text-xs font-semibold tabular-nums text-muted">
-              {activeWatchedCount}
+      {/* Section 3: Investor Portfolio Moves (Premium) */}
+      {data.traderMoves.locked ? (
+        <section className="floating overflow-hidden">
+          <Link
+            href="/premium"
+            className="flex items-center gap-3 px-4 py-3 text-sm text-muted hover:bg-raised hover:text-ink hover:no-underline"
+          >
+            <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+              <Icon name="trending-up" className="size-4" />
             </span>
-          </div>
-          <div className="flex shrink-0 items-center gap-2">
-            {activeWatchedCount > 0 && onToggleFilterWatched ? (
-              <button
-                type="button"
-                aria-pressed={!!filteringWatched}
-                onClick={onToggleFilterWatched}
-                className={`rounded-full px-2.5 py-1 text-xs font-medium ring-1 ring-inset transition-colors ${
-                  filteringWatched
-                    ? 'bg-accent text-white ring-accent'
-                    : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
-                }`}
-              >
-                {t('person.facet.label')}
-              </button>
-            ) : null}
-            <Link href="/profile/notifications" className="text-xs font-medium text-link hover:underline">
-              {t('common.edit')}
-            </Link>
-          </div>
-        </header>
-
-        {data.watchingAll ? (
-          <div className="flex items-center justify-between gap-2 border-b border-line bg-accent/10 px-4 py-2 text-xs">
-            <span className="flex items-center gap-1.5 font-medium text-ink">
-              <Icon name="check" className="size-3.5 text-accent" />
-              {t('person.trades.watchingAll')}
-            </span>
-            <Link href="/notifications/trades" className="font-medium text-link hover:underline">
-              {t('notifications.tradesHistory')}
-            </Link>
-          </div>
-        ) : null}
-
-        {data.watchedPeople.length > 0 ? (
-          <>
-            <ul className="divide-y divide-line">
-              {visiblePeople.map((person) => (
-                <WatchedPersonRow
-                  key={person.id}
-                  person={person}
-                  watching={!unwatchedIds.has(person.id)}
-                  onToggle={onTogglePersonWatch}
-                />
-              ))}
-            </ul>
-            {data.watchedPeople.length > INITIAL_PEOPLE ? (
-              <button
-                type="button"
-                aria-expanded={showAllPeople}
-                onClick={() => setShowAllPeople((v) => !v)}
-                className="w-full border-t border-line px-4 py-2 text-xs font-semibold text-accent hover:bg-raised/50"
-              >
-                {showAllPeople ? t('common.showLess') : `${t('common.showMore')} (${data.watchedPeople.length - INITIAL_PEOPLE})`}
-              </button>
-            ) : null}
-          </>
-        ) : (
-          <p className="px-4 py-5 text-center text-xs text-subtle">{t('profile.tradeWatchesNone')}</p>
-        )}
-
-        {data.followingUsers.following.length > 0 ? (
-          <div className="border-t border-line">
-            <div className="flex items-center justify-between gap-2 bg-raised/30 px-4 py-2">
-              <span className="text-xs font-semibold tracking-wide text-subtle uppercase">
-                {t('profile.followingUsers')}
-              </span>
-              <span className="text-xs font-medium tabular-nums text-subtle">{data.followingUsers.total}</span>
-            </div>
-            <ul className="divide-y divide-line">
-              {visibleUsers.map((u) => (
-                <FollowedUserRow key={u.id} user={u} />
-              ))}
-            </ul>
-            {data.followingUsers.following.length > INITIAL_PEOPLE ? (
-              <button
-                type="button"
-                aria-expanded={showAllUsers}
-                onClick={() => setShowAllUsers((v) => !v)}
-                className="w-full border-t border-line px-4 py-2 text-xs font-semibold text-accent hover:bg-raised/50"
-              >
-                {showAllUsers
-                  ? t('common.showLess')
-                  : `${t('common.showMore')} (${data.followingUsers.following.length - INITIAL_PEOPLE})`}
-              </button>
-            ) : null}
-          </div>
-        ) : null}
-      </section>
+            <span className="font-medium">{t('notifications.premiumTeaser')}</span>
+          </Link>
+        </section>
+      ) : data.traderMoves.positions.length > 0 ? (
+        (() => {
+          const allPositions = data.traderMoves.positions;
+          const cutoff = data.traderMoves.recentSince ?? '';
+          const recentPositions = cutoff ? allPositions.filter((p) => p.tradeDate >= cutoff) : allPositions;
+          const hasMorePremium = recentPositions.length > 0 && recentPositions.length < allPositions.length;
+          const visiblePositions = showAllPremium || !recentPositions.length ? allPositions : recentPositions;
+          return (
+            <section className="floating overflow-hidden">
+              <header className="flex items-center justify-between gap-2 border-b border-line bg-raised/40 px-4 py-2.5">
+                <div className="flex items-center gap-2 text-xs font-semibold tracking-wide text-subtle uppercase">
+                  <span>{t('notifications.premiumHeading')}</span>
+                  <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] text-accent">
+                    {showAllPremium ? t('person.all') : t('notifications.premiumWindow')}
+                  </span>
+                </div>
+                {hasMorePremium ? (
+                  <button
+                    type="button"
+                    aria-expanded={showAllPremium}
+                    onClick={() => setShowAllPremium((v) => !v)}
+                    className="text-xs font-medium text-link hover:underline"
+                  >
+                    {showAllPremium ? t('common.showLess') : t('notifications.tradesHistory')}
+                  </button>
+                ) : null}
+              </header>
+              <ul className="divide-y divide-line">
+                {Array.from(
+                  visiblePositions.reduce((m, p) => m.set(p.traderSlug, [...(m.get(p.traderSlug) ?? []), p]), new Map<string, TraderPositionRow[]>()),
+                ).map(([slug, moves]) => (
+              <li key={slug} className="px-4 py-2.5 text-sm">
+                <div className="flex items-center gap-1">
+                <Link href={`/person/${slug}#premium-trades`} className="flex min-w-0 flex-1 items-baseline justify-between gap-2 font-semibold text-ink hover:text-link hover:no-underline">
+                  <span className="min-w-0 truncate">{moves[0].traderName}</span>
+                  <span className="shrink-0 text-[11px] font-medium tabular-nums text-subtle">{moves.length}</span>
+                </Link>
+                {data.traderMoves.people?.[slug] ? (
+                  <PopMenu wide buttonClassName="-me-1 size-7" iconClassName="size-4">
+                    {(close) => {
+                      const info = data.traderMoves.people![slug];
+                      const watching = info.id in watchOverride ? watchOverride[info.id] : info.watching;
+                      return (
+                        <PopMenuItem
+                          icon={watching ? 'eye-off' : 'eye'}
+                          danger={watching}
+                          title={watching ? t('person.trades.unwatch') : t('person.trades.watch')}
+                          hint={t(watching ? 'person.trades.unwatchHint' : 'person.trades.watchHint', { name: moves[0].traderName })}
+                          onClick={() => {
+                            close(true);
+                            void setWatching(info.id, !watching);
+                          }}
+                        />
+                      );
+                    }}
+                  </PopMenu>
+                ) : null}
+                </div>
+                <ul className="mt-1 space-y-0.5">
+                  {moves.map((p) => {
+                    const pnl = p.estimatedPnlPercent;
+                    const kindKey = PREMIUM_KIND_LABEL[p.instrument];
+                    return (
+                      <li key={p.id} className="flex items-baseline gap-2 text-xs" title={p.summary ?? undefined}>
+                        <span className="w-20 shrink-0 text-muted">{t(PREMIUM_MOVE_LABEL[p.action] ?? 'premium.bought')}</span>
+                        <span className="flex min-w-0 flex-1 items-baseline gap-1.5">
+                          <Link href={tickerHref(p.ticker)} className="truncate font-semibold text-ink hover:underline">
+                            {p.ticker}
+                          </Link>
+                          {kindKey ? (
+                            <span
+                              className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] leading-none font-semibold ring-1 ring-inset ${
+                                p.instrument === 'call'
+                                  ? 'bg-success/15 text-success-soft ring-success/30'
+                                  : 'bg-danger/15 text-danger-soft ring-danger/30'
+                              }`}
+                            >
+                              {t(kindKey)}
+                            </span>
+                          ) : null}
+                        </span>
+                        {pnl != null ? (
+                          <span className={`shrink-0 font-semibold tabular-nums ${pnl >= 0 ? 'text-success' : 'text-danger'}`}>
+                            {pnl > 0 ? '+' : ''}
+                            {pnl}%
+                          </span>
+                        ) : null}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            ))}
+          </ul>
+            </section>
+          );
+        })()
+      ) : null}
 
       {/* Section 2: Recent Stock Trades (Notification Bell / Trades History style) */}
       <section className="floating overflow-hidden">
@@ -621,11 +584,30 @@ export function PeopleSidePanel({
                               ) : null}
                             </span>
                           ) : null}
+                          {n.personId != null && n.personName ? (
+                            <PopMenu wide buttonClassName="-me-1 size-7" iconClassName="size-4">
+                              {(close) => {
+                                const watching = isWatched(n);
+                                return (
+                                  <PopMenuItem
+                                    icon={watching ? 'eye-off' : 'eye'}
+                                    danger={watching}
+                                    title={watching ? t('person.trades.unwatch') : t('person.trades.watch')}
+                                    hint={t(watching ? 'person.trades.unwatchHint' : 'person.trades.watchHint', { name: n.personName! })}
+                                    onClick={() => {
+                                      close(true);
+                                      void setWatching(n.personId!, !watching);
+                                    }}
+                                  />
+                                );
+                              }}
+                            </PopMenu>
+                          ) : null}
                         </div>
 
                         {n.tradeBuyTickers?.length ? (
                           <div className="flex flex-wrap items-center gap-1">
-                            {renderTickerChips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
+                            {renderTickerChips(n.tradeBuyTickers, 'bg-success/15 text-success-soft', n.tradeTickerTypes)}
                           </div>
                         ) : null}
                         {n.tradeBuyAssets?.length ? (
@@ -635,7 +617,7 @@ export function PeopleSidePanel({
                         ) : null}
                         {n.tradeSellTickers?.length ? (
                           <div className="flex flex-wrap items-center gap-1">
-                            {renderTickerChips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
+                            {renderTickerChips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft', n.tradeTickerTypes)}
                           </div>
                         ) : null}
                         {n.tradeSellAssets?.length ? (
@@ -648,7 +630,7 @@ export function PeopleSidePanel({
 
                         {n.tradeFiledDate ? (
                           <div className="text-[11px] text-subtle">
-                            {t('person.trades.filed')} {n.tradeFiledDate.slice(0, 10)}
+                            {t('person.trades.filed')} {n.tradeFiledDate.slice(0, 10)} · {daysAgoLabel(n.tradeFiledDate)}
                           </div>
                         ) : null}
                       </div>
@@ -673,64 +655,6 @@ export function PeopleSidePanel({
           <p className="px-4 py-6 text-center text-xs text-subtle">{t('person.trades.none')}</p>
         )}
       </section>
-
-      {/* Section 3: Investor Portfolio Moves (Premium) */}
-      {data.traderMoves.locked ? (
-        <section className="floating overflow-hidden">
-          <Link
-            href="/premium"
-            className="flex items-center gap-3 px-4 py-3 text-sm text-muted hover:bg-raised hover:text-ink hover:no-underline"
-          >
-            <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
-              <Icon name="trending-up" className="size-4" />
-            </span>
-            <span className="font-medium">{t('notifications.premiumTeaser')}</span>
-          </Link>
-        </section>
-      ) : data.traderMoves.positions.length > 0 ? (
-        <section className="floating overflow-hidden">
-          <header className="flex items-center justify-between gap-2 border-b border-line bg-raised/40 px-4 py-2.5">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wide text-subtle uppercase">
-              <span>{t('notifications.premiumHeading')}</span>
-              <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] text-accent">
-                {t('notifications.premiumWindow')}
-              </span>
-            </div>
-            <Link href="/premium" className="text-xs font-medium text-link hover:underline">
-              {t('notifications.tradesHistory')}
-            </Link>
-          </header>
-          <ul className="divide-y divide-line">
-            {data.traderMoves.positions.map((p) => {
-              const pnl = p.estimatedPnlPercent;
-              return (
-                <li key={p.id}>
-                  <Link
-                    href={`/person/${p.traderSlug}#premium-trades`}
-                    className="block px-4 py-2.5 text-sm hover:bg-raised/50 hover:no-underline"
-                  >
-                    <div className="flex items-baseline gap-2">
-                      <span className="min-w-0 flex-1 truncate font-semibold text-ink">
-                        {t(PREMIUM_MOVE[p.action] ?? 'notifications.premiumBuy', {
-                          name: p.traderName,
-                          ticker: p.ticker,
-                        })}
-                      </span>
-                      {pnl != null ? (
-                        <span className={`shrink-0 text-xs font-semibold tabular-nums ${pnl >= 0 ? 'text-success' : 'text-danger'}`}>
-                          {pnl > 0 ? '+' : ''}
-                          {pnl}%
-                        </span>
-                      ) : null}
-                    </div>
-                    {p.summary ? <div className="mt-0.5 line-clamp-2 text-xs text-subtle">{p.summary}</div> : null}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ) : null}
 
       {/* Section 4: Recent Timeline Pins Linked to Watched / Notable People */}
       {data.recentPins.length > 0 ? (

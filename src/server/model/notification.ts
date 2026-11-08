@@ -622,9 +622,16 @@ export default class Notification {
       )
       SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
              NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
-             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", NULL::jsonb AS "move",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."personId", NULL::jsonb AS "move",
              NULL::int AS "searchAlertId", NULL::text AS "searchName", NULL::text AS "searchQuery",
              ${TRADE_COLUMNS},
+             (SELECT COALESCE(jsonb_object_agg(v."ticker", v."assetType"), '{}'::jsonb)
+                FROM (SELECT DISTINCT ON (t."ticker") t."ticker", t."assetType"
+                      FROM "PersonTrade" t
+                      WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling"
+                        AND t."ticker" IS NOT NULL AND t."assetType" IS NOT NULL AND t."assetType" <> 'ST'
+                      ORDER BY t."ticker", t."id") v) AS "tradeTickerTypes",
+             EXISTS (SELECT 1 FROM "PersonTradeWatch" w WHERE w."userId" = $1 AND w."personId" = e."personId" AND w."utcDeletedDateTime" IS NULL) AS "watched",
              e."utcCreatedDateTime", true AS "read",
              json_build_object('id', 0, 'userName', '', 'firstName', NULL, 'lastName', NULL, 'pictureUrl', NULL) AS "actor",
              false AS "followingBack", 1 AS "groupCount", e."filedDate"::text AS "groupDay",
