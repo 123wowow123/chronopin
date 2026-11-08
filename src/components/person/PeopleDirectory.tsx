@@ -277,68 +277,68 @@ export function PeopleDirectory({
     <div className={showPanel ? 'lg:grid lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-8 xl:grid-cols-[minmax(0,1fr)_24rem]' : undefined}>
     <div className="min-w-0">
       {/* The page's header: its title and description, and the name filter at the top right. */}
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
-        <div className="min-w-[min(100%,24rem)] flex-1">
-          <div className="mb-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+      <div className="mb-8 space-y-3">
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
             <WatchAllTradesButton onChange={showPanel ? loadSidebar : undefined} />
           </div>
-          <p className="text-base text-muted">{description}</p>
-        </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:pt-1">
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              setShown(PAGE);
-            }}
-            placeholder={t('person.filter')}
-            aria-label={t('person.filter')}
-            className="w-full min-w-0 rounded-full bg-field px-4 py-2 text-sm text-ink ring-1 ring-line ring-inset outline-none placeholder:text-subtle focus:ring-2 focus:ring-accent sm:w-64"
-          />
-          <div className="flex shrink-0 items-center gap-2">
-          <label className="flex items-center gap-2 text-sm text-muted">
-            {t('person.sort')}
-            <span className="relative inline-flex items-center">
-            <select
-              value={sort}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <input
+              type="search"
+              value={query}
               onChange={(e) => {
-                setSort(e.target.value as SortKey);
-                setDescending(true);
+                setQuery(e.target.value);
                 setShown(PAGE);
               }}
-              className="appearance-none rounded-full bg-field py-1.5 pr-8 pl-3 text-sm leading-5 text-ink ring-1 ring-line ring-inset outline-none focus:ring-2 focus:ring-accent"
+              placeholder={t('person.filter')}
+              aria-label={t('person.filter')}
+              className="w-full min-w-0 rounded-full bg-field px-4 py-2 text-sm text-ink ring-1 ring-line ring-inset outline-none placeholder:text-subtle focus:ring-2 focus:ring-accent sm:w-64"
+            />
+            <div className="flex shrink-0 items-center gap-2">
+            <label className="flex items-center gap-2 text-sm text-muted">
+              {t('person.sort')}
+              <span className="relative inline-flex items-center">
+              <select
+                value={sort}
+                onChange={(e) => {
+                  setSort(e.target.value as SortKey);
+                  setDescending(true);
+                  setShown(PAGE);
+                }}
+                className="appearance-none rounded-full bg-field py-1.5 pr-8 pl-3 text-sm leading-5 text-ink ring-1 ring-line ring-inset outline-none focus:ring-2 focus:ring-accent"
+              >
+                <option value="recent">{t('person.sortRecent')}</option>
+                <option value="name">{t('person.sortName')}</option>
+                {OCTAGON_AXES.map((a) => (
+                  <option key={a} value={a}>
+                    {t(`person.octagon.axes.${a}`)}
+                  </option>
+                ))}
+              </select>
+              <svg aria-hidden viewBox="0 0 12 12" className="pointer-events-none absolute right-3 h-3 w-3 text-subtle" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2.5 4.5 6 8l3.5-3.5" />
+              </svg>
+            </span>
+            </label>
+            <button
+              type="button"
+              onClick={() => {
+                setDescending((d) => !d);
+                setShown(PAGE);
+              }}
+              title={descending ? t('person.sortDescending') : t('person.sortAscending')}
+              aria-label={descending ? t('person.sortDescending') : t('person.sortAscending')}
+              className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-field text-ink ring-1 ring-line ring-inset outline-none hover:bg-raised focus-visible:ring-2 focus-visible:ring-accent"
             >
-              <option value="recent">{t('person.sortRecent')}</option>
-              <option value="name">{t('person.sortName')}</option>
-              {OCTAGON_AXES.map((a) => (
-                <option key={a} value={a}>
-                  {t(`person.octagon.axes.${a}`)}
-                </option>
-              ))}
-            </select>
-            <svg aria-hidden viewBox="0 0 12 12" className="pointer-events-none absolute right-3 h-3 w-3 text-subtle" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M2.5 4.5 6 8l3.5-3.5" />
-            </svg>
-          </span>
-          </label>
-          <button
-            type="button"
-            onClick={() => {
-              setDescending((d) => !d);
-              setShown(PAGE);
-            }}
-            title={descending ? t('person.sortDescending') : t('person.sortAscending')}
-            aria-label={descending ? t('person.sortDescending') : t('person.sortAscending')}
-            className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-field text-ink ring-1 ring-line ring-inset outline-none hover:bg-raised focus-visible:ring-2 focus-visible:ring-accent"
-          >
-            <svg aria-hidden viewBox="0 0 12 12" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              {descending ? <path d="M6 10V2M2.5 5.5 6 2l3.5 3.5" /> : <path d="M6 2v8M2.5 6.5 6 10l3.5-3.5" />}
-            </svg>
-          </button>
+              <svg aria-hidden viewBox="0 0 12 12" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                {descending ? <path d="M6 10V2M2.5 5.5 6 2l3.5 3.5" /> : <path d="M6 2v8M2.5 6.5 6 10l3.5-3.5" />}
+              </svg>
+            </button>
+            </div>
           </div>
         </div>
+        <p className="text-base text-muted">{description}</p>
       </div>
 
       {searching ? null : (
