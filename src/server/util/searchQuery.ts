@@ -268,6 +268,8 @@ export type SearchQuery = {
   personAxes: PersonAxisBound[];
   // Bounds a pin's rating must meet, every one of them.
   ratings: RatingBound[];
+  // Bounds on a pin's market impact score, 0-10 (impact:>=7).
+  impacts: RatingBound[];
   // Bounds a pin's delay must meet, every one of them.
   delays: DelayBound[];
   // Bounds a pin's capacity in megawatts (mw:>=500) and its cost in US dollars
@@ -314,7 +316,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|radius|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|site|seen|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|within|radius|rating|impact|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|site|seen|taste|carperf|dining|hotel|rubric|person|name|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -334,7 +336,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'radius' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'site' | 'seen' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'within' | 'radius' | 'rating' | 'impact' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'site' | 'seen' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | 'name' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -550,6 +552,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
     people: [],
     personAxes: [],
     ratings: [],
+    impacts: [],
     delays: [],
     mws: [],
     costs: [],
@@ -660,6 +663,10 @@ function readParts(parts: QueryPart[]): SearchQuery {
       }
     } else if (part.field === 'rated') {
       if (part.value) addUnique(query.rated, part.value);
+    } else if (part.field === 'impact') {
+      for (const bound of ratingBounds(part.value)) {
+        if (!query.impacts.some((b) => b.op === bound.op && b.value === bound.value)) query.impacts.push(bound);
+      }
     } else if (part.field === 'rating') {
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
@@ -729,6 +736,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.people.length ||
     query.personAxes.length ||
     query.ratings.length ||
+    query.impacts.length ||
     query.delays.length ||
     query.mws.length ||
     query.costs.length ||

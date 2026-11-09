@@ -11,7 +11,7 @@
 // 'rating' and 'delay' are bounds (rating:>=81, delay:>=2months), which their
 // pills write. 'ticker' is a company's stock symbol, written bare with a $
 // ($NKE) rather than as a field.
-export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | '-tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'site' | 'seen' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person';
+export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | '-tag' | 'pin' | 'place' | 'rating' | 'impact' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'site' | 'seen' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
 type AnyField = LabelField | 'category' | '-category';
@@ -95,6 +95,7 @@ export function toggleTerm(query: string, field: LabelField, value: string): str
 // pill's click replaces the ones of its field instead of piling another on.
 const BOUND_TERMS: Partial<Record<LabelField, RegExp>> = {
   rating: /(^|\s)["'“”‘’]?rating:\S*/gi,
+  impact: /(^|\s)["'“”‘’]?impact:\S*/gi,
   delay: /(^|\s)["'“”‘’]?delay:\S*/gi,
   mw: /(^|\s)["'“”‘’]?mw:\S*/gi,
   cost: /(^|\s)["'“”‘’]?cost:\S*/gi,

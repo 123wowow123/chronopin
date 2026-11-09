@@ -68,6 +68,7 @@ export type PinSearchFilters = {
   people: string[];
   personAxes: PersonAxisBound[];
   ratings: RatingBound[];
+  impacts: RatingBound[];
   delays: DelayBound[];
   mws: RatingBound[];
   costs: RatingBound[];
@@ -1355,6 +1356,11 @@ export function searchClauses(filter: SearchFilter) {
               WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
             ) AS "rated"
             WHERE ${bounds.join(' AND ')})`);
+    }
+    // Every impact: bound, on the PinMarketImpact weight (0-10).
+    if (filter.impacts.length) {
+      const bounds = filter.impacts.map(({ op, value }) => `"mi"."weight" ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`EXISTS (SELECT 1 FROM "PinMarketImpact" AS "mi" WHERE "mi"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
     }
     // Every mw: bound, on the capacity PinPower records, and every cost: bound,
     // on the price in US dollars (other currencies at the fixed approximate

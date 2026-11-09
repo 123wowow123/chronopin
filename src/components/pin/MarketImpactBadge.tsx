@@ -1,6 +1,7 @@
 'use client';
 
 import { Icon } from '@/components/ui/Icon';
+import { RefineLink } from '@/components/pin/RefineLink';
 import { PillTip } from '@/components/ui/PillTip';
 import { useT } from '@/lib/client/i18n';
 import { impactBand, type ImpactBand } from '@/lib/marketImpact';
@@ -29,16 +30,15 @@ export function MarketImpactBadge({ weight, reason, assets }: { weight?: number 
   return (
     <PillTip tip={tip}>
       {(describedBy) => (
-        <span
-          tabIndex={0}
-          role="img"
-          aria-label={label}
-          aria-describedby={describedBy}
-          className={`pill-compact inline-flex shrink-0 items-center gap-0.5 rounded-full px-1.5 py-px text-[10px] font-semibold tabular-nums ring-1 ring-inset ${BAND_CLASS[band]}`}
+        <RefineLink
+          field="impact"
+          value={`>=${weight}`}
+          describedBy={describedBy}
+          className={`pill-compact inline-flex shrink-0 items-center gap-0.5 rounded-full px-1.5 py-px text-[10px] font-semibold tabular-nums ring-1 ring-inset hover:no-underline ${BAND_CLASS[band]}`}
         >
           <Icon name="trending-up" className="size-3" />
           {weight}
-        </span>
+        </RefineLink>
       )}
     </PillTip>
   );

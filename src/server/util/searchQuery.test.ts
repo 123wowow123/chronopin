@@ -132,6 +132,7 @@ describe('parseSearchQuery', () => {
       people: [],
       personAxes: [],
       ratings: [],
+      impacts: [],
       delays: [],
       mws: [],
       costs: [],
