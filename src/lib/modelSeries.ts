@@ -39,6 +39,8 @@ const PATTERNS: Pattern[] = [
     read: (m) => ({ family: 'gemini', version: m[1], variants: m[2] ? [m[2]] : [] }),
   },
   { re: new RegExp(String.raw`\bllama[- ]?${VERSION}\b`), read: (m) => ({ family: 'llama', version: m[1] }) },
+  // Cursor Composer 2, Composer 2.5
+  { re: new RegExp(String.raw`\bcomposer[- ]${VERSION}\b`), read: (m) => ({ family: 'composer', version: m[1] }) },
   { re: new RegExp(String.raw`\bgrok[- ]?${VERSION}\b`), read: (m) => ({ family: 'grok', version: m[1] }) },
   { re: new RegExp(String.raw`\bdeepseek[- ]?(v|r)${VERSION}\b`), read: (m) => ({ family: `deepseek ${m[1]}`, version: m[2] }) },
   // Qwen3.8-Max, Qwen3-235B-A22B-Thinking-2507, Qwen2.5-Plus. Max, Plus, VL,
