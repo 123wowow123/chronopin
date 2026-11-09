@@ -153,7 +153,15 @@ const TILE_DOTS = [
 
 // A three-column table (measure, figure, basis) as the datacenter panel's
 // telemetry tiles: the figure large, the basis beneath it.
-function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
+function Tiles({
+  table,
+  t,
+  evidence,
+}: {
+  table: PerfTable;
+  t: Translator;
+  evidence: Evidence[];
+}) {
   return (
     <section
       className="surface rounded-2xl border border-line bg-raised/40 p-4 shadow-sm"
@@ -191,7 +199,7 @@ function Tiles({ table, t }: { table: PerfTable; t: Translator }) {
               <Money text={figure} />
             </div>
             <div className="mt-1 text-xs text-muted">
-              <Money text={basis} />
+              <CitedText text={basis} evidence={evidence} label />
             </div>
           </li>
         ))}
@@ -313,7 +321,7 @@ function Table({
 }) {
   const table = { ...base, ...base.i18n?.[locale] };
   if (base.display === "tiles" && table.columns.length === 3)
-    return <Tiles table={table} t={t} />;
+    return <Tiles table={table} t={t} evidence={evidence} />;
   if (base.display === "timeline" && table.columns.length === 4)
     return <Timeline table={table} base={base} evidence={evidence} />;
   // A source column is shown as [n] links after the previous cell, not as a column.
