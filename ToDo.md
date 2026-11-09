@@ -1,5 +1,14 @@
 # To Do
 
+## Restaurant menu photos and menu-item reviews, all cities (November 8, 2026)
+
+**Done:** San Diego first pass (earlier today, see `docs/restaurant-menu-coverage-2026-11-08.md`), then four lane agents added 10 dish photos and 17 sourced item reviews on production only (Jake's Del Mar, Islands Eastlake, Brigantine La Mesa, Little Frenchie, Piacere Mio, Bay Park Fish Company, Bleu Boheme, STK, Stake Coronado, Cafe Sevilla, RustiCucina, Bock, Mister A's, Queenstown Public House). Evidence: `.scrape/lane2-evidence-2026-11-08.md`, `.scrape/lane3/`, `scripts/restaurants/menuItemReviews.lane0.{ts,json}`.
+
+- [ ] **Replay the 27 lane saves to local** by exact source URL (local IDs differ); fold the lane0 review script and JSON into `menuItemReviews.json`.
+- [ ] **San Diego remaining (~3,500 rows over 279 venues):** run ONE venue at a time in your own Chrome tab (parallel agents share one Chrome and broke; the Chrome tool refuses JS on yelp.com, so use get_page_text and the Yelp `?q=<dish>` filter). Start with the named-dish menus: Ciccia Osteria (39 items), Union Kitchen Gaslamp (128), Islands, Chez Loma, Casa Gabriela, Common Stock, Pezzi Del Mio Cuore, Kettner Exchange, Soichi, Queenstown, Sovereign, Duke's La Jolla. Lanes 4-7 in `lane4.json`-`lane7.json` in the 2026-11-08 session scratchpad (regenerate from the "remaining" list in `docs/restaurant-menu-coverage-2026-11-08.json` if gone) were never started. Generic offer rows ("draft beers", "select wines") stay unfilled.
+- [ ] **Every other city has zero photos and zero item reviews on prod:** Tokyo 5,018 items, Sapporo 4,916, Nagoya 3,434, Osaka 3,272, Fukuoka 2,621, Kyoto 934, all 27 China cities (400-900 each), Busan, Seoul, and US cities (Phoenix, Dallas, DC, Columbus, San Jose, Nashville, Chicago, Atlanta, Austin, San Antonio ...). 53 venues with no region tag hold 1,658 items (220 photos, 10 reviews).
+- [ ] **Uncommitted:** this ToDo edit and the lane0 script/JSON; nothing deployed, no translations run.
+
 ## Project specs panel `PinProject` (November 8, 2026)
 
 **Done:** table 0249, `GET|PUT|DELETE /api/pins/:id/project`, "Project specs" tile panel on the pin page (hidden on data-centre pins), docs `docs/okf/tables/pin-project.md`, skill section 4b. Prod: 6 title rows, 442 rows mapped from existing sourced `PinFactory` metrics (12 agents, 26 held), 25 rows from web research (hotel rooms, housing, Chicago Fire stadium; every quote checked against the raw page). About 473 rows on prod. Scripts: `scripts/construction/backfillProjectSpecs{,Prod}.ts`, `applyProjectSpecsProd.ts`.

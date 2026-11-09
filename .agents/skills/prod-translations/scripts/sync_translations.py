@@ -401,17 +401,34 @@ def call_single(text: str, locale: str) -> Optional[str]:
     Translates a single string using HTTP POST and verifies whole_translation completeness.
     If the NMT model truncates a multi-clause sentence (e.g. German Roman numeral EOS bug),
     retries with semicolon clause boundaries so the full sentence is translated.
+    If a Title-Case headline (> 40 chars with English stopwords) comes back as pure ASCII in a
+    non-Latin locale, retries with lowercased words after the first word / colon.
     Returns None if all attempts fail so untranslated/truncated text is never cached or pushed.
     """
     val = _raw_translate_single(text, locale)
-    if val is not None and whole_translation(text, val, is_fragment=True):
+    if val is not None and locale == 'th':
+        val = fix_thai_years(text, val)
+    if val is not None and acceptable(locale, text, val, is_title=True):
         return val
+
+    # Fallback for Title-Case strings left as pure ASCII in non-Latin locales
+    if locale in NON_LATIN_LOCALES and len(text) > 40 and looks_english(text):
+        words = text.split(' ')
+        if len(words) > 2:
+            lowered = words[0] + ' ' + ' '.join(w.lower() if (w.istitle() and len(w) > 1) else w for w in words[1:])
+            val_low = _raw_translate_single(lowered, locale)
+            if val_low is not None and locale == 'th':
+                val_low = fix_thai_years(text, val_low)
+            if val_low is not None and acceptable(locale, text, val_low, is_title=True):
+                return val_low
 
     # Fallback for NMT mid-sentence truncation on comma-separated clauses
     if ', ' in text:
         alt_text = text.replace(', ', '; ', 1)
         val_alt = _raw_translate_single(alt_text, locale)
-        if val_alt is not None and whole_translation(text, val_alt, is_fragment=True):
+        if val_alt is not None and locale == 'th':
+            val_alt = fix_thai_years(text, val_alt)
+        if val_alt is not None and acceptable(locale, text, val_alt, is_title=True):
             return val_alt
 
         clauses = [c.strip() for c in text.split(', ') if c.strip()]
@@ -423,15 +440,17 @@ def call_single(text: str, locale: str) -> Optional[str]:
             translated_clauses.append(tc)
         if len(translated_clauses) == len(clauses):
             joined = ', '.join(translated_clauses)
-            if whole_translation(text, joined, is_fragment=True):
+            if locale == 'th':
+                joined = fix_thai_years(text, joined)
+            if acceptable(locale, text, joined, is_title=True):
                 return joined
 
-    return val if (val is not None and whole_translation(text, val, is_fragment=True)) else None
+    return val if (val is not None and acceptable(locale, text, val, is_title=True)) else None
 
 def call_batch(texts: List[str], locale: str) -> Dict[str, str]:
     """
     Translates a batch of strings via multi-RPC batchexecute POST. Falls back to call_single
-    for any item that failed or did not pass whole_translation completeness.
+    for any item that failed or did not pass acceptable() completeness.
     Omits any string that failed to translate so failures are never cached.
     """
     if not texts:
@@ -445,7 +464,9 @@ def call_batch(texts: List[str], locale: str) -> Dict[str, str]:
     out: Dict[str, str] = {}
     for t in texts:
         cand = batch_out.get(t)
-        if cand is not None and whole_translation(t, cand, is_fragment=True):
+        if cand is not None and locale == 'th':
+            cand = fix_thai_years(t, cand)
+        if cand is not None and acceptable(locale, t, cand, is_title=True):
             out[t] = cand
         else:
             val = call_single(t, locale)
@@ -467,16 +488,26 @@ def looks_english(text: str) -> bool:
 
 def acceptable(locale: str, en: str, tr: Optional[str], is_title: bool = False) -> bool:
     """
-    whole_translation() plus a per-locale guard: a >= 80 char fragment that comes back as pure
-    ASCII in a non-Latin-script locale was left in English (a partial-English bullet) unless the
-    English source itself is not English.
+    whole_translation() plus per-locale guards:
+    - Any > 40 char fragment (including titles) that comes back as pure ASCII in a non-Latin-script
+      locale ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') when the source is English prose is rejected.
+    - Any >= 60 char non-title fragment identical to English prose is rejected.
+    - Any Thai ('th') fragment that still contains 'พ.ศ.' or an unconverted Buddhist year (2550..2589
+      not in the English source) is rejected.
     """
     if not whole_translation(en, tr, is_fragment=True, is_title=is_title):
         return False
     if not is_title and tr and len(en) >= 60 and looks_english(en) and all(ord(c) < 128 for c in en) and html.unescape(tr.strip()) == en.strip():
         return False
-    if locale in NON_LATIN_LOCALES and tr and len(en) >= 80 and looks_english(en) and all(ord(c) < 128 for c in tr):
+    if locale in NON_LATIN_LOCALES and tr and len(en) > 40 and looks_english(en) and all(ord(c) < 128 for c in tr):
         return False
+    if locale == 'th' and tr:
+        if 'พ.ศ' in tr and 'พ.ศ' not in en:
+            return False
+        en_digits = en.replace(',', '')
+        for byr in re.findall(r'(?<!\d)(25[5-8]\d)(?!\d)', tr):
+            if byr not in en_digits:
+                return False
     return True
 
 def whole_translation(english: Optional[str], translated: Optional[str], is_fragment: bool = False, is_title: bool = False) -> bool:
@@ -510,10 +541,26 @@ def whole_translation(english: Optional[str], translated: Optional[str], is_frag
     return True
 
 def fix_thai_years(src: str, tr: str) -> str:
-    for yr in re.findall(r'\b(?:1[5-9]|20)\d{2}\b', src):
+    # 1. Fix ISO YYYY-MM where -MM was mistranslated as -(2000 + MM + 543) (e.g. 2026-10 -> 2026-2553)
+    for yr, mm in re.findall(r'((?:19|20)\d{2})-(0?[1-9]|1[0-2])(?!\d)', src):
+        bad_byr = str(2000 + int(mm) + 543)
+        tr = tr.replace(f"{yr}-{bad_byr}", f"{yr}-{mm}")
+    # 2. Convert any Buddhist year corresponding to a 4-digit Gregorian year in src (including 2030s, September2024)
+    src_no_commas = src.replace(',', '')
+    for yr in re.findall(r'(?<!\d)((?:1[5-9]|20)\d{2})(?!\d)', src):
         byr = str(int(yr) + 543)
-        if byr in tr:
-            tr = tr.replace(byr, yr).replace('พ.ศ.', 'ค.ศ.').replace('พ.ศ', 'ค.ศ')
+        if byr not in src_no_commas and byr in tr:
+            tr = re.sub(rf'(?<!\d){byr}(?!\d)', yr, tr)
+    # 3. Convert any standalone Buddhist year 2550..2589 in tr not present in src (e.g. inferred พ.ศ. 2569)
+    def _repl_be(m: re.Match) -> str:
+        byr = m.group(1)
+        if byr in src_no_commas:
+            return byr
+        return str(int(byr) - 543)
+    tr = re.sub(r'(?<!\d)(25[5-8]\d)(?!\d)', _repl_be, tr)
+    # 4. Replace Buddhist Era marker พ.ศ. with ค.ศ. when not present in English source
+    if 'พ.ศ' not in src:
+        tr = tr.replace('พ.ศ.', 'ค.ศ.').replace('พ.ศ', 'ค.ศ')
     return tr
 
 def _save_locale_cache_atomic(cache_path: pathlib.Path, new_entries: Dict[str, str]):
@@ -538,6 +585,10 @@ def translate_locale(locale: str, pins_for_locale: List[dict], locale_texts: Lis
             cache = json.loads(cache_path.read_text(encoding='utf-8'))
         except Exception:
             pass
+    if locale == 'th':
+        for t in locale_texts:
+            if t in cache and isinstance(cache[t], str):
+                cache[t] = fix_thai_years(t, cache[t])
 
     missing = [t for t in locale_texts if t not in cache or not acceptable(locale, t, cache.get(t), is_title=(bool(titles_set and t in titles_set)))]
     batches: List[List[str]] = []
@@ -767,30 +818,38 @@ WHERE p.id = pt."pinId"
     OR coalesce(pt."delayReasoning", '') ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);'
   );
 
--- 2. Mark rows with untranslated prose, mangled HTML entities, delimiter leaks, or missing native script for per-field repair
+-- 2. Mark rows with untranslated prose, mangled HTML entities, delimiter leaks, Thai Buddhist years, or missing native script for per-field repair
 UPDATE "PinTranslation" pt
 SET
   "sourceHash" = 'repair',
   "fieldHashes" = jsonb_strip_nulls(
     pt."fieldHashes"
-    || CASE WHEN coalesce(pt.title, '') ~ '[⟦⟧]' THEN '{{"title": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
+    || CASE WHEN (
+         coalesce(pt.title, '') ~ '[⟦⟧]'
+         OR (pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') AND length(coalesce(pt.title, '')) > 40 AND coalesce(pt.title, '') !~ '[^\\x00-\\x7F]' AND coalesce(p.title, '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+         OR (pt.locale = 'th' AND (coalesce(pt.title, '') ~ 'พ\\.ศ\\.' OR (coalesce(pt.title, '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(coalesce(p.title, ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
+       ) THEN '{{"title": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
     || CASE WHEN (
          (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description AND regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
          OR coalesce(pt.description, '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;|[⟦⟧])'
          OR (pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') AND length(regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g')) > 40 AND regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
+         OR (pt.locale = 'th' AND (coalesce(pt.description, '') ~ 'พ\\.ศ\\.' OR (coalesce(pt.description, '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(coalesce(p.description, ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
        ) THEN '{{"description": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
     || CASE WHEN (
          (length(regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND pt."longFormSummary" = p."longFormSummary" AND regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
          OR coalesce(pt."longFormSummary", '') ~ '(&amp;(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);|&amp;;|&lt;;|&gt;;|([^&a-zA-Z]|^)(amp|quot);|＆amp;|[⟦⟧])'
          OR (pt.locale IN ('ja', 'zh', 'ko', 'ru', 'ar', 'hi', 'th') AND ((length(regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]') OR regexp_replace(coalesce(pt."longFormSummary", ''), '<cite[^>]*></cite>', '', 'g') ~ '<li>[\\x20-\\x7E]{{80,}}</li>'))
+         OR (pt.locale = 'th' AND (coalesce(pt."longFormSummary", '') ~ 'พ\\.ศ\\.' OR (coalesce(pt."longFormSummary", '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(coalesce(p."longFormSummary", ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
        ) THEN '{{"longFormSummary": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
     || CASE WHEN (
          (length(coalesce(p."dateConfidenceReasoning", '')) > 40 AND pt."dateConfidenceReasoning" = p."dateConfidenceReasoning" AND coalesce(p."dateConfidenceReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
          OR coalesce(pt."dateConfidenceReasoning", '') ~ '[⟦⟧]'
+         OR (pt.locale = 'th' AND (coalesce(pt."dateConfidenceReasoning", '') ~ 'พ\\.ศ\\.' OR (coalesce(pt."dateConfidenceReasoning", '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(coalesce(p."dateConfidenceReasoning", ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
        ) THEN '{{"dateConfidenceReasoning": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
     || CASE WHEN (
          (length(coalesce(p."delayReasoning", '')) > 40 AND pt."delayReasoning" = p."delayReasoning" AND coalesce(p."delayReasoning", '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
          OR coalesce(pt."delayReasoning", '') ~ '[⟦⟧]'
+         OR (pt.locale = 'th' AND (coalesce(pt."delayReasoning", '') ~ 'พ\\.ศ\\.' OR (coalesce(pt."delayReasoning", '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(coalesce(p."delayReasoning", ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
        ) THEN '{{"delayReasoning": "repair"}}'::jsonb ELSE '{{}}'::jsonb END
   )
 FROM "Pin" p
@@ -814,6 +873,17 @@ WHERE p.id = pt."pinId"
       AND (
         (length(regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND regexp_replace(coalesce(pt."longFormSummary", ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]' OR regexp_replace(coalesce(pt."longFormSummary", ''), '<cite[^>]*></cite>', '', 'g') ~ '<li>[\\x20-\\x7E]{{80,}}</li>')
         OR (length(regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g')) > 40 AND regexp_replace(coalesce(pt.description, ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
+        OR (length(coalesce(pt.title, '')) > 40 AND coalesce(pt.title, '') !~ '[^\\x00-\\x7F]' AND coalesce(p.title, '') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+      )
+    )
+    OR (
+      pt.locale = 'th'
+      AND (
+        coalesce(pt.title, '') || ' ' || coalesce(pt.description, '') || ' ' || coalesce(pt."longFormSummary", '') || ' ' || coalesce(pt."dateConfidenceReasoning", '') || ' ' || coalesce(pt."delayReasoning", '') ~ 'พ\\.ศ\\.'
+        OR (
+          coalesce(pt.title, '') || ' ' || coalesce(pt.description, '') || ' ' || coalesce(pt."longFormSummary", '') || ' ' || coalesce(pt."dateConfidenceReasoning", '') || ' ' || coalesce(pt."delayReasoning", '') ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)'
+          AND replace(coalesce(p.title, '') || ' ' || coalesce(p.description, '') || ' ' || coalesce(p."longFormSummary", '') || ' ' || coalesce(p."dateConfidenceReasoning", '') || ' ' || coalesce(p."delayReasoning", ''), ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)'
+        )
       )
     )
   );
@@ -896,6 +966,23 @@ def apply_translations_file(apply_path: str):
     saved = push_translations(token, valid_rows)
     print(f"Applied {saved} / {len(valid_rows)} validated rows from {apply_path}.")
 
+def _panel_text_translated_ok(en_val: str, tr_val: str, loc: str, is_title: bool = False) -> bool:
+    en_prose = re.sub(r'<[^>]*>', '', en_val or '').strip()
+    tr_prose = re.sub(r'<[^>]*>', '', tr_val or '').strip()
+    if len(en_prose) > 40 and looks_english(en_prose):
+        if not is_title and tr_prose == en_prose:
+            return False
+        if loc in NON_LATIN_LOCALES and all(ord(ch) < 128 for ch in tr_prose):
+            return False
+    if loc == 'th' and tr_val:
+        if 'พ.ศ' in tr_val and 'พ.ศ' not in (en_val or ''):
+            return False
+        en_digits = (en_val or '').replace(',', '')
+        for byr in re.findall(r'(?<!\d)(25[5-8]\d)(?!\d)', tr_val):
+            if byr not in en_digits:
+                return False
+    return True
+
 def _chart_locale_ok(c: dict, loc: str) -> bool:
     tr = (c.get('i18n') or {}).get(loc)
     if not isinstance(tr, dict):
@@ -904,9 +991,13 @@ def _chart_locale_ok(c: dict, loc: str) -> bool:
     u = (tr.get('unit') or '').strip()
     if not t or len(t) > 120 or not u or len(u) > 40:
         return False
+    if not _panel_text_translated_ok(c.get('title') or '', t, loc, is_title=True):
+        return False
     if c.get('note'):
         n = (tr.get('note') or '').strip()
         if not n or len(n) > 500:
+            return False
+        if not _panel_text_translated_ok(c['note'], n, loc, is_title=False):
             return False
     return True
 
@@ -916,6 +1007,8 @@ def _table_locale_ok(tb: dict, loc: str) -> bool:
         return False
     t = (tr.get('title') or '').strip()
     if not t or len(t) > 120:
+        return False
+    if not _panel_text_translated_ok(tb.get('title') or '', t, loc, is_title=True):
         return False
     cols = tb.get('columns') or []
     tr_cols = tr.get('columns')
@@ -927,14 +1020,21 @@ def _table_locale_ok(tb: dict, loc: str) -> bool:
     tr_rows = tr.get('rows')
     if not isinstance(tr_rows, list) or len(tr_rows) != len(rows):
         return False
-    for r in tr_rows:
+    for r_idx, r in enumerate(tr_rows):
         if not isinstance(r, list) or len(r) != len(cols):
             return False
         if any(not isinstance(cell, str) or not cell.strip() or len(cell.strip()) > 200 for cell in r):
             return False
+        en_row = rows[r_idx] if r_idx < len(rows) else []
+        for c_idx, cell in enumerate(r):
+            en_cell = str(en_row[c_idx]) if c_idx < len(en_row) else ''
+            if not _panel_text_translated_ok(en_cell, cell, loc, is_title=False):
+                return False
     if tb.get('note'):
         n = (tr.get('note') or '').strip()
         if not n or len(n) > 500:
+            return False
+        if not _panel_text_translated_ok(tb['note'], n, loc, is_title=False):
             return False
     if tb.get('display') == 'timeline' and tb.get('stages'):
         stages = tb.get('stages') or []
@@ -997,8 +1097,6 @@ def _fit_panel_text(val: str, src: str, max_len: int) -> str:
         avail = max_len - len(cites) - 1
         if avail >= 1:
             return prose[:avail].rstrip() + '…' + cites
-    if len(src.strip()) <= max_len:
-        return src.strip()
     return val[:max_len - 1].rstrip() + '…'
 
 def _collect_panel_fragments(s: str, out: Set[str]):
@@ -1076,7 +1174,11 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
                 cache = json.loads(cache_path.read_text(encoding='utf-8'))
             except Exception:
                 pass
-        missing = [t for t in texts if t not in cache or not (cache.get(t) or '').strip()]
+        if loc == 'th':
+            for t in texts:
+                if t in cache and isinstance(cache[t], str):
+                    cache[t] = fix_thai_years(t, cache[t])
+        missing = [t for t in texts if t not in cache or not acceptable(loc, t, cache.get(t), is_title=True)]
         batches: List[List[str]] = []
         cur: List[str] = []
         cur_chars = 0
@@ -1091,14 +1193,11 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
             batches.append(cur)
         new_entries: Dict[str, str] = {}
         for idx, b in enumerate(batches, 1):
-            res = _call_batchexecute(b, loc)
-            for src_core in b:
-                tr = res.get(src_core)
-                if not tr or not tr.strip():
-                    tr = _raw_translate_single(src_core, loc)
-                if tr and tr.strip():
-                    if loc == 'th':
-                        tr = fix_thai_years(src_core, tr)
+            res = call_batch(b, loc)
+            for src_core, tr in res.items():
+                if loc == 'th':
+                    tr = fix_thai_years(src_core, tr)
+                if acceptable(loc, src_core, tr, is_title=True):
                     cache[src_core] = tr.strip()
                     new_entries[src_core] = tr.strip()
             if idx % 5 == 0 or idx == len(batches):
