@@ -17,6 +17,8 @@ import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
 import { projectForPin } from '../model/pinProject';
+import { damForPin } from '../model/pinDam';
+import type { PinDamJson } from '@/lib/damSpecs';
 import { marketImpactForPin } from '../model/pinMarketImpact';
 import type { PinMarketImpactJson } from '@/lib/marketImpact';
 import type { PinProjectJson } from '@/lib/projectSpecs';
@@ -288,6 +290,14 @@ export async function pinMarketImpact(id: number): Promise<PinMarketImpactJson |
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return marketImpactForPin(id);
+}
+
+// The pin's dam height / storage / capacity figures (PinDam).
+export async function pinDam(id: number): Promise<PinDamJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return damForPin(id);
 }
 
 // The pin's homes / rooms / seats / height / area / parking quantities.

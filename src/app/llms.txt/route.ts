@@ -46,6 +46,7 @@ async function llmsText(): Promise<string> {
     `- [Products](${absoluteUrl('/products')}): product pins by shelf, each with a short note on why it is good`,
     `- [Cars](${absoluteUrl('/cars')}): the best new cars ranked on one published rubric, each with the figures behind its score`,
     `- [Construction](${absoluteUrl('/construction')}): a span chart of builds under way from groundbreaking to completion, this year's US construction by default`,
+    `- [US dam construction](${absoluteUrl('/dams')}): dams being built, raised or made safe, with a stats panel and a state map of cost, storage and capacity`,
     `- [Forecasts](${absoluteUrl('/forecasts')}): industry forecast panels, live series and cited projections side by side, each with its sources`,
     `- [Travel](${absoluteUrl('/travel')}): the best luxury resorts and destinations ranked on the hotel rubric, with the optimal season and weather behind every journey`,
     `- [Activities](${absoluteUrl('/activities')}): seasonal things to do in major US cities, with what is in season today`,

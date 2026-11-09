@@ -27,12 +27,20 @@ def main():
         request = Request(args.base.rstrip('/') + path, method=method,
                           data=json.dumps(body).encode() if body is not None else None,
                           headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'})
-        with urlopen(request, timeout=60) as response:
-            return json.load(response)
+        for attempt in range(5):
+            try:
+                with urlopen(request, timeout=60) as response:
+                    return json.load(response)
+            except (TimeoutError, OSError) as error:
+                # Retry network timeouts only; HTTP errors (4xx/5xx) are raised as-is below.
+                if isinstance(error, __import__('urllib.error').error.HTTPError) or attempt == 4:
+                    raise
+                __import__('time').sleep(4 * (attempt + 1))
 
     uploads = {str(Path(u['file']).resolve()): u for u in
                (json.loads(line) for line in args.uploads.read_text().splitlines() if line.strip())}
     records = {}
+    checked = set()
     evidence_path = args.manifest.with_suffix('.readbacks.json')
     evidence = json.loads(evidence_path.read_text()) if evidence_path.exists() else []
     manifest = json.loads(args.manifest.read_text())
@@ -65,9 +73,18 @@ def main():
                 raise ValueError('Refusing to replace an existing photo')
             continue
         # Recheck public availability before changing any live references.
-        with urlopen(upload['src'], timeout=60) as response:
-            if not response.headers.get('Content-Type', '').startswith('image/') or not response.read(1):
-                raise ValueError('Public photo download failed')
+        if upload['src'] not in checked:
+            for attempt in range(5):
+                try:
+                    with urlopen(upload['src'], timeout=60) as response:
+                        if not response.headers.get('Content-Type', '').startswith('image/') or not response.read(1):
+                            raise ValueError('Public photo download failed')
+                    break
+                except (TimeoutError, OSError):
+                    if attempt == 4:
+                        raise
+                    __import__('time').sleep(3 * (attempt + 1))
+            checked.add(upload['src'])
         items[0]['image'] = image
         records[path]['count'] += 1
 

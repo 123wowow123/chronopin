@@ -501,11 +501,7 @@ mark menu items with largest discount on special deal on restaurant landing page
 
 authentic cuisine section by cuisine type
 
-
-
-pin dam construction in USA and add stas panel and map agregate for main stats
-
-
+pin food truck tab and their specials to specials tab on landing page.
 
 
 project pin such as construction project should have widget that states why problem it solves

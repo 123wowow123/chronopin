@@ -376,3 +376,12 @@ When the thing being pinned is one segment, phase, stage or section of a bigger 
   bypass it; ask the owner to save the image, then upload it to Azure with
   `scripts/construction/park-blvd-media-2026-11-08.mjs` (main image = first in the PUT, then the rest) and credit the page.
   `create_pin` may answer `needs: thin: One source`: add references and media.
+
+## 12. Dams (owner request, 2026-11-09)
+A dam build (new, raise, safety retrofit, outlet/fish passage, pumped-storage upper reservoir) gets a `PinDam` row beside the usual
+status tag, dates, price and map point: `PUT /api/pins/:id/dam {heightFt, crestLengthFt, storageAcreFt, addedStorageAcreFt, capacityMw,
+damType, scope, river, owner, state, basis, sourceUrl, note}` (docs/okf/tables/pin-dam.md). It drives the pin page's "Dam specs" panel and
+the `/dams` stats panel and state map, so `state` is required for the map and every figure must be one a page states (no unit conversions
+saved as sourced). A phase of a larger programme is a thread under the programme pin (Anderson Dam tunnel under the seismic retrofit).
+Catalog and replay: `scripts/construction/dams-2026-11-09.mjs`. Traps: army.mil refuses curl (use the dvidshub.net printable copy); the
+migration (0254) must be deployed before `PUT /dam` works on production, so post pins first and rerun with `--dam-only` after the deploy.
