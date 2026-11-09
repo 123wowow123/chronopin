@@ -453,8 +453,23 @@ export function PinMediaFrame({
           hands sideways drags to the swipe - on each slide too, since a capped
           slide scrolls and so starts its own touch-action chain.
           overflow-x-clip keeps a dragged slide from widening the page. */}
-      <div ref={dots ? frameRef : undefined} tabIndex={dots ? 0 : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
+      <div ref={dots ? frameRef : undefined} tabIndex={dots ? 0 : undefined} className={dots ? 'relative grid touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
         {labelled ? overlay : null}
+        {/* The frame is as tall as its tallest slide, so the arrows and dots stay
+            put while stepping: an invisible spacer per slide holds that height
+            even for a hidden or unmounted one. */}
+        {dots
+          ? shownSlides.map(({ medium, key, slice }) => {
+              const isPlayer = playing(medium);
+              const type = String(medium.type);
+              if (!isPlayer && type !== '1') return null;
+              const w = medium.thumbWidth || medium.originalWidth || 1000;
+              const h = medium.thumbHeight || medium.originalHeight || 562;
+              const ratio = isPlayer ? 16 / 9 : slice ? w / (h / slice.count) : w / h;
+              const cap = isPlayer || slice ? undefined : card ? 260 : 416;
+              return <div key={`size-${key}`} aria-hidden className="pointer-events-none invisible [grid-area:1/1]" style={{ aspectRatio: String(ratio), maxHeight: cap }} />;
+            })
+          : null}
         {shownSlides.map(({ medium, key, slice, source }, i) => {
           const shown = key === active.key;
           // A hidden player is unmounted so it stops; other hidden media stay mounted.
@@ -468,7 +483,7 @@ export function PinMediaFrame({
             <div
               key={key}
               hidden={!shown}
-              className={[capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : '', dots ? 'touch-pan-y touch-pinch-zoom' : '', dots && !dragX ? 'transition-transform duration-200' : '']
+              className={[dots ? '[grid-area:1/1] self-start' : '', capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : '', dots ? 'touch-pan-y touch-pinch-zoom' : '', dots && !dragX ? 'transition-transform duration-200' : '']
                 .filter(Boolean)
                 .join(' ') || undefined}
               style={shown && dragX ? { transform: `translateX(${dragX}px)` } : undefined}
