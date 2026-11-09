@@ -119,3 +119,12 @@ When the tools are not registered as a connector, the existing stdio MCP protoco
 - Run slow MCP calls from a retained background promise and inspect it in later Node REPL calls; a 30-second Node REPL timeout resets the kernel even when a production create already succeeded. Check production by exact source URL and subject before retrying a timed-out creation.
 - Large tool responses can be cut at 40,000 characters inside the JSON string (`industry_forecast_status`), making it invalid JSON. Preserve the response and read the bounded affected rows through the authenticated native admin API; do not treat truncation as an empty queue.
 - Cross-host review panels normally have different `checkedAt` timestamps. Verify all substantive fields and reviews, excluding only that check timestamp; do not report equal content as a failed save merely because the two writes happened milliseconds apart.
+
+## Always go all lanes (owner, 2026-11-08)
+
+When asked to "run the 6pm/6am job", work **every** lane to completion in the same session without stopping to
+ask whether to continue or close. Never end a turn with a partial-pass status and a question: keep going through
+revisits, event info (drain the queue), sentiment (drain pins and reviews), markets, model rubrics, ads,
+forecasts, horoscopes and the rest, then write the run note, run okfLint and finish the run. Spawn background
+subagents per lane when it helps. Only stop for a concrete blocker (session limit, source that cannot be read)
+and list it in the run note.
