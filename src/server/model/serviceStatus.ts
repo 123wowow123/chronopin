@@ -73,21 +73,22 @@ export async function serviceStatusForTitle(title: string): Promise<ServiceStatu
 // Not a preview, beta, announcement-only or retirement pin: a model customers can use.
 const NOT_GA = /\b(preview|beta|experimental|retire[sd]?|deprecat\w*|shut(s| down)|predicted|announces?|announced|unveil\w*)\b/i;
 
-// True when the pin is a generally released model with no later released model
-// further down its thread (the chain of replies that carries the model line on).
+// True when the pin is a generally released model with no later released *model* pin
+// further down its thread (a product chain's non-model launches do not replace it).
 export async function isLatestRelease(pinId: number): Promise<boolean> {
-  const rows = await db.query<{ id: number; title: string; start: Date; predicted: boolean }>(
+  const rows = await db.query<{ id: number; title: string; start: Date; predicted: boolean; model: boolean }>(
     `WITH RECURSIVE chain AS (
        SELECT "id", "title", "utcStartDateTime" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
        UNION ALL
        SELECT c."id", c."title", c."utcStartDateTime" FROM "Pin" c JOIN chain ON c."parentId" = chain."id" WHERE c."utcDeletedDateTime" IS NULL
      )
      SELECT chain."id", chain."title", chain."utcStartDateTime" AS "start",
-       EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = chain."id" AND t."name" IN ('Predicted', 'Prediction Market', 'Polymarket', 'Kalshi')) AS "predicted"
+       EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = chain."id" AND t."name" IN ('Predicted', 'Prediction Market', 'Polymarket', 'Kalshi')) AS "predicted",
+       EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = chain."id" AND t."name" = 'AI Models') AS "model"
      FROM chain`,
     [pinId],
   );
   const released = (row: { title: string; start: Date; predicted: boolean }) => !row.predicted && new Date(row.start).getTime() <= Date.now() && !NOT_GA.test(row.title);
   const self = rows.find((row) => row.id === pinId);
-  return !!self && released(self) && !rows.some((row) => row.id !== pinId && released(row));
+  return !!self && released(self) && !rows.some((row) => row.id !== pinId && row.model && released(row));
 }
