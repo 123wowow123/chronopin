@@ -32,6 +32,7 @@ import { PinAircraftPerf } from '@/components/pin/PinAircraftPerf';
 import { PinVideoPerf } from '@/components/pin/PinVideoPerf';
 import { PinLlmPerf } from '@/components/pin/PinLlmPerf';
 import { PinServiceStatus } from '@/components/pin/PinServiceStatus';
+import { PRODUCT_STATUS_TITLE } from '@/lib/serviceStatus';
 import { BUILD_STATUSES, pinDateKind } from '@/lib/pinDateKind';
 import { timelineSpan } from '@/lib/pinPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
@@ -227,7 +228,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     adsenseSlots(),
     viewerUser(),
     soft(pinAlternateNames(pin.id), [], 'pinAlternateNames'),
-    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.id, pin.title), null, 'pinServiceStatus') : /^\s*cursor\b/i.test(pin.title) ? soft(pinServiceStatus(pin.id, pin.title, false), null, 'pinServiceStatus') : null,
+    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.id, pin.title), null, 'pinServiceStatus') : PRODUCT_STATUS_TITLE.test(pin.title) ? soft(pinServiceStatus(pin.id, pin.title, false), null, 'pinServiceStatus') : null,
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};

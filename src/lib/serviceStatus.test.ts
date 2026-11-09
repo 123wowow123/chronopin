@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dayMinutes, parseStatuspage, serviceForTitle } from './serviceStatus';
+import { PRODUCT_STATUS_TITLE, dayMinutes, parseStatuspage, serviceForTitle } from './serviceStatus';
 
 describe('serviceStatus', () => {
   it('sums minutes per state', () => {
@@ -12,6 +12,8 @@ describe('serviceStatus', () => {
     expect(serviceForTitle('Google Antigravity launched')?.slug).toBe('google-antigravity');
     expect(serviceForTitle('Cursor 3.0 Released')?.slug).toBe('cursor');
     expect(serviceForTitle('Qwen 4 released')).toBeNull();
+    expect(PRODUCT_STATUS_TITLE.test('Google Antigravity CLI Launches')).toBe(true);
+    expect(PRODUCT_STATUS_TITLE.test('Gemini 3 Pro Released')).toBe(false);
   });
 });
 

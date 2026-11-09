@@ -69,6 +69,10 @@ export const OFFICIAL_STATUS_HOSTS: Record<string, string> = {
   cursor: 'status.cursor.com', // redirects to status.x.ai/api/compat/*
 };
 
+// Product pins of a tracked service (Cursor's and Antigravity's launches) show its live health on every pin;
+// model pins show it only while they are the latest release of their thread (isLatestRelease).
+export const PRODUCT_STATUS_TITLE = /^\s*(cursor|google antigravity|antigravity)\b/i;
+
 export const serviceForTitle = (title: string) => SERVICES.find((service) => service.re.test(title)) ?? null;
 export const statusGatorUrl = (slug: string) => `https://statusgator.com/services/${slug}`;
 

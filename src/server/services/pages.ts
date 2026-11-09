@@ -36,7 +36,7 @@ import { aircraftPerfForPin } from '../model/pinAircraftPerf';
 import { videoPerfForPin } from '../model/pinVideoPerf';
 import { llmPerfForPin } from '../model/pinLlmPerf';
 import { isLatestRelease, serviceStatusForTitle } from '../model/serviceStatus';
-import type { ServiceStatusJson } from '@/lib/serviceStatus';
+import { PRODUCT_STATUS_TITLE, type ServiceStatusJson } from '@/lib/serviceStatus';
 import { diningForPin } from '../model/pinDining';
 import { hotelForPin } from '../model/pinHotel';
 import { criticReviewsForPin } from '../model/pinCriticReview';
@@ -407,8 +407,8 @@ export async function pinServiceStatus(id: number, title: string, isModel = true
   cacheLife('minutes');
   cacheTag(TAGS.pin(id));
   // A model pin shows it only while it is the latest release of its thread; a product pin of a
-  // tracked service (Cursor's launches) shows the service's live health on every pin.
-  if (!isModel) return /^\s*cursor\b/i.test(title) ? serviceStatusForTitle(title) : null;
+  // tracked service (Cursor's and Antigravity's launches) shows the service's live health on every pin.
+  if (!isModel) return PRODUCT_STATUS_TITLE.test(title) ? serviceStatusForTitle(title) : null;
   return (await isLatestRelease(id)) ? serviceStatusForTitle(title) : null;
 }
 
