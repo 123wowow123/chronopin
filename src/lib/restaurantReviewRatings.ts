@@ -31,6 +31,9 @@ const estimates: Record<string, number> = {
   'Menu standouts include the Wagyu picanha, steak frites and lobster tail with diavola butter, pickled shallot and scallions.': 4,
   'roasted oysters to morcilla (blood sausage) to steaks are excellent': 4.5,
   'we encourage you to give it a try. It’s really good': 4,
+  'a simple but elegant appetizer that showcases pristine slices of silky butterfish': 4.5,
+  'these tasted fresh and buttery': 4,
+  'too bready and soft and the cheese was gooey': 2.5,
 };
 
 export function inferredReviewRating(review: RestaurantDishReview): number | null {
