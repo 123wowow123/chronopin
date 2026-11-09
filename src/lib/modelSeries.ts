@@ -35,7 +35,7 @@ const PATTERNS: Pattern[] = [
   // o1-preview, o3, o3-pro, o4-mini
   { re: /\bo(\d)(?:[- ](mini|pro|preview))?\b/, read: (m) => ({ family: 'o', version: m[1], variants: m[2] ? [m[2]] : [] }) },
   {
-    re: new RegExp(String.raw`\bgemini[- ]${VERSION}(?:[- ](pro|flash-lite|flash|ultra|nano))?\b`),
+    re: new RegExp(String.raw`\bgemini[- ]${VERSION}(?:[- ](pro|flash-lite|flash|ultra|nano|live))?\b`),
     read: (m) => ({ family: 'gemini', version: m[1], variants: m[2] ? [m[2]] : [] }),
   },
   { re: new RegExp(String.raw`\bllama[- ]?${VERSION}\b`), read: (m) => ({ family: 'llama', version: m[1] }) },

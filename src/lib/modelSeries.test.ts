@@ -17,6 +17,7 @@ describe('modelRelease', () => {
     ['OpenAI o3 and o4-mini Released', 'o', [3], 'o 3'],
     ['OpenAI Releases gpt-oss-120b and gpt-oss-20b', 'gpt-oss', [0], 'gpt-oss 0'],
     ['Gemini 2.5 Pro Released', 'gemini pro', [2, 5], 'gemini 2.5 pro'],
+    ['Gemini 3.8 Live and 3.8 Live Extended Thinking released', 'gemini live', [3, 8], 'gemini 3.8 live'],
     ['Qwen3.8-Max Released', 'qwen', [3, 8], 'qwen 3.8'],
     ['GLM-4.5V Released', 'glm', [4, 5], 'glm 4.5'],
     ['GLM-5V-Turbo Released', 'glm', [5], 'glm 5'],
