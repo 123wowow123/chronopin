@@ -62,7 +62,7 @@ export function AlbumTracklist({
         </span>
       </button>
       {open ? (
-        <ol className={`divide-y border-t ${scroll ? 'divide-[var(--rule)]/50 border-[var(--rule)]/60 max-h-64 overflow-y-auto overscroll-contain pb-1' : 'divide-line border-line'}`}>
+        <ol className={`divide-y border-t ${scroll ? 'divide-[var(--rule)]/50 border-[var(--rule)]/60 max-h-64 overflow-y-auto scroll-thumb overscroll-contain pb-1' : 'divide-line border-line'}`}>
           {queue.map((entry, i) => {
             const t = album.tracks[i];
             const playing = currentTrack?.id === entry.id && isPlaying;

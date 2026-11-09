@@ -755,3 +755,12 @@ body:has(main[data-fullscreen]) [data-site-footer] {
 @media (prefers-reduced-motion: reduce) {
   .eq-bars-on > i { animation: none; height: 9px; }
 }
+
+/* A scroller whose native scrollbar is hidden so it takes no width; the
+   ScrollThumbSync overlay thumb shows while it scrolls. */
+@utility scroll-thumb {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

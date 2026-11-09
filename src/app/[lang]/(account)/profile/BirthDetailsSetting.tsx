@@ -104,7 +104,7 @@ export function BirthDetailsSetting({ initial }: { initial: Saved }) {
           }}
         />
         {results.length ? (
-          <ul className="surface absolute inset-x-0 top-full z-10 mt-1 max-h-64 overflow-auto p-1 shadow-lg">
+          <ul className="surface absolute inset-x-0 top-full z-10 mt-1 max-h-64 overflow-auto scroll-thumb p-1 shadow-lg">
             {results.map((p) => (
               <li key={`${p.latitude},${p.longitude},${p.name}`}>
                 <button

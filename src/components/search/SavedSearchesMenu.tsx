@@ -68,7 +68,7 @@ export function SavedSearchesMenu({ icon }: { icon: React.ReactNode }) {
           ) : searches === null ? (
             <p className="px-2 py-2 text-sm text-subtle">{t('common.loading')}</p>
           ) : searches.length ? (
-            <ul className="max-h-72 overflow-y-auto">
+            <ul className="max-h-72 overflow-y-auto scroll-thumb">
               {searches.map((s) => (
                 <li key={s.id}>
                   <Link

@@ -274,10 +274,11 @@ export function FloatingControls({
               />
             ) : null}
             <div
+              data-scroll-thumb=""
               id={mergedId}
               className={
                 merge
-                  ? `contents ${mergedOpen ? 'xl:flex xl:min-h-0 xl:flex-col xl:divide-y xl:divide-line xl:border-t xl:border-line xl:overflow-y-auto xl:overscroll-contain xl:[&>*]:shrink-0' : 'xl:hidden'}`
+                  ? `contents ${mergedOpen ? 'xl:flex xl:min-h-0 xl:flex-col xl:divide-y xl:divide-line xl:border-t xl:border-line xl:overflow-y-auto xl:overscroll-contain no-scrollbar xl:[&>*]:shrink-0' : 'xl:hidden'}`
                   : 'contents'
               }
             >
@@ -288,7 +289,8 @@ export function FloatingControls({
                 {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
                 <div
                   id="timeline-controls"
-                  className={`flex flex-col gap-2 max-xl:max-h-[calc(100dvh-8rem)] max-xl:overflow-y-auto max-xl:overscroll-contain ${merge ? 'xl:gap-0 xl:divide-y xl:divide-line' : ''} ${
+                  data-scroll-thumb=""
+                  className={`flex flex-col gap-2 max-xl:max-h-[calc(100dvh-8rem)] max-xl:overflow-y-auto max-xl:overscroll-contain no-scrollbar ${merge ? 'xl:gap-0 xl:divide-y xl:divide-line' : ''} ${
                     open === 'controls' ? '' : 'max-xl:hidden'
                   }`}
                 >
@@ -307,7 +309,8 @@ export function FloatingControls({
               first and scroll, rather than squeezing the controls above them. */}
           {cards ? (
             <div
-              className={`flex flex-col gap-2 xl:min-h-0 xl:shrink-[100] xl:overflow-y-auto xl:overscroll-contain xl:[&>*]:shrink-0 ${open === 'controls' ? '' : 'max-xl:hidden'}`}
+              data-scroll-thumb=""
+              className={`flex flex-col gap-2 xl:min-h-0 xl:shrink-[100] xl:overflow-y-auto xl:overscroll-contain no-scrollbar xl:[&>*]:shrink-0 ${open === 'controls' ? '' : 'max-xl:hidden'}`}
             >
               {cards}
             </div>

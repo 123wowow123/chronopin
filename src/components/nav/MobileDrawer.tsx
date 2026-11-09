@@ -238,7 +238,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
         aria-modal="true"
         aria-label={t('nav.menu')}
         tabIndex={-1}
-        className={`fixed inset-y-0 start-0 z-50 flex w-[min(26rem,90vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header ps-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
+        className={`fixed inset-y-0 start-0 z-50 flex w-[min(26rem,90vw)] touch-pan-y flex-col overflow-y-auto scroll-thumb overscroll-contain bg-header ps-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
           open ? 'translate-x-0' : 'invisible -translate-x-full rtl:translate-x-full'
         }`}
         style={dragging ? { translate: `${drag * (rtl ? -100 : 100)}% 0`, transition: 'none' } : undefined}

@@ -14,6 +14,7 @@ import { Navbar } from '@/components/nav/Navbar';
 import { NavigationProgressBar } from '@/components/nav/NavigationProgressBar';
 import { SiteFooter } from '@/components/nav/SiteFooter';
 import { ThemeSync } from '@/components/ThemeSync';
+import { ScrollThumbSync } from '@/components/ScrollThumbSync';
 import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
 import { analyticsScript } from '@/lib/analytics';
@@ -153,6 +154,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <GlobalMusicPlayerBar />
             <TimeZoneSync />
             <ThemeSync />
+            <ScrollThumbSync />
             <LocaleSync />
           </MusicPlayerProvider>
         </I18nProvider>

@@ -56,7 +56,7 @@ export function ThreadList({ items, current }: { items: ReactNode[]; current: nu
   }, [shown, items.length]);
 
   return (
-    <div ref={box} className="mt-3 overflow-y-auto overscroll-contain" style={height ? { maxHeight: height } : undefined}>
+    <div ref={box} className="mt-3 overflow-y-auto scroll-thumb overscroll-contain" style={height ? { maxHeight: height } : undefined}>
       <ol className="space-y-1">
         {items.slice(0, shown).map((item, index) => (
           <li key={index} data-thread-row>

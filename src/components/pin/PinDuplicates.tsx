@@ -195,7 +195,7 @@ const THUMB = 'h-10 w-16 sm:h-14 sm:w-24';
 
 // A long list of suggestions scrolls inside the panel rather than pushing the
 // rest of the page down. The padding keeps the rows' rings from being clipped.
-const SCROLL_LIST = 'max-h-[28rem] space-y-2 overflow-y-auto overscroll-contain p-px pe-1';
+const SCROLL_LIST = 'max-h-[28rem] space-y-2 overflow-y-auto scroll-thumb overscroll-contain p-px pe-1';
 
 function PinAuthor({ user }: { user?: PinUserJson }) {
   if (!user?.userName) return null;

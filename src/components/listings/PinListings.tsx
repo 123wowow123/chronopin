@@ -103,7 +103,7 @@ export function PinListings({ pinId, kind, productName, categories }: { pinId: n
       {/* Under a listing opened from it, the whole list waits to come back. */}
       {showAll && !viewing && !editing ? (
         <Dialog label={t(`listing.listedHere.${kind}`, { count: listings.length })} onClose={() => setShowAll(false)} className="w-full max-w-4xl">
-          <ul className="grid grid-cols-2 gap-3 overflow-y-auto p-4 sm:grid-cols-3 lg:grid-cols-4">
+          <ul className="grid grid-cols-2 gap-3 overflow-y-auto scroll-thumb p-4 sm:grid-cols-3 lg:grid-cols-4">
             {listings.map((listing) => (
               <li key={listing.id}>
                 <ListingCard listing={listing} onView={setViewing} />

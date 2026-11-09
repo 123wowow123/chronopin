@@ -1241,7 +1241,7 @@ export function SearchBox() {
         <ul
           id="search-suggestions"
           role="listbox"
-          className="floating fixed inset-x-3 top-[60px] z-50 max-h-[min(28rem,calc(100dvh-5rem))] overflow-auto p-1.5 sm:absolute sm:inset-x-0 sm:top-full sm:mt-2"
+          className="floating fixed inset-x-3 top-[60px] z-50 max-h-[min(28rem,calc(100dvh-5rem))] overflow-auto scroll-thumb p-1.5 sm:absolute sm:inset-x-0 sm:top-full sm:mt-2"
         >
           {showRelated ? (
             <li role="presentation" className="px-3 pt-1 pb-2">

@@ -930,7 +930,7 @@ function PremiumRow({ className = '', onNavigate }: { className?: string; onNavi
         {t('notifications.premiumHeading')}
         <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] text-accent">{t('notifications.premiumWindow')}</span>
       </div>
-      <ul className="max-h-60 overflow-auto">
+      <ul className="max-h-60 overflow-auto scroll-thumb">
         {answer.positions.map((p) => {
           const pnl = p.estimatedPnlPercent;
           return (
@@ -1072,7 +1072,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         <div style={panel} className="floating absolute end-3 top-full sm:end-5 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-[44rem] max-w-[calc(100vw-1rem)] flex-col overflow-hidden">
           <LocalWeatherRow className="shrink-0" />
           {/* Only what is under the weather row scrolls, as under the bell's heading. */}
-          <div className="min-h-0 overflow-y-auto">
+          <div className="min-h-0 overflow-y-auto scroll-thumb">
           <HoroscopeRow className="border-t border-line" onNavigate={() => setOpen(false)} />
           <div className="peer border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
           <ul className={`pt-1.5 ${weather ? 'peer-empty:border-t peer-empty:border-line' : ''}`}>
@@ -1172,7 +1172,7 @@ export function NotificationBell({ className = '' }: { className?: string }) {
         </span>
       </button>
       {open ? (
-        <div style={panel} className="floating absolute end-3 top-full sm:end-5 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-[44rem] max-w-[calc(100vw-1rem)] overflow-y-auto">
+        <div style={panel} className="floating absolute end-3 top-full sm:end-5 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-[44rem] max-w-[calc(100vw-1rem)] overflow-y-auto scroll-thumb">
           <LocalWeatherRow className="border-b border-line" />
           <HoroscopeRow className="border-b border-line" onNavigate={() => setOpen(false)} />
           <PremiumRow className="border-b border-line" onNavigate={() => setOpen(false)} />

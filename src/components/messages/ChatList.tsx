@@ -173,7 +173,7 @@ export function ChatList({
         </div>
       </div>
 
-      <div className={`min-h-0 flex-1 overflow-y-auto px-1.5 pb-1.5 ${listClassName}`}>
+      <div className={`min-h-0 flex-1 overflow-y-auto scroll-thumb px-1.5 pb-1.5 ${listClassName}`}>
         {items === null ? (
           <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>
         ) : (
