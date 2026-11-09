@@ -16,6 +16,13 @@ const estimates: Record<string, number> = {
   'the showstopper is a creamy, salty Caesar': 4.5,
   'The caesar salad bites? Yeah, that’s a non negotiable.': 5,
   'nicely paired with a side of purple sticky rice': 4,
+  'the crispy provolone shone as the best appetizer': 4.5,
+  'lacked that wow factor': 3,
+  'a weighty slab of ricotta slathered atop a slice of bread': 2.5,
+  'overpowering the other flavors': 2,
+  'emerged as one of the stronger dishes': 4,
+  'the squid is tender and the breading is incredibly light and crispy': 4.5,
+  'a damn good kale salad': 4.5,
 };
 
 export function inferredReviewRating(review: RestaurantDishReview): number | null {
