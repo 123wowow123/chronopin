@@ -200,10 +200,10 @@ export const TOOLS: JobTool[] = [
     name: 'prediction_accuracy',
     description:
       "Updates the track record shown on /predictions: records the odds each Predicted pin's Kalshi/Polymarket markets gave (once, when first seen) and marks the markets that have closed as settled. Run once in predictionMarkets after creating pins. Set apply: true to write; otherwise reports what it would do. Set historical: true instead to score markets that settled before they were recorded, on their price 7 days before closing (a one-off backfill, slow: reads price history).",
-    input_schema: obj({ apply: { type: 'boolean' }, historical: { type: 'boolean' } }),
+    input_schema: obj({ apply: { type: 'boolean' }, historical: { type: 'boolean' }, limit: num('Predicted pins to read, default 2000, at most 10000') }),
     run: async (input, ctx) => {
       if (input.historical) return backfillHistoricalRecords({ apply: !!input.apply });
-      const result = await syncAllRecords({ apply: !!input.apply });
+      const result = await syncAllRecords({ apply: !!input.apply, limit: int(input.limit, 2000, 1, 10000) });
       await act(ctx, {
         tool: 'prediction_accuracy',
         detail: `${result.pins} predicted pin(s) read: recorded ${result.recorded}, settled ${result.settled}, void ${result.voided}, already closed ${result.skipped}`,

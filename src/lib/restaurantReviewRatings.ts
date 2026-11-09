@@ -23,6 +23,14 @@ const estimates: Record<string, number> = {
   'emerged as one of the stronger dishes': 4,
   'the squid is tender and the breading is incredibly light and crispy': 4.5,
   'a damn good kale salad': 4.5,
+  "You'll see this in front of pretty much everyone at Socarrat. You should follow suit. It's good.": 4,
+  'chorizo-wrapped dates are always a good choice': 4,
+  "The rare oyster that catches you off guard, thanks to the hot sauce and the bivalve's creaminess.": 4.5,
+  'Our favorite appetizer.': 5,
+  'Toasty, togarashi-scented chile oil amplified the cloves’ mellow sweetness.': 4,
+  'Menu standouts include the Wagyu picanha, steak frites and lobster tail with diavola butter, pickled shallot and scallions.': 4,
+  'roasted oysters to morcilla (blood sausage) to steaks are excellent': 4.5,
+  'we encourage you to give it a try. It’s really good': 4,
 };
 
 export function inferredReviewRating(review: RestaurantDishReview): number | null {

@@ -93,7 +93,7 @@ export async function syncPinRecords(pinId: number, { apply = true } = {}): Prom
 
 // Every Predicted pin that has a market not yet settled in the record: new
 // pins first, then the open ones, so a settlement is found within the hour.
-export async function syncAllRecords({ apply = true, limit = 200 } = {}): Promise<RecordSync & { pins: number }> {
+export async function syncAllRecords({ apply = true, limit = 2000 } = {}): Promise<RecordSync & { pins: number }> {
   const pins = await db.query<PinLinks>(
     `${LINKS_SQL}
      ORDER BY (SELECT count(*) FROM "PredictionRecord" AS "x" WHERE "x"."pinId" = "p"."id") ASC, "p"."id" DESC

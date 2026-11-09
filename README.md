@@ -506,8 +506,6 @@ authentic cuisine section by cuisine type
 pin dam construction in USA and add stas panel and map agregate for main stats
 
 
-- add large USA construction project
-
 
 
 project pin such as construction project should have widget that states why problem it solves
