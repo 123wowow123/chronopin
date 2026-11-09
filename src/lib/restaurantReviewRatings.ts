@@ -34,6 +34,14 @@ const estimates: Record<string, number> = {
   'a simple but elegant appetizer that showcases pristine slices of silky butterfish': 4.5,
   'these tasted fresh and buttery': 4,
   'too bready and soft and the cheese was gooey': 2.5,
+  'thick Calcutta pork ribs that come coated with a chutney glaze': 4,
+  'Another go-to is their goat cheese-stuffed naan': 4,
+  'you can’t go wrong with the parmesan truffle fries or potatoes gratin': 4.5,
+  'this is just your standard bowl of miso soup': 2.5,
+  'the fish doesn’t have much flavor to back it up': 2,
+  'the tempura shrimp is stiff and tastes a bit stale': 2,
+  'frying them, adding bacon, and coating them in a deliciously tangy dressing': 4.5,
+  'A mix of sharp funky cheeses, springy noodles, and a golden brown top make this mac and cheese something we order on repeat': 4.5,
 };
 
 export function inferredReviewRating(review: RestaurantDishReview): number | null {
