@@ -1232,6 +1232,14 @@ A pin that is not a release (an announcement whose release pin carries the rubri
 **When.** Automatically during creation/research and in every 06:00/18:00 America/Los_Angeles news job just after modelScores (owner, 2026-10-28: "this should be done automatically all the time"). `create_pin` flags model graphs/tables and media for completion in the same run; the recurring queue also catches existing gaps. Limit: about five pins a run; record specific remaining work when run limits are reached. No new confirmation is needed for routine content enrichment.
 **Traps.** Artificial Analysis rebases its index and its live pages show today's lower numbers: use the figure published at launch and name the version. openai.com is Cloudflare-walled (use developers.openai.com, press and Artificial Analysis); VentureBeat and Medium often block curl, so use the page only if it opened. A rubric set by hand is never overwritten. Never invent a review, a score or a spec to fill an axis.
 
+### marketImpact
+
+Scores how far a pin's information can move markets (`PinMarketImpact`, 0253; `docs/okf/api/market-impact.md`). Per run: call
+`market_impact_candidates` (unscored pins from 3 days back to 14 ahead, listed-company pins first), open each pin's source,
+and `save_market_impact` with a 1-10 weight, a one-sentence sourced reason and the assets affected. 3+ lead the timeline and
+show the icon. A pin with no market angle (restaurant, trailer) goes in `skip`, never scored 1 to clear it. Never invent a
+mechanism; queue a specific evidence gap only. The save also pushes to production by sourceUrl.
+
 ### industryForecasts
 
 **Reads** `industry_forecast_status` (every forecast panel: tags, FRED handles, newest survey day, projection points, earlier editions, sources, last check). See [industry-forecasts.md](../../industry-forecasts.md).

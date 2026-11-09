@@ -1287,6 +1287,13 @@ const es: Messages = {
     closes: 'Cierra el {date}',
     viewOn: 'Ver en {source}',
   },
+  marketImpact: {
+    label: 'Impacto en el mercado {weight}/10',
+    high: 'Gran impulsor del mercado: puede mover los precios',
+    medium: 'Relevante para los mercados',
+    low: 'Relevancia menor para los mercados',
+    assets: 'Afecta a: {assets}',
+  },
   card: {
     new: 'Nuevo',
     newTitle: 'Publicado hoy: ver todos los pines publicados hoy',

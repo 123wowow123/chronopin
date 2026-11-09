@@ -17,6 +17,8 @@ import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
 import { projectForPin } from '../model/pinProject';
+import { marketImpactForPin } from '../model/pinMarketImpact';
+import type { PinMarketImpactJson } from '@/lib/marketImpact';
 import type { PinProjectJson } from '@/lib/projectSpecs';
 import { hasSiteShape, siteShapeForPin } from '../model/pinSiteShape';
 import { simplifyForDisplay, type PinSiteShapeJson } from '@/lib/siteShape';
@@ -278,6 +280,14 @@ export async function pinDatacenter(id: number): Promise<PinDatacenterJson | nul
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return datacenterForPin(id);
+}
+
+// How far the pin's information can move markets (score + reason), or null.
+export async function pinMarketImpact(id: number): Promise<PinMarketImpactJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return marketImpactForPin(id);
 }
 
 // The pin's homes / rooms / seats / height / area / parking quantities.

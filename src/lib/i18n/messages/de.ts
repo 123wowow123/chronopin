@@ -1287,6 +1287,13 @@ const de: Messages = {
     closes: 'Schließt am {date}',
     viewOn: 'Auf {source} ansehen',
   },
+  marketImpact: {
+    label: 'Marktwirkung {weight}/10',
+    high: 'Großer Markttreiber – kann Kurse bewegen',
+    medium: 'Für die Märkte bemerkenswert',
+    low: 'Geringe Marktrelevanz',
+    assets: 'Betrifft: {assets}',
+  },
   card: {
     new: 'Neu',
     newTitle: 'Heute gepostet – alle heute geposteten Pins anzeigen',

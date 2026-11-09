@@ -1499,6 +1499,13 @@ const ar: Messages = {
     closes: 'يُغلق {date}',
     viewOn: 'عرض على {source}',
   },
+  marketImpact: {
+    label: 'التأثير في الأسواق {weight}/10',
+    high: 'محرّك رئيسي للأسواق - قد يحرّك الأسعار',
+    medium: 'جدير بالاهتمام للأسواق',
+    low: 'صلة محدودة بالأسواق',
+    assets: 'يؤثر في: {assets}',
+  },
   card: {
     new: 'جديد',
     newTitle: 'نُشر اليوم - عرض كل الدبابيس المنشورة اليوم',

@@ -41,6 +41,13 @@ const estimates: Record<string, number> = {
   'the fish doesn’t have much flavor to back it up': 2,
   'the tempura shrimp is stiff and tastes a bit stale': 2,
   'frying them, adding bacon, and coating them in a deliciously tangy dressing': 4.5,
+  'just enough brightness coming from the vegetables and the lime to make each bite damn near perfect': 4.5,
+  'the pasta is cooked nicely, even if the sauce is a little watery': 3,
+  'Nobody asked for this, but nobody’s complaining, either.': 3.5,
+  'a chicken parmesan all but drowned in marinara sauce': 2.5,
+  '(cold cheese is an unfortunate constant). These are a solid start to the meal.': 3,
+  'When the lamb shank is on the menu, get it. It’s fall-apart tender.': 4.5,
+  'The two pieces of chicken are tender, juicy, and fried to a crispy finish': 4.5,
   'A mix of sharp funky cheeses, springy noodles, and a golden brown top make this mac and cheese something we order on repeat': 4.5,
 };
 

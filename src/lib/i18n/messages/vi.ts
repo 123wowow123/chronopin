@@ -1287,6 +1287,13 @@ const vi: Messages = {
     closes: 'Đóng {date}',
     viewOn: 'Xem trên {source}',
   },
+  marketImpact: {
+    label: 'Tác động thị trường {weight}/10',
+    high: 'Yếu tố lớn của thị trường - có thể làm giá biến động',
+    medium: 'Đáng chú ý với thị trường',
+    low: 'Liên quan nhỏ tới thị trường',
+    assets: 'Ảnh hưởng: {assets}',
+  },
   card: {
     new: 'Mới',
     newTitle: 'Đăng hôm nay - xem mọi ghim đăng hôm nay',

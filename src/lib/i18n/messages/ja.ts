@@ -1281,6 +1281,13 @@ const ja: Messages = {
     closes: '{date}に終了',
     viewOn: '{source}で見る',
   },
+  marketImpact: {
+    label: '市場への影響度 {weight}/10',
+    high: '市場を大きく動かす材料 - 価格を動かす可能性が高い',
+    medium: '市場にとって注目すべき情報',
+    low: '市場への関連性は小さい',
+    assets: '影響対象: {assets}',
+  },
   card: {
     new: '新着',
     newTitle: '今日の投稿 - 今日投稿されたピンをすべて表示',

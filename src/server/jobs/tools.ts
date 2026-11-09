@@ -64,6 +64,7 @@ import { competitorsProblem, saveCompetitors } from '../model/pinCompetitor';
 import { ACTIONS, INSTRUMENTS, TRADER_SOURCES } from '@/lib/traders';
 import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
+import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
 import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
@@ -495,6 +496,40 @@ export const TOOLS: JobTool[] = [
       const result = await syncProductLifecycle();
       await act(ctx, { tool: 'product_lifecycle_sync', detail: `local ${result.local.tagged} tagged / ${result.local.untagged} untagged of ${result.local.goods}${result.production ? `; production ${result.production.tagged} / ${result.production.untagged} of ${result.production.goods}` : ''}` });
       return result;
+    },
+  },
+  // --- Market-moving weights (the marketImpact task) -----------------------
+  {
+    name: 'market_impact_candidates',
+    description:
+      "Pins starting from `daysBack` days ago to `daysAhead` days ahead (default 3 and 14) that have no market-impact score yet, listed company/ticker pins first, biggest companies first. Each has title, description, start, company, marketCap, tickers and sourceUrl. For each one with a real market angle research the page, then save_market_impact; a pin with none (a restaurant, a game trailer) goes in `skip`, never scored 1 just to clear it. `remaining` is how many more wait. At most `limit` (default 10, at most 30).",
+    input_schema: obj({ limit: num('At most this many, default 10'), daysBack: num('Default 3'), daysAhead: num('Default 14'), skip: { type: 'array', items: { type: 'integer' }, description: 'Pin ids judged to have no market angle this run' } }),
+    run: async (input, ctx) => {
+      const result = await impactCandidates(int(input.limit, 10, 1, 30), int(input.daysBack, 3, 0, 365), int(input.daysAhead, 14, 0, 365), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'market_impact_candidates', detail: `${result.candidates.length} pin(s) listed, ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_market_impact',
+    description:
+      "Scores how far a pin's information can move markets. weight 1-10: 1-2 negligible, 3-4 sector news, 5-6 notable for one company or commodity, 7-8 a major mover (a mega-cap's earnings, a central-bank decision, a big regulatory or court ruling, an OPEC move), 9-10 a market-wide shock. Only 3+ lead the timeline and show the icon. `reason` (required, at most 500 characters) is the mechanism in one or two sentences, from a page you opened, never a guess; `assets` (optional, at most 200) names what moves ('NVDA, SOXX, 10Y yield'). Saved here, and on production when the run writes there (matched by sourceUrl).",
+    input_schema: obj({ pinId: num('Pin id'), weight: num('1-10'), reason: str('Why it can move markets'), assets: str('What moves') }, ['pinId', 'weight', 'reason']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const weight = Number(input.weight);
+      const reason = typeof input.reason === 'string' ? input.reason.trim() : '';
+      if (!Number.isInteger(weight) || weight < 1 || weight > 10) throw new Error('weight must be an integer 1-10');
+      if (!reason || reason.length > 500) throw new Error('reason is required, at most 500 characters');
+      const assets = typeof input.assets === 'string' && input.assets.trim() ? input.assets.trim().slice(0, 200) : null;
+      await saveMarketImpact(pinId, { weight, reason, assets });
+      expirePinPage(pinId);
+      const pushed = await pushModelPerf(pinId, 'market-impact', { weight, reason, assets }).catch((err) => {
+        log.warn(`pin ${pinId}'s market impact did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_market_impact', pinId, detail: `weight ${weight}${pushed ? '; prod saved' : ''}` });
+      return { pinId, weight, production: pushed };
     },
   },
   // --- Industry forecast panels (the industryForecasts task) ----------------

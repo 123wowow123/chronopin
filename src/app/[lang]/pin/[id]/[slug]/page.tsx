@@ -20,6 +20,8 @@ import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinMenu } from '@/components/pin/PinMenu';
 import { AddressShare } from '@/components/pin/PinShare';
 import { PinConfidence } from '@/components/pin/PinConfidence';
+import type { PinMarketImpactJson } from '@/lib/marketImpact';
+import { MarketImpactBadge } from '@/components/pin/MarketImpactBadge';
 import { PinPillRow } from '@/components/pin/PinPillRow';
 import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
@@ -127,7 +129,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -196,7 +198,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, marketImpact, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
     soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -207,6 +209,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinEnergy(pin.id), null, 'pinEnergy'),
     soft(pinDatacenter(pin.id), null, 'pinDatacenter'),
     soft(pinProject(pin.id), null, 'pinProject'),
+    soft(pinMarketImpact(pin.id), null, 'pinMarketImpact'),
     soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),
     soft(pinPerf(pin.id), null, 'pinPerf'),
     pin.categories?.includes('Gaming') ? soft(pinGameInfo(pin.id), null, 'pinGameInfo') : null,
@@ -259,7 +262,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} project={project} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} project={project} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -392,6 +395,7 @@ async function PinBody({
   energy,
   datacenter,
   project,
+  marketImpact,
   venue,
   candidates,
   competitors,
@@ -410,6 +414,7 @@ async function PinBody({
   energy?: PinEnergyJson | null;
   datacenter?: PinDatacenterJson | null;
   project?: PinProjectJson | null;
+  marketImpact?: PinMarketImpactJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
   competitors?: PinCompetitorJson[];
@@ -565,6 +570,7 @@ async function PinBody({
             <DateConfidence level={pin.dateConfidence} />
             <DelayBadge pin={pin} search />
             <PinConfidence evidence={pinEvidence(pin)} />
+            {marketImpact ? <MarketImpactBadge weight={marketImpact.weight} reason={marketImpact.reason} assets={marketImpact.assets} /> : null}
           </PinPillRow>
           {/* Last: the reasoning takes a line of its own below the badges. */}
           <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning} dir={pinTextDir(pin)}>

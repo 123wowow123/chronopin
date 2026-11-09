@@ -1281,6 +1281,13 @@ const ko: Messages = {
     closes: '{date} 종료',
     viewOn: '{source}에서 보기',
   },
+  marketImpact: {
+    label: '시장 영향도 {weight}/10',
+    high: '시장을 크게 움직이는 재료 - 가격에 영향을 줄 가능성이 높음',
+    medium: '시장에 주목할 만한 사안',
+    low: '시장 관련성이 낮음',
+    assets: '영향: {assets}',
+  },
   card: {
     new: '새 글',
     newTitle: '오늘 게시됨 - 오늘 게시된 핀 모두 보기',

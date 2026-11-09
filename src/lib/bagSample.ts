@@ -33,6 +33,7 @@ type Sampled = Partial<Pick<PinJson, 'tags' | 'sourceUrl' | 'dateConfidence' | '
   impressionCount?: number;
   marketVolume?: number | null;
   companyMarketCap?: number | null;
+  marketImpact?: number | null;
   threadConfidence?: number | null;
 };
 
@@ -73,6 +74,19 @@ const CAP_MAX = 2.2;
 export function marketCapWeight(marketCap: number | null | undefined): number {
   if (!marketCap || marketCap <= CAP_FLOOR) return 1;
   return Math.min(CAP_MAX, 1 + (1 + Math.log10(marketCap / CAP_FLOOR)) * CAP_PER_DECADE);
+}
+
+// How far the pin's information can move markets (PinMarketImpact, 1-10).
+// Below 3 it says nothing; from there each point counts 0.5 more - 5 x2.5,
+// 7 x3.5, 10 x5 - so a rate decision or a mega-cap's earnings
+// outranks an ordinary pin on a crowded day without owning it outright.
+export const IMPACT_FLOOR = 3;
+export const IMPACT_HIGH = 7;
+const IMPACT_PER_POINT = 0.5;
+
+export function marketImpactWeight(impact: number | null | undefined): number {
+  if (impact == null || !Number.isFinite(impact) || impact < IMPACT_FLOOR) return 1;
+  return 1 + (Math.min(10, impact) - IMPACT_FLOOR + 1) * IMPACT_PER_POINT;
 }
 
 // An official government source - the pin's own source, or a reference scored
@@ -136,7 +150,7 @@ export function threadWeight(threadConfidence: number | null | undefined): numbe
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
   const seen = (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
-  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
+  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * marketImpactWeight(pin.marketImpact) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
 }
 
 // FNV-1a, folded into (0, 1).
@@ -161,7 +175,7 @@ function unitHash(text: string): number {
 export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
   const keyed = timelineDayCandidates(pins, keepId).map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
-  const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap)]));
+  const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap) * marketImpactWeight(p.marketImpact)]));
   const picked = keyed.slice(0, limit).map((k) => k.id);
   const [lead, rest] = picked[0] === keepId ? [picked.slice(0, 1), picked.slice(1)] : [[], picked];
   return [...lead, ...rest.sort((a, b) => (caps.get(b) ?? 1) - (caps.get(a) ?? 1))];

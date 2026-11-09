@@ -871,6 +871,11 @@ const PAGE_COLUMNS = `
   (SELECT COUNT(*)::integer FROM "PinImpression" AS "i" WHERE "i"."pinId" = "Pin"."id") AS "impressionCount",
   -- Its company's market value: the bag weight leans on it too.
   (SELECT "c"."marketCap"::double precision FROM "Company" AS "c" WHERE "c"."id" = "Pin"."companyId") AS "companyMarketCap",
+  -- How far its information can move markets (PinMarketImpact, 0253): the
+  -- bag weight leans on it and the card shows an icon with the reason.
+  (SELECT "m"."weight"::integer FROM "PinMarketImpact" AS "m" WHERE "m"."pinId" = "Pin"."id") AS "marketImpact",
+  (SELECT "m"."reason" FROM "PinMarketImpact" AS "m" WHERE "m"."pinId" = "Pin"."id") AS "marketImpactReason",
+  (SELECT "m"."assets" FROM "PinMarketImpact" AS "m" WHERE "m"."pinId" = "Pin"."id") AS "marketImpactAssets",
   "Pin"."duplicateGroup",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."userId" = $1 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",

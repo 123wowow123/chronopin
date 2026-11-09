@@ -5,12 +5,18 @@ import { regionalRestaurantOffers } from './restaurantOffers';
 import { restaurantSpecialMap } from './restaurantSpecialMap';
 import { parseSpecialVenue } from '@/server/restaurantSpecialValidation';
 import Pin from '@/server/model/pin';
+import { restaurantPinPhotos } from './restaurantPhotos';
 
 vi.mock('@/server/model/restaurantSpecialVenue', () => ({ listSpecialVenues: vi.fn() }));
+// Card photos come from the database in production; a unit test has none.
+vi.mock('./restaurantPhotos', () => ({ restaurantPinPhotos: vi.fn().mockResolvedValue({}) }));
 vi.mock('@/server/model/pin', () => ({ default: { findBySourceUrls: vi.fn().mockResolvedValue(new Map()) } }));
 // Every venue has a backing pin unless a test says otherwise: cards open native pin pages.
 beforeEach(() => vi.mocked(Pin.findBySourceUrls).mockImplementation(async (urls: string[]) => new Map(urls.map((url, index) => [url, { id: index + 1, title: 'Backing pin' }]))));
-afterEach(() => vi.resetAllMocks());
+afterEach(() => {
+  vi.resetAllMocks();
+  vi.mocked(restaurantPinPhotos).mockResolvedValue({});
+});
 function record(): RestaurantSpecialVenue {
   const { regionSlug, ...profile } = structuredClone(venues[0]);
   return { id: 1, ...parseSpecialVenue({ regionSlug, profile }), revision: 1, utcUpdatedDateTime: new Date() };

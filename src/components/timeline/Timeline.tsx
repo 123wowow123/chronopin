@@ -563,6 +563,9 @@ export function Timeline({
               viewCount: prev.viewCount,
               impressionCount: prev.impressionCount,
               companyMarketCap: prev.companyMarketCap,
+              marketImpact: prev.marketImpact,
+              marketImpactReason: prev.marketImpactReason,
+              marketImpactAssets: prev.marketImpactAssets,
             };
             return next;
           }

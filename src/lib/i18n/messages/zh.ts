@@ -1281,6 +1281,13 @@ const zh: Messages = {
     closes: '{date} 结束',
     viewOn: '在 {source} 查看',
   },
+  marketImpact: {
+    label: '市场影响 {weight}/10',
+    high: '重大市场推手——很可能影响价格',
+    medium: '对市场值得关注',
+    low: '对市场的相关性较小',
+    assets: '影响：{assets}',
+  },
   card: {
     new: '新',
     newTitle: '今天发布 - 查看今天发布的所有图钉',

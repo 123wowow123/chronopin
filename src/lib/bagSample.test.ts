@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight } from './bagSample';
+import { marketImpactWeight, bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight } from './bagSample';
 
 const pins = (n: number, views: (id: number) => number = () => 0) => Array.from({ length: n }, (_, i) => ({ id: i + 1, viewCount: views(i + 1) }));
 
@@ -208,5 +208,20 @@ describe('restaurant timeline fallback', () => {
       expect(sampleBag([tagged(tag), { id: 2 }], 4, tag)).toEqual([2]);
     }
     expect(sampleBag([tagged('Food'), { id: 2 }], 4, 'food').sort()).toEqual([1, 2]);
+  });
+});
+
+describe('marketImpactWeight', () => {
+  it('ignores unscored and minor pins', () => {
+    
+    expect(marketImpactWeight(null)).toBe(1);
+    expect(marketImpactWeight(2)).toBe(1);
+  });
+  it('rises 0.5 per point from 3 and caps at 10', () => {
+    
+    expect(marketImpactWeight(3)).toBe(1.5);
+    expect(marketImpactWeight(7)).toBe(3.5);
+    expect(marketImpactWeight(10)).toBe(5);
+    expect(marketImpactWeight(99)).toBe(5);
   });
 });

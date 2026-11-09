@@ -1278,6 +1278,13 @@ const pt: Messages = {
     closes: 'Encerra em {date}',
     viewOn: 'Ver no {source}',
   },
+  marketImpact: {
+    label: 'Impacto no mercado {weight}/10',
+    high: 'Grande movimentador de mercado: pode mexer nos preços',
+    medium: 'Relevante para os mercados',
+    low: 'Relevância menor para os mercados',
+    assets: 'Afeta: {assets}',
+  },
   card: {
     new: 'Novo',
     newTitle: 'Publicado hoje - mostrar todos os pins publicados hoje',

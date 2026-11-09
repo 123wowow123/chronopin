@@ -1288,6 +1288,13 @@ const en = {
     closes: 'Closes {date}',
     viewOn: 'View on {source}',
   },
+  marketImpact: {
+    label: 'Market impact {weight}/10',
+    high: 'Major market mover - likely to move prices',
+    medium: 'Notable for markets',
+    low: 'Minor market relevance',
+    assets: 'Affects: {assets}',
+  },
   card: {
     new: 'New',
     newTitle: 'Posted today - show every pin posted today',

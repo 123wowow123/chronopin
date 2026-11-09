@@ -37,7 +37,7 @@ sentiment and a sample. All of these are mandatory every run:
 - **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
   traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
   predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
-  modelRubrics, horoscopes, industryForecasts, sentiment).
+  modelRubrics, horoscopes, industryForecasts, marketImpact, sentiment).
 - **Housekeeping:** create/update pins as the tasks require, write the `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md`
   run note and pass `npx vitest run src/lib/okfLint.test.ts` before `finish_job`.
 
@@ -53,7 +53,7 @@ until every lane is done for that 06:00 / 18:00 slot. Lanes:
 2. **Event info:** 40 pins (20 calls), hand-set rows handled by the admin PUT above.
 3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, earthquakes,
    stormTracks, layoffs, hiringJobCreation.
-4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, sentiment.
+4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, marketImpact, sentiment.
 5. **Ads and products:** pinAds, holidayAds, adTranslations, personTrades, traderPositions, productLifecycle,
    productCompetitors, factoryProfiles.
 

@@ -1288,6 +1288,13 @@ const ms: Messages = {
     closes: 'Ditutup {date}',
     viewOn: 'Lihat di {source}',
   },
+  marketImpact: {
+    label: 'Kesan pasaran {weight}/10',
+    high: 'Pencetus pasaran utama - berkemungkinan menggerakkan harga',
+    medium: 'Ketara untuk pasaran',
+    low: 'Kaitan kecil dengan pasaran',
+    assets: 'Menjejaskan: {assets}',
+  },
   card: {
     new: 'Baharu',
     newTitle: 'Disiarkan hari ini - tunjukkan semua pin yang disiarkan hari ini',

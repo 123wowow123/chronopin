@@ -19,6 +19,7 @@ import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
+import { MarketImpactBadge } from './MarketImpactBadge';
 import { PinPillRow } from './PinPillRow';
 import { RestaurantPriceRange } from './RestaurantPriceRange';
 import { PinMenu } from './PinMenu';
@@ -193,6 +194,7 @@ export function PinCard({
           <div className="flex shrink-0 items-center gap-1">
           {/* NEW searches for every pin posted today, UPDATED for every pin
               updated since the day 24 hours back - both days the viewer's. */}
+          <MarketImpactBadge weight={pin.marketImpact} reason={pin.marketImpactReason} assets={pin.marketImpactAssets} />
           {pin.curated ? (
             <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-curated/15 font-luxe italic text-curated hover:bg-curated/25`} title={t('card.curatedTitle')}>
               {t('card.curated')}

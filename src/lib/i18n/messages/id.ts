@@ -1288,6 +1288,13 @@ const id: Messages = {
     closes: 'Ditutup {date}',
     viewOn: 'Lihat di {source}',
   },
+  marketImpact: {
+    label: 'Dampak pasar {weight}/10',
+    high: 'Penggerak pasar utama - kemungkinan menggerakkan harga',
+    medium: 'Patut dicermati pasar',
+    low: 'Relevansi pasar kecil',
+    assets: 'Memengaruhi: {assets}',
+  },
   card: {
     new: 'Baru',
     newTitle: 'Diposting hari ini - tampilkan semua pin yang diposting hari ini',

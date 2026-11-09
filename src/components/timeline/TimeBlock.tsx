@@ -3,7 +3,7 @@
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { Fragment, useLayoutEffect, useRef, useSyncExternalStore } from 'react';
-import { BAG_LIMIT, BAG_LIMIT_PHONE, marketCapWeight, sampleBag } from '@/lib/bagSample';
+import { BAG_LIMIT, BAG_LIMIT_PHONE, marketCapWeight, marketImpactWeight, sampleBag } from '@/lib/bagSample';
 import { useDayNews } from '@/lib/client/dayNews';
 import { leaveTimelineForDay } from '@/lib/client/dayReturn';
 import { useImpression } from '@/lib/client/impressions';
@@ -327,7 +327,7 @@ export function TimeBlock({
 
       {bag.pins.length ? (
         <>
-          <PinColumns cards={cards} ranks={shown.map((s) => s.rank)} lift={shown.map((s) => marketCapWeight(s.stack.pin.companyMarketCap))} whole={!sample} />
+          <PinColumns cards={cards} ranks={shown.map((s) => s.rank)} lift={shown.map((s) => marketCapWeight(s.stack.pin.companyMarketCap) * marketImpactWeight(s.stack.pin.marketImpact))} whole={!sample} />
           {sample && leftOut(1) > 0 && daySearchHref ? (
             <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} fresh={fresh} hiddenFrom={hiddenFrom} />
           ) : null}
