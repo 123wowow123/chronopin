@@ -227,7 +227,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     adsenseSlots(),
     viewerUser(),
     soft(pinAlternateNames(pin.id), [], 'pinAlternateNames'),
-    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.title), null, 'pinServiceStatus') : null,
+    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.id, pin.title), null, 'pinServiceStatus') : null,
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};
@@ -312,7 +312,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {gamePerf ? <PinGamePerf perf={gamePerf} t={t} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {aircraftPerf ? <PinAircraftPerf perf={aircraftPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {videoPerf ? <PinVideoPerf perf={videoPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
-          {serviceStatus ? <PinServiceStatus status={serviceStatus} className="mt-4" /> : null}
+          {serviceStatus ? <PinServiceStatus status={serviceStatus} title={pin.title} className="mt-4" /> : null}
           {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}
