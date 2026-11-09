@@ -69,3 +69,7 @@ Production specials profiles (enabled), stored rows including duplicates. Ordina
 | dongguan | 1 | 5 | 0 | 0 |
 | kaohsiung | 1 | 3 | 0 | 0 |
 | orlando | 1 | 1 | 0 | 0 |
+
+## Applied from the alt-text scan (production)
+
+Of the 62 candidates, 30 were visually reviewed and saved on 7 production specials profiles (ids 1377, 1482, 1523, 1526, 1528, 1529, 1530): Chocotto Sushi Kiwami (Sapporo), Gaburichicken Osaka, GohGan (Fukuoka), THE KAWABUN NAGOYA, La Fête Hiramatsu and Le Midi Hiramatsu (Osaka), Hiramatsu Kodaiji (Kyoto). Course-menu photos are captioned as one pictured course, not the whole menu. Rejected: logos and icons, Christmas banner graphics, room and table-setting shots, an interior photo, a fried-rice picture alt-matched to gyoza, an unclear gyoza portion, and unrelated IMURI site images. Full readbacks passed; evidence in ignored `.scrape/menu-all-cities/`. Not yet replayed to the local database, and no menu-item reviews were added.
