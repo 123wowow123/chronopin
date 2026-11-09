@@ -227,7 +227,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     adsenseSlots(),
     viewerUser(),
     soft(pinAlternateNames(pin.id), [], 'pinAlternateNames'),
-    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.id, pin.title), null, 'pinServiceStatus') : null,
+    pin.categories?.includes('AI Models') || pin.tags?.some((tag) => tag.name === 'AI Models') ? soft(pinServiceStatus(pin.id, pin.title), null, 'pinServiceStatus') : /^\s*cursor\b/i.test(pin.title) ? soft(pinServiceStatus(pin.id, pin.title, false), null, 'pinServiceStatus') : null,
   ]);
   // Google ads only for a viewer old enough, like the Amazon ones.
   const google = adsenseAllowed(ageOn(viewer?.birthday)) ? adsense : {};

@@ -402,10 +402,13 @@ export async function pinLlmPerf(id: number): Promise<PinLlmPerfJson | null> {
 
 // The vendor health (uptime + any ongoing outage) behind an AI model pin, or null
 // when the title names no tracked service or the pin is not the latest generally released model of its thread. Short-lived so an outage shows within minutes.
-export async function pinServiceStatus(id: number, title: string): Promise<ServiceStatusJson | null> {
+export async function pinServiceStatus(id: number, title: string, isModel = true): Promise<ServiceStatusJson | null> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.pin(id));
+  // A model pin shows it only while it is the latest release of its thread; a product pin of a
+  // tracked service (Cursor's launches) shows the service's live health on every pin.
+  if (!isModel) return /^\s*cursor\b/i.test(title) ? serviceStatusForTitle(title) : null;
   return (await isLatestRelease(id)) ? serviceStatusForTitle(title) : null;
 }
 
