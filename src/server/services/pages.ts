@@ -17,6 +17,8 @@ import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
 import { projectForPin } from '../model/pinProject';
+import { purposeForPin } from '../model/pinPurpose';
+import type { PinPurposeJson } from '@/lib/pinPurpose';
 import { damForPin } from '../model/pinDam';
 import type { PinDamJson } from '@/lib/damSpecs';
 import { marketImpactForPin } from '../model/pinMarketImpact';
@@ -298,6 +300,14 @@ export async function pinDam(id: number): Promise<PinDamJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return damForPin(id);
+}
+
+// Why the project exists: the problem it solves.
+export async function pinPurpose(id: number): Promise<PinPurposeJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return purposeForPin(id);
 }
 
 // The pin's homes / rooms / seats / height / area / parking quantities.
