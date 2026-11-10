@@ -505,9 +505,6 @@ pin food truck tab and their specials to specials tab on landing page.
 
 
 
-pin glp-1 thread and subtread or different brands
-
-
 "SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
 
 Title: All-cities menu photo and review inventory, November 8, 2026
@@ -515,15 +512,10 @@ Title: All-cities menu photo and review inventory, November 8, 2026
 
 do pin-purpose-backfill.md
 
-
-use https://trends.google.com/
-to suggest pins that can rank well on google search
-
+add pro tip panel if it applies to pin. 
 
 build single dashboard that shows all most important information to stay up to date
 - weekly most relavant dashboards
 - what needs my attention today
 
 
-
-special day freebies pin should be created as part of 6am/pm job
