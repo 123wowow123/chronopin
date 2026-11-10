@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { marketImpactWeight, bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight } from './bagSample';
+import { marketImpactWeight, bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight, freebiesWeight } from './bagSample';
 
 const pins = (n: number, views: (id: number) => number = () => 0) => Array.from({ length: n }, (_, i) => ({ id: i + 1, viewCount: views(i + 1) }));
 
@@ -223,5 +223,21 @@ describe('marketImpactWeight', () => {
     expect(marketImpactWeight(7)).toBe(3.5);
     expect(marketImpactWeight(10)).toBe(5);
     expect(marketImpactWeight(99)).toBe(5);
+  });
+});
+
+describe('freebiesWeight', () => {
+  it('triples a Freebies-tagged pin and leaves others alone', () => {
+    const tag = (name: string) => ({ name, kind: 'topic', source: 'user' }) as never;
+    expect(freebiesWeight({ tags: [tag('Freebies')] })).toBe(3);
+    expect(freebiesWeight({ tags: [tag(' freebies ')] })).toBe(3);
+    expect(freebiesWeight({ tags: [tag('Food')] })).toBe(1);
+    expect(freebiesWeight({})).toBe(1);
+    expect(bagWeight({ id: 1, tags: [tag('Freebies')] })).toBeCloseTo(3 * bagWeight({ id: 1 }));
+  });
+  it('deals a freebies pin to the front of the pick', () => {
+    const tag = [{ name: 'Freebies', kind: 'topic', source: 'user' }] as never;
+    const ids = sampleBag([{ id: 1 }, { id: 2 }, { id: 3, tags: tag }], 3, 'day');
+    expect(ids[0]).toBe(3);
   });
 });

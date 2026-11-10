@@ -111,6 +111,17 @@ export function officialWeight(pin: Pick<Sampled, 'sourceUrl' | 'references'>): 
   return backed ? OFFICIAL_WEIGHT : 1;
 }
 
+// A special day's freebies pin (Veterans Day free meals, free cone day) is
+// what readers open the timeline for on that day, so it triples: a crowded day
+// would otherwise draw it no more often than any other pin. Read from the tag,
+// so it needs no stored flag.
+const FREEBIES_WEIGHT = 3;
+const FREEBIES_TAGS = new Set(['freebies', 'free stuff', 'holiday freebies']);
+
+export function freebiesWeight(pin: Pick<Sampled, 'tags'>): number {
+  return pin.tags?.some((tag) => typeof tag?.name === 'string' && FREEBIES_TAGS.has(tag.name.trim().toLowerCase())) ? FREEBIES_WEIGHT : 1;
+}
+
 // How well the pin's own sources back it (referenceConfidence.ts). The home
 // timeline already hides anything under TIMELINE_MIN_CONFIDENCE, so the band
 // a reader actually sees is 70-100 and the curve is drawn across exactly that:
@@ -150,7 +161,7 @@ export function threadWeight(threadConfidence: number | null | undefined): numbe
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
   const seen = (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
-  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * marketImpactWeight(pin.marketImpact) * officialWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
+  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * marketImpactWeight(pin.marketImpact) * officialWeight(pin) * freebiesWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
 }
 
 // FNV-1a, folded into (0, 1).
@@ -175,7 +186,7 @@ function unitHash(text: string): number {
 export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
   const keyed = timelineDayCandidates(pins, keepId).map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
-  const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap) * marketImpactWeight(p.marketImpact)]));
+  const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap) * marketImpactWeight(p.marketImpact) * freebiesWeight(p)]));
   const picked = keyed.slice(0, limit).map((k) => k.id);
   const [lead, rest] = picked[0] === keepId ? [picked.slice(0, 1), picked.slice(1)] : [[], picked];
   return [...lead, ...rest.sort((a, b) => (caps.get(b) ?? 1) - (caps.get(a) ?? 1))];

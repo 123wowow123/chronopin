@@ -526,4 +526,4 @@ build single dashboard that shows all most important information to stay up to d
 
 
 
-special day  freebies pin should be created as part of 6am/pm job
+special day freebies pin should be created as part of 6am/pm job
