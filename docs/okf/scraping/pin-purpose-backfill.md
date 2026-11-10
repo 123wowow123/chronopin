@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Problem it solves backfill (PinPurpose, 0255)"
+description: "Scope, verification rounds, prod resync procedure and remaining work for the PinPurpose widget backfill on built and proposed pins."
+tags: [scraping, pins, backfill]
+---
+
 # "Problem it solves" backfill (PinPurpose, 0255)
 
 Fills the widget shown above the title on pins about something built or proposed. Table: `docs/okf/tables/pin-purpose.md`.
