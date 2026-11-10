@@ -512,4 +512,7 @@ project pin such as construction project should have widget that states why prob
 
 "SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
 
-Title: Restaurant menu photos and menu-item reviews, all cities (November 8, 2026)
+Title: All-cities menu photo and review inventory, November 8, 2026
+
+
+

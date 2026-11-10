@@ -186,7 +186,8 @@ panel_items AS (
               (c->'i18n'->loc->>'note') IS NOT NULL
               AND NOT (length(regexp_replace(c->>'note', '<[^>]*>', '', 'g')) > 40 AND regexp_replace(c->>'note', '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M' AND (regexp_replace(c->'i18n'->loc->>'note', '<[^>]*>', '', 'g') = regexp_replace(c->>'note', '<[^>]*>', '', 'g') OR (loc IN ('ja','zh','ko','ru','ar','hi','th') AND regexp_replace(c->'i18n'->loc->>'note', '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')))
             ))
-            AND NOT (loc = 'th' AND (c->'i18n'->'th')::text ~ 'พ\\.ศ\\.|(^|[^0-9])25[5-8][0-9]([^0-9]|$)')) AS locales_done
+            AND NOT (loc = 'th' AND (c->'i18n'->'th')::text ~ 'พ\\.ศ\\.|(^|[^0-9])25[5-8][0-9]([^0-9]|$)')
+            AND NOT ((c->'i18n'->loc)::text ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);')) AS locales_done
   FROM "PinPerf" pp
   JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL
   CROSS JOIN LATERAL jsonb_array_elements(pp.charts) c
@@ -201,18 +202,23 @@ panel_items AS (
               SELECT 1
               FROM jsonb_array_elements(coalesce(t->'rows', '[]'::jsonb)) WITH ORDINALITY AS er(erow, r_idx)
               CROSS JOIN LATERAL jsonb_array_elements_text(er.erow) WITH ORDINALITY AS ec(ecell, c_idx)
-              WHERE length(regexp_replace(ec.ecell, '<[^>]*>', '', 'g')) > 40
+              WHERE (
+                length(regexp_replace(ec.ecell, '<[^>]*>', '', 'g')) > 40
                 AND regexp_replace(ec.ecell, '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M'
                 AND (
                   regexp_replace(coalesce((t->'i18n'->loc->'rows'->(er.r_idx::int - 1)) ->> (ec.c_idx::int - 1), ''), '<[^>]*>', '', 'g') = regexp_replace(ec.ecell, '<[^>]*>', '', 'g')
                   OR (loc IN ('ja','zh','ko','ru','ar','hi','th') AND regexp_replace(coalesce((t->'i18n'->loc->'rows'->(er.r_idx::int - 1)) ->> (ec.c_idx::int - 1), ''), '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')
                 )
+              )
+              OR (length(ec.ecell) - length(replace(ec.ecell, '<cite', '')))
+              != (length(coalesce((t->'i18n'->loc->'rows'->(er.r_idx::int - 1)) ->> (ec.c_idx::int - 1), '')) - length(replace(coalesce((t->'i18n'->loc->'rows'->(er.r_idx::int - 1)) ->> (ec.c_idx::int - 1), ''), '<cite', '')))
             )
             AND (t->>'note' IS NULL OR (
               (t->'i18n'->loc->>'note') IS NOT NULL
               AND NOT (length(regexp_replace(t->>'note', '<[^>]*>', '', 'g')) > 40 AND regexp_replace(t->>'note', '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M' AND (regexp_replace(t->'i18n'->loc->>'note', '<[^>]*>', '', 'g') = regexp_replace(t->>'note', '<[^>]*>', '', 'g') OR (loc IN ('ja','zh','ko','ru','ar','hi','th') AND regexp_replace(t->'i18n'->loc->>'note', '<[^>]*>', '', 'g') !~ '[^\\x00-\\x7F]')))
             ))
             AND NOT (loc = 'th' AND (t->'i18n'->'th')::text ~ 'พ\\.ศ\\.|(^|[^0-9])25[5-8][0-9]([^0-9]|$)')
+            AND NOT ((t->'i18n'->loc)::text ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);')
             AND (t->'stages' IS NULL OR jsonb_array_length(coalesce(t->'i18n'->loc->'stages', '[]'::jsonb)) = jsonb_array_length(t->'stages'))) AS locales_done
   FROM "PinPerf" pp
   JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL

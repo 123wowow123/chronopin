@@ -967,6 +967,10 @@ def apply_translations_file(apply_path: str):
     print(f"Applied {saved} / {len(valid_rows)} validated rows from {apply_path}.")
 
 def _panel_text_translated_ok(en_val: str, tr_val: str, loc: str, is_title: bool = False) -> bool:
+    if (en_val or '').count('<cite') != (tr_val or '').count('<cite'):
+        return False
+    if re.search(r'&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+);', tr_val or ''):
+        return False
     en_prose = re.sub(r'<[^>]*>', '', en_val or '').strip()
     tr_prose = re.sub(r'<[^>]*>', '', tr_val or '').strip()
     if len(en_prose) > 40 and looks_english(en_prose):
