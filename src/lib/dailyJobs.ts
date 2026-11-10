@@ -126,7 +126,7 @@ export const TASKS = {
   trends: {
     group: 'discover',
     label: 'Google Trends',
-    summary: 'Shortlist what the world is searching for and pin the dated events behind it.',
+    summary: 'Shortlist what the world is searching for (skill: google-trends-pins) and pin the dated events behind it, with sources, a unique summary and enough media to be indexable.',
   },
   breakingNews: {
     group: 'discover',
@@ -300,7 +300,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'sentiment'],
+      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: null,
@@ -350,7 +350,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'specialDayFreebies'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

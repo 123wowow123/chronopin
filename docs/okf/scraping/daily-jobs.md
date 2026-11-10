@@ -22,7 +22,7 @@ Owner update, October30,2026: research/editing runs leave pin translations to th
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [trends](#trends), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -701,6 +701,8 @@ A pin that is not a plant build at all (a closure, wind-down, sale or buyback, a
 Look for what the timeline is missing, from what people search, read and say.
 
 ### trends
+
+Runs in the midnight job and, since 2026-11-10 (owner), in the 06:00 and 18:00 news job. Follow `.agents/skills/google-trends-pins/` (score search potential, check the indexing floor, pin only sourced dated events).
 
 **Reads** `google_trends`, then the pins it says cover a term (`get_pin`).
 **Does** two things. For a trending term with a dated event behind it and no
