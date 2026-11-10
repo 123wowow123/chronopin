@@ -36,7 +36,7 @@ sentiment and a sample. All of these are mandatory every run:
   (saved to `.scrape/admin.token` for prod and `.scrape/admin-local.token`). Never print them.
 - **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
   traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
-  predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
+  specialDayFreebies (`.agents/skills/special-day-freebies/`), predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
   modelRubrics, horoscopes, industryForecasts, marketImpact, sentiment).
 - **Housekeeping:** create/update pins as the tasks require, write the `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md`
   run note and pass `npx vitest run src/lib/okfLint.test.ts` before `finish_job`.
@@ -51,7 +51,7 @@ until every lane is done for that 06:00 / 18:00 slot. Lanes:
 
 1. **Maintenance:** revisits (every mark, including AI-model rubric/review marks), weekReview, freshSources, pinGangHandoff (`scripts/jobs/pingang_handoff.py --apply`; see daily-jobs.md#pinganghandoff).
 2. **Event info:** 40 pins (20 calls), hand-set rows handled by the admin PUT above.
-3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, earthquakes,
+3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, specialDayFreebies, earthquakes,
    stormTracks, layoffs, hiringJobCreation.
 4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, marketImpact, sentiment.
 5. **Ads and products:** pinAds, holidayAds, adTranslations, personTrades, traderPositions, productLifecycle,

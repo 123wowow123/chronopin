@@ -41,6 +41,10 @@ Guides, tabs, per-tab targets (China 35, Japan 30), west-to-east navigation, bac
 
 In the 06:00 and 18:00 news job, create `Predicted` pins (`dateConfidence: 'estimated'`, dated to event onset) from Polymarket and Kalshi events, and monthly Brent and WTI threads that are updated with the realized settlement. Details: `.agents/skills/prediction-market-pins/`.
 
+## Special-day freebies pins
+
+Owner instruction, 2026-11-10: the 06:00 and 18:00 news job (`specialDayFreebies` task) keeps one `Freebies`-tagged pin per special day (Veterans Day free meals and the like), each chain linked to its own offer page, sources as `cite data-ref` tags. The tag triples the pin's timeline weight. Details: `.agents/skills/special-day-freebies/`.
+
 ## Production pin translations
 
 Owner instruction, 2026-10-29: keep active production pins translated across all 15 supported non-English locales (`es`, `fr`, `de`, `ja`, `zh`, `ko`, `hi`, `ar`, `th`, `it`, `ru`, `pt`, `ms`, `vi`, `id`) with matching `sourceHash` and complete `wholeTranslation` shapes (`title`, `description`, `longFormSummary`, `dateConfidenceReasoning`, `delayReasoning`). Never place model tracking notes (such as `Translations completed using Gemini 3.8 Flash.`) in public pin or translation content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`); record translation attribution strictly in the backing `SourceWiki` without mutating `Source.status` or `Source.wikiVersion` on unbuilt sources. Use `.agents/skills/prod-translations/` to check coverage, synchronize due pins, and audit content for leaks.
@@ -49,4 +53,4 @@ Owner instruction, 2026-10-30: in pin research, creation and editing sessions (d
 
 ## Project skills
 
-Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.
+Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `special-day-freebies`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.

@@ -22,7 +22,7 @@ Owner update, October30,2026: research/editing runs leave pin translations to th
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -773,6 +773,18 @@ cannot translate them.
 **Traps.** EONET lists a storm a day or two before JTWC names it; a track can be
 re-sorted by the agencies, so a changed length is the only trigger. By hand, `npx tsx scripts/events/storms.ts` posts only
 new storms (admin token); updating existing ones is this task's job.
+
+### specialDayFreebies
+
+**Reads** the next 10 days for a special day with a freebies round-up (Veterans Day, Free Cone Day, Teacher
+Appreciation Week) and any existing freebies pin for it (`find_pins`).
+**Does** creates or updates one all-day `Freebies`-tagged pin per special day and year, as `@FoodDesk`, with a
+sourced `<li>` per chain and each chain linked to its own 2026 offer page where one is confirmed. The `Freebies` tag
+makes the timeline triple the pin's weight (`freebiesWeight`, bagSample.ts). Full procedure and traps:
+`.agents/skills/special-day-freebies/`.
+**Traps.** A chain's homepage or a third-party "near me" site is not its offer page; a page without this year's
+date, or last year's release, is not proof; drop a line that cannot be verified for the year. Pin 20936 (Veterans
+Day 2026) is the model.
 
 ### predictionMarkets
 
