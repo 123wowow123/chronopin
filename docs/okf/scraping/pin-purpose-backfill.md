@@ -2,25 +2,32 @@
 
 Fills the widget shown above the title on pins about something built or proposed. Table: `docs/okf/tables/pin-purpose.md`.
 
-## Scope (local DB, 2026-11-10)
-First pass done, then a verification pass: 359 purpose rows locally; all 8 dam pins (20912-20919) are done. Pin 20917 (Prado) was saved from a safety-study article, not the county page, which states no reason. Most skipped pins state no rationale, which is a research gap, not an error. Local only: nothing is on prod and no translations were run.
+## Scope (2026-11-10)
+All 8 dam pins (20912-20919) done. Local DB holds 411 purpose rows; prod holds 396 (the other 15 are held back, see below). No translations were run.
+
+Rounds done: first pass over `PinProject` and `PinFactory` (about 2,050 pins); verification of all saved rows against their cited pages (44 weak + 80 sampled + the remaining 235, i.e. every first-pass save); a second pass over 124 unreadable pins; a read-the-sources pass over 513 skipped pins that had a news, developer or regulator `sourceUrl` (80 saved, about 40 deleted again as weak). Verification changed or deleted roughly a third of first-pass rows (worst: Pennrose housing, where most rows had invented specifics), nearly always an invented number, name or "because", or a source that states only a fact (delay, opening, jobs, tax, generic AI demand, "optimized for AI", a state renewable target, "closer to customers") instead of a need. 14 rows had `sourceUrl` cut off mid-URL; repaired from the pin's full URL.
+
+## Prod
+Resynced 2026-11-10: prod holds 396 rows, identical to local except the 15 held back below. Matched local->prod by `sourceUrl` plus identical title (pin IDs differ between local and prod; title-only for pins with no `sourceUrl`). The resync pushed 162 changed or new rows and deleted 48 prod rows that were removed locally or held back; a verification rerun showed 0 differences. Later local fixes do not reach prod on their own. To resync: the session's `resync.py` (GET local `/api/admin/db/PinPurpose`, map to prod via `/api/admin/db/Pin`, then `PUT|DELETE /api/pins/:prodId/purpose` with `.scrape/admin.token`); run it as a dry run first, and bulk writes with deletes need the owner's explicit go-ahead.
+
+## Held back from prod (needs a source Chrome can read)
+Do not push until a page that states the need is read (Chrome only; do not spoof a browser User-Agent to get past a bot check):
+* 18329, 18341, 18377 (developer pages 404), 18330 (Dominion Cloudflare 403), 15710 (esgtoday 403), 7187 (housingfinance blocked; "fallen into disrepair" unsupported), 18088 (purpose holds; repoint `sourceUrl` to the solarpowerworld article), 111 (Ars Technica 403), 474 (travelandtourworld bot check), 2281 (nowtoronto 403), 18390 (Dominion 404), 15672 (catl.com 403), 15690 (mayerbrown 403), 7032 (captcha / 502), 17118 (single developer sentence, provisional).
+* Deleted locally as weak: 16384, 20123 (re-saved once by a replayed script; check it stays deleted), 15703, 15723, 18074, 18239, 18389, 20651, 20448.
 
 ## Remainder work (not done)
-Roughly 2,000 pins still have no row (`PinProject` 626 and `PinFactory` 1,419 were the starting pools; a few were already filled by overlap). Do these in order:
+About 1,600 pins still have no row. In order:
+1. **Unreadable, retry in Chrome:** the held-back list above, plus pins whose primary pages returned 403/404/captcha and had no readable reference: 15870, 15940, 15989, 15884, 16331, 16350, 2279, 2290, 7081, 17116, 17331, 18046, 17092, 17114, 17164, 17346, 18144, 18146, 18174, 18310, 18323, 18348, 18364-18366, 18371, 18379, 18391, 18398, 18347, 18332, 18401, 18531, 19040, 2301, 2970, 3089, 3167, 4058, 4164, 4940, 20798-20800, 20641-20643, 19330.
+2. **Not covered by a source read:** the 578 pins whose only `sourceUrl` is YouTube, EIA, an interconnection queue, trackdatacenters, Epoch, cleanview, infrasure or a Pennrose listing. Leave blank unless a developer or regulator page is found; do not accept generic AI-demand or jobs/tax wording.
+3. **Hotel and resort openings** (15274-15303) state no problem; leave blank.
+4. **Re-verify new saves** after the next round; the second-pass and read-sources saves were checked only by the saving agent. Spot-check 3504 and 5490 (thin but stated needs), 2248 and 269 (Wikipedia sources).
 
-1. **Unread pins first.** About 80 pins in the last factory lane were never fetched (WebFetch rate limit, 403s): 16001, 16354, 17114, 17116, 15893, 15867, 16315, 17092, 15884, 15887-15889, 15934, 15813, 15815, 15820, 15824, 15827, 15833, 15940, plus the "not attempted" set (15834-16013 range, 16306-16345, 16400, 16434, 16482, 16486, 17082, 17102) and queue-record pins 17080, 17081, 17087-17090, 17093, 17094, 17098-17101 that were skipped on their IDs alone, not read. Also 18976, 18974, 18977, 18979, 18800 (not found locally; check whether the IDs are stale).
-2. **Skipped only because a fetch failed** (403, 404, blocked, unreadable PDF, rate limit, YouTube-only `sourceUrl`): use curl or Chrome. Examples: 15884, 15940, 15989, 15933, 16001, 18696, 2279, 2287, 2290, 2294, 2295, UC Regents PDFs 20876 and 20878.
-3. **Closest-to-usable skips** (a reference read may state a rationale): Pennrose 7055, 7093, 7081, 7059, 7116, 7128, 7129, 7117, 7178; 18539 Muscatine Solar One (coal retirement); permit or PUC filings for 17346, 17164, 17331, 18046; desalination 18253, 18266, 18237, 18241; stadium and airport pins 478, 575, 685, 701, 711.
-4. **Bulk with no rationale expected** (EIA/interconnection-queue entries, trackdatacenters/Epoch listings, hotel and resort openings 15274-15303, YouTube-only milestone pins): leave blank unless a developer or regulator page is found. Do not accept generic AI-demand or jobs/tax wording.
-
-## Cleanup before any prod push
-Spot-check of 44 weak saves done 2026-11-10 (each read against its cited page): about 19 kept, 14 fixed to match the source, 8 deleted (20123, 18317, 18319, 678, 16434, 7147, 7168, plus 18387 and 16412 whose sources were dead or generic). Deleted pins have no row; a source that states only a fact (delay, opening, jobs, generic AI demand) is not a need.
-* Still unverified, rows kept: 18329 (clenera 404), 18330 (Dominion 403), 18341 (mn8 404), 7187 (housingfinance.com blocked; the row's "fallen into disrepair" is unsupported, retry in Chrome or delete). Repoint 18088's `sourceUrl` to the solarpowerworld article (oati.com 404s).
-* Rows written from a pin's own description, not the cited page, were the weakest: other such saves not in the 44 may have the same problem (invented specifics such as "Section 8", "seismically obsolete", unsupported contracts). Sample a few more before prod.
-* Overlap: `PinProject` and `PinFactory` share pins (Pennrose housing 7021-7240 and others). Dedupe lane lists before splitting work, and GET `/api/pins/:id/purpose` (204 = none) before every PUT, because a PUT replaces the row. The first pass overwrote some rows this way.
-* Run lanes with their own scratch dirs. Shared `save.py`/`saved.txt` files were clobbered between lanes.
-* WebFetch's per-domain safety check rate-limits under many parallel lanes: run at most about 8 lanes, and fall back to curl or Chrome.
-* Prod: only on the owner's ask, one pin at a time (see Rules).
+## Rules for the next round
+* Dedupe lane lists first: `PinProject` and `PinFactory` overlap (Pennrose housing 7021-7240 and others). GET `/api/pins/:id/purpose` (204 = none) before every PUT, because a PUT replaces the row; the first pass overwrote some rows this way.
+* Give each lane its own scratch directory; shared `save.py`, `g.py` and `saved.txt` files were clobbered between lanes, and a replayed script re-saved a deleted row.
+* WebFetch's per-domain safety check rate-limits under many parallel lanes: run at most about 8, read pages with plain curl (no spoofed User-Agent), and use Chrome for blocked ones.
+* Every specific in a row (number, name, contract, "because") must appear in the page cited as `sourceUrl`; saving from the pin's own description or summary is the main source of invented details.
+* Prod: only on the owner's ask. Pushes that overwrite or delete live rows need the owner's explicit go-ahead for that step.
 
 ## Steps per pin
 1. Open the pin's own `sourceUrl` (and its references). Read the page; use Chrome if WebFetch is blocked.
