@@ -26,7 +26,7 @@ export type ImpactCandidate = { id: number; title: string; description: string |
 // soonest. `skip` is the ids already judged to have no market angle this run.
 export async function impactCandidates(limit: number, daysBack: number, daysAhead: number, skip: number[]): Promise<{ candidates: ImpactCandidate[]; remaining: number }> {
   const rows = await db.query<ImpactCandidate & { total: string }>(
-    `SELECT "p"."id", "p"."title", "p"."description", "p"."utcStartDateTime" AS "start", "p"."company", "c"."marketCap"::float8 AS "marketCap",
+    `SELECT "p"."id", "p"."title", "p"."description", "p"."utcStartDateTime" AS "start", "c"."name" AS "company", "c"."marketCap"::float8 AS "marketCap",
             COALESCE(ARRAY(SELECT s->>'symbol' FROM jsonb_array_elements(COALESCE("p"."stocks", '[]'::jsonb)) AS s), '{}') AS "tickers",
             "p"."sourceUrl", count(*) OVER () AS "total"
      FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"

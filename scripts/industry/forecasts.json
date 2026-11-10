@@ -6598,5 +6598,48 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "goldman-hyperscaler-ai-infrastructure-spend",
+    "industry": "AI",
+    "title": "Hyperscaler AI infrastructure spending (Goldman Sachs)",
+    "tags": [
+      "AI",
+      "Computing",
+      "Semiconductors",
+      "Business",
+      "Finance",
+      "Infrastructure"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "Goldman Sachs, Sep 2026",
+      "points": [
+        {
+          "x": "2026",
+          "value": 800
+        },
+        {
+          "x": "2027",
+          "value": 1200
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "The Decoder: Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027 (citing Bloomberg)",
+        "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
+        "date": "2026-09-27",
+        "quote": "Goldman Sachs expects Amazon, Alphabet, Microsoft, Oracle, and Meta to spend a combined $1.2 trillion on AI infrastructure in 2027. That's over 50 percent above the roughly $800 billion projected for this year"
+      },
+      {
+        "label": "PYMNTS: Goldman Sachs Projects Big Tech AI Infrastructure Spending to Hit $1.2 Trillion in 2027",
+        "url": "https://www.pymnts.com/big-tech/2026/goldman-sachs-projects-big-tech-ai-infrastructure-spending-to-hit-1-2-trillion-in-2027/",
+        "date": "2026-09-25",
+        "quote": "$1.2 trillion in 2027, up from $800 billion this year, Goldman Sachs Group strategists said"
+      }
+    ],
+    "note": "Goldman Sachs strategist Ryan Hammond's September 2026 estimate for the five largest US hyperscalers (Amazon, Alphabet, Microsoft, Oracle, Meta), as reported by Bloomberg and relayed by The Decoder and PYMNTS; Goldman's own note was not opened. The 2026 figure is \"roughly $800 billion\". Growth slows from nearly 100% in 2026 to 54% in 2027 and 12% in 2028; the 2028 dollar total is reported inconsistently, so no 2028 point is shown. Wall Street consensus for 2027 was about $1.1 trillion. This is AI infrastructure spending, a different measure from FactSet's cash capex row."
   }
 ]
