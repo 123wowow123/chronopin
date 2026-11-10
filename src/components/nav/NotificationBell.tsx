@@ -552,6 +552,22 @@ function TradeGroup({ groups, renderRow, href, fixed, guest, wide, onNavigate }:
 const WIDE_LIST =
   'divide-y divide-line lg:-mb-px lg:-me-px lg:grid lg:grid-cols-[repeat(auto-fit,minmax(max(24rem,45%),1fr))] lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-e lg:[&>li]:border-line';
 
+function NotificationsSkeleton({ label }: { label: string }) {
+  return (
+    <div role="status" aria-label={label} className="flex flex-col gap-3 px-4 py-4">
+      {[0, 1, 2].map((i) => (
+        <div key={i} className="flex items-center gap-3 animate-shimmer motion-reduce:animate-none" style={{ animationDelay: `${i * 160}ms` }}>
+          <div className="size-8 shrink-0 rounded-full bg-raised" />
+          <div className="flex flex-1 flex-col gap-1.5">
+            <div className="h-3 rounded bg-raised" style={{ width: `${85 - i * 15}%` }} />
+            <div className="h-2.5 w-1/3 rounded bg-raised" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function NotificationItems({
   items,
   failed,
@@ -573,7 +589,7 @@ function NotificationItems({
       <button type="button" className="text-link" onClick={() => void load()}>{t('common.retry')}</button>
     </div>
   );
-  if (items === null) return guest ? null : <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
+  if (items === null) return guest ? null : <NotificationsSkeleton label={t('common.loading')} />;
   if (items.length === 0 && guest) return null;
   if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
   const labels: Record<Section, string> = {

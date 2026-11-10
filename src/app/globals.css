@@ -118,6 +118,13 @@
     45% { scale: 1.08; }
   }
 
+  /* Placeholder rows in the notifications panel while it loads. */
+  --animate-shimmer: shimmer 1.4s ease-in-out infinite;
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 1; }
+  }
+
   /* An indeterminate bar: a pending admin tab's underline. */
   --animate-sweep: sweep 0.9s ease-in-out infinite;
   @keyframes sweep {
