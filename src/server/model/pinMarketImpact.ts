@@ -27,14 +27,14 @@ export type ImpactCandidate = { id: number; title: string; description: string |
 export async function impactCandidates(limit: number, daysBack: number, daysAhead: number, skip: number[]): Promise<{ candidates: ImpactCandidate[]; remaining: number }> {
   const rows = await db.query<ImpactCandidate & { total: string }>(
     `SELECT "p"."id", "p"."title", "p"."description", "p"."utcStartDateTime" AS "start", "c"."name" AS "company", "c"."marketCap"::float8 AS "marketCap",
-            COALESCE(ARRAY(SELECT s->>'symbol' FROM jsonb_array_elements(COALESCE("p"."stocks", '[]'::jsonb)) AS s), '{}') AS "tickers",
+            COALESCE(ARRAY(SELECT "t"."symbol" FROM "PinTicker" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."utcRemovedDateTime" IS NULL), '{}') AS "tickers",
             "p"."sourceUrl", count(*) OVER () AS "total"
      FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
      WHERE "p"."utcDeletedDateTime" IS NULL
        AND "p"."utcStartDateTime" BETWEEN now() - make_interval(days => $2) AND now() + make_interval(days => $3)
        AND NOT EXISTS (SELECT 1 FROM "PinMarketImpact" AS "m" WHERE "m"."pinId" = "p"."id")
        AND NOT ("p"."id" = ANY($4::integer[]))
-     ORDER BY ("c"."marketCap" IS NOT NULL OR jsonb_array_length(COALESCE("p"."stocks", '[]'::jsonb)) > 0) DESC, "c"."marketCap" DESC NULLS LAST, "p"."utcStartDateTime", "p"."id"
+     ORDER BY ("c"."marketCap" IS NOT NULL OR EXISTS (SELECT 1 FROM "PinTicker" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."utcRemovedDateTime" IS NULL)) DESC, "c"."marketCap" DESC NULLS LAST, "p"."utcStartDateTime", "p"."id"
      LIMIT $1`,
     [limit, daysBack, daysAhead, skip],
   );
