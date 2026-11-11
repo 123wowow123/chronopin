@@ -123,6 +123,7 @@ import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinPurposeJson } from '@/lib/pinPurpose';
+import type { PinProTipJson } from '@/lib/pinProTip';
 import { BASIS_WORDS, projectTiles, type PinProjectJson } from '@/lib/projectSpecs';
 import { DAM_BASIS_WORDS, damTiles, type PinDamJson } from '@/lib/damSpecs';
 import { formatMegawatts, type PinPowerJson } from '@/lib/power';
@@ -131,7 +132,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinProTips, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -200,7 +201,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, purpose, dam, marketImpact, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, purpose, proTips, dam, marketImpact, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
     soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -212,6 +213,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinDatacenter(pin.id), null, 'pinDatacenter'),
     soft(pinProject(pin.id), null, 'pinProject'),
     soft(pinPurpose(pin.id), null, 'pinPurpose'),
+    soft(pinProTips(pin.id), [], 'pinProTips'),
     soft(pinDam(pin.id), null, 'pinDam'),
     soft(pinMarketImpact(pin.id), null, 'pinMarketImpact'),
     soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),
@@ -266,7 +268,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} project={project} purpose={purpose} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} project={project} purpose={purpose} proTips={proTips} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -400,6 +402,7 @@ async function PinBody({
   datacenter,
   project,
   purpose,
+  proTips,
   dam,
   marketImpact,
   venue,
@@ -421,6 +424,7 @@ async function PinBody({
   datacenter?: PinDatacenterJson | null;
   project?: PinProjectJson | null;
   purpose?: PinPurposeJson | null;
+  proTips?: PinProTipJson[];
   dam?: PinDamJson | null;
   marketImpact?: PinMarketImpactJson | null;
   venue?: boolean;
@@ -614,6 +618,27 @@ async function PinBody({
           {purpose.beneficiaries ? (
             <p className="mt-1 text-sm text-muted"><span className="font-semibold text-ink">For: </span>{purpose.beneficiaries}</p>
           ) : null}
+        </section>
+      ) : null}
+
+      {proTips?.length ? (
+        <section data-pro-tip-panel aria-label={t('pin.proTips')} className="surface mt-3 mb-1 rounded-2xl border border-line bg-raised/40 p-4 shadow-sm">
+          <h2 className="mb-2 flex items-center gap-1.5 text-xs font-semibold tracking-wider text-subtle uppercase">
+            <Icon name="sparkle" className="size-3.5 text-muted" />
+            {t(proTips.length > 1 ? 'pin.proTips' : 'pin.proTip')}
+          </h2>
+          <ul className="flex flex-col gap-2">
+            {proTips.map((tip) => (
+              <li key={tip.tip} className="flex items-start gap-2 text-sm text-ink">
+                <span className="min-w-0 flex-1">{tip.tip}</span>
+                {tip.sourceUrl ? (
+                  <a href={tip.sourceUrl} rel="noopener nofollow" target="_blank" aria-label={t('pin.proTipSource')} className="mt-0.5 shrink-0 text-link transition-colors hover:no-underline">
+                    <Icon name="external" className="size-3.5 opacity-70" />
+                  </a>
+                ) : null}
+              </li>
+            ))}
+          </ul>
         </section>
       ) : null}
 

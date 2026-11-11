@@ -18,6 +18,8 @@ import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
 import { projectForPin } from '../model/pinProject';
 import { purposeForPin } from '../model/pinPurpose';
+import { proTipsForPin } from '../model/pinProTip';
+import type { PinProTipJson } from '@/lib/pinProTip';
 import type { PinPurposeJson } from '@/lib/pinPurpose';
 import { damForPin } from '../model/pinDam';
 import type { PinDamJson } from '@/lib/damSpecs';
@@ -308,6 +310,14 @@ export async function pinPurpose(id: number): Promise<PinPurposeJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return purposeForPin(id);
+}
+
+// Practical, sourced advice for the pin (PinProTip).
+export async function pinProTips(id: number): Promise<PinProTipJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return proTipsForPin(id);
 }
 
 // The pin's homes / rooms / seats / height / area / parking quantities.

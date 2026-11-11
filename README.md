@@ -512,10 +512,9 @@ Title: All-cities menu photo and review inventory, November 8, 2026
 
 do pin-purpose-backfill.md
 
-add pro tip panel if it applies to pin. 
-
-build single dashboard that shows all most important information to stay up to date
-- weekly most relavant dashboards
+build single daily dashboard landing page, and make it nice, that shows most important information to stay up to date
 - what needs my attention today
+- weekly most relavant dashboards
+
 
 

@@ -235,6 +235,11 @@ describe('freebiesWeight', () => {
     expect(freebiesWeight({})).toBe(1);
     expect(bagWeight({ id: 1, tags: [tag('Freebies')] })).toBeCloseTo(3 * bagWeight({ id: 1 }));
   });
+  it('always picks a freebies pin on a crowded day', () => {
+    const tag = [{ name: 'Freebies', kind: 'topic', source: 'user' }] as never;
+    const crowd = Array.from({ length: 60 }, (_, i) => ({ id: i + 1, viewCount: 50 }));
+    for (let d = 0; d < 40; d++) expect(sampleBag([...crowd, { id: 999, tags: tag }], 4, `day${d}`)).toContain(999);
+  });
   it('deals a freebies pin to the front of the pick', () => {
     const tag = [{ name: 'Freebies', kind: 'topic', source: 'user' }] as never;
     const ids = sampleBag([{ id: 1 }, { id: 2 }, { id: 3, tags: tag }], 3, 'day');

@@ -185,7 +185,11 @@ function unitHash(text: string): number {
 // timeline deals them into the top-left columns; the picked set is unchanged.
 export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
   const keyed = timelineDayCandidates(pins, keepId).map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
-  keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
+  // A special day's freebies pin is never left to the draw: tripled odds still
+  // lost on a crowded day, and it is the card readers open the day for.
+  const sure = new Set(pins.filter((p) => freebiesWeight(p) > 1).map((p) => p.id));
+  const rank = (id: number) => (id === keepId ? 0 : sure.has(id) ? 1 : 2);
+  keyed.sort((a, b) => rank(a.id) - rank(b.id) || b.key - a.key || a.id - b.id);
   const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap) * marketImpactWeight(p.marketImpact) * freebiesWeight(p)]));
   const picked = keyed.slice(0, limit).map((k) => k.id);
   const [lead, rest] = picked[0] === keepId ? [picked.slice(0, 1), picked.slice(1)] : [[], picked];
