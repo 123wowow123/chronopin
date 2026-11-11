@@ -1482,19 +1482,6 @@
     "utcVerifiedDateTime": null
   },
   {
-    "pinId": 4455,
-    "otherPinId": 4456,
-    "reason": "similar",
-    "score": 0.8072012,
-    "status": "suggested",
-    "decidedByUserId": null,
-    "utcCreatedDateTime": "2026-09-27T05:37:52.367Z",
-    "utcDecidedDateTime": null,
-    "verdict": null,
-    "verdictReasoning": null,
-    "utcVerifiedDateTime": null
-  },
-  {
     "pinId": 4484,
     "otherPinId": 7017,
     "reason": "similar",
@@ -447681,19 +447668,6 @@
     "utcVerifiedDateTime": null
   },
   {
-    "pinId": 17489,
-    "otherPinId": 17490,
-    "reason": "similar",
-    "score": 0.8102815,
-    "status": "suggested",
-    "decidedByUserId": null,
-    "utcCreatedDateTime": "2026-11-06T05:26:14.013Z",
-    "utcDecidedDateTime": null,
-    "verdict": null,
-    "verdictReasoning": null,
-    "utcVerifiedDateTime": null
-  },
-  {
     "pinId": 17491,
     "otherPinId": 17492,
     "reason": "similar",
@@ -495138,6 +495112,19 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-10-26T15:21:51.722Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 20117,
+    "otherPinId": 20122,
+    "reason": "similar",
+    "score": 0.83647287,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-11-10T01:06:34.391Z",
     "utcDecidedDateTime": null,
     "verdict": null,
     "verdictReasoning": null,

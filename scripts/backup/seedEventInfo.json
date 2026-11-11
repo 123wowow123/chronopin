@@ -387,7 +387,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_LXI",
-    "checkedAt": "2026-11-01T16:47:51.000Z"
+    "checkedAt": "2026-11-10T14:49:04.000Z"
   },
   {
     "pinId": 1955,
@@ -478,7 +478,7 @@
     "performers": [],
     "ticketUrl": "https://www.abudhabigp.com/en/formula1/tickets-2026",
     "lowPrice": 745,
-    "highPrice": 7995,
+    "highPrice": 16995,
     "priceCurrency": "AED",
     "tiers": [
       {
@@ -494,12 +494,12 @@
       {
         "note": "from price",
         "label": "Premium (from)",
-        "price": 3495
+        "price": 2995
       },
       {
         "note": "from price",
         "label": "Premium Hospitality (from)",
-        "price": 7995
+        "price": 9795
       }
     ],
     "itinerary": [],
@@ -507,7 +507,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.abudhabigp.com/en/",
-    "checkedAt": "2026-11-01T16:22:48.000Z"
+    "checkedAt": "2026-11-10T14:45:37.000Z"
   },
   {
     "pinId": 2073,
@@ -522,7 +522,7 @@
     "onSaleDate": "2026-10-01T02:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.world.rugby/news/1002155/mens-rugby-world-cup-2027-ticketing-programme-unveiled-a-new-era-of-openness-and-inclusivity",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:15:50.000Z"
   },
   {
     "pinId": 2074,
@@ -673,14 +673,6 @@
     "pinId": 2109,
     "performers": [
       {
-        "name": "Mati Staniszewski",
-        "type": "Person"
-      },
-      {
-        "name": "Amy Webb",
-        "type": "Person"
-      },
-      {
         "name": "Yoon Young Park",
         "type": "Person"
       },
@@ -691,19 +683,35 @@
       {
         "name": "Hany Farid",
         "type": "Person"
+      },
+      {
+        "name": "Tarek Mansour",
+        "type": "Person"
+      },
+      {
+        "name": "Nick Clegg",
+        "type": "Person"
+      },
+      {
+        "name": "Mati Staniszewski",
+        "type": "Person"
+      },
+      {
+        "name": "Amy Webb",
+        "type": "Person"
       }
     ],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.mwcbarcelona.com/passes",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.mwcbarcelona.com/",
-    "checkedAt": "2026-11-01T16:55:06.942Z"
+    "checkedAt": "2026-11-10T14:58:25.260Z"
   },
   {
     "pinId": 2110,
@@ -864,7 +872,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
-    "checkedAt": "2026-11-01T16:48:24.000Z"
+    "checkedAt": "2026-11-10T14:49:52.000Z"
   },
   {
     "pinId": 2319,
@@ -884,7 +892,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
-    "checkedAt": "2026-11-01T16:48:25.000Z"
+    "checkedAt": "2026-11-10T14:49:53.000Z"
   },
   {
     "pinId": 2320,
@@ -904,7 +912,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/calvin-harris-tickets/artist/1149552",
-    "checkedAt": "2026-11-01T16:48:49.000Z"
+    "checkedAt": "2026-11-10T14:50:19.000Z"
   },
   {
     "pinId": 2321,
@@ -924,7 +932,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
-    "checkedAt": "2026-11-01T16:48:51.000Z"
+    "checkedAt": "2026-11-10T14:50:20.000Z"
   },
   {
     "pinId": 2331,
@@ -1031,7 +1039,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.edfringe.com/",
-    "checkedAt": "2026-11-01T16:50:38.000Z"
+    "checkedAt": "2026-11-10T14:52:19.000Z"
   },
   {
     "pinId": 2382,
@@ -1076,7 +1084,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com.au/ausopen",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:39:17.000Z"
   },
   {
     "pinId": 2481,
@@ -1642,7 +1650,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.skysports.com/boxing/news/13584326/tyson-fury-vs-anthony-joshua-british-heavyweight-showdown-set-for-cardiff-s-principality-stadium-on-december-11",
-    "checkedAt": "2026-11-01T16:40:01.000Z"
+    "checkedAt": "2026-11-10T14:45:47.000Z"
   },
   {
     "pinId": 2544,
@@ -1759,7 +1767,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.londonmuseum.org.uk/smithfield",
-    "checkedAt": "2026-11-01T16:21:35.000Z"
+    "checkedAt": "2026-11-10T14:43:30.000Z"
   },
   {
     "pinId": 2547,
@@ -1789,7 +1797,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.smb.museum/en/museums-institutions/pergamonmuseum/plan-your-visit/",
-    "checkedAt": "2026-11-01T16:49:20.000Z"
+    "checkedAt": "2026-11-10T14:50:56.000Z"
   },
   {
     "pinId": 2580,
@@ -1994,7 +2002,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://aws.amazon.com/events/reinvent/",
-    "checkedAt": "2026-11-01T16:22:47.000Z"
+    "checkedAt": "2026-11-10T14:43:21.000Z"
   },
   {
     "pinId": 2952,
@@ -2111,17 +2119,17 @@
   {
     "pinId": 2954,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://www.nvidia.com/gtc/#gtc27-notify-me",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.nvidia.com/gtc/",
-    "checkedAt": "2026-11-01T16:55:04.870Z"
+    "checkedAt": "2026-11-10T14:58:22.377Z"
   },
   {
     "pinId": 2964,
@@ -2341,7 +2349,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://event.vmware.com/flow/vmware/eotlondon26/site/page/home",
-    "checkedAt": "2026-11-01T16:21:35.000Z"
+    "checkedAt": "2026-11-10T01:16:22.000Z"
   },
   {
     "pinId": 3033,
@@ -3729,23 +3737,26 @@
     "pinId": 3317,
     "performers": [],
     "ticketUrl": "https://www.letsdothis.com/us/checkout/ticket?preferred=true&eventId=268210&occurrenceId=21111176959&utm_source=website&utm_medium=organic&utm_campaign=general-ticket-selection&utm_organiser_id=82706",
-    "lowPrice": 69,
+    "lowPrice": 79,
     "highPrice": 109,
     "priceCurrency": "USD",
     "tiers": [
       {
-        "note": "Price includes processing fees",
-        "label": "Current release (almost sold out)",
-        "price": 69
-      },
-      {
-        "note": "Price includes processing fees",
-        "label": "Next release",
+        "note": "almost sold out; includes processing fees",
+        "label": "12K entry, current release",
         "price": 79
       },
       {
-        "note": "Price includes processing fees",
-        "label": "Final release",
+        "label": "12K entry, next release",
+        "price": 89
+      },
+      {
+        "label": "12K entry, final release",
+        "price": 109
+      },
+      {
+        "note": "added during registration",
+        "label": "VIP add-on",
         "price": 109
       }
     ],
@@ -3754,22 +3765,22 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.baytobreakers.com/12k",
-    "checkedAt": "2026-11-02T14:23:08.412Z"
+    "checkedAt": "2026-11-10T14:59:27.869Z"
   },
   {
     "pinId": 3320,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://lvbowl.com/tickets",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.fox5vegas.com/2026/06/04/las-vegas-bowl-returns-with-new-years-eve-sec-matchup-allegiant-stadium/",
-    "checkedAt": "2026-11-01T16:47:00.000Z"
+    "sourceUrl": "https://lvbowl.com/tickets",
+    "checkedAt": "2026-11-10T14:48:59.000Z"
   },
   {
     "pinId": 3321,
@@ -3883,7 +3894,7 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.mlb.com/press-release/padres-2027-schedule",
-    "checkedAt": "2026-11-01T16:55:27.320Z"
+    "checkedAt": "2026-11-10T14:58:47.739Z"
   },
   {
     "pinId": 3374,
@@ -4049,17 +4060,17 @@
   {
     "pinId": 3418,
     "performers": [],
-    "ticketUrl": null,
+    "ticketUrl": "https://registration.experientevent.com/ShowNAB271/flow/INQ",
     "lowPrice": null,
     "highPrice": null,
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.nabshow.com/las-vegas/",
-    "checkedAt": "2026-11-01T16:55:29.805Z"
+    "checkedAt": "2026-11-10T14:58:56.646Z"
   },
   {
     "pinId": 3420,
@@ -4111,12 +4122,11 @@
     "pinId": 3434,
     "performers": [],
     "ticketUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
-    "lowPrice": 895,
+    "lowPrice": 500,
     "highPrice": 3595,
     "priceCurrency": "USD",
     "tiers": [
       {
-        "note": "Launch sale: Full Conference $2,595 with code CL27SAVE600 until 10/31",
         "label": "Full Conference - Advance",
         "price": 2795
       },
@@ -4151,6 +4161,10 @@
       {
         "label": "Explorer - Late",
         "price": 1095
+      },
+      {
+        "label": "Wednesday Explorer Pass (June 9 only)",
+        "price": 500
       }
     ],
     "itinerary": [],
@@ -4158,7 +4172,7 @@
     "onSaleDate": "2026-10-06T09:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:10:06.000Z"
   },
   {
     "pinId": 3435,
@@ -4233,13 +4247,24 @@
     "lowPrice": 399.99,
     "highPrice": 599.99,
     "priceCurrency": "USD",
-    "tiers": [],
+    "tiers": [
+      {
+        "note": "starts at $399.99",
+        "label": "One-weekend GA pass (EDC Dusk or EDC Dawn)",
+        "price": 400
+      },
+      {
+        "note": "starts at $599.99",
+        "label": "Two-weekend GA pass (EDC Dusk & Dawn)",
+        "price": 600
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.lvms.com/media/news/edc-las-vegas-introduces-new-dusk-till-dawn-2027-day-festival-concept-spanning-two-consecutive-weekends.html",
-    "checkedAt": "2026-11-02T14:23:06.308Z"
+    "checkedAt": "2026-11-10T14:59:22.832Z"
   },
   {
     "pinId": 3471,
@@ -4647,7 +4672,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.mccourtfoundation.org/event/los-angeles-marathon/register/",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:43:31.000Z"
   },
   {
     "pinId": 3534,
@@ -4688,11 +4713,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.gplb.com/tickets",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:06:43.000Z"
   },
   {
     "pinId": 3540,
@@ -4784,7 +4809,7 @@
     "onSaleDate": null,
     "source": "claude",
     "sourceUrl": "https://www.salesforce.com/events/",
-    "checkedAt": "2026-11-01T16:54:25.084Z"
+    "checkedAt": "2026-11-10T14:57:43.369Z"
   },
   {
     "pinId": 3557,
@@ -6017,11 +6042,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.dsei.co.uk/",
-    "checkedAt": "2026-11-01T16:52:12.000Z"
+    "checkedAt": "2026-11-10T14:54:29.000Z"
   },
   {
     "pinId": 4341,
@@ -6032,11 +6057,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.dubaiairshow.aero/",
-    "checkedAt": "2026-11-01T16:53:13.000Z"
+    "checkedAt": "2026-11-10T14:56:23.000Z"
   },
   {
     "pinId": 4352,
@@ -6051,7 +6076,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.coachella.com/passes",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:05:09.000Z"
   },
   {
     "pinId": 4354,
@@ -6268,7 +6293,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.co.uk/harry-styles-tickets/artist/5228999",
-    "checkedAt": "2026-11-01T16:51:17.000Z"
+    "checkedAt": "2026-11-10T14:53:13.000Z"
   },
   {
     "pinId": 4369,
@@ -6388,7 +6413,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.ticketmaster.com/oasis-tickets/artist/766720",
-    "checkedAt": "2026-11-01T16:50:38.000Z"
+    "checkedAt": "2026-11-10T14:52:21.000Z"
   },
   {
     "pinId": 4374,
@@ -6420,7 +6445,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.bbc.com/news/articles/c607lyyx3yvvo",
-    "checkedAt": "2026-11-01T16:52:43.000Z"
+    "checkedAt": "2026-11-10T14:55:17.000Z"
   },
   {
     "pinId": 4391,
@@ -6479,7 +6504,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:07:29.000Z"
   },
   {
     "pinId": 4428,
@@ -6720,11 +6745,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.prowein.com/en/Visit/Preparations/Tickets_and_Vouchers/Tickets",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "sourceUrl": "https://www.prowein.com/en/Media_News/Academy/Insights_Trends/ProWein_News/Newsflash/Ticket_shop_for_ProWein_D%C3%BCsseldorf_2027_now_open",
+    "checkedAt": "2026-11-09T14:43:09.000Z"
   },
   {
     "pinId": 4616,
@@ -6879,7 +6904,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://whitemarlinopen.com/tournament-info",
-    "checkedAt": "2026-11-01T16:49:38.000Z"
+    "checkedAt": "2026-11-10T14:51:23.000Z"
   },
   {
     "pinId": 4670,
@@ -7144,7 +7169,7 @@
     ],
     "ticketUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
     "lowPrice": 799,
-    "highPrice": null,
+    "highPrice": 799,
     "priceCurrency": "HKD",
     "tiers": [],
     "itinerary": [],
@@ -7152,7 +7177,7 @@
     "onSaleDate": "2026-09-24T04:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:08:42.000Z"
   },
   {
     "pinId": 4862,
@@ -7514,16 +7539,50 @@
     "pinId": 4873,
     "performers": [],
     "ticketUrl": "https://www.eventspass.com/event/dbmibs27?pr=WEB-ES/#/buyTickets",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 17,
+    "highPrice": 105,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "label": "Adult 1-Day Wednesday Preview",
+        "price": 66
+      },
+      {
+        "label": "Adult 2-Day Preview + General Admission",
+        "price": 105
+      },
+      {
+        "label": "Adult 1-Day General Admission",
+        "price": 45
+      },
+      {
+        "label": "Adult 2-Day General Admission",
+        "price": 78
+      },
+      {
+        "label": "Youth 1-Day General Admission (6-15)",
+        "price": 17
+      },
+      {
+        "note": "Thursday to Sunday only",
+        "label": "Family 4-pack",
+        "price": 99
+      },
+      {
+        "label": "Super Sunday Adult General Admission",
+        "price": 30
+      },
+      {
+        "label": "Children 5 and under",
+        "price": 0
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.miamiboatshow.com/press/tickets-on-sale-for-the-2027-discover-boating-miami-international-boat-show/",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-10T01:03:10.000Z"
   },
   {
     "pinId": 4874,
@@ -7682,7 +7741,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://flysnf.org/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:02:40.000Z"
   },
   {
     "pinId": 4880,
@@ -7708,11 +7767,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:12:15.000Z"
   },
   {
     "pinId": 4882,
@@ -7768,11 +7827,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://pebblebeachconcours.net",
-    "checkedAt": "2026-11-01T16:51:16.000Z"
+    "checkedAt": "2026-11-10T14:53:12.000Z"
   },
   {
     "pinId": 4886,
@@ -8220,16 +8279,70 @@
     "pinId": 4896,
     "performers": [],
     "ticketUrl": "https://registration.experientevent.com/ShowNHB271",
-    "lowPrice": null,
-    "highPrice": null,
-    "priceCurrency": null,
-    "tiers": [],
+    "lowPrice": 30,
+    "highPrice": 1425,
+    "priceCurrency": "USD",
+    "tiers": [
+      {
+        "note": "Early rate through Dec 11, 2026",
+        "label": "Expo Pass, NAHB Member",
+        "price": 80
+      },
+      {
+        "note": "Early rate through Dec 11, 2026",
+        "label": "Expo Pass, Non-Member",
+        "price": 160
+      },
+      {
+        "note": "Early rate through Dec 11, 2026",
+        "label": "Expo+Education Pass, NAHB Member",
+        "price": 625
+      },
+      {
+        "note": "Early rate through Dec 11, 2026",
+        "label": "Expo+Education Pass, Non-Member",
+        "price": 825
+      },
+      {
+        "note": "Expo+Education Pass",
+        "label": "First-Time Attendee Special (NAHB Members)",
+        "price": 195
+      },
+      {
+        "note": "Early rate",
+        "label": "Non-Exhibiting Supplier Expo+Education, NAHB Member",
+        "price": 1200
+      },
+      {
+        "note": "Early rate",
+        "label": "Non-Exhibiting Supplier Expo+Education, Non-Member",
+        "price": 1425
+      },
+      {
+        "label": "Spouse, NAHB Member",
+        "price": 50
+      },
+      {
+        "label": "Spouse, Non-Member",
+        "price": 75
+      },
+      {
+        "note": "Expo+Education Pass",
+        "label": "Student, NAHB Student Chapter",
+        "price": 30
+      },
+      {
+        "note": "Expo+Education Pass",
+        "label": "Student, Non-Affiliated Institution",
+        "price": 55
+      }
+    ],
     "itinerary": [],
     "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
-    "sourceUrl": "https://www.buildersshow.com/",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "sourceUrl": "https://www.buildersshow.com/fees-and-deadlines",
+    "checkedAt": "2026-11-10T01:04:03.000Z"
   },
   {
     "pinId": 4897,
@@ -8371,7 +8484,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.emeraldcitycomiccon.com/en-us/buy/tickets.html",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:42:40.000Z"
   },
   {
     "pinId": 4900,
@@ -8458,7 +8571,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.comic-con.org/wc/badges/",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:44:37.000Z"
   },
   {
     "pinId": 4902,
@@ -8488,7 +8601,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.himssconference.com/register/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:02:34.000Z"
   },
   {
     "pinId": 4904,
@@ -8533,7 +8646,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://megaconorlando.fanexpohq.com/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:08:49.000Z"
   },
   {
     "pinId": 4907,
@@ -8568,7 +8681,7 @@
     "onSaleDate": "2026-10-01T00:00:00.000Z",
     "source": "hand",
     "sourceUrl": "https://www.nationalrestaurantshow.com/home/badge-pricing/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:09:22.000Z"
   },
   {
     "pinId": 4908,
@@ -8673,7 +8786,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://otakon.com/2027-registration/",
-    "checkedAt": "2026-11-01T16:50:13.000Z"
+    "checkedAt": "2026-11-10T14:51:45.000Z"
   },
   {
     "pinId": 4913,
@@ -8684,11 +8797,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": null,
+    "availability": "PreOrder",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://animenyc.com/",
-    "checkedAt": "2026-11-01T16:54:25.000Z"
+    "checkedAt": "2026-11-10T14:57:51.000Z"
   },
   {
     "pinId": 4914,
@@ -8703,7 +8816,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://west.paxsite.com/",
-    "checkedAt": "2026-11-01T16:51:40.000Z"
+    "checkedAt": "2026-11-10T14:53:50.000Z"
   },
   {
     "pinId": 4928,
@@ -10209,7 +10322,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:05:17.000Z"
   },
   {
     "pinId": 6513,
@@ -10220,11 +10333,11 @@
     "priceCurrency": null,
     "tiers": [],
     "itinerary": [],
-    "availability": "PreOrder",
+    "availability": "InStock",
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.goodwood.com/grr/event-coverage/goodwood-revival/2027-revival-dates-revealed/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:14:48.000Z"
   },
   {
     "pinId": 6544,
@@ -10404,7 +10517,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.retromobile.com/en/box-office/buy-my-ticket",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:41:02.000Z"
   },
   {
     "pinId": 6564,
@@ -10419,7 +10532,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://www.bharat-mobility.com/",
-    "checkedAt": "2026-10-30T14:00:19.631Z"
+    "checkedAt": "2026-11-09T14:41:02.000Z"
   },
   {
     "pinId": 6570,
@@ -10432,9 +10545,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://view.asiae.co.kr/en/article/2026090915254540957",
-    "checkedAt": "2026-10-25T15:14:17.819Z"
+    "checkedAt": "2026-11-09T14:34:50.175Z"
   },
   {
     "pinId": 6600,
@@ -10685,7 +10798,7 @@
     "onSaleDate": null,
     "source": "hand",
     "sourceUrl": "https://europe.money2020.com/",
-    "checkedAt": "2026-10-31T02:45:07.336Z"
+    "checkedAt": "2026-11-10T01:10:42.000Z"
   },
   {
     "pinId": 7592,
@@ -11151,9 +11264,9 @@
     "itinerary": [],
     "availability": null,
     "onSaleDate": null,
-    "source": "session",
+    "source": "claude",
     "sourceUrl": "https://www.carlelo.com/news/maruti-victoris-launched-price-starts-at-rs-105-lakh",
-    "checkedAt": "2026-10-24T14:03:44.630Z"
+    "checkedAt": "2026-11-09T04:01:44.052Z"
   },
   {
     "pinId": 15306,
@@ -19057,5 +19170,105 @@
     "source": "session",
     "sourceUrl": "https://www.buchmesse.de/en/visit/tickets",
     "checkedAt": "2026-11-07T03:46:52.569Z"
+  },
+  {
+    "pinId": 20804,
+    "performers": [
+      {
+        "name": "Yuanqing Yang",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://registration.experientevent.com/showCES271/Wizard/Landing",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.ces.tech/press-releases/lenovo-takes-ces-2027-keynote-to-new-heights-with-immersive-experience-at-sphere",
+    "checkedAt": "2026-11-09T04:00:12.841Z"
+  },
+  {
+    "pinId": 20808,
+    "performers": [
+      {
+        "name": "Jay-Z",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": null,
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": null,
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.fox5ny.com/news/jay-z-confirmed-perform-super-bowl-lxi-halftime-show",
+    "checkedAt": "2026-11-09T04:00:21.569Z"
+  },
+  {
+    "pinId": 20823,
+    "performers": [
+      {
+        "name": "BTS",
+        "type": "PerformingGroup"
+      }
+    ],
+    "ticketUrl": "https://www.livenation.com.au/event/bts-world-tour-arirang-in-melbourne-melbourne-tickets-edp1678741",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.livenation.com.au/bts-tickets-adp830746",
+    "checkedAt": "2026-11-09T04:00:17.103Z"
+  },
+  {
+    "pinId": 20829,
+    "performers": [
+      {
+        "name": "Antonio Filosa",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://registration.experientevent.com/showCES271/Wizard/Landing",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.ces.tech/press-releases/stellantis-to-bring-human-centered-mobility-vision-to-ces-2027-keynote",
+    "checkedAt": "2026-11-09T03:48:04.526Z"
+  },
+  {
+    "pinId": 20830,
+    "performers": [
+      {
+        "name": "Tekedra Mawakana",
+        "type": "Person"
+      }
+    ],
+    "ticketUrl": "https://registration.experientevent.com/showCES271/Wizard/Landing",
+    "lowPrice": null,
+    "highPrice": null,
+    "priceCurrency": null,
+    "tiers": [],
+    "itinerary": [],
+    "availability": "InStock",
+    "onSaleDate": null,
+    "source": "claude",
+    "sourceUrl": "https://www.ces.tech/press-releases/waymo-co-ceo-tekedra-mawakana-to-keynote-at-ces-2027",
+    "checkedAt": "2026-11-09T03:48:02.454Z"
   }
 ]

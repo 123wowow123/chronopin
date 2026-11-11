@@ -154228,5 +154228,806 @@
     ],
     "note": null,
     "utcCreatedDateTime": "2026-11-08T12:25:06.321Z"
+  },
+  {
+    "id": 5560,
+    "pinId": 4448,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://s21.q4cdn.com/769814866/files/doc_news/Amer-Sports-Inc--to-Report-Third-Quarter-2026-Financial-Results-on-November-17-2026--2026.pdf",
+        "title": "Amer Sports Inc. to Report Third Quarter 2026 Financial Results on November 17, 2026",
+        "confidence": 100,
+        "publishedDate": "2026-10-15"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T04:04:06.738Z"
+  },
+  {
+    "id": 5561,
+    "pinId": 4180,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://s204.q4cdn.com/320226404/files/doc_news/Gap-Inc--to-Report-Third-Quarter-Fiscal-2026-Results-on-November-19-2026.pdf",
+        "title": "Gap Inc. to Report Third Quarter Fiscal 2026 Results on November 19, 2026",
+        "confidence": 100
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T04:04:19.373Z"
+  },
+  {
+    "id": 5562,
+    "pinId": 4456,
+    "kind": "edit",
+    "userId": 375,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://finviz.com/news/413102/dicks-sporting-goods-inc-third-quarter-results-call-scheduled-for-november-24th",
+        "title": "DICK'S Sporting Goods, Inc. Third Quarter Results Call Scheduled for November 24th",
+        "confidence": 95,
+        "publishedDate": "2026-11-02"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T04:04:47.028Z"
+  },
+  {
+    "id": 5563,
+    "pinId": 20692,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On the morning of November 9 Pacific, the Yes bid/ask crossed 50% near US$93 per barrel (55–58% above US$91.99, 38–43% above US$93.99), with about 100,994 traded contracts across 30 thresholds.",
+        "field": "description",
+        "before": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On November 7 evening Pacific, Yes bid/ask crossed 50% between US$95.99 and US$97.99 per barrel, with 92,644.63 traded contracts across 30 thresholds."
+      },
+      {
+        "after": "<h3>9 November morning observation</h3><ul><li>Yes bid/ask was 55–58% above US$91.99, 38–43% above US$93.99, 34–37% above US$95.99, 36–37% above US$97.99 and 26–30% above US$99.99. The 50% crossing therefore sat near US$93, about US$3–5 below the 7 November reading of US$96–98. Across 30 strikes the API reported about 100,994 traded contracts, not dollar turnover. Upper-strike quotes (US$107.99 to US$115.99) are wide and non-monotonic, so no precise modal interval is claimed.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09\"></cite></li></ul><h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and 44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had 86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=200\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=200\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09",
+        "title": "Kalshi API — open November 2026 Brent event, 9 November morning snapshot",
+        "confidence": 95,
+        "publishedDate": "2026-11-09"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T14:35:09.702Z"
+  },
+  {
+    "id": 5564,
+    "pinId": 20713,
+    "kind": "edit",
+    "userId": 437,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Tropical Cyclone Murasu was tracked from 2026-11-01 to 2026-11-03 (10 six-hourly positions), reaching maximum sustained winds of 85 knots (98 mph, 157 km/h) on 2026-11-02. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was listed as ended on 2026-11-08.",
+        "field": "description",
+        "before": "Tropical Cyclone Murasu was tracked from 2026-11-01 to 2026-11-03 (10 six-hourly positions), reaching maximum sustained winds of 85 knots (98 mph, 157 km/h) on 2026-11-02. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was still listed as active at the time of the last update."
+      },
+      {
+        "after": "2026-11-08T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T14:35:54.164Z"
+  },
+  {
+    "id": 5565,
+    "pinId": 20728,
+    "kind": "edit",
+    "userId": 277,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+        "title": "Schedule of Releases for the Consumer Price Index - BLS",
+        "confidence": 98,
+        "publishedDate": "2026-11-09"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T14:41:23.304Z"
+  },
+  {
+    "id": 5566,
+    "pinId": 17490,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://cheekwood.org/calendar-events/holiday-lights/",
+        "title": "Holiday LIGHTS - Cheekwood",
+        "confidence": 97,
+        "publishedDate": "2026-11-09"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T14:41:37.047Z"
+  },
+  {
+    "id": 5567,
+    "pinId": 4504,
+    "kind": "edit",
+    "userId": 51,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "折月亮 (Zhe Yue Liang, \"When I Meet the Moon\") is iQIYI's 27-episode romance adapted from Zhu Yi's novel, the last of the Nanwu trilogy after Hidden Love and The First Frost, starring Lu Yuxiao (卢昱晓) as the socially anxious Yun Li and Lin Yi (林一) as her high-school crush Fu Shize. It was filmed in Xiamen in 2025 and premiered on iQIYI and Jiangsu TV on 5 November 2026.",
+        "field": "description",
+        "before": "折月亮 (Zhe Yue Liang, \"When I Meet the Moon\") is iQIYI's 27-episode romance adapted from Zhu Yi's novel, the last of the Nanwu trilogy after Hidden Love and The First Frost, starring Lu Yuxiao (卢昱晓) as the socially anxious Yun Li and Lin Yi (林一) as her high-school crush Fu Shize. It was filmed in Xiamen in 2025 and licensed in May 2026. No air date has been announced, so the premiere shown here is an estimate."
+      },
+      {
+        "after": "2026-11-05T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-18T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The drama premiered on 5 November 2026, streaming exclusively on iQIYI and airing simultaneously on Jiangsu TV at 7:30 pm nightly; 27 episodes, with reservations on the two platforms past one million before launch<cite data-ref=\"https://global.hk01.com/电影/60406582/折月亮-定档-林一搭卢昱晓演听障社恐妹-追剧时间角色一文看\"></cite>. It had passed review in May 2026 with 27 episodes<cite data-ref=\"https://www.sina.cn/news/detail/5300022105083032.html\"></cite></li><li>Lu Yuxiao (卢昱晓) plays Yun Li (云厘), a socially anxious video creator who comes to Nanwu for graduate school, and Lin Yi (林一) plays Fu Shize (傅识则), the genius who was her high-school crush; she wins him over, they split when she goes abroad, and he pursues her when she returns<cite data-ref=\"https://www.iq.com/album/when-i-meet-the-moon-2026-ysyflhzw09?lang=en_us\"></cite>. Lu Yangyang, Li Geyang, Huang Shengchi, Huang Tingting and Xie Binbin co-star<cite data-ref=\"https://www.sina.cn/news/detail/5300022105083032.html\"></cite></li><li>It adapts Zhu Yi's (竹已) novel, the sister book to Hidden Love (偷偷藏不住) and The First Frost (难哄): Fu Shize is a year below The First Frost's Sang Yan at school<cite data-ref=\"https://cj.sina.com.cn/articles/view/7931690445/1d8c3fdcd00101sj7q\"></cite><cite data-ref=\"https://www.iq.com/album/when-i-meet-the-moon-2026-ysyflhzw09?lang=en_us\"></cite>. Zhang Boyu (张博昱) directs<cite data-ref=\"https://news.qq.com/rain/a/20251112A04GRR00\"></cite></li><li>Filming began in Xiamen in early August 2025 with a shoot of about 100 days<cite data-ref=\"https://cj.sina.com.cn/articles/view/7931690445/1d8c3fdcd00101sj7q\"></cite>, and wrapped on 12 November 2025<cite data-ref=\"https://news.qq.com/rain/a/20251112A04GRR00\"></cite></li><li>For comparison, Hidden Love wrapped on 14 November 2022 and premiered on 20 June 2023<cite data-ref=\"https://zh.wikipedia.org/zh-cn/%E5%81%B7%E5%81%B7%E8%97%8F%E4%B8%8D%E4%BD%8F_(%E7%94%B5%E8%A7%86%E5%89%A7)\"></cite>, and The First Frost passed review on 5 December 2024 and premiered on 18 February 2025<cite data-ref=\"https://zh.wikipedia.org/zh-cn/%E9%9A%BE%E5%93%84\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The drama's official account showed it at iQIYI's 23 September 2026 showcase and opened reservations on iQIYI and Weibo; no air date has been given<cite data-ref=\"https://weibo.com/2/detail/5346250188395533\"></cite>. It passed review in May 2026 with 27 episodes and is awaiting broadcast on iQIYI<cite data-ref=\"https://www.sina.cn/news/detail/5300022105083032.html\"></cite></li><li>Lu Yuxiao (卢昱晓) plays Yun Li (云厘), a socially anxious video creator who comes to Nanwu for graduate school, and Lin Yi (林一) plays Fu Shize (傅识则), the genius who was her high-school crush; she wins him over, they split when she goes abroad, and he pursues her when she returns<cite data-ref=\"https://www.iq.com/album/when-i-meet-the-moon-2026-ysyflhzw09?lang=en_us\"></cite>. Lu Yangyang, Li Geyang, Huang Shengchi, Huang Tingting and Xie Binbin co-star<cite data-ref=\"https://www.sina.cn/news/detail/5300022105083032.html\"></cite></li><li>It adapts Zhu Yi's (竹已) novel, the sister book to Hidden Love (偷偷藏不住) and The First Frost (难哄): Fu Shize is a year below The First Frost's Sang Yan at school<cite data-ref=\"https://cj.sina.com.cn/articles/view/7931690445/1d8c3fdcd00101sj7q\"></cite><cite data-ref=\"https://www.iq.com/album/when-i-meet-the-moon-2026-ysyflhzw09?lang=en_us\"></cite>. Zhang Boyu (张博昱) directs<cite data-ref=\"https://news.qq.com/rain/a/20251112A04GRR00\"></cite></li><li>Filming began in Xiamen in early August 2025 with a shoot of about 100 days<cite data-ref=\"https://cj.sina.com.cn/articles/view/7931690445/1d8c3fdcd00101sj7q\"></cite>, and wrapped on 12 November 2025 after a summer-to-winter shoot in Xiamen<cite data-ref=\"https://news.qq.com/rain/a/20251112A04GRR00\"></cite></li><li>No date has been announced. Hidden Love wrapped on 14 November 2022 and premiered on 20 June 2023<cite data-ref=\"https://zh.wikipedia.org/zh-cn/%E5%81%B7%E5%81%B7%E8%97%8F%E4%B8%8D%E4%BD%8F_(%E7%94%B5%E8%A7%86%E5%89%A7)\"></cite>, and The First Frost passed review on 5 December 2024 and premiered on 18 February 2025<cite data-ref=\"https://zh.wikipedia.org/zh-cn/%E9%9A%BE%E5%93%84\"></cite>; both gaps have already passed, so the date here is a guess after the September showcase</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://global.hk01.com/电影/60406582/折月亮-定档-林一搭卢昱晓演听障社恐妹-追剧时间角色一文看",
+        "title": "《折月亮》定档！林一搭卢昱晓演听障社恐妹 追剧时间角色一文看 - 香港01",
+        "confidence": 88,
+        "publishedDate": "2026-11-04"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T14:42:12.783Z"
+  },
+  {
+    "id": 5568,
+    "pinId": 20121,
+    "kind": "edit",
+    "userId": 326,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.airframer.com/news/release/re-build-announces-2-1-billion-to-accelerate-america-s-reindustrialisation",
+        "title": "Re:Build announces $2.1 billion to accelerate America's reindustrialisation",
+        "confidence": 90,
+        "publishedDate": "2026-10-27"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T15:03:15.329Z"
+  },
+  {
+    "id": 5569,
+    "pinId": 18465,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Estimated: Montgomery County, Alabama",
+        "field": "address",
+        "before": "Montgomery County, Alabama"
+      },
+      {
+        "after": "<ul><li>80 MW nameplate solar PV, single generator, in Montgomery County, Alabama.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li><li>EIA-860M lists the plant as planned, operator SR Hope Hull, LLC, proposed completion 2027-12.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li><li>Tracker and Cleanview listings tie the project to developer Silicon Ranch. The developer's original Hope Hull page now returns 404, so the USD 120 million capital cost and 80 MWac figure once attributed to it are not confirmed by a current primary source, and no price is shown.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li><li>The December 2027 date is the EIA proposed completion, not a developer commitment, and the marker is the county, not a verified site.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>80 MW nameplate solar PV, single generator, in Montgomery County, Alabama.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li><li>EIA-860M lists the plant as planned, operator SR Hope Hull, LLC, proposed completion 2027-12.<cite data-ref=\"https://www.interconnection.fyi/eia/plant/68104\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-09T15:06:37.425Z"
+  },
+  {
+    "id": 5570,
+    "pinId": 20692,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On the evening of November 9 Pacific, the Yes bid/ask crossed 50% near US$92 per barrel (51–55% above US$89.99, 33–35% above US$93.99), with about 108,280 traded contracts across 30 thresholds.",
+        "field": "description",
+        "before": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On the morning of November 9 Pacific, the Yes bid/ask crossed 50% near US$93 per barrel (55–58% above US$91.99, 38–43% above US$93.99), with about 100,994 traded contracts across 30 thresholds."
+      },
+      {
+        "after": "<h3>9 November evening observation</h3><ul><li>Yes bid/ask was 51–55% above US$89.99, 54–55% above US$91.99, 33–35% above US$93.99, 30–32% above US$95.99, 24–28% above US$97.99 and 20–22% above US$99.99. The 50% crossing therefore sat near US$92, about US$1 below the morning reading. Across 30 strikes the API reported about 108,280 traded contracts, not dollar turnover. Upper-strike quotes (US$109.99 and above) are wide and non-monotonic, so no precise modal interval is claimed. Kalshi listed no December 2026 Brent event yet.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09-evening\"></cite></li></ul><h3>9 November morning observation</h3><ul><li>Yes bid/ask was 55–58% above US$91.99, 38–43% above US$93.99, 34–37% above US$95.99, 36–37% above US$97.99 and 26–30% above US$99.99. The 50% crossing therefore sat near US$93, about US$3–5 below the 7 November reading of US$96–98. Across 30 strikes the API reported about 100,994 traded contracts, not dollar turnover. Upper-strike quotes (US$107.99 to US$115.99) are wide and non-monotonic, so no precise modal interval is claimed.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09\"></cite></li></ul><h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and 44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had 86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<h3>9 November morning observation</h3><ul><li>Yes bid/ask was 55–58% above US$91.99, 38–43% above US$93.99, 34–37% above US$95.99, 36–37% above US$97.99 and 26–30% above US$99.99. The 50% crossing therefore sat near US$93, about US$3–5 below the 7 November reading of US$96–98. Across 30 strikes the API reported about 100,994 traded contracts, not dollar turnover. Upper-strike quotes (US$107.99 to US$115.99) are wide and non-monotonic, so no precise modal interval is claimed.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09\"></cite></li></ul><h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and 44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had 86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=200\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09-evening",
+        "title": "Kalshi API — open November 2026 Brent event, 9 November evening snapshot",
+        "confidence": 95,
+        "publishedDate": "2026-11-09"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T01:02:13.624Z"
+  },
+  {
+    "id": 5571,
+    "pinId": 4812,
+    "kind": "edit",
+    "userId": 438,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://web.archive.org/web/20260911005818/https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+        "title": "Artificial Analysis: DeepSeek V4.1 Flash (Reasoning, Max Effort), Wayback capture of 11 Sep 2026",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T01:05:38.337Z"
+  },
+  {
+    "id": 5572,
+    "pinId": 20117,
+    "kind": "edit",
+    "userId": 277,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "On 9 November 2026 Polymarket put Anthropic shares listed and open for trading by November 20, 2026 at 82%, on US$7,359,861 of event volume. That strike is now the first to pass even odds (November 19 was 39%), so it marks the market's expected first day of trading.",
+        "field": "description",
+        "before": "On 27 October 2026 Polymarket put Anthropic shares listed and open for trading by November 19, 2026 at 52%, on US$5,906,665 of event volume. That strike is the first to pass even odds, so it marks the market's expected first day of trading."
+      },
+      {
+        "after": "2026-11-20T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-11-19T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>Polymarket asks &quot;Anthropic IPO by __?&quot;: This market will resolve to &quot;Yes&quot; if Anthropic shares are listed on a public securities exchange and open for trading by 11:59 PM ET on the listed date. Otherwise, this market will resolve to &quot;No.&quot;<cite data-ref=\"https://polymarket.com/event/anthropic-ipo-by\"></cite></li><li>Prices on 9 November 2026: November 15, 2026 at under 1%; November 16, 2026 at 1%; November 17, 2026 at 4%; November 18, 2026 at 13%; November 19, 2026 at 39%; November 20, 2026 at 82%; November 23, 2026 at 90%; November 24, 2026 at 92%; November 25, 2026 at 93%; November 30, 2026 at 95%; December 15, 2026 at 96%; December 31, 2026 at 97%.<cite data-ref=\"https://polymarket.com/event/anthropic-ipo-by\"></cite></li><li>This is a listing-date market, which is separate from the earlier IPO announcement. Polymarket resolves Yes only once shares are listed and open for trading, so the first strike at or above 50% is November 20, 2026 (82%), a day later than the 27 October reading (November 19 at 52%). Polymarket's page summary says Anthropic's S-1 filing on October 26 positions the company for a Nasdaq listing as soon as mid-November, with marketing expected to begin the week of November 9; that summary is Polymarket's AI-generated text, not a company statement.<cite data-ref=\"https://polymarket.com/event/anthropic-ipo-by\"></cite></li><li>Earlier reading, 27 October 2026 (kept for comparison): November 18 at 28%, November 19 at 52%, November 20 at 68%, November 30 at 88%, December 31 at 94%, on US$5,906,665 of event volume.<cite data-ref=\"https://gamma-api.polymarket.com/events?slug=anthropic-ipo-by\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Polymarket asks &quot;Anthropic IPO by __?&quot;: This market will resolve to &quot;Yes&quot; if Anthropic shares are listed on a public securities exchange and open for trading by 11:59 PM ET on the listed date. Otherwise, this market will resolve to &quot;No.&quot;<cite data-ref=\"https://polymarket.com/event/anthropic-ipo-by\"></cite></li><li>Prices on 27 October 2026: October 31, 2026 at 0.1%; November 15, 2026 at 3.2%; November 16, 2026 at 5.1%; November 17, 2026 at 13%; November 18, 2026 at 28%; November 19, 2026 at 52%; November 20, 2026 at 68%; November 23, 2026 at 72%; November 24, 2026 at 72%; November 25, 2026 at 84%; November 30, 2026 at 88%; December 15, 2026 at 92%; December 31, 2026 at 94%.<cite data-ref=\"https://gamma-api.polymarket.com/events?slug=anthropic-ipo-by\"></cite></li><li>this is a listing-date market, which is separate from the earlier IPO announcement. Polymarket resolves Yes only once shares are listed and open for trading, so the first strike at or above 50% is November 19, 2026 (52%). Prices read on 27 October 2026 from the exchange&#x27;s public API; event volume US$5,906,665 is as reported by Polymarket.<cite data-ref=\"https://polymarket.com/event/anthropic-ipo-by\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T01:06:30.977Z"
+  },
+  {
+    "id": 5573,
+    "pinId": 20800,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.guelphtoday.com/local-news/guelphs-big-battery-is-now-operational-12990543",
+        "title": "Guelph’s big battery is now operational - GuelphToday",
+        "confidence": 90,
+        "publishedDate": "2026-11-07"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:44:38.851Z"
+  },
+  {
+    "id": 5574,
+    "pinId": 20798,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.guelphtoday.com/local-news/guelphs-big-battery-is-now-operational-12990543",
+        "title": "Guelph’s big battery is now operational - GuelphToday",
+        "confidence": 85,
+        "publishedDate": "2026-11-07"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:45:38.178Z"
+  },
+  {
+    "id": 5575,
+    "pinId": 20799,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://www.guelphtoday.com/local-news/guelphs-big-battery-is-now-operational-12990543",
+        "title": "Guelph’s big battery is now operational - GuelphToday",
+        "confidence": 85,
+        "publishedDate": "2026-11-07"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:46:20.459Z"
+  },
+  {
+    "id": 5576,
+    "pinId": 20692,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On the morning of November 10 Pacific, the Yes bid/ask crossed 50% near US$88 per barrel (52–54% above US$87.99, 42–44% above US$89.99, 30–32% above US$93.99), with about 112,470 traded contracts across 30 thresholds.",
+        "field": "description",
+        "before": "Kalshi’s November Brent contract resolves to a one-minute closing price on November 30, 2026 at 5:00 PM EST. On the evening of November 9 Pacific, the Yes bid/ask crossed 50% near US$92 per barrel (51–55% above US$89.99, 33–35% above US$93.99), with about 108,280 traded contracts across 30 thresholds."
+      },
+      {
+        "after": "<h3>10 November morning observation</h3><ul><li>Yes bid/ask was 70–74% above US$81.99, 55–59% above US$85.99, 52–54% above US$87.99, 42–44% above US$89.99, 36–46% above US$91.99, 30–32% above US$93.99, 25–27% above US$95.99, 19–21% above US$97.99 and 16–17% above US$99.99. The 50% crossing therefore sat near US$88, about US$4 below the 9 November evening reading of US$92. Across 30 strikes the API reported about 112,470 traded contracts, not dollar turnover. Upper-strike quotes (US$111.99 and above) are wide and non-monotonic, so no precise modal interval is claimed. Kalshi still listed no December 2026 Brent event.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-10\"></cite></li></ul><h3>9 November evening observation</h3><ul><li>Yes bid/ask was 51–55% above US$89.99, 54–55% above US$91.99, 33–35% above US$93.99, 30–32% above US$95.99, 24–28% above US$97.99 and 20–22% above US$99.99. The 50% crossing therefore sat near US$92, about US$1 below the morning reading. Across 30 strikes the API reported about 108,280 traded contracts, not dollar turnover. Upper-strike quotes (US$109.99 and above) are wide and non-monotonic, so no precise modal interval is claimed. Kalshi listed no December 2026 Brent event yet.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09-evening\"></cite></li></ul><h3>9 November morning observation</h3><ul><li>Yes bid/ask was 55–58% above US$91.99, 38–43% above US$93.99, 34–37% above US$95.99, 36–37% above US$97.99 and 26–30% above US$99.99. The 50% crossing therefore sat near US$93, about US$3–5 below the 7 November reading of US$96–98. Across 30 strikes the API reported about 100,994 traded contracts, not dollar turnover. Upper-strike quotes (US$107.99 to US$115.99) are wide and non-monotonic, so no precise modal interval is claimed.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09\"></cite></li></ul><h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and 44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had 86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<h3>9 November evening observation</h3><ul><li>Yes bid/ask was 51–55% above US$89.99, 54–55% above US$91.99, 33–35% above US$93.99, 30–32% above US$95.99, 24–28% above US$97.99 and 20–22% above US$99.99. The 50% crossing therefore sat near US$92, about US$1 below the morning reading. Across 30 strikes the API reported about 108,280 traded contracts, not dollar turnover. Upper-strike quotes (US$109.99 and above) are wide and non-monotonic, so no precise modal interval is claimed. Kalshi listed no December 2026 Brent event yet.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09-evening\"></cite></li></ul><h3>9 November morning observation</h3><ul><li>Yes bid/ask was 55–58% above US$91.99, 38–43% above US$93.99, 34–37% above US$95.99, 36–37% above US$97.99 and 26–30% above US$99.99. The 50% crossing therefore sat near US$93, about US$3–5 below the 7 November reading of US$96–98. Across 30 strikes the API reported about 100,994 traded contracts, not dollar turnover. Upper-strike quotes (US$107.99 to US$115.99) are wide and non-monotonic, so no precise modal interval is claimed.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-09\"></cite></li></ul><h3>7 November evening observation</h3><ul><li>Yes bid/ask was 58–61% above US$93.99, 52–55% above US$95.99, 46–50% above US$97.99 and 43–44% above US$99.99. Across 30 strikes the API reported 92,644.63 traded contracts, not dollar turnover. The broad 50% crossing remained near US$96–98. Wide and non-monotonic upper strikes do not establish a reliable precise modal interval.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul><h3>6 November evening observation</h3><ul><li>Yes bid/ask was 63–66% above US$91.99, 54–58% above US$93.99, 53–57% above US$95.99 and 43–47% above US$97.99. Across 30 strikes, reported volume was 85,355.55 contract units. The 50% crossing remained broadly US$96–98; these threshold quotes do not establish a precise modal interval or reported dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=100\"></cite></li></ul><ul><li>On 6 November 2026, Yes bid/ask was 56–59% above US$93.99, 50–53% above US$95.99 and 45–47% above US$97.99; the 50% crossing was therefore near US$96–98, up from the previous day’s roughly US$94. Across 30 thresholds the exchange reported 78,140.41 contract units, not dollar turnover. The non-monotonic upper-strike quotes and wide spreads make a precise modal-band claim unreliable.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Kalshi lists a monthly Brent contract that resolves to the one-minute closing price on 30 November 2026 at 5:00 PM EST (22:00 UTC), with 30 threshold strikes from US$71.99 to US$129.99 a barrel; it is a single index reading, not the monthly average<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>Read on 5 November 2026, the ladder had fallen again: Yes bid/ask was 62-64% above US$91.99, 47-51% above US$93.99, 41-45% above US$95.99, 37-40% above US$97.99, 24-26% above US$101.99, 16-24% above US$107.99 and 2-6% above US$129.99, so the 50% crossing sat near US$94, about US$8 under the 2 November reading. About 59,600 contracts have traded across the ladder (contract count, not a reported dollar volume); the deepest strikes (US$91.99 to US$101.99) each have 2,600 to 6,300 contracts, while many upper-strike last prices sit above their bids, so the quotes are used here<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXBRENTMON&limit=1000\"></cite></li><li>Read on 2 November 2026, Yes bid/ask was 54-58% above US$99.99, 48-52% above US$101.99, 43-46% above US$103.99, 32-35% above US$107.99, 22-26% above US$111.99 and 3-7% above US$129.99, so the 50% crossing sat near US$102; the reading on 1 November put it near US$108 (50-51% above US$107.99), so the market has marked the November expectation down by roughly US$14 in four days<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&with_nested_markets=true&limit=200\"></cite></li><li>It continues the monthly thread: August settled at US$90.75, September at US$97.92 and October at US$112.35, so the November book now prices a pullback toward the September level<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li><li>Independent context: EIA's October Short-Term Energy Outlook forecasts a US$105 a barrel average Brent spot price for the fourth quarter, citing constrained Middle East flows, inventory withdrawals and tight diesel markets, and US$84 for the 2027 annual average<cite data-ref=\"https://www.eia.gov/OUTLOOKS/STEO/\"></cite></li><li>When the contract is finalized the pin will be updated with the realized value and a note on whether the market was close, against drivers such as OPEC+ quota compliance, Hormuz risk premia, inventories and refinery demand<cite data-ref=\"https://kalshi.com/markets/kxbrentmon/brent-oil/kxbrentmon-26oct3017\"></cite></li></ul><h3>7 November morning observation</h3><ul><li>Current Yes bid/ask was 53–57% above US$95.99 and 44–48% above US$97.99, leaving the broad 50% crossing near US$96–98. The event had 86,918.23 traded contracts across 30 thresholds; contract counts are not verified dollar turnover.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXBRENTMON&status=open&with_nested_markets=true&limit=100&obs=2026-11-10",
+        "title": "Kalshi API — open November 2026 Brent event, 10 November morning snapshot",
+        "confidence": 95,
+        "publishedDate": "2026-11-10"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:46:36.704Z"
+  },
+  {
+    "id": 5577,
+    "pinId": 20627,
+    "kind": "edit",
+    "userId": 437,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Super Typhoon In-fa was tracked from 2026-10-23 to 2026-11-05 (51 six-hourly positions), reaching maximum sustained winds of 130 knots (150 mph, 241 km/h) on 2026-10-28. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was listed as ended on 2026-11-10.",
+        "field": "description",
+        "before": "Super Typhoon In-fa was tracked from 2026-10-23 to 2026-11-05 (51 six-hourly positions), reaching maximum sustained winds of 130 knots (150 mph, 241 km/h) on 2026-10-28. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was still listed as active at the time of the last update."
+      },
+      {
+        "after": "2026-11-10T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:46:51.507Z"
+  },
+  {
+    "id": 5578,
+    "pinId": 20927,
+    "kind": "edit",
+    "userId": 437,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Typhoon Cempaka was tracked from 2026-11-07 to 2026-11-10 (14 six-hourly positions), reaching maximum sustained winds of 95 knots (109 mph, 176 km/h) on 2026-11-09. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was still listed as active at the time of the last update.",
+        "field": "description",
+        "before": "Typhoon Cempaka was tracked from 2026-11-07 to 2026-11-09 (12 six-hourly positions), reaching maximum sustained winds of 95 knots (109 mph, 176 km/h) on 2026-11-09. The positions and wind speeds are the Joint Typhoon Warning Center's own warnings, compiled by NASA's Earth Observatory Natural Event Tracker (EONET). The storm was still listed as active at the time of the last update."
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:47:06.101Z"
+  },
+  {
+    "id": 5579,
+    "pinId": 20847,
+    "kind": "edit",
+    "userId": 277,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Kalshi traders favour a recorded House vote concerning Pete Hegseth impeachment before November 14, 2026; on November 10 the before-November-14 contract priced at 93%. The forecast includes procedural votes and does not establish that the House will impeach him.",
+        "field": "description",
+        "before": "Kalshi traders favour a recorded House vote concerning Pete Hegseth impeachment before November 14, 2026. The forecast includes procedural votes and does not establish that the House will impeach him."
+      },
+      {
+        "after": "<ul><li>On November 10, 2026, Kalshi's contracts for a recorded House vote on impeaching Pete Hegseth priced 93% before November 14, 92% before November 21 and 91% before January 1, 2027, with about US$98,600 traded on the event (scan reading of 10 November), up from a 62% last trade and 64-67% bid/ask on November 7.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>Search coverage describes Rep. Thomas Massie's privileged resolution with eight articles of impeachment against Hegseth, first filed in mid-September; reporting indicates leadership delayed the vote until November and that a motion to table is the expected response, though no result confirms a final vote count.<cite data-ref=\"https://www.stripes.com/theaters/us/2026-09-16/house-hegseth-impeachment-22873869.html\"></cite></li><li>On November 7, 2026, Kalshi's before-November-14 contract last traded at 62%, while the Yes bid and ask were 64% and 67%; later deadlines were also priced above one half.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>A recorded House vote on adopting an impeachment resolution, or a qualifying motion to table, refer or postpone it, satisfies the contract. A committee vote, an inquiry alone or simply introducing articles does not. The market therefore measures whether a qualifying vote occurs, not whether impeachment succeeds.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>AP reported on November 7 that returning House Republicans would face a leadership choice and might also consider impeaching the defense secretary. That report supplies political context without announcing a floor-vote date.<cite data-ref=\"https://apnews.com/article/trump-republicans-midterms-reckoning-fd3114355fa1a4fc479e5a3ae17d1445\"></cite></li><li>H.Res.1177 was introduced on April 15 and referred to the Judiciary Committee. Its allegations concern the Iran war, civilian targeting and handling of sensitive information; the introduced resolution is evidence of the proposal, not an adjudication of those allegations.<cite data-ref=\"https://www.govinfo.gov/content/pkg/BILLS-119hres1177ih/pdf/BILLS-119hres1177ih.pdf\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>On November 7, 2026, Kalshi’s before-November-14 contract last traded at 62%, while the current Yes bid and ask were 64% and 67%; later deadlines were also priced above one half.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>The exchange event had 69,012.94 contracts traded across its three deadlines. The job scan’s roughly US$47,033 is a last-price-weighted estimate, rather than a verified sum of cash paid in historical trades.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>A recorded House vote on adopting an impeachment resolution, or a qualifying motion to table, refer or postpone it, satisfies the contract. A committee vote, an inquiry alone or simply introducing articles does not. The market therefore measures whether a qualifying vote occurs, not whether impeachment succeeds.<cite data-ref=\"https://api.elections.kalshi.com/trade-api/v2/events/KXVOTEHEGSETHIMPEACH-26OCT?with_nested_markets=true\"></cite></li><li>AP reported on November 7 that returning House Republicans would face a leadership choice and might also consider impeaching the defense secretary. That report supplies political context without announcing a floor-vote date.<cite data-ref=\"https://apnews.com/article/trump-republicans-midterms-reckoning-fd3114355fa1a4fc479e5a3ae17d1445\"></cite></li><li>H.Res.1177 was introduced on April 15 and referred to the Judiciary Committee. Its allegations concern the Iran war, civilian targeting and handling of sensitive information; the introduced resolution is evidence of the proposal, not an adjudication of those allegations.<cite data-ref=\"https://www.govinfo.gov/content/pkg/BILLS-119hres1177ih/pdf/BILLS-119hres1177ih.pdf\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.stripes.com/theaters/us/2026-09-16/house-hegseth-impeachment-22873869.html",
+        "title": "House Hegseth impeachment - Stars and Stripes",
+        "confidence": 80,
+        "publishedDate": "2026-09-16"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:48:18.519Z"
+  },
+  {
+    "id": 5580,
+    "pinId": 2280,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Eglinton Crosstown West Extension to Renforth Expected to Open in 2031",
+        "field": "title",
+        "before": "Eglinton Crosstown West Extension Opens to Renforth"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:48:51.442Z"
+  },
+  {
+    "id": 5581,
+    "pinId": 3390,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Metro's D Line Section 2 Subway to Beverly Hills and Century City Is Scheduled for Spring 2027",
+        "field": "title",
+        "before": "Metro's D Line Subway Reaches Beverly Hills and Century City"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T14:48:54.137Z"
+  },
+  {
+    "id": 5582,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), Chili's (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), Red Robin (Red's Big Tavern Burger), Ruby Tuesday, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Free appetizers or sides: Outback gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and Pilot Flying J (sandwich plus drink, verified through ID.me in the Pilot app). Source: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>.</li><li>Other freebies: Great Clips gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. LEGOLAND Florida gives free entry through Nov 30. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Discounts: Target 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), Publix 10% off, Tractor Supply 10% off and Winn-Dixie 11% off. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>.</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. Source: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), Chili's (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), Red Robin (Red's Big Tavern Burger), Ruby Tuesday, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [fox5ny.com] [fox13news.com] [hip2save.com]</li><li>Free appetizers or sides: Outback gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [fox5ny.com] [fox13news.com] [hip2save.com]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and Pilot Flying J (sandwich plus drink, verified through ID.me in the Pilot app). [fox5ny.com]</li><li>Other freebies: Great Clips gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. LEGOLAND Florida gives free entry through Nov 30. [fox5ny.com] [fox13news.com] [hip2save.com]</li><li>Discounts: Target 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), Publix 10% off, Tractor Supply 10% off and Winn-Dixie 11% off. [fox5ny.com] [fox13news.com]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [fox5ny.com]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T19:05:09.101Z"
+  },
+  {
+    "id": 5583,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), Chili's (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), Red Robin (Red's Big Tavern Burger), Ruby Tuesday, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: Outback gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and Pilot Flying J (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY]</li><li>Other freebies: Great Clips gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. LEGOLAND Florida gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: Target 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), Publix 10% off, Tractor Supply 10% off and Winn-Dixie 11% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), Chili's (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), Red Robin (Red's Big Tavern Burger), Ruby Tuesday, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Free appetizers or sides: Outback gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and Pilot Flying J (sandwich plus drink, verified through ID.me in the Pilot app). Source: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>.</li><li>Other freebies: Great Clips gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. LEGOLAND Florida gives free entry through Nov 30. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>, <a href=\"https://hip2save.com/?p=10985030\">Hip2Save</a>.</li><li>Discounts: Target 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), Publix 10% off, Tractor Supply 10% off and Winn-Dixie 11% off. Sources: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>, <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\">FOX 13</a>.</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. Source: <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\">Fox 5 NY</a>.</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.chilis.com/restaurant-events/veterans-day",
+        "title": "Chili's Free Veterans Day Meal (Chili's)",
+        "confidence": 90
+      },
+      {
+        "url": "https://www.redrobin.com/veterans-day",
+        "title": "Veterans Day (Red Robin)",
+        "confidence": 90
+      },
+      {
+        "url": "https://www.rubytuesday.com/veterans-day/",
+        "title": "Veterans Day Free Meal 2026 (Ruby Tuesday)",
+        "confidence": 90
+      },
+      {
+        "url": "https://www.outback.com/offers/military-mates",
+        "title": "Outback Veterans Day 2026 (Outback Steakhouse)",
+        "confidence": 90
+      },
+      {
+        "url": "https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026",
+        "title": "Great Clips Provides Free Haircuts to Veterans and Military Service Members (Great Clips)",
+        "confidence": 90
+      },
+      {
+        "url": "https://www.legoland.com/florida/deals/military-offers/",
+        "title": "U.S. Military Discounts & First Responders (LEGOLAND Florida)",
+        "confidence": 80
+      },
+      {
+        "url": "https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb",
+        "title": "Target Circle Military Discount & Deals (Target)",
+        "confidence": 85
+      },
+      {
+        "url": "https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes",
+        "title": "Publix offers a Veterans Day discount to honor our heroes (Publix)",
+        "confidence": 90
+      },
+      {
+        "url": "https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx",
+        "title": "Tractor Supply Honors America's Heroes All Month Long (Tractor Supply)",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T19:07:08.135Z"
+  },
+  {
+    "id": 5584,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/",
+        "title": "Pilot Salutes Veterans with Free Meals and Funds for Career Development (Pilot Company)",
+        "confidence": 90,
+        "publishedDate": "2026-10-23"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:21:03.410Z"
+  },
+  {
+    "id": 5585,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY] [Pilot Company]</li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off, <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off and Winn-Dixie 11% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), Chili's (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), Red Robin (Red's Big Tavern Burger), Ruby Tuesday, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: Outback gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and Pilot Flying J (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY]</li><li>Other freebies: Great Clips gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. LEGOLAND Florida gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: Target 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), Publix 10% off, Tractor Supply 10% off and Winn-Dixie 11% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:22:54.097Z"
+  },
+  {
+    "id": 5586,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY] [Pilot Company]</li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY] [Pilot Company]</li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off, <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off and Winn-Dixie 11% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:24:35.194Z"
+  },
+  {
+    "id": 5587,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.chilis.com/restaurant-events/veterans-day\"><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite></a> <a href=\"https://www.redrobin.com/veterans-day\"><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite></a> <a href=\"https://www.rubytuesday.com/veterans-day/\"><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></a></li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.outback.com/offers/military-mates\"><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></a></li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></a></li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite></a> <a href=\"https://www.legoland.com/florida/deals/military-offers/\"><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></a></li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite></a> <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite></a> <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></a></li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). [Fox 5 NY] [FOX 13] [Hip2Save] [Chili's] [Red Robin] [Ruby Tuesday]</li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. [Fox 5 NY] [FOX 13] [Hip2Save] [Outback]</li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). [Fox 5 NY] [Pilot Company]</li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. [Fox 5 NY] [FOX 13] [Hip2Save] [Great Clips] [LEGOLAND Florida]</li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off. [Fox 5 NY] [FOX 13] [Target] [Publix] [Tractor Supply]</li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. [Fox 5 NY]</li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:26:16.179Z"
+  },
+  {
+    "id": 5588,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214). <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.chilis.com/restaurant-events/veterans-day\"><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite></a> <a href=\"https://www.redrobin.com/veterans-day\"><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite></a> <a href=\"https://www.rubytuesday.com/veterans-day/\"><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></a></li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.outback.com/offers/military-mates\"><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></a></li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app). <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></a></li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://hip2save.com/?p=10985030\"><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite></a> <a href=\"https://www.legoland.com/florida/deals/military-offers/\"><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></a></li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.fox13news.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite></a> <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite></a> <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite></a> <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></a></li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead. <a href=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"><cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></a></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:27:34.566Z"
+  },
+  {
+    "id": 5589,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<h3>Free meals</h3><ul><li><strong>Golden Corral</strong>: free Thank You dinner from 4 PM until close, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a></strong>: free meal from select items, in-restaurant<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite></li><li><strong>Denny's</strong>: free Original Grand Slam, 5 AM to noon, dine-in, with military ID or DD-214<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a></strong>: free Red's Big Tavern Burger with bottomless side, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite></li><li><strong><a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a></strong>: free Everyday Fresh Meal with Garden Bar and bottomless drink, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></li><li><strong>Red Lobster</strong>: free Shrimp &amp; Chips meal, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Bob Evans</strong>: free meal from the Veterans Day menu, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Perkins</strong>: free Magnificent Seven Breakfast Meal with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>In-N-Out</strong>: free burger, fries and drink for veterans, active duty, reserves and National Guard<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free appetizers and sides</h3><ul><li><strong><a href=\"https://www.outback.com/offers/military-mates\">Outback</a></strong>: free Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></li><li><strong>Bonefish Grill</strong>: free Bang Bang Shrimp and a nonalcoholic drink<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Yardbird</strong>: free appetizer, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free coffee and quick bites</h3><ul><li><strong>Einstein Bros.</strong>: free coffee and bagel with shmear, all day<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Circle K</strong>: free medium hot or iced coffee with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Honey Dew Donuts</strong>: free coffee, any size<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a></strong>: free sandwich plus coffee or fountain drink, verified through ID.me in the Pilot app<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></li></ul><h3>Other freebies</h3><ul><li><strong><a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a></strong>: free haircut or haircut card on Nov 11, with cards redeemable through Dec 4, 2026<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite></li><li><strong><a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a></strong>: free entry through Nov 30<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></li></ul><h3>Discounts</h3><ul><li><strong><a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a></strong>: 20% off storewide, Nov 5 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite></li><li><strong>Walgreens</strong>: 20% off eligible items in store, Nov 8 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a></strong>: 10% off groceries in store<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite></li><li><strong><a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a></strong>: 10% off in stores and online<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></li></ul><h3>Before you go</h3><ul><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Free meals on Nov 11, 2026: Golden Corral (Thank You dinner from 4 PM, dine-in), <a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a> (select items, in-restaurant), Red Lobster (Shrimp &amp; Chips, dine-in), <a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a> (Red's Big Tavern Burger), <a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a>, Bob Evans, Perkins, In-N-Out (burger, fries, drink) and Denny's (Original Grand Slam, 5 AM to noon, dine-in, military ID or DD-214)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></li><li>Free appetizers or sides: <a href=\"https://www.outback.com/offers/military-mates\">Outback</a> gives a Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027). Bonefish Grill gives Bang Bang Shrimp and Yardbird gives an appetizer<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></li><li>Free coffee and quick bites: Einstein Bros. (coffee and bagel with shmear, all day), Circle K (medium coffee with military ID), Honey Dew Donuts (coffee) and <a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a> (sandwich plus drink, verified through ID.me in the Pilot app)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></li><li>Other freebies: <a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a> gives a free haircut or a haircut card on Nov 11, with cards redeemable through Dec 4, 2026. <a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a> gives free entry through Nov 30<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></li><li>Discounts: <a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a> 20% off storewide (Nov 5 to 11), Walgreens 20% off (Nov 8 to 11), <a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a> 10% off and <a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a> 10% off<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></li><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:28:49.462Z"
+  },
+  {
+    "id": 5590,
+    "pinId": 20936,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<h3>Free meals</h3><ul><li><strong>Golden Corral</strong>: free Thank You dinner from 4 PM until close, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a></strong>: free meal from select items, in-restaurant<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite></li><li><strong>Denny's</strong>: free Original Grand Slam, 5 AM to noon, dine-in, with military ID or DD-214<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a></strong>: free Red's Big Tavern Burger with bottomless side, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite></li><li><strong><a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a></strong>: free Everyday Fresh Meal with Garden Bar and bottomless drink, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></li><li><strong>Red Lobster</strong>: free Shrimp &amp; Chips meal, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://assets.ctfassets.net/81w9kb7f1jq4/3brre0e1ubaV9fEAkyKRal/237d64a2180495d9c5641b414f35f773/33604_BE_VETS-27NOV_5.5x10.5_FINAL_LR.pdf\">Bob Evans</a></strong>: one free item from the Veterans Day menu (Country Biscuit Breakfast, Country-Fried Steak, Brioche French Toast and more), dine-in, beverage not included, with proof of service<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://assets.ctfassets.net/81w9kb7f1jq4/3brre0e1ubaV9fEAkyKRal/237d64a2180495d9c5641b414f35f773/33604_BE_VETS-27NOV_5.5x10.5_FINAL_LR.pdf\"></cite></li><li><strong>Perkins</strong>: free Magnificent Seven Breakfast Meal with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>In-N-Out</strong>: free burger, fries and drink for veterans, active duty, reserves and National Guard<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free appetizers and sides</h3><ul><li><strong><a href=\"https://www.outback.com/offers/military-mates\">Outback</a></strong>: free Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></li><li><strong>Bonefish Grill</strong>: free Bang Bang Shrimp and a nonalcoholic drink<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Yardbird</strong>: free appetizer, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free coffee and quick bites</h3><ul><li><strong>Einstein Bros.</strong>: free coffee and bagel with shmear, all day<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Circle K</strong>: free medium hot or iced coffee with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Honey Dew Donuts</strong>: free coffee, any size<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a></strong>: free sandwich plus coffee or fountain drink, verified through ID.me in the Pilot app<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></li></ul><h3>Other freebies</h3><ul><li><strong><a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a></strong>: free haircut or haircut card on Nov 11, with cards redeemable through Dec 4, 2026<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite></li><li><strong><a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a></strong>: free entry through Nov 30<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></li></ul><h3>Discounts</h3><ul><li><strong><a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a></strong>: 20% off storewide, Nov 5 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite></li><li><strong>Walgreens</strong>: 20% off eligible items in store, Nov 8 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a></strong>: 10% off groceries in store<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite></li><li><strong><a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a></strong>: 10% off in stores and online<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></li></ul><h3>Before you go</h3><ul><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<h3>Free meals</h3><ul><li><strong>Golden Corral</strong>: free Thank You dinner from 4 PM until close, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.chilis.com/restaurant-events/veterans-day\">Chili's</a></strong>: free meal from select items, in-restaurant<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.chilis.com/restaurant-events/veterans-day\"></cite></li><li><strong>Denny's</strong>: free Original Grand Slam, 5 AM to noon, dine-in, with military ID or DD-214<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite></li><li><strong><a href=\"https://www.redrobin.com/veterans-day\">Red Robin</a></strong>: free Red's Big Tavern Burger with bottomless side, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.redrobin.com/veterans-day\"></cite></li><li><strong><a href=\"https://www.rubytuesday.com/veterans-day/\">Ruby Tuesday</a></strong>: free Everyday Fresh Meal with Garden Bar and bottomless drink, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.rubytuesday.com/veterans-day/\"></cite></li><li><strong>Red Lobster</strong>: free Shrimp &amp; Chips meal, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Bob Evans</strong>: free meal from the Veterans Day menu, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Perkins</strong>: free Magnificent Seven Breakfast Meal with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>In-N-Out</strong>: free burger, fries and drink for veterans, active duty, reserves and National Guard<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free appetizers and sides</h3><ul><li><strong><a href=\"https://www.outback.com/offers/military-mates\">Outback</a></strong>: free Bloomin' Onion and a Coca-Cola on Nov 10 and 11, plus a Hero's Meal for a future visit through Dine Rewards (Nov 16, 2026 to May 2, 2027)<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.outback.com/offers/military-mates\"></cite></li><li><strong>Bonefish Grill</strong>: free Bang Bang Shrimp and a nonalcoholic drink<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Yardbird</strong>: free appetizer, dine-in<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul><h3>Free coffee and quick bites</h3><ul><li><strong>Einstein Bros.</strong>: free coffee and bagel with shmear, all day<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Circle K</strong>: free medium hot or iced coffee with military ID<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong>Honey Dew Donuts</strong>: free coffee, any size<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\">Pilot Flying J</a></strong>: free sandwich plus coffee or fountain drink, verified through ID.me in the Pilot app<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://newsroom.pilotcompany.com/pilot-salutes-veterans-with-free-meals-and-funds-for-career-development/\"></cite></li></ul><h3>Other freebies</h3><ul><li><strong><a href=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\">Great Clips</a></strong>: free haircut or haircut card on Nov 11, with cards redeemable through Dec 4, 2026<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://hip2save.com/?p=10985030\"></cite><cite data-ref=\"https://www.greatclips.com/about-us/news-room/vets-day-free-haircuts-2026\"></cite></li><li><strong><a href=\"https://www.legoland.com/florida/deals/military-offers/\">LEGOLAND Florida</a></strong>: free entry through Nov 30<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.legoland.com/florida/deals/military-offers/\"></cite></li></ul><h3>Discounts</h3><ul><li><strong><a href=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\">Target</a></strong>: 20% off storewide, Nov 5 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.fox13news.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://www.target.com/l/target-circle-military-appreciation/-/N-ydibb\"></cite></li><li><strong>Walgreens</strong>: 20% off eligible items in store, Nov 8 to 11<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li><li><strong><a href=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\">Publix</a></strong>: 10% off groceries in store<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.publix.com/newsroom/news-stories/11092026---publix-offers-a-veterans-day-discount-to-honor-our-heroes\"></cite></li><li><strong><a href=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\">Tractor Supply</a></strong>: 10% off in stores and online<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite><cite data-ref=\"https://corporate.tractorsupply.com/newsroom/news-releases/news-releases-details/2026/Tractor-Supply-Honors-Americas-Heroes-All-Month-Long/default.aspx\"></cite></li></ul><h3>Before you go</h3><ul><li>Most offers need proof of service (military ID, DD-214 or ID.me), and terms vary by location, so call ahead<cite data-ref=\"https://www.fox5ny.com/news/veterans-day-2026-deals\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://assets.ctfassets.net/81w9kb7f1jq4/3brre0e1ubaV9fEAkyKRal/237d64a2180495d9c5641b414f35f773/33604_BE_VETS-27NOV_5.5x10.5_FINAL_LR.pdf",
+        "title": "Honored to Serve Veterans & Military menu (Bob Evans)",
+        "confidence": 90
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-11-10T20:31:11.874Z"
+  },
+  {
+    "id": 5591,
+    "pinId": 5897,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>Amgen said MariTide (maridebart cafraglutide) showed up to about 20% average weight loss at week 52 in people with obesity or overweight without type 2 diabetes, with no weight loss plateau<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://consultantlive.com/view/obesity-drug-maritide-achieves-up-to-20-weight-loss-in-phase-2-trial\"></cite></li><li>In people with obesity or overweight and type 2 diabetes, weight loss reached up to about 17% and average HbA1c fell by up to 2.2 percentage points<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://hlth.com/insights/news/amgen-reports-significant-weight-loss-with-maritide-in-phase-2-obesity-study-2024-11-29\"></cite></li><li>The most common adverse events were gastrointestinal; the discontinuation rate in the dose-escalation arms due to any adverse event was about 11%, with no additional safety signals identified<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite></li><li>Amgen also reported improvements in blood pressure, triglycerides and hs-CRP across doses, and no association with bone mineral density changes<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite></li><li>Research chief Jay Bradner said the results gave Amgen confidence to start MARITIME, a Phase 3 program across obesity and related conditions<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://www.patientcareonline.com/view/amgen-reports-promising-phase-2-data-on-maritide-for-obesity-type-2-diabetes-management\"></cite></li><li>Pfizer entered the same race by completing its roughly US$7 billion acquisition of Metsera on 13 November 2025; see <a href=\"/pin/5911\">Pfizer Completes Metsera Obesity Acquisition</a><cite data-ref=\"https://www.nasdaq.com/press-release/pfizer-completes-acquisition-metsera-2025-11-13\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Amgen said MariTide (maridebart cafraglutide) showed up to about 20% average weight loss at week 52 in people with obesity or overweight without type 2 diabetes, with no weight loss plateau<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://consultantlive.com/view/obesity-drug-maritide-achieves-up-to-20-weight-loss-in-phase-2-trial\"></cite></li><li>In people with obesity or overweight and type 2 diabetes, weight loss reached up to about 17% and average HbA1c fell by up to 2.2 percentage points<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://hlth.com/insights/news/amgen-reports-significant-weight-loss-with-maritide-in-phase-2-obesity-study-2024-11-29\"></cite></li><li>The most common adverse events were gastrointestinal; the discontinuation rate in the dose-escalation arms due to any adverse event was about 11%, with no additional safety signals identified<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite></li><li>Amgen also reported improvements in blood pressure, triglycerides and hs-CRP across doses, and no association with bone mineral density changes<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite></li><li>Research chief Jay Bradner said the results gave Amgen confidence to start MARITIME, a Phase 3 program across obesity and related conditions<cite data-ref=\"https://www.amgen.com/newsroom/press-releases/2024/11/amgen-announces-robust-weight-loss-with-maritide-in-people-living-with-obesity-or-overweight-at-52-weeks-in-a-phase-2-study\"></cite><cite data-ref=\"https://www.patientcareonline.com/view/amgen-reports-promising-phase-2-data-on-maritide-for-obesity-type-2-diabetes-management\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": "Added link to the Pfizer-Metsera pin (5911)",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5592,
+    "pinId": 5865,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 20938,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5593,
+    "pinId": 5864,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 5865,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5594,
+    "pinId": 19783,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 20940,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5595,
+    "pinId": 1860,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 19783,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5596,
+    "pinId": 2861,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 1860,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
+  },
+  {
+    "id": 5597,
+    "pinId": 5897,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": 20938,
+        "field": "parentId",
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": "Threaded into the GLP-1 thread",
+    "utcCreatedDateTime": "2026-11-10T22:36:05.857Z"
   }
 ]
