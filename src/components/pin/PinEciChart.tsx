@@ -115,10 +115,14 @@ function Chart({
   for (let yr = firstYear; time(`${yr}-01-01`) < frame.t1; yr++) years.push(yr);
 
   const pick = (clientX: number, clientY: number): EciPoint | null => {
-    const box = svg.current?.getBoundingClientRect();
-    if (!box) return null;
-    const px = ((clientX - box.left) / box.width) * VIEW.w;
-    const py = ((clientY - box.top) / box.height) * VIEW.h;
+    const el = svg.current;
+    const ctm = el?.getScreenCTM();
+    if (!el || !ctm) return null;
+    // The viewBox can be letterboxed inside the element (expanded view caps the
+    // height), so map through the real screen transform, not the bounding box.
+    const at = new DOMPoint(clientX, clientY).matrixTransform(ctm.inverse());
+    const px = at.x;
+    const py = at.y;
     let best: EciPoint | null = null;
     let bestD = 20 * 20;
     for (const p of data.points) {
