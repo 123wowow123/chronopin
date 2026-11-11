@@ -733,6 +733,13 @@ const es: Messages = {
       abv: 'Alcohol por volumen',
       reviews: 'Reseñas de cata',
     },
+    eciChart: {
+      heading: 'Capacidades a lo largo del tiempo',
+      alt: '{count} modelos de IA por fecha de lanzamiento frente a su puntuación en el Índice de Capacidades de Epoch AI. Este pin: {model}.',
+      eci: 'Índice de Capacidades de Epoch (ECI)',
+      note: 'Más alto es mejor. Línea gris: la mejor puntuación hasta la fecha; los puntos huecos son modelos de pesos abiertos; la barra vertical es el intervalo de confianza.',
+      source: 'ECI de Epoch AI',
+    },
     modelChart: {
       heading: 'Coste frente a calidad',
       asOf: 'Puntuaciones de la arena a {date}',
@@ -857,6 +864,8 @@ const es: Messages = {
     candidateSong: 'Canción del año',
     candidateArtist: 'Mejor artista nuevo',
     candidateEntry: 'Canciones de la final',
+    candidateSetlist: 'Canciones del repertorio',
+    candidatePlayed: 'Precio de mercado de que se toque',
     candidateNominee: 'Precio de mercado de ser nominado',
     candidateWinner: 'Precio de mercado de ganar',
     competitorsHeading: 'Principales competidores',

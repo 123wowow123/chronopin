@@ -731,6 +731,13 @@ const it: Messages = {
       abv: 'Gradazione alcolica',
       reviews: 'Recensioni di assaggio',
     },
+    eciChart: {
+      heading: 'Capacità nel tempo',
+      alt: '{count} modelli di IA per data di uscita rispetto al punteggio nell\'Indice di Capacità di Epoch AI. Questo pin: {model}.',
+      eci: 'Indice di Capacità di Epoch (ECI)',
+      note: 'Più alto è meglio. Linea grigia: il miglior punteggio finora; i punti vuoti sono modelli a pesi aperti; la barra verticale è l\'intervallo di confidenza.',
+      source: 'ECI di Epoch AI',
+    },
     modelChart: {
       heading: 'Costo e qualità',
       asOf: 'Punteggi dell’arena al {date}',
@@ -855,6 +862,8 @@ const it: Messages = {
     candidateSong: "Canzone dell'anno",
     candidateArtist: 'Miglior artista emergente',
     candidateEntry: 'Brani della finale',
+    candidateSetlist: 'Brani della scaletta',
+    candidatePlayed: 'Prezzo di mercato per essere suonato',
     candidateNominee: 'Prezzo di mercato per la nomination',
     candidateWinner: 'Prezzo di mercato per la vittoria',
     competitorsHeading: 'Principali concorrenti',

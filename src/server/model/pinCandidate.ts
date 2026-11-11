@@ -58,7 +58,7 @@ export function candidatesProblem(body: unknown): StoredPinCandidate[] | string 
   if (!Array.isArray(body) || body.length > 200) return 'candidates is a list of up to 200 rows.';
   const rows: StoredPinCandidate[] = [];
   for (const item of body as Record<string, unknown>[]) {
-    if (!isCandidateCategory(item.category)) return 'category must be record, album, song, artist or entry.';
+    if (!isCandidateCategory(item.category)) return 'category must be record, album, song, artist, entry or setlist.';
     if (!Number.isInteger(item.rank) || (item.rank as number) < 1) return 'rank is a whole number from 1.';
     if (typeof item.name !== 'string' || !item.name.trim() || item.name.length > 200) return 'name is 1-200 characters.';
     if (item.odds != null && (!Number.isInteger(item.odds) || (item.odds as number) < 0 || (item.odds as number) > 100)) return 'odds is 0-100 cents.';
@@ -70,7 +70,7 @@ export function candidatesProblem(body: unknown): StoredPinCandidate[] | string 
       artist: typeof item.artist === 'string' && item.artist.trim() ? item.artist.trim() : null,
       workPinId: Number.isInteger(item.workPinId) ? (item.workPinId as number) : null,
       odds: (item.odds as number | null) ?? null,
-      oddsLabel: item.oddsLabel === 'nominee' || item.oddsLabel === 'winner' ? item.oddsLabel : null,
+      oddsLabel: item.oddsLabel === 'nominee' || item.oddsLabel === 'winner' || item.oddsLabel === 'played' ? item.oddsLabel : null,
       sourceUrl: typeof item.sourceUrl === 'string' && /^https?:\/\/\S+$/i.test(item.sourceUrl) ? item.sourceUrl : null,
       previewUrl: typeof item.previewUrl === 'string' && /^https?:\/\/\S+$/i.test(item.previewUrl) ? item.previewUrl : null,
       asOf: typeof item.asOf === 'string' ? item.asOf.slice(0, 10) : new Date().toISOString().slice(0, 10),

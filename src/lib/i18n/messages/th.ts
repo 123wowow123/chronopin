@@ -730,6 +730,13 @@ const th: Messages = {
       abv: 'ปริมาณแอลกอฮอล์',
       reviews: 'รีวิวรสชาติ',
     },
+    eciChart: {
+      heading: 'ความสามารถตามเวลา',
+      alt: 'โมเดล AI {count} รายการตามวันที่เปิดตัว เทียบกับคะแนนดัชนีความสามารถของ Epoch AI พินนี้: {model}',
+      eci: 'ดัชนีความสามารถของ Epoch (ECI)',
+      note: 'ยิ่งสูงยิ่งดี เส้นสีเทา: คะแนนสูงสุดจนถึงขณะนั้น จุดกลวงคือโมเดลแบบ open-weights แท่งแนวตั้งคือช่วงความเชื่อมั่น',
+      source: 'ECI ของ Epoch AI',
+    },
     modelChart: {
       heading: 'ต้นทุนเทียบกับคุณภาพ',
       asOf: 'คะแนนอารีนา ณ {date}',
@@ -854,6 +861,8 @@ const th: Messages = {
     candidateSong: 'เพลงแห่งปี',
     candidateArtist: 'ศิลปินหน้าใหม่ยอดเยี่ยม',
     candidateEntry: 'เพลงในรอบชิงชนะเลิศ',
+    candidateSetlist: 'เพลงในเซ็ตลิสต์',
+    candidatePlayed: 'ราคาตลาดว่าจะถูกเล่น',
     candidateNominee: 'ราคาตลาดว่าจะได้เข้าชิง',
     candidateWinner: 'ราคาตลาดว่าจะชนะ',
     competitorsHeading: 'คู่แข่งหลัก',

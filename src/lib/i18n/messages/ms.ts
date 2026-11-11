@@ -738,6 +738,13 @@ const ms: Messages = {
       abv: 'Kandungan alkohol',
       reviews: 'Ulasan rasa',
     },
+    eciChart: {
+      heading: 'Keupayaan dari semasa ke semasa',
+      alt: '{count} model AI mengikut tarikh keluaran berbanding skor Indeks Keupayaan Epoch AI. Pin ini: {model}.',
+      eci: 'Indeks Keupayaan Epoch (ECI)',
+      note: 'Lebih tinggi lebih baik. Garisan kelabu: skor terbaik setakat itu; titik kosong ialah model berat terbuka; palang menegak ialah selang keyakinan.',
+      source: 'ECI Epoch AI',
+    },
     modelChart: {
       heading: 'Kos berbanding kualiti',
       asOf: 'Skor arena setakat {date}',
@@ -862,6 +869,8 @@ const ms: Messages = {
     candidateSong: 'Lagu Tahun Ini',
     candidateArtist: 'Artis Baharu Terbaik',
     candidateEntry: 'Lagu Akhir Besar',
+    candidateSetlist: 'Lagu senarai persembahan',
+    candidatePlayed: 'Harga pasaran untuk dimainkan',
     candidateNominee: 'Harga pasaran untuk dicalonkan',
     candidateWinner: 'Harga pasaran untuk menang',
     competitorsHeading: 'Pesaing utama',

@@ -733,6 +733,13 @@ const ja: Messages = {
       abv: 'アルコール度数',
       reviews: '試食レビュー',
     },
+    eciChart: {
+      heading: '能力の推移',
+      alt: '公開日ごとのAIモデル{count}件とEpoch AI能力指数のスコア。このピン：{model}。',
+      eci: 'Epoch能力指数（ECI）',
+      note: '高いほど良い。グレーの線：その時点までの最高スコア。白抜きの点はオープンウェイトモデル。縦のバーは信頼区間。',
+      source: 'Epoch AI ECI',
+    },
     modelChart: {
       heading: 'コストと品質',
       asOf: '{date}時点のアリーナスコア',
@@ -857,6 +864,8 @@ const ja: Messages = {
     candidateSong: '最優秀楽曲賞',
     candidateArtist: '最優秀新人賞',
     candidateEntry: 'グランドファイナルの出場曲',
+    candidateSetlist: 'セットリストの曲',
+    candidatePlayed: '演奏されるマーケット価格',
     candidateNominee: 'ノミネートの市場価格',
     candidateWinner: '受賞の市場価格',
     competitorsHeading: '主な競合製品',

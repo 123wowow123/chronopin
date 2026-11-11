@@ -16,6 +16,7 @@ const TITLE_KEYS = {
   song: "pin.candidateSong",
   artist: "pin.candidateArtist",
   entry: "pin.candidateEntry",
+  setlist: "pin.candidateSetlist",
 } as const satisfies Record<CandidateCategory, string>;
 
 // The big four awards categories and who is expected in them (PinCandidate,
@@ -62,7 +63,7 @@ export function PinCandidates({
         {groups.map(({ category, rows }) => (
           <div
             key={category}
-            className={`surface rounded-lg p-3${category === "entry" ? " sm:col-span-2" : ""}`}
+            className={`surface rounded-lg p-3${category === "entry" || category === "setlist" ? " sm:col-span-2" : ""}`}
           >
             <h3 className="flex items-center gap-1.5 text-sm font-semibold text-ink">
               <span aria-hidden>{category === "artist" ? "🌟" : "🏆"}</span>
@@ -72,10 +73,12 @@ export function PinCandidates({
               {t(
                 rows[0].oddsLabel === "winner"
                   ? "pin.candidateWinner"
-                  : "pin.candidateNominee",
+                  : rows[0].oddsLabel === "played"
+                    ? "pin.candidatePlayed"
+                    : "pin.candidateNominee",
               )}
             </p>
-            {category === "entry" ? (
+            {category === "entry" || category === "setlist" ? (
               <EntryTracklist rows={rows} pinId={pinId} />
             ) : (
               <ol className="flex flex-col gap-2.5">

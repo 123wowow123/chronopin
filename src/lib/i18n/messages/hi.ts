@@ -736,6 +736,13 @@ const hi: Messages = {
       abv: 'अल्कोहल (ABV)',
       reviews: 'स्वाद समीक्षाएँ',
     },
+    eciChart: {
+      heading: 'समय के साथ क्षमताएँ',
+      alt: 'रिलीज़ तिथि के अनुसार {count} AI मॉडल और उनका Epoch AI क्षमता सूचकांक स्कोर। यह पिन: {model}।',
+      eci: 'Epoch क्षमता सूचकांक (ECI)',
+      note: 'ऊँचा बेहतर है। धूसर रेखा: अब तक का सर्वश्रेष्ठ स्कोर; खोखले बिंदु ओपन-वेट मॉडल हैं; ऊर्ध्वाधर पट्टी विश्वास अंतराल है।',
+      source: 'Epoch AI ECI',
+    },
     modelChart: {
       heading: 'लागत बनाम गुणवत्ता',
       asOf: '{date} तक के एरीना स्कोर',
@@ -860,6 +867,8 @@ const hi: Messages = {
     candidateSong: 'सॉन्ग ऑफ़ द ईयर',
     candidateArtist: 'बेस्ट न्यू आर्टिस्ट',
     candidateEntry: 'ग्रैंड फ़ाइनल की प्रविष्टियाँ',
+    candidateSetlist: 'सेटलिस्ट के गाने',
+    candidatePlayed: 'गाना बजाए जाने का बाज़ार भाव',
     candidateNominee: 'नामांकन का बाज़ार भाव',
     candidateWinner: 'जीत का बाज़ार भाव',
     competitorsHeading: 'मुख्य प्रतिस्पर्धी',

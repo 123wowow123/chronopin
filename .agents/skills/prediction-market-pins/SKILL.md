@@ -41,7 +41,32 @@ A market on a song contest's winner gets a **Contenders** panel with each entry'
 - Preview audio: iTunes Search (`itunes.apple.com/search?term=<performer song>&entity=song`), taking `previewUrl`
   only when track and artist both match. No match: leave `previewUrl` null (no play button on that row). Never
   invent a URL, a song or an entry; list every country in the contest, not only the ones with odds.
-- Songs come from the organiser's entry list; cite it. Translations stay with the translation agent.
+- Songs come from the organiser's entry list; cite it. Cross-check titles and performers in a second source (Wikipedia's
+  participants table, the broadcaster's artist guide). Spell titles as the organiser does; for a two-country-spelling
+  case (Bhutan "Lhayi Semo") use the organiser's.
+- Prices: the market page's Yes price in cents on the day you read it, `asOf` that day (the page may show a rounded
+  percentage that differs from the price; use the price). Rank by price, favourite first.
+- iTunes traps: a fuzzy search returns a different song (Thailand's "Aroma" first matched "Pos Ronda Aroma
+  Misteri"); retry with the performer's other stage name or the `th`/`vn`/`kr` storefront. Accept a stage-name
+  variant (Laos "Thinla" is "Thinlamphone", Thailand's is "MANG & Daou Pittaya") only when the title matches.
+- Media (three per pin): the contest's own press images, not Commons first. Official site images are served from the
+  organiser's CMS (`cms.eurovisionasia.com/api/media/file/...`, send the site as `Referer`): the trophy, the running-
+  order graphic, an on-stage or rehearsal shot of an entry. View each; skip a portrait you cannot tie to a named
+  entry. Credit "(EBU / <contest>)" with the organiser's news page as `authorUrl`; store in Azure (`pin-media-azure`).
+- Template for the whole backfill (candidates + Azure upload + credits + readback):
+  `scripts/markets/eurovision-asia-backfill-2026-11-11.mjs` (dry run by default, `--apply` writes to production).
+  Re-run it on contest day to refresh prices, and after the final write the result in the pin.
+- Translations stay with the translation agent.
+
+### Setlist markets (which songs a headliner plays; Jay-Z Super Bowl LXI, pin 20934)
+Same panel and control, with `category: "setlist"` and `oddsLabel: "played"` (migration 0258; heading "Setlist songs",
+subtitle "Market price to be played"). List **every** song the market offers (25 for Jay-Z), `name` as Polymarket
+spells it (masked profanity stays masked), `artist` as the credited recording on iTunes (a feature is credited to the
+lead: Rihanna's "Umbrella", Beyoncé's "Crazy in Love"). Illiquid songs show stale last prices (92¢ with $0 volume):
+use the page's **displayed percentage**, which is the midpoint, never the raw cent price. Media: the announcement
+photo (Roc Nation, via JamBase, `Photo via Roc Nation`) and the venue (Commons, CC BY 2.0, credited); the NFL/Apple
+newsroom pages had no downloadable press photo. Script: `scripts/markets/jayz-halftime-backfill-2026-11-11.mjs`
+(`--local` writes to localhost; production needs 0258 and the setlist code deployed first).
 
 ## Track record (/predictions)
 After creating pins, call `prediction_accuracy` (`apply: true`): it records each market's odds once and settles closed

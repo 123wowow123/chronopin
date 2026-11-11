@@ -807,6 +807,13 @@ const ar: Messages = {
       abv: 'نسبة الكحول بالحجم',
       reviews: 'مراجعات التذوق',
     },
+    eciChart: {
+      heading: 'القدرات عبر الزمن',
+      alt: '{count} نموذج ذكاء اصطناعي حسب تاريخ الإصدار مقابل درجته في مؤشر القدرات من Epoch AI. هذا التثبيت: {model}.',
+      eci: 'مؤشر القدرات من Epoch ‏(ECI)',
+      note: 'الأعلى أفضل. الخط الرمادي: أفضل درجة حتى الآن؛ النقاط المجوّفة نماذج مفتوحة الأوزان؛ الشريط العمودي هو فاصل الثقة.',
+      source: 'ECI من Epoch AI',
+    },
     modelChart: {
       heading: 'التكلفة مقابل الجودة',
       asOf: 'نتائج الساحة حتى {date}',
@@ -931,6 +938,8 @@ const ar: Messages = {
     candidateSong: 'أغنية العام',
     candidateArtist: 'أفضل فنان جديد',
     candidateEntry: 'المشاركات في النهائي الكبير',
+    candidateSetlist: 'أغاني قائمة العرض',
+    candidatePlayed: 'سعر السوق لعزف الأغنية',
     candidateNominee: 'سعر السوق للترشح',
     candidateWinner: 'سعر السوق للفوز',
     competitorsHeading: 'أبرز المنافسين',

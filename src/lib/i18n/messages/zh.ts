@@ -734,6 +734,13 @@ const zh: Messages = {
       abv: '酒精度',
       reviews: '试吃评测',
     },
+    eciChart: {
+      heading: '能力随时间变化',
+      alt: '按发布日期排列的{count}个AI模型及其Epoch AI能力指数得分。此图钉：{model}。',
+      eci: 'Epoch能力指数（ECI）',
+      note: '越高越好。灰线：迄今最高得分；空心点为开放权重模型；竖线为置信区间。',
+      source: 'Epoch AI ECI',
+    },
     modelChart: {
       heading: '成本与质量',
       asOf: '竞技场评分截至 {date}',
@@ -858,6 +865,8 @@ const zh: Messages = {
     candidateSong: '年度歌曲',
     candidateArtist: '最佳新人',
     candidateEntry: '总决赛参赛歌曲',
+    candidateSetlist: '演出歌单歌曲',
+    candidatePlayed: '市场对其被演唱的定价',
     candidateNominee: '获提名的市场价格',
     candidateWinner: '获奖的市场价格',
     competitorsHeading: '主要竞争产品',

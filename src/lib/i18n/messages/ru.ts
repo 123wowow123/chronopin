@@ -742,6 +742,13 @@ const ru: Messages = {
       abv: 'Содержание алкоголя',
       reviews: 'Дегустационные обзоры',
     },
+    eciChart: {
+      heading: 'Возможности во времени',
+      alt: '{count} моделей ИИ по дате выхода и их баллы в Индексе возможностей Epoch AI. Этот пин: {model}.',
+      eci: 'Индекс возможностей Epoch (ECI)',
+      note: 'Чем выше, тем лучше. Серая линия: лучший результат на тот момент; полые точки — модели с открытыми весами; вертикальная полоса — доверительный интервал.',
+      source: 'ECI от Epoch AI',
+    },
     modelChart: {
       heading: 'Стоимость и качество',
       asOf: 'Оценки арены на {date}',
@@ -866,6 +873,8 @@ const ru: Messages = {
     candidateSong: 'Песня года',
     candidateArtist: 'Лучший новый исполнитель',
     candidateEntry: 'Песни гранд-финала',
+    candidateSetlist: 'Песни сет-листа',
+    candidatePlayed: 'Рыночная цена исполнения',
     candidateNominee: 'Рыночная цена номинации',
     candidateWinner: 'Рыночная цена победы',
     competitorsHeading: 'Основные конкуренты',

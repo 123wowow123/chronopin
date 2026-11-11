@@ -733,6 +733,13 @@ const ko: Messages = {
       abv: '알코올 도수',
       reviews: '시식 후기',
     },
+    eciChart: {
+      heading: '시간에 따른 역량',
+      alt: '출시일별 AI 모델 {count}개와 Epoch AI 역량 지수 점수. 이 핀: {model}.',
+      eci: 'Epoch 역량 지수(ECI)',
+      note: '높을수록 좋습니다. 회색 선: 그때까지의 최고 점수. 속이 빈 점은 오픈 웨이트 모델이며, 세로 막대는 신뢰구간입니다.',
+      source: 'Epoch AI ECI',
+    },
     modelChart: {
       heading: '비용 대비 품질',
       asOf: '{date} 기준 아레나 점수',
@@ -857,6 +864,8 @@ const ko: Messages = {
     candidateSong: '올해의 노래',
     candidateArtist: '최우수 신인',
     candidateEntry: '그랜드 파이널 출전곡',
+    candidateSetlist: '세트리스트 곡',
+    candidatePlayed: '연주될 시장 가격',
     candidateNominee: '후보 지명 시장 가격',
     candidateWinner: '수상 시장 가격',
     competitorsHeading: '주요 경쟁 제품',

@@ -738,6 +738,13 @@ const en = {
       abv: 'Alcohol by volume',
       reviews: 'Tasting reviews',
     },
+    eciChart: {
+      heading: 'Capabilities over time',
+      alt: '{count} AI models by release date against Epoch AI Capabilities Index score. This pin: {model}.',
+      eci: 'Epoch Capabilities Index (ECI)',
+      note: 'Higher is better. Grey line: the best score so far; hollow dots are open-weights models; the vertical bar is the 90% confidence interval.',
+      source: 'Epoch AI ECI',
+    },
     modelChart: {
       heading: 'Cost vs. quality',
       asOf: 'Arena scores of {date}',
@@ -862,6 +869,8 @@ const en = {
     candidateSong: 'Song of the Year',
     candidateArtist: 'Best New Artist',
     candidateEntry: 'Grand Final entries',
+    candidateSetlist: 'Setlist songs',
+    candidatePlayed: 'Market price to be played',
     candidateNominee: 'Market price to be nominated',
     candidateWinner: 'Market price to win',
     competitorsHeading: 'Main competitors',

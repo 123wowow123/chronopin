@@ -737,6 +737,13 @@ const vi: Messages = {
       abv: 'Nồng độ cồn',
       reviews: 'Đánh giá hương vị',
     },
+    eciChart: {
+      heading: 'Năng lực theo thời gian',
+      alt: '{count} mô hình AI theo ngày phát hành so với điểm Chỉ số Năng lực của Epoch AI. Ghim này: {model}.',
+      eci: 'Chỉ số Năng lực Epoch (ECI)',
+      note: 'Càng cao càng tốt. Đường xám: điểm tốt nhất tính đến thời điểm đó; chấm rỗng là mô hình trọng số mở; thanh dọc là khoảng tin cậy.',
+      source: 'ECI của Epoch AI',
+    },
     modelChart: {
       heading: 'Chi phí so với chất lượng',
       asOf: 'Điểm đấu trường tính đến {date}',
@@ -861,6 +868,8 @@ const vi: Messages = {
     candidateSong: 'Bài hát của năm',
     candidateArtist: 'Nghệ sĩ mới xuất sắc nhất',
     candidateEntry: 'Các bài dự thi chung kết',
+    candidateSetlist: 'Các bài trong setlist',
+    candidatePlayed: 'Giá thị trường để được biểu diễn',
     candidateNominee: 'Giá thị trường để được đề cử',
     candidateWinner: 'Giá thị trường để chiến thắng',
     competitorsHeading: 'Đối thủ chính',

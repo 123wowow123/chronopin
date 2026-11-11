@@ -159,7 +159,7 @@ export function findPinned(points: ModelPoint[], key: string): ModelPoint | null
 type ModelPin = { id: number; title: string; words: string[] };
 export type ModelPinIndex = ModelPin[];
 
-const wordsOf = (text: string) =>
+export const wordsOf = (text: string) =>
   text
     .toLowerCase()
     .replace(/[‐‑‒–—]/g, '-')
@@ -189,7 +189,7 @@ export function modelPinIndex(): Promise<ModelPinIndex> {
   return promise;
 }
 
-function hasRun(words: string[], run: string[]): boolean {
+export function hasRun(words: string[], run: string[]): boolean {
   if (!run.length) return false;
   for (let i = 0; i + run.length <= words.length; i++) {
     if (run.every((w, j) => words[i + j] === w)) return true;
@@ -224,7 +224,7 @@ const NAME_TAIL = new Set(['it', 'instruct', 'chat', 'base', 'turbo']);
 // model's pin, not this one's ("DeepSeek-V3.2-Exp Released" is the pin for
 // "deepseek v3.2 exp", so "deepseek v3.2" goes to the pin after it), unless it
 // is the only pin there is.
-function pinFor(index: ModelPinIndex, key: string, keys: string[][]): ModelPin | undefined {
+export function pinFor(index: ModelPinIndex, key: string, keys: string[][]): ModelPin | undefined {
   const run = wordsOf(key);
   const named = (pin: ModelPin, words: string[]) => hasRun(pin.words, words) || hasFamilySize(pin.words, words);
   // Longer keys read the way the pins are matched: without their trailing
