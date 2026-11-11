@@ -82,6 +82,8 @@ export function marketCapWeight(marketCap: number | null | undefined): number {
 // outranks an ordinary pin on a crowded day without owning it outright.
 export const IMPACT_FLOOR = 3;
 export const IMPACT_HIGH = 7;
+// From this score a pin is always on the day's timeline (sampleBag).
+export const IMPACT_SURE = 5;
 const IMPACT_PER_POINT = 0.5;
 
 export function marketImpactWeight(impact: number | null | undefined): number {
@@ -187,7 +189,8 @@ export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: str
   const keyed = timelineDayCandidates(pins, keepId).map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   // A special day's freebies pin is never left to the draw: tripled odds still
   // lost on a crowded day, and it is the card readers open the day for.
-  const sure = new Set(pins.filter((p) => freebiesWeight(p) > 1).map((p) => p.id));
+  // A market-moving pin (impact IMPACT_SURE or more) is never left to the draw either.
+  const sure = new Set(pins.filter((p) => freebiesWeight(p) > 1 || (p.marketImpact ?? 0) >= IMPACT_SURE).map((p) => p.id));
   const rank = (id: number) => (id === keepId ? 0 : sure.has(id) ? 1 : 2);
   keyed.sort((a, b) => rank(a.id) - rank(b.id) || b.key - a.key || a.id - b.id);
   const caps = new Map(pins.map((p) => [p.id, marketCapWeight(p.companyMarketCap) * marketImpactWeight(p.marketImpact) * freebiesWeight(p)]));
