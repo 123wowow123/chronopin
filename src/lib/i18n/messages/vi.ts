@@ -860,6 +860,7 @@ const vi: Messages = {
     candidateAlbum: 'Album của năm',
     candidateSong: 'Bài hát của năm',
     candidateArtist: 'Nghệ sĩ mới xuất sắc nhất',
+    candidateEntry: 'Các bài dự thi chung kết',
     candidateNominee: 'Giá thị trường để được đề cử',
     candidateWinner: 'Giá thị trường để chiến thắng',
     competitorsHeading: 'Đối thủ chính',

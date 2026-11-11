@@ -857,6 +857,7 @@ const zh: Messages = {
     candidateAlbum: '年度专辑',
     candidateSong: '年度歌曲',
     candidateArtist: '最佳新人',
+    candidateEntry: '总决赛参赛歌曲',
     candidateNominee: '获提名的市场价格',
     candidateWinner: '获奖的市场价格',
     competitorsHeading: '主要竞争产品',

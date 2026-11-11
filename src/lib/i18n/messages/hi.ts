@@ -859,6 +859,7 @@ const hi: Messages = {
     candidateAlbum: 'एल्बम ऑफ़ द ईयर',
     candidateSong: 'सॉन्ग ऑफ़ द ईयर',
     candidateArtist: 'बेस्ट न्यू आर्टिस्ट',
+    candidateEntry: 'ग्रैंड फ़ाइनल की प्रविष्टियाँ',
     candidateNominee: 'नामांकन का बाज़ार भाव',
     candidateWinner: 'जीत का बाज़ार भाव',
     competitorsHeading: 'मुख्य प्रतिस्पर्धी',

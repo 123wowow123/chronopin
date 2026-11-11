@@ -11,6 +11,7 @@ type Row = {
   odds: number | null;
   oddsLabel: PinCandidateJson['oddsLabel'];
   sourceUrl: string | null;
+  previewUrl: string | null;
   asOf: Date | string;
   workPinId: number | null;
   workTitle: string | null;
@@ -22,7 +23,7 @@ const day = (value: Date | string) => (typeof value === 'string' ? value.slice(0
 
 export async function candidatesForPin(pinId: number): Promise<PinCandidateJson[]> {
   const rows = await db.query<Row>(
-    `SELECT c."category", c."rank", c."name", c."artist", c."odds", c."oddsLabel", c."sourceUrl", c."asOf",
+    `SELECT c."category", c."rank", c."name", c."artist", c."odds", c."oddsLabel", c."sourceUrl", c."previewUrl", c."asOf",
             c."workPinId", w."title" AS "workTitle", pic."thumbName", pic."originalUrl" AS "thumbOriginalUrl"
      FROM "PinCandidate" c
      LEFT JOIN "Pin" w ON w."id" = c."workPinId" AND w."utcDeletedDateTime" IS NULL
@@ -47,6 +48,7 @@ export async function candidatesForPin(pinId: number): Promise<PinCandidateJson[
     odds: r.odds,
     oddsLabel: r.oddsLabel,
     sourceUrl: r.sourceUrl,
+    previewUrl: r.previewUrl,
     asOf: day(r.asOf),
   }));
 }
@@ -56,7 +58,7 @@ export function candidatesProblem(body: unknown): StoredPinCandidate[] | string 
   if (!Array.isArray(body) || body.length > 200) return 'candidates is a list of up to 200 rows.';
   const rows: StoredPinCandidate[] = [];
   for (const item of body as Record<string, unknown>[]) {
-    if (!isCandidateCategory(item.category)) return 'category must be record, album, song or artist.';
+    if (!isCandidateCategory(item.category)) return 'category must be record, album, song, artist or entry.';
     if (!Number.isInteger(item.rank) || (item.rank as number) < 1) return 'rank is a whole number from 1.';
     if (typeof item.name !== 'string' || !item.name.trim() || item.name.length > 200) return 'name is 1-200 characters.';
     if (item.odds != null && (!Number.isInteger(item.odds) || (item.odds as number) < 0 || (item.odds as number) > 100)) return 'odds is 0-100 cents.';
@@ -70,6 +72,7 @@ export function candidatesProblem(body: unknown): StoredPinCandidate[] | string 
       odds: (item.odds as number | null) ?? null,
       oddsLabel: item.oddsLabel === 'nominee' || item.oddsLabel === 'winner' ? item.oddsLabel : null,
       sourceUrl: typeof item.sourceUrl === 'string' && /^https?:\/\/\S+$/i.test(item.sourceUrl) ? item.sourceUrl : null,
+      previewUrl: typeof item.previewUrl === 'string' && /^https?:\/\/\S+$/i.test(item.previewUrl) ? item.previewUrl : null,
       asOf: typeof item.asOf === 'string' ? item.asOf.slice(0, 10) : new Date().toISOString().slice(0, 10),
     });
   }
@@ -82,9 +85,9 @@ export async function saveCandidates(pinId: number, rows: Omit<StoredPinCandidat
     await query(`DELETE FROM "PinCandidate" WHERE "pinId" = $1`, [pinId]);
     for (const r of rows) {
       await query(
-        `INSERT INTO "PinCandidate" ("pinId", "category", "rank", "name", "artist", "workPinId", "odds", "oddsLabel", "sourceUrl", "asOf")
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
-        [pinId, r.category, r.rank, r.name, r.artist, r.workPinId, r.odds, r.oddsLabel, r.sourceUrl, r.asOf],
+        `INSERT INTO "PinCandidate" ("pinId", "category", "rank", "name", "artist", "workPinId", "odds", "oddsLabel", "sourceUrl", "previewUrl", "asOf")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+        [pinId, r.category, r.rank, r.name, r.artist, r.workPinId, r.odds, r.oddsLabel, r.sourceUrl, r.previewUrl, r.asOf],
       );
     }
   });
@@ -92,7 +95,7 @@ export async function saveCandidates(pinId: number, rows: Omit<StoredPinCandidat
 
 export async function allCandidates(): Promise<StoredPinCandidate[]> {
   const rows = await db.query<StoredPinCandidate & { asOf: Date | string }>(
-    `SELECT "pinId", "category", "rank", "name", "artist", "workPinId", "odds", "oddsLabel", "sourceUrl", "asOf"
+    `SELECT "pinId", "category", "rank", "name", "artist", "workPinId", "odds", "oddsLabel", "sourceUrl", "previewUrl", "asOf"
      FROM "PinCandidate" ORDER BY "pinId", "category", "rank"`,
   );
   return rows.map((r) => ({ ...r, asOf: day(r.asOf) }));

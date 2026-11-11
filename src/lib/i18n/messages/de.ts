@@ -856,6 +856,7 @@ const de: Messages = {
     candidateAlbum: 'Album des Jahres',
     candidateSong: 'Song des Jahres',
     candidateArtist: 'Bester neuer Künstler',
+    candidateEntry: 'Beiträge im Finale',
     candidateNominee: 'Marktpreis für eine Nominierung',
     candidateWinner: 'Marktpreis für den Sieg',
     competitorsHeading: 'Wichtigste Konkurrenten',

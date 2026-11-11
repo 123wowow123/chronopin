@@ -856,6 +856,7 @@ const fr: Messages = {
     candidateAlbum: "Album de l'année",
     candidateSong: "Chanson de l'année",
     candidateArtist: 'Meilleur nouvel artiste',
+    candidateEntry: 'Chansons de la finale',
     candidateNominee: 'Prix du marché pour être nommé',
     candidateWinner: 'Prix du marché pour gagner',
     competitorsHeading: 'Principaux concurrents',

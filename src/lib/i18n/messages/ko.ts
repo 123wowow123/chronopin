@@ -856,6 +856,7 @@ const ko: Messages = {
     candidateAlbum: '올해의 앨범',
     candidateSong: '올해의 노래',
     candidateArtist: '최우수 신인',
+    candidateEntry: '그랜드 파이널 출전곡',
     candidateNominee: '후보 지명 시장 가격',
     candidateWinner: '수상 시장 가격',
     competitorsHeading: '주요 경쟁 제품',

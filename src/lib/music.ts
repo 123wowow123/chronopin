@@ -303,6 +303,8 @@ export interface MusicAlbumTrack {
   /** 30-second preview clip. */
   previewUrl: string;
   durationMs?: number;
+  /** Who performs this track when it differs from the entry's artist (a contest's entries). */
+  artist?: string;
 }
 
 export interface MusicAlbum {

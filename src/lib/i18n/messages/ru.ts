@@ -865,6 +865,7 @@ const ru: Messages = {
     candidateAlbum: 'Альбом года',
     candidateSong: 'Песня года',
     candidateArtist: 'Лучший новый исполнитель',
+    candidateEntry: 'Песни гранд-финала',
     candidateNominee: 'Рыночная цена номинации',
     candidateWinner: 'Рыночная цена победы',
     competitorsHeading: 'Основные конкуренты',

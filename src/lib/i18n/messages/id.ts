@@ -861,6 +861,7 @@ const id: Messages = {
     candidateAlbum: 'Album Terbaik Tahun Ini',
     candidateSong: 'Lagu Terbaik Tahun Ini',
     candidateArtist: 'Artis Baru Terbaik',
+    candidateEntry: 'Lagu Final Besar',
     candidateNominee: 'Harga pasar untuk dinominasikan',
     candidateWinner: 'Harga pasar untuk menang',
     competitorsHeading: 'Pesaing utama',

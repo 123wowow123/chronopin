@@ -854,6 +854,7 @@ const it: Messages = {
     candidateAlbum: "Album dell'anno",
     candidateSong: "Canzone dell'anno",
     candidateArtist: 'Miglior artista emergente',
+    candidateEntry: 'Brani della finale',
     candidateNominee: 'Prezzo di mercato per la nomination',
     candidateWinner: 'Prezzo di mercato per la vittoria',
     competitorsHeading: 'Principali concorrenti',

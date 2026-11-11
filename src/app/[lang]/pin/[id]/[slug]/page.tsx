@@ -678,7 +678,7 @@ async function PinBody({
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
-      {candidates?.length ? <PinCandidates candidates={candidates} t={t} /> : null}
+      {candidates?.length ? <PinCandidates candidates={candidates} t={t} pinId={pin.id} /> : null}
       {competitors?.length ? <PinCompetitors competitors={competitors} t={t} /> : null}
       <PinStocks pinId={pin.id} />
       {/* The publisher's own chart for a series this event moves (PinSeries,

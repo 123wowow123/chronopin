@@ -930,6 +930,7 @@ const ar: Messages = {
     candidateAlbum: 'ألبوم العام',
     candidateSong: 'أغنية العام',
     candidateArtist: 'أفضل فنان جديد',
+    candidateEntry: 'المشاركات في النهائي الكبير',
     candidateNominee: 'سعر السوق للترشح',
     candidateWinner: 'سعر السوق للفوز',
     competitorsHeading: 'أبرز المنافسين',

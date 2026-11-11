@@ -854,6 +854,7 @@ const pt: Messages = {
     candidateAlbum: 'Álbum do ano',
     candidateSong: 'Canção do ano',
     candidateArtist: 'Melhor artista revelação',
+    candidateEntry: 'Canções da grande final',
     candidateNominee: 'Preço de mercado para ser indicado',
     candidateWinner: 'Preço de mercado para vencer',
     competitorsHeading: 'Principais concorrentes',

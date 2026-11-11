@@ -15,6 +15,7 @@ export function albumTrackEntry(song: MusicRankingEntry, n: number): MusicRankin
     ...song,
     id: `${song.id}~t${n}`,
     title: t.title,
+    artist: t.artist ?? song.artist,
     audioUrl: t.previewUrl,
     youtubeId: undefined,
     youtubeUrl: undefined,
@@ -28,12 +29,15 @@ export function AlbumTracklist({
   song,
   open: initiallyOpen = false,
   scroll = true,
+  label,
 }: {
   song: MusicRankingEntry;
   pinHref?: string;
   queue?: MusicRankingEntry[];
   open?: boolean;
   scroll?: boolean;
+  /** Replaces the "Album" / "EP" / "Single" kind label. */
+  label?: string;
 }) {
   const album = song.album;
   const [open, setOpen] = useState(initiallyOpen);
@@ -43,7 +47,7 @@ export function AlbumTracklist({
   if (!album) return null;
 
   const queue = album.tracks.map((t) => albumTrackEntry(song, t.n)!).filter(Boolean);
-  const kind = album.kind === 'album' ? gm('kindAlbum') : album.kind === 'ep' ? gm('kindEp') : gm('kindSingle');
+  const kind = label ?? (album.kind === 'album' ? gm('kindAlbum') : album.kind === 'ep' ? gm('kindEp') : gm('kindSingle'));
 
   return (
     <div className={`${scroll ? 'mb-2 border-[var(--rule)]/60 bg-[var(--paper)]/80' : 'border-line bg-raised/40'} rounded-lg border text-xs`}>

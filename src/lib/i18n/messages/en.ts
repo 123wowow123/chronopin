@@ -861,6 +861,7 @@ const en = {
     candidateAlbum: 'Album of the Year',
     candidateSong: 'Song of the Year',
     candidateArtist: 'Best New Artist',
+    candidateEntry: 'Grand Final entries',
     candidateNominee: 'Market price to be nominated',
     candidateWinner: 'Market price to win',
     competitorsHeading: 'Main competitors',

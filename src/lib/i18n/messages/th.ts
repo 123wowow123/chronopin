@@ -853,6 +853,7 @@ const th: Messages = {
     candidateAlbum: 'อัลบั้มแห่งปี',
     candidateSong: 'เพลงแห่งปี',
     candidateArtist: 'ศิลปินหน้าใหม่ยอดเยี่ยม',
+    candidateEntry: 'เพลงในรอบชิงชนะเลิศ',
     candidateNominee: 'ราคาตลาดว่าจะได้เข้าชิง',
     candidateWinner: 'ราคาตลาดว่าจะชนะ',
     competitorsHeading: 'คู่แข่งหลัก',
