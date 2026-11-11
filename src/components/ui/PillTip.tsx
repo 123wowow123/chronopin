@@ -26,11 +26,22 @@ function placeFor(box: DOMRect): Place {
     : { top: box.bottom + GAP, left, width };
 }
 
-export function PillTip({ tip, children }: { tip: ReactNode; children: (describedBy: string) => ReactNode }) {
+export function PillTip({
+  tip,
+  children,
+  pinOnClick = false,
+}: {
+  tip: ReactNode;
+  children: (describedBy: string, pinned: boolean) => ReactNode;
+  // A click keeps the tip open (and does not follow the pill's link) until a
+  // click elsewhere, Escape, a scroll or a second click on the pill.
+  pinOnClick?: boolean;
+}) {
   const id = useId();
   const anchor = useRef<HTMLSpanElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const [place, setPlace] = useState<Place | null>(null);
+  const [pinned, setPinned] = useState(false);
 
   const show = () => {
     clearTimeout(timer.current);
@@ -40,19 +51,35 @@ export function PillTip({ tip, children }: { tip: ReactNode; children: (describe
   };
   const hide = () => {
     clearTimeout(timer.current);
+    if (pinned) return;
     setPlace(null);
   };
 
   useEffect(() => {
     if (!place) return;
-    const close = () => setPlace(null);
+    const close = () => {
+      setPlace(null);
+      setPinned(false);
+    };
+    const outside = (event: PointerEvent) => {
+      if (!anchor.current?.contains(event.target as Node)) close();
+    };
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close();
+    };
     window.addEventListener('scroll', close, { capture: true, passive: true });
     window.addEventListener('resize', close);
+    if (pinned) {
+      document.addEventListener('pointerdown', outside);
+      document.addEventListener('keydown', escape);
+    }
     return () => {
       window.removeEventListener('scroll', close, { capture: true });
       window.removeEventListener('resize', close);
+      document.removeEventListener('pointerdown', outside);
+      document.removeEventListener('keydown', escape);
     };
-  }, [place]);
+  }, [place, pinned]);
 
   // The page may hide (not unmount) this card, so a pending show must not fire later.
   useEffect(() => () => clearTimeout(timer.current), []);
@@ -61,6 +88,7 @@ export function PillTip({ tip, children }: { tip: ReactNode; children: (describe
     <span
       ref={anchor}
       className="inline-flex"
+      data-no-progress={pinOnClick ? '' : undefined}
       onPointerEnter={(event) => {
         if (event.pointerType === 'mouse') show();
       }}
@@ -69,9 +97,22 @@ export function PillTip({ tip, children }: { tip: ReactNode; children: (describe
         if (event.target.matches(':focus-visible')) show();
       }}
       onBlur={hide}
+      onClickCapture={(event) => {
+        if (!pinOnClick) return;
+        event.preventDefault();
+        event.stopPropagation();
+        clearTimeout(timer.current);
+        if (pinned) {
+          setPinned(false);
+          setPlace(null);
+        } else if (anchor.current) {
+          setPinned(true);
+          setPlace(placeFor(anchor.current.getBoundingClientRect()));
+        }
+      }}
       onClick={hide}
     >
-      {children(id)}
+      {children(id, pinned)}
       <span id={id} className="sr-only">
         {tip}
       </span>

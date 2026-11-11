@@ -1,7 +1,6 @@
 'use client';
 
 import { Icon } from '@/components/ui/Icon';
-import { RefineLink } from '@/components/pin/RefineLink';
 import { PillTip } from '@/components/ui/PillTip';
 import { useT } from '@/lib/client/i18n';
 import { impactBand, type ImpactBand } from '@/lib/marketImpact';
@@ -22,23 +21,22 @@ export function MarketImpactBadge({ weight, reason, assets }: { weight?: number 
   const tip = (
     <>
       <span className="font-semibold text-ink">{label}</span>
-      <span>{t(`marketImpact.${band}` as 'marketImpact.high')}</span>
       {reason ? <span>{reason}</span> : null}
       {assets ? <span className="text-subtle">{t('marketImpact.assets', { assets })}</span> : null}
     </>
   );
   return (
-    <PillTip tip={tip}>
-      {(describedBy) => (
-        <RefineLink
-          field="impact"
-          value={`>=${weight}`}
-          describedBy={describedBy}
-          className={`pill-compact inline-flex shrink-0 items-center gap-0.5 rounded-full px-1.5 py-px text-[10px] font-semibold tabular-nums ring-1 ring-inset hover:no-underline ${BAND_CLASS[band]}`}
+    <PillTip tip={tip} pinOnClick>
+      {(describedBy, pinned) => (
+        <button
+          type="button"
+          aria-describedby={describedBy}
+          aria-expanded={pinned}
+          className={`pill-compact inline-flex shrink-0 cursor-pointer items-center gap-0.5 rounded-full transition-[filter,transform] duration-100 hover:scale-110 hover:brightness-105 hover:ring-2 hover:shadow-md active:scale-90 active:brightness-75 active:shadow-inner motion-reduce:transition-none aria-expanded:scale-105 aria-expanded:ring-2 aria-expanded:brightness-125 aria-expanded:shadow-md px-1.5 py-px text-[10px] font-semibold tabular-nums ring-1 ring-inset ${BAND_CLASS[band]}`}
         >
           <Icon name="trending-up" className="size-3" />
           {weight}
-        </RefineLink>
+        </button>
       )}
     </PillTip>
   );

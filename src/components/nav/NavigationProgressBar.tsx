@@ -37,6 +37,8 @@ export function NavigationProgressBar() {
 
       const anchor = (e.target as Element)?.closest('a');
       if (!anchor || !anchor.href) return;
+      // A click a component turns into something else (PillTip pinOnClick) is no navigation.
+      if (anchor.closest('[data-no-progress]')) return;
       if (anchor.target && anchor.target !== '_self') return;
       if (anchor.hasAttribute('download')) return;
 
