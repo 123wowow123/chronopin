@@ -1,14 +1,16 @@
 import { TRAINING_BASIS_WORDS, formatDatasetSize, formatFlop, formatParameters, formatTrainingDays, hasModelTraining, type PinModelTrainingJson } from '@/lib/modelTraining';
 import { Icon } from '@/components/ui/Icon';
+import Link from '@/components/ui/Link';
+import { pinPath } from '@/lib/seo';
 
 // An AI model's training metrics as telemetry tiles, laid out like the datacenter water tile. A figure the
 // sources do not publish reads "Unknown" rather than disappearing, as on the Epoch AI model page.
 export function PinModelTraining({ training, className = '' }: { training: PinModelTrainingJson; className?: string }) {
   if (!hasModelTraining(training)) return null;
-  const tiles: { label: string; dot: string; value: string | null; sub: string }[] = [
+  const tiles: { label: string; dot: string; value: string | null; sub: string; href?: string; hrefTitle?: string }[] = [
     { label: 'Parameters', dot: 'bg-violet-400', value: training.parametersBillions != null ? formatParameters(training.parametersBillions) : null, sub: 'model weights' },
     { label: 'Training compute', dot: 'bg-amber-400', value: training.trainingComputeFlop != null ? formatFlop(training.trainingComputeFlop) : null, sub: training.basis ? TRAINING_BASIS_WORDS[training.basis] : 'total floating-point operations' },
-    { label: 'Training hardware', dot: 'bg-sky-400', value: training.trainingHardware, sub: 'accelerators used' },
+    { label: 'Training hardware', dot: 'bg-sky-400', value: training.trainingHardware, sub: training.hardwarePin ? 'see the chip' : 'accelerators used', href: training.hardwarePin ? pinPath(training.hardwarePin) : undefined, hrefTitle: training.hardwarePin?.title },
     { label: 'Training time', dot: 'bg-emerald-400', value: training.trainingDays != null ? formatTrainingDays(training.trainingDays) : null, sub: 'wall-clock' },
     { label: 'Training dataset size', dot: 'bg-rose-400', value: training.datasetSize != null ? formatDatasetSize(training.datasetSize, training.datasetUnit) : null, sub: 'data seen in training' },
   ];
@@ -30,7 +32,7 @@ export function PinModelTraining({ training, className = '' }: { training: PinMo
               <span className={`size-2 rounded-full ${tile.dot}`} aria-hidden />
               {tile.label}
             </div>
-            <div className={`mt-1.5 text-lg leading-tight font-bold tracking-tight tabular-nums ${tile.value ? 'text-link' : 'text-muted'}`}>{tile.value ?? 'Unknown'}</div>
+            <div className={`mt-1.5 text-lg leading-tight font-bold tracking-tight tabular-nums ${tile.value ? 'text-link' : 'text-muted'}`}>{tile.value && tile.href ? <Link href={tile.href} title={tile.hrefTitle} className="underline-offset-2 hover:underline">{tile.value}</Link> : (tile.value ?? 'Unknown')}</div>
             <div className="mt-1 line-clamp-2 text-xs text-muted">{tile.value ? tile.sub : 'not published'}</div>
           </div>
         ))}

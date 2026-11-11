@@ -37,7 +37,14 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   if (basis && !TRAINING_BASES.includes(basis)) throw new HttpError(400, `basis must be one of ${TRAINING_BASES.join(', ')}.`);
   const sourceUrl = strOrNull(body.sourceUrl, 4000);
   if (sourceUrl && !/^https?:\/\/\S+$/i.test(sourceUrl)) throw new HttpError(400, 'sourceUrl is not a web address.');
+  const hardwarePinId = body.hardwarePinId == null || body.hardwarePinId === '' ? null : Number(body.hardwarePinId);
+  if (hardwarePinId != null) {
+    if (!Number.isInteger(hardwarePinId) || hardwarePinId < 1) throw new HttpError(400, 'hardwarePinId must be a pin id or null.');
+    const [hw] = await db.query(`SELECT 1 FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [hardwarePinId]);
+    if (!hw) throw new HttpError(400, 'hardwarePinId is not a live pin.');
+  }
   const input = {
+    hardwarePinId,
     parametersBillions: posOrNull(body.parametersBillions, 'parametersBillions'),
     trainingComputeFlop: posOrNull(body.trainingComputeFlop, 'trainingComputeFlop'),
     trainingHardware: strOrNull(body.trainingHardware, 200),

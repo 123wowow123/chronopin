@@ -12,7 +12,7 @@ describe('model training formats', () => {
     expect(formatDatasetSize(15e12, 'tokens')).toBe('15T tokens');
   });
   it('is empty when nothing is published', () => {
-    const base = { parametersBillions: null, trainingComputeFlop: null, trainingHardware: null, trainingDays: null, datasetSize: null, datasetUnit: null, basis: null, sourceUrl: null, note: null, checkedAt: '' };
+    const base = { parametersBillions: null, trainingComputeFlop: null, trainingHardware: null, hardwarePin: null, trainingDays: null, datasetSize: null, datasetUnit: null, basis: null, sourceUrl: null, note: null, checkedAt: '' };
     expect(hasModelTraining(base)).toBe(false);
     expect(hasModelTraining({ ...base, trainingComputeFlop: 9.4e26 })).toBe(true);
   });

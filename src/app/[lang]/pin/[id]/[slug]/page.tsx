@@ -749,44 +749,6 @@ async function PinBody({
       {pin.description ? <div dir={pinTextDir(pin)} className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div dir={pinTextDir(pin)} className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
 
-      <PinRestaurantMenu pinId={pin.id} sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
-      <PinRestaurantDetails sourceUrl={pin.sourceUrl} name={pin.company || pin.title} isRestaurant={isRestaurant} priceRange={pin.restaurantPriceRange} />
-
-      {pin.user?.id && pin.user.userName ? (
-        <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-          <RefineLink field="user" value={pin.user.userName} className="flex items-center gap-2 font-semibold text-ink hover:no-underline">
-            <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-9 text-sm" />
-            {pin.user.userName}
-          </RefineLink>
-          <FollowButton
-            userId={pin.user.id}
-            userName={pin.user.userName}
-            showCount
-            beside={<MessageButton user={{ id: pin.user.id, userName: pin.user.userName, pictureUrl: pin.user.pictureUrl }} />}
-          />
-        </div>
-      ) : null}
-
-      <div className="flex items-center justify-between py-3">
-        <div className={pin.price != null && pin.price < 0 ? 'text-danger' : ''}>
-          {pin.price ? (
-            <>
-              <span className="text-subtle">
-                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : costEstimated ? t('pin.costEstimate') : costWholeProject ? t('pin.costWholeProject') : t('pin.cost'))}
-              </span>{' '}
-              <span className="font-semibold text-success tabular-nums">{bothMoney(pin.price, pin.priceCurrency, t.locale).stated}</span>
-              {bothMoney(pin.price, pin.priceCurrency, t.locale).local ? <span className="text-sm text-muted tabular-nums"> ({bothMoney(pin.price, pin.priceCurrency, t.locale).local})</span> : null}
-            </>
-          ) : null}
-        </div>
-        <div className="flex items-center gap-1">
-          <ViewCount pinId={pin.id} initial={pin.viewCount} track />
-          <LikeButton pin={pin} loadForViewer />
-          <WatchButton pin={pin} loadForViewer />
-          <PinAdminLink pinId={pin.id} />
-        </div>
-      </div>
-
       {project && !datacenter ? (() => {
         const tiles = projectTiles(project);
         return tiles.length ? (
@@ -859,6 +821,44 @@ async function PinBody({
       })() : null}
 
       {modelTraining ? <PinModelTraining training={modelTraining} className="mt-3" /> : null}
+
+      <PinRestaurantMenu pinId={pin.id} sourceUrl={pin.sourceUrl} today={dayKeyIn(new Date(), 'America/Los_Angeles')} />
+      <PinRestaurantDetails sourceUrl={pin.sourceUrl} name={pin.company || pin.title} isRestaurant={isRestaurant} priceRange={pin.restaurantPriceRange} />
+
+      {pin.user?.id && pin.user.userName ? (
+        <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+          <RefineLink field="user" value={pin.user.userName} className="flex items-center gap-2 font-semibold text-ink hover:no-underline">
+            <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-9 text-sm" />
+            {pin.user.userName}
+          </RefineLink>
+          <FollowButton
+            userId={pin.user.id}
+            userName={pin.user.userName}
+            showCount
+            beside={<MessageButton user={{ id: pin.user.id, userName: pin.user.userName, pictureUrl: pin.user.pictureUrl }} />}
+          />
+        </div>
+      ) : null}
+
+      <div className="flex items-center justify-between py-3">
+        <div className={pin.price != null && pin.price < 0 ? 'text-danger' : ''}>
+          {pin.price ? (
+            <>
+              <span className="text-subtle">
+                {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : costEstimated ? t('pin.costEstimate') : costWholeProject ? t('pin.costWholeProject') : t('pin.cost'))}
+              </span>{' '}
+              <span className="font-semibold text-success tabular-nums">{bothMoney(pin.price, pin.priceCurrency, t.locale).stated}</span>
+              {bothMoney(pin.price, pin.priceCurrency, t.locale).local ? <span className="text-sm text-muted tabular-nums"> ({bothMoney(pin.price, pin.priceCurrency, t.locale).local})</span> : null}
+            </>
+          ) : null}
+        </div>
+        <div className="flex items-center gap-1">
+          <ViewCount pinId={pin.id} initial={pin.viewCount} track />
+          <LikeButton pin={pin} loadForViewer />
+          <WatchButton pin={pin} loadForViewer />
+          <PinAdminLink pinId={pin.id} />
+        </div>
+      </div>
 
       {datacenter ? (
         <section data-datacenter-panel aria-label="Datacenter and infrastructure specifications" className="surface mt-3 rounded-2xl border border-line bg-raised/40 p-4 shadow-sm">

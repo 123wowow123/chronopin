@@ -191,6 +191,12 @@ export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' |
   const before = await getPin(id);
   const path = `/api/pins/${id}/${endpoint}`;
   let payload = body;
+  // Pin ids differ between environments: the chip's pin is found on production by its source, else the tile is plain text.
+  if (endpoint === 'model-training' && !Array.isArray(body) && body.hardwarePinId != null) {
+    const [chip] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [Number(body.hardwarePinId)]);
+    const chipRows = chip?.sourceUrl ? (await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(chip.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token })).rows : [];
+    payload = { ...body, hardwarePinId: chipRows.length === 1 ? chipRows[0].id : null };
+  }
   if (endpoint === 'performance' && !Array.isArray(body)) {
     const current = await call<{ charts: unknown[]; tables: unknown[] } | null>('GET', path, { token });
     payload = { charts: current?.charts ?? [], tables: current?.tables ?? [], ...body };
@@ -204,7 +210,9 @@ export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' |
     return actual === expected;
   };
   // Competitor GET returns nested linked pins rather than competitorPinId.
-  if (endpoint !== 'competitors' && !contains(saved, payload)) throw new Error(`Pin ${id}: ${endpoint} readback verification failed`);
+  // The training GET reports the chip as hardwarePin {id, title}, not hardwarePinId.
+  const expected = endpoint === 'model-training' && !Array.isArray(payload) ? (({ hardwarePinId, ...rest }) => ({ ...rest, hardwarePin: hardwarePinId == null ? null : { id: hardwarePinId } }))(payload as Record<string, unknown>) : payload;
+  if (endpoint !== 'competitors' && !contains(saved, expected)) throw new Error(`Pin ${id}: ${endpoint} readback verification failed`);
   const after = await getPin(id);
   if (after.user?.userName !== before.user?.userName) throw new Error(`Pin ${id}: author changed during enrichment`);
   return true;

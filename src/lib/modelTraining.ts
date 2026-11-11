@@ -7,6 +7,8 @@ export type PinModelTrainingJson = {
   parametersBillions: number | null;
   trainingComputeFlop: number | null;
   trainingHardware: string | null;
+  // The pin for that accelerator, when one exists (shaped for pinPath()); the tile links to it.
+  hardwarePin: { id: number; title: string } | null;
   trainingDays: number | null;
   datasetSize: number | null;
   datasetUnit: string | null;
