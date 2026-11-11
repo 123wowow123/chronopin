@@ -57,6 +57,8 @@ import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
 import { modelScores } from './modelScores';
 import { modelPerformanceUpdate, modelRubricGaps } from './modelRubrics';
+import { saveModelTraining } from '../model/pinModelTraining';
+import { TRAINING_BASES } from '@/lib/modelTraining';
 import { competitorGaps } from './productCompetitors';
 import { buildFactoryProfile, factoryEvidenceProblem, factoryGaps } from './factoryProfiles';
 import { saveFactory } from '../model/pinFactory';
@@ -736,6 +738,38 @@ export const TOOLS: JobTool[] = [
       });
       await act(ctx, { tool: 'save_model_tables', detail: `Pin ${pinId}: ${parsed.charts.length} graph(s), ${parsed.tables.length} spec table(s)${pushed ? '; prod saved' : ''}` });
       return { pinId, charts: parsed.charts.length, tables: parsed.tables.length, production: pushed };
+    },
+  },
+  {
+    name: 'save_model_training',
+    description:
+      "Saves an AI model pin's Training tiles (the Epoch AI model page's Training block, shown like a datacenter's water tile): parametersBillions (1.8 trillion = 1800), trainingComputeFlop (9.4e26), trainingHardware (e.g. 'NVIDIA GB200'), trainingDays, datasetSize + datasetUnit (tokens/words/images), basis ('published' by the maker or 'estimated' by Epoch AI), sourceUrl (opened HTTPS page, preferably epoch.ai/models/<slug> or the maker's report), note. Send null for every figure unpublished - the tile then reads Unknown; never guess or borrow a sibling model's figure. Replaces the whole row. Saved here and on production when configured.",
+    input_schema: obj(
+      { pinId: num('Pin id'), parametersBillions: { type: ['number', 'null'] }, trainingComputeFlop: { type: ['number', 'null'] }, trainingHardware: { type: ['string', 'null'] }, trainingDays: { type: ['number', 'null'] }, datasetSize: { type: ['number', 'null'] }, datasetUnit: { type: ['string', 'null'] }, basis: { type: ['string', 'null'], enum: [...TRAINING_BASES, null] }, sourceUrl: str('Opened HTTPS page that states the figures'), note: { type: ['string', 'null'] } },
+      ['pinId', 'sourceUrl'],
+    ),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const pos = (v: unknown) => (v == null ? null : Number(v) > 0 && Number.isFinite(Number(v)) ? Number(v) : (() => { throw new Error('Figures must be positive numbers or null (unpublished).'); })());
+      const text = (v: unknown, max: number) => (typeof v === 'string' && v.trim() ? v.trim().slice(0, max) : null);
+      const sourceUrl = text(input.sourceUrl, 4000);
+      if (!sourceUrl || !/^https?:\/\/\S+$/i.test(sourceUrl)) throw new Error('sourceUrl must be an opened HTTPS page.');
+      const basis = input.basis == null ? null : String(input.basis);
+      if (basis && !(TRAINING_BASES as readonly string[]).includes(basis)) throw new Error(`basis must be one of ${TRAINING_BASES.join(', ')}.`);
+      const row = {
+        parametersBillions: pos(input.parametersBillions), trainingComputeFlop: pos(input.trainingComputeFlop), trainingHardware: text(input.trainingHardware, 200),
+        trainingDays: pos(input.trainingDays), datasetSize: pos(input.datasetSize), datasetUnit: text(input.datasetUnit, 24), basis: basis as 'published' | 'estimated' | null, sourceUrl, note: text(input.note, 500),
+      };
+      if (row.datasetSize != null && !row.datasetUnit) throw new Error('datasetUnit is required with datasetSize.');
+      await saveModelTraining(pinId, row);
+      expirePinPage(pinId);
+      const pushed = await pushModelPerf(pinId, 'model-training', row).catch(async (err) => {
+        log.warn(`pin ${pinId}'s training tiles did not reach production:`, (err as Error).message);
+        await PinRevisit.mark(pinId, `Model training tiles production API/save verification failed: ${(err as Error).message}`, { jobRunId: ctx.runId });
+        return false;
+      });
+      await act(ctx, { tool: 'save_model_training', detail: `Pin ${pinId}: training tiles${pushed ? '; prod saved' : ''}` });
+      return { pinId, production: pushed };
     },
   },
   // --- Performers and tickets (the eventInfo task) -------------------------

@@ -16,6 +16,8 @@ import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
 import { datacenterForPin } from '../model/pinDatacenter';
+import { modelTrainingForPin } from '../model/pinModelTraining';
+import type { PinModelTrainingJson } from '@/lib/modelTraining';
 import { projectForPin } from '../model/pinProject';
 import { purposeForPin } from '../model/pinPurpose';
 import { proTipsForPin } from '../model/pinProTip';
@@ -286,6 +288,14 @@ export async function pinDatacenter(id: number): Promise<PinDatacenterJson | nul
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return datacenterForPin(id);
+}
+
+// An AI model pin's training metrics (parameters, compute, hardware, time, dataset), or null.
+export async function pinModelTraining(id: number): Promise<PinModelTrainingJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return modelTrainingForPin(id);
 }
 
 // How far the pin's information can move markets (score + reason), or null.

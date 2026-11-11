@@ -45,6 +45,9 @@ rubric, published specification/benchmark graphs and tables, and relevant credit
   that already have a rubric and pins whose authors are outside the curator allowlist.
 - Open the exact model's launch announcement, docs, independent benchmarks and official galleries. Never
   inherit sibling-model specs; never graph incomparable evaluations together.
+- Save the **Training tiles** on every model pin with `save_model_training` (`PinModelTraining`, 0260: parameters, training compute
+  in FLOP, hardware, time, dataset size) like epoch.ai/models/<slug>; cite the opened Epoch/maker page, label estimates
+  `basis: 'estimated'`, `null` (shown Unknown) when unpublished.
 - Store images in Azure (see `pin-media-azure`); verify the public blobs and the saved native panels.
 - Preserve authors and existing graphs, tables and media. Synchronize research/replay catalogs.
 - Record specific unpublished figures, unavailable reviews or inaccessible media as research gaps; never invent

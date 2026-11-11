@@ -22,7 +22,7 @@ export function newPinFlags(pin: Pick<PinJson, 'description' | 'longFormSummary'
     flags.push(`check for a ${rubric} with 3 verified independent reviews, if this pin is a product, restaurant, hotel or model (no review markup without it)`);
   }
   if (pin.tags?.some((tag) => tag.name === 'AI Models')) {
-    flags.push('complete model enrichment in this run: six-axis rubric, sourced spec graphs/tables and relevant credited official media; save_model_tables accepts charts; record specific unavailable evidence rather than inventing figures');
+    flags.push('complete model enrichment in this run: six-axis rubric, sourced spec graphs/tables and relevant credited official media; save_model_tables accepts charts; save_model_training saves the Training tiles (parameters, compute, hardware, time, dataset size; null when unpublished, per epoch.ai/models); record specific unavailable evidence rather than inventing figures');
   }
   return flags;
 }

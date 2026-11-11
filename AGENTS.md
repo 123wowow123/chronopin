@@ -51,6 +51,10 @@ Owner instruction, 2026-10-29: keep active production pins translated across all
 
 Owner instruction, 2026-10-30: in pin research, creation and editing sessions (development/construction pins, enrichment, etc.), do **not** run pin translations (`sync_translations.py`, `/api/admin/translations`, or hand translation) unless the owner asks for them in that conversation. A different agent handles translations. Save the pin and say translations are left to that agent.
 
+## Pin locations
+
+Owner instruction, 2026-11-11: agents give every pin a full street address with geocoded coordinates, never a city-only label or the city-centre point, and thread members about one place share the parent's exact address and point; no prompting needed. Procedure and the PATCH-is-not-a-merge trap: `.agents/skills/daily-news-job/SKILL.md` ("Pin locations").
+
 ## Project skills
 
 Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `special-day-freebies`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.

@@ -180,7 +180,7 @@ export async function pushSentiment(pinId: number, sentiment: number, product: s
 
 // Replay enrichment by source identity, since production ids can differ.
 // Admin maintenance preserves ownership, including non-curator authors.
-export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' | 'video-performance' | 'performance' | 'competitors' | 'factory' | 'market-impact', body: Record<string, unknown> | unknown[]): Promise<boolean> {
+export async function pushModelPerf(pinId: number, endpoint: 'llm-performance' | 'video-performance' | 'performance' | 'competitors' | 'factory' | 'market-impact' | 'model-training', body: Record<string, unknown> | unknown[]): Promise<boolean> {
   if (!prodBase()) return false;
   const [local] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
   if (!local?.sourceUrl) throw new Error(`Pin ${pinId}: missing sourceUrl for production enrichment`);
