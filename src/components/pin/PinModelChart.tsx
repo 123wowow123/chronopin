@@ -286,24 +286,27 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
 
           {step ? <path d={step} className="stroke-subtle" strokeWidth="1.5" fill="none" strokeLinejoin="round" /> : null}
 
-          {field.map((p) => (
+          {field.map((p) => {
+            const thread = p.thread && !performanceUnpublished;
+            return (
             <circle
               key={p.key}
               cx={x(p.price)}
               cy={y(p.elo)}
-              r={p.thread ? 5.5 : p.frontier ? 4.5 : 3.5}
+              r={thread ? 5.5 : p.frontier ? 4.5 : 3.5}
               className={
-                p.thread
+                thread
                   ? 'fill-red-500 stroke-panel'
                   : p.frontier ? 'fill-muted stroke-panel' : 'fill-subtle/60 stroke-panel'
               }
               strokeWidth="1"
             />
-          ))}
+            );
+          })}
           {field
-            .filter((p) => (labelled.has(p.key) || (p.thread && threadNames)) && p.key !== hover?.key && p.key !== selected?.key)
+            .filter((p) => (labelled.has(p.key) || (p.thread && !performanceUnpublished && threadNames)) && p.key !== hover?.key && p.key !== selected?.key)
             .map((p) => (
-              <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className={`fill-current text-[11px] ${p.thread ? 'font-medium text-red-600' : 'text-muted'}`}>
+              <text key={p.key} x={x(p.price) + 7} y={y(p.elo) + 4} className={`fill-current text-[11px] ${p.thread && !performanceUnpublished ? 'font-medium text-red-600' : 'text-muted'}`}>
                 {p.name}
               </text>
             ))}
