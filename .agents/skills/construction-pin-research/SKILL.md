@@ -162,6 +162,14 @@ reviews, as critic reviews: `PUT /api/pins/:id/critic-reviews` (local and prod),
   **The main image is the project's official rendering** from the developer or a project directory (e.g. BuildSD
   `buildsd.org/projects/<slug>`, the developer's site, the city or CEQA file, the architect). View it first to
   confirm it shows this project, and credit the source. Site and "before" photos follow it.
+- **The first page of a PDF form is an image candidate.** When the project has no rendering or photo online but
+  the permit, application or filing PDF (regulator form, interconnection or planning application, notice of
+  proposal; e.g. the Vaughan 1E 20 MW battery storage pin, 20799) has a site plan, map, drawing or project
+  cover on page 1, render it (`pdftoppm -png -r 150 -f 1 -l 1 file.pdf out`), view it to confirm it shows this
+  project, and use it as a media candidate. Upload it to Azure like any pin image (never to Git) and credit the
+  filing's issuer and page URL. A text-only form cover is a last resort: use it when no other media is
+  available, so the pin still has a picture. Prefer a real rendering or photo for the main image and put the form
+  page after it.
 - The main image is the pin's lowest media id (the readback order is by id, not by the order you send). To make a
   later-found rendering the main image, PUT media with only the rendering, then PUT again with the rendering
   first and the rest after it. Reinserted media can lose attribution during thumbnail processing: retain the
