@@ -782,7 +782,7 @@ new storms (admin token); updating existing ones is this task's job.
 Appreciation Week) and any existing freebies pin for it (`find_pins`).
 **Does** creates or updates one all-day `Freebies`-tagged pin per special day and year, as `@FoodDesk`, with a
 sourced `<li>` per chain and each chain linked to its own 2026 offer page where one is confirmed. The `Freebies` tag
-makes the timeline triple the pin's weight (`freebiesWeight`, bagSample.ts). Full procedure and traps:
+makes the timeline triple the pin's weight (`freebiesWeight`, bagSample.ts) and always pick it on its day (`sampleBag`). Full procedure and traps:
 `.agents/skills/special-day-freebies/`.
 **Traps.** A chain's homepage or a third-party "near me" site is not its offer page; a page without this year's
 date, or last year's release, is not proof; drop a line that cannot be verified for the year. Pin 20936 (Veterans

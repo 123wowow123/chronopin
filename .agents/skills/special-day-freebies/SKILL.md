@@ -19,7 +19,7 @@ Owner instruction 2026-11-10.
 - `find_pins` first (title words, `around` the date). If a pin exists, update it; never create a second.
 - One pin per special day and year, dated all-day to the day (`utcStartDateTime` = 00:00Z, `allDay: true`,
   `dateConfidence: 'confirmed'` once a round-up lists the date). Author `@FoodDesk`; add `Retail` when stores are in.
-- Tags: `Freebies` (**required**: `freebiesWeight` in `src/lib/bagSample.ts` triples the pin on a crowded day),
+- Tags: `Freebies` (**required**: `freebiesWeight` in `src/lib/bagSample.ts` triples its weight, and `sampleBag` always picks a `Freebies` pin on its day, ranked behind the pin the timeline opened on; before that fix, 2026-11-10, a crowded day could still drop it),
   the day's name, and a topic tag such as `Military discounts`. Categories `Food`, `Retail`.
 
 ## Sourcing
