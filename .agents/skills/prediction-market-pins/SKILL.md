@@ -28,6 +28,21 @@ and must reach production.
   why the prediction hit or missed against the drivers (OPEC+ quota compliance, Hormuz/geopolitical risk premia,
   commercial and SPR inventories, global refinery demand).
 
+## Music-contest pins (Eurovision, song contests)
+A market on a song contest's winner gets a **Contenders** panel with each entry's song, listed and playable.
+- Save the entries with `PUT /api/pins/:id/candidates` (replaces the list; author or admin). Row: `category: "entry"`,
+  `rank` (1 = market favourite), `name` = the **song**, `artist` = `"Performer · Country"`, `odds` (cents, from the
+  market, read on `asOf`), `oddsLabel: "winner"`, `sourceUrl` = the market, `previewUrl` = a direct ~30 s audio
+  preview, `workPinId` when the song has its own pin. Schema: `0146` + `0257`; code: `PinCandidates`,
+  `EntryTracklist`, `src/server/model/pinCandidate.ts`.
+- One list per pin: the card is full width, and each row carries the album control's round play button (same queue
+  and global player bar as a music pin's album), rank, song · performer, and the price bar. Never add a second
+  tracklist box for the same songs.
+- Preview audio: iTunes Search (`itunes.apple.com/search?term=<performer song>&entity=song`), taking `previewUrl`
+  only when track and artist both match. No match: leave `previewUrl` null (no play button on that row). Never
+  invent a URL, a song or an entry; list every country in the contest, not only the ones with odds.
+- Songs come from the organiser's entry list; cite it. Translations stay with the translation agent.
+
 ## Track record (/predictions)
 After creating pins, call `prediction_accuracy` (`apply: true`): it records each market's odds once and settles closed
 ones; the page shows hit rate, Brier score and calibration. Never edit `PredictionRecord.outcomes` by hand: the page
