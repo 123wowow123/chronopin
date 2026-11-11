@@ -594,6 +594,10 @@
   .rich-text tbody th {
     @apply min-w-[8rem] font-medium text-ink;
   }
+  /* The best score in a results-table row. */
+  .rich-text td.top-score {
+    @apply bg-green-500/15 font-semibold text-ink;
+  }
   .rich-text caption {
     @apply mb-1 text-start text-xs text-muted;
   }

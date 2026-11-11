@@ -8,13 +8,33 @@ import { externalLinkAttributes, relativeSiteUrl } from './siteLinks';
 // the formatting and drops anything that could run script. Tables carry a
 // maker's own results table (a model's benchmarks against its rivals).
 export function safeHtml(html: string | null | undefined): string {
-  return sanitizeHtml(html || '', {
+  return markTopScores(sanitizeHtml(html || '', {
     allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'b', 'strong', 'i', 'em', 's', 'u', 'a', 'h3', 'h4', 'blockquote', 'code', 'table', 'caption', 'thead', 'tbody', 'tr', 'th', 'td'],
     allowedAttributes: { a: ['href', 'title', 'target', 'rel'], th: ['colspan', 'rowspan', 'scope'], td: ['colspan', 'rowspan'] },
     allowedSchemes: ['http', 'https', 'mailto'],
     transformTags: {
       a: (tagName, attribs) => ({ tagName, attribs: { ...(attribs.title ? { title: attribs.title } : {}), ...(attribs.href ? { href: relativeSiteUrl(attribs.href) } : {}), rel: 'nofollow ugc', ...externalLinkAttributes(attribs.href, 'nofollow ugc') } }),
     },
+  }));
+}
+
+// In a results table, shades the best (highest) number of each row green so the
+// leader reads at a glance. A row needs two or more numeric cells after its
+// label; ties all shade. Runs on sanitised HTML, so the class survives.
+function markTopScores(html: string): string {
+  if (!html.includes('<table')) return html;
+  return html.replace(/<tr>([\s\S]*?)<\/tr>/g, (row, inner: string) => {
+    const cells = [...inner.matchAll(/<(td|th)([^>]*)>([\s\S]*?)<\/\1>/g)];
+    const values = cells.map((c, i) => {
+      if (i === 0) return NaN;
+      const m = c[3].replace(/<[^>]*>/g, '').trim().match(/^[-+]?\d[\d,]*(?:\.\d+)?/);
+      return m ? parseFloat(m[0].replace(/,/g, '')) : NaN;
+    });
+    const nums = values.filter((v) => !Number.isNaN(v));
+    if (nums.length < 2) return row;
+    const best = Math.max(...nums);
+    let k = 0;
+    return `<tr>${inner.replace(/<(td|th)([^>]*)>/g, (tag, name: string, attrs: string) => (values[k++] === best ? `<${name}${attrs} class="top-score">` : tag))}</tr>`;
   });
 }
 
