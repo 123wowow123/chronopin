@@ -870,6 +870,7 @@ const ms: Messages = {
     candidateArtist: 'Artis Baharu Terbaik',
     candidateEntry: 'Lagu Akhir Besar',
     candidateSetlist: 'Lagu senarai persembahan',
+    candidateRanking: 'Artis dalam persaingan',
     candidatePlayed: 'Harga pasaran untuk dimainkan',
     candidateNominee: 'Harga pasaran untuk dicalonkan',
     candidateWinner: 'Harga pasaran untuk menang',

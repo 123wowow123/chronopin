@@ -58,7 +58,7 @@ export function candidatesProblem(body: unknown): StoredPinCandidate[] | string 
   if (!Array.isArray(body) || body.length > 200) return 'candidates is a list of up to 200 rows.';
   const rows: StoredPinCandidate[] = [];
   for (const item of body as Record<string, unknown>[]) {
-    if (!isCandidateCategory(item.category)) return 'category must be record, album, song, artist, entry or setlist.';
+    if (!isCandidateCategory(item.category)) return 'category must be record, album, song, artist, entry, setlist or ranking.';
     if (!Number.isInteger(item.rank) || (item.rank as number) < 1) return 'rank is a whole number from 1.';
     if (typeof item.name !== 'string' || !item.name.trim() || item.name.length > 200) return 'name is 1-200 characters.';
     if (item.odds != null && (!Number.isInteger(item.odds) || (item.odds as number) < 0 || (item.odds as number) > 100)) return 'odds is 0-100 cents.';

@@ -868,6 +868,7 @@ const hi: Messages = {
     candidateArtist: 'बेस्ट न्यू आर्टिस्ट',
     candidateEntry: 'ग्रैंड फ़ाइनल की प्रविष्टियाँ',
     candidateSetlist: 'सेटलिस्ट के गाने',
+    candidateRanking: 'दौड़ में कलाकार',
     candidatePlayed: 'गाना बजाए जाने का बाज़ार भाव',
     candidateNominee: 'नामांकन का बाज़ार भाव',
     candidateWinner: 'जीत का बाज़ार भाव',

@@ -939,6 +939,7 @@ const ar: Messages = {
     candidateArtist: 'أفضل فنان جديد',
     candidateEntry: 'المشاركات في النهائي الكبير',
     candidateSetlist: 'أغاني قائمة العرض',
+    candidateRanking: 'الفنانون المتنافسون',
     candidatePlayed: 'سعر السوق لعزف الأغنية',
     candidateNominee: 'سعر السوق للترشح',
     candidateWinner: 'سعر السوق للفوز',

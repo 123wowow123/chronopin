@@ -862,6 +862,7 @@ const th: Messages = {
     candidateArtist: 'ศิลปินหน้าใหม่ยอดเยี่ยม',
     candidateEntry: 'เพลงในรอบชิงชนะเลิศ',
     candidateSetlist: 'เพลงในเซ็ตลิสต์',
+    candidateRanking: 'ศิลปินที่แข่งขัน',
     candidatePlayed: 'ราคาตลาดว่าจะถูกเล่น',
     candidateNominee: 'ราคาตลาดว่าจะได้เข้าชิง',
     candidateWinner: 'ราคาตลาดว่าจะชนะ',

@@ -870,6 +870,7 @@ const en = {
     candidateArtist: 'Best New Artist',
     candidateEntry: 'Grand Final entries',
     candidateSetlist: 'Setlist songs',
+    candidateRanking: 'Artists in the running',
     candidatePlayed: 'Market price to be played',
     candidateNominee: 'Market price to be nominated',
     candidateWinner: 'Market price to win',

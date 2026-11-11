@@ -863,6 +863,7 @@ const it: Messages = {
     candidateArtist: 'Miglior artista emergente',
     candidateEntry: 'Brani della finale',
     candidateSetlist: 'Brani della scaletta',
+    candidateRanking: 'Artisti in corsa',
     candidatePlayed: 'Prezzo di mercato per essere suonato',
     candidateNominee: 'Prezzo di mercato per la nomination',
     candidateWinner: 'Prezzo di mercato per la vittoria',

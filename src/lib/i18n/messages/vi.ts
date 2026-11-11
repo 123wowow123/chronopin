@@ -869,6 +869,7 @@ const vi: Messages = {
     candidateArtist: 'Nghệ sĩ mới xuất sắc nhất',
     candidateEntry: 'Các bài dự thi chung kết',
     candidateSetlist: 'Các bài trong setlist',
+    candidateRanking: 'Các nghệ sĩ đang cạnh tranh',
     candidatePlayed: 'Giá thị trường để được biểu diễn',
     candidateNominee: 'Giá thị trường để được đề cử',
     candidateWinner: 'Giá thị trường để chiến thắng',

@@ -865,6 +865,7 @@ const de: Messages = {
     candidateArtist: 'Bester neuer Künstler',
     candidateEntry: 'Beiträge im Finale',
     candidateSetlist: 'Setlist-Songs',
+    candidateRanking: 'Künstler im Rennen',
     candidatePlayed: 'Marktpreis dafür, dass der Song gespielt wird',
     candidateNominee: 'Marktpreis für eine Nominierung',
     candidateWinner: 'Marktpreis für den Sieg',

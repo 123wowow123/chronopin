@@ -863,6 +863,7 @@ const pt: Messages = {
     candidateArtist: 'Melhor artista revelação',
     candidateEntry: 'Canções da grande final',
     candidateSetlist: 'Músicas do setlist',
+    candidateRanking: 'Artistas na disputa',
     candidatePlayed: 'Preço de mercado para ser tocada',
     candidateNominee: 'Preço de mercado para ser indicado',
     candidateWinner: 'Preço de mercado para vencer',

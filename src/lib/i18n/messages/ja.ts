@@ -865,6 +865,7 @@ const ja: Messages = {
     candidateArtist: '最優秀新人賞',
     candidateEntry: 'グランドファイナルの出場曲',
     candidateSetlist: 'セットリストの曲',
+    candidateRanking: '有力アーティスト',
     candidatePlayed: '演奏されるマーケット価格',
     candidateNominee: 'ノミネートの市場価格',
     candidateWinner: '受賞の市場価格',

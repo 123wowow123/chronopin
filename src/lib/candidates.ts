@@ -1,7 +1,7 @@
 // The contenders an awards pin lists (PinCandidate, 0146): the Grammys' "big
 // four", each candidate linked to the pin for its work.
 
-export const CANDIDATE_CATEGORIES = ['record', 'album', 'song', 'artist', 'entry', 'setlist'] as const;
+export const CANDIDATE_CATEGORIES = ['record', 'album', 'song', 'artist', 'entry', 'setlist', 'ranking'] as const;
 export type CandidateCategory = (typeof CANDIDATE_CATEGORIES)[number];
 
 export const isCandidateCategory = (value: unknown): value is CandidateCategory =>

@@ -68,6 +68,13 @@ photo (Roc Nation, via JamBase, `Photo via Roc Nation`) and the venue (Commons, 
 newsroom pages had no downloadable press photo. Script: `scripts/markets/jayz-halftime-backfill-2026-11-11.mjs`
 (`--local` writes to localhost; production needs 0258 and the setlist code deployed first).
 
+### Artist-ranking markets (Spotify top artist of the year, pin 1965)
+`category: "ranking"` (migration 0259; heading "Artists in the running", price label "to win"). `name` = the artist,
+`artist` = the track the row previews, `previewUrl` = an iTunes preview of **one well-known track** (a signature
+song, not a claim about their most-streamed track). List every named artist on the market, favourite first, with the
+page's displayed percentage. Media: the publisher's newsroom chart, labelled as the previous year's ranking when it is
+(Wrapped 2025 top artists for the 2026 market). Script: `scripts/markets/spotify-top-artist-backfill-2026-11-11.mjs`.
+
 ## Track record (/predictions)
 After creating pins, call `prediction_accuracy` (`apply: true`): it records each market's odds once and settles closed
 ones; the page shows hit rate, Brier score and calibration. Never edit `PredictionRecord.outcomes` by hand: the page

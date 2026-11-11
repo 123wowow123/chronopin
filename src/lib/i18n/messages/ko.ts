@@ -865,6 +865,7 @@ const ko: Messages = {
     candidateArtist: '최우수 신인',
     candidateEntry: '그랜드 파이널 출전곡',
     candidateSetlist: '세트리스트 곡',
+    candidateRanking: '경쟁 중인 아티스트',
     candidatePlayed: '연주될 시장 가격',
     candidateNominee: '후보 지명 시장 가격',
     candidateWinner: '수상 시장 가격',

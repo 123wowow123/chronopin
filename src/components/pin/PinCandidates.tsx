@@ -10,6 +10,9 @@ import type { Translator } from "@/lib/i18n/translate";
 import { localizePath } from "@/lib/i18n/config";
 import { pinPath } from "@/lib/seo";
 
+// Categories listed as a playable tracklist rather than a picture list.
+const TRACKLIST = new Set<CandidateCategory>(["entry", "setlist", "ranking"]);
+
 const TITLE_KEYS = {
   record: "pin.candidateRecord",
   album: "pin.candidateAlbum",
@@ -17,6 +20,7 @@ const TITLE_KEYS = {
   artist: "pin.candidateArtist",
   entry: "pin.candidateEntry",
   setlist: "pin.candidateSetlist",
+  ranking: "pin.candidateRanking",
 } as const satisfies Record<CandidateCategory, string>;
 
 // The big four awards categories and who is expected in them (PinCandidate,
@@ -63,7 +67,7 @@ export function PinCandidates({
         {groups.map(({ category, rows }) => (
           <div
             key={category}
-            className={`surface rounded-lg p-3${category === "entry" || category === "setlist" ? " sm:col-span-2" : ""}`}
+            className={`surface rounded-lg p-3${TRACKLIST.has(category) ? " sm:col-span-2" : ""}`}
           >
             <h3 className="flex items-center gap-1.5 text-sm font-semibold text-ink">
               <span aria-hidden>{category === "artist" ? "🌟" : "🏆"}</span>
@@ -78,7 +82,7 @@ export function PinCandidates({
                     : "pin.candidateNominee",
               )}
             </p>
-            {category === "entry" || category === "setlist" ? (
+            {TRACKLIST.has(category) ? (
               <EntryTracklist rows={rows} pinId={pinId} />
             ) : (
               <ol className="flex flex-col gap-2.5">

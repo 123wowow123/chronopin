@@ -866,6 +866,7 @@ const zh: Messages = {
     candidateArtist: '最佳新人',
     candidateEntry: '总决赛参赛歌曲',
     candidateSetlist: '演出歌单歌曲',
+    candidateRanking: '角逐中的艺人',
     candidatePlayed: '市场对其被演唱的定价',
     candidateNominee: '获提名的市场价格',
     candidateWinner: '获奖的市场价格',
