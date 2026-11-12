@@ -161,3 +161,16 @@ Do this without being asked, on every pin you create or repair. Pins about a com
 - Source the address from the company's own site or a reliable listing, and geocode it (Nominatim, generic User-Agent, no owner email). Sources disagree sometimes (Anthropic: 500 Howard St vs the old 548 Market St listing); take the current HQ and say which in the update reason.
 - Edit through `update_pin`; when it refuses ("No run is open"), `PUT /api/pins/:id` on local, then on prod with a fresh `admin.token` (`admin-login-refresh`), sending the **whole** pin JSON with only `address`, `latitude`, `longitude` changed (the API's PATCH is not a merge: a partial body fails on the NOT NULL `title`). Read back address, coordinates, author, media, tags and parent. Match the prod pin by `sourceUrl` or title first, since ids can differ.
 - Quick check each run: `GET /api/pins/:id` for the pins you touched and flag any whose `address` has no digit and whose coordinates equal a city centre.
+
+## Market-moving events get a market-impact weight (owner, 2026-11-12)
+
+When a run creates or rewrites a pin about an event that can move a market, score it with `save_market_impact` in the same run; do not wait for `market_impact_candidates` to list it. Owner example: pin 20915 (Jensen Huang resigns as Nvidia CEO, 12 Nov 2026) should be market-moving; saved at weight 8 (NVDA, SOXX, SMH, QQQ, AMD, AVGO, TSM). The reason comes from a page you opened (the 8-K, the company newsroom), not a guess.
+- An unplanned CEO, chair or founder exit, a guidance cut, a major regulatory or court ruling, an OPEC or central-bank move, or a mega-cap's results week: weight 7-8; market-wide shock 9-10.
+- Fix the pins around it too: the same company's upcoming earnings pin (here 2957, Nvidia Q3 results on 17 Nov) gets a summary line on the news, and a breaking-news rewrite of an existing market pin is re-scored.
+- The tool saves local and prod (matched by sourceUrl), so no replay is needed.
+
+## Learned in run 46 (2026-11-12)
+
+- Local and prod ids differ for pins created since the last pull (local 20950 = IPS Nationwide layoffs, prod 20950 = NVIDIA Hopper). `get_pin` and `update_pin` act on prod, `find_pins`, `pins_this_week` and `revisit_queue` read local: match by `sourceUrl` before any edit, and treat a 409 on `create_pin` as the real prod duplicate check.
+- `/api/admin/industry-forecasts` is PUT-only (GET returns 405); read forecast rows from the local database.
+- `record_event_info` answers "kept the reading set by hand" for hand rows: compare the page, then advance only `checkedAt` with `PUT /api/pins/:id/event-info` (`source: "hand"`) on local and prod.
