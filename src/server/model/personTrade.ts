@@ -42,8 +42,10 @@ export type WatchedPersonPin = {
 };
 
 // The committee seats whose sectors include the traded ticker's sector (src/lib/conflicts.ts), as
-// [{committee, sector}]; `t` names the PersonTrade row (or alias) the subquery reads.
-export const CONFLICTS = (t: string) => `COALESCE((SELECT jsonb_agg(DISTINCT jsonb_build_object('committee', pc."name", 'sector', x."sector"))
+// [{committee, sector, strong}]; strong when the seat's committee oversees at most two sectors (a focused
+// jurisdiction such as Armed Services and defense), weak when the sector is one of many it covers (Energy
+// and Commerce); `t` names the PersonTrade row (or alias) the subquery reads.
+export const CONFLICTS = (t: string) => `COALESCE((SELECT jsonb_agg(DISTINCT jsonb_build_object('committee', pc."name", 'sector', x."sector", 'strong', cardinality(pc."sectors") <= 2))
   FROM (SELECT COALESCE((SELECT ts."sector" FROM "TickerSector" ts WHERE ts."ticker" = ${t}."ticker"), ${t}."sector") AS "sector") x
   JOIN "PersonCommittee" pc ON x."sector" = ANY (pc."sectors")
   WHERE pc."personId" = ${t}."personId"), '[]'::jsonb)`;

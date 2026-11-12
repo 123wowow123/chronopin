@@ -61,7 +61,8 @@ describe('latest personal trade blocks', () => {
     expect(html).toContain('/search?q=%24MSFT');
     expect(html).toContain('Microsoft');
     expect(html).toContain('Exchange');
-    expect(html).toContain('Possible conflict of interest');
+    expect(html).toContain('Weak conflict of interest');
+    expect(renderToStaticMarkup(<LatestTrades trades={[trade(9, { conflicts: [{ committee: 'Armed Services', sector: 'defense', strong: true }] })]} t={t} />)).toContain('Strong conflict of interest');
     expect(html).toContain('Not disclosed');
     expect(renderToStaticMarkup(<LatestTrades trades={[]} t={t} />)).toBe('');
   });

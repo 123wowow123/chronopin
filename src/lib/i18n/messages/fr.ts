@@ -2553,7 +2553,7 @@ const fr: Messages = {
       unwatchAllHint: 'Arrêter les alertes sur toutes les transactions',
       none: 'Aucune opération boursière déclarée.',
     },
-    conflict: { label: 'Conflit d’intérêts possible', hint: 'Siège à {committees}, qui supervise {sector}' },
+    conflict: { label: 'Conflit d’intérêts possible', hint: 'Siège à {committees}, qui supervise {sector}', strong: 'Conflit d’intérêts fort', weak: 'Conflit d’intérêts faible' },
     committees: { title: 'Commissions', about: 'Sièges actuels en commissions et sous-commissions (congress-legislators). Une opération est signalée lorsque l’entreprise relève d’un secteur supervisé par l’une de ces commissions ; c’est une raison de regarder de plus près, pas la preuve d’une faute.' },
     sectors: {
       defense: 'Défense',

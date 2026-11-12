@@ -2556,7 +2556,7 @@ const vi: Messages = {
       unwatchAllHint: 'Dừng thông báo mọi giao dịch cổ phiếu',
       none: 'Chưa có giao dịch cổ phiếu nào được công bố.',
     },
-    conflict: { label: 'Có thể xung đột lợi ích', hint: 'Là thành viên {committees}, cơ quan giám sát {sector}' },
+    conflict: { label: 'Có thể xung đột lợi ích', hint: 'Là thành viên {committees}, cơ quan giám sát {sector}', strong: 'Xung đột lợi ích mạnh', weak: 'Xung đột lợi ích yếu' },
     committees: { title: 'Ủy ban', about: 'Các ghế ủy ban và tiểu ban hiện tại (congress-legislators). Giao dịch được đánh dấu khi công ty thuộc ngành mà một trong các ủy ban này giám sát; đó là lý do để xem kỹ hơn, không phải kết luận về sai phạm.' },
     sectors: {
       defense: 'Quốc phòng',

@@ -151,7 +151,7 @@ export type TradeRow = {
   note?: string | null;
   sourceUrl: string;
   // Committee seats the member holds that oversee this company's sector: a possible conflict of interest.
-  conflicts?: { committee: string; sector: string }[];
+  conflicts?: { committee: string; sector: string; strong?: boolean }[];
 };
 
 export type TradeSummary = {

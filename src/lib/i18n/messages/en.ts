@@ -2558,7 +2558,7 @@ const en = {
       unwatchAllHint: 'Stop notifications about all stock trades',
       none: 'No stock trades disclosed.',
     },
-    conflict: { label: 'Possible conflict of interest', hint: 'Sits on {committees}, which oversees {sector}' },
+    conflict: { label: 'Possible conflict of interest', hint: 'Sits on {committees}, which oversees {sector}', strong: 'Strong conflict of interest', weak: 'Weak conflict of interest' },
     committees: { title: 'Committees', about: 'Committee and subcommittee seats held today, from congress-legislators. A trade is marked when the company is in a sector one of these committees oversees; that is a reason to look closer, not a finding of wrongdoing.' },
     sectors: {
       defense: 'Defense',

@@ -2547,7 +2547,7 @@ const zh: Messages = {
       unwatchAllHint: '停止所有股票交易通知',
       none: '暂无披露的股票交易。',
     },
-    conflict: { label: '可能存在利益冲突', hint: '任职于{committees}，该委员会监管{sector}' },
+    conflict: { label: '可能存在利益冲突', hint: '任职于{committees}，该委员会监管{sector}', strong: '强利益冲突', weak: '弱利益冲突' },
     committees: { title: '委员会', about: '目前任职的委员会和小组委员会（congress-legislators）。当公司所属行业受这些委员会之一监管时，该交易会被标记；这只是值得进一步关注的提示，并非对违规行为的认定。' },
     sectors: {
       defense: '国防',

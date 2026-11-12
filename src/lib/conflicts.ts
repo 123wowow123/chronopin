@@ -113,7 +113,8 @@ export function committeeSectors(committeeId: string, name: string): Sector[] {
 }
 
 export type Seat = { committeeId: string; parentId: string | null; name: string; chamber: 'house' | 'senate' | 'joint'; title: string | null; rank: number | null; sectors: string[] };
-export type Conflict = { committee: string; sector: Sector };
+export type Conflict = { committee: string; sector: Sector; strong?: boolean };
+export const isStrongConflict = (conflicts: Conflict[] | undefined) => !!conflicts?.some((c) => c.strong);
 
 // The sector of a holding from its name, for what has no SEC filer to read a SIC code from: bonds and
 // bond funds, sector and thematic funds and ETFs, foreign ADRs, and tickers EDGAR no longer lists.

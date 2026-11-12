@@ -2553,7 +2553,7 @@ const es: Messages = {
       unwatchAllHint: 'Dejar de recibir avisos de todas las operaciones',
       none: 'No se han declarado operaciones bursátiles.',
     },
-    conflict: { label: 'Posible conflicto de intereses', hint: 'Integra {committees}, que supervisa {sector}' },
+    conflict: { label: 'Posible conflicto de intereses', hint: 'Integra {committees}, que supervisa {sector}', strong: 'Conflicto de intereses fuerte', weak: 'Conflicto de intereses débil' },
     committees: { title: 'Comités', about: 'Puestos actuales en comités y subcomités (congress-legislators). Se marca una operación cuando la empresa pertenece a un sector que supervisa uno de estos comités; es motivo para mirar con más atención, no una prueba de irregularidad.' },
     sectors: {
       defense: 'Defensa',

@@ -2544,7 +2544,7 @@ const pt: Messages = {
       unwatchAllHint: 'Parar avisos de todas as operações',
       none: 'Nenhuma operação na bolsa declarada.',
     },
-    conflict: { label: 'Possível conflito de interesses', hint: 'Integra {committees}, que supervisiona {sector}' },
+    conflict: { label: 'Possível conflito de interesses', hint: 'Integra {committees}, que supervisiona {sector}', strong: 'Conflito de interesses forte', weak: 'Conflito de interesses fraco' },
     committees: { title: 'Comitês', about: 'Cadeiras atuais em comitês e subcomitês (congress-legislators). Uma operação é marcada quando a empresa pertence a um setor supervisionado por um desses comitês; é um motivo para olhar com atenção, não uma prova de irregularidade.' },
     sectors: {
       defense: 'Defesa',

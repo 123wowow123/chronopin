@@ -2925,7 +2925,7 @@ const ar: Messages = {
       unwatchAllHint: 'إيقاف إشعارات كل صفقات الأسهم',
       none: 'لا توجد صفقات أسهم مُفصح عنها.',
     },
-    conflict: { label: 'تضارب مصالح محتمل', hint: 'عضو في {committees} التي تشرف على {sector}' },
+    conflict: { label: 'تضارب مصالح محتمل', hint: 'عضو في {committees} التي تشرف على {sector}', strong: 'تضارب مصالح قوي', weak: 'تضارب مصالح ضعيف' },
     committees: { title: 'اللجان', about: 'المقاعد الحالية في اللجان واللجان الفرعية (congress-legislators). تُوسَم الصفقة عندما تنتمي الشركة إلى قطاع تشرف عليه إحدى هذه اللجان؛ وهذا سبب للتدقيق وليس إثباتًا لمخالفة.' },
     sectors: {
       defense: 'الدفاع',

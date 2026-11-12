@@ -2544,7 +2544,7 @@ const it: Messages = {
       unwatchAllHint: 'Interrompi le notifiche su tutte le operazioni',
       none: 'Nessuna operazione in borsa dichiarata.',
     },
-    conflict: { label: 'Possibile conflitto di interessi', hint: 'Siede in {committees}, che supervisiona {sector}' },
+    conflict: { label: 'Possibile conflitto di interessi', hint: 'Siede in {committees}, che supervisiona {sector}', strong: 'Conflitto di interessi forte', weak: 'Conflitto di interessi debole' },
     committees: { title: 'Commissioni', about: 'Seggi attuali in commissioni e sottocommissioni (congress-legislators). Un’operazione è segnalata quando l’azienda appartiene a un settore supervisionato da una di queste commissioni; è un motivo per guardare meglio, non la prova di un illecito.' },
     sectors: {
       defense: 'Difesa',

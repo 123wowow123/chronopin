@@ -2548,7 +2548,7 @@ const ko: Messages = {
       unwatchAllHint: '모든 주식 거래 알림 중지',
       none: '공개된 주식 거래가 없습니다.',
     },
-    conflict: { label: '이해충돌 가능성', hint: '{committees} 소속 (감독 분야: {sector})' },
+    conflict: { label: '이해충돌 가능성', hint: '{committees} 소속 (감독 분야: {sector})', strong: '강한 이해충돌', weak: '약한 이해충돌' },
     committees: { title: '위원회', about: '현재 속한 위원회와 소위원회(congress-legislators). 기업이 이 위원회들이 감독하는 업종에 속하면 거래에 표시합니다. 더 자세히 살펴볼 이유일 뿐 위법의 판단이 아닙니다.' },
     sectors: {
       defense: '국방',

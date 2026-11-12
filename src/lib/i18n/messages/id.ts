@@ -2557,7 +2557,7 @@ const id: Messages = {
       unwatchAllHint: 'Berhenti menerima notifikasi semua transaksi saham',
       none: 'Belum ada transaksi saham yang diungkapkan.',
     },
-    conflict: { label: 'Kemungkinan konflik kepentingan', hint: 'Duduk di {committees}, yang mengawasi {sector}' },
+    conflict: { label: 'Kemungkinan konflik kepentingan', hint: 'Duduk di {committees}, yang mengawasi {sector}', strong: 'Konflik kepentingan kuat', weak: 'Konflik kepentingan lemah' },
     committees: { title: 'Komite', about: 'Kursi komite dan subkomite saat ini (congress-legislators). Transaksi diberi tanda bila perusahaan berada di sektor yang diawasi salah satu komite ini; itu alasan untuk memeriksa lebih dekat, bukan temuan pelanggaran.' },
     sectors: {
       defense: 'Pertahanan',

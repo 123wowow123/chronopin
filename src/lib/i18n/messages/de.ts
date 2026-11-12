@@ -2553,7 +2553,7 @@ const de: Messages = {
       unwatchAllHint: 'Benachrichtigungen zu allen Aktienhandeln beenden',
       none: 'Keine Aktiengeschäfte offengelegt.',
     },
-    conflict: { label: 'Möglicher Interessenkonflikt', hint: 'Mitglied in {committees}, zuständig für {sector}' },
+    conflict: { label: 'Möglicher Interessenkonflikt', hint: 'Mitglied in {committees}, zuständig für {sector}', strong: 'Starker Interessenkonflikt', weak: 'Schwacher Interessenkonflikt' },
     committees: { title: 'Ausschüsse', about: 'Heutige Sitze in Ausschüssen und Unterausschüssen (congress-legislators). Ein Geschäft wird markiert, wenn das Unternehmen in einer Branche tätig ist, die einer dieser Ausschüsse beaufsichtigt; das ist ein Anlass zum Hinsehen, kein Nachweis eines Fehlverhaltens.' },
     sectors: {
       defense: 'Verteidigung',

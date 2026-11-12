@@ -62,8 +62,8 @@ export function LatestTrades({ trades, t }: { trades: TradeRow[]; t: Translator 
                           </div>
                           {trade.note ? <p className="mt-2 text-xs text-muted">{trade.note}</p> : null}
                           {trade.conflicts?.length ? (
-                            <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-warning-soft" title={[...new Set(trade.conflicts.map((c) => c.committee))].join('; ')}>
-                              <Icon name="warning" className="size-3 shrink-0" />{t('person.conflict.label')}
+                            <span className={`mt-2 inline-flex items-center gap-1 text-xs font-medium ${trade.conflicts.some((c) => c.strong) ? 'text-danger' : 'text-warning-soft'}`} title={[...new Set(trade.conflicts.map((c) => c.committee))].join('; ')}>
+                              <Icon name="warning" className="size-3 shrink-0" />{t(trade.conflicts.some((c) => c.strong) ? 'person.conflict.strong' : 'person.conflict.weak')}
                             </span>
                           ) : null}
                           <div className="mt-2 flex flex-wrap justify-between gap-2 text-xs text-subtle">

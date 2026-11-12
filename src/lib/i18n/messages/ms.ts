@@ -2557,7 +2557,7 @@ const ms: Messages = {
       unwatchAllHint: 'Berhenti pemberitahuan semua dagangan saham',
       none: 'Tiada dagangan saham didedahkan.',
     },
-    conflict: { label: 'Kemungkinan konflik kepentingan', hint: 'Duduk dalam {committees}, yang mengawasi {sector}' },
+    conflict: { label: 'Kemungkinan konflik kepentingan', hint: 'Duduk dalam {committees}, yang mengawasi {sector}', strong: 'Konflik kepentingan kuat', weak: 'Konflik kepentingan lemah' },
     committees: { title: 'Jawatankuasa', about: 'Kerusi jawatankuasa dan jawatankuasa kecil kini (congress-legislators). Urus niaga ditandakan jika syarikat berada dalam sektor yang diawasi salah satu jawatankuasa ini; ia sebab untuk menyemak lebih teliti, bukan bukti salah laku.' },
     sectors: {
       defense: 'Pertahanan',

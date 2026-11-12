@@ -82,11 +82,11 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                     {tr.note ? <span className="mt-1 block max-w-xs text-xs text-muted">{tr.note}</span> : null}
                     {tr.conflicts?.length ? (
                       <span
-                        className="mt-1 inline-flex max-w-xs items-center gap-1 rounded-full bg-warning/15 px-2 py-0.5 text-[11px] font-semibold text-warning-soft ring-1 ring-warning/40 ring-inset"
+                        className={`mt-1 inline-flex max-w-xs items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${tr.conflicts.some((c) => c.strong) ? 'bg-danger/15 text-danger ring-danger/40' : 'bg-warning/15 text-warning-soft ring-warning/40'}`}
                         title={t('person.conflict.hint', { committees: [...new Set(tr.conflicts.map((c) => c.committee.split(': ')[0]))].slice(0, 3).join('; '), sector: t.dynamic(`person.sectors.${tr.conflicts[0].sector}`, tr.conflicts[0].sector) })}
                       >
                         <Icon name="warning" className="size-3 shrink-0" />
-                        <span className="truncate">{t('person.conflict.label')}</span>
+                        <span className="truncate">{t(tr.conflicts.some((c) => c.strong) ? 'person.conflict.strong' : 'person.conflict.weak')}</span>
                       </span>
                     ) : null}
                   </td>

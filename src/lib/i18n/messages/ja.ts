@@ -2547,7 +2547,7 @@ const ja: Messages = {
       unwatchAllHint: 'すべての株式取引の通知を停止',
       none: '開示された株式取引はありません。',
     },
-    conflict: { label: '利益相反の可能性', hint: '{committees}に所属（所管：{sector}）' },
+    conflict: { label: '利益相反の可能性', hint: '{committees}に所属（所管：{sector}）', strong: '強い利益相反', weak: '弱い利益相反' },
     committees: { title: '委員会', about: '現在所属する委員会・小委員会（congress-legislators）。企業がこれらの委員会の所管業種に属する場合に取引へ印を付けます。これは注意して確認すべき目安であり、不正の認定ではありません。' },
     sectors: {
       defense: '防衛',
