@@ -37,7 +37,7 @@ export function PremiumMaps({ slug, name }: { slug: string; name: string }) {
         {answer && !answer.locked ? <p className="mt-1.5 max-w-3xl text-xs leading-relaxed text-subtle">{t('person.holdings.mapAbout')}</p> : null}
       </div>
       {answer && !answer.locked ? (
-        <div className="flex flex-col gap-5">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           {answer.maps.map(m => (
             <article key={m.key} className="floating min-w-0 p-4 sm:p-5">
               <h3 className="mb-3 text-lg font-semibold">{m.name}</h3>

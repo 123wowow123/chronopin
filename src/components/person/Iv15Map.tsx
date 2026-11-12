@@ -83,8 +83,12 @@ export function Iv15Map({ points, name, t }: { points: Iv15Point[]; name: string
           );
         })}
       </svg>
-      <div className="mt-3 rounded-lg border border-line bg-raised p-3 text-xs leading-relaxed text-muted">
-        <p className="mb-1 font-semibold text-ink">{t('person.holdings.iv15LegendTitle')}</p>
+      <details className="group mt-3 rounded-lg border border-line bg-raised p-3 text-xs leading-relaxed text-muted">
+        <summary className="flex cursor-pointer list-none items-center justify-between font-semibold text-ink [&::-webkit-details-marker]:hidden">
+          <span>{t('person.holdings.iv15LegendTitle')}</span>
+          <span aria-hidden className="text-subtle transition-transform group-open:rotate-180">▼</span>
+        </summary>
+        <div className="mt-2">
         <p className="mb-3">{t('person.holdings.iv15LegendRatio')}</p>
         <p className="mb-1 font-semibold text-ink">{t('person.holdings.iv15LegendTiers')}</p>
         <dl className="mb-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
@@ -95,7 +99,7 @@ export function Iv15Map({ points, name, t }: { points: Iv15Point[]; name: string
             </div>
           ))}
         </dl>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className={`grid gap-4 ${published.length && estimates.length ? 'md:grid-cols-2' : ''}`}>
           {published.length ? (
             <section aria-label={t('person.holdings.iv15LegendOwnerTitle', { name })}>
               <h4 className="mb-1.5 font-semibold text-ink">{t('person.holdings.iv15LegendOwnerTitle', { name })}</h4>
@@ -126,7 +130,8 @@ export function Iv15Map({ points, name, t }: { points: Iv15Point[]; name: string
             </section>
           ) : null}
         </div>
-      </div>
+        </div>
+      </details>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { RATIO_LINES, RATIO_MIN, RATIO_TOP, type MapPoint, type Unplaced } from 
 import type { Translator } from '@/lib/i18n/translate';
 
 const W = 640;
-const H = 340;
+const H = 400;
 const PAD = { l: 52, r: 20, t: 16, b: 34 };
 const R_MIN = 7;
 const R_MAX = 26;
@@ -49,6 +49,18 @@ export function HoldingsMap({ points, unplaced, t }: { points: MapPoint[]; unpla
           );
         })}
       </svg>
+      <details className="group mt-3 rounded-lg border border-line bg-raised p-3 text-xs leading-relaxed text-muted">
+        <summary className="flex cursor-pointer list-none items-center justify-between font-semibold text-ink [&::-webkit-details-marker]:hidden">
+          <span>{t('person.holdings.iv15LegendTitle')}</span>
+          <span aria-hidden className="text-subtle transition-transform group-open:rotate-180">▼</span>
+        </summary>
+        <ul className="mt-2 list-disc space-y-1 ps-4">
+          <li>{t('person.holdings.mapReadX')}</li>
+          <li>{t('person.holdings.mapReadY')}</li>
+          <li>{t('person.holdings.mapReadSize')}</li>
+          <li>{t('person.holdings.mapReadNote')}</li>
+        </ul>
+      </details>
       {unplaced.length ? (
         <p className="mt-2 text-xs leading-relaxed text-subtle">
           {t('person.holdings.mapNotPlaced')}: {unplaced.map(u => `${u.symbol} (${t(`person.holdings.mapReason.${u.reason}`)})`).join(', ')}
