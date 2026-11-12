@@ -2256,6 +2256,7 @@ const ms: Messages = {
     sort: 'Isih',
     sortName: 'Nama',
     sortRecent: 'Terbaharu',
+    sortComplete: 'Profil paling lengkap',
     sortAscending: 'Isih menaik',
     sortDescending: 'Isih menurun',
     noMatches: 'Tiada sesiapa yang sepadan dengan nama itu.',

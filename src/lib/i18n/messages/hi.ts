@@ -2263,6 +2263,7 @@ const hi: Messages = {
     sort: 'क्रमबद्ध करें',
     sortName: 'नाम',
     sortRecent: 'सबसे हाल के',
+    sortComplete: 'सबसे पूर्ण प्रोफ़ाइल',
     sortAscending: 'आरोही क्रम में क्रमबद्ध करें',
     sortDescending: 'अवरोही क्रम में क्रमबद्ध करें',
     noMatches: 'इस नाम से कोई मेल नहीं खाता।',

@@ -2246,6 +2246,7 @@ const ja: Messages = {
     sort: '並べ替え',
     sortName: '名前',
     sortRecent: '新しい順',
+    sortComplete: 'プロフィールが充実している順',
     sortAscending: '昇順に並べ替え',
     sortDescending: '降順に並べ替え',
     noMatches: '該当する人物はいません。',

@@ -2252,6 +2252,7 @@ const fr: Messages = {
     sort: 'Trier',
     sortName: 'Nom',
     sortRecent: 'Les plus récents',
+    sortComplete: 'Profil le plus complet',
     sortAscending: 'Tri croissant',
     sortDescending: 'Tri décroissant',
     noMatches: 'Personne ne correspond à ce nom.',

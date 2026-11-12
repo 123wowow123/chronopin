@@ -2256,6 +2256,7 @@ const en = {
     sort: 'Sort',
     sortName: 'Name',
     sortRecent: 'Most recent',
+    sortComplete: 'Most complete profile',
     sortAscending: 'Sort ascending',
     sortDescending: 'Sort descending',
     noMatches: 'No one matches that name.',

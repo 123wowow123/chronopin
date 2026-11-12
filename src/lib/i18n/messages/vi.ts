@@ -2255,6 +2255,7 @@ const vi: Messages = {
     sort: 'Sắp xếp',
     sortName: 'Tên',
     sortRecent: 'Gần đây nhất',
+    sortComplete: 'Hồ sơ đầy đủ nhất',
     sortAscending: 'Sắp xếp tăng dần',
     sortDescending: 'Sắp xếp giảm dần',
     noMatches: 'Không có ai khớp với tên đó.',

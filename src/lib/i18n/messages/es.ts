@@ -2252,6 +2252,7 @@ const es: Messages = {
     sort: 'Ordenar',
     sortName: 'Nombre',
     sortRecent: 'Más recientes',
+    sortComplete: 'Perfil más completo',
     sortAscending: 'Ordenar de forma ascendente',
     sortDescending: 'Ordenar de forma descendente',
     noMatches: 'Nadie coincide con ese nombre.',

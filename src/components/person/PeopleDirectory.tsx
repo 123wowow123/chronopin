@@ -24,6 +24,7 @@ export type DirectoryPerson = {
   inOffice?: boolean;
   party?: string | null;
   trades?: number;
+  pins?: number;
   living?: boolean;
 };
 
@@ -129,6 +130,19 @@ function axisBest(p: DirectoryPerson, axis: number): number {
   return best;
 }
 
+// How filled in a profile is: trade activity first, then documented radar
+// axes, then the pins about the person.
+function completeness(p: DirectoryPerson): [number, number, number] {
+  const axes = new Set<number>();
+  (p.radar ?? []).forEach((phase) => phase.forEach((v, i) => v != null && axes.add(i)));
+  return [p.trades ?? 0, axes.size, p.pins ?? 0];
+}
+const byComplete = (a: DirectoryPerson, b: DirectoryPerson) => {
+  const x = completeness(a);
+  const y = completeness(b);
+  return y[0] - x[0] || y[1] - x[1] || y[2] - x[2];
+};
+
 // GovTrack writes "Democrat" where Wikidata writes "Democratic": one party, one chip.
 const partyOf = (p: DirectoryPerson) => (p.party === 'Democrat' ? 'Democratic' : p.party);
 
@@ -166,7 +180,7 @@ function facetsFor(people: DirectoryPerson[], t: ReturnType<typeof useT>): Facet
 }
 
 // Recent keeps the server's office chronology (current holder, then newest exits).
-type SortKey = 'recent' | 'name' | OctagonAxis;
+type SortKey = 'complete' | 'recent' | 'name' | OctagonAxis;
 
 let cachedSidebar: { userId: number; data: PeopleSidebarData } | null = null;
 
@@ -189,7 +203,7 @@ export function PeopleDirectory({
   const [active, setActive] = useState(defaultKey ?? groups[0]?.key ?? '');
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(PAGE);
-  const [sort, setSort] = useState<SortKey>('recent');
+  const [sort, setSort] = useState<SortKey>('complete');
   // The second row's chip (a Facet key); none: everyone in the tab.
   const [facet, setFacet] = useState<string | null>(null);
   // Every sort opens descending (Z to A, highest first); the toggle flips it.
@@ -241,7 +255,7 @@ export function PeopleDirectory({
   // chosen sort and direction order either list; ties fall back to the name.
   const list = useMemo(() => {
     const byName = (a: DirectoryPerson, b: DirectoryPerson) => a.name.localeCompare(b.name);
-    const axis = sort === 'name' || sort === 'recent' ? -1 : OCTAGON_AXES.indexOf(sort);
+    const axis = sort === 'name' || sort === 'recent' || sort === 'complete' ? -1 : OCTAGON_AXES.indexOf(sort);
     // People with no evidence on the axis stay last in either direction.
     const order = (a: DirectoryPerson, b: DirectoryPerson) => {
       if (axis < 0) return 0;
@@ -254,6 +268,7 @@ export function PeopleDirectory({
     const named = (a: DirectoryPerson, b: DirectoryPerson) => (sort === 'name' && descending ? byName(b, a) : byName(a, b));
     if (!searching) {
       const people = activeFacet ? (group?.people ?? []).filter(activeFacet.test) : (group?.people ?? []);
+      if (sort === 'complete') return [...people].sort((a, b) => (descending ? byComplete(a, b) : byComplete(b, a)) || named(a, b));
       if (sort === 'recent') return descending ? people : [...people].reverse();
       return [...people].sort((a, b) => order(a, b) || named(a, b));
     }
@@ -262,7 +277,7 @@ export function PeopleDirectory({
     return groups
       .flatMap((g) => g.people)
       .filter((p) => !seen.has(p.id) && seen.add(p.id) && (fold(p.name).includes(needle) || fold(p.line).includes(needle)))
-      .sort((a, b) => order(a, b) || starts(b) - starts(a) || named(a, b));
+      .sort((a, b) => (sort === 'complete' ? (descending ? byComplete(a, b) : byComplete(b, a)) : 0) || order(a, b) || starts(b) - starts(a) || named(a, b));
   }, [groups, group, activeFacet, needle, searching, sort, descending]);
   if (!group) return null;
 
@@ -308,6 +323,7 @@ export function PeopleDirectory({
                 }}
                 className="appearance-none rounded-full bg-field py-1.5 pr-8 pl-3 text-sm leading-5 text-ink ring-1 ring-line ring-inset outline-none focus:ring-2 focus:ring-accent"
               >
+                <option value="complete">{t('person.sortComplete')}</option>
                 <option value="recent">{t('person.sortRecent')}</option>
                 <option value="name">{t('person.sortName')}</option>
                 {OCTAGON_AXES.map((a) => (

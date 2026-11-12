@@ -2247,6 +2247,7 @@ const ko: Messages = {
     sort: '정렬',
     sortName: '이름',
     sortRecent: '최신순',
+    sortComplete: '가장 완전한 프로필',
     sortAscending: '오름차순 정렬',
     sortDescending: '내림차순 정렬',
     noMatches: '해당 이름과 일치하는 사람이 없습니다.',

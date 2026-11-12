@@ -2242,6 +2242,7 @@ const th: Messages = {
     sort: 'เรียงลำดับ',
     sortName: 'ชื่อ',
     sortRecent: 'ล่าสุด',
+    sortComplete: 'โปรไฟล์ครบถ้วนที่สุด',
     sortAscending: 'เรียงจากน้อยไปมาก',
     sortDescending: 'เรียงจากมากไปน้อย',
     noMatches: 'ไม่มีใครตรงกับชื่อนี้',

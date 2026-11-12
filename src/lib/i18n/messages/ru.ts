@@ -2339,6 +2339,7 @@ const ru: Messages = {
     sort: 'Сортировка',
     sortName: 'Имя',
     sortRecent: 'Самые последние',
+    sortComplete: 'Самый полный профиль',
     sortAscending: 'Сортировать по возрастанию',
     sortDescending: 'Сортировать по убыванию',
     noMatches: 'Нет никого с таким именем.',

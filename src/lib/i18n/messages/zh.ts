@@ -2246,6 +2246,7 @@ const zh: Messages = {
     sort: '排序',
     sortName: '姓名',
     sortRecent: '最近优先',
+    sortComplete: '资料最完整',
     sortAscending: '升序排列',
     sortDescending: '降序排列',
     noMatches: '没有与该姓名匹配的人。',

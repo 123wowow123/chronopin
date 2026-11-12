@@ -49,6 +49,7 @@ async function People() {
     inOffice: isPolitical(p.role) ? !isFormer(p) : undefined,
     party: p.party,
     trades: p.trades,
+    pins: p.pins,
     living: p.deathDate == null,
     line: [useOffice ? p.office : null, p.party, useOffice ? null : p.jurisdiction].filter(Boolean).join(' \u00b7 '),
   });
@@ -98,7 +99,7 @@ async function People() {
     .filter((p) => !seen.has(p.id) && seen.add(p.id))
     .sort((a, b) => a.name.localeCompare(b.name));
   const tabs: DirectoryGroup[] = [{ key: 'all', heading: t('person.all'), people: everyone }, ...groups];
-  const defaultKey = groups.find((g) => g.key === 'president')?.key ?? groups[0]?.key;
+  const defaultKey = 'all';
   return (
     <>
       <PeopleDirectory groups={tabs} defaultKey={defaultKey} title={t('person.indexTitle')} description={t('person.indexDescription', { site: siteName })} />

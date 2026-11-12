@@ -2256,6 +2256,7 @@ const id: Messages = {
     sort: 'Urutkan',
     sortName: 'Nama',
     sortRecent: 'Terbaru',
+    sortComplete: 'Profil terlengkap',
     sortAscending: 'Urutkan naik',
     sortDescending: 'Urutkan turun',
     noMatches: 'Tidak ada yang cocok dengan nama itu.',

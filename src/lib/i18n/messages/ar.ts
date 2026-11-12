@@ -2617,6 +2617,7 @@ const ar: Messages = {
     sort: 'ترتيب',
     sortName: 'الاسم',
     sortRecent: 'الأحدث',
+    sortComplete: 'الملف الأكثر اكتمالًا',
     sortAscending: 'ترتيب تصاعدي',
     sortDescending: 'ترتيب تنازلي',
     noMatches: 'لا أحد يطابق هذا الاسم.',
