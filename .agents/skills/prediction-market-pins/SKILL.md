@@ -84,3 +84,13 @@ is only trustworthy while the recorded odds are the ones the pin was written wit
 Citations `[n]` must be within the reference count; no reference repeats the sourceUrl; scan for eaten `$`
 amounts; company stock lines must match the company ticker note exactly. Live odds panels use Kalshi/Polymarket
 (`PinSeries`/market odds); see memory notes prediction-market-scraping and kalshi-score-markets.
+
+## Music-contender traps (from the 2026-11-11 backfill)
+
+- `PinCandidate.category` is `varchar(8)`: new category names must fit (`setlist` 7, `ranking` 7).
+- `oddsLabel` values are `nominee`, `winner`, `played`. A new one needs the CHECK constraint, `candidatesProblem`, the type in `src/lib/candidates.ts` and the subtitle in `PinCandidates`.
+- iTunes search returns look-alike songs: accept a match only when title and artist both agree (Thailand's "Aroma"). Unconfirmed: Laos "BAE" is assumed to be Thinla (iTunes artist "Thinlamphone").
+- Use Polymarket's displayed percentage (`outcomePrices` mid), never the Yes cent price; illiquid outcomes show stale cents.
+- `addMedia` through `PUT` drops credits: the scripts PATCH `/api/admin/db/Medium` afterwards and read back.
+- Refresh by editing the odds in `scripts/markets/*-backfill-*.mjs` and re-running `--apply` (prod by default, `--local` for localhost): Eurovision Asia final 14 Nov 2026, Spotify Wrapped about 3 Dec 2026, Super Bowl LXI 14 Feb 2027. After the result, write it into the pin text.
+- Not backfilled: pin 1963 (headliner resolved; 20934 covers it) and 1961 (Game Awards GOTY: not music, needs a plain contenders list with covers).
