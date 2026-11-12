@@ -2733,6 +2733,8 @@ const ko: Messages = {
     kindPuts: "풋",
     kindShort: "공매도",
     entry: "진입 ≈",
+    strike: "행사가",
+    expires: "만기",
     entryNow: "현재",
     sinceTrade: "거래 이후:",
     best: "최고",

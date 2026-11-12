@@ -18,6 +18,9 @@ export type TraderPositionRow = {
   sourceUrl: string;
   sourceTitle: string;
   entryPrice: number | null;
+  // Option terms (calls and puts): strike in dollars and expiry as YYYY-MM-DD; null when unstated.
+  strikePrice?: number | null;
+  expirationDate?: string | null;
   // The last price of the underlying, when asked for.
   lastPrice?: number | null;
   // Estimated move of the position since the trade, in percent; null when it has none.
@@ -84,3 +87,11 @@ export const TRADER_SOURCES = [
   { slug: 'hfi-research', name: 'HFI Research', archive: 'https://www.hfir.com/s/trades', postKind: 'trade and position posts' },
   { slug: 'le-shrub', name: 'Le Shrub', archive: 'https://www.shrubstack.com/archive', postKind: 'trade and position posts' },
 ] as const;
+
+// "Jan 15" for an expiry in the current year, "Jan 15 '27" for any other, for the tight panels.
+export function shortExpiry(day: string, now: Date = new Date()): string {
+  const [y, m, d] = day.split('-').map(Number);
+  if (!y || !m || !d) return day;
+  const text = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d)));
+  return y === now.getUTCFullYear() ? text : `${text} '${String(y).slice(2)}`;
+}

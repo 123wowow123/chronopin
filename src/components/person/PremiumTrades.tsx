@@ -189,6 +189,12 @@ function Position({ p }: { p: TraderPositionRow }) {
           <span className={`font-semibold ${tone(p.estimatedPnlPercent)}`}>{pct(p.estimatedPnlPercent)}</span>
         </span>
       </div>
+      {p.instrument === 'call' || p.instrument === 'put' ? (
+        <p className="text-sm tabular-nums">
+          <span className="text-muted">{t('premium.strike')}</span> <span className="font-semibold">{p.strikePrice != null ? `$${p.strikePrice}` : '—'}</span>
+          <span className="text-muted"> · {t('premium.expires')}</span> <span className="font-semibold">{p.expirationDate ?? '—'}</span>
+        </p>
+      ) : null}
       {p.maxGainPercent != null && p.maxDrawdownPercent != null ? (
         <p className="text-xs tabular-nums text-muted">
           {t('premium.sinceTrade')} {t('premium.best')} <span className="font-semibold text-success">{pct(p.maxGainPercent)}</span> · {t('premium.worst')} <span className="font-semibold text-danger">{pct(p.maxDrawdownPercent)}</span>

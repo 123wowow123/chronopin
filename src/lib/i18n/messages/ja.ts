@@ -2732,6 +2732,8 @@ const ja: Messages = {
     kindPuts: "プット",
     kindShort: "空売り",
     entry: "建値≈",
+    strike: "権利行使価格",
+    expires: "満期",
     entryNow: "現在",
     sinceTrade: "取引後：",
     best: "最高",

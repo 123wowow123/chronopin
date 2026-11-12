@@ -2749,6 +2749,8 @@ const hi: Messages = {
     kindPuts: "पुट",
     kindShort: "शॉर्ट",
     entry: "एंट्री ≈",
+    strike: "स्ट्राइक",
+    expires: "समाप्ति",
     entryNow: "अभी",
     sinceTrade: "ट्रेड के बाद:",
     best: "सर्वश्रेष्ठ",

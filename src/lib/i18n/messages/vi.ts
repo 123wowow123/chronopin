@@ -2741,6 +2741,8 @@ const vi: Messages = {
     kindPuts: "Put",
     kindShort: "Bán khống",
     entry: "vào ≈",
+    strike: "giá thực hiện",
+    expires: "đáo hạn",
     entryNow: "hiện tại",
     sinceTrade: "Kể từ giao dịch:",
     best: "tốt nhất",

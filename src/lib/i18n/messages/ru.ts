@@ -2830,6 +2830,8 @@ const ru: Messages = {
     kindPuts: "Путы",
     kindShort: "Шорт",
     entry: "вход ≈",
+    strike: "страйк",
+    expires: "экспирация",
     entryNow: "сейчас",
     sinceTrade: "С момента сделки:",
     best: "лучшее",

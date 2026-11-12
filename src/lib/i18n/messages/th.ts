@@ -2728,6 +2728,8 @@ const th: Messages = {
     kindPuts: "พุต",
     kindShort: "ชอร์ต",
     entry: "เข้า ≈",
+    strike: "ราคาใช้สิทธิ",
+    expires: "หมดอายุ",
     entryNow: "ตอนนี้",
     sinceTrade: "ตั้งแต่ซื้อขาย:",
     best: "ดีที่สุด",

@@ -2729,6 +2729,8 @@ const it: Messages = {
     kindPuts: "Put",
     kindShort: "Short",
     entry: "ingresso ≈",
+    strike: "strike",
+    expires: "scadenza",
     entryNow: "ora",
     sinceTrade: "Dal trade:",
     best: "migliore",

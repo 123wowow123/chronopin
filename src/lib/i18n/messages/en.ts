@@ -2743,6 +2743,8 @@ const en = {
     kindPuts: "Puts",
     kindShort: "Short",
     entry: "entry ≈",
+    strike: "strike",
+    expires: "expires",
     entryNow: "now",
     sinceTrade: "Since the trade:",
     best: "best",

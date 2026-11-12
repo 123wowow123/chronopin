@@ -2732,6 +2732,8 @@ const zh: Messages = {
     kindPuts: "认沽",
     kindShort: "做空",
     entry: "入场 ≈",
+    strike: "行权价",
+    expires: "到期日",
     entryNow: "现价",
     sinceTrade: "自交易以来：",
     best: "最佳",

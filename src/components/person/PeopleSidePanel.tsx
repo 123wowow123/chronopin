@@ -10,7 +10,7 @@ import { timeAgo } from '@/lib/format';
 import { personPath } from '@/lib/people';
 import { pinPath } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
-import type { TraderPositionRow } from '@/lib/traders';
+import { shortExpiry, type TraderPositionRow } from '@/lib/traders';
 import { thumb } from './PeopleDirectory';
 
 export type SidebarWatchedPerson = {
@@ -436,6 +436,16 @@ export function PeopleSidePanel({
                               }`}
                             >
                               {t(kindKey)}
+                            </span>
+                          ) : null}
+                          {kindKey && (p.strikePrice != null || p.expirationDate) ? (
+                            <span
+                              className="min-w-0 truncate tabular-nums text-subtle"
+                              title={`${t('premium.strike')} ${p.strikePrice != null ? `$${p.strikePrice}` : '—'} · ${t('premium.expires')} ${p.expirationDate ?? '—'}`}
+                            >
+                              {p.strikePrice != null ? `$${p.strikePrice}` : ''}
+                              {p.strikePrice != null && p.expirationDate ? ' · ' : ''}
+                              {p.expirationDate ? shortExpiry(p.expirationDate) : ''}
                             </span>
                           ) : null}
                         </span>

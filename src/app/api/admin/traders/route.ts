@@ -27,6 +27,7 @@ export const POST = route(async (request: NextRequest) => {
         traderSlug: text('traderSlug'), traderName: text('traderName') || text('traderSlug'), ticker: text('ticker'),
         instrument: text('instrument') as Instrument, action: text('action') as TraderAction, tradeDate: text('tradeDate'),
         summary: text('summary'), sourceUrl: text('sourceUrl'), sourceTitle: text('sourceTitle'),
+        strikePrice: optionStrike(raw), expirationDate: optionExpiry(raw),
       },
       { push: body.push !== false },
     );
@@ -44,3 +45,13 @@ export const PUT = route(async (request: NextRequest) => {
   for (const row of rows) sent += await pushPosition(row);
   return json({ positions: rows.length, deliveries: sent });
 });
+
+// Option terms: a positive strike and a YYYY-MM-DD expiry, or null.
+function optionStrike(raw: Record<string, unknown>): number | null {
+  const n = Number(raw.strikePrice);
+  return raw.strikePrice != null && raw.strikePrice !== '' && Number.isFinite(n) && n > 0 ? n : null;
+}
+function optionExpiry(raw: Record<string, unknown>): string | null {
+  const v = String(raw.expirationDate ?? '').trim();
+  return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null;
+}

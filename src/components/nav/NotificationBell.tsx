@@ -18,7 +18,7 @@ import { formatMove, moveSubject, type MoveInfo } from '@/lib/moveAlerts';
 import { term } from '@/lib/searchTerms';
 import { useSession } from '@/lib/client/session';
 import { sunSign } from '@/lib/horoscope';
-import type { TraderPositionRow } from '@/lib/traders';
+import { shortExpiry, type TraderPositionRow } from '@/lib/traders';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -958,6 +958,17 @@ function PremiumRow({ className = '', onNavigate }: { className?: string; onNavi
                   </span>
                   {pnl != null ? <span className={`shrink-0 text-xs font-semibold ${pnl >= 0 ? 'text-success' : 'text-danger'}`}>{pnl > 0 ? '+' : ''}{pnl}%</span> : null}
                 </div>
+                {(p.instrument === 'call' || p.instrument === 'put') && (p.strikePrice != null || p.expirationDate) ? (
+                  <div className="truncate text-xs font-semibold tabular-nums text-muted">
+                    {[
+                      t(p.instrument === 'call' ? 'premium.kindCalls' : 'premium.kindPuts'),
+                      p.strikePrice != null ? `${t('premium.strike')} $${p.strikePrice}` : null,
+                      p.expirationDate ? `${t('premium.expires')} ${shortExpiry(p.expirationDate)}` : null,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
+                  </div>
+                ) : null}
                 <div className="truncate text-xs text-subtle">{p.summary}</div>
               </Link>
             </li>

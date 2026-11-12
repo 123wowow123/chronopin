@@ -2738,6 +2738,8 @@ const de: Messages = {
     kindPuts: "Puts",
     kindShort: "Leerverkauf",
     entry: "Einstieg ≈",
+    strike: "Strike",
+    expires: "Verfall",
     entryNow: "jetzt",
     sinceTrade: "Seit dem Trade:",
     best: "bester",

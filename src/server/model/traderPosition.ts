@@ -1,7 +1,7 @@
 import * as db from '../db';
 import type { TraderPositionRow } from '@/lib/traders';
 
-const COLUMNS = `"id", "traderSlug", "traderName", "ticker", "instrument", "action", to_char("tradeDate", 'YYYY-MM-DD') AS "tradeDate", "summary", "sourceUrl", "sourceTitle", "entryPrice"`;
+const COLUMNS = `"id", "traderSlug", "traderName", "ticker", "instrument", "action", to_char("tradeDate", 'YYYY-MM-DD') AS "tradeDate", "summary", "sourceUrl", "sourceTitle", "entryPrice", "strikePrice"::float8 AS "strikePrice", to_char("expirationDate", 'YYYY-MM-DD') AS "expirationDate"`;
 
 export default class TraderPosition {
   static list(traderSlug: string): Promise<TraderPositionRow[]> {
@@ -20,10 +20,10 @@ export default class TraderPosition {
   // Insert one position; null when this exact move is already recorded.
   static async insert(p: Omit<TraderPositionRow, 'id' | 'lastPrice' | 'estimatedPnlPercent'>): Promise<TraderPositionRow | null> {
     const [row] = await db.query<TraderPositionRow>(
-      `INSERT INTO "TraderPosition" ("traderSlug", "traderName", "ticker", "instrument", "action", "tradeDate", "summary", "sourceUrl", "sourceTitle", "entryPrice")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+      `INSERT INTO "TraderPosition" ("traderSlug", "traderName", "ticker", "instrument", "action", "tradeDate", "summary", "sourceUrl", "sourceTitle", "entryPrice", "strikePrice", "expirationDate")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
        ON CONFLICT DO NOTHING RETURNING ${COLUMNS}`,
-      [p.traderSlug, p.traderName, p.ticker, p.instrument, p.action, p.tradeDate, p.summary, p.sourceUrl, p.sourceTitle, p.entryPrice],
+      [p.traderSlug, p.traderName, p.ticker, p.instrument, p.action, p.tradeDate, p.summary, p.sourceUrl, p.sourceTitle, p.entryPrice, p.strikePrice ?? null, p.expirationDate ?? null],
     );
     return row ?? null;
   }

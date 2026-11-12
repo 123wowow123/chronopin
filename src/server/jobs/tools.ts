@@ -977,7 +977,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'save_trader_positions',
     description:
-      "Saves newly disclosed trader positions, here and on production when the run writes there; a new one is pushed once to premium subscribers and its estimated entry price is read from the close on the trade date. One entry per ticker and move: { traderSlug (michael-burry, hfir or shrubstack), traderName, ticker (US ticker; the underlying for options), instrument (stock|call|put|short), action (buy|sell|hold|swap), tradeDate (YYYY-MM-DD, the post's date unless the post dates the trade), summary (YOUR OWN words, at most 280 characters: what was done and why; never the author's sentences), sourceUrl (the https post), sourceTitle (its exact title) }. Only moves the post states the trader made; never infer one. A move already stored is skipped.",
+      "Saves newly disclosed trader positions, here and on production when the run writes there; a new one is pushed once to premium subscribers and its estimated entry price is read from the close on the trade date. One entry per ticker and move: { traderSlug (michael-burry, hfir or shrubstack), traderName, ticker (US ticker; the underlying for options), instrument (stock|call|put|short), action (buy|sell|hold|swap), tradeDate (YYYY-MM-DD, the post's date unless the post dates the trade), summary (YOUR OWN words, at most 280 characters: what was done and why; never the author's sentences), sourceUrl (the https post), sourceTitle (its exact title), and for a call or put strikePrice (number) and expirationDate (YYYY-MM-DD) exactly as the post states them, null when it does not }. Only moves the post states the trader made; never infer one. A move already stored is skipped.",
     input_schema: obj(
       { positions: { type: 'array', items: { type: 'object' }, description: 'The positions to save, at most 30' } },
       ['positions'],
@@ -990,7 +990,7 @@ export const TOOLS: JobTool[] = [
         if (!trader) throw new Error(`Unknown trader ${text('traderSlug')}`);
         if (!INSTRUMENTS.includes(text('instrument') as never) || !ACTIONS.includes(text('action') as never)) throw new Error(`Bad instrument or action for ${text('ticker')}`);
         if (!/^\d{4}-\d{2}-\d{2}$/.test(text('tradeDate')) || !/^https:\/\//.test(text('sourceUrl')) || !text('ticker') || !text('summary')) throw new Error(`Incomplete position for ${text('ticker')}`);
-        return { traderSlug: trader.slug, traderName: trader.name, ticker: text('ticker').toUpperCase(), instrument: text('instrument'), action: text('action'), tradeDate: text('tradeDate'), summary: text('summary').slice(0, 280), sourceUrl: text('sourceUrl'), sourceTitle: text('sourceTitle') };
+        return { traderSlug: trader.slug, traderName: trader.name, ticker: text('ticker').toUpperCase(), instrument: text('instrument'), action: text('action'), tradeDate: text('tradeDate'), summary: text('summary').slice(0, 280), sourceUrl: text('sourceUrl'), sourceTitle: text('sourceTitle'), strikePrice: Number(raw.strikePrice) > 0 ? Number(raw.strikePrice) : null, expirationDate: /^\d{4}-\d{2}-\d{2}$/.test(text('expirationDate')) ? text('expirationDate') : null };
       });
       let added = 0;
       for (const p of clean) if (await addPosition(p as never)) added++;

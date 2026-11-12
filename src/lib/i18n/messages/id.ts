@@ -2742,6 +2742,8 @@ const id: Messages = {
     kindPuts: "Put",
     kindShort: "Short",
     entry: "masuk ≈",
+    strike: "strike",
+    expires: "kedaluwarsa",
     entryNow: "kini",
     sinceTrade: "Sejak perdagangan:",
     best: "terbaik",

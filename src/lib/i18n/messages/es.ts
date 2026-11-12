@@ -2738,6 +2738,8 @@ const es: Messages = {
     kindPuts: "Puts",
     kindShort: "Corto",
     entry: "entrada ≈",
+    strike: "strike",
+    expires: "vence",
     entryNow: "ahora",
     sinceTrade: "Desde la operación:",
     best: "mejor",

@@ -3110,6 +3110,8 @@ const ar: Messages = {
     kindPuts: "خيارات بيع",
     kindShort: "بيع على المكشوف",
     entry: "الدخول ≈",
+    strike: "سعر التنفيذ",
+    expires: "تنتهي",
     entryNow: "الآن",
     sinceTrade: "منذ الصفقة:",
     best: "الأفضل",
