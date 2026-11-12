@@ -126,11 +126,14 @@ counts AS (
     (SELECT count(*) FROM "Pin" WHERE "utcDeletedDateTime" IS NULL) AS active_pins,
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL) AS total_translation_rows,
     (SELECT count(*) FROM "PinTranslation" pt LEFT JOIN "Pin" p ON p.id = pt."pinId" WHERE p.id IS NULL OR p."utcDeletedDateTime" IS NOT NULL) AS orphaned_translation_rows,
-    (SELECT count(*) FROM "Pin" p WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
-      SELECT 1 FROM leak_patterns lp WHERE p."longFormSummary" ILIKE lp.pat OR p.description ILIKE lp.pat
+    (SELECT count(*) FROM "Pin" p WHERE p."utcDeletedDateTime" IS NULL AND (
+      EXISTS (SELECT 1 FROM leak_patterns lp WHERE p."longFormSummary" ILIKE lp.pat OR p.description ILIKE lp.pat)
+      OR EXISTS (SELECT 1 FROM "PinProTip" t CROSS JOIN leak_patterns lp WHERE t."pinId" = p.id AND t.tip ILIKE lp.pat)
     )) AS pins_with_content_tracking,
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
       SELECT 1 FROM leak_patterns lp WHERE pt."longFormSummary" ILIKE lp.pat OR pt.description ILIKE lp.pat
+    )) + (SELECT count(*) FROM "PinProTipTranslation" ptt JOIN "PinProTip" t ON t.id = ptt."proTipId" JOIN "Pin" p ON p.id = t."pinId" WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
+      SELECT 1 FROM leak_patterns lp WHERE ptt.tip ILIKE lp.pat
     )) AS translations_with_content_tracking,
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND (
       (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description AND regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
@@ -231,6 +234,31 @@ panel_counts AS (
     count(*) FILTER (WHERE locales_done < 15) AS panels_incomplete,
     count(DISTINCT "pinId") FILTER (WHERE locales_done < 15) AS pins_with_incomplete_panels
   FROM panel_items
+),
+pro_tip_items AS (
+  SELECT t.id AS "proTipId",
+         t."pinId",
+         (SELECT count(*) FROM "PinProTipTranslation" ptt
+          WHERE ptt."proTipId" = t.id
+            AND btrim(ptt."sourceHash") = encode(digest(t.tip, 'sha1'), 'hex')
+            AND length(btrim(ptt.tip)) > 0
+            AND length(ptt.tip) <= 1500
+            AND NOT (length(t.tip) > 40 AND ptt.tip = t.tip AND t.tip ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+            AND NOT (ptt.locale IN ('ja','zh','ko','ru','ar','hi','th') AND length(t.tip) > 40 AND t.tip ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M' AND ptt.tip !~ '[^\\x00-\\x7F]')
+            AND NOT (ptt.locale = 'th' AND (ptt.tip ~ 'พ\\.ศ\\.' OR (ptt.tip ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(t.tip, ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
+            AND NOT (ptt.tip ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);')
+            AND NOT (ptt.tip ~ '[⟦⟧]')
+         ) AS locales_done
+  FROM "PinProTip" t
+  JOIN "Pin" p ON p.id = t."pinId" AND p."utcDeletedDateTime" IS NULL
+),
+pro_tip_counts AS (
+  SELECT
+    count(*) AS total_pro_tips,
+    count(*) FILTER (WHERE locales_done = 15) AS pro_tips_complete,
+    count(*) FILTER (WHERE locales_done < 15) AS pro_tips_incomplete,
+    count(DISTINCT "pinId") FILTER (WHERE locales_done < 15) AS pins_with_incomplete_pro_tips
+  FROM pro_tip_items
 )
 SELECT json_build_object(
   'active_pins', counts.active_pins,
@@ -243,9 +271,13 @@ SELECT json_build_object(
   'total_panels', panel_counts.total_panels,
   'panels_complete', panel_counts.panels_complete,
   'panels_incomplete', panel_counts.panels_incomplete,
-  'pins_with_incomplete_panels', panel_counts.pins_with_incomplete_panels
+  'pins_with_incomplete_panels', panel_counts.pins_with_incomplete_panels,
+  'total_pro_tips', pro_tip_counts.total_pro_tips,
+  'pro_tips_complete', pro_tip_counts.pro_tips_complete,
+  'pro_tips_incomplete', pro_tip_counts.pro_tips_incomplete,
+  'pins_with_incomplete_pro_tips', pro_tip_counts.pins_with_incomplete_pro_tips
 )::text
-FROM counts, panel_counts;
+FROM counts, panel_counts, pro_tip_counts;
 """
     raw_output = run_prod_sql(sql).strip()
     db_data = None
@@ -296,6 +328,10 @@ FROM counts, panel_counts;
         'panels_complete': db_data['panels_complete'],
         'panels_incomplete': db_data['panels_incomplete'],
         'pins_with_incomplete_panels': db_data['pins_with_incomplete_panels'],
+        'total_pro_tips': db_data['total_pro_tips'],
+        'pro_tips_complete': db_data['pro_tips_complete'],
+        'pro_tips_incomplete': db_data['pro_tips_incomplete'],
+        'pins_with_incomplete_pro_tips': db_data['pins_with_incomplete_pro_tips'],
         'percent_current': pct_current,
     }
 
@@ -317,6 +353,8 @@ FROM counts, panel_counts;
         print("-" * 60)
         print(f"PinPerf Panels Complete:   {data['panels_complete']:,} / {data['total_panels']:,}")
         print(f"Panels Missing i18n:       {data['panels_incomplete']:,} ({data['pins_with_incomplete_panels']:,} pins)")
+        print(f"PinProTip Tips Complete:   {data['pro_tips_complete']:,} / {data['total_pro_tips']:,}")
+        print(f"Pro Tips Missing i18n:     {data['pro_tips_incomplete']:,} ({data['pins_with_incomplete_pro_tips']:,} pins)")
         print(f"Untranslated/Mangled Rows:                  {data['untranslated_or_mangled_rows']:,}")
         print(f"Prohibited Tracking in Pin Content:         {data['pins_with_content_tracking']:,}")
         print(f"Prohibited Tracking in Translation Content: {data['translations_with_content_tracking']:,}")
@@ -332,15 +370,17 @@ FROM counts, panel_counts;
             print("   Run .agents/skills/prod-translations/scripts/sync_translations.py to auto-repair.")
             sys.exit(1)
 
-        if data['due_pins_count'] > 0 or data['pins_with_incomplete_panels'] > 0:
+        if data['due_pins_count'] > 0 or data['pins_with_incomplete_panels'] > 0 or data['pins_with_incomplete_pro_tips'] > 0:
             if data['due_pins_count'] > 0:
                 print(f"⚠️  {data['due_pins_count']} pin(s) require translation update.")
             if data['pins_with_incomplete_panels'] > 0:
                 print(f"⚠️  {data['pins_with_incomplete_panels']} pin(s) ({data['panels_incomplete']} panels) require PinPerf panel i18n translation.")
+            if data['pins_with_incomplete_pro_tips'] > 0:
+                print(f"⚠️  {data['pins_with_incomplete_pro_tips']} pin(s) ({data['pro_tips_incomplete']} pro tips) require PinProTip translation.")
             print("   Run .agents/skills/prod-translations/scripts/sync_translations.py to translate.")
             sys.exit(1)
 
-        print("✅ 100% of production pins and PinPerf panels are translated, complete, and up to date with zero content leaks.")
+        print("✅ 100% of production pins, PinPerf panels, and PinProTip tips are translated, complete, and up to date with zero content leaks.")
         sys.exit(0)
 
 if __name__ == '__main__':

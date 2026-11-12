@@ -127,3 +127,10 @@ For each active pin (`utcDeletedDateTime IS NULL`) and each of the 15 locales:
 - **Length Fitting (`_fit_panel_text`):** When a translated panel `title` (`<= 120`), `note` (`<= 500`), or table `cell` (`<= 200`) exceeds its `src/lib/pinPerf.ts` character limit in a verbose language (`es`, `fr`, `de`, `ru`, `vi`, `id`, etc.), `_fit_panel_text()` must ALWAYS truncate the **translated** string cleanly (`val[:max_len - 1].rstrip() + '…'`, preserving `<cite...>` tags if present) and NEVER fall back to the untranslated English `src`.
 - During every translation job, `check_translations.py` verifies `panels_incomplete == 0` (`pins_with_incomplete_panels == 0`) — including verifying that `title`s, `note`s, and table `rows` cells (`> 40` chars with English stopwords) are translated and free of Thai Buddhist years — and `sync_translations.py` (with `--panels` or default sync) translates any incomplete panels and saves them via `PUT /api/pins/:id/performance`.
 
+### 6. `PinProTip` Pro Tips (`PinProTipTranslation` at `/api/admin/pro-tip-translations`)
+- Every pro tip row (`PinProTip`, schema `0256`, up to `MAX_PRO_TIPS = 6` per pin) has translations stored in `"PinProTipTranslation"` (schema `0264`, `src/server/model/pinProTip.ts`):
+  - **Primary key:** `("proTipId", "locale")` for the 15 target locales (`es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id`).
+  - **Source Hash:** `proTipHash(tip) = sha1(tip)` (`encode(digest(t.tip, 'sha1'), 'hex')`). When `PUT /api/pins/:id/pro-tips` replaces a pin's tips, old rows cascade away (`ON DELETE CASCADE`) and new tips receive fresh IDs.
+  - **Length & Format:** Plain-text string (`PRO_TIP_TRANSLATION_MAX = 1500` characters), rendered directly inside `<span className="min-w-0 flex-1">{tip.tip}</span>`. Never HTML-escape `&`, `<`, or `>` on output.
+- During every translation job, `check_translations.py` verifies `pro_tips_incomplete == 0` (`pins_with_incomplete_pro_tips == 0`), and `sync_translations.py` (with `--pro-tips` or default sync) translates all missing/outdated pro tips, records attribution strictly in `SourceWiki`, and saves them via `POST /api/admin/pro-tip-translations`.
+

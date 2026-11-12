@@ -26,23 +26,42 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ## Subagent Delegation (`flash` Model — Parallel Subagents)
 
-- **Always use `flash` subagents (`Model: 'flash'`) to perform translations (both pin text AND `PinPerf` panels):**
-  1. **Prepare & List Due Pin IDs and Panel Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...` and `DUE_PANEL_PIN_IDS=...`).
+- **Always use `flash` subagents (`Model: 'flash'`) to perform translations (pin text, `PinPerf` panels, AND `PinProTip` pro tips):**
+  1. **Prepare & List Due Pin IDs, Panel Pin IDs, and Pro-Tip Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...`, `DUE_PANEL_PIN_IDS=...`, and `DUE_PRO_TIP_PIN_IDS=...`).
   2. **Shard Work Across Parallel `flash` Subagents:**
-     - **Translate `PinPerf` Panels (`charts` and `tables` `i18n`) If Not Done Yet:** Whenever `DUE_PANEL_PIN_IDS` is non-empty (`pins_with_incomplete_panels > 0`), the translation job MUST also translate all due `PinPerf` panels across all 15 non-English locales (`PUT /api/pins/:id/performance`).
+     - **Translate `PinPerf` Panels (`charts` and `tables` `i18n`) and `PinProTip` Pro Tips (`PinProTipTranslation`) If Not Done Yet:** Whenever `DUE_PANEL_PIN_IDS` is non-empty (`pins_with_incomplete_panels > 0`) or `DUE_PRO_TIP_PIN_IDS` is non-empty (`pins_with_incomplete_pro_tips > 0`), the translation job MUST also translate all due `PinPerf` panels (`PUT /api/pins/:id/performance`) and all due `PinProTip` tips (`POST /api/admin/pro-tip-translations`) across all 15 non-English locales.
      - **Define/Use a Custom `prod-translator` Subagent Type (`EnableWriteTools: true`, `EnableSubagentTools: false`):** When spawning `Model: 'flash'` subagents via `invoke_subagent`, define or reuse a subagent type (`define_subagent` with `Name: 'prod-translator'`, `EnableWriteTools: true`, `EnableSubagentTools: false`) instead of `TypeName: 'self'`, which avoids recursive `invoke_subagent` tool construction errors across server restarts.
-     - When `<= 25` pins (or panel pins) are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'prod-translator'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
-     - When `> 25` pins or panel pins are due, partition the due IDs into disjoint shards (e.g. 20–80 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
+     - When `<= 25` pins (or panel/pro-tip pins) are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'prod-translator'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
+     - When `> 25` pins, panel pins, or pro-tip pins are due, partition the due IDs into disjoint shards (e.g. 20–100 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
        ```bash
        python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins <id1,id2,...>
        ```
-       (or `--panels --pins <id1,id2,...>` when sharding panel-only pins).
-     - If any fragment or pin requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
+       (or `--panels --pins <id1,id2,...>` when sharding panel-only pins, or `--pro-tips --no-prep --pins <id1,id2,...>` when sharding pro-tip-only pins).
+     - If any fragment, pin, or pro tip requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
   3. **Audit the `flash` Subagents' Work:** After all `flash` subagents complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have the final `flash` subagent run it and inspect its output) to verify:
      - `0` due pins (`100.0%` current & complete)
      - `0` panels missing `i18n` (`panels_incomplete: 0`, `pins_with_incomplete_panels: 0` across all `PinPerf` charts and tables, including verifying that chart/table `note`s, `title`s, and table `rows` cells `> 40` chars with English stopwords were translated and not left in English or pure ASCII in non-Latin locales)
+     - `0` pro tips missing `i18n` (`pro_tips_incomplete: 0`, `pins_with_incomplete_pro_tips: 0` across all `PinProTip` tips, verifying that `PinProTipTranslation` exists for all 15 locales with matching `sourceHash = sha1(tip)` and passes all plain-text/non-Latin/Thai Gregorian year rules)
      - `0` untranslated/mangled rows (no untranslated English prose, no pure-ASCII `title`s `> 40` chars with English stopwords in non-Latin locales `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no identical English `<li>` bullets of 60+ chars, no partial-English `<li>` bullets of 80+ ASCII chars in non-Latin locales, no unconverted Thai Buddhist Era years `2550..2589` or `พ.ศ.`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, and no `[⟦⟧]` delimiter leaks). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
      - `0` skipped rows and `0` content leaks
+
+---
+
+## Phase 2: secondary content tables (company hubs, restaurants, people, wikis, horoscopes, ...)
+
+Translating **pins** (phase 1, below) and translating the **other content tables** (phase 2) are separate
+phases of the translation agent's run. Content-creating sessions only save English and say translations
+are left to this agent. Phase 2 uses the `<Source>Translation` tables from migration `0265` through
+`/api/admin/content-translations` (not `sync_translations.py`). Full flow, table list, JSON-shape rules
+and verification: [Content Translations Reference](./references/content_translations.md).
+
+Run order for a full translation pass: phase 1 (pins, panels, pro tips) -> phase 2 (every table in the
+reference until `due: 0`) -> audit.
+
+```bash
+# coverage across all phase-2 tables (needs the admin token from check_translations.ensure_admin_token())
+curl -s -H "Authorization: Bearer $(cat .scrape/admin.token)" https://www.chronopin.com/api/admin/content-translations
+```
 
 ---
 
@@ -52,18 +71,19 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 
 | Task | Command |
 |:---|:---|
-| **Health Check (Pins + Panels)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
+| **Health Check (Pins + Panels + Pro Tips)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
 | **Check JSON Output** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --json` |
-| **Prep & List Due Pin + Panel IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
+| **Prep & List Due Pin + Panel + Pro-Tip IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
 | **Sync Assigned Pin Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
 | **Sync Assigned Panel Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --panels --pins 20678,20688,...` |
+| **Sync Assigned Pro-Tip Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pro-tips --no-prep --pins 5093,4022,...` |
 | **Export Due Pins for Direct LLM Translation** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15860 --export /tmp/todo.json` |
 | **Validate & Apply Direct LLM Translations** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --apply /tmp/done.json` |
-| **Sync All Due Pins & Panels (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
+| **Sync All Due Pins, Panels & Pro Tips (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
 | **Sync with Batch Limit** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --limit 50` |
-| **Sync Specific Pin (Text + Panels)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
+| **Sync Specific Pin (Text + Panels + Pro Tips)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
 | **Sync Specific Locale** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --locale de` |
-| **Preview Due Pins & Panels** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
+| **Preview Due Pins, Panels & Pro Tips** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
 | **Audit Content for Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py` |
 | **Clean Accidental Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py --apply` |
 
@@ -106,6 +126,7 @@ The script automatically:
 5. Translates in outer chunks (`--chunk-size 25`) using multi-RPC `batchexecute` (`MkEWBc`) HTTP `POST` across due locales with caching in `.scrape/translations-cache/`, never falling back to untranslated English on failure.
 6. Fixes Thai Buddhist era years back to the Gregorian calendar (`+543` offset fix) and validates `wholeTranslation` completeness before pushing each chunk in batches of 150 to `POST /api/admin/translations`.
 7. **Translates `PinPerf` Panels (`charts` and `tables` `i18n`):** Checks `"PinPerf"` for any active pin whose performance/benchmark/spec/telemetry/timeline panels lack complete 15-locale `i18n` entries (`title`, `unit`, `note` on charts; `title`, `columns`, `rows`, `note`, `stages` on tables), translates missing locales while enforcing `src/lib/pinPerf.ts` (`perfProblem`) length bounds (`title <= 120`, `unit <= 40`, `column <= 80`, `cell <= 200`, `stage <= 40`, `note <= 500`) and preserving `<cite data-ref="...">` tags, and saves them via `PUT /api/pins/:id/performance`.
+8. **Translates `PinProTip` Pro Tips (`PinProTipTranslation`):** Checks `"PinProTip"` for any active pin whose pro tips lack current, valid `"PinProTipTranslation"` rows (`sourceHash = sha1(tip)`, `length <= 1500`, plain-text unescaped, native script in non-Latin locales, Gregorian CE years in Thai) across all 15 non-English locales, translates missing locales, records attribution in `SourceWiki`, and saves them via `POST /api/admin/pro-tip-translations`.
 
 ### Step 3: Verification & Read-Back
 1. **Database Check:**
@@ -153,6 +174,7 @@ The script automatically:
 
 ## Detailed References
 
+- [Content Translations (phase 2 tables)](./references/content_translations.md)
 - [Locales, Hashing & HTML Rules](./references/locales_and_hashing.md)
 - [OKF Source Wiki Schema & Attribution](./references/okf_source_wiki.md)
 

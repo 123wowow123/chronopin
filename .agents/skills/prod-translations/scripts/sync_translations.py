@@ -92,13 +92,19 @@ def ensure_admin_token() -> str:
         return token
 
 def run_prod_sql(sql: str) -> str:
-    res = subprocess.run(
-        ['scripts/prod-sql.sh'],
-        input=sql.encode('utf-8'),
-        capture_output=True,
-        check=True
-    )
-    return res.stdout.decode('utf-8')
+    last_err = None
+    for attempt in range(3):
+        res = subprocess.run(
+            ['scripts/prod-sql.sh'],
+            input=sql.encode('utf-8'),
+            capture_output=True,
+        )
+        if res.returncode == 0:
+            return res.stdout.decode('utf-8')
+        last_err = res.stderr.decode('utf-8', errors='replace')
+        time.sleep(1.0 * (attempt + 1))
+    print(f"SQL Error:\n{last_err}", file=sys.stderr)
+    raise subprocess.CalledProcessError(res.returncode, ['scripts/prod-sql.sh'], output=res.stdout, stderr=res.stderr)
 
 def fetch_due_pins(
     token: str,
@@ -912,18 +918,83 @@ WHERE pt."pinId" = bad."pinId" AND pt.locale = bad.locale {pin_filter_pt};
 """
     run_prod_sql(bullet_sql)
 
+    # 4. Unescape raw HTML entities in PinProTipTranslation.tip and mark mangled/untranslated pro-tip rows for repair
+    pro_tip_filter = f'AND t."pinId" IN ({", ".join(str(int(i)) for i in sorted(pin_ids))})' if pin_ids else ''
+    pro_tip_sql = f"""
+UPDATE "PinProTipTranslation" ptt
+SET tip = replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(
+      ptt.tip,
+      '&amp;', '&'), '&#x27;', chr(39)), '&#39;', chr(39)), '&quot;', chr(34)), '&nbsp;', ' '),
+      '&ldquo;', '“'), '&rdquo;', '”'), '&laquo;', '«'), '&raquo;', '»'), '&ndash;', '–'), '&atilde;', 'ã')
+FROM "PinProTip" t
+JOIN "Pin" p ON p.id = t."pinId" AND p."utcDeletedDateTime" IS NULL
+WHERE ptt."proTipId" = t.id
+  {pro_tip_filter}
+  AND ptt.tip ~ '&(amp|lt|gt|quot|apos|nbsp|#[0-9]+|#x[0-9a-fA-F]+|ldquo|rdquo|laquo|raquo|ndash|atilde);';
+
+UPDATE "PinProTipTranslation" ptt
+SET "sourceHash" = 'repair'
+FROM "PinProTip" t
+JOIN "Pin" p ON p.id = t."pinId" AND p."utcDeletedDateTime" IS NULL
+WHERE ptt."proTipId" = t.id
+  {pro_tip_filter}
+  AND (
+    (length(t.tip) > 40 AND ptt.tip = t.tip AND t.tip ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
+    OR (ptt.locale IN ('ja','zh','ko','ru','ar','hi','th') AND length(t.tip) > 40 AND t.tip ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M' AND ptt.tip !~ '[^\\x00-\\x7F]')
+    OR (ptt.locale = 'th' AND (ptt.tip ~ 'พ\\.ศ\\.' OR (ptt.tip ~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)' AND replace(t.tip, ',', '') !~ '(^|[^0-9])(25[5-8][0-9])([^0-9]|$)')))
+    OR ptt.tip ~ '[⟦⟧]'
+  );
+"""
+    run_prod_sql(pro_tip_sql)
+
 def apply_translations_file(apply_path: str):
     """
     Validates and applies a JSON file of translated rows produced by a flash subagent:
     [{"pinId": 123, "locale": "es", "sourceHash": "...", "title": "...", ...}]
+    or pro-tip rows [{"proTipId": 1, "pinId": 5093, "locale": "es", "sourceHash": "...", "tip": "..."}]
     """
     raw = json.loads(pathlib.Path(apply_path).read_text(encoding='utf-8'))
+    pro_tip_rows = raw.get('proTipTranslations', []) if isinstance(raw, dict) else []
     rows = raw.get('translations', raw) if isinstance(raw, dict) else raw
-    if not isinstance(rows, list) or not rows:
-        print(f"No translation rows found in {apply_path}")
-        return
+    if isinstance(rows, list) and rows and isinstance(rows[0], dict) and 'proTipId' in rows[0] and not pro_tip_rows:
+        pro_tip_rows = rows
+        rows = []
 
     token = ensure_admin_token()
+
+    if pro_tip_rows:
+        valid_pt: List[dict] = []
+        for r in pro_tip_rows:
+            if not isinstance(r, dict) or 'proTipId' not in r or 'locale' not in r or 'tip' not in r:
+                continue
+            loc = str(r['locale'])
+            val = html.unescape(str(r['tip']).strip())
+            src = str(r.get('enTip') or '')
+            if loc == 'th':
+                val = fix_thai_years(src or val, val)
+            val = _fit_panel_text(val, src or val, 1500)
+            if src and not _panel_text_translated_ok(src, val, loc, is_title=False):
+                print(f"[{loc}] ProTip validation failed for proTipId {r['proTipId']}")
+                continue
+            valid_pt.append({
+                'proTipId': int(r['proTipId']),
+                'pinId': int(r['pinId']) if 'pinId' in r and r['pinId'] is not None else None,
+                'locale': loc,
+                'sourceHash': str(r['sourceHash']),
+                'tip': val,
+            })
+        if valid_pt:
+            pt_pin_ids = sorted({r['pinId'] for r in valid_pt if r.get('pinId')})
+            if pt_pin_ids:
+                record_wiki_tracking(pt_pin_ids)
+            saved_pt = push_pro_tip_translations(token, valid_pt)
+            print(f"Applied {saved_pt} / {len(valid_pt)} validated pro-tip rows from {apply_path}.")
+
+    if not isinstance(rows, list) or not rows:
+        if not pro_tip_rows:
+            print(f"No translation rows found in {apply_path}")
+        return
+
     pin_ids = {int(r['pinId']) for r in rows if isinstance(r, dict) and 'pinId' in r}
     due_by_id = {p['id']: p for p in fetch_due_pins(token, pin_ids=pin_ids)}
 
@@ -1299,6 +1370,193 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
         record_wiki_tracking([item['pinId'] for item in panel_pins])
     return saved_pins
 
+def fetch_due_pro_tips(
+    pin_ids: Optional[Set[int]] = None,
+    limit: Optional[int] = None,
+    locale: Optional[str] = None,
+) -> List[dict]:
+    """
+    Finds active PinProTip rows that lack a valid, up-to-date PinProTipTranslation row
+    in any target locale (or the requested locale filter).
+    """
+    target_locales = [l.strip() for l in locale.split(',') if l.strip() in LOCALES] if locale else LOCALES
+    loc_array = ", ".join(f"'{l}'" for l in target_locales)
+    pin_filter = f'AND t."pinId" IN ({", ".join(str(int(i)) for i in sorted(pin_ids))})' if pin_ids else ''
+    sql = f"""
+\\pset tuples_only on
+\\pset format unaligned
+SELECT json_build_object(
+  'proTipId', t.id,
+  'pinId', t."pinId",
+  'tip', t.tip,
+  'sourceHash', encode(digest(t.tip, 'sha1'), 'hex'),
+  'locales', (
+    SELECT coalesce(json_agg(loc ORDER BY ord), '[]'::json)
+    FROM unnest(ARRAY[{loc_array}]) WITH ORDINALITY AS u(loc, ord)
+    WHERE NOT EXISTS (
+      SELECT 1 FROM "PinProTipTranslation" ptt
+      WHERE ptt."proTipId" = t.id
+        AND ptt.locale = u.loc
+        AND btrim(ptt."sourceHash") = encode(digest(t.tip, 'sha1'), 'hex')
+        AND length(btrim(ptt.tip)) > 0
+        AND length(ptt.tip) <= 1500
+    )
+  )
+)::text
+FROM "PinProTip" t
+JOIN "Pin" p ON p.id = t."pinId" AND p."utcDeletedDateTime" IS NULL
+WHERE 1=1 {pin_filter}
+ORDER BY t."pinId", t.id;
+"""
+    raw = run_prod_sql(sql)
+    due: List[dict] = []
+    seen_pins: Set[int] = set()
+    for line in raw.splitlines():
+        line = line.strip()
+        if not (line.startswith('{') and line.endswith('}')):
+            continue
+        try:
+            item = json.loads(line)
+        except Exception:
+            continue
+        locs = item.get('locales') or []
+        if not locs:
+            continue
+        if limit and item['pinId'] not in seen_pins and len(seen_pins) >= limit:
+            continue
+        seen_pins.add(item['pinId'])
+        due.append(item)
+    return due
+
+def push_pro_tip_translations(token: str, all_rows: List[dict]) -> int:
+    chunk_size = 300
+    total_saved = 0
+    for i in range(0, len(all_rows), chunk_size):
+        chunk = all_rows[i:i + chunk_size]
+        req = urllib.request.Request(
+            BASE + '/api/admin/pro-tip-translations',
+            data=json.dumps({'translations': chunk}, ensure_ascii=False).encode('utf-8'),
+            headers={
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token,
+            },
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            res = json.load(resp)
+            saved = res.get('saved', 0)
+            total_saved += saved
+            skipped = res.get('skipped', [])
+            print(f"  [PinProTip] Batch {i // chunk_size + 1}: saved {saved}, skipped {len(skipped)}")
+            if skipped:
+                print(f"    Sample skipped reasons: {skipped[:3]}")
+    return total_saved
+
+def sync_pro_tip_chunk(pro_tips: List[dict], locale_filter: Optional[str] = None) -> int:
+    if not pro_tips:
+        return 0
+    target_locales = [l.strip() for l in locale_filter.split(',') if l.strip() in LOCALES] if locale_filter else LOCALES
+    texts_by_locale: Dict[str, Set[str]] = {loc: set() for loc in target_locales}
+    items_by_locale: Dict[str, List[dict]] = {loc: [] for loc in target_locales}
+
+    for item in pro_tips:
+        core = html.unescape((item.get('tip') or '').strip())
+        if not core:
+            continue
+        for loc in item.get('locales') or []:
+            if loc in texts_by_locale:
+                texts_by_locale[loc].add(core)
+                items_by_locale[loc].append(item)
+
+    active_locales = [loc for loc in target_locales if items_by_locale[loc]]
+    if not active_locales:
+        return 0
+
+    pin_ids = sorted({item['pinId'] for item in pro_tips})
+    print(f"Translating {len(pro_tips)} PinProTip row(s) across {len(active_locales)} locale(s) for {len(pin_ids)} pin(s)...")
+
+    def _translate_pro_tips_for_locale(loc: str, items: List[dict], texts: List[str]) -> Tuple[str, List[dict]]:
+        cache_path = CACHE_DIR / f'{loc}.json'
+        cache: Dict[str, str] = {}
+        if cache_path.exists():
+            try:
+                cache = json.loads(cache_path.read_text(encoding='utf-8'))
+            except Exception:
+                pass
+        if loc == 'th':
+            for t in texts:
+                if t in cache and isinstance(cache[t], str):
+                    cache[t] = fix_thai_years(t, cache[t])
+        missing = [t for t in texts if t not in cache or not acceptable(loc, t, cache.get(t), is_title=False)]
+        batches: List[List[str]] = []
+        cur: List[str] = []
+        cur_chars = 0
+        for t in missing:
+            if cur and (len(cur) >= 25 or cur_chars + len(t) > 4500):
+                batches.append(cur)
+                cur = []
+                cur_chars = 0
+            cur.append(t)
+            cur_chars += len(t)
+        if cur:
+            batches.append(cur)
+        new_entries: Dict[str, str] = {}
+        for idx, b in enumerate(batches, 1):
+            res = call_batch(b, loc)
+            for src_core, tr in res.items():
+                if loc == 'th':
+                    tr = fix_thai_years(src_core, tr)
+                if acceptable(loc, src_core, tr, is_title=False):
+                    cache[src_core] = tr.strip()
+                    new_entries[src_core] = tr.strip()
+                else:
+                    print(f"[{loc}] Rejected pro-tip translation for: {src_core[:60]!r}")
+            if idx % 5 == 0 or idx == len(batches):
+                _save_locale_cache_atomic(cache_path, new_entries)
+
+        out_rows: List[dict] = []
+        for item in items:
+            src_core = html.unescape((item.get('tip') or '').strip())
+            tr_core = cache.get(src_core)
+            if not tr_core or not acceptable(loc, src_core, tr_core, is_title=False):
+                print(f"[{loc}] Missing/invalid translation for proTipId {item['proTipId']} (pin {item['pinId']})")
+                continue
+            tr_clean = html.unescape(tr_core.strip())
+            if loc == 'th':
+                tr_clean = fix_thai_years(src_core, tr_clean)
+            tr_clean = _fit_panel_text(tr_clean, src_core, 1500)
+            if not _panel_text_translated_ok(src_core, tr_clean, loc, is_title=False):
+                print(f"[{loc}] ProTip validation failed for proTipId {item['proTipId']} (pin {item['pinId']})")
+                continue
+            out_rows.append({
+                'proTipId': item['proTipId'],
+                'pinId': item['pinId'],
+                'locale': loc,
+                'sourceHash': item['sourceHash'],
+                'tip': tr_clean,
+            })
+        return loc, out_rows
+
+    all_rows: List[dict] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+        futs = [
+            pool.submit(_translate_pro_tips_for_locale, loc, items_by_locale[loc], sorted(texts_by_locale[loc]))
+            for loc in active_locales
+        ]
+        for fut in concurrent.futures.as_completed(futs):
+            loc, loc_rows = fut.result()
+            print(f"  [{loc}] Generated {len(loc_rows)} / {len(items_by_locale[loc])} valid pro-tip translation rows.")
+            all_rows.extend(loc_rows)
+
+    if not all_rows:
+        print("No valid pro-tip translation rows generated for chunk.")
+        return 0
+
+    record_wiki_tracking(pin_ids)
+    token = ensure_admin_token()
+    saved = push_pro_tip_translations(token, all_rows)
+    print(f"Successfully saved {saved} / {len(all_rows)} pro-tip translation rows on production.")
+    return saved
+
 def main():
     parser = argparse.ArgumentParser(description="Synchronize production translations.")
     parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
@@ -1307,7 +1565,8 @@ def main():
     parser.add_argument('--pins', type=str, help="Translate a comma-separated list of pin ids (for parallel flash subagents)")
     parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
     parser.add_argument('--panels', action='store_true', help="Only translate PinPerf panels (charts and tables i18n)")
-    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs and panel pin IDs for sharding across parallel flash subagents")
+    parser.add_argument('--pro-tips', action='store_true', help="Only translate PinProTip tips (POST /api/admin/pro-tip-translations)")
+    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs, panel pin IDs, and pro-tip pin IDs for sharding across parallel flash subagents")
     parser.add_argument('--no-prep', action='store_true', help="Skip prepare_mangled_rows_for_repair when already run by coordinator")
     parser.add_argument('--export', type=str, help="Export due pins and target fields to a JSON file")
     parser.add_argument('--apply', type=str, help="Validate and apply translated rows from a JSON file")
@@ -1328,21 +1587,32 @@ def main():
         prepare_mangled_rows_for_repair(pin_ids=pin_ids)
 
     token = ensure_admin_token()
-    due_pins = [] if args.panels else fetch_due_pins(token, pin_ids=pin_ids, limit=args.limit, locale=args.locale)
-    due_panel_pins = fetch_due_panel_pins(pin_ids=pin_ids, limit=args.limit)
+    only_panels = args.panels and not args.pro_tips
+    only_pro_tips = args.pro_tips and not args.panels
 
-    if not args.panels:
+    due_pins = [] if (only_panels or only_pro_tips) else fetch_due_pins(token, pin_ids=pin_ids, limit=args.limit, locale=args.locale)
+    due_panel_pins = [] if only_pro_tips else fetch_due_panel_pins(pin_ids=pin_ids, limit=args.limit)
+    due_pro_tips = [] if only_panels else fetch_due_pro_tips(pin_ids=pin_ids, limit=args.limit, locale=args.locale)
+    due_pro_tip_pin_ids = sorted({t['pinId'] for t in due_pro_tips})
+
+    if not (only_panels or only_pro_tips):
         print(f"Found {len(due_pins)} pin(s) due for text translation.")
-    print(f"Found {len(due_panel_pins)} pin(s) due for PinPerf panel i18n translation.")
+    if not only_pro_tips:
+        print(f"Found {len(due_panel_pins)} pin(s) due for PinPerf panel i18n translation.")
+    if not only_panels:
+        print(f"Found {len(due_pro_tip_pin_ids)} pin(s) ({len(due_pro_tips)} pro tip(s)) due for PinProTip translation.")
 
     if args.list_ids:
-        if not args.panels:
+        if not (only_panels or only_pro_tips):
             print("DUE_PIN_IDS=" + ",".join(str(p['id']) for p in due_pins))
-        print("DUE_PANEL_PIN_IDS=" + ",".join(str(p['pinId']) for p in due_panel_pins))
+        if not only_pro_tips:
+            print("DUE_PANEL_PIN_IDS=" + ",".join(str(p['pinId']) for p in due_panel_pins))
+        if not only_panels:
+            print("DUE_PRO_TIP_PIN_IDS=" + ",".join(str(pid) for pid in due_pro_tip_pin_ids))
         return
 
-    if not due_pins and not due_panel_pins:
-        print("All matching pins and PinPerf panels are already up to date!")
+    if not due_pins and not due_panel_pins and not due_pro_tips:
+        print("All matching pins, PinPerf panels, and PinProTip tips are already up to date!")
         return
 
     if args.export:
@@ -1364,8 +1634,11 @@ def main():
                 'dateConfidenceReasoning': p.get('dateConfidenceReasoning'),
                 'delayReasoning': p.get('delayReasoning'),
             })
-        export_path.write_text(json.dumps({'pins': export_data, 'panelPins': due_panel_pins}, ensure_ascii=False, indent=2), encoding='utf-8')
-        print(f"Exported {len(export_data)} due pin(s) and {len(due_panel_pins)} panel pin(s) to {export_path}")
+        export_path.write_text(
+            json.dumps({'pins': export_data, 'panelPins': due_panel_pins, 'proTips': due_pro_tips}, ensure_ascii=False, indent=2),
+            encoding='utf-8',
+        )
+        print(f"Exported {len(export_data)} due pin(s), {len(due_panel_pins)} panel pin(s), and {len(due_pro_tips)} pro tip(s) to {export_path}")
         return
 
     if args.dry_run:
@@ -1378,8 +1651,10 @@ def main():
             for p in due_pins[:20]
         ]
         panel_sample = [p['pinId'] for p in due_panel_pins[:20]]
+        pro_tip_sample = due_pro_tip_pin_ids[:20]
         print(f"Dry-run pin sample (up to 20):\n{json.dumps(sample, indent=2)}")
         print(f"Dry-run panel pin IDs (up to 20): {panel_sample}")
+        print(f"Dry-run pro-tip pin IDs (up to 20): {pro_tip_sample}")
         return
 
     chunk_size = max(1, args.chunk_size)
@@ -1395,7 +1670,22 @@ def main():
         print(f"\n--- Processing PinPerf panel chunk {idx // chunk_size + 1} / {(len(due_panel_pins) + chunk_size - 1) // chunk_size} ({len(pchunk)} pins: {pchunk[0]['pinId']}..{pchunk[-1]['pinId']}) ---")
         total_panel_pins_saved += sync_panel_chunk(pchunk, locale_filter=args.locale)
 
-    print(f"\nCompleted all chunks. Total translation rows saved: {total_saved} | Total PinPerf panel pins saved: {total_panel_pins_saved}")
+    total_pro_tips_saved = 0
+    # Group due_pro_tips into chunks by pin_size (chunk_size pins per chunk)
+    pro_tips_by_pin: Dict[int, List[dict]] = {}
+    for pt in due_pro_tips:
+        pro_tips_by_pin.setdefault(pt['pinId'], []).append(pt)
+    for idx in range(0, len(due_pro_tip_pin_ids), chunk_size):
+        pin_slice = due_pro_tip_pin_ids[idx:idx + chunk_size]
+        pt_chunk = [pt for pid in pin_slice for pt in pro_tips_by_pin.get(pid, [])]
+        print(f"\n--- Processing PinProTip chunk {idx // chunk_size + 1} / {(len(due_pro_tip_pin_ids) + chunk_size - 1) // chunk_size} ({len(pin_slice)} pins, {len(pt_chunk)} pro tips: {pin_slice[0]}..{pin_slice[-1]}) ---")
+        total_pro_tips_saved += sync_pro_tip_chunk(pt_chunk, locale_filter=args.locale)
+
+    print(
+        f"\nCompleted all chunks. Total translation rows saved: {total_saved} | "
+        f"Total PinPerf panel pins saved: {total_panel_pins_saved} | "
+        f"Total PinProTip translation rows saved: {total_pro_tips_saved}"
+    )
 
 if __name__ == '__main__':
     main()

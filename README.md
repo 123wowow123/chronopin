@@ -510,10 +510,9 @@ pin food truck tab and their specials to specials tab on landing page.
 Title: All-cities menu photo and review inventory, November 8, 2026
 
 
-do reasonably prosible work in  docs/pro-tips-leftover.md and then deleted file
-
 
 build single daily dashboard landing page, and make it nice, that shows most important information to stay up to date
 - add today's top 3 insights
 - what needs my attention today
 - weekly most relavant dashboards
+
