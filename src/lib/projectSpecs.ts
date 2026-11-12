@@ -12,6 +12,7 @@ export type PinProjectJson = {
   sqft: number | null;
   acres: number | null;
   parking: number | null;
+  parkAcres: number | null;
   source: 'title' | 'hand';
   basis: ProjectBasis | null;
   sourceUrl: string | null;
@@ -45,6 +46,7 @@ export function projectTiles(p: PinProjectJson): ProjectTile[] {
   if (p.sqft != null) tiles.push({ key: 'sqft', label: 'Floor area', value: p.sqft >= 1000 ? `${(Math.round(p.sqft / 100) / 10).toLocaleString('en-US')}K sq ft` : `${n(p.sqft)} sq ft`, sub: p.sqft >= 1000 ? `${n(p.sqft)} sq ft` : null, dot: 'bg-sky-400' });
   if (p.acres != null) tiles.push({ key: 'acres', label: 'Site', value: `${(Math.round(p.acres * 10) / 10).toLocaleString('en-US')} ac`, sub: null, dot: 'bg-lime-400' });
   if (p.parking != null) tiles.push({ key: 'parking', label: 'Parking', value: n(p.parking), sub: 'spaces', dot: 'bg-slate-400' });
+  if (p.parkAcres != null) tiles.push({ key: 'parkAcres', label: 'Parks', value: `${(Math.round(p.parkAcres * 10) / 10).toLocaleString('en-US')} ac`, sub: 'of parks', dot: 'bg-green-400' });
   return tiles;
 }
 

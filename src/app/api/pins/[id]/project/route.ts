@@ -28,7 +28,7 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
   return p ? json(p) : noContent();
 });
 
-// PUT { units?, affordableUnits?, rooms?, seats?, beds?, stories?, sqft?, acres?, parking?, basis?, sourceUrl?, note? }
+// PUT { units?, affordableUnits?, rooms?, seats?, beds?, stories?, sqft?, acres?, parking?, parkAcres?, basis?, sourceUrl?, note? }
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);
@@ -37,7 +37,7 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
     units: posOrNull(b.units, 'units', 1e7), affordableUnits: posOrNull(b.affordableUnits, 'affordableUnits', 1e7),
     rooms: posOrNull(b.rooms, 'rooms', 1e6), seats: posOrNull(b.seats, 'seats', 1e7), beds: posOrNull(b.beds, 'beds', 1e6),
     stories: posOrNull(b.stories, 'stories', 1000), sqft: posOrNull(b.sqft, 'sqft', 1e12), acres: posOrNull(b.acres, 'acres', 1e9),
-    parking: posOrNull(b.parking, 'parking', 1e7), basis: null as ProjectBasis | null,
+    parking: posOrNull(b.parking, 'parking', 1e7), parkAcres: posOrNull(b.parkAcres, 'parkAcres', 1e9), basis: null as ProjectBasis | null,
     sourceUrl: strOrNull(b.sourceUrl, 4000), note: strOrNull(b.note, 500),
   };
   if (b.basis != null && b.basis !== '') {

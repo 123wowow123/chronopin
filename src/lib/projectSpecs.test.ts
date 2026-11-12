@@ -14,7 +14,7 @@ describe('projectFromTitle', () => {
 });
 
 describe('projectTiles', () => {
-  const base: PinProjectJson = { units: null, affordableUnits: null, rooms: null, seats: null, beds: null, stories: null, sqft: null, acres: null, parking: null, source: 'hand', basis: null, sourceUrl: null, note: null, checkedAt: '' };
+  const base: PinProjectJson = { units: null, affordableUnits: null, rooms: null, seats: null, beds: null, stories: null, sqft: null, acres: null, parking: null, parkAcres: null, source: 'hand', basis: null, sourceUrl: null, note: null, checkedAt: '' };
   it('shows the affordable share under the homes tile', () => {
     const [t] = projectTiles({ ...base, units: 600, affordableUnits: 150 });
     expect(t.value).toBe('600');
