@@ -216,7 +216,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinDatacenter(pin.id), null, 'pinDatacenter'),
     soft(pinProject(pin.id), null, 'pinProject'),
     soft(pinPurpose(pin.id), null, 'pinPurpose'),
-    soft(pinProTips(pin.id), [], 'pinProTips'),
+    soft(pinProTips(pin.id, t.locale), [], 'pinProTips'),
     soft(pinDam(pin.id), null, 'pinDam'),
     soft(pinMarketImpact(pin.id), null, 'pinMarketImpact'),
     soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),

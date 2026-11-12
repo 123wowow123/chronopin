@@ -323,11 +323,11 @@ export async function pinPurpose(id: number): Promise<PinPurposeJson | null> {
 }
 
 // Practical, sourced advice for the pin (PinProTip).
-export async function pinProTips(id: number): Promise<PinProTipJson[]> {
+export async function pinProTips(id: number, locale: Locale = 'en'): Promise<PinProTipJson[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
-  return proTipsForPin(id);
+  return proTipsForPin(id, locale);
 }
 
 // The pin's homes / rooms / seats / height / area / parking quantities.
