@@ -12,15 +12,15 @@ const id = 20928;
 const MARKET = 'https://polymarket.com/event/eurovision-asia-winner-2026';
 const NEWS = 'https://eurovisionasia.com/news/11-countries-to-participate-eurovision-song-contest-asia-2026/';
 const P = (p) => `https://audio-ssl.itunes.apple.com/itunes-assets/${p}.plus.aac.p.m4a`;
-// rank = market favourite first; odds = Yes price in cents on 2026-11-11.
+// rank = market favourite first; odds = displayed Polymarket percentage (outcomePrices mid) on 2026-11-11.
 const E = [
-  [1, 'Bluest Sky', 'Aina Abdul · Malaysia', 61, P('AudioPreview211/v4/f3/cc/07/f3cc07a3-e752-85a8-8b27-693d3d79cdb4/mzaf_9300630784844343209')],
-  [2, 'Sobra-Sobra', 'CARMELLE · Philippines', 29, P('AudioPreview221/v4/76/8c/38/768c384f-eecc-921b-fbdb-aa8ce862d379/mzaf_18043330794634198339')],
-  [3, 'EM TIÊN', 'Tóc Tiên · Vietnam', 10, P('AudioPreview221/v4/79/26/43/7926435c-061d-e0bc-83d0-14b27d251f2b/mzaf_5189603465905180277')],
-  [4, 'Aroma', 'MANG x DAOU · Thailand', 6, P('AudioPreview221/v4/12/24/87/1224873c-478a-4ec8-d775-6aa802be15ad/mzaf_8659922367533844822')],
-  [5, 'Ananta Maya', 'Pratik Himal Rai · Nepal', 7, P('AudioPreview211/v4/bc/17/f2/bc17f2cf-57f0-f6e9-3175-ff25a0c84602/mzaf_13140786815539382261')],
-  [6, 'DEEP DIVE', 'JUNHEE · South Korea', 4, P('AudioPreview221/v4/2f/63/56/2f635661-a445-9f1a-6770-4106bf584d8b/mzaf_10766300497385725679')],
-  [7, 'BAE', 'Thinla · Laos', 1, P('AudioPreview221/v4/e7/dc/74/e7dc745b-7a99-daa6-8f12-cec5769db38a/mzaf_17655002300194596285')],
+  [1, 'Bluest Sky', 'Aina Abdul · Malaysia', 57, P('AudioPreview211/v4/f3/cc/07/f3cc07a3-e752-85a8-8b27-693d3d79cdb4/mzaf_9300630784844343209')],
+  [2, 'Sobra-Sobra', 'CARMELLE · Philippines', 25, P('AudioPreview221/v4/76/8c/38/768c384f-eecc-921b-fbdb-aa8ce862d379/mzaf_18043330794634198339')],
+  [3, 'EM TIÊN', 'Tóc Tiên · Vietnam', 8, P('AudioPreview221/v4/79/26/43/7926435c-061d-e0bc-83d0-14b27d251f2b/mzaf_5189603465905180277')],
+  [4, 'Aroma', 'MANG x DAOU · Thailand', 5, P('AudioPreview221/v4/12/24/87/1224873c-478a-4ec8-d775-6aa802be15ad/mzaf_8659922367533844822')],
+  [5, 'Ananta Maya', 'Pratik Himal Rai · Nepal', 4, P('AudioPreview211/v4/bc/17/f2/bc17f2cf-57f0-f6e9-3175-ff25a0c84602/mzaf_13140786815539382261')],
+  [6, 'DEEP DIVE', 'JUNHEE · South Korea', 3, P('AudioPreview221/v4/2f/63/56/2f635661-a445-9f1a-6770-4106bf584d8b/mzaf_10766300497385725679')],
+  [7, 'BAE', 'Thinla · Laos', 2, P('AudioPreview221/v4/e7/dc/74/e7dc745b-7a99-daa6-8f12-cec5769db38a/mzaf_17655002300194596285')],
   [8, 'Chamguigeer (Without You)', 'Beck · Mongolia', 0, P('AudioPreview221/v4/e6/0b/80/e60b8066-8afb-36f5-7197-3a65b55e17eb/mzaf_2172365844802952633')],
   [9, 'Lhayi Semo', 'Nyendra · Bhutan', 0, P('AudioPreview211/v4/57/90/01/579001fb-983a-bb5f-1108-b414e5b96db9/mzaf_9834788316350499991')],
   [10, 'I Let You Go', 'Monetrey · Cambodia', 0, P('AudioPreview211/v4/88/d2/2e/88d22e0c-d7ba-680f-0d07-d8b5cb9ec3d8/mzaf_17296188389719025483')],
