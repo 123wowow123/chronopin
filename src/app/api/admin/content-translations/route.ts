@@ -5,7 +5,7 @@ import { HttpError, json, readJson, route } from '@/server/http';
 import { CONTENT_TRANSLATIONS, applyContentTranslations, contentCoverage, contentDue, type ContentTranslationInput } from '@/server/model/contentTranslations';
 
 // Translations of the secondary content tables (0265), made by the translation
-// agent in its own phase. One endpoint, one `table` per call:
+// agent in the same run as the pin translations. One endpoint, one `table` per call:
 //
 //   GET  (no params)                          the tables, their fields and a coverage count
 //   GET  ?table=company-wiki&locale=zh[,ja]&limit=100&after=<next>

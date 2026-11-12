@@ -38,28 +38,31 @@ This skill provides the automated workflow, validation checks, and operational g
        ```
        (or `--panels --pins <id1,id2,...>` when sharding panel-only pins, or `--pro-tips --no-prep --pins <id1,id2,...>` when sharding pro-tip-only pins).
      - If any fragment, pin, or pro tip requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
+  2b. **Same run, content tables:** after (or alongside) the pin shards, translate every secondary content table via `/api/admin/content-translations` (see [Content Translations](./references/content_translations.md)), sharding by table or `after` range across the same `flash` subagents. Do not end the run before they reach `due: 0`.
   3. **Audit the `flash` Subagents' Work:** After all `flash` subagents complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have the final `flash` subagent run it and inspect its output) to verify:
      - `0` due pins (`100.0%` current & complete)
      - `0` panels missing `i18n` (`panels_incomplete: 0`, `pins_with_incomplete_panels: 0` across all `PinPerf` charts and tables, including verifying that chart/table `note`s, `title`s, and table `rows` cells `> 40` chars with English stopwords were translated and not left in English or pure ASCII in non-Latin locales)
      - `0` pro tips missing `i18n` (`pro_tips_incomplete: 0`, `pins_with_incomplete_pro_tips: 0` across all `PinProTip` tips, verifying that `PinProTipTranslation` exists for all 15 locales with matching `sourceHash = sha1(tip)` and passes all plain-text/non-Latin/Thai Gregorian year rules)
      - `0` untranslated/mangled rows (no untranslated English prose, no pure-ASCII `title`s `> 40` chars with English stopwords in non-Latin locales `ja`/`zh`/`ko`/`ru`/`ar`/`hi`/`th`, no identical English `<li>` bullets of 60+ chars, no partial-English `<li>` bullets of 80+ ASCII chars in non-Latin locales, no unconverted Thai Buddhist Era years `2550..2589` or `พ.ศ.`, no raw HTML entities in plain-text fields, no mangled/double-escaped entities in HTML fields, and no `[⟦⟧]` delimiter leaks). Identical-to-English text is allowed only when the English source is itself non-English (see [Untranslated-English Detection Rules](./references/locales_and_hashing.md)).
      - `0` skipped rows and `0` content leaks
+     - `due: 0` for every table in `GET /api/admin/content-translations`
 
 ---
 
-## Phase 2: secondary content tables (company hubs, restaurants, people, wikis, horoscopes, ...)
+## Secondary content tables (company hubs, restaurants, people, wikis, horoscopes, ...)
 
-Translating **pins** (phase 1, below) and translating the **other content tables** (phase 2) are separate
-phases of the translation agent's run. Content-creating sessions only save English and say translations
-are left to this agent. Phase 2 uses the `<Source>Translation` tables from migration `0265` through
+The translation agent translates the **other content tables** in the **same single run** as the pins, panels
+and pro tips; there is no separate pass. Content-creating sessions only save English and say translations
+are left to this agent. These tables use the `<Source>Translation` tables from migration `0265` through
 `/api/admin/content-translations` (not `sync_translations.py`). Full flow, table list, JSON-shape rules
 and verification: [Content Translations Reference](./references/content_translations.md).
 
-Run order for a full translation pass: phase 1 (pins, panels, pro tips) -> phase 2 (every table in the
-reference until `due: 0`) -> audit.
+One run, in order: pins, panels and pro tips (`sync_translations.py`) -> every table in the reference
+until `due: 0` (same `flash` subagents, shard by table) -> one audit. The run is finished only when
+`check_translations.py` shows 0 due pins AND the coverage call shows `due: 0` for every table.
 
 ```bash
-# coverage across all phase-2 tables (needs the admin token from check_translations.ensure_admin_token())
+# coverage across all content tables (needs the admin token from check_translations.ensure_admin_token())
 curl -s -H "Authorization: Bearer $(cat .scrape/admin.token)" https://www.chronopin.com/api/admin/content-translations
 ```
 
@@ -174,7 +177,7 @@ The script automatically:
 
 ## Detailed References
 
-- [Content Translations (phase 2 tables)](./references/content_translations.md)
+- [Content Translations (secondary tables)](./references/content_translations.md)
 - [Locales, Hashing & HTML Rules](./references/locales_and_hashing.md)
 - [OKF Source Wiki Schema & Attribution](./references/okf_source_wiki.md)
 

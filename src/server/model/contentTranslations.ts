@@ -5,7 +5,7 @@
 // A translation row is made from the English fields as they were; "sourceHash"
 // is the sha1 of those fields, and a row whose hash no longer matches is due
 // again. Saving content never writes these rows - the translation agent does,
-// in its own phase (.agents/skills/prod-translations).
+// in its one run with the pin translations (.agents/skills/prod-translations).
 import { createHash } from 'node:crypto';
 import { isLocale, type Locale } from '@/lib/i18n/config';
 import * as db from '../db';

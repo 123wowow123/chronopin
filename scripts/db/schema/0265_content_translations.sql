@@ -7,7 +7,7 @@
 -- words were made from. A row whose hash no longer matches the source is not
 -- shown, so editing the English text retires its translations without a
 -- trigger. Rows cascade away with the source row. The translation agent makes
--- them in a separate phase through /api/admin/content-translations; saving
+-- them in the same run as the pin translations, through /api/admin/content-translations; saving
 -- content never writes them (see .agents/skills/prod-translations).
 --
 -- jsonb columns hold the source's JSON with only its prose swapped.
