@@ -76,7 +76,12 @@ export async function allForecasts(): Promise<IndustryForecastJson[]> {
 export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecastJson[]> {
   if (!slugs.length) return [];
   const rows = (await all()).filter((r) => slugs.includes(r.slug));
-  return Promise.all(rows.map(toJson));
+  const out = await Promise.all(rows.map(toJson));
+  // A single-bar chart says little next to a trend line: it sorts after the
+  // rest, so a panel with a card limit tucks it behind "Show more". The sort
+  // is stable, so everything else keeps its id order.
+  const single = (f: IndustryForecastJson) => !f.live.length && !f.lines.length && (f.projection?.points.length ?? 0) <= 1 && !f.earlier.length;
+  return [...out.filter((f) => !single(f)), ...out.filter(single)];
 }
 
 // Saves one row whole (checked by forecastProblem). The live handles and the
