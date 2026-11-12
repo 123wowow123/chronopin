@@ -543,16 +543,19 @@ export function PeopleSidePanel({
                           <Link href={tickerHref(ticker)} className="truncate font-semibold text-ink hover:underline">
                             {ticker}
                           </Link>
-                          {conflictsByTicker.has(ticker) ? (
-                            <span
-                              title={`${t('notifications.conflict')}: ${[...conflictsByTicker.get(ticker)!].slice(0, 3).join(', ')}`}
-                              className="ms-auto shrink-0 text-warning-soft"
-                            >
-                              <Icon name="warning" className="size-3" />
-                            </span>
-                          ) : st.value ? (
-                            <span className="ms-auto shrink-0 text-[10px] tabular-nums text-subtle">
-                              {money.format(st.value)}
+                          {st.value || conflictsByTicker.has(ticker) ? (
+                            <span className="ms-auto flex shrink-0 items-center gap-1">
+                              {st.value ? (
+                                <span className="text-[10px] tabular-nums text-subtle">{money.format(st.value)}</span>
+                              ) : null}
+                              {conflictsByTicker.has(ticker) ? (
+                                <span
+                                  title={`${t('notifications.conflict')}: ${[...conflictsByTicker.get(ticker)!].slice(0, 3).join(', ')}`}
+                                  className="text-warning-soft"
+                                >
+                                  <Icon name="warning" className="size-3" />
+                                </span>
+                              ) : null}
                             </span>
                           ) : null}
                         </div>
