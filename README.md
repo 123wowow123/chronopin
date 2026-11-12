@@ -518,7 +518,3 @@ build single daily dashboard landing page, and make it nice, that shows most imp
 - add today's top 3 insights
 - what needs my attention today
 - weekly most relavant dashboards
-
-
-run
-docs/music-contenders-leftover-2026-11-11.md
