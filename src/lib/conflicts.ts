@@ -142,7 +142,7 @@ export function sectorOfName(name: string): Sector | null {
 
 // Tickers whose names say nothing but whose business is known (the most-traded ones EDGAR's list lacks).
 export const TICKER_SECTORS: Record<string, Sector> = {
-  FI: 'tech', FISV: 'tech', EA: 'tech', DAY: 'tech', PSTG: 'tech', PYCR: 'tech', FB: 'tech', SQ: 'finance', MMC: 'finance', DFS: 'finance', BRP: 'finance', GBDC: 'finance', HTGC: 'finance',
+  GD: 'defense', THLEF: 'defense', FINMF: 'defense', FI: 'tech', FISV: 'tech', EA: 'tech', DAY: 'tech', PSTG: 'tech', PYCR: 'tech', FB: 'tech', SQ: 'finance', MMC: 'finance', DFS: 'finance', BRP: 'finance', GBDC: 'finance', HTGC: 'finance',
   K: 'agriculture', AVB: 'realestate', WBA: 'healthcare', ITCI: 'healthcare', EXAS: 'healthcare', PXD: 'energy', CTRA: 'energy', CHX: 'energy', X: 'materials', GTLS: 'industrial',
   // Foreign ADRs / ordinary shares and obscure US names (2026-10 sweep of tickers EDGAR's list lacks).
   NSRGY: 'agriculture', HESAF: 'consumer', AJINF: 'agriculture', LVMUY: 'consumer', CFRUY: 'consumer', ADDYY: 'consumer', SSDOY: 'consumer', LRLCY: 'consumer', PRNDY: 'agriculture', UNICY: 'consumer', HSHCY: 'consumer', COLPAL: 'consumer', SKX: 'consumer', NTDOY: 'consumer', NTDOF: 'consumer', ANCTF: 'consumer',
