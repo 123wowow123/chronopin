@@ -10,7 +10,7 @@ import { timeAgo } from '@/lib/format';
 import { personPath } from '@/lib/people';
 import { pinPath } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
-import { shortExpiry, type TraderPositionRow } from '@/lib/traders';
+import { monthDay, shortExpiry, type TraderPositionRow } from '@/lib/traders';
 import { thumb } from './PeopleDirectory';
 
 export type SidebarWatchedPerson = {
@@ -424,23 +424,25 @@ export function PeopleSidePanel({
                       <li key={p.id} className="flex items-baseline gap-2 text-xs" title={p.summary ?? undefined}>
                         <span className="w-16 shrink-0 text-muted">{t(PREMIUM_MOVE_LABEL[p.action] ?? 'premium.bought')}</span>
                         <span className="flex min-w-0 flex-1 items-baseline gap-1.5">
-                          <Link href={tickerHref(p.ticker)} className="truncate font-semibold text-ink hover:underline">
-                            {p.ticker}
-                          </Link>
-                          {kindKey ? (
-                            <span
-                              className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] leading-none font-semibold ring-1 ring-inset ${
-                                p.instrument === 'call'
-                                  ? 'bg-success/15 text-success-soft ring-success/30'
-                                  : 'bg-danger/15 text-danger-soft ring-danger/30'
-                              }`}
-                            >
-                              {t(kindKey)}
-                            </span>
-                          ) : null}
+                          <>
+                            <Link href={tickerHref(p.ticker)} className="shrink-0 whitespace-nowrap font-semibold text-ink hover:underline">
+                              {p.ticker}
+                            </Link>
+                            {kindKey ? (
+                              <span
+                                className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] leading-none font-semibold ring-1 ring-inset ${
+                                  p.instrument === 'call'
+                                    ? 'bg-success/15 text-success-soft ring-success/30'
+                                    : 'bg-danger/15 text-danger-soft ring-danger/30'
+                                }`}
+                              >
+                                {t(kindKey)}
+                              </span>
+                            ) : null}
+                          </>
                           {kindKey && (p.strikePrice != null || p.expirationDate) ? (
                             <span
-                              className="min-w-0 truncate tabular-nums text-subtle"
+                              className="min-w-0 truncate whitespace-nowrap tabular-nums text-subtle"
                               title={`${t('premium.strike')} ${p.strikePrice != null ? `$${p.strikePrice}` : '—'} · ${t('premium.expires')} ${p.expirationDate ?? '—'}`}
                             >
                               {p.strikePrice != null ? `$${p.strikePrice}` : ''}
@@ -451,7 +453,7 @@ export function PeopleSidePanel({
                         </span>
                         {p.tradeDate ? (
                           <span className="shrink-0 tabular-nums text-subtle" title={daysAgoLabel(p.tradeDate)}>
-                            {p.tradeDate.slice(0, 10)}
+                            {monthDay(p.tradeDate)}
                           </span>
                         ) : null}
                         <span className={`w-12 shrink-0 text-end font-semibold tabular-nums ${pnl == null ? '' : pnl >= 0 ? 'text-success' : 'text-danger'}`}>

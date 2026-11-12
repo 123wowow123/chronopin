@@ -88,10 +88,14 @@ export const TRADER_SOURCES = [
   { slug: 'le-shrub', name: 'Le Shrub', archive: 'https://www.shrubstack.com/archive', postKind: 'trade and position posts' },
 ] as const;
 
-// "Jan 15" for an expiry in the current year, "Jan 15 '27" for any other, for the tight panels.
-export function shortExpiry(day: string, now: Date = new Date()): string {
-  const [y, m, d] = day.split('-').map(Number);
+// "Nov 9" for a YYYY-MM-DD day, no year, for the narrow date column.
+export function monthDay(day: string): string {
+  const [y, m, d] = day.slice(0, 10).split('-').map(Number);
   if (!y || !m || !d) return day;
-  const text = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d)));
-  return y === now.getUTCFullYear() ? text : `${text} '${String(y).slice(2)}`;
+  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d)));
+}
+
+// "Jan 15" for an expiry, no year, for the tight panels (the full date stays in the tooltip).
+export function shortExpiry(day: string): string {
+  return monthDay(day);
 }
