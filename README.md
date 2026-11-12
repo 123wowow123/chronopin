@@ -516,3 +516,9 @@ build single daily dashboard landing page, and make it nice, that shows most imp
 - what needs my attention today
 - weekly most relavant dashboards
 
+
+generate clips of long form videa media for preview
+
+
+pin and thread Luigi Colani pins
+might need new user to post if new category

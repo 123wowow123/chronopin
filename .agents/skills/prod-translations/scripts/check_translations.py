@@ -9,7 +9,7 @@ Checks the health of translations across all active Chronopin production pins.
 - Outputs a clean terminal report (or JSON with --json) and exits 0 if current, 1 if action is needed.
 
 Usage:
-    python3 .agents/skills/prod-translations/scripts/check_translations.py [--json]
+    python3 .agents/skills/prod-translations/scripts/check_translations.py [--json] [--since-days N] [--only NAME[,NAME]]
 """
 
 import json
@@ -17,6 +17,7 @@ import os
 import pathlib
 import subprocess
 import sys
+import time
 import urllib.request
 
 sys.dont_write_bytecode = True
@@ -100,7 +101,10 @@ def run_prod_sql(sql: str) -> str:
 def main():
     json_mode = '--json' in sys.argv
 
-    sql = """
+    # The health check used to be one giant CTE query (minutes long, all-or-nothing).
+    # It is now split into independent queries run one after another, each timed on stderr,
+    # so a slow check is visible and can be run alone with --only NAME.
+    LEAK_CTE = """
 WITH leak_patterns AS (
   SELECT unnest(ARRAY[
     '%Translations completed using Gemini%',
@@ -120,21 +124,36 @@ WITH leak_patterns AS (
     '%Bản dịch được hoàn thành bằng cách sử dụng Gemini%',
     '%Terjemahan diselesaikan menggunakan Gemini%'
   ]) AS pat
-),
-counts AS (
-  SELECT 
+)
+"""
+    # Every leak pattern contains "Gemini" (Hindi: जेमिनी). Test that cheap substring first so the
+    # 16-pattern ILIKE only runs on the handful of rows that already contain it.
+    def hit(col):
+        return f"""(({col} ILIKE '%gemini%' OR {col} LIKE '%जेमिनी%')
+        AND EXISTS (SELECT 1 FROM leak_patterns lp WHERE {col} ILIKE lp.pat))"""
+
+    def wrap(body, cte=''):
+        return cte + "SELECT row_to_json(q)::text FROM (SELECT " + body + ") q;"
+
+    queries = {}
+    queries['counts'] = wrap("""
     (SELECT count(*) FROM "Pin" WHERE "utcDeletedDateTime" IS NULL) AS active_pins,
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL) AS total_translation_rows,
-    (SELECT count(*) FROM "PinTranslation" pt LEFT JOIN "Pin" p ON p.id = pt."pinId" WHERE p.id IS NULL OR p."utcDeletedDateTime" IS NOT NULL) AS orphaned_translation_rows,
+    (SELECT count(*) FROM "PinTranslation" pt LEFT JOIN "Pin" p ON p.id = pt."pinId" WHERE p.id IS NULL OR p."utcDeletedDateTime" IS NOT NULL) AS orphaned_translation_rows
+""")
+    queries['leak_pin'] = wrap(f"""
     (SELECT count(*) FROM "Pin" p WHERE p."utcDeletedDateTime" IS NULL AND (
-      EXISTS (SELECT 1 FROM leak_patterns lp WHERE p."longFormSummary" ILIKE lp.pat OR p.description ILIKE lp.pat)
-      OR EXISTS (SELECT 1 FROM "PinProTip" t CROSS JOIN leak_patterns lp WHERE t."pinId" = p.id AND t.tip ILIKE lp.pat)
-    )) AS pins_with_content_tracking,
-    (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
-      SELECT 1 FROM leak_patterns lp WHERE pt."longFormSummary" ILIKE lp.pat OR pt.description ILIKE lp.pat
-    )) + (SELECT count(*) FROM "PinProTipTranslation" ptt JOIN "PinProTip" t ON t.id = ptt."proTipId" JOIN "Pin" p ON p.id = t."pinId" WHERE p."utcDeletedDateTime" IS NULL AND EXISTS (
-      SELECT 1 FROM leak_patterns lp WHERE ptt.tip ILIKE lp.pat
-    )) AS translations_with_content_tracking,
+      {hit('p."longFormSummary"')} OR {hit('p.description')}
+      OR EXISTS (SELECT 1 FROM "PinProTip" t WHERE t."pinId" = p.id AND {hit('t.tip')})
+    )) AS pins_with_content_tracking
+""", LEAK_CTE)
+    queries['leak_translation'] = wrap(f"""
+    (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL
+      AND ({hit('pt."longFormSummary"')} OR {hit('pt.description')}))
+    + (SELECT count(*) FROM "PinProTipTranslation" ptt JOIN "PinProTip" t ON t.id = ptt."proTipId" JOIN "Pin" p ON p.id = t."pinId"
+      WHERE p."utcDeletedDateTime" IS NULL AND {hit('ptt.tip')}) AS translations_with_content_tracking
+""", LEAK_CTE)
+    queries['mangled'] = wrap("""
     (SELECT count(*) FROM "PinTranslation" pt JOIN "Pin" p ON p.id = pt."pinId" WHERE p."utcDeletedDateTime" IS NULL AND (
       (length(regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g')) > 40 AND pt.description = p.description AND regexp_replace(coalesce(p.description, ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
       OR (length(regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g')) > 60 AND pt."longFormSummary" = p."longFormSummary" AND regexp_replace(coalesce(p."longFormSummary", ''), '<[^>]*>', '', 'g') ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M')
@@ -168,7 +187,9 @@ counts AS (
           )
         )
       )
-    )) AS untranslated_or_mangled_rows,
+    )) AS untranslated_or_mangled_rows
+""")
+    queries['bullets'] = wrap("""
     (SELECT count(*) FROM (SELECT DISTINCT b."pinId", b.locale FROM (
   SELECT pt."pinId", pt.locale,
          regexp_replace(e.li, '<[^>]*>', '', 'g') AS en_li,
@@ -177,10 +198,11 @@ counts AS (
   JOIN "Pin" p ON p.id = pt."pinId" AND p."utcDeletedDateTime" IS NULL
   CROSS JOIN LATERAL regexp_split_to_table(coalesce(p."longFormSummary", ''), '</li>') WITH ORDINALITY AS e(li, n)
   JOIN LATERAL (SELECT li, n FROM regexp_split_to_table(coalesce(pt."longFormSummary", ''), '</li>') WITH ORDINALITY AS x(li, n)) t ON t.n = e.n
-  WHERE p."longFormSummary" ~ '<li>'
+  WHERE p."longFormSummary" ~ '<li>' /*SINCE*/
 ) b WHERE length(en_li) >= 60 AND en_li = tr_li AND en_li !~ '[^\\x00-\\x7F]' AND en_li ~* '\\m(the|and|of|to|is|in|for|on|with|by|that|was|are|from|has|have|not|this|be|it)\\M') x) AS identical_english_bullet_rows
-),
-panel_items AS (
+""")
+    queries['panels'] = """
+WITH panel_items AS (
   SELECT pp."pinId",
          (SELECT count(*) FROM unnest(ARRAY['es','fr','de','ja','zh','ko','hi','ar','th','it','ru','pt','ms','vi','id']) loc
           WHERE (c->'i18n'->loc->>'title') IS NOT NULL AND (c->'i18n'->loc->>'unit') IS NOT NULL
@@ -234,8 +256,11 @@ panel_counts AS (
     count(*) FILTER (WHERE locales_done < 15) AS panels_incomplete,
     count(DISTINCT "pinId") FILTER (WHERE locales_done < 15) AS pins_with_incomplete_panels
   FROM panel_items
-),
-pro_tip_items AS (
+)
+SELECT row_to_json(panel_counts)::text FROM panel_counts;
+"""
+    queries['pro_tips'] = """
+WITH pro_tip_items AS (
   SELECT t.id AS "proTipId",
          t."pinId",
          (SELECT count(*) FROM "PinProTipTranslation" ptt
@@ -260,40 +285,54 @@ pro_tip_counts AS (
     count(DISTINCT "pinId") FILTER (WHERE locales_done < 15) AS pins_with_incomplete_pro_tips
   FROM pro_tip_items
 )
-SELECT json_build_object(
-  'active_pins', counts.active_pins,
-  'total_translation_rows', counts.total_translation_rows,
-  'orphaned_translation_rows', counts.orphaned_translation_rows,
-  'pins_with_content_tracking', counts.pins_with_content_tracking,
-  'translations_with_content_tracking', counts.translations_with_content_tracking,
-  'untranslated_or_mangled_rows', counts.untranslated_or_mangled_rows,
-  'identical_english_bullet_rows', counts.identical_english_bullet_rows,
-  'total_panels', panel_counts.total_panels,
-  'panels_complete', panel_counts.panels_complete,
-  'panels_incomplete', panel_counts.panels_incomplete,
-  'pins_with_incomplete_panels', panel_counts.pins_with_incomplete_panels,
-  'total_pro_tips', pro_tip_counts.total_pro_tips,
-  'pro_tips_complete', pro_tip_counts.pro_tips_complete,
-  'pro_tips_incomplete', pro_tip_counts.pro_tips_incomplete,
-  'pins_with_incomplete_pro_tips', pro_tip_counts.pins_with_incomplete_pro_tips
-)::text
-FROM counts, panel_counts, pro_tip_counts;
+SELECT row_to_json(pro_tip_counts)::text FROM pro_tip_counts;
 """
-    raw_output = run_prod_sql(sql).strip()
-    db_data = None
-    for line in raw_output.splitlines():
-        line = line.strip()
-        if line.startswith('{') and line.endswith('}'):
-            try:
-                db_data = json.loads(line)
-                break
-            except Exception:
-                pass
 
-    if not db_data:
-        print("Failed to parse database output:")
-        print(raw_output)
-        sys.exit(2)
+    # --since-days N limits the slowest check (bullets, ~80 s) to translation rows written in the
+    # last N days. Default stays a full scan, so old bad rows are still caught on a normal run.
+    if '--since-days' in sys.argv:
+        days = int(sys.argv[sys.argv.index('--since-days') + 1])
+        queries['bullets'] = queries['bullets'].replace(
+            '/*SINCE*/', f"AND pt.\"utcUpdatedDateTime\" >= now() - interval '{days} days'")
+
+    only = None
+    if '--only' in sys.argv:
+        only = sys.argv[sys.argv.index('--only') + 1].split(',')
+        unknown = [n for n in only if n not in queries]
+        if unknown:
+            print(f"Unknown query name(s) {unknown}; choose from {list(queries)}")
+            sys.exit(2)
+        # --only is for timing/debugging one check; the report below needs every number.
+        json_mode = True
+
+    db_data = {}
+    for name, sql in queries.items():
+        if only and name not in only:
+            continue
+        t0 = time.time()
+        try:
+            raw_output = run_prod_sql(sql).strip()
+        except subprocess.CalledProcessError as e:
+            print(f"[{name}] query failed:\n{e.stderr.decode('utf-8', 'replace')}", file=sys.stderr)
+            sys.exit(2)
+        parsed = None
+        for line in raw_output.splitlines():
+            line = line.strip()
+            if line.startswith('{') and line.endswith('}'):
+                try:
+                    parsed = json.loads(line)
+                    break
+                except Exception:
+                    pass
+        if parsed is None:
+            print(f"[{name}] failed to parse database output:\n{raw_output}", file=sys.stderr)
+            sys.exit(2)
+        db_data.update(parsed)
+        print(f"[{name}] {time.time() - t0:.1f}s", file=sys.stderr, flush=True)
+
+    if only:
+        print(json.dumps(db_data, indent=2))
+        sys.exit(0)
 
     token = ensure_admin_token()
     due_pins = fetch_due_pins(token)

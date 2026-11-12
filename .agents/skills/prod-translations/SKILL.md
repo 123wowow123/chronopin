@@ -76,6 +76,8 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 |:---|:---|
 | **Health Check (Pins + Panels + Pro Tips)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py` |
 | **Check JSON Output** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --json` |
+| **Quick health check (recent rows only)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --since-days 7` |
+| **Time/debug one check** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --only bullets` (names: `counts`, `leak_pin`, `leak_translation`, `mangled`, `bullets`, `panels`, `pro_tips`) |
 | **Prep & List Due Pin + Panel + Pro-Tip IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
 | **Sync Assigned Pin Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
 | **Sync Assigned Panel Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --panels --pins 20678,20688,...` |
@@ -112,6 +114,8 @@ Run the translation health check to inspect how many pins require translation up
 python3 .agents/skills/prod-translations/scripts/check_translations.py
 ```
 This queries both the production PostgreSQL database (`scripts/prod-sql.sh`) and `GET /api/admin/translations` to count active pins, break down rows by state (`current`, `outdated`, `incomplete`, `missing`), and verify zero content leaks across all 15 localized tracking strings.
+
+The check runs seven separate SQL queries one after another and prints each one's time on stderr (a full run is about 3 minutes on prod; `bullets` is the slowest at ~80 s). `--since-days N` limits `bullets` to translation rows written in the last N days (~11 s); the default is a full scan, so use the full run for the final audit and `--since-days` for quick mid-job checks. `--only NAME[,NAME]` runs just those queries and prints raw JSON, not the report (it is for timing and debugging, not for the audit). Leak patterns are prefiltered on the substring `gemini`/`जेमिनी`, so any new leak pattern must contain one of them or be added to that prefilter in `hit()`.
 
 ### Step 2: Execute Sync
 Run the automated synchronization script:
