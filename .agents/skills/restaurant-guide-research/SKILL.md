@@ -273,6 +273,9 @@ Sapporo, Nagoya, Osaka and Fukuoka (largest gaps first, one agent per group of v
 
 1. **Rank the gaps.** Count enabled items per region (content and specials, once per record and label); write the
    per-venue gap list to `.scrape/menu-photo-gaps-<region>.json`. `syncPhotosToProd.py` reads that file.
+   Report stored rows separately from effective menus: group by `restaurantSourceKey`, let enabled specials
+   override ordinary menus with the same label, then count item names once per label. Exact photo mirrors
+   improve storage consistency but do not add effective photographed dishes when specials already win.
 2. **Mirror first.** Copy verified specials photos onto the ordinary record (and the reverse) by exact menu
    label + item name; then look for new sources. HotPepper Gourmet food pages, owst booking-site menus,
    operator menu data (CSV/JSON), and Tabelog "by Restaurant" photos pair a name with a photo; use the

@@ -3,6 +3,15 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 13 inventory follow-up: clear dish assessments only.
+  'The sides, like the pan de queso and croquetas, are mostly missable': 2.5,
+  'Of the four standards, we usually go for blue corn': 4.5,
+  'crunchy, fragrant, and straight-up gorgeous': 4.5,
+  'The ideal cap to a stunner of a meal.': 4.5,
+  'This is a staple on the menu, and for good reason.': 4,
+  'playful, sophisticated, and delicious.': 4.5,
+  'But these are still pretty darn good.': 4,
+  'This won’t disappoint, but the other sandwiches are more intriguing.': 3.5,
   'decadently cheesy mushroom flan': 4.5,
   'delicate olive-flecked tuna tartare': 4,
   'This dish is why I could go vegetarian, but never vegan.': 5,

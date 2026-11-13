@@ -147,3 +147,165 @@ researched: every region outside the four US cities above (Columbus had no dish-
 scores in `src/lib/restaurantReviewRatings.ts` were not added for the new excerpts. Weak matches kept: Roost
 roasted-versus-fried cauliflower, MARCH description-only matches, Barley Swine "ravioli", Adega blog quotes
 (branch confirmed only by heading), Kabutoya/Toroichi leftovers listed above.
+
+## Continuation, November 13, 2026 — local saves
+
+This continuation updates the **local database only**. Azure photographs are publicly stored and verified;
+production restaurant records have not been pushed. No translations or production deployment were run.
+
+### Photo work
+
+Added **932 stored item-photo associations**:
+
+- **901 exact mirrors** from existing specials photos onto ordinary menus across 102 profiles: Beijing 257,
+  Shanghai 328, Hangzhou 148, Guangzhou 54, Suzhou 44, Nanjing 32, Wuhan 16, Shenzhen 13 and Tianjin 9.
+  Matches require the same branch source, menu label and item name, and all public Azure blobs were checked.
+- **27 Kyoto associations**: MERCY Vegan Ramen Shijo Kawaramachi 3, Tonkatsu & Soba An 5,
+  Qu’il fait bon 8 and Sumiro-man Kyoto Yodobashi 11. These use named operator cards and exact product
+  pages. The 27 files contain 26 unique WebP byte hashes: An publishes the same loin-set photograph
+  for its morning and dinner sections. Four pre-existing QFB specials photos were also corrected from
+  whole tarts to actual slices; whole-tart variants retain their whole photographs.
+- **2 Shanghai dishes** at Horse & Cow: fried river shrimp and prawn gnocchi with chilies, verified against
+  Rachel Gouk / Nomfluence's [October 21 review](https://rachelgouk.com/horse-and-cow-a-little-wine-bistro-with-good-pasta/).
+  A proposed squid-pasta image was removed because the saved generic cream-seafood-pasta item does not
+  establish the reviewed preparation.
+- **2 San Francisco dishes**: NOVY's labelled official Lamb Gyro photo and Mary Lagier's historical CA State
+  Bird with Provisions photograph from [The Infatuation](https://www.theinfatuation.com/san-francisco/reviews/state-bird-provisions).
+  The quail caption discloses the pictured four pieces and half/full menu variants.
+
+Stored rows and effective coverage are different. Enabled specials override ordinary menus with the same
+label. The 901 China mirrors and QFB's eight ordinary associations therefore add **no new effective
+photographed dishes**. Effective photo coverage increases by **23 menu entries**: Kyoto 19, Shanghai 2 and
+San Francisco 2. Four additional existing QFB entries now show the correct portion.
+
+### Reviews and editorial estimates
+
+Added **15 newly reviewed item rows** (13 dishes, with Lula's two dishes repeated across lunch and dinner):
+Lula Cafe 4, Cariño 3, Café Ba-Ba-Reeba 1, Superiority Burger 2, State Bird Provisions 3,
+Florecita's Blue Corn Concha 1 and Lolinda's Croquetas 1. Each review was checked against the original
+article and branch address. Criticism is retained, including Lolinda's croquetas and Lula's polarizing pasta.
+Prices, photographs, menu check dates, unrelated reviews, enabled flags and specials region slugs are preserved.
+
+Added eight clear dish-assessment estimates in `src/lib/restaurantReviewRatings.ts`; descriptive excerpts
+remain unscored. The focused rating suite passes (2 tests). These code changes are not deployed.
+
+The previous weak-match audit retained nine supported associations and removed two ADEGA reviews:
+`Lula` referred to tempura rather than the saved cilantro squid salad, and the author could not identify
+`Doces` desserts from the different season. ADEGA's swordfish `Peixe` remains unscored. Roost's
+[Houstonia source](https://www.houstoniamag.com/eat-and-drink/2014/01/bypassing-the-black-walnut-cafe-january-2014)
+explicitly describes the signature cauliflower as both roasted and fried; both praise and criticism remain.
+MARCH's named Portugal-season dishes match the saved courses. Barley Swine's liquid-shiitake filling
+and scrambled eggs establish the ravioli/dumpling association. Two MARCH excerpts and one Barley
+Swine excerpt were shortened; aggregate quotations now fit 25 words per article. These changes affected
+no existing editorial score mappings. Review rows increase by 13 net (15 additions, 2 removals).
+
+### Fresh local counts
+
+The local baseline at the start of this continuation contained **68,915** counted item rows, rather than the
+historical 68,733 above. This continuation did not add or delete menu items. Counts below deduplicate item
+names within each stored record/menu label, matching the original inventory rule; they are not raw array lengths.
+
+| Region | Items | Photos before | Photos after | Reviewed rows after |
+|---|---:|---:|---:|---:|
+| beijing | 1,797 | 257 | 514 | 0 |
+| shanghai | 1,659 | 328 | 658 | 0 |
+| hangzhou | 1,122 | 148 | 296 | 0 |
+| guangzhou | 823 | 54 | 108 | 0 |
+| suzhou | 738 | 44 | 88 | 0 |
+| nanjing | 609 | 32 | 64 | 0 |
+| wuhan | 537 | 16 | 32 | 0 |
+| shenzhen | 1,063 | 13 | 26 | 0 |
+| tianjin | 578 | 9 | 18 | 0 |
+| kyoto | 1,321 | 15 | 42 | 0 |
+| san-francisco | 183 | 0 | 2 | 5 |
+| chicago | 815 | 82 | 82 | 15 |
+| new-york | 700 | 105 | 105 | 3 |
+| san-jose | 441 | 13 | 13 | 12 |
+| **All regions** | **68,915** | **9,190** | **10,122** | **202** |
+
+After source normalization and specials-label precedence, effective menus contain **55,103 item entries**:
+
+| Effective coverage | Before | After | Change |
+|---|---:|---:|---:|
+| With photo | 7,973 | 7,996 | +23 |
+| With review | 180 | 193 | +13 |
+
+Effective counts describe stored menu entries after label precedence; they do not imply that every profile
+has a backing pin or that every offer is currently available.
+
+### Verification and evidence
+
+Dry runs, fresh-revision saves and full profile readbacks passed. An independent full-inventory before/after
+comparison found 119 changed profiles, all limited to item photos and reviews; unrelated profile fields,
+branch sources, enabled flags and region slugs were unchanged (`main/whole-run-preservation.json`).
+Local State Bird Provisions pin 6731
+returns HTTP 200 with its Azure image, Food photos strip and three excerpts in the rendered HTML;
+Florecita pin 6689 contains its new excerpt. Kyoto pins 15474, 15475, 15501 and 15492 render the new
+photos, and MERCY's enlarged dish viewer was checked with its credit and source link. Horse & Cow pin
+15175 returns HTTP 200 with the two accepted images. Hydrated browser verification for the China and
+San Francisco work was blocked by a browser tab-creation error; server-rendered checks are recorded
+separately from Kyoto's hydrated checks.
+
+NOVY and Lolinda do not resolve local backing pins after exact source, title, operator-host and numeric
+source-ID searches. Their profile saves do not establish native-pin coverage; exact-branch pin/opening
+research remains pending. Florecita's operator shop returned a Cloudflare block and the browser fallback
+could not create a tab; no pastry photo was guessed from the mixed-concha article picture.
+
+Resumable manifests, original source HTML, contact sheets, upload JSONL, before/after snapshots and
+readback checks are under `.scrape/menu-inventory-2026-11-13/{china,kyoto,reviews,main}/`.
+The main inventory script and full local snapshots are in `main/`; China includes its exact mirror plans,
+and Kyoto retains the rejected plain-soba picture and whole/slice repair evidence.
+
+### Remaining research
+
+This is a continuation batch, **not completion of all cities**. China mirrors improve storage consistency;
+new-photo research beyond Horse & Cow is still pending. The 18 other mainland China cities with no
+mirror candidates have not thereby been shown to lack photographs. They still need the operator,
+Google Images/Maps, branch-gallery and exact-dish searches required by the research skill.
+
+Kyoto's next concrete sources are Sukesan's chain menu, rendered/embedded Yayoiken Kyoto Kisshoin
+menu data, Gyukaku Aeon Kyoto Rakunan's branch-linked `affordable.pdf`, remaining QFB seasonal products
+and drinks, and exact Sumiro-man tsukune photos. Sumiro-man's saved `/foods` URL returned 404, but its
+current branch home `/#food` supplied the 11 accepted named images. Generic skewer assortments and a
+plain-soba photo were rejected for different portions/sets.
+
+New York Flex Mussels and Mermaid Oyster Bar review candidates refer to previous addresses and were
+not attached to the saved current branches. Original sources remain necessary for the unresearched dishes
+and regions. Previous-run editorial estimates outside the eight additions above also remain to be assessed.
+Translations are left to the translation agent. Production synchronization remains a separate, explicitly
+requested step; wrong-photo replacements and review deletions/edits require deliberate audited round-trips,
+since the additive sync scripts neither replace existing photos nor remove or update existing reviews.
+
+## All remaining research — started November 13, 2026
+
+Owner requested all remaining research, then said “go”; work continues beyond the earlier continuation batch.
+The durable work queue is `.scrape/menu-research-all-2026-11-13/`. Its region lists cover 2,989 normalized
+venue sources and 55,103 effective menu entries. At this phase's start, 47,107 effective entries lacked photos
+and 54,910 lacked reviews. The five sources without a tile region are San Diego venues and are included in
+the US lane. A source/HTML scan is discovery only: item ledgers explicitly retain unperformed deeper avenues,
+so these passes must not be reported as all cities completed.
+
+The US lane has inspected 1,335 original operator/menu URLs, 1,520 observed same-operator menu/gallery links
+and 310 observed ordering links. Successful HTML alone does not establish dish/branch identity. Operator
+background images, named card containers, embedded menu JSON and branch-linked PDF menu photos supplied
+verified additions; original-source articles supply reviews. Gyu-Kaku photographs come from the operator's
+US chain menu and are explicitly captioned as chain photos, with current branch menu links checked separately.
+Logos, icon-only cards, wrong topping/portion photos, unrelated branch pictures and mislabelled cards were
+rejected. For example RAMEN-SAN's “Kimchi” image showed beer, Sushi Roka's “Pork Gyoza” picture showed raw
+seafood, and Pho Sedona reused an egg-roll image for both vegetarian and meat fillings.
+
+China's saved Trip source pages expose public `restaurantInfo` and `listRestaurantFoodRepl` page data,
+including numeric venue identity, street address, bilingual exact dish names and individual photographs.
+All 715 Trip-source venues have been queried; 4,050 exact-name photo leads and 483 first-page review leads
+are candidates pending individual evidence/visual checks, not accepted results. Beijing and Shanghai also
+require their operator/DiningCity sources. Japan's first source pass inspected 701 pages and grouped
+candidate image bytes for visual review; logos, repeated pictures assigned to different cuts/grades, incomplete
+courses and wrong portions are excluded. International sources cover 215 venues and retain all pending
+operator, gallery, original-review and targeted-search avenues in their item ledger.
+
+All saves in this expanded phase remain **local only**, with Azure uploads, dry runs, current revisions and
+full readbacks. Production synchronization, deployment and translations have not been run. Browser-only
+research is currently constrained by CUA failing to create tabs; accessible HTTP/web/original-source work
+continues. See lane ledgers, source pages, reviewed manifests, decisions, uploads and readback JSON under
+`us/`, `china/`, `japan/` and `international/`. Counts will be recomputed from the database after the reviewed
+batches finish; candidate counts must never be added to coverage totals.

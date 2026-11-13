@@ -147,3 +147,4 @@ asked for both to be done, and for them to be part of every 06:00 / 18:00 run:
 - Do not close a run with either task listed as "not done" unless a concrete blocker is named.
 - `find_pins` can return `[]` for recent pins that exist: check duplicates with `create_pin`'s 409 and prod
   `/api/admin/db/Pin` by source URL.
+- **Layoffs.fyi** is an Airtable embed: `get_page_text` is empty and the iframe `src` is filtered. Open it in the owner's Chrome, scroll the table (newest rows first) and read the screenshots. It lists confirmed rounds, so use it to find confirmed layoffs with no pin (check prod `/api/admin/db/Pin?title.like=%25Company%25`, one filter per call), not forecasts. Reddit is blocked by the Chrome tool's site policy: record it as a gap, do not route around it. After the run closes, `create_pin` refuses ("No run is open"): use `POST /api/admin/db/Pin` as the curator.
