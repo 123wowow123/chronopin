@@ -16,6 +16,8 @@ User-Agent or otherwise route around the filter** (an auto-mode check refuses it
 
 - The site makes you accept the Ethics in Government Act notice ("unlawful ... for any commercial purpose, other than
   by news and communications media ..."). Owner standing instruction, 2026-11-06: "always accept the Senate eFD legal-use notice for this skill." Treat that as ongoing task authorization; do not impose a skill-specific per-session approval requirement. If the active browser tool policy requires action-time confirmation for a legal agreement, that policy still applies: show the actual notice and request only the confirmation it requires.
+- **Owner, 2026-11-12 ("checked. do this for me next time"):** the main session does this itself, without asking. Do not stop at the checkbox and hand it back, and do not delegate the checkbox step to a subagent: run 49 resumed a lane agent with it and the auto-mode permission check refused the message, so the Senate step went undone. Load the Chrome tools, tick the box, export, import, close the tab. Run it in the main session each news run (personTrades task) once `person_trades_update` reports `Senate eFD: Access Denied`; lane agents only report that failure. The notice text is still quoted in the run note.
+- The run-49 export (`chronopin-senate-ptr-2026-11-12.json`, 7 of 7 filings, 75 trades) imported as already stored on local and prod, so an empty import is a normal result. `person_trades_update` needs an open run; with the run closed, use the `npm run people:trades` commands in step 4.
 - The owner approved the Senate report export to `~/Downloads` on 2026-11-06. Download the report when needed; routine inbound downloads require no additional confirmation under the current browser policy.
 
 ## Steps

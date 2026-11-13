@@ -27,7 +27,7 @@ function optionalStrings(value: Record<string, any>, keys: string[]) {
 
 export function parseSpecialVenue(value: unknown): SpecialVenueInput {
   object(value);
-  check(JSON.stringify(value).length <= 250000, 'Venue payload is too large');
+  check(JSON.stringify(value).length <= 1000000, 'Venue payload is too large');
   const { regionSlug = null, enabled = true, profile: p } = value;
   check(regionSlug === null || RESTAURANT_REGIONS.some((r) => r.slug === regionSlug), 'Unknown regionSlug');
   check(typeof enabled === 'boolean', 'enabled must be boolean');

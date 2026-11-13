@@ -34,7 +34,7 @@ function text(v: unknown) { return typeof v === 'string' && v.length <= 10000; }
 function url(v: unknown) { try { const u = new URL(v as string); return text(v) && ['http:', 'https:'].includes(u.protocol) && !u.username && !u.password; } catch { return false; } }
 function date(v: unknown) { return typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) && new Date(v).toISOString().slice(0, 10) === v; }
 export function parseRestaurantContent(value: unknown): RestaurantContentInput {
-  object(value); check(JSON.stringify(value).length <= 500000, 'Restaurant content payload is too large');
+  object(value); check(JSON.stringify(value).length <= 1000000, 'Restaurant content payload is too large');
   const { profile: p, enabled = true } = value; object(p);
   check(typeof enabled === 'boolean' && url(p.pinSourceUrl), 'Provide enabled and a valid pinSourceUrl');
   check(p.menu !== undefined || p.details !== undefined || p.tile !== undefined, 'Provide a menu, details or tile');
