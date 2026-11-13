@@ -1,6 +1,10 @@
 'use client';
 
 import Link from '@/components/ui/Link';
+import { AuthLink } from '@/components/nav/AuthLink';
+import { useRouter } from '@/lib/client/navigation';
+import { usePendingAction } from '@/lib/client/pendingAction';
+import { useSession } from '@/lib/client/session';
 import { Stars } from '@/components/listings/parts';
 import { useReviewSummary } from '@/lib/client/reviewSummaries';
 import { useT } from '@/lib/client/i18n';
@@ -13,11 +17,23 @@ import type { CardPin } from '@/lib/types';
 // review pane while nobody has rated it.
 export function UserRatingBadge({ pin }: { pin: CardPin }) {
   const t = useT();
+  const router = useRouter();
+  const { isLoggedIn } = useSession();
   const reviewable = isReviewable(pin.categories);
   const summary = useReviewSummary(pin.id, reviewable);
-  if (!reviewable || !summary) return null;
   const href = `${pinPath(pin)}#reviews`;
+  // Rating needs an account: a signed-out click goes to log in, and once the
+  // reader is back they are taken on to the pin's review form.
+  usePendingAction({ kind: 'review', id: pin.id }, isLoggedIn && reviewable, () => router.push(href));
+  if (!reviewable || !summary) return null;
   if (summary.average == null) {
+    if (!isLoggedIn) {
+      return (
+        <AuthLink to="/login" pending={{ kind: 'review', id: pin.id }} className="ms-2 text-xs text-link hover:underline">
+          ☆ {t('reviews.cardRate')}
+        </AuthLink>
+      );
+    }
     return (
       <Link href={href} className="ms-2 text-xs text-link hover:underline">
         ☆ {t('reviews.cardRate')}

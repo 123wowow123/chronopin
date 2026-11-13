@@ -309,3 +309,30 @@ research is currently constrained by CUA failing to create tabs; accessible HTTP
 continues. See lane ledgers, source pages, reviewed manifests, decisions, uploads and readback JSON under
 `us/`, `china/`, `japan/` and `international/`. Counts will be recomputed from the database after the reviewed
 batches finish; candidate counts must never be added to coverage totals.
+
+### Expanded-phase verified checkpoint — November 13
+
+A fresh local database snapshot records **10,121/55,103 effective entries with photos** and
+**250/55,103 with reviews**: gains of **2,125 photographed entries and 57 reviewed entries** against
+this expanded phase's baseline. These are database counts after ordinary/specials precedence and
+same-name deduplication, rather than sums of candidate or stored association counts. Additional reviewed
+batches were still saving at this checkpoint. The audit compared all pre-existing profiles and found
+195 changed profiles, with **no changes outside item photos/reviews**, enabled flags or specials regions.
+Evidence: `.scrape/menu-research-all-2026-11-13/checkpoint-audit.json` and the full
+`main/expanded-checkpoint.json` snapshot in the earlier inventory directory.
+
+New deeper sources include Braseros' public branch ordering-menu data (exact street-address match,
+42 additional visually verified dish photos after its 12 operator-card photos) and Talkin' Tacos'
+Nashville ordering menu at 135 2nd Avenue North (72 visually reviewed candidates). Their manifests retain
+original labels, source URLs, portion/extra disclosures and rejected variants; save/readback completion
+is recorded separately. China batch08 visually checked all 233 candidates, accepted 216 and rejected
+17 mismatches/uncertainties, including shellfish presented as sipunculus jelly, poultry wings labelled
+smoked fish, and fried balls labelled sea-urchin steamed egg. Japan's deliberately handled identical-name
+rows added ten stored associations after verifying identical non-media fields; those do not automatically
+add ten effective entries.
+
+The older saved excerpts received 112 further editorial score estimates only where the prose contains
+clear dish praise/criticism; descriptions remain unscored. Assessment evidence and reasons are in
+`.scrape/menu-research-all-2026-11-13/rating-assessments.json`. The focused rating tests pass (2 tests).
+Research remains open across all lanes; source-discovery passes and specific blocked browser galleries
+are not exhausted evidence gaps. Production and translations remain untouched.
