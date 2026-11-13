@@ -266,6 +266,37 @@ Ongoing menu, visit-detail and landing-page tile edits go through the database m
 JSON catalogs are snapshots; content updates don't need a deployment. Preserve source evidence and credits, then
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.
 
+### All-cities photo and review runs (November 12-13, 2026)
+
+Inventory and results: `docs/restaurant-menu-inventory-2026-11-12.md`. Workflow that worked for Tokyo,
+Sapporo, Nagoya, Osaka and Fukuoka (largest gaps first, one agent per group of venues, local save then push):
+
+1. **Rank the gaps.** Count enabled items per region (content and specials, once per record and label); write the
+   per-venue gap list to `.scrape/menu-photo-gaps-<region>.json`. `syncPhotosToProd.py` reads that file.
+2. **Mirror first.** Copy verified specials photos onto the ordinary record (and the reverse) by exact menu
+   label + item name; then look for new sources. HotPepper Gourmet food pages, owst booking-site menus,
+   operator menu data (CSV/JSON), and Tabelog "by Restaurant" photos pair a name with a photo; use the
+   480px versions. Hotel and fine-dining course pages give one group shot per course (reject).
+3. **Local save:** `applyReviewed.py --local` (dry run, then `--apply`); `--base` still overrides. It refuses
+   same-name duplicates; handle those deliberately. Upload goes to the production Azure container by design.
+4. **Remove a bad photo:** `removePhotos.py <content|specials> <id> rules.json [--prod] [--apply]`
+   (rules by item name, label or caption text; before/after kept in `.scrape/photo-removals/`).
+5. **Push to production** only when the owner asks: `syncPhotosToProd.py <region> [--apply]` matches each venue
+   by exact `pinSourceUrl`, copies images only onto production items without one, requires public Chronopin
+   Azure blobs, uses the latest revision and verifies readbacks (evidence in `.scrape/photo-sync/`).
+   `syncReviewsToProd.py <region> [--apply]` does the same for item reviews (never replaces or duplicates a
+   review with the same `sourceUrl`). Push one venue first (`--only`), check the live pin, then the rest.
+6. Menu payload caps are 1,000,000 characters (`restaurantSpecialValidation.ts`, `restaurantContentValidation.ts`);
+   BAR Shinkai's 1,392-photo menu needed that. Its pin renders ~2,000 lazy images in about 3.6 s.
+
+Traps seen: specials profiles keep items under `profile.menus`, content under `profile.menu.menus`; local and
+production IDs differ (match by source); list endpoints default to 100 records (pass `limit=1000`); identical
+images on different items (grades, cuts, cocktails) are rejected; Tabelog returns 403 under bursts; Gurunavi was
+down for maintenance on 2026-11-12; `curl -k` is denied, use `--cacert` or read the page in Chrome;
+a repeated "image only" or promo photo does not identify an item. Weak matches that were kept must say so in
+the caption. Reviews for chain izakaya in Japan are essentially unavailable; the review pass worked for
+English-language US cities (Dallas, Houston, Austin, San Jose) via The Infatuation, Michelin, local papers.
+
 ## Menu-item reviews
 Research follow-up (November 8): ordinary-content `?region=` filters tile regions and omits menu-only profiles.
 For coverage/replay, paginate all ordinary profiles, join the city’s exact branch sources, and keep enabled-only

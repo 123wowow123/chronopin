@@ -116,3 +116,34 @@ orlando                           2      0    0       0    0       1       1
 guadalajara                       1      0    0       0    0       1       0
 TOTAL 68733 5086 129 1860 1542
 ```
+
+
+## Progress, November 12-13, 2026
+
+Production counts after the photo and review pushes (same counting rules, enabled records, production database):
+
+| Region | Items | With photo | % | Item rows with reviews |
+|---|---|---|---|---|
+| tokyo | 7,107 | 2,824 | 39 | 0 |
+| sapporo | 7,554 | 1,140 | 15 | 0 |
+| osaka | 4,805 | 551 | 11 | 0 |
+| nagoya | 4,987 | 499 | 10 | 0 |
+| fukuoka | 4,515 | 480 | 10 | 0 |
+| dallas | 744 | 83 | 11 | 21 |
+| houston | 681 | 100 | 14 | 13 |
+| austin | 613 | 49 | 7 | 19 |
+| san-jose | 441 | 13 | 2 | 14 |
+| all regions | 68,733 | 9,042 | 13 | 189 |
+
+Start of the run: 5,086 items with photos and 129 item rows with reviews. Photos were saved locally and pushed with
+`syncPhotosToProd.py`; reviews with `syncReviewsToProd.py` (see the restaurant-guide-research skill, "All-cities
+photo and review runs"). Doubtful photos removed before or after the push: Toroichi 超炭酸ハイボール (6), Kabutoya
+おばんざい３種 and 明太子炙り, TENKU's four December mains, Jonetsu ミノ, Egoya's two weak matches.
+
+Largest remaining photo gaps: Beijing, Shanghai, Kyoto, Shenzhen, Hangzhou, Guangzhou and about 20 other Chinese
+cities (0-19% covered); Sapporo, Nagoya, Osaka, Fukuoka drinks and course-only items; venues whose sites carry no
+labelled dish photos (Tabelog, Google Maps and Instagram were not tried for most leftovers). Reviews not yet
+researched: every region outside the four US cities above (Columbus had no dish-specific coverage); inferred dish
+scores in `src/lib/restaurantReviewRatings.ts` were not added for the new excerpts. Weak matches kept: Roost
+roasted-versus-fried cauliflower, MARCH description-only matches, Barley Swine "ravioli", Adega blog quotes
+(branch confirmed only by heading), Kabutoya/Toroichi leftovers listed above.
