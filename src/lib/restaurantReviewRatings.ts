@@ -3,6 +3,24 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // Later international reviews include specific criticism as well as praise.
+  "excellent versions of these monuments of Gallic gastronomy.": 4.5,
+  "was outstanding, as was the cassoulet": 4.5,
+  "delightful vanilla mille-feuille.": 4.5,
+  "an excellent stand-in": 4,
+  "Era sabroso, equilibrado, con una mordida tierna y crujiente a la vez, cocinado con el punto perfecto.": 4.5,
+  "perfectly crisp, thin shell and molten interior": 4.5,
+  "messy in the best way": 4.5,
+  "is sweet and thrillingly tender.": 4.5,
+  "Har gow and shumai dumplings are emoji-perfect": 4.5,
+  "perfect crisp-skinned meat with the translucent pancakes still steaming": 4.5,
+  "The scallops were chewy from being overcooked": 2,
+  "the sauce was so rich and creamy that it was unpalatable": 2,
+  "acceptable but very small": 3,
+  "The sauce was fine, but the seafood, especially the rubbery overcooked scallops, was disappointing.": 2.5,
+  "Lobster Linguine was delicious": 4,
+  "swamped by the taste of limoncello": 2,
+  "very nice.": 4,
   // Preserve assessments when shortening saved excerpts.
   "giant fluffy bread": 4,
   "Another surprising and delightful dish": 4.5,

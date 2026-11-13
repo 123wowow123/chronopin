@@ -136,6 +136,13 @@ Technical follow-ups from the expanded San Diego pass:
 - A correctly named official card can still contain the wrong photograph. Check the food itself and
   exclude dietary/spice icons (`food_item_labels`), added proteins, sandwiches in place of plated dinners,
   and incompatible toppings. Wheat & Water's Alfredo card exposed a chili icon rather than a dish photo.
+- Wix's `wix-viewer-model` may contain `codeEmbed.htmlEmbeds` with whole HTML menus and named
+  image cards even when the outer document has only logos. Inspect those embedded strings as data;
+  do not execute downloaded scripts. The model can contain snippets for **every branch/page**, so
+  confirm the snippet's branch and actual menu offering before saving. Telefèric La Jolla also exposes
+  operator `PHOTO` maps for shared menu dishes: use the explicit chain-photo caption and verify the
+  exact dish on La Jolla's menu. Read card descriptions before rejecting unusual presentations: its
+  crab croquetas are topped with tuna sashimi, so the red wrapping is consistent with the named dish.
 - When search results miss a local review, try the publisher's own search and follow its article links.
   Verify the address and publication date before using historical photos or excerpts. Harumama Little
   Italy's February 6, 2018 Kirbie's Cravings review labels the pig/chicken bun fillings and Fat Duck ramen;

@@ -312,12 +312,12 @@ batches finish; candidate counts must never be added to coverage totals.
 
 ### Expanded-phase verified checkpoint — November 13
 
-A fresh local database snapshot records **10,121/55,103 effective entries with photos** and
-**250/55,103 with reviews**: gains of **2,125 photographed entries and 57 reviewed entries** against
+A fresh local database snapshot records **12,766/55,103 effective entries with photos** and
+**280/55,103 with reviews**: gains of **4,770 photographed entries and 87 reviewed entries** against
 this expanded phase's baseline. These are database counts after ordinary/specials precedence and
 same-name deduplication, rather than sums of candidate or stored association counts. Additional reviewed
 batches were still saving at this checkpoint. The audit compared all pre-existing profiles and found
-195 changed profiles, with **no changes outside item photos/reviews**, enabled flags or specials regions.
+783 changed profiles, with **no changes outside item photos/reviews**, enabled flags or specials regions.
 Evidence: `.scrape/menu-research-all-2026-11-13/checkpoint-audit.json` and the full
 `main/expanded-checkpoint.json` snapshot in the earlier inventory directory.
 
@@ -336,3 +336,33 @@ clear dish praise/criticism; descriptions remain unscored. Assessment evidence a
 `.scrape/menu-research-all-2026-11-13/rating-assessments.json`. The focused rating tests pass (2 tests).
 Research remains open across all lanes; source-discovery passes and specific blocked browser galleries
 are not exhausted evidence gaps. Production and translations remain untouched.
+
+
+### Later verified saves and excerpt audit
+
+The later checkpoint above includes China Trip batches01–15 and DiningCity saves, Japan's expanded
+source/context batches, the US operator/ordering/PDF batches, and international photos/reviews. China
+batch14 accepted422/453 candidates; batch15 accepted380/400. DiningCity's398 source candidates grouped
+into325 unique photographs; all325 were visually inspected and544 stored menu associations were saved
+using235 selected photographs, with current branch identity and street addresses checked. Multiple
+stored associations and alternative photos are not counted as extra effective dishes.
+
+The BAR Shinkai profile's nine held photos were subsequently saved and fully read back after restarting
+the local development server to load the current payload limit. Its713k-character request was below
+the checked-in1m limit; the old runtime still rejected it. No production restart/deploy occurred.
+This nine-row save follows the numbered checkpoint and is not yet included in its totals.
+
+The excerpt audit shortened68 stored review rows across19 profiles, preserving source links, dates,
+dish identity, praise and criticism. A fresh whole-inventory audit found no non-Reddit article with more
+than25 distinct quoted words across its saved excerpts. Existing score mappings were transferred to
+shortened text; descriptive prose remains unscored. Evidence: `excerpt-shortening-plan.json`,
+`excerpt-shortening-readbacks.json`, and rating-assessment files in the expanded-phase scratch directory.
+Focused rating tests still pass (2tests).
+
+Still pending:601 remaining Trip photo candidates after batch15; exact-item original-source review checks
+(including483 Trip review leads); deeper operator/gallery/Google Images/Maps/Yelp research across the
+uncovered items in all lanes. China is processing the remaining discovered photos. Japan and international
+agents reached their usage limits again; their latest manifests and per-item next steps remain resumable.
+CUA's browser tab creation, navigation and DOM inspection still fail, including a fresh retry; browser-only
+galleries remain pending, not marked as checked or exhausted. Nothing in this report claims all remaining
+research is complete. All saves are local; translation and production synchronization are left separate.
