@@ -138,7 +138,10 @@ asked for both to be done, and for them to be part of every 06:00 / 18:00 run:
   login), not Blind alone. Create `Predicted`/`Rumor` pins only where two or more independent signals support a
   dated or estimated round; list rejected candidates with the reason. Procedure: `daily-jobs.md#layoffs`.
 - **Senate trades:** when `person_trades_update` reports the Senate eFD failure ("answered something other than
-  JSON"), run `.agents/skills/senate-trades-browser/` in the same run. The owner's request to run the import
+  JSON"), run `.agents/skills/senate-trades-browser/` in the same run, **in the main session, never in a
+  subagent**: the Chrome permission layer refuses a subagent's actions on efdsearch.senate.gov (run 52, run 49),
+  and the owner's standing approval to tick the legal-use notice is carried out by the main session. Do not put
+  Senate in any lane agent's brief; lane agents only report the failure, then the main session runs the skill. The owner's request to run the import
   covers accepting eFD's standard legal-use agreement for that purpose; if a permission check or the site blocks
   a step, stop and name the step in the run note instead of working around it.
 - Do not close a run with either task listed as "not done" unless a concrete blocker is named.
