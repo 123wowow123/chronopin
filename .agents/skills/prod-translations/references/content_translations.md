@@ -37,7 +37,9 @@ the pin translation step covers), `Comment` / `Message` (conversation, not conte
    `locales` is what is still missing for that row (missing or hash no longer matches).
 3. **Translate** each field into each listed locale (`gemini-4-hydrogen-medium` swarm workers via
    `swarm{action:"add", model:"gemini-4-hydrogen-medium"}`, shard by table or by `after` range, as for pins).
-   Follow `note` for the table and the rules below.
+   Follow `note` for the table and the rules below. Keep direct LLM generation payloads small per turn to avoid
+   response-header timeouts; if Google NMT hits a CAPTCHA gate and thousands of rows remain due, pause NMT
+   immediately and confirm with the user whether to proceed directly or pause content tables.
 4. **Save:** `POST` `{ table, translations: [{ key, locale, sourceHash, fields }] }` (max 300 rows).
    Send back the `key` and `sourceHash` exactly as received; `fields` has the same field names as the GET.
    The response lists `skipped` rows with a reason (`the source changed since`, `... too long`,
