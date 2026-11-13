@@ -128,3 +128,19 @@ revisits, event info (drain the queue), sentiment (drain pins and reviews), mark
 forecasts, horoscopes and the rest, then write the run note, run okfLint and finish the run. Spawn background
 subagents per lane when it helps. Only stop for a concrete blocker (session limit, source that cannot be read)
 and list it in the run note.
+
+## Layoff forecasts and Senate trades are never skipped (owner, 2026-11-13)
+
+Run 52 closed with only Blind opened for the layoff forecast pass and the Senate eFD import not run. The owner
+asked for both to be done, and for them to be part of every 06:00 / 18:00 run:
+
+- **Layoff forecasts:** open **all** of Blind, Layoffs.fyi, TrueUp and the relevant Reddit threads (owner's Chrome
+  login), not Blind alone. Create `Predicted`/`Rumor` pins only where two or more independent signals support a
+  dated or estimated round; list rejected candidates with the reason. Procedure: `daily-jobs.md#layoffs`.
+- **Senate trades:** when `person_trades_update` reports the Senate eFD failure ("answered something other than
+  JSON"), run `.agents/skills/senate-trades-browser/` in the same run. The owner's request to run the import
+  covers accepting eFD's standard legal-use agreement for that purpose; if a permission check or the site blocks
+  a step, stop and name the step in the run note instead of working around it.
+- Do not close a run with either task listed as "not done" unless a concrete blocker is named.
+- `find_pins` can return `[]` for recent pins that exist: check duplicates with `create_pin`'s 409 and prod
+  `/api/admin/db/Pin` by source URL.
