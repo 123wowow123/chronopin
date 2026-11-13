@@ -42,7 +42,11 @@ export const MAX_TAGS = 20;
 // Reviewed site statuses are stored as topic rows; unlike derived filters,
 // they must survive normal create/edit saves and backfills.
 export const CONSTRUCTION_STATUS_TAGS = ['Proposed', 'In Progress', 'Completed', 'Withdrawn'] as const;
-export const isStoredSiteTag = (name: string): boolean => CONSTRUCTION_STATUS_TAGS.some((status) => status.toLowerCase() === name.toLowerCase());
+// Rumor marks an unconfirmed claim (timeline weight 0.4, bagSample.ts). Like the
+// statuses it is typed onto a pin by a curator and kept, and it shows as a site tag.
+export const RUMOR_TAG = 'Rumor';
+const STORED_SITE_TAGS: readonly string[] = [...CONSTRUCTION_STATUS_TAGS, RUMOR_TAG];
+export const isStoredSiteTag = (name: string): boolean => STORED_SITE_TAGS.some((tag) => tag.toLowerCase() === name.toLowerCase());
 
 // Words that make a name an award: any body, ceremony or prize.
 const AWARD_WORD = /\b(awards?|prize|prix|oscars?|emmys?|grammys?|tonys?|golden globes?|baftas?|annies?|razzies?|medal|trophy|laureates?)\b|\bfilm festival\b|\baward festival\b/i;
@@ -247,6 +251,7 @@ export const RESERVED_TAGS: ReservedTag[] = [
   // Only for a signed-in viewer (the cloud shows it to them alone, uncounted): it reads their own history.
   { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
   ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
+  { key: 'rumor', name: RUMOR_TAG, field: 'tag', value: RUMOR_TAG, icon: 'tag', stored: true },
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },

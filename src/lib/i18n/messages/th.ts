@@ -1450,6 +1450,7 @@ const th: Messages = {
     withdrawn: 'ถอนแล้ว',
     thread: 'เธรด',
     predicted: 'การคาดการณ์',
+    rumor: 'ข่าวลือ',
     new: 'ใหม่',
     updated: 'อัปเดต',
     confirmed: 'ยืนยันแล้ว',

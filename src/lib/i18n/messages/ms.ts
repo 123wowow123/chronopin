@@ -1464,6 +1464,7 @@ const ms: Messages = {
     withdrawn: 'Ditarik balik',
     thread: 'Utas',
     predicted: 'Diramalkan',
+    rumor: 'Khabar angin',
     new: 'Baharu',
     updated: 'Dikemas kini',
     confirmed: 'Disahkan',

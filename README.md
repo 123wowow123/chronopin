@@ -517,8 +517,7 @@ build single daily dashboard landing page, and make it nice, that shows most imp
 - weekly most relavant dashboards
 
 
-generate clips of long form videa media for preview
+generate clips of long form video media for preview
 
 
-pin and thread Luigi Colani pins
-might need new user to post if new category
+use blind and other simular sites to predict layoff dates and create pins. try to estimate number laid off and from what location. use my browser login if needed

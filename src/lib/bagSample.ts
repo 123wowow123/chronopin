@@ -124,6 +124,17 @@ export function freebiesWeight(pin: Pick<Sampled, 'tags'>): number {
   return pin.tags?.some((tag) => typeof tag?.name === 'string' && FREEBIES_TAGS.has(tag.name.trim().toLowerCase())) ? FREEBIES_WEIGHT : 1;
 }
 
+// A rumour (an unconfirmed layoff, a leaked date) is a guess a reader should
+// meet less often than a fact: a Rumor-tagged pin weighs 0.4, so on a crowded
+// day it is drawn well below its neighbours but is never absent. Read from the
+// tag, so it needs no stored flag.
+const RUMOR_WEIGHT = 0.4;
+const RUMOR_TAGS = new Set(['rumor', 'rumour']);
+
+export function rumorWeight(pin: Pick<Sampled, 'tags'>): number {
+  return pin.tags?.some((tag) => typeof tag?.name === 'string' && RUMOR_TAGS.has(tag.name.trim().toLowerCase())) ? RUMOR_WEIGHT : 1;
+}
+
 // How well the pin's own sources back it (referenceConfidence.ts). The home
 // timeline already hides anything under TIMELINE_MIN_CONFIDENCE, so the band
 // a reader actually sees is 70-100 and the curve is drawn across exactly that:
@@ -163,7 +174,7 @@ export function threadWeight(threadConfidence: number | null | undefined): numbe
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
   const seen = (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
-  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * marketImpactWeight(pin.marketImpact) * officialWeight(pin) * freebiesWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
+  return (isRestaurantPin(pin) ? RESTAURANT_WEIGHT : 1) * seen * volumeWeight(pin.marketVolume) * marketCapWeight(pin.companyMarketCap) * marketImpactWeight(pin.marketImpact) * officialWeight(pin) * freebiesWeight(pin) * rumorWeight(pin) * confidenceWeight(pinConfidence(pinEvidence(pin))) * threadWeight(pin.threadConfidence);
 }
 
 // FNV-1a, folded into (0, 1).

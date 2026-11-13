@@ -985,6 +985,8 @@ approved as a plan are not a layoff yet; a share "of the US workforce" is
 not of the whole company. News video on a layoff is scarce - three pictures
 are fine.
 
+**Rumors (owner, 2026-11-12).** An unconfirmed layoff from Blind's tracker (teamblind.com/layoffs/status/rumor, company pages `/layoffs/company/<slug>`) that no outlet or filing backs may be pinned as `Rumor` + `Layoffs` + the company tag, `dateConfidence: estimated`, the Blind page as `sourceUrl` with reference confidence 15, and a title starting "Rumour:". `Rumor` is a site tag: `rumorWeight` in `src/lib/bagSample.ts` multiplies its timeline weight by 0.4. Plans a news outlet reports (Qualcomm, Xbox) are `Predicted`, not `Rumor`.
+
 
 ### hiringJobCreation
 

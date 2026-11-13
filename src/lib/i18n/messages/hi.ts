@@ -1470,6 +1470,7 @@ const hi: Messages = {
     withdrawn: 'वापस लिया गया',
     thread: 'थ्रेड',
     predicted: 'अनुमानित',
+    rumor: 'अफवाह',
     new: 'नया',
     updated: 'अपडेट',
     confirmed: 'पुष्ट',

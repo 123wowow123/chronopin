@@ -1454,6 +1454,7 @@ const ko: Messages = {
     withdrawn: '철회됨',
     thread: '스레드',
     predicted: '예측됨',
+    rumor: '루머',
     new: '새 글',
     updated: '업데이트',
     confirmed: '확정',

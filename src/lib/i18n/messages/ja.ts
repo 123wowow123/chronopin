@@ -1454,6 +1454,7 @@ const ja: Messages = {
     withdrawn: '撤回',
     thread: 'スレッド',
     predicted: '予測',
+    rumor: '噂',
     new: '新着',
     updated: '更新',
     confirmed: '確定',

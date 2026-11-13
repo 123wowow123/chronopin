@@ -1739,6 +1739,7 @@ const ar: Messages = {
     withdrawn: 'مسحوب',
     thread: 'سلسلة',
     predicted: 'المتوقعة',
+    rumor: 'شائعة',
     new: 'جديد',
     updated: 'محدَّث',
     confirmed: 'مؤكد',

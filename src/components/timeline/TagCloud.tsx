@@ -377,7 +377,8 @@ function ReservedFilters({
     // The preset size floors (100+ MW, Cost $1B+) are ready-made queries, not tags: left out unless picked, which is how they are unpicked.
     .filter((filter) => filter.min === undefined || on(filter.name))
     // Not seen is the viewer's own history: theirs alone, and never counted here.
-    .filter((filter) => (filter.field === 'seen' ? isLoggedIn || on(filter.name) : showAll || filter.count > 0 || on(filter.name)))
+    // Rumor pins sit under the timeline's confidence floor, so their count here is 0 by design; the chip stays so the search is one click away.
+    .filter((filter) => (filter.field === 'seen' ? isLoggedIn || on(filter.name) : showAll || filter.count > 0 || on(filter.name) || filter.key === 'rumor'))
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (

@@ -1454,6 +1454,7 @@ const zh: Messages = {
     withdrawn: '已撤回',
     thread: '串',
     predicted: '预测',
+    rumor: '传闻',
     new: '新',
     updated: '已更新',
     confirmed: '已确认',

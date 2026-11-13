@@ -1460,6 +1460,7 @@ const fr: Messages = {
     withdrawn: 'Retiré',
     thread: 'Fil',
     predicted: 'Prévu',
+    rumor: 'Rumeur',
     new: 'Nouveau',
     updated: 'Mis à jour',
     confirmed: 'Confirmé',

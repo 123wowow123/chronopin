@@ -1451,6 +1451,7 @@ const pt: Messages = {
     withdrawn: 'Retirado',
     thread: 'Thread',
     predicted: 'Previsto',
+    rumor: 'Boato',
     new: 'Novo',
     updated: 'Atualizado',
     confirmed: 'Confirmado',

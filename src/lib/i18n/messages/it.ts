@@ -1451,6 +1451,7 @@ const it: Messages = {
     withdrawn: 'Ritirato',
     thread: 'Thread',
     predicted: 'Previsto',
+    rumor: 'Indiscrezione',
     new: 'Nuovo',
     updated: 'Aggiornato',
     confirmed: 'Confermato',

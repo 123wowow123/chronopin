@@ -1464,6 +1464,7 @@ const en = {
     completed: 'Completed',
     withdrawn: 'Withdrawn',
     predicted: 'Predicted',
+    rumor: 'Rumor',
     new: 'New',
     updated: 'Updated',
     confirmed: 'Confirmed',

@@ -1464,6 +1464,7 @@ const id: Messages = {
     withdrawn: 'Ditarik',
     thread: 'Utas',
     predicted: 'Diprediksi',
+    rumor: 'Rumor',
     new: 'Baru',
     updated: 'Diperbarui',
     confirmed: 'Dikonfirmasi',

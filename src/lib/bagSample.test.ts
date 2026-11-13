@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { marketImpactWeight, bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight, freebiesWeight } from './bagSample';
+import { marketImpactWeight, bagWeight, confidenceWeight, sampleBag, threadWeight, volumeWeight , isOfficialUrl, marketCapWeight, officialWeight, freebiesWeight, rumorWeight } from './bagSample';
 
 const pins = (n: number, views: (id: number) => number = () => 0) => Array.from({ length: n }, (_, i) => ({ id: i + 1, viewCount: views(i + 1) }));
 
@@ -223,6 +223,17 @@ describe('marketImpactWeight', () => {
     expect(marketImpactWeight(7)).toBe(3.5);
     expect(marketImpactWeight(10)).toBe(5);
     expect(marketImpactWeight(99)).toBe(5);
+  });
+});
+
+describe('rumorWeight', () => {
+  it('weighs a Rumor-tagged pin at 0.4 and leaves others alone', () => {
+    const tag = (name: string) => ({ name, kind: 'topic', source: 'user' }) as never;
+    expect(rumorWeight({ tags: [tag('Rumor')] })).toBe(0.4);
+    expect(rumorWeight({ tags: [tag(' rumour ')] })).toBe(0.4);
+    expect(rumorWeight({ tags: [tag('Layoffs')] })).toBe(1);
+    expect(rumorWeight({})).toBe(1);
+    expect(bagWeight({ id: 1, tags: [tag('Rumor')] })).toBeCloseTo(0.4 * bagWeight({ id: 1 }));
   });
 });
 

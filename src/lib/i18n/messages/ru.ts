@@ -1517,6 +1517,7 @@ const ru: Messages = {
     withdrawn: 'Отозвано',
     thread: 'Цепочка',
     predicted: 'Прогноз',
+    rumor: 'Слух',
     new: 'Новое',
     updated: 'Обновлено',
     confirmed: 'Подтверждено',

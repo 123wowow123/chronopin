@@ -1463,6 +1463,7 @@ const vi: Messages = {
     withdrawn: 'Đã rút',
     thread: 'Chuỗi',
     predicted: 'Dự đoán',
+    rumor: 'Tin đồn',
     new: 'Mới',
     updated: 'Đã cập nhật',
     confirmed: 'Đã xác nhận',
