@@ -247,6 +247,8 @@ export interface MusicRankingEntry {
   weeksAtNumberOne?: number;
   summary: string;
   pinId?: number;
+  /** Surviving pin title when the card links to a consolidated multi-year chart pin instead of a single-song pin. */
+  pinTitle?: string;
   /** Where the music was produced (primary artist's origin); the chart fields above are where it charted. */
   originCountry?: string;
   originCountryCode?: string;

@@ -140,7 +140,7 @@ export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const group = await PinDuplicate.group(existing.id);
   await existing.delete();
   emitPinEvent('remove', existing, { userId: user.id });
-  for (const id of group) {
+  for (const id of new Set([existing.id, ...group])) {
     invalidatePin(id);
   }
   return noContent();

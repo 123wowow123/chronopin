@@ -89,7 +89,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
   const isPlaying = Boolean(entry && currentTrack?.id === entry.id && isAudioPlaying);
 
   const nextUrl = adjacent?.next?.pinId
-    ? `${pinPath({ id: adjacent.next.pinId, title: adjacent.next.title })}?autoplay=1`
+    ? `${pinPath({ id: adjacent.next.pinId, title: adjacent.next.pinTitle ?? adjacent.next.title })}?autoplay=1`
     : null;
 
   // The Play button always drives the 30s preview in the player dock; the full-song video has its own controls.
@@ -173,7 +173,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
       <>
         {previous?.pinId ? (
           <Link
-            href={`${pinPath({ id: previous.pinId, title: previous.title })}?autoplay=1`}
+            href={`${pinPath({ id: previous.pinId, title: previous.pinTitle ?? previous.title })}?autoplay=1`}
             onClick={handleNavClick}
             className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60"
             title={gm('prevSongTitle', { title: previous.title, artist: previous.artist })}
@@ -184,7 +184,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
         ) : null}
         {next?.pinId ? (
           <Link
-            href={`${pinPath({ id: next.pinId, title: next.title })}?autoplay=1`}
+            href={`${pinPath({ id: next.pinId, title: next.pinTitle ?? next.title })}?autoplay=1`}
             onClick={handleNavClick}
             className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60"
             title={gm('nextSongTitle', { title: next.title, artist: next.artist })}
@@ -220,7 +220,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
 
       {previous?.pinId ? (
         <Link
-          href={`${pinPath({ id: previous.pinId, title: previous.title })}?autoplay=1`}
+          href={`${pinPath({ id: previous.pinId, title: previous.pinTitle ?? previous.title })}?autoplay=1`}
           onClick={handleNavClick}
           className="inline-flex items-center gap-1.5 rounded-full bg-raised px-3 py-1 text-xs font-semibold text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline"
           title={gm('prevSongTitle', { title: previous.title, artist: previous.artist })}
@@ -231,7 +231,7 @@ export function MusicPinNav({ entry, adjacent, variant = 'header', autoplay }: P
       ) : null}
       {next?.pinId ? (
         <Link
-          href={`${pinPath({ id: next.pinId, title: next.title })}?autoplay=1`}
+          href={`${pinPath({ id: next.pinId, title: next.pinTitle ?? next.title })}?autoplay=1`}
           onClick={handleNavClick}
           className="inline-flex items-center gap-1.5 rounded-full bg-raised px-3 py-1 text-xs font-semibold text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline"
           title={gm('nextSongTitle', { title: next.title, artist: next.artist })}

@@ -545,6 +545,11 @@ async function PinBody({
               <Icon name="music" className="size-3.5 text-link" />
               {t.dynamic('pin.musicRankings', 'Music Rankings')}
             </Link>
+          ) : pin.tags?.some((tag) => tag.name === 'Music Chart') ? (
+            <Link href="/music" className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+              <Icon name="music" className="size-3.5 text-link" />
+              {t.dynamic('pin.musicRankings', 'Music Rankings')}
+            </Link>
           ) : null}
           {/* Opens the timeline on this pin, centred, rather than on today. */}
           {/* The same pill as the aside's "To map". */}

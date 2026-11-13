@@ -295,7 +295,7 @@ export function MusicRankingView({
         itemListElement: initialRankings.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 1,
-          url: item.pinId ? absoluteUrl(pinPath({ id: item.pinId, title: item.title })) : item.sourceUrl,
+          url: item.pinId ? absoluteUrl(pinPath({ id: item.pinId, title: item.pinTitle ?? item.title })) : item.sourceUrl,
           name: `${item.title} by ${item.artist} (#${item.rank} in ${item.country})`,
         })),
       },
@@ -332,7 +332,7 @@ export function MusicRankingView({
           {featured ? (
             <div className="relative group">
               {featured.pinId ? <CardLike pin={{ id: featured.pinId }} /> : null}
-              <LandingMediaGallery name={`${featured.title} by ${featured.artist}`} href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl} media={songMedia(featured)} className={`${styles.featured} ${styles.landingHero}`}>
+              <LandingMediaGallery name={`${featured.title} by ${featured.artist}`} href={featured.pinId ? pinPath({ id: featured.pinId, title: featured.pinTitle ?? featured.title }) : featured.sourceUrl} media={songMedia(featured)} className={`${styles.featured} ${styles.landingHero}`}>
                 <div className={styles.featuredShade} />
                 <span className={styles.featuredBadge}>{gm('badge')}</span>
                 <div className={styles.featuredCopy}>
@@ -388,7 +388,7 @@ export function MusicRankingView({
 
                 {featured.youtubeId ? (
                   <Link
-                    href={`${featured.pinId ? pinPath({ id: featured.pinId, title: featured.title }) : featured.sourceUrl}${featured.pinId ? '?autoplay=1' : ''}`}
+                    href={`${featured.pinId ? pinPath({ id: featured.pinId, title: featured.pinTitle ?? featured.title }) : featured.sourceUrl}${featured.pinId ? '?autoplay=1' : ''}`}
                     onClick={() => pause()}
                     className="flex items-center gap-1.5 rounded-full bg-red-600/90 hover:bg-red-600 text-white px-3.5 py-1.5 text-xs font-semibold shadow-lg backdrop-blur-xs transition-transform active:scale-95 cursor-pointer hover:no-underline"
                     title={gm('playFullPin', { title: featured.title })}
@@ -669,7 +669,7 @@ export function MusicRankingView({
                     <div className={styles.cardGrid}>
                       {countryGroup.rankings.map((song) => {
                         const pinHref = song.pinId
-                          ? pinPath({ id: song.pinId, title: song.title })
+                          ? pinPath({ id: song.pinId, title: song.pinTitle ?? song.title })
                           : song.sourceUrl;
                         const isThisPlaying = currentTrack?.id === song.id && isPlaying;
                         const origin = originOf(song);

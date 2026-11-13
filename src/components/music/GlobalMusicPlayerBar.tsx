@@ -94,7 +94,7 @@ export function GlobalMusicPlayerBar() {
   const pinHref = useMemo(() => {
     if (!currentTrack) return '';
     return currentTrack.pinId
-      ? pinPath({ id: currentTrack.pinId, title: currentTrack.title })
+      ? pinPath({ id: currentTrack.pinId, title: currentTrack.pinTitle ?? currentTrack.title })
       : currentTrack.sourceUrl;
   }, [currentTrack]);
 

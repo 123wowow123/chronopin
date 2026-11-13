@@ -34,6 +34,23 @@ import { restaurantPreviewPin } from '@/server/services/restaurantPreview';
 const TTL_MS = 60_000;
 const MAX_ENTRIES = 5_000;
 
+async function redirectedPin(id: number): Promise<{ id: number; title: string } | null> {
+  try {
+    const rows = await db.query<{ id: number; title: string }>(
+      `SELECT p."id", p."title"
+       FROM "PinRedirect" r
+       JOIN "Pin" p ON p."id" = r."toPinId"
+       WHERE r."fromPinId" = $1 AND p."utcDeletedDateTime" IS NULL`,
+      [id],
+    );
+    return rows[0] ?? null;
+  } catch (err) {
+    // Allow requests before migration 0266 is applied.
+    if ((err as { code?: string })?.code === '42P01') return null;
+    throw err;
+  }
+}
+
 async function canonicalPath(id: number): Promise<string | null> {
   const cache = pinPathCache();
   const hit = cache.get(id);
@@ -46,8 +63,10 @@ async function canonicalPath(id: number): Promise<string | null> {
     `SELECT "id", "title" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [id],
   );
-  const preview = rows.length ? null : await restaurantPreviewPin(id);
-  const path = rows.length ? pinPath(rows[0]) : preview ? pinPath(preview) : null;
+  const redirect = rows.length ? null : await redirectedPin(id);
+  const preview = rows.length || redirect ? null : await restaurantPreviewPin(id);
+  const target = rows[0] ?? redirect ?? preview;
+  const path = target ? pinPath(target) : null;
   cache.delete(id);
   cache.set(id, { path, expires: Date.now() + TTL_MS });
   if (cache.size > MAX_ENTRIES) {

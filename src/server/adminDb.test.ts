@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildCatalog, keyQuery, MAX_LIMIT, parseQuery, selectList } from './adminDb';
+import { touchedPins } from './services/adminDbEffects';
 
 const col = (table_name: string, column_name: string, udt_name = 'int4', extra: Record<string, unknown> = {}) => ({
   table_name,
@@ -28,6 +29,8 @@ const tables = buildCatalog(
     col('User', 'salt', 'varchar'),
     col('Session', 'sid', 'varchar'),
     col('schemaMigrations', 'name', 'varchar'),
+    col('PinRedirect', 'fromPinId'),
+    col('PinRedirect', 'toPinId'),
   ],
   [
     { table_name: 'Pin', column_name: 'id' },
@@ -97,5 +100,16 @@ describe('keyQuery', () => {
 
   it('refuses a key with the wrong number of parts', () => {
     expect(() => keyQuery(tables.get('PinTag')!, '12')).toThrow();
+  });
+});
+
+describe('touchedPins', () => {
+  it('extracts both fromPinId and toPinId for PinRedirect writes', () => {
+    expect(
+      touchedPins(tables.get('PinRedirect')!, [
+        { fromPinId: 16258, toPinId: 21001 },
+        { fromPinId: 16259, toPinId: 21001 },
+      ]),
+    ).toEqual([16258, 21001, 16259]);
   });
 });

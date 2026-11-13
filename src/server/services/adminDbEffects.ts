@@ -13,9 +13,23 @@ import { invalidatePin, invalidateTimeline } from './cache';
 const MAX_PINS = 200;
 
 export function touchedPins(table: Table, rows: Row[]): number[] {
-  const field = table.name === 'Pin' ? 'id' : table.columns.some((c) => c.name === 'pinId') ? 'pinId' : null;
-  if (!field) return [];
-  return [...new Set(rows.map((r) => Number(r[field])).filter((id) => Number.isInteger(id) && id > 0))];
+  const fields =
+    table.name === 'Pin'
+      ? ['id']
+      : table.name === 'PinRedirect'
+        ? ['fromPinId', 'toPinId']
+        : table.columns.some((c) => c.name === 'pinId')
+          ? ['pinId']
+          : [];
+  if (!fields.length) return [];
+  const ids: number[] = [];
+  for (const row of rows) {
+    for (const field of fields) {
+      const id = Number(row[field]);
+      if (Number.isInteger(id) && id > 0) ids.push(id);
+    }
+  }
+  return [...new Set(ids)];
 }
 
 export async function afterAdminWrite(table: Table, rows: Row[], userId: number) {
