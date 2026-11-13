@@ -31,7 +31,7 @@ export async function permanentRedirect(path: string): Promise<never> {
 // (hreflang), for its metadata. x-default is the English page.
 export { languageAlternates };
 
-export async function alternates(path: string) {
-  const [locale, offered] = await Promise.all([getLocale(), localesOffered()]);
+export async function alternates(path: string, translate = true) {
+  const [locale, offered] = await Promise.all([getLocale(), translate ? localesOffered() : Promise.resolve([])]);
   return languageAlternates(path, locale, offered);
 }

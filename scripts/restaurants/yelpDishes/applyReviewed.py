@@ -19,9 +19,12 @@ def main():
     parser.add_argument('manifest', type=Path)
     parser.add_argument('uploads', type=Path)
     parser.add_argument('--apply', action='store_true')
-    parser.add_argument('--base', default='https://www.chronopin.com')
+    parser.add_argument('--local', action='store_true', help='use http://localhost:3000 and .scrape/admin-local.token')
+    parser.add_argument('--base', default=None, help='default: production, or localhost with --local')
     args = parser.parse_args()
-    token = (Path(__file__).resolve().parents[3] / '.scrape/admin.token').read_text().strip()
+    if args.base is None:
+        args.base = 'http://localhost:3000' if args.local else 'https://www.chronopin.com'
+    token = (Path(__file__).resolve().parents[3] / ('.scrape/admin-local.token' if args.local else '.scrape/admin.token')).read_text().strip()
 
     def api(path, method='GET', body=None):
         request = Request(args.base.rstrip('/') + path, method=method,

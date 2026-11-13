@@ -14,7 +14,7 @@ import { branchMilestones, branchPins, findProduct, overviewParagraphs, type Hub
 import Pins from '../model/pins';
 import Topics, { type TopicPinIds } from '../model/topics';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
-import { MIN_INDEXED_PINS, topicSlug } from '@/lib/topics';
+import { MIN_INDEXED_PINS, MIN_TRANSLATED_PINS, topicSlug } from '@/lib/topics';
 import { toJson, type PinJson } from '@/lib/types';
 import { TAGS } from './cache';
 import { timelineMinConfidence } from './timeline';
@@ -61,6 +61,7 @@ export type TopicPage = {
   relatedTags: TagEntry[];
   relatedCompanies: CompanyEntry[];
   indexable: boolean;
+  translationsIndexable: boolean;
 };
 
 export type CompanyTopicPage = TopicPage & {
@@ -144,6 +145,7 @@ async function topicPins(
     relatedTags: pick(tagCounts, tags),
     relatedCompanies: pick(companyCounts, companies),
     indexable: ids.total >= MIN_INDEXED_PINS,
+    translationsIndexable: ids.total >= MIN_TRANSLATED_PINS,
   };
 }
 

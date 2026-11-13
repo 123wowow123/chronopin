@@ -6,6 +6,7 @@
 // (/admin/search). The SQL twin of this rule is THIN_PIN_SQL in
 // src/server/model/searchIssues.ts; keep the two in step.
 import { plainText } from './format';
+import { DEFAULT_LOCALE, READERS_MILLIONS, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
 // The fewest characters of summary text (description and long-form summary,
@@ -54,8 +55,60 @@ export function thinReasons(pin: Pick<PinJson, 'description' | 'longFormSummary'
   return reasons;
 }
 
-// Whether the pin's translated pages are worth indexing: judged, like
-// thinReasons, on the English pin. The SQL twin is TRANSLATABLE_PIN_SQL.
+// Minimum sitewide pin demand (total views across PinView) before a non-English
+// translation is indexed, scaled by the language's reader base (READERS_MILLIONS):
+// ambient automated views already put low-demand pins around 10-30 total views
+// across locales, so only pins with proven demand above that floor invite
+// Google to index translated copies, starting with the largest languages.
+export const MAJOR_LOCALE_MIN_VIEWS = 35; // READERS_MILLIONS >= 250 (zh, es, hi, fr, ar, id)
+export const MID_LOCALE_MIN_VIEWS = 45;   // READERS_MILLIONS >= 120 (ru, pt, de, ja)
+export const TAIL_LOCALE_MIN_VIEWS = 60;  // READERS_MILLIONS < 120 (vi, ko, ms, it, th)
+export const MAJOR_LOCALE_READERS_M = 250;
+export const MID_LOCALE_READERS_M = 120;
+export const TRANSLATION_MIN_FAVORITES = 1;
+
+export type PinDemand = { viewCount?: number | null; favoriteCount?: number | null };
+
+// Total view threshold required for indexing a translated page in `locale`.
+export function minViewsForLocale(locale: Locale): number {
+  if (locale === DEFAULT_LOCALE) return 0;
+  const readers = READERS_MILLIONS[locale] ?? 0;
+  if (readers >= MAJOR_LOCALE_READERS_M) return MAJOR_LOCALE_MIN_VIEWS;
+  if (readers >= MID_LOCALE_READERS_M) return MID_LOCALE_MIN_VIEWS;
+  return TAIL_LOCALE_MIN_VIEWS;
+}
+
+// Which offered non-English locales qualify for indexing from precomputed
+// translation eligibility (`translatable`), demand signals, and stored
+// translations (`translatedLocales`). Shared by pin metadata and sitemap.ts.
+export function indexableLocalesFromSignals<L extends Locale>(
+  translatable: boolean,
+  demand: PinDemand,
+  offered: readonly L[],
+  translatedLocales?: readonly string[] | null,
+): L[] {
+  if (!translatable) return [];
+  const views = demand.viewCount ?? 0;
+  const favs = demand.favoriteCount ?? 0;
+  return offered.filter((locale) => {
+    if (locale === DEFAULT_LOCALE) return false;
+    if (translatedLocales && !translatedLocales.includes(locale)) return false;
+    return favs >= TRANSLATION_MIN_FAVORITES || views >= minViewsForLocale(locale);
+  });
+}
+
+// Which offered non-English locales should be indexed for this pin (and listed
+// in hreflang/sitemap), judged on the English pin's quality and demand.
+export function indexablePinLocales<L extends Locale>(
+  pin: Pick<PinJson, 'description' | 'longFormSummary' | 'sourceUrl' | 'references'> & PinDemand,
+  offered: readonly L[],
+  translatedLocales?: readonly string[] | null,
+): L[] {
+  return indexableLocalesFromSignals(translationReady(pin), pin, offered, translatedLocales);
+}
+
+// Whether the pin's translated pages pass the base text/source floor: judged,
+// like thinReasons, on the English pin. The SQL twin is TRANSLATABLE_PIN_SQL.
 export function translationReady(pin: Pick<PinJson, 'description' | 'longFormSummary' | 'sourceUrl' | 'references'>): boolean {
   return thinReasons(pin).length === 0 && pinTextLength(pin) >= TRANSLATION_TEXT_CHARS && pinSourceCount(pin) >= TRANSLATION_MIN_SOURCES;
 }

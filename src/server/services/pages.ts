@@ -68,6 +68,7 @@ import type { AlternateNameJson } from '@/lib/alternateNames';
 import { alternateNamesForPin } from './alternateNames';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
+import PinTranslation from '../model/pinTranslation';
 import PinUpdate from '../model/pinUpdate';
 import PinView from '../model/pinView';
 import UserWiki from '../model/userWiki';
@@ -247,6 +248,14 @@ export async function pinById(id: number, locale: Locale = DEFAULT_LOCALE): Prom
   if (!pin) return restaurantPreviewPin(id);
   const [json] = await localizePins([toJson<PinJson>(pin)], locale);
   return json;
+}
+
+// Non-English locales with a non-empty stored translation for this pin.
+export async function pinTranslatedLocales(id: number): Promise<string[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return PinTranslation.translatedLocales(id);
 }
 
 // The website of the company a pin names, the organizer in its event markup.

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { cacheLife, cacheTag } from 'next/cache';
 import { connection } from 'next/server';
+import { indexableLocalesFromSignals } from '@/lib/searchQuality';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import Pins from '@/server/model/pins';
 import { offeredLocales, TAGS } from '@/server/services/cache';
@@ -10,7 +11,7 @@ import { forecastPanels } from '@/server/services/forecasts';
 import { personIndex } from '@/server/services/people';
 import { topicIndex } from '@/server/services/topics';
 import { personPath } from '@/lib/people';
-import { companyPath, MIN_INDEXED_PINS, tagPath } from '@/lib/topics';
+import { companyPath, MIN_INDEXED_PINS, MIN_TRANSLATED_PINS, tagPath } from '@/lib/topics';
 import { DEFAULT_LOCALE, languageAlternates, type Locale } from '@/lib/i18n/config';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { MIN_INDEXED_RANKINGS, musicRankings } from '@/server/services/music';
@@ -29,21 +30,27 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
   cacheTag(TAGS.sitemap);
   // The tag and company pages worth indexing (src/lib/topics.ts), then pins.
   const index = await topicIndex();
-  const topics = [
-    ...index.tags.filter((t) => t.pins >= MIN_INDEXED_PINS).map((t) => tagPath(t.name)),
-    ...index.companies.filter((c) => c.pins >= MIN_INDEXED_PINS).map((c) => companyPath(c.name)),
-    // A person's page is a profile, not a list of pins: every one is worth indexing.
-    ...(await personIndex()).map((p) => personPath(p.name)),
-  ];
-  // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
-  const pins = await Pins.listForSitemap(0, MAX_URLS - 16 - ACTIVITY_CITIES.length - topics.length - RESTAURANT_REGIONS.length - allMonthDays().length, (await hideThinPins()).enabled);
-  const musicIndexed = (await musicRankings()).length >= MIN_INDEXED_RANKINGS;
-  const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
-  const inEveryLanguage = (path: string) => {
-    if (!offered.length) return undefined;
-    const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, offered);
+  const inLanguages = (path: string, locales: readonly Locale[]) => {
+    if (!locales.length) return undefined;
+    const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE, locales);
     return { languages: Object.fromEntries(Object.entries(languages).map(([lang, href]) => [lang, absoluteUrl(href)])) };
   };
+  const inEveryLanguage = (path: string) => inLanguages(path, offered);
+  const topicEntries = [
+    ...index.tags
+      .filter((t) => t.pins >= MIN_INDEXED_PINS)
+      .map((t) => ({ url: absoluteUrl(tagPath(t.name)), alternates: t.pins >= MIN_TRANSLATED_PINS ? inEveryLanguage(tagPath(t.name)) : undefined, changeFrequency: 'daily' as const, priority: 0.7 })),
+    ...index.companies
+      .filter((c) => c.pins >= MIN_INDEXED_PINS)
+      .map((c) => ({ url: absoluteUrl(companyPath(c.name)), alternates: c.pins >= MIN_TRANSLATED_PINS ? inEveryLanguage(companyPath(c.name)) : undefined, changeFrequency: 'daily' as const, priority: 0.7 })),
+    // A person's page is a profile, not a list of pins: every one is worth indexing.
+    ...(await personIndex()).map((p) => ({ url: absoluteUrl(personPath(p.name)), alternates: inEveryLanguage(personPath(p.name)), changeFrequency: 'daily' as const, priority: 0.7 })),
+  ];
+  const hideThin = (await hideThinPins()).enabled;
+  // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.
+  const pins = await Pins.listForSitemap(0, MAX_URLS - 16 - ACTIVITY_CITIES.length - topicEntries.length - RESTAURANT_REGIONS.length - allMonthDays().length, hideThin);
+  const musicIndexed = (await musicRankings()).length >= MIN_INDEXED_RANKINGS;
+  const industries = [...new Set((await forecastPanels()).map((f) => industrySlug(f.industry)))];
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
     ...RESTAURANT_REGIONS.map((region) => ({ url: absoluteUrl(`/restaurants/${region.slug}`), changeFrequency: 'daily' as const, priority: 0.7 })),
@@ -73,15 +80,18 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     { url: absoluteUrl('/companies'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/companies') },
     { url: absoluteUrl('/people'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/people') },
     ...allMonthDays().map((day) => ({ url: absoluteUrl(onThisDayPath(day)), changeFrequency: 'daily' as const, priority: 0.5, alternates: inEveryLanguage(onThisDayPath(day)) })),
-    ...topics.map((path) => ({ url: absoluteUrl(path), alternates: inEveryLanguage(path), changeFrequency: 'daily' as const, priority: 0.7 })),
-    ...pins.map((pin) => ({
-      url: absoluteUrl(pinPath(pin)),
-      // A pin under the translation bar lists no languages: its copies are noindex.
-      alternates: pin.translatable ? inEveryLanguage(pinPath(pin)) : undefined,
-      lastModified: pin.lastModified,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    })),
+    ...topicEntries,
+    ...pins.map((pin) => {
+      const locales = hideThin ? indexableLocalesFromSignals(pin.translatable, pin, offered, pin.translatedLocales) : offered;
+      return {
+        url: absoluteUrl(pinPath(pin)),
+        // Gated or untranslated locales stay out of hreflang because they say noindex.
+        alternates: inLanguages(pinPath(pin), locales),
+        lastModified: pin.lastModified,
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      };
+    }),
   ];
 }
 

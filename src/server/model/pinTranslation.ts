@@ -148,6 +148,14 @@ export default class PinTranslation {
     );
   }
 
+  static async translatedLocales(pinId: number): Promise<string[]> {
+    const rows = await db.query<{ locale: string }>(
+      `SELECT "locale" FROM "PinTranslation" WHERE "pinId" = $1 AND "title" IS NOT NULL AND btrim("title") <> ''`,
+      [pinId],
+    );
+    return rows.map((r) => r.locale);
+  }
+
   static getAll(): Promise<PinTranslationRow[]> {
     return db.query<PinTranslationRow>(`SELECT ${COLUMNS} FROM "PinTranslation" ORDER BY "pinId", "locale"`);
   }

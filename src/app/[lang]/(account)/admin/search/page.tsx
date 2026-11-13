@@ -1,9 +1,19 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from '@/components/ui/Link';
-import { THIN_REASON_LABELS, THIN_TEXT_CHARS, MIN_SOURCES, TRANSLATION_MIN_SOURCES, TRANSLATION_TEXT_CHARS } from '@/lib/searchQuality';
+import {
+  MAJOR_LOCALE_MIN_VIEWS,
+  MID_LOCALE_MIN_VIEWS,
+  MIN_SOURCES,
+  TAIL_LOCALE_MIN_VIEWS,
+  THIN_REASON_LABELS,
+  THIN_TEXT_CHARS,
+  TRANSLATION_MIN_FAVORITES,
+  TRANSLATION_MIN_SOURCES,
+  TRANSLATION_TEXT_CHARS,
+} from '@/lib/searchQuality';
 import { pinPath } from '@/lib/seo';
-import { MIN_INDEXED_PINS } from '@/lib/topics';
+import { MIN_INDEXED_PINS, MIN_TRANSLATED_PINS } from '@/lib/topics';
 import { requireAdminViewer } from '@/server/guard';
 import { getHideThinPins } from '@/server/model/appSetting';
 import * as SearchIssues from '@/server/model/searchIssues';
@@ -71,7 +81,7 @@ export default async function AdminSearchPage() {
             cited pages, its source plus references ({counts.oneSource.toLocaleString()}); {counts.both.toLocaleString()} are both. Fix one by
             writing a fuller summary or adding references, and it is indexed again on its own. Thinnest first
             {counts.thin > THIN_SHOWN ? `, the first ${THIN_SHOWN}` : ''}. A pin under {TRANSLATION_TEXT_CHARS.toLocaleString()} characters or {TRANSLATION_MIN_SOURCES}{' '}
-            cited pages is indexed in English only; its translated pages say noindex and list no hreflang.
+            cited pages is indexed in English only; above that, translated pages must have a translation and meet per-locale demand ({MAJOR_LOCALE_MIN_VIEWS}/{MID_LOCALE_MIN_VIEWS}/{TAIL_LOCALE_MIN_VIEWS} views by language size, or {TRANSLATION_MIN_FAVORITES}+ favorite), otherwise they say noindex and list no hreflang.
           </>
         }
       >
@@ -145,7 +155,7 @@ export default async function AdminSearchPage() {
 
       <Section
         title="Tag and company pages"
-        intro={`A tag or company page needs ${MIN_INDEXED_PINS} pins to be indexed (src/lib/topics.ts); below that it says noindex and stays out of the sitemap. ${tagsIndexed.toLocaleString()} of ${index.tags.length.toLocaleString()} tags and ${companiesIndexed.toLocaleString()} of ${index.companies.length.toLocaleString()} companies are indexed.`}
+        intro={`A tag or company page needs ${MIN_INDEXED_PINS} pins to be indexed in English (src/lib/topics.ts) and ${MIN_TRANSLATED_PINS} pins for translated copies; below those bars it says noindex and stays out of the sitemap/hreflang. ${tagsIndexed.toLocaleString()} of ${index.tags.length.toLocaleString()} tags and ${companiesIndexed.toLocaleString()} of ${index.companies.length.toLocaleString()} companies are indexed.`}
       />
     </div>
   );

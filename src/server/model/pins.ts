@@ -429,17 +429,35 @@ export default class Pins extends BasePins<Pin> {
     return { country: shape(country), city: shape(city) };
   }
 
-  // Every live pin's id and last change, oldest first, for the sitemap; with
-  // skipThin, not the thin pins that ask not to be indexed (src/lib/searchQuality.ts),
-  // and `translatable` says whether its translated pages are indexed (and so listed).
+  // Every live pin's id, last change, base translation readiness, demand counts,
+  // and stored non-English locales for the sitemap; with skipThin, thin pins
+  // stay out and low-demand / untranslated locales are withheld from hreflang.
   static async listForSitemap(offset: number, limit: number, skipThin = false) {
-    return db.query<{ id: number; title: string; lastModified: Date; translatable: boolean }>(
+    return db.query<{
+      id: number;
+      title: string;
+      lastModified: Date;
+      translatable: boolean;
+      viewCount: number;
+      favoriteCount: number;
+      translatedLocales: string[];
+    }>(
       `
-      SELECT "id", "title", COALESCE("utcUpdatedDateTime", "utcCreatedDateTime") AS "lastModified",
-        ${skipThin ? TRANSLATABLE_PIN_SQL('"Pin"') : 'true'} AS "translatable"
-      FROM "Pin"
-      WHERE "utcDeletedDateTime" IS NULL${skipThin ? ` AND NOT ${THIN_PIN_SQL('"Pin"')}` : ''}
-      ORDER BY "id"
+      SELECT "p"."id", "p"."title", COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") AS "lastModified",
+        ${skipThin ? TRANSLATABLE_PIN_SQL('"p"') : 'true'} AS "translatable",
+        ${skipThin ? 'coalesce("v"."vc", 0)::integer' : '0'} AS "viewCount",
+        ${skipThin ? 'coalesce("f"."fc", 0)::integer' : '0'} AS "favoriteCount",
+        ${skipThin ? `coalesce("tr"."locales", ARRAY[]::text[])` : 'ARRAY[]::text[]'} AS "translatedLocales"
+      FROM "Pin" AS "p"
+      ${
+        skipThin
+          ? `LEFT JOIN (SELECT "pinId", count(*)::integer AS "vc" FROM "PinView" GROUP BY 1) AS "v" ON "v"."pinId" = "p"."id"
+      LEFT JOIN (SELECT "pinId", count(*)::integer AS "fc" FROM "Favorite" WHERE "utcDeletedDateTime" IS NULL GROUP BY 1) AS "f" ON "f"."pinId" = "p"."id"
+      LEFT JOIN (SELECT "pinId", array_agg("locale") AS "locales" FROM "PinTranslation" WHERE "title" IS NOT NULL AND btrim("title") <> '' GROUP BY 1) AS "tr" ON "tr"."pinId" = "p"."id"`
+          : ''
+      }
+      WHERE "p"."utcDeletedDateTime" IS NULL${skipThin ? ` AND NOT ${THIN_PIN_SQL('"p"')}` : ''}
+      ORDER BY "p"."id"
       OFFSET $1 LIMIT $2`,
       [offset, limit],
     );

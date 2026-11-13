@@ -36,6 +36,54 @@ export function pinImage(pin: PinJson): { url: string; width?: number; height?: 
   return image.originalUrl ? { url: image.originalUrl, width: image.originalWidth, height: image.originalHeight } : null;
 }
 
+// Metadata fields for parameterized, filtered, or search pages: follow links to
+// pins, do not index, and clear any parent canonical/hreflang inherited from
+// [lang]/layout.tsx so Google never receives a conflicting canonical on noindex.
+export const NOINDEX_FOLLOW: Pick<Metadata, 'robots' | 'alternates'> = {
+  robots: { index: false, follow: true },
+  alternates: {},
+};
+
+// Whether any of `keys` (or any query parameter at all if omitted) has a
+// non-empty value in Next.js `searchParams`.
+export function hasQueryParam(params: Record<string, string | string[] | undefined>, keys?: readonly string[]): boolean {
+  const check = keys ?? Object.keys(params);
+  return check.some((key) => {
+    const value = params[key];
+    return Array.isArray(value) ? value.some(Boolean) : Boolean(value);
+  });
+}
+
+// Shared metadata builder for /tag and /company landing pages so thin or
+// English-only topics emit consistent robots and OpenGraph fields.
+export function topicMetadata({
+  title,
+  description,
+  locale,
+  links,
+  images,
+  indexable,
+  translationsIndexable,
+}: {
+  title: string;
+  description: string;
+  locale: Locale;
+  links: { canonical: string; languages?: Record<string, string> };
+  images: { url: string; width?: number; height?: number; alt?: string }[];
+  indexable: boolean;
+  translationsIndexable: boolean;
+}): Metadata {
+  const index = indexable && (locale === DEFAULT_LOCALE || translationsIndexable);
+  return {
+    title,
+    description,
+    alternates: links,
+    ...(index ? {} : { robots: { index: false, follow: true } }),
+    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
+    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
+  };
+}
+
 export function pinDescription(pin: PinJson): string {
   return plainText(pin.description || pin.longFormSummary || `${pin.title} on ${siteName}`, 160);
 }

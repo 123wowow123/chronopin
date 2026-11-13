@@ -6,7 +6,7 @@ import { siteName } from '@/lib/appConfig';
 import { dayKeyIn, formatDayKey, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, isSpan, spanFromParam, spanToParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
-import { websiteJsonLd } from '@/lib/seo';
+import { hasQueryParam, NOINDEX_FOLLOW, websiteJsonLd } from '@/lib/seo';
 import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
 import { pinDayKey } from '@/lib/timeline';
@@ -39,15 +39,15 @@ function first(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;
 }
 
+const TIMELINE_NOINDEX_PARAMS = ['from_date_time', 'last_pin_id', 'pin', 'posted', 'within'] as const;
+
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const params = await searchParams;
-  const cursor = first(params.from_date_time) || first(params.pin);
-  return {
-    alternates: await alternates('/'),
-    // Paged views help crawlers reach every pin but duplicate the timeline,
-    // so they are followed, not indexed. The sitemap lists every pin too.
-    ...(cursor ? { robots: { index: false, follow: true } } : {}),
-  };
+  // Paged and filtered timeline views help crawlers reach every pin but
+  // duplicate the timeline, so they are followed, not indexed, and clear the
+  // inherited / canonical so noindex does not clash with rel=canonical.
+  if (hasQueryParam(params, TIMELINE_NOINDEX_PARAMS)) return NOINDEX_FOLLOW;
+  return { alternates: await alternates('/') };
 }
 
 export default async function HomePage({ searchParams }: Props) {

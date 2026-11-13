@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { entityJsonLd, isAttendableEvent, isTicketedVenue, pinJsonLd, temporalCoverage } from './seo';
+import { entityJsonLd, hasQueryParam, isAttendableEvent, isTicketedVenue, NOINDEX_FOLLOW, pinJsonLd, temporalCoverage, topicMetadata } from './seo';
 import type { PinJson } from './types';
 
 const place = { address: 'Moscone Center, San Francisco, CA', latitude: 37.784, longitude: -122.401 };
@@ -167,5 +167,31 @@ describe('entityJsonLd', () => {
     expect(model.review).toHaveLength(1);
     expect((entityJsonLd(pin({}), 'en', { aircraftPerf: { reviews } }) as Record<string, unknown>)['@type']).toBe('Product');
     expect(entityJsonLd(pin({}), 'en', { hotel: { reviews } })).toBeUndefined();
+  });
+});
+
+describe('hasQueryParam & NOINDEX_FOLLOW', () => {
+  it('detects populated parameters cleanly without matching empty ones', () => {
+    expect(hasQueryParam({}, ['q', 'pin'])).toBe(false);
+    expect(hasQueryParam({ q: '' }, ['q', 'pin'])).toBe(false);
+    expect(hasQueryParam({ utm_source: 'x' }, ['q', 'pin'])).toBe(false);
+    expect(hasQueryParam({ q: [''] }, ['q'])).toBe(false);
+    expect(hasQueryParam({ q: 'place:"foo"' }, ['q', 'pin'])).toBe(true);
+    expect(hasQueryParam({ pin: ['1', ''] }, ['q', 'pin'])).toBe(true);
+    expect(NOINDEX_FOLLOW).toEqual({ robots: { index: false, follow: true }, alternates: {} });
+  });
+});
+
+describe('topicMetadata', () => {
+  const images = [{ url: '/og/site.png' }];
+  const links = { canonical: '/es/tag/ai' };
+
+  it('keeps under-translation topics indexable in English only', () => {
+    const enMeta = topicMetadata({ title: 'AI', description: 'AI events', locale: 'en', links: { canonical: '/tag/ai' }, images, indexable: true, translationsIndexable: false });
+    expect(enMeta.robots).toBeUndefined();
+    const esMeta = topicMetadata({ title: 'IA', description: 'Eventos IA', locale: 'es', links, images, indexable: true, translationsIndexable: false });
+    expect(esMeta.robots).toEqual({ index: false, follow: true });
+    const fullEs = topicMetadata({ title: 'IA', description: 'Eventos IA', locale: 'es', links: { ...links, languages: { en: '/tag/ai', es: '/es/tag/ai' } }, images, indexable: true, translationsIndexable: true });
+    expect(fullEs.robots).toBeUndefined();
   });
 });

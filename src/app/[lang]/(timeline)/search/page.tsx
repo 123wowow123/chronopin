@@ -3,6 +3,7 @@ import { SearchResults } from '@/components/timeline/SearchResults';
 import { dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
+import { NOINDEX_FOLLOW } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import { specialtyDaysOn } from '@/server/specialtyDays';
 import { culturalDaysFor } from '@/server/culturalDays';
@@ -30,8 +31,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return {
     title: q ? t('meta.searchTitleFor', { query: q }) : t('meta.searchTitle'),
     // Internal search results are thin, ever-changing pages: crawlers follow
-    // them to pins but do not index them.
-    robots: { index: false, follow: true },
+    // them to pins but do not index them, and clear [lang]/layout.tsx's /.
+    ...NOINDEX_FOLLOW,
   };
 }
 

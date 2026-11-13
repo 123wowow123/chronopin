@@ -122,7 +122,7 @@ import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml } from '@/lib/sanitize';
 import { entityJsonLd, isAttendableEvent, isTicketedVenue, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
-import { thinReasons, translationReady } from '@/lib/searchQuality';
+import { indexablePinLocales, thinReasons } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinPurposeJson } from '@/lib/pinPurpose';
@@ -135,11 +135,11 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinProTips, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinModelTraining, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinTranslatedLocales, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinProTips, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinModelTraining, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
-import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
+import { DEFAULT_LOCALE, pinTextDir, type Locale } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import { localesOffered } from '@/server/services/multilingual';
@@ -157,20 +157,22 @@ async function loadPin(params: Props['params']) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
-  if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false } };
+  if (!pin) return { title: t('meta.pinNotFound'), robots: { index: false }, alternates: {} };
   // Read after the pin (which waits on the URL), never while prerendering at
   // build time, when there is no database.
   if (!(await hideThinPins()).enabled) return pinMetadata(pin, t.locale, offered);
-  // Judged on the English pin, so every language's copy agrees (src/lib/searchQuality.ts).
-  const english = t.locale === DEFAULT_LOCALE ? pin : await pinById(pin.id, DEFAULT_LOCALE);
+  // Judged on the English pin and stored translations so every language agrees (src/lib/searchQuality.ts).
+  const [english, translatedLocales] = await Promise.all([
+    t.locale === DEFAULT_LOCALE ? Promise.resolve(pin) : pinById(pin.id, DEFAULT_LOCALE),
+    pinTranslatedLocales(pin.id),
+  ]);
   if (!english) return pinMetadata(pin, t.locale, offered);
-  if (thinReasons(english).length) return { ...pinMetadata(pin, t.locale, offered), robots: { index: false, follow: true } };
-  // A pin under the translation bar offers no hreflang, and its translated pages are not indexed.
-  if (!translationReady(english)) {
-    const metadata = pinMetadata(pin, t.locale, []);
-    return t.locale === DEFAULT_LOCALE ? metadata : { ...metadata, robots: { index: false, follow: true } };
+  if (thinReasons(english).length) return { ...pinMetadata(pin, t.locale, []), robots: { index: false, follow: true } };
+  const allowedLocales: readonly Locale[] = indexablePinLocales(english, offered, translatedLocales);
+  if (t.locale !== DEFAULT_LOCALE && !allowedLocales.includes(t.locale)) {
+    return { ...pinMetadata(pin, t.locale, []), robots: { index: false, follow: true } };
   }
-  return pinMetadata(pin, t.locale, offered);
+  return pinMetadata(pin, t.locale, allowedLocales);
 }
 
 export default function PinPage({ params, searchParams }: Props) {

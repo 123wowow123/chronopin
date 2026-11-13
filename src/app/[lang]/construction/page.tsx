@@ -5,6 +5,7 @@ import { ConstructionExplorer } from '@/components/construction/ConstructionExpl
 import Link from '@/components/ui/Link';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
+import { hasQueryParam, NOINDEX_FOLLOW } from '@/lib/seo';
 import { CONSTRUCTION_ROW_LIMIT, CONSTRUCTION_YEARS, constructionSpans } from '@/server/services/construction';
 import { siteCardImages } from '@/server/services/shareCard';
 
@@ -14,17 +15,18 @@ type Props = { searchParams: Promise<{ year?: string; country?: string }> };
 // moves the window's first year, ?country=all lifts the country filter.
 const US = 'United States';
 
-export async function generateMetadata(): Promise<Metadata> {
+const CONSTRUCTION_NOINDEX_PARAMS = ['year', 'country'] as const;
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   await connection();
-  const t = await getT();
-  const images = await siteCardImages();
-  const links = await alternates('/construction');
+  const [t, params, images, links] = await Promise.all([getT(), searchParams, siteCardImages(), alternates('/construction')]);
+  const parameterized = hasQueryParam(params, CONSTRUCTION_NOINDEX_PARAMS);
   const TITLE = t('guides.construction.title');
   const DESCRIPTION = t('guides.construction.description', { site: siteName });
   return {
     title: TITLE,
     description: DESCRIPTION,
-    alternates: links,
+    ...(parameterized ? NOINDEX_FOLLOW : { alternates: links }),
     openGraph: { type: 'website', siteName, url: links.canonical, title: `${TITLE} · ${siteName}`, description: DESCRIPTION, images },
     twitter: { card: 'summary_large_image', title: `${TITLE} · ${siteName}`, description: DESCRIPTION, images: images.map((i) => i.url) },
   };

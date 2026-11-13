@@ -12,6 +12,9 @@ import { slugify } from './categories';
 // 2026): a page of three cards is thin. On prod that keeps 491 of 1,694 tags
 // and 121 of 373 companies.
 export const MIN_INDEXED_PINS = 8;
+// Translated tag/company pages generate ~15x more crawl URLs; only the most
+// established topic pages with deep pin coverage invite non-English indexing.
+export const MIN_TRANSLATED_PINS = 50;
 
 // The URL word for a tag or company name: its Latin slug, or for a name in
 // another script (长生骨), the name itself, lowercased, with dashes for spaces.

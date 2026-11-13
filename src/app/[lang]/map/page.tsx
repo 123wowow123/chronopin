@@ -6,7 +6,7 @@ import { blobUrl, siteName } from '@/lib/appConfig';
 import { dateFormat, plainText } from '@/lib/format';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import { alternates, getT } from '@/lib/i18n/server';
-import { pinPath } from '@/lib/seo';
+import { hasQueryParam, NOINDEX_FOLLOW, pinPath } from '@/lib/seo';
 import Listing from '@/server/model/listing';
 import { upcomingMapPins } from '@/server/services/mapSummary';
 import { adPlacements, sliderTyping } from '@/server/services/pages';
@@ -29,9 +29,12 @@ async function sharedListing(searchParams: Props['searchParams']) {
 // /map would otherwise show the home page's title, description and URL - and
 // no picture, which Messenger shows as a bare title.
 // Per request too: the hreflang list follows the admin's language setting.
+const MAP_NOINDEX_PARAMS = ['q', 'show', 'specials', 'bounds', 'returnTo', 'fit', 'pin', 'from', 'f', 'past', 'future', 'posted', 'listings', 'listing'] as const;
+
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   await connection();
-  const [t, listing, siteImages] = await Promise.all([getT(), sharedListing(searchParams), siteCardImages()]);
+  const [t, params, listing, siteImages] = await Promise.all([getT(), searchParams, sharedListing(searchParams), siteCardImages()]);
+  const parameterized = Boolean(listing) || hasQueryParam(params, MAP_NOINDEX_PARAMS);
   const photo = blobUrl(listing?.photos[0]);
   const title = `${listing?.title || t('meta.mapTitle')} · ${siteName}`;
   const description = listing?.description ? plainText(listing.description, 160) : t('meta.mapDescription');
@@ -42,12 +45,11 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return {
     title: listing?.title || t('meta.mapTitle'),
     description,
-    alternates: links,
+    // Filtered or ?pin= views open client-drawn map state: do not index them
+    // or emit a conflicting canonical alongside noindex.
+    ...(parameterized ? NOINDEX_FOLLOW : { alternates: links }),
     openGraph: { type: 'website', siteName, url, title, description, images },
     twitter: { card: 'summary_large_image', title, description, images: images.map((i) => i.url) },
-    // A ?pin= link opens the client-drawn map on a pin: the server HTML is
-    // empty, which Search Console reports as a soft 404.
-    ...(listing || (await searchParams).pin ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

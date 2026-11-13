@@ -5,6 +5,7 @@ import { TopicView } from '@/components/topic/TopicView';
 import { siteName } from '@/lib/appConfig';
 import { localizePath } from '@/lib/i18n/config';
 import { alternates, getT } from '@/lib/i18n/server';
+import { NOINDEX_FOLLOW, topicMetadata } from '@/lib/seo';
 import { companyPath, topicSlug } from '@/lib/topics';
 import { CompanyHubView } from '@/components/topic/CompanyHubView';
 import { timelineVideo } from '@/server/services/pages';
@@ -27,20 +28,12 @@ async function slugOf(params: Props['params']) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [{ slug }, t] = await Promise.all([slugOf(params), getT()]);
   const page = await companyPage(slug, t.locale);
-  if (!page) return { robots: { index: false } };
+  if (!page) return NOINDEX_FOLLOW;
   const label = page.name;
   const title = t('topic.companyTitle', { name: label });
   const description = t('topic.companyDescription', { name: label, site: siteName });
-  const images = await siteCardImages();
-  const links = await alternates(companyPath(page.name));
-  return {
-    title,
-    description,
-    alternates: links,
-    ...(page.indexable ? {} : { robots: { index: false, follow: true } }),
-    openGraph: { type: 'website', siteName, url: links.canonical, title: `${title} · ${siteName}`, description, images },
-    twitter: { card: 'summary_large_image', title: `${title} · ${siteName}`, description, images: images.map((i) => i.url) },
-  };
+  const [images, links] = await Promise.all([siteCardImages(), alternates(companyPath(page.name), page.indexable && page.translationsIndexable)]);
+  return topicMetadata({ title, description, locale: t.locale, links, images, indexable: page.indexable, translationsIndexable: page.translationsIndexable });
 }
 
 export default function CompanyPage({ params }: Props) {
