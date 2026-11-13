@@ -52,7 +52,7 @@ until every lane is done for that 06:00 / 18:00 slot. Lanes:
 1. **Maintenance:** revisits (every mark, including AI-model rubric/review marks), weekReview, freshSources, pinGangHandoff (`scripts/jobs/pingang_handoff.py --apply`; see daily-jobs.md#pinganghandoff).
 2. **Event info:** 40 pins (20 calls), hand-set rows handled by the admin PUT above.
 3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, trends (google-trends-pins skill), specialDayFreebies, earthquakes,
-   stormTracks, layoffs, hiringJobCreation.
+   stormTracks, layoffs (confirmed sweep, then the forecast pass: Blind/Layoffs.fyi/TrueUp/Reddit via the owner's Chrome login -> `Predicted`/`Rumor` pins with estimated date, headcount range and site; daily-jobs.md#layoffs), hiringJobCreation.
 4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, marketImpact, sentiment.
 5. **Ads and products:** pinAds, holidayAds, adTranslations, personTrades, traderPositions, productLifecycle,
    productCompetitors, factoryProfiles.

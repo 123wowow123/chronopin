@@ -16,7 +16,7 @@ This skill provides the automated workflow, validation checks, and operational g
 ## The Golden Rule of Attribution
 
 > [!IMPORTANT]
-> **Translation model tracking (e.g., `Translations completed using Gemini 3.8 Flash.`) must NEVER appear in public pin article content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`).**
+> **Translation model tracking (e.g., `Translations completed using Gemini 4 Hydrogen (Medium).` or `Gemini 3.8 Flash.`) must NEVER appear in public pin article content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`).**
 >
 > **It belongs ONLY in the internal pin wiki (`SourceWiki`).**
 >
@@ -24,22 +24,22 @@ This skill provides the automated workflow, validation checks, and operational g
 
 ---
 
-## Subagent Delegation (`flash` Model — Parallel Subagents)
+## Worker Delegation (`gemini-4-hydrogen-medium` — Parallel Swarm Workers)
 
-- **Always use `flash` subagents (`Model: 'flash'`) to perform translations (pin text, `PinPerf` panels, AND `PinProTip` pro tips):**
+- **Always use `gemini-4-hydrogen-medium` swarm workers (`swarm{action:"add", model:"gemini-4-hydrogen-medium", ...}`) instead of `flash` subagents (`invoke_subagent` has no medium Hydrogen setting) to perform translations (pin text, `PinPerf` panels, `PinProTip` pro tips, and secondary content tables):**
   1. **Prepare & List Due Pin IDs, Panel Pin IDs, and Pro-Tip Pin IDs:** Run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (which runs `prepare_mangled_rows_for_repair()` and prints `DUE_PIN_IDS=...`, `DUE_PANEL_PIN_IDS=...`, and `DUE_PRO_TIP_PIN_IDS=...`).
-  2. **Shard Work Across Parallel `flash` Subagents:**
+  2. **Shard Work Across Parallel `gemini-4-hydrogen-medium` Swarm Workers:**
      - **Translate `PinPerf` Panels (`charts` and `tables` `i18n`) and `PinProTip` Pro Tips (`PinProTipTranslation`) If Not Done Yet:** Whenever `DUE_PANEL_PIN_IDS` is non-empty (`pins_with_incomplete_panels > 0`) or `DUE_PRO_TIP_PIN_IDS` is non-empty (`pins_with_incomplete_pro_tips > 0`), the translation job MUST also translate all due `PinPerf` panels (`PUT /api/pins/:id/performance`) and all due `PinProTip` tips (`POST /api/admin/pro-tip-translations`) across all 15 non-English locales.
-     - **Define/Use a Custom `prod-translator` Subagent Type (`EnableWriteTools: true`, `EnableSubagentTools: false`):** When spawning `Model: 'flash'` subagents via `invoke_subagent`, define or reuse a subagent type (`define_subagent` with `Name: 'prod-translator'`, `EnableWriteTools: true`, `EnableSubagentTools: false`) instead of `TypeName: 'self'`, which avoids recursive `invoke_subagent` tool construction errors across server restarts.
-     - When `<= 25` pins (or panel/pro-tip pins) are due, dispatch 1 `flash` subagent (`invoke_subagent` with `TypeName: 'prod-translator'`, `Model: 'flash'`, or `send_message` to an existing `flash` subagent).
-     - When `> 25` pins, panel pins, or pro-tip pins are due, partition the due IDs into disjoint shards (e.g. 20–100 pins per shard across 2–4 parallel `flash` subagents) and launch/message them concurrently so each `flash` subagent runs:
+     - **Spawn Workers via `swarm` (`model: "gemini-4-hydrogen-medium"`):** Name the swarm (`swarm{action:"title", title:"prod translations"}`) and add workers with `swarm{action:"add", name:"<worker>", model:"gemini-4-hydrogen-medium", brief:"..."}` (keep default `workspace: "inherit"` since workers do not edit repo files; include full rules in each brief because swarm workers start fresh). Kill workers when finished.
+     - When `<= 25` pins (or panel/pro-tip pins) are due, dispatch 1 `gemini-4-hydrogen-medium` worker.
+     - When `> 25` pins, panel pins, or pro-tip pins are due, partition the due IDs into disjoint shards (e.g. 20–100 pins per shard across 2–4 parallel `gemini-4-hydrogen-medium` workers; keep NMT endpoint concurrency conservative if calling `batchexecute` so it does not trigger anti-bot rate limits) so each worker runs:
        ```bash
        python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins <id1,id2,...>
        ```
        (or `--panels --pins <id1,id2,...>` when sharding panel-only pins, or `--pro-tips --no-prep --pins <id1,id2,...>` when sharding pro-tip-only pins).
-     - If any fragment, pin, or pro tip requires direct LLM translation by a `flash` subagent (e.g. when an NMT fragment is rejected by `acceptable()`), the `flash` subagent can export the pin with `--export /tmp/pin.json`, translate the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and apply + validate it via `--apply /tmp/done.json`.
-  2b. **Same run, content tables:** after (or alongside) the pin shards, translate every secondary content table via `/api/admin/content-translations` (see [Content Translations](./references/content_translations.md)), sharding by table or `after` range across the same `flash` subagents. Do not end the run before they reach `due: 0`.
-  3. **Audit the `flash` Subagents' Work:** After all `flash` subagents complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have the final `flash` subagent run it and inspect its output) to verify:
+     - If any fragment, pin, or pro tip requires direct LLM translation (e.g. when an NMT fragment is rejected by `acceptable()` or NMT is unavailable), the `gemini-4-hydrogen-medium` worker exports the pin with `--export /tmp/pin.json`, translates the target fields directly into the due locales following all HTML/`<cite data-ref>`/Thai Gregorian year rules, and applies + validates it via `--apply /tmp/done.json`.
+  2b. **Same run, content tables:** after (or alongside) the pin shards, translate every secondary content table via `/api/admin/content-translations` (see [Content Translations](./references/content_translations.md)), sharding by table or `after` range across `gemini-4-hydrogen-medium` swarm workers. Do not end the run before they reach `due: 0`.
+  3. **Audit the Workers' Work:** After all workers complete, run `python3 .agents/skills/prod-translations/scripts/check_translations.py` (or have a `gemini-4-hydrogen-medium` worker run it and inspect its output) to verify:
      - `0` due pins (`100.0%` current & complete)
      - `0` panels missing `i18n` (`panels_incomplete: 0`, `pins_with_incomplete_panels: 0` across all `PinPerf` charts and tables, including verifying that chart/table `note`s, `title`s, and table `rows` cells `> 40` chars with English stopwords were translated and not left in English or pure ASCII in non-Latin locales)
      - `0` pro tips missing `i18n` (`pro_tips_incomplete: 0`, `pins_with_incomplete_pro_tips: 0` across all `PinProTip` tips, verifying that `PinProTipTranslation` exists for all 15 locales with matching `sourceHash = sha1(tip)` and passes all plain-text/non-Latin/Thai Gregorian year rules)
@@ -58,7 +58,7 @@ are left to this agent. These tables use the `<Source>Translation` tables from m
 and verification: [Content Translations Reference](./references/content_translations.md).
 
 One run, in order: pins, panels and pro tips (`sync_translations.py`) -> every table in the reference
-until `due: 0` (same `flash` subagents, shard by table) -> one audit. The run is finished only when
+until `due: 0` (`gemini-4-hydrogen-medium` swarm workers, shard by table) -> one audit. The run is finished only when
 `check_translations.py` shows 0 due pins AND the coverage call shows `due: 0` for every table.
 
 ```bash
@@ -79,9 +79,9 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 | **Quick health check (recent rows only)** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --since-days 7` |
 | **Time/debug one check** | `python3 .agents/skills/prod-translations/scripts/check_translations.py --only bullets` (names: `counts`, `leak_pin`, `leak_translation`, `mangled`, `bullets`, `panels`, `pro_tips`) |
 | **Prep & List Due Pin + Panel + Pro-Tip IDs** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` |
-| **Sync Assigned Pin Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
-| **Sync Assigned Panel Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --panels --pins 20678,20688,...` |
-| **Sync Assigned Pro-Tip Shard (`flash` subagent)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pro-tips --no-prep --pins 5093,4022,...` |
+| **Sync Assigned Pin Shard (swarm worker)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15801,15802,...` |
+| **Sync Assigned Panel Shard (swarm worker)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --panels --pins 20678,20688,...` |
+| **Sync Assigned Pro-Tip Shard (swarm worker)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pro-tips --no-prep --pins 5093,4022,...` |
 | **Export Due Pins for Direct LLM Translation** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --no-prep --pins 15860 --export /tmp/todo.json` |
 | **Validate & Apply Direct LLM Translations** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --apply /tmp/done.json` |
 | **Sync All Due Pins, Panels & Pro Tips (Chunked)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |

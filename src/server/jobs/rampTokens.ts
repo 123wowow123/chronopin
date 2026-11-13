@@ -12,7 +12,7 @@ const BASE = 'https://ramp.com/data/ai-index/chart-data';
 export const RAMP_TOKEN_ROWS = { volume: 'ramp-token-volume', spend: 'ramp-token-spend', price: 'ramp-token-price' } as const;
 
 type Usage = { period_end: string; metric_key: string; model_maker: string; metric_value: number | null };
-type Price = { usage_date: string; token_type: string; model_maker: string; token_cost_usd_7d: number | null; token_count_7d: number | null };
+type Price = { usage_date: string; token_type: string; series_key: string; price_per_million: number | null };
 
 const MAKERS: [string, string][] = [['anthropic', 'Anthropic'], ['openai', 'OpenAI'], ['google', 'Google']];
 const round = (v: number, d: number) => Math.round(v * 10 ** d) / 10 ** d;
@@ -40,20 +40,16 @@ export function usageLines(rows: Usage[], metric: 'token_volume' | 'token_spend'
 }
 
 // Price per million tokens on the weeks' last days (Sundays), as Ramp draws it.
+// Since November 2026 the feed carries daily price_per_million rows per series_key (blend, openai, anthropic).
 export function priceLines(rows: Price[]): ForecastLine[] {
-  const weeks = new Map<string, Map<string, { cost: number; tokens: number }>>();
-  for (const r of rows) {
-    if (r.token_type !== 'all_tokens' || !r.token_cost_usd_7d || !r.token_count_7d || r.token_count_7d <= 0) continue;
-    if (new Date(`${r.usage_date}T00:00:00Z`).getUTCDay() !== 0) continue;
-    const w = weeks.get(r.usage_date) ?? new Map();
-    w.set(r.model_maker, { cost: r.token_cost_usd_7d, tokens: r.token_count_7d });
-    weeks.set(r.usage_date, w);
-  }
-  const days = [...weeks.keys()].sort();
-  const per = (c: number, t: number) => round((c * 1e6) / t, 3);
+  const pick = (key: string) => rows
+    .filter((r) => r.token_type === 'all_tokens' && r.series_key === key && r.price_per_million != null && r.price_per_million > 0 && new Date(`${r.usage_date}T00:00:00Z`).getUTCDay() === 0)
+    .sort((a, b) => a.usage_date.localeCompare(b.usage_date))
+    .map((r) => ({ x: r.usage_date, value: round(r.price_per_million!, 3) }));
   return [
-    { label: 'OpenAI and Anthropic, blended', points: days.map((x) => { const v = [...weeks.get(x)!.values()]; return { x, value: per(v.reduce((a, b) => a + b.cost, 0), v.reduce((a, b) => a + b.tokens, 0)) }; }) },
-    ...MAKERS.slice(0, 2).map(([k, label]) => ({ label, points: days.filter((x) => weeks.get(x)!.has(k)).map((x) => { const v = weeks.get(x)!.get(k)!; return { x, value: per(v.cost, v.tokens) }; }) })),
+    { label: 'OpenAI and Anthropic, blended', points: pick('blend') },
+    { label: 'OpenAI', points: pick('openai') },
+    { label: 'Anthropic', points: pick('anthropic') },
   ];
 }
 

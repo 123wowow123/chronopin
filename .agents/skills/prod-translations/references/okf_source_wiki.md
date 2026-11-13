@@ -3,7 +3,7 @@
 ## The Golden Rule
 
 > [!IMPORTANT]
-> **Translation model attribution (e.g. `Translations completed using Gemini 3.8 Flash.`) must NEVER appear in public pin article content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`).**
+> **Translation model attribution (e.g. `Translations completed using Gemini 4 Hydrogen (Medium).` or `Gemini 3.8 Flash.`) must NEVER appear in public pin article content (`Pin.longFormSummary`, `Pin.description`, or `PinTranslation.*`).**
 > 
 > **It belongs ONLY in the internal pin wiki (`SourceWiki`).**
 
@@ -57,9 +57,9 @@ VALUES (
   1 + COALESCE((SELECT max(position) FROM "SourceWiki" WHERE "parentId" = root.id), 0),
   'Metadata',
   'Translations',
-  'Translations completed using Gemini 3.8 Flash.',
-  'Translations completed using Gemini 3.8 Flash across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
-  ARRAY['translation'::varchar, 'gemini-3.8-flash'::varchar]
+  'Translations completed using Gemini 4 Hydrogen (Medium).',
+  'Translations completed using Gemini 4 Hydrogen (Medium) across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
+  ARRAY['translation'::varchar, 'gemini-4-hydrogen-medium'::varchar]
 )
 ON CONFLICT DO NOTHING;
 ```
@@ -74,9 +74,9 @@ VALUES (
   0,
   'Web Page',
   COALESCE(source.title, pin.title, 'Source'),
-  'Translations completed using Gemini 3.8 Flash.',
-  'Translations completed using Gemini 3.8 Flash across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
-  ARRAY['translation'::varchar, 'gemini-3.8-flash'::varchar]
+  'Translations completed using Gemini 4 Hydrogen (Medium).',
+  'Translations completed using Gemini 4 Hydrogen (Medium) across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
+  ARRAY['translation'::varchar, 'gemini-4-hydrogen-medium'::varchar]
 )
 ON CONFLICT ("sourceId") WHERE "parentId" IS NULL DO NOTHING;
 ```

@@ -192,7 +192,7 @@ SELECT
   btrim(u."sourceUrl"),
   'web',
   'pending',
-  'gemini-3.8-flash/translations',
+  'gemini-4-hydrogen-medium/translations',
   0
 FROM target_pin_urls u
 WHERE u."urlKey" != ''
@@ -239,9 +239,9 @@ SELECT
   sw.next_pos,
   'Metadata',
   'Translations',
-  'Translations completed using Gemini 3.8 Flash.',
-  'Translations completed using Gemini 3.8 Flash across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
-  ARRAY['translation'::varchar, 'gemini-3.8-flash'::varchar]
+  'Translations completed using Gemini 4 Hydrogen (Medium).',
+  'Translations completed using Gemini 4 Hydrogen (Medium) across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
+  ARRAY['translation'::varchar, 'gemini-4-hydrogen-medium'::varchar]
 FROM (
   SELECT 
     sw_root."sourceId" AS id_source,
@@ -264,9 +264,9 @@ SELECT
   0,
   'Web Page',
   COALESCE(pps.source_title, pps.pin_title, 'Source'),
-  'Translations completed using Gemini 3.8 Flash.',
-  'Translations completed using Gemini 3.8 Flash across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
-  ARRAY['translation'::varchar, 'gemini-3.8-flash'::varchar]
+  'Translations completed using Gemini 4 Hydrogen (Medium).',
+  'Translations completed using Gemini 4 Hydrogen (Medium) across 15 target locales (es, fr, de, ja, zh, ko, hi, ar, th, it, ru, pt, ms, vi, id).',
+  ARRAY['translation'::varchar, 'gemini-4-hydrogen-medium'::varchar]
 FROM (
   SELECT DISTINCT ON ("sourceId") "sourceId", pin_title, source_title
   FROM target_primary_sources
@@ -277,7 +277,7 @@ WHERE NOT EXISTS (
 
 -- Record generatedBy without marking unbuilt sources as 'ready' or bumping wikiVersion from 0
 UPDATE "Source" s
-SET "generatedBy" = COALESCE(s."generatedBy", 'gemini-3.8-flash/translations')
+SET "generatedBy" = COALESCE(s."generatedBy", 'gemini-4-hydrogen-medium/translations')
 FROM (SELECT DISTINCT "sourceId" FROM target_primary_sources) pps
 WHERE s.id = pps."sourceId";
 
@@ -949,7 +949,7 @@ WHERE ptt."proTipId" = t.id
 
 def apply_translations_file(apply_path: str):
     """
-    Validates and applies a JSON file of translated rows produced by a flash subagent:
+    Validates and applies a JSON file of translated rows produced by a gemini-4-hydrogen-medium worker:
     [{"pinId": 123, "locale": "es", "sourceHash": "...", "title": "...", ...}]
     or pro-tip rows [{"proTipId": 1, "pinId": 5093, "locale": "es", "sourceHash": "...", "tip": "..."}]
     """
@@ -1562,11 +1562,11 @@ def main():
     parser.add_argument('--limit', type=int, help="Limit number of pins to translate")
     parser.add_argument('--chunk-size', type=int, default=25, help="Number of pins to process and push per outer chunk (default: 25)")
     parser.add_argument('--pin', type=int, help="Translate a specific pin id")
-    parser.add_argument('--pins', type=str, help="Translate a comma-separated list of pin ids (for parallel flash subagents)")
+    parser.add_argument('--pins', type=str, help="Translate a comma-separated list of pin ids (for parallel gemini-4-hydrogen-medium workers)")
     parser.add_argument('--locale', type=str, help="Only translate specific locale(s), comma-separated")
     parser.add_argument('--panels', action='store_true', help="Only translate PinPerf panels (charts and tables i18n)")
     parser.add_argument('--pro-tips', action='store_true', help="Only translate PinProTip tips (POST /api/admin/pro-tip-translations)")
-    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs, panel pin IDs, and pro-tip pin IDs for sharding across parallel flash subagents")
+    parser.add_argument('--list-ids', action='store_true', help="Run repair prep and list due pin IDs, panel pin IDs, and pro-tip pin IDs for sharding across parallel gemini-4-hydrogen-medium workers")
     parser.add_argument('--no-prep', action='store_true', help="Skip prepare_mangled_rows_for_repair when already run by coordinator")
     parser.add_argument('--export', type=str, help="Export due pins and target fields to a JSON file")
     parser.add_argument('--apply', type=str, help="Validate and apply translated rows from a JSON file")

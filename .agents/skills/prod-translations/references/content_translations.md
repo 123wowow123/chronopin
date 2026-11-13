@@ -35,8 +35,9 @@ the pin translation step covers), `Comment` / `Message` (conversation, not conte
 2. **Due rows:** `GET ...?table=company-wiki&locale=de,ja&limit=100&after=<next>` returns
    `{ rows: [{ key, sourceHash, fields, locales }], next, note }`. Follow `next` until it is `null`.
    `locales` is what is still missing for that row (missing or hash no longer matches).
-3. **Translate** each field into each listed locale (flash subagents, shard by table or by `after`
-   range, as for pins). Follow `note` for the table and the rules below.
+3. **Translate** each field into each listed locale (`gemini-4-hydrogen-medium` swarm workers via
+   `swarm{action:"add", model:"gemini-4-hydrogen-medium"}`, shard by table or by `after` range, as for pins).
+   Follow `note` for the table and the rules below.
 4. **Save:** `POST` `{ table, translations: [{ key, locale, sourceHash, fields }] }` (max 300 rows).
    Send back the `key` and `sourceHash` exactly as received; `fields` has the same field names as the GET.
    The response lists `skipped` rows with a reason (`the source changed since`, `... too long`,

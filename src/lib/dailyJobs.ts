@@ -181,7 +181,7 @@ export const TASKS = {
   layoffs: {
     group: 'beats',
     label: 'Layoffs',
-    summary: "Search for newly announced layoffs and closures, create missing pins and update existing pins with verified developments from company memos, SEC filings or state WARN notices; add or refresh sourced graphs where available.",
+    summary: "Search for newly announced layoffs and closures, create missing pins and update existing pins with verified developments from company memos, SEC filings or state WARN notices; add or refresh sourced graphs where available. Also forecast coming rounds from Blind and similar sites (Layoffs.fyi, TrueUp, Reddit; owner's Chrome login when gated): Predicted or Rumor pins with an estimated date, headcount range and site.",
   },
   hiringJobCreation: {
     group: 'beats',
