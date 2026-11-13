@@ -518,6 +518,3 @@ build single daily dashboard landing page, and make it nice, that shows most imp
 
 
 generate clips of long form video media for preview
-
-
-use blind and other simular sites to predict layoff dates and create pins. try to estimate number laid off and from what location. use my browser login if needed
