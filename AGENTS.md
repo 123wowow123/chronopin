@@ -57,4 +57,4 @@ Owner instruction, 2026-11-11: agents give every pin a full street address with 
 
 ## Project skills
 
-Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `special-day-freebies`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.
+Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `election-results-pins`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `special-day-freebies`, `pin-field-and-api-dev` and `prod-translations`. List the folder in case more have been added. Update the skill when its workflow changes.

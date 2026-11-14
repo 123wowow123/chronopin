@@ -38,7 +38,7 @@ import type { PinModelTrainingJson } from '@/lib/modelTraining';
 import { PinServiceStatus } from '@/components/pin/PinServiceStatus';
 import { PRODUCT_STATUS_TITLE } from '@/lib/serviceStatus';
 import { BUILD_STATUSES, pinDateKind } from '@/lib/pinDateKind';
-import { timelineSpan } from '@/lib/pinPerf';
+import { timelineSpan, type PinPerfJson } from '@/lib/pinPerf';
 import { PinPerf } from '@/components/pin/PinPerf';
 import { PinFactory } from '@/components/pin/PinFactory';
 import { PinForecastLinks } from '@/components/forecasts/PinForecastLinks';
@@ -253,6 +253,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const tagsClass = 'mt-4';
 
   const isPredicted = isPredictedPin(pin);
+  const electionPerf = perf && pin.tags?.some((tag) => tag.name === 'Election') ? perf : null;
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
   const filteredTags = altSet.size > 0 && pin.tags?.length
     ? pin.tags.filter((t) => !altSet.has(t.name.trim().toLowerCase()))
@@ -274,7 +275,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} modelTraining={modelTraining} project={project} purpose={purpose} proTips={proTips} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} modelTraining={modelTraining} project={project} purpose={purpose} proTips={proTips} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} electionPerf={electionPerf} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -323,7 +324,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
           <PinEciChart pinId={pin.id} has={modelChart} className="mt-4" />
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
-          {perf ? <PinPerf perf={perf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {perf && !electionPerf ? <PinPerf perf={perf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {gasCarPerf ? <PinGasCarPerf perf={gasCarPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {gamePerf ? <PinGamePerf perf={gamePerf} t={t} evidence={pinEvidence(pin)} className="mt-4" /> : null}
@@ -422,6 +423,7 @@ async function PinBody({
   autoplay,
   buildMilestones,
   timeline,
+  electionPerf,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -445,6 +447,8 @@ async function PinBody({
   autoplay?: boolean;
   buildMilestones?: FactoryMilestone[];
   timeline?: ReturnType<typeof timelineSpan>;
+  // An election pin's vote-share chart reads as part of the result, so it sits in the left column under the text.
+  electionPerf?: PinPerfJson | null;
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // A datacenter figure searches for the pins at least that size (mw:>=100).
@@ -692,6 +696,7 @@ async function PinBody({
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
+      {electionPerf ? <PinPerf perf={electionPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
       {candidates?.length ? <PinCandidates candidates={candidates} t={t} pinId={pin.id} /> : null}
       {competitors?.length ? <PinCompetitors competitors={competitors} t={t} /> : null}
       <PinStocks pinId={pin.id} />

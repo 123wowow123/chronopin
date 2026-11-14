@@ -500,3 +500,129 @@ are under `.scrape/menu-inventory-prod-sync-2026-11-13/`. Final evidence include
 `prod-after.json`, `native-checks.json`, and the separate Quatrefoil pin snapshots. Held and
 unresearched candidates were excluded; the remaining research queue above is still open.
 Translations remain with the translation agent.
+
+
+## November 14 local continuation
+
+This run continues the open research queue. It does not complete all-city coverage. Production remains
+at the November 13 checkpoint; no production synchronization, deployment or translations were run.
+
+| Effective local coverage | Before | After | Gain |
+|---|---:|---:|---:|
+| Menu entries | 55,103 | 55,103 | 0 |
+| With photos | 13,402 | 13,405 | 3 |
+| With reviews | 578 | 600 | 22 |
+
+**Reviews:** 120 public original-branch API requests across the next 40 ranked China venues returned
+64 exact-name leads. All 64 were screened against original Chinese, publisher English, source venue
+identity and saved street address. Saved 34 excerpts across 15 local profiles, including qualified or
+negative assessments of stone-pot tofu, seafood freshness, and worsening steamed buns. Nine leads are
+held: JiuLong's saved Dagu Road 6 conflicts with the API's 7; Pearl Restaurant's saved Zhenzhu Lane 9
+conflicts with Taijian Lane 17. General venue praise, unmatched preparations, untranslated prose and
+mixed-branch accounts were not attached. Thirty-one clear assessments received editorial estimates;
+three descriptive or generic excerpts remain unscored. These rating-code changes are undeployed.
+
+**Photos:** Sukesan Kyoto Katsura's exact branch still links the autumn B menu. All eight PDF pages
+were inspected. Two new, visually verified set photographs were extracted from page 3 and saved with
+operator chain-menu credits: the exact mini meat-gobo udon/katsutoji/botamochi combination, and a
+representative mini set whose pictured choices are stated. Six other reviewed images were already
+present and were preserved. The PDF does not establish a different portion from its pictured one;
+ordinary fries were not transferred to doubled fries, and curry/udon toppings were not substituted for
+standalone cutlets. The remaining exact-item/gallery/Google Images/Maps/Yelp avenues stay pending.
+
+Both held WEI JIA Liangpi photo associations are now resolved locally. The refreshed exact-branch
+public food records distinguish food ID 7766364 at CNY 11 and food ID 7756129 at CNY 5; these match the
+two saved same-name rows uniquely. Each photograph was visually inspected, uploaded to Azure and
+saved by source, menu label, name **and matching price**, without changing prices or other row fields.
+Both stored photos count as only one effective photographed entry after same-name deduplication.
+
+**Historical reconciliation:** the fresh local San Diego snapshot exactly matches all retained photo
+and review fields in the November 13 final audited production snapshot: 4,386 enabled menu rows,
+1,382 with cover images, four with image galleries, and 82 with reviews; zero field mismatches.
+Fifteen current lane0/lane3 associations were folded into the main replay catalog, preserving the later
+shortened excerpts. Its 93 entries and the legacy lane0 entry point dry-run to zero changes locally.
+The legacy entry point delegates to the main replay to avoid reviving stale excerpts.
+
+One original lane0 candidate remains specifically unresolved: Tracey C.'s Hula pie excerpt is absent
+from local data and the audited production snapshot. The old replay keyed replacements only by URL;
+Tracey and Frank shared the same Yelp URL, so Frank was the retained review. Tracey was not silently
+restored: verify the original review, establish distinct identity and reconcile the shared-URL quote
+budget first. The Guiyuan and Lianhuan historical address gaps remain held after further source searches.
+
+**Verification:** complete current-revision profile readbacks and the whole-inventory preservation
+audit pass for all 17 changed profiles, with no non-photo/review changes and no enabled/region changes.
+All 520 distinct review-source URLs pass the aggregate 25-word excerpt-budget check. The two focused
+rating tests and focused ESLint pass. All 17 local native pages return HTTP 200 and contain the saved photos and review-source URLs
+in their HTML/serialized data; evidence is in `nov14/native-checks.json`.
+
+Native Chrome now permits partial hydrated verification despite the tab API's `timeoutMs` failure.
+Quatrefoil's Food photos strip opens the halibut viewer with its photograph, full caption and original
+Instagram credit; Next dish replaces the photograph and credit with Brome Lake Duck Breast. Casa
+Lucio's Huevos estrellados viewer shows its photograph, source credit, El Comidista praise and minube
+qualified criticism, with their separate inferred-rating labels. Multi-photo within-dish gallery controls
+and landing-tile viewers still need a hydrated check; native browser focus changed during this session.
+
+Evidence is under `.scrape/menu-research-all-2026-11-13/nov14/`, with review API records, decisions,
+quotes and full readbacks in `china/deep-reviews04/`. The China and Japan per-item ledgers were updated.
+Full snapshots: `menu-inventory-2026-11-13/main/nov14-{start,after}.json`.
+
+**Remaining local gaps:** 41,698 effective entries without photos and 54,503 without reviews. No region
+is exhausted. New content, ratings and replay changes remain local; translations stay with their agent.
+
+
+### Further November 14 continuation — local only
+
+A second researched batch adds **17 effective photographed dishes** and **30 newly reviewed dishes**.
+Local coverage is now **13,422/55,103 with photos** and **630/55,103 with reviews**. The combined
+November 14 gains against the unchanged November 13 production checkpoint are +20 and +52.
+
+The next 40-venue China pass made 120 public review-page requests, discovered 85 exact-name leads,
+and screened every lead against original prose, publisher English and saved branch address. Saved
+39 excerpts on 14 profiles. Retained bland/oily crispy-chicken criticism and salty drunken-crab criticism
+alongside praise. One original-English cheesecake review was used directly, with an original-English
+provider label; it was not falsely described as a publisher translation. Twenty-six leads remain held:
+Wuliguan's review cluster includes Wulidun Middle Street 99 while the saved branch is Yingkang Road
+4-1; Zheng Huang Qi's API omits the saved 17-2 unit; two Lao Wei excerpts contain duplicated scraped
+text/ad fragments and an embedded publication date requiring original-review reconciliation. Other
+rejections include an abalone preparation, beef plate tendon versus generic tendon, general venue
+assessments, absent English translation, duplicate prose and reviews naming a small shop with a move.
+
+APOC COFFEE Hakata Chikushiguchi gained five exact-dish cover photographs and a pasta close-up gallery
+image: two operator launch cheesecake photographs and three named dishes from TABERY's exact-branch
+September 17 preview. Historical seasonal availability and separately pictured drinks remain explicit.
+Three very short original-Japanese tasting excerpts were saved for the preview dishes, without hand
+translation; together they contain 25 Japanese characters, conservatively below the source quote budget.
+The photograph credit is 博多あや. / TABERY. Coffee remains without a confidently identified photo.
+
+BONTEMPS Minamihorie gained eight individually labelled operator photographs for four twisted donuts
+and four drinks, credited as chain-menu photographs from the exact-branch launch release. The two
+Halloween drink entries still need exact-photo research. Neo Nice Burger Kyoto Teramachi gained
+four photo associations from its explicitly position-captioned five-burger launch photograph. Each
+caption identifies the target burger's position, names the others and excludes them from the saved
+item price. No expired opening discount was reactivated.
+
+Five L’ATELIER L’ARCHESTE Ginza food photographs were visually checked and held: the loose sweets,
+unlabelled flavours and cheesecake slice do not establish the saved pack sizes or cut sizes. The
+operator-linked shop returned HTTP 429; a working browser is the next step. Kyoto Yayoiken desserts
+were already covered; Gyukaku's remaining portions were not substituted from covered variants.
+These checks do not establish that any restaurant or region is exhausted.
+
+This batch saves **42 review associations and 18 photo associations across 17 profiles**, with full
+current-revision readbacks. Seventeen additional photo associations close effective gaps; the extra
+pasta view adds variety rather than a new dish. Thirty-seven further clear editorial estimates are
+ready locally; five descriptive China excerpts remain unscored. All 17 native pages return HTTP 200
+and contain the saved photos and review-source URLs. Whole-inventory preservation found no changes
+outside photos/reviews and no enabled/region changes. All 560 review-source URLs pass the aggregate
+excerpt audit; focused rating tests and ESLint pass.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/nov14b/` (including `final-audit.json`,
+`native-checks.json`, source HTML, visual decisions, manifests, Azure upload metadata and full readbacks)
+and `china/deep-reviews05/`. China and Japan item ledgers include the new saves and holds. Full snapshots
+are `menu-inventory-2026-11-13/main/nov14b-{start,after}.json`.
+
+Hydrated multi-photo and landing-viewer checks remain open: native Chrome rejected navigation when
+browser focus changed; the proposed local tab was not available for binding, and isolated in-app
+browser creation reported that `iab` is unavailable. None is counted as a successful hydrated check.
+
+**Remaining local gaps:** 41,681 entries without photos and 54,473 without reviews. No production sync,
+deployment or translation run occurred. The separate translation agent retains that work.

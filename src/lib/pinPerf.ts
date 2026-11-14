@@ -5,7 +5,10 @@
 
 import { milestoneTime } from './pinFactory';
 
-export type PerfBar = { label: string; value: number; highlight?: boolean };
+// party colours a bar (an election result's candidate): D blue, R red, I grey, G green, L gold.
+export const PERF_PARTIES = ['D', 'R', 'I', 'G', 'L'] as const;
+export type PerfParty = (typeof PERF_PARTIES)[number];
+export type PerfBar = { label: string; value: number; highlight?: boolean; party?: PerfParty };
 // The English text is the default; i18n holds the same text per locale. A chart's
 // bars keep their labels (product names); a table's translation restates every
 // column and row, so it has the same shape.
@@ -82,7 +85,8 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
     for (const b of c.bars) {
       const label = text(b?.label, 80);
       if (!label || typeof b.value !== 'number' || !Number.isFinite(b.value) || b.value < 0) return `chart ${i + 1}: every bar needs a label and a non-negative number.`;
-      bars.push({ label, value: b.value, ...(b.highlight ? { highlight: true } : {}) });
+      if (b.party !== undefined && !(PERF_PARTIES as readonly string[]).includes(b.party)) return `chart ${i + 1}: party must be one of ${PERF_PARTIES.join(', ')}.`;
+      bars.push({ label, value: b.value, ...(b.highlight ? { highlight: true } : {}), ...(b.party ? { party: b.party } : {}) });
     }
     const sourceUrl = url(c.sourceUrl);
     if (sourceUrl === null) return `chart ${i + 1}: sourceUrl is not a web address.`;

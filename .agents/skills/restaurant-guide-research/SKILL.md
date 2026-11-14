@@ -316,7 +316,7 @@ For an owner-requested all-inventory production sync, snapshot both environments
 branch source, record kind, menu label and item name. Preserve production-only fields and reviews.
 Additive scripts do not carry corrected captions/photos or excerpt edits/deletions: apply those only
 when production still matches the audited earlier value, then retain complete before/after readbacks.
-Duplicate-name rows require matching counts and identical identifying non-media fields. Preflight every
+Duplicate-name rows require matching counts and identical identifying non-media fields. When those fields differ, an original exact-branch food ID and its published price can disambiguate each row if source, menu label, name and price form a unique match. Re-fetch the original records, visually review each photo, preserve all prices/fields and save explicit per-row before/readbacks; never copy one photo to every same-name row. WEI JIA’s CNY 11/5 Liangpi records were resolved this way on November 14 (`.scrape/menu-research-all-2026-11-13/nov14/weijia/`). Preflight every
 new public Azure URL, save one venue and check its native page, then resume the bulk saves. Audit the
 entire production after-state for non-media changes, effective coverage and aggregate quote budgets;
 snapshot-only or candidate counts are not a completed sync. November 13 evidence and resumable helper:
@@ -394,3 +394,7 @@ review form previews files and can remove pending/existing attachments before sa
 Azure reader-photo conversion and verified-email/daily-upload limits. Failed saves clean up new
 blobs. Return visible attachments with their review (flag-hidden photos are owner-only). Review
 delete soft-deletes its attachments too. Reader photos remain distinct from sourced dish photos.
+
+Replay caution (November 14): `menuItemReviews.lane0.ts` now delegates to the main catalog. Its old JSON is historical evidence, not an apply input. Two reviewers can share a Yelp URL; URL-only replacement retains only the last reviewer. Do not restore a lost excerpt without rechecking its original review, reviewer identity and aggregate source quote budget. The main catalog contains the retained audited excerpts and converges locally.
+
+For public Trip review records, empty `translateContent` does not mean unusable when `content` is already English. Verify the original language and use an accurate original-English provider label, retaining the raw original and empty publisher-translation field in provenance. Do not hand-translate missing foreign-language text or call original English a publisher translation.

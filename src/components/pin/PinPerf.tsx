@@ -23,6 +23,9 @@ const MONEY =
   /(\$\d[\d,]*(?:\.\d+)?(?:[kKmMbB]|\s?(?:million|billion|trillion))?)/g;
 const isMoneyUnit = (unit?: string) => !!unit && /usd|\$|dollar/i.test(unit);
 
+// A candidate's bar wears their party's colour (mid-tones that read on every theme).
+const PARTY_COLOR: Record<string, string> = { D: "#2f6fdb", R: "#d93a3a", I: "#8b8fa3", G: "#2e9b57", L: "#d9a21b" };
+
 function Money({ text }: { text: string }) {
   return (
     <>
@@ -115,8 +118,9 @@ function Chart({
             </span>
             <span className="h-3 rounded-sm bg-raised" aria-hidden>
               <span
-                className={`block h-full rounded-sm ${bar.highlight ? "bg-link" : "bg-subtle/60"}`}
+                className={`block h-full rounded-sm ${bar.party ? "" : bar.highlight ? "bg-link" : "bg-subtle/60"}`}
                 style={{
+                  ...(bar.party ? { backgroundColor: PARTY_COLOR[bar.party], opacity: bar.highlight ? 1 : 0.8 } : {}),
                   width: `${Math.max((bar.value / max) * 100, bar.value > 0 ? 1 : 0)}%`,
                 }}
               />
