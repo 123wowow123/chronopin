@@ -366,3 +366,89 @@ agents reached their usage limits again; their latest manifests and per-item nex
 CUA's browser tab creation, navigation and DOM inspection still fail, including a fresh retry; browser-only
 galleries remain pending, not marked as checked or exhausted. Nothing in this report claims all remaining
 research is complete. All saves are local; translation and production synchronization are left separate.
+
+### Resumed local checkpoint — November 13, 2026
+
+This checkpoint supersedes the outstanding-candidate counts immediately above. The saved China lane
+evidence already completed Trip batch16: all 601 remaining candidates were screened, 568 saved and
+33 rejected. Across the discovered Trip photo queue, 3,782 candidates were accepted, 266 rejected,
+and two approved associations remain unset because identical item names need disambiguation.
+The 483 first-page review leads were also screened; deeper source research remains open.
+
+A fresh full local snapshot at resume contained **13,382 photographed and 539 reviewed effective
+entries**. This continuation saved **20 additional photographed entries**, **55 review associations**
+on **39 newly reviewed entries**, and corrected one independently sourced opening date:
+
+- **Quatrefoil, Dundas:** nine previously prepared operator photos saved onto 13 dinner/lunch entries.
+  Reading the operator gallery's public Load more feed through page six supplied four further exact
+  photographs for five entries: halibut, blueberry tart, charcoal-grilled Selva shrimp and raspberry
+  pavlova on dinner/lunch. Seven other leads were rejected for seasonal sides/sauces or ambiguous
+  multi-dish captions. The blueberry image is explicitly captioned as a close-up, not a full portion.
+  All 18 item photos appear in native pin 6898's server-rendered HTML. The operator's
+  [About page](https://quatrefoilrestaurant.com/about/) establishes **May 2010** as its opening month;
+  the incorrect October 2026 research date was replaced locally with May 31, 2010, explicitly a
+  month-end placeholder, `dateConfidence: estimated`. Author, address, coordinates and other pin
+  fields were preserved.
+- **Nobu Madrid:** one Yellowtail Jalapeño image from its branch website, explicitly credited and
+  captioned as an official chain-menu photograph. Creamy-spicy rock shrimp was not substituted for
+  the saved three-sauce preparation.
+- **Casa Lucio, Madrid:** one operator-credited huevos estrellados photograph from El Comidista,
+  corroborated by the identical photograph's explicit dish caption in El País's April 2026 article.
+  Two original minube/Gomi excerpts add shrimp praise with portion criticism and qualified praise
+  for the eggs. The existing El Comidista excerpt was preserved. Both minube excerpts together
+  use 22 words; dates remain null because the original page does not establish them.
+- **China deeper reviews02:** 60 public review-page requests across the next 20 ranked venues
+  returned 301 review records and 58 exact-name leads. All leads were screened against original
+  Chinese, publisher-provided English, numeric venue identity and address. Eighteen accepted
+  excerpts were saved on 13 newly reviewed entries across four profiles: Mianchao Dingcun in
+  Haikou, Xiehe Fenghuang Street in Suzhou, DIAN in Wuhan, and Zhang Roasted Duck in Chengdu.
+  Overcooked-tofu criticism is retained. Twelve Guiyuan leads are held because the listing names
+  Chengdu Road 62 while some original reviews name 101–103, independently listed as a banquet
+  venue. Seafood reviews naming Locomotive Market/Tongguling or Bawangling No. 6 were rejected
+  for the saved Dingcun Haitangwan No. 2 branch.
+- **China deeper reviews03:** a further 120 public page requests across 40 venues returned 808
+  review records and 65 exact-name leads. Thirty-five excerpts were saved across 17 profiles on
+  25 newly reviewed entries. Positive and negative assessments are retained, including average
+  soufflé, disappointing mapo tofu, and worsening pan-fried buns. Six Lianhuan oyster-omelette
+  leads are held because the saved venue is at Jukou Heng Alley 6 while the source API names 4.
+  Yilaoma reviews explicitly naming Dongchenggen South Street 13 were rejected for the saved
+  No. 17 Annex 4 restaurant. Fish-ball noodle toppings, deep-fried dumplings and shrimp-and-eel
+  noodles were not transferred to standalone fish balls, pan-fried buns or shrimp-only noodles.
+
+Fifty-two editorial estimates were added for the newly saved evaluative excerpts; descriptive
+apple-duck, crab-sauce and Dongpo-pork prose remains unscored. These rating-code changes are local
+and undeployed.
+
+| Effective coverage | At resume | After this continuation | Change |
+|---|---:|---:|---:|
+| Menu entries | 55,103 | 55,103 | 0 |
+| With photo | 13,382 | 13,402 | +20 |
+| With review | 539 | 578 | +39 |
+
+Against the expanded phase's original baseline, the current gains are **5,406 photographed entries**
+and **385 reviewed entries**. These are effective menu counts after normalized branch-source joins,
+specials-label precedence and same-name deduplication. Alternative photos and repeated stored
+associations are not extra effective dishes.
+
+Full before/after inventory comparison found 24 changed restaurant-content profiles, with no
+changes outside item photos/reviews and no enabled/region changes. The separate Quatrefoil pin audit
+found changes only to opening date, date confidence and its reasoning. All 24 native pins return
+HTTP 200. Their saved item photographs and excerpts were checked in server-rendered HTML and
+serialized page data; double-quoted excerpts require decoding the serialized data. This is not
+hydrated UI verification: CUA tab creation still fails with `timeoutMs`, and native Chrome access
+was not approved. The two focused rating tests pass. A fresh audit of 486 distinct review-source
+URLs found no non-Reddit source over the 25-word excerpt budget.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/resumed-audit.json`, `resumed-native-checks.json`,
+`china/deep-reviews02/`, `china/deep-reviews03/`, and the new
+`international/{quatrefoil-deeper,nobu-yellowtail,casalucio}*`
+manifests, source HTML, visual decisions, uploads and readbacks. Full snapshots are
+`menu-inventory-2026-11-13/main/resumed-{start,after}.json`; international and China item ledgers
+were updated with this continuation's saves and pending source checks.
+
+**Remaining:** 41,701 effective entries lack photos and 54,525 lack reviews. Continue the per-item
+operator/detail/gallery, original-review and targeted Google Images/Maps/Yelp avenues in all lanes;
+the discovered Trip photo queue is dispositioned, but no region is exhausted. Resolve the two duplicate
+photo placements and Guiyuan's per-review street-address identity before attaching those candidates.
+Production synchronization, deployment and translations were not run; translations remain with the
+translation agent.

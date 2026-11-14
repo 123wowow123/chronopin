@@ -108,7 +108,20 @@ For each uncovered item:
    existing media, reviews, item fields, enabled state and specials `regionSlug`. Match local records
    by source; verify complete readbacks and native-pin/landing rendering.
 
-Technical follow-ups from the expanded San Diego pass:
+Technical follow-ups from expanded menu research:
+- Inspect an operator gallery's **Load more** data before treating its first page as complete. Quatrefoil's
+  embedded Instagram feed exposes labelled posts through the public `sbi_load_more_clicked` request;
+  its observed frontend script supplies the feed ID, offset, page, shortcode attributes, post ID and locator
+  nonce. Later pages supplied exact halibut, shrimp, blueberry tart and pavlova photographs absent from
+  the first twenty posts. Retain each original post URL, caption and published date; reject earlier seasonal
+  preparations with different sauces or sides. Casa Lucio's empty gallery similarly loads a public
+  `vc_get_vc_grid_data` grid, but that grid contains celebrity/press photographs and does not establish
+  named dish photos. Read the request shape from the site's own frontend; do not execute downloaded scripts.
+- A platform's exact numeric branch ID does not override contradictory review text. In the November 13
+  follow-up, Guiyuan's listing names Chengdu Road 62 while some attached reviews name 101–103, also
+  independently listed as a banquet venue. Hold those excerpts for per-review street-address disambiguation.
+  Mianchao's Dingcun listing also contains reviews naming Locomotive Market/Tongguling or Bawangling No. 6;
+  reject those for the saved Dingcun Haitangwan No. 2 branch.
 - BentoBox can put the named `<img alt>` inside an `.image-thumbnail` whose parent `style` carries the
   background URL. Pair those elements; a source-less hidden image does not mean there is no photo.
 - Normalize decorative `*`, trailing `photo`, Unicode punctuation and whitespace when discovering
