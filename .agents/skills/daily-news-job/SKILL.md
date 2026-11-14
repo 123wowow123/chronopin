@@ -86,6 +86,12 @@ run limits. State the reason. **Never queue because of an allowlist mismatch alo
 
 ## Guardrails
 
+- **Curator desks:** `src/server/jobs/curators.ts` (`CURATORS`) is the one list of desks the job tools accept, and the
+  `create_pin` description is built from it. Before saying a desk "does not exist", check prod
+  (`python3 scripts/jobs/curators_diff.py`, or `/api/admin/db/User?userName.like=%25Desk%25`). A new desk is added to
+  `CURATORS` in the same change that creates the account. The prod-vs-registry diff was emptied on 2026-11-14
+  (55 desks); `@CityDesk` (412, civic and city events) had been missing.
+
 - Owner instruction (2026-10-30): leave pin translations to the translation agent unless explicitly requested in this conversation. Do not run `sync_translations.py`, `/api/admin/translations` or hand pin translations as part of research/editing; report the handoff.
 
 - Citations in `longFormSummary` are `<cite data-ref="URL"></cite>` tags (rendered as numbered references), never
