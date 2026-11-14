@@ -450,5 +450,53 @@ were updated with this continuation's saves and pending source checks.
 operator/detail/gallery, original-review and targeted Google Images/Maps/Yelp avenues in all lanes;
 the discovered Trip photo queue is dispositioned, but no region is exhausted. Resolve the two duplicate
 photo placements and Guiyuan's per-review street-address identity before attaching those candidates.
-Production synchronization, deployment and translations were not run; translations remain with the
-translation agent.
+At this local checkpoint, production synchronization, deployment and translations had not been run.
+The subsequent production push is recorded below; translations remain with the translation agent.
+
+## Production synchronization — November 13, 2026 — complete
+
+The owner explicitly requested that all ready work be pushed to production, including deployment of
+the rating code. The rating release **4aac0b2f5fd0992dc57b7810883d661a03096aaa** was built successfully
+on GitHub and deployed through `npm run deploy`; no build was run on the VM. The standby was warmed,
+the application was verified, and the standby was stopped normally. The production homepage and
+`/api/main` return HTTP 200.
+
+The audited content plan covers **1,040 production profiles** matched by exact branch source and
+record kind: **7,141 photo additions**, **four photo replacements**, **479 review additions**,
+**65 review updates** (64 excerpt edits and one source publication date), and **two review removals**.
+All 5,906 distinct image URLs passed public Azure checks. No missing branch/item matches or unresolved
+sync conflicts were found. Duplicate-name rows are updated only when counts and identifying fields match.
+Existing production prices, menu dates, enabled flags, regions and unrelated fields are preserved.
+
+Quatrefoil's 18-photo pilot passed its production API readback and native-page check. Its opening month
+was corrected separately to estimated May 2010, preserving author, title, address and coordinates.
+The four Qu’il fait bon Kyoto slice-photo replacements and both ADEGA excerpt removals are already
+verified on production. The Coppa Osteria review date is explicitly checked against the original
+Infatuation article's October 24, 2023 publication date.
+
+All **1,040 profiles are saved and verified**, with no failed readbacks. A fresh full production
+snapshot exactly matches the approved media/review changes. The audit found **zero content
+mismatches, zero changes outside item photos/reviews, and zero enabled/region changes**. The
+separate Quatrefoil pin audit confirms changes only to its date, confidence and supporting reasoning.
+All 486 distinct review-source URLs pass the 25-word aggregate excerpt-budget check.
+
+| Production effective coverage | Before sync | After sync | Change |
+|---|---:|---:|---:|
+| Menu entries | 55,103 | 55,103 | 0 |
+| With photo | 7,973 | 13,402 | +5,429 |
+| With review | 180 | 578 | +398 |
+
+Eight live native pages passed HTTP 200 checks for their photos, Food photos strips and excerpts:
+Quatrefoil 6898, Casa Lucio 6846, Nobu Madrid 6867, Xiehe 14457, Zhang Roasted Duck 14500,
+DIAN 14752, Mianchao Dingcun 14942, and Qu’il fait bon Kyoto 15501. These checks cover
+server-rendered HTML and decoded serialized page data; hydrated browser verification remains blocked
+by the CUA errors recorded above. Initial cold Quatrefoil and Nobu page checks were slow. Final warm
+checks returned HTTP 200 in **0.63 seconds for the homepage**, **0.50 seconds for `/api/main`**, and
+**0.36 seconds for Quatrefoil**. The deployed rating file matches commit `4aac0b2` exactly; the two
+focused rating tests and GitHub image build passed.
+
+The durable plan, complete before/after snapshots, public-blob checks, deployment log and readbacks
+are under `.scrape/menu-inventory-prod-sync-2026-11-13/`. Final evidence includes `final-audit.json`,
+`prod-after.json`, `native-checks.json`, and the separate Quatrefoil pin snapshots. Held and
+unresearched candidates were excluded; the remaining research queue above is still open.
+Translations remain with the translation agent.

@@ -312,6 +312,16 @@ Sapporo, Nagoya, Osaka and Fukuoka (largest gaps first, one agent per group of v
 6. Menu payload caps are 1,000,000 characters (`restaurantSpecialValidation.ts`, `restaurantContentValidation.ts`);
    BAR Shinkai's 1,392-photo menu needed that. Its pin renders ~2,000 lazy images in about 3.6 s.
 
+For an owner-requested all-inventory production sync, snapshot both environments and plan by exact
+branch source, record kind, menu label and item name. Preserve production-only fields and reviews.
+Additive scripts do not carry corrected captions/photos or excerpt edits/deletions: apply those only
+when production still matches the audited earlier value, then retain complete before/after readbacks.
+Duplicate-name rows require matching counts and identical identifying non-media fields. Preflight every
+new public Azure URL, save one venue and check its native page, then resume the bulk saves. Audit the
+entire production after-state for non-media changes, effective coverage and aggregate quote budgets;
+snapshot-only or candidate counts are not a completed sync. November 13 evidence and resumable helper:
+`.scrape/menu-inventory-prod-sync-2026-11-13/`.
+
 Traps seen: specials profiles keep items under `profile.menus`, content under `profile.menu.menus`; local and
 production IDs differ (match by source); list endpoints default to 100 records (pass `limit=1000`); identical
 images on different items (grades, cuts, cocktails) are rejected; Tabelog returns 403 under bursts; Gurunavi was

@@ -1,13 +1,20 @@
 # To Do
 
-## Restaurant menu photos and menu-item reviews, all cities (November 8, 2026)
+## All-cities menu photo and review inventory — updated November 14, 2026
 
-**Done:** San Diego first pass (earlier today, see `docs/restaurant-menu-coverage-2026-11-08.md`), then four lane agents added 10 dish photos and 17 sourced item reviews on production only (Jake's Del Mar, Islands Eastlake, Brigantine La Mesa, Little Frenchie, Piacere Mio, Bay Park Fish Company, Bleu Boheme, STK, Stake Coronado, Cafe Sevilla, RustiCucina, Bock, Mister A's, Queenstown Public House). Evidence: `.scrape/lane2-evidence-2026-11-08.md`, `.scrape/lane3/`, `scripts/restaurants/menuItemReviews.lane0.{ts,json}`.
+[Full inventory, research queue and production audit](docs/restaurant-menu-inventory-2026-11-12.md).
 
-- [ ] **Replay the 27 lane saves to local** by exact source URL (local IDs differ); fold the lane0 review script and JSON into `menuItemReviews.json`.
-- [ ] **San Diego remaining (~3,500 rows over 279 venues):** run ONE venue at a time in your own Chrome tab (parallel agents share one Chrome and broke; the Chrome tool refuses JS on yelp.com, so use get_page_text and the Yelp `?q=<dish>` filter). Start with the named-dish menus: Ciccia Osteria (39 items), Union Kitchen Gaslamp (128), Islands, Chez Loma, Casa Gabriela, Common Stock, Pezzi Del Mio Cuore, Kettner Exchange, Soichi, Queenstown, Sovereign, Duke's La Jolla. Lanes 4-7 in `lane4.json`-`lane7.json` in the 2026-11-08 session scratchpad (regenerate from the "remaining" list in `docs/restaurant-menu-coverage-2026-11-08.json` if gone) were never started. Generic offer rows ("draft beers", "select wines") stay unfilled.
-- [ ] **Every other city has zero photos and zero item reviews on prod:** Tokyo 5,018 items, Sapporo 4,916, Nagoya 3,434, Osaka 3,272, Fukuoka 2,621, Kyoto 934, all 27 China cities (400-900 each), Busan, Seoul, and US cities (Phoenix, Dallas, DC, Columbus, San Jose, Nashville, Chicago, Atlanta, Austin, San Antonio ...). 53 venues with no region tag hold 1,658 items (220 photos, 10 reviews).
-- [ ] **Uncommitted:** this ToDo edit and the lane0 script/JSON; nothing deployed, no translations run.
+**Done — verified November 13:** synced all ready changes across **1,040 production profiles** and deployed rating code as `4aac0b2`. Production effective coverage is **13,402 entries with photos** and **578 with reviews**, out of **55,103 menu entries**, after specials precedence and same-name deduplication.
+
+The push included 7,141 photo additions, four corrected photo replacements, 479 review additions, 65 review updates and two unsupported-review removals. Quatrefoil's opening month was corrected to estimated May 2010. Full preservation/readback audits, source excerpt budgets, public Azure checks, eight native-page checks and the focused rating tests passed.
+
+- [ ] **Remaining photos:** research the 41,701 uncovered effective entries through exact-item operator/detail pages, branch galleries, Google Images/Maps and Yelp. No region is exhausted; resume the per-item ledgers under `.scrape/menu-research-all-2026-11-13/`.
+- [ ] **Remaining reviews:** research original exact-dish sources for the 54,525 entries without reviews; retain criticism and enforce aggregate source quote budgets. Add editorial estimates only for clear dish-specific assessments.
+- [ ] **Held identities:** disambiguate the two approved duplicate-name photo placements and the Guiyuan/Lianhuan street-address gaps before attaching those candidates. Retain the missing native-pin/opening-date gaps recorded in the full inventory.
+- [ ] **Hydrated verification:** finish browser checks of dish viewers, source credits and galleries when CUA works; current production checks cover server-rendered HTML and serialized page data.
+- [ ] **Historical November 8 reconciliation:** confirm whether the 27 production-only lane saves were replayed locally and lane0 was folded into `menuItemReviews.json`; the old task was not independently closed by the latest audit. Evidence: `.scrape/lane2-evidence-2026-11-08.md`, `.scrape/lane3/`, `scripts/restaurants/menuItemReviews.lane0.{ts,json}`.
+
+Translations remain with the translation agent. Future production synchronization and deployment require a new owner request.
 
 ## Project specs panel `PinProject` (November 8, 2026)
 
