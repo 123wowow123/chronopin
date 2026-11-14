@@ -716,3 +716,56 @@ Evidence: `.scrape/menu-inventory-prod-sync-2026-11-14/` contains the exact oper
 preflight, pilot/live-page checks, complete per-profile before/after readbacks, production snapshots,
 `retry-results.json`, `final-audit.json`, `convergence.json` and `native-checks.json`.
 Remaining effective gaps are 41,670 photos and 54,451 reviews; the specific research queue remains open.
+
+
+### Fourth November 14 continuation — researched and synced to production
+
+Inspected 32 review leads across 25 source URLs on the next 20 China venues. Saved **11 review
+associations on five profiles**: Zhong dumplings, Pan Sun Shi garlic pork, GLITTERING grilled eel,
+Jiang You Ji beef fried rice and Luban Zhang scallion sea cucumber. Exact saved/API street addresses
+match. One shrimp-cake account remains held because it names Huangcuo Beach while the saved Hao Shi
+Lai branch is on Hubin South Road. Twenty other leads were not selected: menu lists, generic venue
+praise, hearsay, ambiguous publisher translations, and differing dishes such as sea-urchin wontons
+versus plain sea urchin or ribs rice versus standalone ribs. All excerpts use the publisher's English
+translation, checked against the original Chinese. Eleven additional editorial estimate keys are
+ready locally; there was no code deployment or translation run.
+
+Saved **28 photo associations across four profiles**, using 12 distinct operator photographs:
+Comenocoto Tenjin's five labelled rice balls in both the English and Japanese menu sections, plus
+matching saves in its overriding specials menus (20 associations); Niku to Tamago Shimbashi's three
+labelled omurice dishes (three ordinary-menu associations); and new eight's daikon, hamaguri, bottled
+craft beer and two position-captioned broth-shochu drinks (five associations). New eight's existing
+game-skewer photograph was preserved. The shared drink and beer photographs disclose the other
+pictured drink/food and do not promise extras or portion counts. Avocado-salsa omurice was not used
+for garlic-tomato variants, and side/topping portions were not inferred.
+
+Sanrio House Nagoya's initial release contains merchandise rather than useful food photographs.
+Following the saved menu URL found the October 15 detailed branch-menu release, but the three
+four-character menu images and limited Hello Kitty crepe image are illustrations, not photographs.
+All four were inspected and held; no illustration closed a photo gap. Original branch food photos
+through operator social galleries and firsthand reports remain the next steps.
+
+This batch touched nine profiles and increases effective coverage by **15 photographed entries and
+five reviewed entries**. Comenocoto's specials saves make its photos visible; Niku to Tamago's existing
+specials photos already won over the newly filled ordinary rows. Production and local coverage now
+match at **13,448 photos and 657 reviews out of 55,103 entries**. Since the November 13 checkpoint,
+the four November 14 passes have saved 122 review associations and 61 photo associations across
+57 profiles, closing 46 effective photo gaps and 79 effective review gaps.
+
+The production plan found no conflicts or unmatched records. All 12 new Azure URLs passed public
+preflight; a pilot profile and native page passed before the remaining saves. Full current-revision
+readbacks, whole-inventory preservation and all 601 aggregate review-source quote budgets pass.
+A fresh comparison converges to zero pending changes. Nine profile-specific native checks across
+eight distinct public pins pass (72 photo URL checks and 16 excerpt checks). Native verification now
+uses the visible merged menu after enabled specials precedence; hidden ordinary-menu media are
+verified through API readbacks instead of falsely requiring them in rendered HTML. These checks
+verify server-rendered/serialized content, not hydrated interactions. Two focused rating tests,
+ESLint and scoped diff whitespace checks pass.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/nov14d/`, `china/deep-reviews07/`, snapshots
+`.scrape/menu-inventory-2026-11-13/main/nov14d-{start,after}.json`, and
+`.scrape/menu-inventory-prod-sync-2026-11-14d/` (plan, public blobs, pilot, full readbacks, production
+snapshots, final audit, convergence and native checks). China/Japan item ledgers retain the saves,
+source checks and specific next steps. Remaining effective gaps: **41,655 photos and 54,446 reviews**.
+The broader research queue and hydrated gallery/landing-viewer checks remain open. The 107 November 14
+editorial estimate keys remain separate code work; translations remain with the translation agent.

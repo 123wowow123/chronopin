@@ -34,7 +34,7 @@ Never copy a search-snippet number: open the page. Non-election-day races (Newar
 ## 3. Graph: `PUT /api/pins/:id/performance`
 
 Body `{charts:[{title, unit:"% of votes", higherIsBetter:true, note, sourceUrl, bars:[{label, value, highlight}]}]}`.
-Each bar carries `party` (`D` blue, `R` red, `I` grey, `G` green, `L` gold; owner 2026-11-13: bar colour = party). Use the party NBC prints; for a nonpartisan race say so in the note. A server older than the `PerfBar.party` build silently drops the field, so deploy first (`scripts/boundaries/electionPartyBars-2026-11-13.sh` re-saves the three Nov 3 charts). Winner bar `highlight: true`, 2 to MAX bars (top 3 is enough), put raw votes and "% in" in `note`. Needs admin/author token
+Each bar carries `party` (`D` blue, `R` red, `I` grey, `G` green, `L` gold; owner 2026-11-13: bar colour = party). Use the party NBC prints; for a nonpartisan race (LA, Oakland) set NO party: neutral bars (winner accent, others grey), and say so in the note (owner 2026-11-13). A server older than the `PerfBar.party` build silently drops the field, so deploy first (`scripts/boundaries/electionPartyBars-2026-11-13.sh` re-saves the three Nov 3 charts). Winner bar `highlight: true`, 2 to MAX bars (top 3 is enough), put raw votes and "% in" in `note`. Needs admin/author token
 (`.scrape/admin.token` for prod; refresh with `admin-login-refresh`). Never print tokens.
 
 Pins tagged `Election` render this chart in the left column under the text (page.tsx `electionPerf`); every other pin keeps

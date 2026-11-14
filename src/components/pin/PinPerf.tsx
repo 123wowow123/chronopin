@@ -95,8 +95,8 @@ function Chart({
 }) {
   const chart = { ...base, ...base.i18n?.[locale] };
   const max = Math.max(...chart.bars.map((bar) => bar.value)) || 1;
-  // A party-coloured chart (an election result) names people, so its labels get 40% of the row and wrap rather than truncate.
-  const named = chart.bars.some((bar) => bar.party);
+  // A chart that names people (party-coloured election bars, or any long label) gives labels 40% of the row and wraps rather than truncates.
+  const named = chart.bars.some((bar) => bar.party) || chart.bars.some((bar) => bar.label.length > 24);
   const money = isMoneyUnit(chart.unit);
   return (
     <figure className="surface rounded-lg px-3 py-2">

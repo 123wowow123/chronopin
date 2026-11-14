@@ -3,6 +3,19 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 14 fourth continuation: exact-dish original review assessments.
+  "The chili oil seasoning is rich in aroma, bright red in color, sweet and salty, and delicious.": 4,
+  "Delicious and affordable, when you come to Chengdu, Sichuan, you must come to People's Park to eat Zhong Dumplings.": 4,
+  "Zhong Dumplings, a specialty snack of Chengdu, features a chewy dumpling skin and a delicious filling, making it well worth trying.": 4,
+  "Must-try snacks in Chengdu: Zhong Dumplings and Three Cannons.": 4.5,
+  "Go to People's Park and eat Zhong Dumplings, they're incredibly delicious!": 4.5,
+  "My favorite is the garlic pork, it has a very authentic taste and the chef’s cooking skills are amazing.": 4.5,
+  "the grilled eel had crispy skin and tender eel meat, and the Japanese flavor was good": 4,
+  "the grilled eel was very fresh and tender.": 4,
+  "Beef fried rice, beef offal and vermicelli soup... Oh! So delicious!": 4.5,
+  "The braised sea cucumber with scallions at the Luban Zhang restaurant on Mazhuang Street is quite good and delicious.": 4,
+  "Their lean sea cucumber is quite authentic and delicious.": 4,
+
   // November 14 third continuation: verified dish opinions, including criticism.
   "The eggplant with salted egg yolk is salty and fragrant, except that it is a little oily.": 3.5,
   "The stir-fried shrimp was a little fishy, ​​but the bouncy texture was quite nice": 3.5,
