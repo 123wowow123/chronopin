@@ -57,3 +57,13 @@ Run: `npx tsx scripts/boundaries/import.ts --manifest M.json --base https://www.
 - The import checks the pin id AND exact title in that environment: local DB will not have prod pin ids.
 - `find_pins` before creating; a 409 returns the existing id, update it instead.
 - Thin-pin flags (short text, one source) come back on create; add a second sourced outlet when one exists rather than padding.
+
+## Election side panel and landing page (2026-11-14)
+
+A search for the word `election` (optionally with a year, `election 2026`) opens a side panel (`src/components/election/ElectionPanel.tsx`)
+with Senate and House control, linking to `/election/<year>` (landing page: control bars, every Senate race, House battlegrounds, House
+seats by state, sources) and to the year's hub pin. Figures live in `src/server/data/elections.json`; refresh them with
+`curl -sL -A "Mozilla/5.0"` of NBC's `/politics/2026-elections/senate-results` and `house-results`, then
+`python3 -I scripts/election/parseNbc.py senate.html house.html 2026` (party and winner come from the table's HTML classes, not the flattened text).
+Add a new year by running the parser with that year and setting its `pins` (hub pin id, Senate results pin) in the JSON.
+The file ships with the build: a refresh reaches production only with a deploy.

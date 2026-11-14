@@ -322,7 +322,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {pin.tags?.some((tag) => tag.name === 'Earnings') ? <PinEarningsTrends pinId={pin.id} /> : null}
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
-          <PinEciChart pinId={pin.id} has={modelChart} className="mt-4" />
+          <PinEciChart pinId={pin.id} has={modelChart} since={2025} className="mt-4" />
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {perf && !electionPerf ? <PinPerf perf={perf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}

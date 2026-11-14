@@ -19,6 +19,7 @@ import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
 import { HttpError } from '../util/httpError';
 import { resolveCreatedSince } from '../util/createdFilter';
+import { searchedElection } from './elections';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
 import { timeZoneOrUtc } from '../viewer';
 import { withCompanyNames } from '../companyNames';
@@ -193,7 +194,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
   }
 
   const pins = await Pins.querySearchRanked(ranked, request.userId || 0);
-  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query), attachSearchedPerson(pins, query), attachIndustryForecasts(pins, query)]);
+  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query), attachSearchedPerson(pins, query), attachIndustryForecasts(pins, query), attachSearchedElection(pins, query)]);
   return { pins, links };
 }
 
@@ -311,6 +312,14 @@ async function attachIndustryForecasts(pins: Pins, query: SearchQuery) {
   if (!query.tags.length) return;
   const slugs = await forecastSlugsForNames(query.tags);
   if (slugs.length) (pins as Pins & { industries?: string[] }).industries = slugs;
+}
+
+// A search for the word "election" (optionally with a year) gets the election results panel:
+// who controls each chamber, with a link to the year's landing page.
+function attachSearchedElection(pins: Pins, query: SearchQuery) {
+  if (query.companies.length || query.userNames.length || query.people.length) return;
+  const election = searchedElection(query.text);
+  if (election) (pins as Pins & { election?: unknown }).election = election;
 }
 
 // How many of a company's comments its mood is read from. Plenty for a trend

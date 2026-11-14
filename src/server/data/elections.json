@@ -1,0 +1,1393 @@
+{
+ "years": [
+  {
+   "year": 2026,
+   "updated": {
+    "senate": "8:36 AM ET",
+    "house": "8:36 AM ET",
+    "checked": "2026-11-14"
+   },
+   "source": {
+    "label": "NBC News, data provided by The Associated Press; projections by the NBC News Decision Desk",
+    "senateUrl": "https://www.nbcnews.com/politics/2026-elections/senate-results",
+    "houseUrl": "https://www.nbcnews.com/politics/2026-elections/house-results"
+   },
+   "senate": {
+    "democrats": 55,
+    "independents": 0,
+    "republicans": 44,
+    "majority": 51,
+    "projectedWinner": "D",
+    "races": [
+     {
+      "state": "Alabama",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Moore",
+        "party": "R",
+        "pct": 54.7
+       },
+       {
+        "name": "Wess",
+        "party": "D",
+        "pct": 45.3
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Alaska",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Peltola",
+        "party": "D",
+        "pct": 49.8
+       },
+       {
+        "name": "Sullivan",
+        "party": "R",
+        "pct": 46.1
+       }
+      ],
+      "pctIn": 96.2,
+      "winner": null
+     },
+     {
+      "state": "Arkansas",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Cotton",
+        "party": "R",
+        "pct": 54.3
+       },
+       {
+        "name": "Shoffner",
+        "party": "D",
+        "pct": 42.4
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Colorado",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Hickenlooper",
+        "party": "D",
+        "pct": 60.5
+       },
+       {
+        "name": "Baisley",
+        "party": "R",
+        "pct": 35.0
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Delaware",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Coons",
+        "party": "D",
+        "pct": 63.4
+       },
+       {
+        "name": "Katz",
+        "party": "R",
+        "pct": 36.3
+       }
+      ],
+      "pctIn": 100.0,
+      "winner": "D"
+     },
+     {
+      "state": "Florida",
+      "special": true,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Moody",
+        "party": "R",
+        "pct": 50.9
+       },
+       {
+        "name": "Nixon",
+        "party": "D",
+        "pct": 48.0
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Georgia",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Ossoff",
+        "party": "D",
+        "pct": 59.0
+       },
+       {
+        "name": "Collins",
+        "party": "R",
+        "pct": 41.0
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Idaho",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Risch",
+        "party": "R",
+        "pct": 56.5
+       },
+       {
+        "name": "Achilles",
+        "party": "I",
+        "pct": 33.6
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Illinois",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Stratton",
+        "party": "D",
+        "pct": 61.9
+       },
+       {
+        "name": "Tracy",
+        "party": "R",
+        "pct": 36.5
+       }
+      ],
+      "pctIn": 98.2,
+      "winner": "D"
+     },
+     {
+      "state": "Iowa",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Turek",
+        "party": "D",
+        "pct": 50.6
+       },
+       {
+        "name": "Hinson",
+        "party": "R",
+        "pct": 46.4
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Kansas",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Hamilton",
+        "party": "D",
+        "pct": 51.0
+       },
+       {
+        "name": "Marshall",
+        "party": "R",
+        "pct": 46.0
+       }
+      ],
+      "pctIn": 98.7,
+      "winner": "D"
+     },
+     {
+      "state": "Kentucky",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Barr",
+        "party": "R",
+        "pct": 55.0
+       },
+       {
+        "name": "Booker",
+        "party": "D",
+        "pct": 42.9
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Louisiana",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Letlow",
+        "party": "R",
+        "pct": 50.9
+       },
+       {
+        "name": "Davis",
+        "party": "D",
+        "pct": 49.1
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Maine",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Jackson",
+        "party": "D",
+        "pct": 53.1
+       },
+       {
+        "name": "Collins",
+        "party": "R",
+        "pct": 46.9
+       }
+      ],
+      "pctIn": 97.4,
+      "winner": "D"
+     },
+     {
+      "state": "Massachusetts",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Markey",
+        "party": "D",
+        "pct": 63.4
+       },
+       {
+        "name": "Deaton",
+        "party": "R",
+        "pct": 32.1
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Michigan",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "El-Sayed",
+        "party": "D",
+        "pct": 52.5
+       },
+       {
+        "name": "Rogers",
+        "party": "R",
+        "pct": 45.5
+       }
+      ],
+      "pctIn": 98.3,
+      "winner": "D"
+     },
+     {
+      "state": "Minnesota",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Flanagan",
+        "party": "D",
+        "pct": 53.7
+       },
+       {
+        "name": "Tafoya",
+        "party": "R",
+        "pct": 43.6
+       }
+      ],
+      "pctIn": 98.9,
+      "winner": "D"
+     },
+     {
+      "state": "Mississippi",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Colom",
+        "party": "D",
+        "pct": 49.3
+       },
+       {
+        "name": "Hyde-Smith",
+        "party": "R",
+        "pct": 48.6
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Montana",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Alme",
+        "party": "R",
+        "pct": 48.2
+       },
+       {
+        "name": "Bankhead",
+        "party": "D",
+        "pct": 12.3
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Nebraska",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Ricketts",
+        "party": "R",
+        "pct": 50.0
+       },
+       {
+        "name": "Osborn",
+        "party": "I",
+        "pct": 44.1
+       }
+      ],
+      "pctIn": 98.5,
+      "winner": "R"
+     },
+     {
+      "state": "New Hampshire",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Pappas",
+        "party": "D",
+        "pct": 55.9
+       },
+       {
+        "name": "Sununu",
+        "party": "R",
+        "pct": 42.2
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "New Jersey",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Booker",
+        "party": "D",
+        "pct": 62.5
+       },
+       {
+        "name": "Murphy",
+        "party": "R",
+        "pct": 34.9
+       }
+      ],
+      "pctIn": 98.1,
+      "winner": "D"
+     },
+     {
+      "state": "New Mexico",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Lujan",
+        "party": "D",
+        "pct": 63.3
+       },
+       {
+        "name": "Marker",
+        "party": "R",
+        "pct": 36.7
+       }
+      ],
+      "pctIn": 98.5,
+      "winner": "D"
+     },
+     {
+      "state": "North Carolina",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Cooper",
+        "party": "D",
+        "pct": 58.8
+       },
+       {
+        "name": "Whatley",
+        "party": "R",
+        "pct": 39.1
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Ohio",
+      "special": true,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Brown",
+        "party": "D",
+        "pct": 50.0
+       },
+       {
+        "name": "Husted",
+        "party": "R",
+        "pct": 45.2
+       }
+      ],
+      "pctIn": 97.8,
+      "winner": "D"
+     },
+     {
+      "state": "Oklahoma",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Hern",
+        "party": "R",
+        "pct": 57.2
+       },
+       {
+        "name": "Thomas",
+        "party": "D",
+        "pct": 39.3
+       }
+      ],
+      "pctIn": 100.0,
+      "winner": "R"
+     },
+     {
+      "state": "Oregon",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Merkley",
+        "party": "D",
+        "pct": 58.0
+       },
+       {
+        "name": "Smith",
+        "party": "R",
+        "pct": 38.7
+       }
+      ],
+      "pctIn": 94.0,
+      "winner": "D"
+     },
+     {
+      "state": "Rhode Island",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Reed",
+        "party": "D",
+        "pct": 66.8
+       },
+       {
+        "name": "McKay",
+        "party": "R",
+        "pct": 29.3
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "South Carolina",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Andrews",
+        "party": "D",
+        "pct": 51.1
+       },
+       {
+        "name": "Graham",
+        "party": "R",
+        "pct": 46.6
+       }
+      ],
+      "pctIn": 100.0,
+      "winner": "D"
+     },
+     {
+      "state": "South Dakota",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Rounds",
+        "party": "R",
+        "pct": 60.5
+       },
+       {
+        "name": "Bengs",
+        "party": "I",
+        "pct": 39.5
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Tennessee",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Hagerty",
+        "party": "R",
+        "pct": 55.1
+       },
+       {
+        "name": "Bradshaw",
+        "party": "D",
+        "pct": 42.9
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Texas",
+      "special": false,
+      "flip": true,
+      "candidates": [
+       {
+        "name": "Talarico",
+        "party": "D",
+        "pct": 55.1
+       },
+       {
+        "name": "Paxton",
+        "party": "R",
+        "pct": 43.0
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "Virginia",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Warner",
+        "party": "D",
+        "pct": 61.5
+       },
+       {
+        "name": "Mizusawa",
+        "party": "R",
+        "pct": 38.3
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "D"
+     },
+     {
+      "state": "West Virginia",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Moore Capito",
+        "party": "R",
+        "pct": 58.3
+       },
+       {
+        "name": "Fetty Anderson",
+        "party": "D",
+        "pct": 37.9
+       }
+      ],
+      "pctIn": 99.0,
+      "winner": "R"
+     },
+     {
+      "state": "Wyoming",
+      "special": false,
+      "flip": false,
+      "candidates": [
+       {
+        "name": "Hageman",
+        "party": "R",
+        "pct": 64.9
+       },
+       {
+        "name": "Byrd",
+        "party": "D",
+        "pct": 34.6
+       }
+      ],
+      "pctIn": 100.0,
+      "winner": "R"
+     }
+    ]
+   },
+   "house": {
+    "democrats": 256,
+    "republicans": 170,
+    "independents": 0,
+    "majority": 218,
+    "estimate": {
+     "democrats": 259,
+     "republicans": 176
+    },
+    "projectedWinner": "D",
+    "democraticFlips": 44,
+    "democraticNetGain": 41,
+    "republicanFlips": 44,
+    "battlegrounds": [
+     {
+      "state": "Arizona",
+      "district": 1,
+      "winnerParty": "D",
+      "winner": "Shah",
+      "winnerPct": 52.4,
+      "otherParty": "R",
+      "other": "Feely",
+      "otherPct": 45.4
+     },
+     {
+      "state": "Arizona",
+      "district": 6,
+      "winnerParty": "D",
+      "winner": "Mendoza",
+      "winnerPct": 53.0,
+      "otherParty": "R",
+      "other": "Ciscomani",
+      "otherPct": 44.9
+     },
+     {
+      "state": "California",
+      "district": 22,
+      "winnerParty": "D",
+      "winner": "Villegas",
+      "winnerPct": 67.8,
+      "otherParty": "R",
+      "other": "Valadao",
+      "otherPct": 32.2
+     },
+     {
+      "state": "Colorado",
+      "district": 8,
+      "winnerParty": "D",
+      "winner": "Rutinel",
+      "winnerPct": 55.5,
+      "otherParty": "R",
+      "other": "Evans",
+      "otherPct": 40.6
+     },
+     {
+      "state": "Florida",
+      "district": 25,
+      "winnerParty": "D",
+      "winner": "Moskowitz",
+      "winnerPct": 51.3,
+      "otherParty": "R",
+      "other": "Singer",
+      "otherPct": 46.6
+     },
+     {
+      "state": "Iowa",
+      "district": 1,
+      "winnerParty": "D",
+      "winner": "Bohannan",
+      "winnerPct": 53.0,
+      "otherParty": "R",
+      "other": "Miller-Meeks",
+      "otherPct": 43.4
+     },
+     {
+      "state": "Iowa",
+      "district": 3,
+      "winnerParty": "D",
+      "winner": "Trone Garriott",
+      "winnerPct": 53.6,
+      "otherParty": "R",
+      "other": "Nunn",
+      "otherPct": 46.4
+     },
+     {
+      "state": "Maine",
+      "district": 2,
+      "winnerParty": "R",
+      "winner": "LePage",
+      "winnerPct": 50.8,
+      "otherParty": "D",
+      "other": "Dunlap",
+      "otherPct": 49.2
+     },
+     {
+      "state": "Michigan",
+      "district": 4,
+      "winnerParty": "D",
+      "winner": "McCann",
+      "winnerPct": 50.1,
+      "otherParty": "R",
+      "other": "Huizenga",
+      "otherPct": 48.3
+     },
+     {
+      "state": "Michigan",
+      "district": 7,
+      "winnerParty": "D",
+      "winner": "Lawrence",
+      "winnerPct": 51.0,
+      "otherParty": "R",
+      "other": "Barrett",
+      "otherPct": 47.7
+     },
+     {
+      "state": "Michigan",
+      "district": 10,
+      "winnerParty": "D",
+      "winner": "Hines",
+      "winnerPct": 52.4,
+      "otherParty": "R",
+      "other": "Bouchard",
+      "otherPct": 45.3
+     },
+     {
+      "state": "Nebraska",
+      "district": 2,
+      "winnerParty": "D",
+      "winner": "Powell",
+      "winnerPct": 56.7,
+      "otherParty": "R",
+      "other": "Harding",
+      "otherPct": 40.7
+     },
+     {
+      "state": "New Jersey",
+      "district": 7,
+      "winnerParty": "D",
+      "winner": "Bennett",
+      "winnerPct": 57.5,
+      "otherParty": "R",
+      "other": "Kean Jr.",
+      "otherPct": 40.9
+     },
+     {
+      "state": "New York",
+      "district": 17,
+      "winnerParty": "D",
+      "winner": "Conley",
+      "winnerPct": 53.0,
+      "otherParty": "R",
+      "other": "Lawler",
+      "otherPct": 46.9
+     },
+     {
+      "state": "North Carolina",
+      "district": 1,
+      "winnerParty": "D",
+      "winner": "Davis",
+      "winnerPct": 50.1,
+      "otherParty": "R",
+      "other": "Buckhout",
+      "otherPct": 46.7
+     },
+     {
+      "state": "North Carolina",
+      "district": 11,
+      "winnerParty": "D",
+      "winner": "Ager",
+      "winnerPct": 57.1,
+      "otherParty": "R",
+      "other": "Balkcom",
+      "otherPct": 41.3
+     },
+     {
+      "state": "Ohio",
+      "district": 7,
+      "winnerParty": "D",
+      "winner": "Poindexter",
+      "winnerPct": 54.9,
+      "otherParty": "R",
+      "other": "Miller",
+      "otherPct": 45.1
+     },
+     {
+      "state": "Ohio",
+      "district": 9,
+      "winnerParty": "D",
+      "winner": "Kaptur",
+      "winnerPct": 52.7,
+      "otherParty": "R",
+      "other": "Merrin",
+      "otherPct": 47.3
+     },
+     {
+      "state": "Pennsylvania",
+      "district": 1,
+      "winnerParty": "D",
+      "winner": "Harvie",
+      "winnerPct": 52.9,
+      "otherParty": "R",
+      "other": "Fitzpatrick",
+      "otherPct": 47.1
+     },
+     {
+      "state": "Pennsylvania",
+      "district": 7,
+      "winnerParty": "D",
+      "winner": "Brooks",
+      "winnerPct": 56.2,
+      "otherParty": "R",
+      "other": "Mackenzie",
+      "otherPct": 43.8
+     },
+     {
+      "state": "Pennsylvania",
+      "district": 8,
+      "winnerParty": "D",
+      "winner": "Cognetti",
+      "winnerPct": 54.5,
+      "otherParty": "R",
+      "other": "Bresnahan",
+      "otherPct": 45.5
+     },
+     {
+      "state": "Pennsylvania",
+      "district": 10,
+      "winnerParty": "D",
+      "winner": "Stelson",
+      "winnerPct": 55.2,
+      "otherParty": "R",
+      "other": "Perry",
+      "otherPct": 44.8
+     },
+     {
+      "state": "Texas",
+      "district": 28,
+      "winnerParty": "D",
+      "winner": "Cuellar",
+      "winnerPct": 65.8,
+      "otherParty": "R",
+      "other": "Tijerina",
+      "otherPct": 29.6
+     },
+     {
+      "state": "Texas",
+      "district": 34,
+      "winnerParty": "D",
+      "winner": "Gonzalez",
+      "winnerPct": 55.6,
+      "otherParty": "R",
+      "other": "Flores",
+      "otherPct": 39.8
+     },
+     {
+      "state": "Virginia",
+      "district": 1,
+      "winnerParty": "D",
+      "winner": "Taylor",
+      "winnerPct": 51.3,
+      "otherParty": "R",
+      "other": "Wittman",
+      "otherPct": 48.4
+     },
+     {
+      "state": "Virginia",
+      "district": 2,
+      "winnerParty": "D",
+      "winner": "Luria",
+      "winnerPct": 53.2,
+      "otherParty": "R",
+      "other": "Kiggans",
+      "otherPct": 44.3
+     },
+     {
+      "state": "Washington",
+      "district": 3,
+      "winnerParty": "D",
+      "winner": "Gluesenkamp Perez",
+      "winnerPct": 53.7,
+      "otherParty": "R",
+      "other": "Braun",
+      "otherPct": 45.4
+     },
+     {
+      "state": "Wisconsin",
+      "district": 3,
+      "winnerParty": "D",
+      "winner": "Cooke",
+      "winnerPct": 52.4,
+      "otherParty": "R",
+      "other": "Van Orden",
+      "otherPct": 45.8
+     }
+    ],
+    "states": [
+     {
+      "code": "AL",
+      "state": "Alabama",
+      "seats": 7,
+      "democrats": 2,
+      "republicans": 5,
+      "uncalled": 0
+     },
+     {
+      "code": "AK",
+      "state": "Alaska",
+      "seats": 1,
+      "democrats": 0,
+      "republicans": 0,
+      "uncalled": 1
+     },
+     {
+      "code": "AZ",
+      "state": "Arizona",
+      "seats": 9,
+      "democrats": 5,
+      "republicans": 4,
+      "uncalled": 0
+     },
+     {
+      "code": "AR",
+      "state": "Arkansas",
+      "seats": 4,
+      "democrats": 0,
+      "republicans": 4,
+      "uncalled": 0
+     },
+     {
+      "code": "CA",
+      "state": "California",
+      "seats": 52,
+      "democrats": 48,
+      "republicans": 3,
+      "uncalled": 1
+     },
+     {
+      "code": "CO",
+      "state": "Colorado",
+      "seats": 8,
+      "democrats": 7,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "CT",
+      "state": "Connecticut",
+      "seats": 5,
+      "democrats": 5,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "DE",
+      "state": "Delaware",
+      "seats": 1,
+      "democrats": 1,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "FL",
+      "state": "Florida",
+      "seats": 28,
+      "democrats": 8,
+      "republicans": 20,
+      "uncalled": 0
+     },
+     {
+      "code": "GA",
+      "state": "Georgia",
+      "seats": 14,
+      "democrats": 5,
+      "republicans": 9,
+      "uncalled": 0
+     },
+     {
+      "code": "HI",
+      "state": "Hawaii",
+      "seats": 2,
+      "democrats": 2,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "ID",
+      "state": "Idaho",
+      "seats": 2,
+      "democrats": 0,
+      "republicans": 2,
+      "uncalled": 0
+     },
+     {
+      "code": "IL",
+      "state": "Illinois",
+      "seats": 17,
+      "democrats": 14,
+      "republicans": 3,
+      "uncalled": 0
+     },
+     {
+      "code": "IN",
+      "state": "Indiana",
+      "seats": 9,
+      "democrats": 3,
+      "republicans": 6,
+      "uncalled": 0
+     },
+     {
+      "code": "IA",
+      "state": "Iowa",
+      "seats": 4,
+      "democrats": 3,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "KS",
+      "state": "Kansas",
+      "seats": 4,
+      "democrats": 1,
+      "republicans": 3,
+      "uncalled": 0
+     },
+     {
+      "code": "KY",
+      "state": "Kentucky",
+      "seats": 6,
+      "democrats": 2,
+      "republicans": 4,
+      "uncalled": 0
+     },
+     {
+      "code": "LA",
+      "state": "Louisiana",
+      "seats": 6,
+      "democrats": 1,
+      "republicans": 3,
+      "uncalled": 2
+     },
+     {
+      "code": "ME",
+      "state": "Maine",
+      "seats": 2,
+      "democrats": 1,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "MD",
+      "state": "Maryland",
+      "seats": 8,
+      "democrats": 7,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "MA",
+      "state": "Massachusetts",
+      "seats": 9,
+      "democrats": 9,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "MI",
+      "state": "Michigan",
+      "seats": 13,
+      "democrats": 9,
+      "republicans": 4,
+      "uncalled": 0
+     },
+     {
+      "code": "MN",
+      "state": "Minnesota",
+      "seats": 8,
+      "democrats": 4,
+      "republicans": 3,
+      "uncalled": 1
+     },
+     {
+      "code": "MS",
+      "state": "Mississippi",
+      "seats": 4,
+      "democrats": 1,
+      "republicans": 3,
+      "uncalled": 0
+     },
+     {
+      "code": "MO",
+      "state": "Missouri",
+      "seats": 8,
+      "democrats": 3,
+      "republicans": 5,
+      "uncalled": 0
+     },
+     {
+      "code": "MT",
+      "state": "Montana",
+      "seats": 2,
+      "democrats": 1,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "NE",
+      "state": "Nebraska",
+      "seats": 3,
+      "democrats": 1,
+      "republicans": 2,
+      "uncalled": 0
+     },
+     {
+      "code": "NV",
+      "state": "Nevada",
+      "seats": 4,
+      "democrats": 4,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "NH",
+      "state": "New Hampshire",
+      "seats": 2,
+      "democrats": 2,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "NJ",
+      "state": "New Jersey",
+      "seats": 12,
+      "democrats": 11,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "NM",
+      "state": "New Mexico",
+      "seats": 3,
+      "democrats": 3,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "NY",
+      "state": "New York",
+      "seats": 26,
+      "democrats": 20,
+      "republicans": 6,
+      "uncalled": 0
+     },
+     {
+      "code": "NC",
+      "state": "North Carolina",
+      "seats": 14,
+      "democrats": 9,
+      "republicans": 2,
+      "uncalled": 3
+     },
+     {
+      "code": "ND",
+      "state": "North Dakota",
+      "seats": 1,
+      "democrats": 0,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "OH",
+      "state": "Ohio",
+      "seats": 15,
+      "democrats": 8,
+      "republicans": 7,
+      "uncalled": 0
+     },
+     {
+      "code": "OK",
+      "state": "Oklahoma",
+      "seats": 5,
+      "democrats": 0,
+      "republicans": 5,
+      "uncalled": 0
+     },
+     {
+      "code": "OR",
+      "state": "Oregon",
+      "seats": 6,
+      "democrats": 5,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "PA",
+      "state": "Pennsylvania",
+      "seats": 17,
+      "democrats": 11,
+      "republicans": 6,
+      "uncalled": 0
+     },
+     {
+      "code": "RI",
+      "state": "Rhode Island",
+      "seats": 2,
+      "democrats": 2,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "SC",
+      "state": "South Carolina",
+      "seats": 7,
+      "democrats": 2,
+      "republicans": 5,
+      "uncalled": 0
+     },
+     {
+      "code": "SD",
+      "state": "South Dakota",
+      "seats": 1,
+      "democrats": 0,
+      "republicans": 1,
+      "uncalled": 0
+     },
+     {
+      "code": "TN",
+      "state": "Tennessee",
+      "seats": 9,
+      "democrats": 0,
+      "republicans": 8,
+      "uncalled": 1
+     },
+     {
+      "code": "TX",
+      "state": "Texas",
+      "seats": 38,
+      "democrats": 14,
+      "republicans": 24,
+      "uncalled": 0
+     },
+     {
+      "code": "UT",
+      "state": "Utah",
+      "seats": 4,
+      "democrats": 1,
+      "republicans": 3,
+      "uncalled": 0
+     },
+     {
+      "code": "VT",
+      "state": "Vermont",
+      "seats": 1,
+      "democrats": 1,
+      "republicans": 0,
+      "uncalled": 0
+     },
+     {
+      "code": "VA",
+      "state": "Virginia",
+      "seats": 11,
+      "democrats": 8,
+      "republicans": 3,
+      "uncalled": 0
+     },
+     {
+      "code": "WA",
+      "state": "Washington",
+      "seats": 10,
+      "democrats": 8,
+      "republicans": 2,
+      "uncalled": 0
+     },
+     {
+      "code": "WV",
+      "state": "West Virginia",
+      "seats": 2,
+      "democrats": 0,
+      "republicans": 2,
+      "uncalled": 0
+     },
+     {
+      "code": "WI",
+      "state": "Wisconsin",
+      "seats": 8,
+      "democrats": 4,
+      "republicans": 4,
+      "uncalled": 0
+     },
+     {
+      "code": "WY",
+      "state": "Wyoming",
+      "seats": 1,
+      "democrats": 0,
+      "republicans": 1,
+      "uncalled": 0
+     }
+    ]
+   },
+   "pins": {
+    "hub": 1648,
+    "senate": 21052
+   }
+  }
+ ]
+}

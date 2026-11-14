@@ -821,3 +821,45 @@ Evidence: `.scrape/menu-research-all-2026-11-13/nov14e/`, `china/deep-reviews08/
 final audit, convergence and native checks). China/Japan ledgers retain source checks, saves,
 rejections and next steps. Remaining gaps: **41,634 photos and 54,436 reviews**. The 121 November 14
 editorial estimate keys remain separate code work; no deployment or translation run occurred.
+
+
+### Sixth November 14 continuation — researched and synced to production
+
+Inspected exact-dish Trip.com leads for eight China profiles and added **27 review associations**.
+The saved excerpts retain both praise and criticism, including a low assessment for West Lake
+vinegar fish, mixed opinions about Tianjin jianbing, and portion criticism for pork intestines.
+Original Chinese and publisher translations were checked together; street-address identity was
+verified, including Chongqing Xiao Peng Fei Chang Ji's Trip.com branch address. Five descriptive
+excerpts without an explicit assessment were left unscored. Editorial estimates are derived from
+the excerpt and remain distinct from publisher ratings. The sixth continuation adds 22 local
+estimate keys.
+
+Added **41 photo associations** from three Japanese operator press releases, using **29 distinct
+public Azure images**: eleven Randy's Donuts Solamachi products, sixteen Tou Sakae menu items, and
+six Gindaco Highball Sakaba Kita24 images. Eight Randy's items were mirrored into its enabled,
+overriding specials profile. Captions identify chain product photography and distinguish menu items,
+optional upgrades, portions, and foods or drinks appearing together in composite images. The ended
+Randy's giveaway is identified as historical, with no offer reactivated. Tou's cold variant image
+was omitted where it conflicted with the warm dish heading; a precise photograph remains a gap.
+
+Production and local effective coverage now agree at **13,498 photographed entries and 683 reviewed
+entries out of 55,103**. This pass closes 29 photo gaps and 16 review gaps; since the November 13
+checkpoint, the five November 14 continuations have added 138 photo associations and 164 review
+associations and closed 96 effective photo gaps and 105 effective review gaps. Remaining effective
+gaps are **41,605 photos and 54,420 reviews**. The profile plan had no conflicts or unmatched
+records. All 29 public image blobs passed preflight; a pilot write/readback and native page check
+passed before the remaining production saves. Full profile readbacks and a fresh whole-inventory
+comparison show no non-media review changes or quote-budget violations. The aggregate budget audit
+covers 638 review-source URLs. A fresh sync plan converges to zero operations.
+
+All 12 profile-specific native checks across 11 distinct pins returned HTTP 200 and verified 90
+photo URLs and 31 review excerpts in server-rendered/serialized content. This does not verify
+hydrated gallery interactions. The 143 November 14 editorial estimate keys remain local code work;
+no production deployment or translation run occurred. Translations remain with the translation
+agent.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/nov14f/` (source inventories, visual photo review,
+review/photo manifests, readbacks, final audit and China/Japan ledgers),
+`.scrape/menu-inventory-2026-11-13/main/nov14f-{start,after}.json`, and
+`.scrape/menu-inventory-prod-sync-2026-11-14f/` (plan, Azure preflight, pilot, full readbacks,
+production snapshots, final audit, convergence and native checks).

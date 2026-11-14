@@ -28,6 +28,8 @@ export type EciChartData = {
   points: EciPoint[];
   // The key of the pin's own model.
   pinned: string;
+  // Set client-side by a windowed chart: the best score before its first date.
+  baseline?: number;
 };
 
 // Bump with any change to what the route sends (the response is cached for an hour).

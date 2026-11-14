@@ -26,12 +26,18 @@ const time = (day: string) => Date.parse(`${day}T00:00:00Z`);
 export function PinEciChart({
   pinId,
   has,
+  since,
   className = "",
 }: {
   pinId: number;
   has: boolean;
+  // Year the toggle can narrow the chart to: only models released then or later,
+  // the frontier line entering at the best score reached before it.
+  since?: number;
   className?: string;
 }) {
+  // Narrowed by default; a pin whose model predates `since` has no narrowed view and shows everything.
+  const [recent, setRecent] = useState(true);
   const [data, setData] = useState<EciChartData | null>(null);
   useEffect(() => {
     if (!has) return;
@@ -43,17 +49,47 @@ export function PinEciChart({
       cancelled = true;
     };
   }, [pinId, has]);
-  return data ? (
-    <Chart data={data} pinId={pinId} className={className} />
+  const narrowed = useMemo(
+    () => (data && since ? windowed(data, since) : null),
+    [data, since],
+  );
+  const shown = recent && narrowed ? narrowed : data;
+  return shown ? (
+    <Chart
+      data={shown}
+      since={recent && narrowed ? since : undefined}
+      toggle={
+        narrowed && since
+          ? { year: since, on: recent, set: setRecent }
+          : undefined
+      }
+      pinId={pinId}
+      className={className}
+    />
   ) : null;
+}
+
+// The chart from `year` on. Null when the pin's own model is older. `baseline`
+// is the best score before the cut, where the step line begins.
+function windowed(data: EciChartData, year: number): EciChartData | null {
+  const cut = `${year}-01-01`;
+  const points = data.points.filter((p) => p.date >= cut);
+  if (!points.some((p) => p.key === data.pinned)) return null;
+  const before = data.points.filter((p) => p.date < cut && p.frontier);
+  const baseline = before.length ? Math.max(...before.map((p) => p.eci)) : undefined;
+  return { ...data, points, baseline };
 }
 
 function Chart({
   data,
+  since,
+  toggle,
   pinId,
   className,
 }: {
   data: EciChartData;
+  since?: number;
+  toggle?: { year: number; on: boolean; set: (on: boolean) => void };
   pinId: number;
   className: string;
 }) {
@@ -88,6 +124,7 @@ function Chart({
       p.low ?? p.eci,
       p.high ?? p.eci,
     ]);
+    if (data.baseline != null) scores.push(data.baseline);
     const t0 = Math.min(...times) - 20 * DAY;
     const t1 = Math.max(...times) + 20 * DAY;
     const lo = Math.floor((Math.min(...scores) - 4) / 10) * 10;
@@ -100,14 +137,16 @@ function Chart({
     PAD.top + PLOT.h - ((v - frame.lo) / (frame.hi - frame.lo || 1)) * PLOT.h;
 
   const frontier = useMemo(() => data.points.filter((p) => p.frontier), [data]);
+  const startAt = data.baseline != null ? `M${PAD.left} ${y(data.baseline).toFixed(1)}` : "";
   const stepPath = frontier
     .map((p, i) =>
-      i
+      i || startAt
         ? `H${x(p.date).toFixed(1)}V${y(p.eci).toFixed(1)}`
         : `M${x(p.date).toFixed(1)} ${y(p.eci).toFixed(1)}`,
     )
     .concat(frontier.length ? [`H${(PAD.left + PLOT.w).toFixed(1)}`] : [])
     .join("");
+  const stepD = startAt + stepPath;
   const yTicks: number[] = [];
   for (let v = frame.lo; v <= frame.hi; v += 20) yTicks.push(v);
   const firstYear = new Date(frame.t0).getUTCFullYear() + 1;
@@ -161,14 +200,31 @@ function Chart({
     >
       <section
         className={`text-sm ${expanded ? "w-full max-w-[min(96vw,1800px)] rounded-xl bg-panel p-3 shadow-2xl sm:p-5" : className}`}
-        aria-label={t("pin.eciChart.heading")}
+        aria-label={since ? t("pin.eciChart.headingSince", { year: String(since) }) : t("pin.eciChart.heading")}
         onClick={expanded ? (event) => event.stopPropagation() : undefined}
       >
         <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">
-          {t("pin.eciChart.heading")}
+          {since ? t("pin.eciChart.headingSince", { year: String(since) }) : t("pin.eciChart.heading")}
         </h2>
         <div className="surface rounded-lg px-3 py-3">
           <div className="mb-2 flex items-center justify-end gap-1.5">
+            {toggle ? (
+              <button
+                type="button"
+                aria-pressed={toggle.on}
+                title={t("pin.eciChart.headingSince", {
+                  year: String(toggle.year),
+                })}
+                onClick={() => toggle.set(!toggle.on)}
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs tabular-nums ring-1 ring-inset transition-colors ${
+                  toggle.on
+                    ? "bg-accent/10 text-ink ring-accent"
+                    : "bg-raised text-muted ring-line hover:bg-raised-2"
+                }`}
+              >
+                {toggle.year}+
+              </button>
+            ) : null}
             {hasThread ? (
               <button
                 type="button"
@@ -266,8 +322,19 @@ function Chart({
                 </text>
               </g>
             ))}
+            {/* The year the graph begins in, when its January line falls off the left edge. */}
+            {!years.length || x(`${years[0]}-01-01`) - PAD.left > 40 ? (
+              <text
+                x={PAD.left}
+                y={PAD.top + PLOT.h + 16}
+                textAnchor="start"
+                className="fill-current text-[11px] text-faint tabular-nums"
+              >
+                {new Date(frame.t0).getUTCFullYear()}
+              </text>
+            ) : null}
             <text
-              transform={`translate(11 ${PAD.top + PLOT.h / 2}) rotate(-90)`}
+              transform={`translate(11${PAD.top + PLOT.h / 2}) rotate(-90)`}
               textAnchor="middle"
               className="fill-current text-[11px] text-subtle"
             >
@@ -276,7 +343,7 @@ function Chart({
 
             {stepPath ? (
               <path
-                d={stepPath}
+                d={stepD}
                 className="stroke-subtle"
                 strokeWidth="1.5"
                 fill="none"

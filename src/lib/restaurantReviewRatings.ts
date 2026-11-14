@@ -3,6 +3,30 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 14 sixth continuation: original-language and translated dish opinions.
+  "Beggar's Chicken (Delicious, but not amazing, not worth the price)": 3,
+  "西湖醋鱼(诚不欺我，果然难吃)": 1.5,
+  "Try this Tianjin Jianbing Guozi, order a set. It's delicious and not expensive.": 4,
+  "The price is twice that of other Jianbing Guozi. It’s not worth it.": 2,
+  "I like their pancakes and duck clavicles the most. They are very delicious.": 4,
+  "The Jianbing Guozi here tastes average and the service is okay. I don't recommend it.": 2.5,
+  "除了煎饼之外云吞、鸭货也毫不逊色": 4,
+  "A pancake and a bowl of wontons are just heavenly!": 4.5,
+  "Wushan Roast Chicken is a famous brand in Hangzhou and it is delicious.": 4,
+  "我这次点的鲤鱼焙面和焦炸丸子，味道不错。": 4,
+  "The \"Seafood Scallion Pancake\" was delicious, but upon closer inspection, it was slightly spicy.": 3.5,
+  "The seafood scallion pancake is fresh, sweet, and smooth, with a delightful scallion aroma.": 4,
+  "the taro was just okay.": 3,
+  "The kelp was soft and sticky, very delicious,": 4,
+  "The taro was soft and chewy, with a wonderful texture.": 4,
+  "Their pork intestines are indeed very delicious.": 4,
+  "It's cooked until very tender and incredibly flavorful!! Absolutely amazing!!": 4.5,
+  "The \"Add Potatoes\" are also very soft and flavorful—a must-order for potato lovers.": 4.5,
+  "I also ordered a \"brown sugar glutinous rice cake\" as a snack, which was also quite good!": 4,
+  "The pork intestines are in large chunks and are very delicious. However, the portion of pork intestines is too small,": 3.5,
+  "没想到肥肠和鸡放在一起煮是如此美味": 4.5,
+  "The must-order is definitely the raw marinated shrimp, a staple of Chaoshan cuisine, with a spicy flavor and a garlicky sauce.": 4.5,
+
   // November 14 fifth continuation: exact-dish praise and criticism.
   "The oysters were amazing": 4.5,
   "the seafood fried rice and spicy hot pot were delicious.": 4,

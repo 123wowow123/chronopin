@@ -27,6 +27,7 @@ import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, offsetDate
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
+import type { SearchedElection } from '@/lib/elections';
 import type { CardPin, SearchedCompany, SearchedPerson, SearchPage } from '@/lib/types';
 import { PredictedToggle } from './PredictedToggle';
 import { isPredictedPin } from '@/lib/tags';
@@ -35,6 +36,7 @@ import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
 import { IndustryForecastPanel } from './IndustryForecastPanel';
+import { ElectionPanel } from '@/components/election/ElectionPanel';
 import { StockPanel } from './StockPanel';
 import { SearchedPersonPanel } from './SearchedPerson';
 import { TagCloud, tagPillSummary } from './TagCloud';
@@ -134,6 +136,7 @@ export function SearchResults({
   searchedCompany,
   searchedPerson,
   searchedIndustries,
+  searchedElection,
   specialtyDays: initialSpecialtyDays,
   culturalDays: initialCulturalDays,
   searchedDays = [],
@@ -156,6 +159,8 @@ export function SearchResults({
   searchedPerson?: SearchedPerson;
   // Slugs of the industry forecast panels filed under the searched tags.
   searchedIndustries?: string[];
+  // The election results panel a search for "election" opens.
+  searchedElection?: SearchedElection;
   specialtyDays: Record<string, SpecialtyDay[]>;
   culturalDays: Record<string, CulturalDay[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
@@ -592,7 +597,7 @@ export function SearchResults({
               : undefined
           }
           cards={
-            searchedUser || searchedCompany || searchedPerson || searchedIndustries?.length ? (
+            searchedUser || searchedCompany || searchedPerson || searchedIndustries?.length || searchedElection ? (
               <>
                 {searchedUser ? (
                   <div className="floating flex flex-col gap-3 px-4 py-3.5">
@@ -631,6 +636,7 @@ export function SearchResults({
                     )}
                   </div>
                 ) : null}
+                {searchedElection ? <ElectionPanel election={searchedElection} /> : null}
                 {searchedPerson ? <SearchedPersonPanel person={searchedPerson} /> : null}
                 {searchedCompany?.parents?.length ? <CompanyParentsPanel parents={searchedCompany.parents} /> : null}
                 {searchedCompany ? (

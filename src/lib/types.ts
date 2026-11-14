@@ -1,3 +1,4 @@
+import type { SearchedElection } from './elections';
 // The JSON shapes the API and server components hand to the UI. Dates are
 // ISO strings once serialised.
 
@@ -405,6 +406,8 @@ export type SearchPage = {
   person?: SearchedPerson;
   // Industry forecast panels (IndustryForecast, 0216) filed under the searched tags.
   industries?: string[];
+  // The US election panel a search for "election" opens (src/server/data/elections.json).
+  election?: SearchedElection;
   // Query strings for /api/pins/search: the pages before and after this one.
   links?: { previous?: string; next?: string };
 };
