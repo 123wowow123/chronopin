@@ -322,6 +322,8 @@ entire production after-state for non-media changes, effective coverage and aggr
 snapshot-only or candidate counts are not a completed sync. November 13 evidence and resumable helper:
 `.scrape/menu-inventory-prod-sync-2026-11-13/`.
 
+Native-page checks must compare the **visible merged menu**, applying enabled specials precedence by normalized branch source and menu label. Ordinary-menu photos can be correctly saved yet hidden by an existing specials photo; verify those stored additions through full API readbacks. For a pilot, insert the saved pilot readback into the snapshot used to compute visible menus before checking the public page, so the check actually covers the new data rather than only the pre-save state. November 14 continuation example: `.scrape/menu-inventory-prod-sync-2026-11-14e/native-checks.py`.
+
 Traps seen: specials profiles keep items under `profile.menus`, content under `profile.menu.menus`; local and
 production IDs differ (match by source); list endpoints default to 100 records (pass `limit=1000`); identical
 images on different items (grades, cuts, cocktails) are rejected; Tabelog returns 403 under bursts; Gurunavi was

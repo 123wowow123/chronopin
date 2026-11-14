@@ -3,6 +3,22 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 14 fifth continuation: exact-dish praise and criticism.
+  "The oysters were amazing": 4.5,
+  "the seafood fried rice and spicy hot pot were delicious.": 4,
+  "the lamb skewers were also quite good.": 4,
+  "especially the crispy Wenchang chicken and Hainan rice served in a bamboo basket, which are delicious and beautifully presented.": 4,
+  "The steamed rice noodle rolls with soy sauce are a bit hard.": 2.5,
+  "The beef tripe is delicious.": 4,
+  "The beef soup dumplings are highly recommended. They are freshly steamed and delicious.": 4.5,
+  "The beef pot stickers are very crispy when eaten hot, with a lot of meat, and are very good when dipped in vinegar.": 4,
+  "Their beef vermicelli soup and beef pot stickers are especially delicious.": 4.5,
+  "The beef potstickers and beef dumplings are particularly delicious and juicy.": 4,
+  "the braised prawns are so flavorful; I lick my fingers clean from every single one.": 4.5,
+  "especially the secret-recipe cold noodles, which are really good. You should definitely try them.": 4.5,
+  "Cold noodles are also a must-order.": 4.5,
+  "The braised prawns are a must-order; they're very flavorful and delicious. I also like the cold noodles, which are great too.": 4.5,
+
   // November 14 fourth continuation: exact-dish original review assessments.
   "The chili oil seasoning is rich in aroma, bright red in color, sweet and salty, and delicious.": 4,
   "Delicious and affordable, when you come to Chengdu, Sichuan, you must come to People's Park to eat Zhong Dumplings.": 4,

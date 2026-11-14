@@ -769,3 +769,55 @@ snapshots, final audit, convergence and native checks). China/Japan item ledgers
 source checks and specific next steps. Remaining effective gaps: **41,655 photos and 54,446 reviews**.
 The broader research queue and hydrated gallery/landing-viewer checks remain open. The 107 November 14
 editorial estimate keys remain separate code work; translations remain with the translation agent.
+
+
+### Fifth November 14 continuation — researched and synced to production
+
+The next 20 China venues produced 22 exact-dish review leads across 20 source URLs. Saved **15 review
+associations across seven profiles**, retaining criticism of hard soy-sauce rice-noodle rolls alongside
+praise for oysters, seafood fried rice, lamb skewers, crispy Wenchang chicken, beef tripe, soup
+dumplings, beef potstickers, braised prawns and cold noodles. All saved/API branch addresses match,
+and original Chinese was checked against the publisher's English translation. The two Bali dish
+associations from one account share a single short excerpt within its aggregate budget. Fourteen
+additional editorial estimate keys are ready locally, including a lower estimate for the hard rolls.
+
+One Ma Xiangxing lead naming downstairs Huiwei Food Court is held for outlet correspondence. Six
+other candidates were not selected: a specifically grilled oyster preparation without matching saved
+preparation evidence; three accounts discussing peanuts as fish-skin ingredients rather than a
+standalone order; a mixed wonton/duck-oil-cake account whose assessment is not isolated; and a
+cold-noodle pairing statement that refers back to garlic crayfish. No candidate was converted into
+a stronger or more specific claim than its source supports.
+
+Saved **36 photo associations across four profiles**, using **21 distinct operator photographs**:
+three named simmered-fish components at Shokudo Hitonitachi; 15 individually labelled donut varieties
+at JACK IN THE DONUTS Tenjin Underground Mall, saved in ordinary and overriding specials menus;
+and three regular-size tsukemen variants at Rokurinsha Nagoya Station platform 1. Fish captions
+explain that rice, soup, small dishes and pickles are outside the close-up. Donut captions explicitly
+identify chain product photography and do not reactivate the opening coupon. Tsukemen pictures
+preserve regular, seasoned-egg and deluxe identities; frozen take-home noodle and pork products
+were excluded. Small original operator press images were retained without claiming extra native
+resolution. Silver flounder, mentaiko variants, drinks, shrimp tsukemen, large portions and separate
+toppings still need their own precise photographs. An unlabelled complete breakfast-set photo was
+held rather than guessing its fish. Twenty-five downloaded source images were visually inspected.
+
+The batch touches 11 profiles and closes **21 effective photo gaps and 10 effective review gaps**.
+Production and local now match at **13,469 photographed entries and 667 reviewed entries out of
+55,103**. The five November 14 passes total 137 review associations and 97 photo associations across
+68 profiles, improving effective coverage by 67 photos and 89 reviews since November 13.
+
+All 21 public Azure URLs passed preflight. The production plan had no conflicts or unmatched records;
+a pilot profile and its updated visible menu were checked before the remaining saves. Full profile
+readbacks, fresh whole-production preservation, aggregate excerpt budgets across 615 source URLs
+and zero-operation convergence pass. Native verification applies specials precedence and checks
+new pilot data from its saved readback. Public checks verify serialized/server-rendered content,
+not hydrated gallery interaction. Two focused rating tests, ESLint and scoped whitespace checks pass.
+The restaurant research skill now records the visible-menu and pilot-readback verification rules.
+All 11 profile-specific public checks across 10 distinct pins passed, including expected photo URLs
+and review excerpts.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/nov14e/`, `china/deep-reviews08/`,
+`.scrape/menu-inventory-2026-11-13/main/nov14e-{start,after}.json`, and
+`.scrape/menu-inventory-prod-sync-2026-11-14e/` (plan, blob checks, pilot, full readbacks, snapshots,
+final audit, convergence and native checks). China/Japan ledgers retain source checks, saves,
+rejections and next steps. Remaining gaps: **41,634 photos and 54,436 reviews**. The 121 November 14
+editorial estimate keys remain separate code work; no deployment or translation run occurred.
