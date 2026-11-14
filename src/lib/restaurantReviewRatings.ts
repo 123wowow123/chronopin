@@ -3,6 +3,36 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 14 third continuation: verified dish opinions, including criticism.
+  "The eggplant with salted egg yolk is salty and fragrant, except that it is a little oily.": 3.5,
+  "The stir-fried shrimp was a little fishy, ​​but the bouncy texture was quite nice": 3.5,
+  "the water shield and whitebait soup is very delicious.": 4,
+  "The Spanish mackerel dumplings I ordered were delicious with chives.": 4,
+  "the world's most delicious Spanish mackerel dumplings": 4.5,
+  "The Spanish mackerel dumplings are pretty good": 4,
+  "The cuttlefish dumplings and Spanish mackerel dumplings are so delicious.": 4,
+  "Spanish mackerel dumplings, which are also quite good. The portions are small, the taste is average, and the prices are a bit high.": 3,
+  "Only the thick rice wine tastes good, but it is also seriously overpriced.": 3.5,
+  "The authentic Changsha stinky tofu tastes good, it smells stinky but tastes delicious": 4,
+  "the Black Classic Stinky Tofu smells stinky but tastes incredibly fragrant.": 4,
+  "Black Classic Stinky Tofu: Delicious! You'll want to try it again!": 4.5,
+  "I once again visited Black Classic Stinky Tofu (Xiaoxiang Culture Branch) and tried the stinky tofu. It was still incredibly delicious.": 4.5,
+  "The offal was tough and hard to chew.": 2,
+  "牛肉馄饨和牛肉煎包同样好评！": 4,
+  "The beef wontons were quite beefy and had a nice beefy flavor. The skin was quite thin and the flavor was good.": 4,
+  "The beef wontons are delicious. They are so delicious.": 4.5,
+  "The braised pork intestine noodles are delicious.": 4,
+  "The taste is not very good.": 2.5,
+  "The \"Stir-fried Broccoli\" and \"Hand-torn Cabbage\" are both refreshing and delicious.": 4,
+  "The \"Handmade Noodles\" are a perfect complement to the fish head!": 4,
+  "食材、口味真的无可挑剔": 4.5,
+  "The \"Steamed Pig Trotters with Taro\" is amazing and incredibly tasty.": 4.5,
+  "猪脚炖的也很软糯，Q弹的味道相当不错。": 4,
+  "Wontons are unexpectedly good": 4.5,
+  "The fresh meat zongzi (a type of rice dumpling) was rather ordinary, with only one piece of meat and no other ingredients": 3,
+  "Su thought it was just average, but I thought it was perfect.": 3.5,
+  "おすすめ。": 4,
+
   // November 14 further continuation: original dish praise and criticism.
   "the sea intestine is crispy and tastes very good": 4,
   "Although the chicken was relatively tender, I don’t know why it was made very light.": 3,

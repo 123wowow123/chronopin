@@ -95,6 +95,8 @@ function Chart({
 }) {
   const chart = { ...base, ...base.i18n?.[locale] };
   const max = Math.max(...chart.bars.map((bar) => bar.value)) || 1;
+  // A party-coloured chart (an election result) names people, so its labels get 40% of the row and wrap rather than truncate.
+  const named = chart.bars.some((bar) => bar.party);
   const money = isMoneyUnit(chart.unit);
   return (
     <figure className="surface rounded-lg px-3 py-2">
@@ -108,10 +110,10 @@ function Chart({
         {chart.bars.map((bar) => (
           <li
             key={bar.label}
-            className="grid grid-cols-[minmax(0,8rem)_1fr_auto] items-center gap-2 text-xs"
+            className={`grid items-center gap-2 text-xs ${named ? "grid-cols-[minmax(0,40%)_1fr_auto]" : "grid-cols-[minmax(0,8rem)_1fr_auto]"}`}
           >
             <span
-              className={`truncate ${bar.highlight ? "font-semibold text-foreground" : "text-muted"}`}
+              className={`${named ? "leading-tight" : "truncate"} ${bar.highlight ? "font-semibold text-foreground" : "text-muted"}`}
               title={bar.label}
             >
               {bar.label}

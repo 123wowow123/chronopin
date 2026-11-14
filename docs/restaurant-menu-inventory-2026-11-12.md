@@ -626,3 +626,93 @@ browser creation reported that `iab` is unavailable. None is counted as a succes
 
 **Remaining local gaps:** 41,681 entries without photos and 54,473 without reviews. No production sync,
 deployment or translation run occurred. The separate translation agent retains that work.
+
+
+### Third November 14 continuation — local only
+
+Added **35 review associations and 11 photo associations across 14 profiles**. Effective local
+coverage is now **13,433/55,103 with photos** and **652/55,103 with reviews**: +11/+22 this pass,
+and +31/+74 against the unchanged November 13 production checkpoint. November 14 cumulative saves
+are 111 review associations and 33 photo associations across 48 distinct profiles.
+
+China review pass `deep-reviews06` inspected 83 exact-dish leads across 64 review URLs and saved
+32 associations on 12 profiles. Praise and criticism are both retained, including oily eggplant,
+fishy shrimp, overpriced rice wine, tough beef offal, disappointing steak and ordinary meat zongzi.
+Five associations use short original Chinese excerpts, explicitly labelled as such; the others use
+the publisher's English translation. Descriptive fried-bun texture, soup contents and chopped
+pig-trotter texture remain unscored. Thirty-six leads are held, chiefly identity conflicts:
+Lotus Pavilion versus Soo He 1929 within the Nanyuan Hotel; JinGangShan's saved Zhongshan Road
+252-2 versus API 250 (plus another barbecue business named in one review); Mingting's Annex 15
+versus explicit Annex 16; and MOUSTACHE seafood reviews naming Xiangshuiwan 3, Train Head or
+other stalls instead of the saved Dingcun Haitangwan 2. Fifteen other leads were not selected for
+specific assessment, variant, duplication or quote-budget reasons. No uncertain identity was saved.
+
+Yaba Misen Matsuzakaya Nagoya gained eight exact-dish photos: official chain photographs for
+Taiwan ramen and stir-fried greens, plus six photographs from Nagoya Jouhou Tsu's firsthand
+September 30 branch preview. Credits and captions distinguish chain photography from the branch
+preview. The peach buns show the saved two-piece portion. Almond soft serve is a historical menu
+illustration, not a reactivated opening gift. Gluten-free substitution and Taiwan minced-meat
+steamed bun still lack verified photos; the photographed offal dish called kobukuro was not
+substituted for chawanmushi. Three short original Japanese excerpts cover curry, chawanmushi and
+soft serve (36 Japanese characters combined, conservatively below the 25-word source budget).
+The chawanmushi's salt/spice description remains unscored.
+
+Mr. Fish Sapporo gained three photo associations from the operator's explicitly Mr. Fish branded
+launch composite: fish and chips, fish burger and churros. Each caption discloses other dishes
+and multiple units as styling, without promising portion sizes or included extras. Nearby
+Matsu restaurant lamb photographs were excluded, and Hokkaido milk soft serve remains uncovered.
+Q Ramen/Ryoriya and PAIRING × HOKKAIDO release images were inspected but provide logos, chef,
+architecture or interiors rather than identified dishes. Operator follow-up food announcements,
+branch social galleries and firsthand reports remain specific next steps; neither is exhausted.
+
+Twenty-eight additional editorial estimate keys are ready locally, giving 96 across the three
+November 14 passes. They represent interpretations of quoted dish opinions, not publisher ratings.
+Full current-revision API readbacks and the whole-inventory preservation comparison pass: no
+changes outside photo/review fields, enabled states or specials regions. All 590 saved review-source
+URLs pass the distinct-excerpt aggregate quote audit. All 14 affected native restaurant pages
+return HTTP 200 and contain the expected saved photos and review-source URLs in server-rendered
+HTML. These checks do not claim hydrated interaction verification. The two focused rating tests,
+ESLint and diff whitespace checks pass.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/nov14c/` (`final-audit.json`, `native-checks.json`,
+source HTML, visual source inventories, photo/review manifests, Azure upload metadata and readbacks),
+`china/deep-reviews06/`, and full snapshots
+`.scrape/menu-inventory-2026-11-13/main/nov14c-{start,after}.json`. China/Japan ledgers were refreshed
+with saves, identity holds and concrete next steps.
+
+**Remaining local gaps:** 41,670 entries without photos and 54,451 without reviews. The overall
+queue and hydrated gallery/landing-viewer checks remain open. No production synchronization,
+deployment or translation run occurred; translations remain with the separate translation agent.
+
+
+### November 14 owner-requested production data sync
+
+Pushed all three reviewed November 14 batches through the authenticated restaurant management APIs:
+**111 review additions, 32 cover-photo additions and one gallery-photo addition across 48 profiles**.
+Exact source, record kind, menu label and item matching found zero conflicts or missing production
+records. Duplicate-name rows retained their identifying fields and separate verified photographs.
+All 28 distinct public Azure images passed preflight. A pilot venue was saved and its public native
+page verified before bulk saves. One 502 followed a completed save; a fresh GET and complete expected
+profile comparison established that it was already synced, without a duplicate write.
+
+Full API readbacks and a fresh whole-production snapshot confirm the exact planned result, with no
+changes to unrelated data, enabled states or specials regions. All 590 review-source URLs pass the
+aggregate excerpt budget audit. A fresh plan converges to zero remaining operations, conflicts or
+unmatched records. Production coverage now matches the audited local result:
+
+| Effective menu coverage | November 13 | November 14 production | Change |
+| --- | ---: | ---: | ---: |
+| Menu entries | 55,103 | 55,103 | 0 |
+| With photos | 13,402 | 13,433 | +31 |
+| With reviews | 578 | 652 | +74 |
+
+All 48 affected public native pages returned HTTP 200 and contained their saved photo URLs and
+review excerpts: 303 distinct-per-page photo URL checks and 149 distinct-per-page excerpt checks.
+This verifies server-rendered/serialized content, not hydrated interactions. Gallery and landing-viewer
+interaction checks remain queued. The data push did not deploy code; the 96 November 14 editorial
+estimate keys remain separate code work. No translation run was performed.
+
+Evidence: `.scrape/menu-inventory-prod-sync-2026-11-14/` contains the exact operation plan, public blob
+preflight, pilot/live-page checks, complete per-profile before/after readbacks, production snapshots,
+`retry-results.json`, `final-audit.json`, `convergence.json` and `native-checks.json`.
+Remaining effective gaps are 41,670 photos and 54,451 reviews; the specific research queue remains open.
