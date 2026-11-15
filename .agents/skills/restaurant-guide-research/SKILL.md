@@ -326,6 +326,8 @@ snapshot-only or candidate counts are not a completed sync. November 13 evidence
 
 Native-page checks must compare the **visible merged menu**, applying enabled specials precedence by normalized branch source and menu label. Ordinary-menu photos can be correctly saved yet hidden by an existing specials photo; verify those stored additions through full API readbacks. For a pilot, insert the saved pilot readback into the snapshot used to compute visible menus before checking the public page, so the check actually covers the new data rather than only the pre-save state. November 14 continuation example: `.scrape/menu-inventory-prod-sync-2026-11-14e/native-checks.py`.
 
+Serialized Next.js page data can escape `&`, `<` and `>` as `\u0026`, `\u003c` and `\u003e`, with additional backslashes inside nested serialized strings. Decode those escapes when comparing exact saved excerpts with page data; an escaped ampersand is not a missing review. November 15 example: `.scrape/menu-inventory-prod-sync-2026-11-15q/native-checks.py`. This verifies server-rendered/serialized content; hydrated viewer interactions still need a browser check.
+
 Traps seen: specials profiles keep items under `profile.menus`, content under `profile.menu.menus`; local and
 production IDs differ (match by source); list endpoints default to 100 records (pass `limit=1000`); identical
 images on different items (grades, cuts, cocktails) are rejected; Tabelog returns 403 under bursts; Gurunavi was
@@ -356,6 +358,7 @@ Never turn a venue-wide score into a dish score. Respect excerpt limits across a
 one article; dates shown on sources take precedence over date-like URL paths.
 Save via restaurant-content / restaurant-specials, including duplicate menu records that override
 ordinary menus; preserve prices, photos, menu check dates and unrelated reviews, and verify readbacks.
+Each menu item accepts at most six external reviews. Preflight the combined existing and proposed review count before saving; preserve existing reviews and hold redundant new praise when capacity is reached, retaining substantive criticism and more specific assessments. Do not raise the cap to fit a research batch.
 Replay the reviewed San Diego batch with `npx tsx scripts/restaurants/menuItemReviews.ts local|prod`
 (dry run), then `--apply`, after refreshing admin logins. Evidence lives in
 `scripts/restaurants/menuItemReviews.json`; keep bundled catalogs synchronized.
@@ -422,6 +425,8 @@ English item name conflicts with the original preparation (cashew sauce-fried ch
 Pao, for example), hold it for menu identity repair instead of strengthening the review claim.
 The local discovery helper uses OpenCC under ignored `.scrape/menu-research-all-2026-11-13/python-deps/`;
 this is research tooling, not a product dependency. Evidence: `china/deep-reviews17/` under that queue.
+
+Resume normalized review passes by exact branch source, not numeric slices of a ranking recomputed after each save. Saving reviews changes gap counts and moves branches between ranks. At the end of a ranked pass, compare every eligible branch source with the union of normalized-pass `venues.json` files and queue the missing sources explicitly. The November 15 eighteenth round found 76 missed branches this way; the nineteenth round completed that exact queue (`china/deep-reviews37/`), bringing the 20+ group to 469/469 normalized discovery scans. Its high-review queue is now empty. The twentieth round completed the 5–19 group at 141/141 (`china/deep-reviews38/`); its mid-review queue is now empty. Next: the 85 exact sources in `.scrape/menu-research-all-2026-11-13/china/normalized-low-review-remaining.json` (1–4 group, using inventory-snapshot review counts). Remove queued sources only after their normalized scan and decisions are recorded. An initial unnormalized scan does not satisfy this recheck; first-three-page discovery does not exhaust a venue or its independent-source research.
 
 For normalized rechecks of earlier cached review pages, re-fetch the selected reviews before production
 sync and verify each exact review ID and excerpt against fresh original/publisher text. Preserve both

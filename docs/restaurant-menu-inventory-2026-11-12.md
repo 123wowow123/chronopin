@@ -1661,3 +1661,158 @@ deployment or translations. Evidence: `yelp-us/` (dump3, dump4, rows, sheets), `
 `.scrape/menu-inventory-prod-sync-2026-11-15p/`, `nov15p-{start,after}.json`.
 Next: queue batches 3-18 (about 4 left per hour of Chrome time), then reviews `[340:390]`.
 
+
+
+### November 15 seventeenth round — 50 China branch rechecks, 44 review associations synced
+
+Rechecked high-review ranks `[340:390]`, examining 72 candidate associations across 50 branches. Accepted
+**44 associations across 16 profiles** after inspecting original Chinese and publisher English, freshly
+re-fetching every selected review ID/excerpt and checking original-language branch addresses. Held 28 leads:
+generic lists/descriptions, redundant praise, apple-flavor soda versus orange soda, a mixed rice-wine/plum
+drink, Aihua accounts naming Dongmutou Street 19 or a new two-floor shop instead of the saved Duanlvmen
+floor-one branch, Dongzikou accounts explicitly naming Yulin/Raffles or Wuyuegong Street instead of
+Wenshuyuan Street, Songhelou reviews with a conflicting Tang Restaurant identity, and Park 1903 address
+representations needing exact building correspondence. No excerpts were attached across those conflicts.
+Retained criticism of too little snow clam and slightly tough crispy-pork batter alongside praise. Original
+Chinese excerpts avoid publisher ingredient/translation errors. Forty-two new editorial estimate keys remain
+local code; the noodle-thickness and mild-prawn descriptions remain unscored.
+
+Pushed **44 review associations across 16 production profiles**, closing **25 effective review gaps**.
+Production and local agree at **13,847 photographed and 982 reviewed entries out of 55,103**, leaving
+**41,256 photo gaps and 54,121 review gaps**. No photos were added in this review round. Public-image preflight
+had zero new URLs; pilot/native check, complete readbacks, whole-inventory preservation, all **1,011 source
+quote budgets** and zero-operation convergence passed. All 16 native pages passed server-rendered/serialized
+checks (**83 photo URLs and 54 excerpts**); hydrated viewer interactions remain pending. The page checker now
+decodes escaped ampersands in nested Next.js data before comparing exact quotations. Focused rating/lint tests
+(11 tests) and ESLint passed. No deployment or translation run occurred.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews34/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15q/`, `nov15q-{start,after}.json`.
+The item ledger records all 72 decisions and updates 569 rows; the 25 newly reviewed items are marked
+saved and verified on production. Next reviews: `[390:440]`; Yelp photo queue remains at batch index 3.
+The 15 round-sixteen specials profiles without backing pins still need opening/identity research and pin linkage.
+
+
+### November 15 eighteenth round — 79 China branch rechecks, 46 review associations synced
+
+Worked rank slices `[390:440]` and `[440:469]`, examining **68 leads across 79 branches**. Accepted
+**46 review associations across 24 profiles**, freshly verifying every selected review ID, exact excerpt
+and original-language branch address. Retained mixed praise/criticism of fishy crab roe, less-preferred
+beef offal soup and small mango-sago portions. Original Chinese excerpts avoid publisher errors that
+called mango sago “mango pudding,” dinner rolls “aperitifs,” or beef offal soup “beef teriyaki.”
+
+Held 22 leads: separate desserts do not identify combined mango-sago double-skin milk; fried dough inside
+jianbing or lamb inside paomo do not establish a separate serving; generic lists, unassessed ingredients
+and redundant leads remain unsaved. A nuanced vinegar/pungency assessment with corrupt original glyphs
+needs a clean source. Damengong's stone-market/highway address still needs correspondence to the saved
+Tongxing Road/International Commercial City branch. No review crossed an unresolved branch conflict.
+The fresh source-language address resolved Xiao Peng's English “41-1” rendering to the saved
+临江门西来寺4号1-1. Forty-three new editorial estimate keys remain local code; the fresh-meat bun's
+price/value excerpt and the chicken dish's portion-only excerpt remain unscored.
+
+Pushed **46 review associations across 24 production profiles**, closing **32 effective review gaps**.
+Production and local agree at **13,847 photographed and 1,014 reviewed entries out of 55,103**, leaving
+**41,256 photo gaps and 54,089 review gaps**. No photos were added. Public-image preflight had zero new
+URLs; pilot/native check, complete readbacks, whole-inventory preservation, all **1,051 source quote
+budgets** and zero-operation convergence passed. All 24 native pages passed server-rendered/serialized
+checks (**90 photo URLs and 78 excerpts**); hydrated viewer interactions remain pending. The 11 focused
+rating/lint tests and ESLint passed. No deployment or translation run occurred.
+
+The final rank does **not** mean the normalized recheck is complete: review saves change gap counts and
+re-sort the ranking between rounds. Comparing exact sources with normalized batch ledgers found
+**393 of 469 branches scanned and 76 missed**. The next queue is now fixed by exact branch source:
+`.scrape/menu-research-all-2026-11-13/china/normalized-high-review-remaining.json`. Initial unnormalized
+scans are counted separately. Resume that queue and remove sources after recording scans/decisions,
+rather than continuing numeric slices. Yelp photos remain queued at batch index 3; no region is exhausted.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{35,36}/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15r/`, `nov15r-{start,after}.json`.
+The item ledger records all 68 decisions, updates 642 rows and marks the 32 newly reviewed items
+saved and verified on production. The 15 round-sixteen specials profiles without backing pins remain held
+for exact opening/identity evidence and pin linkage.
+
+
+### November 15 nineteenth round — all 76 missed high-review branches checked, 108 associations synced
+
+Worked the 76 exact sources in the normalized high-review queue rather than recomputing numeric ranks.
+Inspected **245 dish-review leads**, accepting **108 associations across 35 profiles** and holding 137.
+All accepted review IDs and verbatim excerpts were freshly re-fetched; fresh source-language addresses
+match the saved branches. The original Chinese addresses resolve the English Dongguan address rendering
+and Geji's English 50m versus source-language/saved 100m discrepancy without changing venue fields.
+
+Retained criticism as well as praise: lukewarm eel, ordinary fish soup, shrimp freshness, oily char siu,
+dry bun wrappers, overly sweet sago, hard/odd-tasting eggplant wraps, spicy soup preferences, salty fish
+head, and disliked pan-fried crab. Used short original-language verbatim excerpts, with original and
+publisher-English records retained in provenance. Ninety-five new editorial estimate keys remain local
+code; descriptive cod-ball texture and shacha soup excerpts remain unscored.
+
+Specific holds include Wu Ji's Baita West Road main branch versus Xibei Street, Maggie's MixC versus
+David City, Laocunzhang 491 versus saved 481, the standing Jin Gang Shan/Mingting address conflicts,
+Mingting's new Taikoo Li branch, Moustache's Xiangshui Bay account, Chan Tim Kee's Main Street 4-3 versus
+Lane 3 No.2-2, Jin Jia Gang 47 versus 49, and Xin Wu Tang's Zhenbang Road 24 versus Haihou Road 36-105.
+Held pea/minced-meat noodles versus plain noodles, wontons mixed into sauce versus clear broth,
+separate jar-pork/pancake variants, and red-bean-topped milk pudding. Original 猪肠粉 does not establish
+pork-intestine filling, 珍珠肠粉 does not establish shrimp filling, and Ma Xiangxing's duck-pancreas
+美人肝 conflicts with the saved gizzard/liver translation; those need direct menu identity repair.
+
+One fish-head alias exceeded the API's six-review-per-item cap during the local save. Its rejected PUT
+made no change; two redundant fish-praise associations were held, preserving specific texture/spice
+assessments and salt criticism. The resumed save converged and complete preservation audits passed.
+The helper now preflights counts across the entire batch before writing, and the skill documents the cap.
+
+Pushed **108 review associations across 35 production profiles**, closing **65 effective review gaps**.
+Production and local agree at **13,847 photographed and 1,079 reviewed entries out of 55,103**, leaving
+**41,256 photo gaps and 54,024 review gaps**. No photos were added. Public-image preflight had zero new
+URLs; pilot/native check, complete readbacks, whole-inventory preservation, all **1,138 source quote
+budgets** and zero-operation convergence passed. All 35 native pages passed server-rendered/serialized
+checks (**224 photo URLs and 174 excerpts**); hydrated interactions remain pending. Eleven focused tests,
+ESLint and diff whitespace checks passed. No deployment or translation run occurred.
+
+The high-review normalized discovery pass is now **469/469 complete**, with its queue emptied only after
+scans, decisions and verified saves. This is first-three-page discovery, not venue/source exhaustion.
+The next exact-source queue is `.scrape/menu-research-all-2026-11-13/china/normalized-mid-review-remaining.json`:
+**40 branches in the 5–19-review group remain; 101/141 have normalized scans**. Yelp photos resume at batch 3.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews37/` (including queue-before, decisions,
+fresh verification, address checks and normalized-coverage audit),
+`.scrape/menu-inventory-prod-sync-2026-11-15s/`, `nov15s-{start,after}.json`.
+The item ledger records all 245 decisions, updates 1,147 rows and marks 65 newly reviewed items saved and
+verified on production. The 15 round-sixteen specials profiles without backing pins remain an opening/identity
+and pin-linkage gap.
+
+
+### November 15 twentieth round — remaining 40 mid-review branches checked, 29 associations synced
+
+Completed the exact-source queue for the remaining 40 branches with 5–19 reviews in the inventory snapshot.
+Inspected **40 leads**, accepted **29 review associations across 16 profiles**, and held 11. Every selected
+review ID/excerpt was freshly verified; fresh original-language addresses match the saved branches.
+Lu Yuan Gong's fresh source-language address is the saved Ruanyong Road 40, resolving the apparent conflict
+with a cached English Zhenhua Road 103 address without changing venue fields.
+
+Retained the very salty truffle-pork criticism alongside the same reviewer's still-good squirrel fish and
+smoked carp; kept eggplant's worse-when-cold caveat unscored. Shared-source excerpts remain within aggregate
+quote budgets. Twenty-six new editorial estimate keys remain local code. Held a response-to-photo-style
+general guide, non-specific/venue-wide ratings, historical price or view-only comments, bun-order mentions
+whose praise actually described noodles, and uncertain prepared-dish identities (Feizi’s Smile translated
+as plain Lychee, and 海灵菇 labelled sea mushrooms). Direct-menu identity research remains necessary.
+
+Pushed **29 review associations across 16 production profiles**, closing **26 effective review gaps**.
+Production and local agree at **13,847 photographed and 1,105 reviewed entries out of 55,103**, leaving
+**41,256 photo gaps and 53,998 review gaps**. No photos were added. Public-image preflight had zero new
+URLs; pilot/native check, complete readbacks, whole-inventory preservation, all **1,161 source quote
+budgets** and zero-operation convergence passed. All 16 native pages passed server-rendered/serialized
+checks (**101 photo URLs and 28 excerpts**); hydrated interactions remain pending. Eleven focused tests,
+ESLint and diff whitespace checks passed. No deployment or translations ran.
+
+Both higher-review groups now have normalized first-three-page discovery scans: **20+: 469/469;
+5–19: 141/141**. The mid-review queue was archived under `deep-reviews38/queue-before.json` and emptied.
+Next: **85 exact sources** with 1–4 reviews in the inventory snapshot, saved at
+`.scrape/menu-research-all-2026-11-13/china/normalized-low-review-remaining.json`. This is discovery coverage,
+not exhaustion of any venue, source or region; later pages, independent sources and held identities remain.
+Yelp photo work resumes at batch index 3.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews38/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15t/`, `nov15t-{start,after}.json`.
+The item ledger records all 40 decisions, updates 714 rows and marks 26 newly reviewed items saved and
+verified on production. The 15 round-sixteen specials profiles without backing pins remain an opening/identity
+and pin-linkage gap.
