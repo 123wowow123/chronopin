@@ -863,3 +863,100 @@ review/photo manifests, readbacks, final audit and China/Japan ledgers),
 `.scrape/menu-inventory-2026-11-13/main/nov14f-{start,after}.json`, and
 `.scrape/menu-inventory-prod-sync-2026-11-14f/` (plan, Azure preflight, pilot, full readbacks,
 production snapshots, final audit, convergence and native checks).
+
+
+### Seventh November 14 continuation — exact-dish review sync
+
+Inspected the next 20 ranked China branches and reviewed 11 Trip.com review leads. Saved **seven
+exact-dish review associations** on five profiles: LEI GARDEN's lobster bisque with rice and crispy
+roasted pork belly, Weijia's seafood pancake, Zhi Coffee's Americano and cheesecake, HUAZHUSHIFU's
+garlic beef cubes, and Taolin's Kung Pao chicken. Original Chinese was checked against Trip.com's
+English rendering; the original and translated records remain in the evidence manifests. The
+Hangzhou pork-belly account was held because it conflicts with LEI GARDEN's Shenzhen branch. The
+review mentioning spicy beef noodles was held because the saved dish is standalone spicy beef.
+Buffet lists without dish-specific assessment were not used.
+
+Visually inspected **118 Trip.com exact-branch dish-image candidates** from the same 20 branches.
+The 113 candidates with a valid dish match already had effective photos, so no duplicate image
+associations were added. The five remaining images were held: a whole duck for a sliced-duck item,
+an unclear lamb-offal loaf image, plated fish for a packaged fish gift box, a tea-style photograph
+for a latte, and a noodle image that does not establish sea urchin. Those five menu entries stay in
+the photo queue with exact next steps to seek matching operator or branch-gallery images.
+
+Production and local coverage now match at **13,498 photographed entries and 690 reviewed entries
+out of 55,103**. This review-only pass adds seven review associations; cumulative November 14 work
+now totals 171 review and 138 photo associations, closing 96 effective photo gaps and 112 effective
+review gaps from the November 13 checkpoint. Remaining effective gaps are **41,605 photos and
+54,413 reviews**. The five-profile plan had no conflicts or unmatched records. Full readbacks,
+whole-inventory preservation, the aggregate quote budget across 645 source URLs, and zero-operation
+convergence all pass.
+
+All five affected public pages returned HTTP 200 and contained the saved review excerpts in
+server-rendered/serialized content. The profile API readbacks preserve all other fields. These checks
+do not verify hydrated gallery interactions. Seven new editorial estimates remain local code work;
+no production code deployment or translation run occurred. Translations remain with the separate
+agent.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews10/` (20-branch candidate set,
+API review pages, original and translated excerpts, selection/rejection decisions, all 118 visual
+image decisions, local full-profile readbacks and audit), `.scrape/menu-inventory-prod-sync-2026-11-14g/`
+(plan, pilot readback, full production readbacks, snapshots, final audit, convergence and native
+checks), and `.scrape/menu-inventory-2026-11-13/main/nov14f-after.json` (pre-pass audited baseline).
+
+
+### Eighth November 14 continuation — exact-dish review and photo sync
+
+Reviewed 34 Trip.com review leads across the next 20 ranked China branches. Saved **15 exact-dish
+review associations across seven profiles**, including salt-and-pepper mantis shrimp; three separate
+pan-fried bun reviews; large shrimp dumplings; both criticism and praise for Tao Tao Ju's chilled
+sweet-and-sour pork; Xiao Li's crab-roe soup dumplings and Qianlixiang wontons; Peking duck; and
+Shaanxi mutton soup. The Xiamen XIAN XIONG QI review accounts that state Longhushan Road 557 were
+held because the saved branch is at Houjiangdai Road 29. Semi-finished soup dumplings cooked at home,
+generic recommendations and combined meal assessments were not attached to individual dishes.
+Original Chinese and Trip.com's English renderings are retained in the evidence.
+
+Visually checked the four Trip.com photos for menu items still without a saved image. Saved three
+exact-branch images for whole roast duck, Sipunculus jelly and sheep brain. The fourth, a composite
+dessert-like photo for a generic Chinese tofu entry, was held because it does not clearly identify
+that dish. The source listing does not identify the photographers; captions disclose Trip.com listing
+provenance and avoid claiming the images were taken at the branch.
+
+Production and local coverage now match at **13,501 photographed entries and 699 reviewed entries
+out of 55,103**. The batch adds 3 photo and 15 review associations, closing 3 effective photo gaps
+and 9 effective review gaps; six added reviews belong to items already counted as reviewed elsewhere
+in the merged menus. Across eight November 14 passes, the total is **141 photo associations and 186
+review associations**, closing **99 photo gaps and 121 review gaps** since the November 13 checkpoint.
+Remaining effective gaps are **41,602 photos and 54,404 reviews**.
+
+All three public Azure blobs passed preflight. The production plan had no conflicts or unmatched
+records; a pilot write/readback and native page passed before the remaining changes. Full profile
+readbacks and the fresh whole-inventory audit show only the planned image/review changes, no
+over-budget excerpts across 660 source URLs, and zero pending operations after sync. All eight
+affected public pages returned HTTP 200 and verified 49 photo URLs and 25 review excerpts in
+server-rendered/serialized content. This does not verify hydrated gallery interactions.
+
+Fourteen editorial estimate keys were added locally, bringing the November 14 total to 164. They
+remain code changes; no production code deployment or translation run occurred. Translations remain
+with the separate translation agent.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews11/` (20-branch candidate set,
+review API pages, source translations, selection/hold decisions, four visual photo checks, Azure
+uploads, local profile readbacks, item-ledger updates and audit), `.scrape/menu-inventory-prod-sync-2026-11-14h/`
+(plan, Azure preflight, pilot readback, full production readbacks, snapshots, final audit, convergence
+and eight native-page checks), and `.scrape/menu-inventory-prod-sync-2026-11-14g/local-after.json`
+(pre-pass audited baseline).
+
+
+### Ninth November 14 continuation — large exact-dish review and photo sync
+
+Reviewed 46 Trip.com review leads across the next 40 ranked China branches. Saved **28 exact-item review associations from 24 distinct review sources across 10 profiles**. The batch adds specific praise and criticism for molten lava buns, seafood tofu, duck blood vermicelli soup, sauna fish, Thai shrimp cakes, fresh duck blood, salted duck, stir-fried shrimp, square rice cake, sea-urchin tofu, Taihuang tofu, Shunde boneless fish, pan-fried rice rolls, gourd chicken and mini roujiamo. The excerpts are present verbatim in the publisher's English rendering and total no more than 25 words per source. Generic venue praise, list-only dish mentions, ambiguous fish comparisons and promotional copy were screened out; the original Chinese, publisher translations and selection decisions remain in the manifests.
+
+Reconciled 78 named-photo candidates exposed by Trip.com for 13 of the 40 branches against the current item inventory. Visually inspected three candidates still apparently uncovered by the first name match. Saved two new exact-item images: Plum Garden's squirrel-shaped mandarin fish and CHENG DU CHI KE's steamed shrimp. The Maijiazhuang giant river prawn candidate already had a verified image on a duplicate row with a different Chinese rendering, so it was not overwritten. Both new Azure blobs passed public download and media-type checks; source credit and exact-branch listing provenance are recorded.
+
+Production and local coverage now match at **13,503 photographed entries and 714 reviewed entries out of 55,103**. This round adds 2 photo and 28 review associations, closing 2 effective photo gaps and 15 effective review gaps; the other 13 new review associations attach to menu items already counted as reviewed in a merged menu. Across nine November 14 passes, totals are **143 photo associations and 214 review associations**, closing **101 photo gaps and 136 review gaps** since the November 13 checkpoint. Remaining effective gaps are **41,600 photos and 54,389 reviews**.
+
+The production sync plan had no conflicts or unmatched records. The pilot and its native page passed before the remaining writes. Full readbacks show only planned media changes; the whole-inventory audit has no content mismatch, no non-media changes, no over-budget excerpts across 684 source URLs, and zero pending operations. All 11 affected public pages returned HTTP 200 and verified 70 photo URLs and 36 review excerpts in server-rendered/serialized content. This does not verify hydrated gallery interactions.
+
+Twenty-seven exact-dish editorial estimate keys were added locally, bringing the November 14 total to **191**. They remain code changes; no production deployment or translation run occurred. Translations remain with the separate translation agent.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews12/` (40-branch candidate set, review API pages, source translations, selection/hold decisions, three visual photo checks, Azure uploads, local profile readbacks and item ledger); `.scrape/menu-inventory-prod-sync-2026-11-14i/` (production plan, Azure preflight, pilot, full readbacks, snapshots, final audit, convergence and 11 native-page checks); and `.scrape/menu-inventory-prod-sync-2026-11-14h/local-after.json` (pre-pass local baseline).
