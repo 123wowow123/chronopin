@@ -1434,3 +1434,230 @@ Next: normalized high-review rechecks at `[80:100]`, excluding this batch's save
 first 40 branches of the 5–19 group still need normalization. Independent operator/Google/Yelp
 research, 1–4-review venues and specific branch/variant/identity holds remain open. No region
 is exhausted.
+
+### November 15 ninth round — 20 normalized branch rechecks, synced
+
+Rechecked high-review branch ranks `[80:100]`, excluding previously saved review sources.
+Inspected 63 review leads and seven original photographs across 20 branches; updated 353 ledger
+items. Freshly re-fetched all **29 selected review associations across 10 branches** and verified
+each excerpt against the exact review ID. Source-language branch addresses match the saved profiles.
+Held 34 review leads and six photo candidates with specific reasons.
+
+Held encyclopedic Huixian Lou descriptions copied into reviews, generic "all delicious" dish lists,
+repeat-order mentions with no assessment, an unsold sweet potato, and a review calling Pao Luda a
+spicy drink (identity conflict with the saved dish). JiuLong (Dagu Road 6 vs 7) and Pearl Restaurant
+(Zhenzhu Lane 9 vs Taijian Lane 17) stay held under the standing address conflicts. Retained
+critical assessments: too-sweet nine-turn intestines, plain scallion pastry, too-sweet snow bean
+paste, overcooked pan-fried trio meat and merely standard gourd chicken. Twenty-eight new editorial
+estimate keys stay in local code.
+
+One verified photo shows Feng Tian's fruit-wood roast duck with pancakes, cucumber and sauce; the
+caption discloses that sides may be separate. Held offal rings labelled duck blood curd, unlabelled
+beef slices, a tofu-like piece, grilled fish labelled sweet potato, a scallop pan labelled shrimp and
+a multi-dish collage. The photo stays in Azure, outside Git.
+
+Pushed **29 review associations and one photo across 10 production profiles**, closing **20
+effective review gaps and one photo gap**. Production and local agree at **13,533 photographed
+entries and 887 reviewed entries out of 55,103**, leaving **41,570 photo gaps and 54,216 review
+gaps**. Public-image preflight, pilot save/native check, complete readbacks, whole-inventory
+preservation, all **878 aggregate source quote budgets** and zero-operation convergence passed. All 10
+affected native pages passed SSR/serialized-data checks (74 photo URLs and 45 excerpts); hydrated
+interaction remains pending. The focused rating tests and lint passed. No code deployment or
+translation run occurred.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews24/` and
+`.scrape/menu-inventory-prod-sync-2026-11-15i/`; local snapshots `nov15i-{start,after}.json`.
+
+Next: normalized high-review rechecks at `[100:120]`, excluding this batch's saved sources.
+
+### November 15 tenth round — 40 normalized branch rechecks (large run), synced
+
+Rechecked high-review branch ranks `[100:140]` (40 branches, double the usual slice) with the discovery
+script now excluding every earlier batch's saved sources and review IDs by glob. Inspected 72 review
+leads and 11 original photographs; updated 674 ledger items. Freshly re-fetched the accepted excerpts:
+one (DIM DOU DUK's golden-sand red rice roll criticism) no longer appears in the 17-page branch listing,
+so it was removed from the local profile and never reached production. The remaining **26 review
+associations across nine branches** verified against exact review IDs, and source-language addresses
+match the saved branches. Held 46 review leads and ten photo candidates.
+
+Held Zheng Huang Qi and Wuliguan under the standing address conflicts; a Yin Ji review naming its
+Wenchang North Road branch; garbled or speculative text; generic dish lists; and extra reviews beyond
+three per item (Riyueming sea-intestine rice, Runzeyuan coconut chicken). One verified photo shows
+Ningbo Hotel's Ningbo-style smoked fish (small native resolution); ten other listing photos did not match
+their dish names.
+
+Pushed **26 review associations and one photo across 10 production profiles**, closing **19 effective
+review gaps and one photo gap**. Production and local agree at **13,534 photographed entries and 906
+reviewed entries out of 55,103**, leaving **41,569 photo gaps and 54,197 review gaps**. Image preflight,
+pilot/native check, complete readbacks, whole-inventory preservation, all **900 aggregate source quote
+budgets** and zero-operation convergence passed. All 10 native pages passed SSR/serialized-data checks
+(68 photo URLs, 31 excerpts); the check now matches `<`/`>` as the page's `\u003c`/`\u003e` escapes.
+Rating tests and lint pass; 26 estimate keys stay in local code. No deployment or translation run.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews25/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15j/`, local snapshots `nov15j-{start,after}.json`.
+
+Next: `[140:160]`, excluding saved sources.
+
+### November 15 eleventh round — 50 normalized branch rechecks (large run), synced
+
+Rechecked high-review branch ranks `[140:190]` (50 branches), inspecting 68 review leads and 15 original
+photographs. Freshly re-fetched all **22 selected review associations across 13 branches**; source-language
+addresses match the saved branches (Feizi Xia Zhuang's saved English address translates the API's Chinese one).
+Held 46 leads: Hao Shi Lai (standing branch-identity hold), descriptions, combined dish lists, other-dish
+remarks and extra reviews beyond three per item. Retained criticism of bland paper-wrapped siu mai, light
+shrimp noodles and a soup that dries the mouth.
+
+One photo shows the braised chicken feet in Star of Canton's steamer (caption notes separate dishes and the
+unconfirmed abalone sauce). Held or rejected 14 others: scrambled egg labelled alfalfa sprouts, whole fish
+labelled fillets, tofu labelled king crab, and similar.
+
+Pushed **22 review associations and one photo across 14 production profiles**, closing **15 effective review
+gaps and one photo gap**. Production and local agree at **13,535 photographed and 921 reviewed entries out of
+55,103**, leaving **41,568 photo gaps and 54,182 review gaps**. Preflight, pilot/native check, readbacks,
+preservation, all **922 aggregate source quote budgets** and zero-operation convergence passed; all 14 native pages
+passed SSR checks (84 photo URLs, 27 excerpts). Rating tests and lint pass; 22 estimate keys stay local. No
+deployment or translations.
+
+Evidence: `deep-reviews26/`, `.scrape/menu-inventory-prod-sync-2026-11-15k/`, `nov15k-{start,after}.json`.
+Next: `[190:210]`.
+
+### November 15 twelfth round — 50 normalized branch rechecks (large run), synced
+
+Rechecked high-review branch ranks `[190:240]` (50 branches of the 469-branch 20+ review group), inspecting
+42 review leads and 14 original photographs. Freshly re-fetched all **15 selected review associations across
+eight branches**; source-language addresses match the saved branches. Held 27 leads (encyclopedic or venue
+descriptions, combined lists, mismatched items, extras beyond three per item). Retained the criticism of very
+small hairy crabs. Yield per round is falling as ranks sort by gap size.
+
+One verified photo shows a matsutake-style mushroom slice in clear broth (Luban Zhang; caption discloses the
+variety and portion are not established). Rejected 13 others (clam dish labelled pork, white cake labelled
+pan-fried turnip cake, noodle soup labelled meat pie, and similar).
+
+Pushed **15 review associations and one photo across nine production profiles**, closing **11 effective review
+gaps and one photo gap**. Production and local agree at **13,536 photographed and 932 reviewed entries out of
+55,103**, leaving **41,567 photo gaps and 54,171 review gaps**. Preflight, pilot/native check, readbacks,
+preservation, all **936 aggregate quote budgets** and convergence passed; all nine native pages passed SSR checks
+(56 photo URLs, 36 excerpts). Rating tests and lint pass; 15 estimate keys stay local. No deployment or
+translations.
+
+Evidence: `deep-reviews27/`, `.scrape/menu-inventory-prod-sync-2026-11-15l/`, `nov15l-{start,after}.json`.
+Next: `[240:290]`.
+
+### November 15 thirteenth round — 35 photos plus 50 branch review rechecks (large run), synced
+
+**Photos (new all-venue sweep).** Per-slice photo discovery had stopped yielding, so this round scanned every
+China Trip venue's listing photos against all 5,835 menu entries still without a photo, with traditional/simplified
+normalization and substring matching, excluding the 265 image URLs already rejected in the ledger. Exact-name
+matches were already exhausted (2 left); the sweep produced **68 candidates**, all visually inspected. Approved
+**35** whose pictures clearly show the named dish; where the listing's own label is a fuller variant (poached
+Gei Wai shrimp, rose-smoked salmon, red-wine fermented rice soup, Berry Cream Cheese soufflé pancakes, and so on)
+the caption quotes that label and says portion and exact variant are not established. Rejected 33 (a promo
+banner, a split hot pot labelled coconut chicken, fried rice labelled grilled fish, salmon sashimi labelled a
+sandwich, one duplicate image already used on a sibling item, and similar). Fresh branch food IDs and downloaded
+image bytes matched the inspected files for all 35. Photos stay in Azure outside Git.
+
+**Reviews.** Rechecked branch ranks `[240:290]` (50 branches): 70 review leads, **18 accepted** across ten branches
+(all freshly re-fetched; source-language addresses match saved branches), 52 held. Retained critical excerpts: the
+merely local-specialty carp noodles and the strong-fishy-smelling Spanish seafood fried rice. Eighteen estimate keys
+stay in local code.
+
+Pushed **35 photos and 18 review associations across 43 production profiles**, adding **35 photographed entries
+and 13 reviewed entries**. Production and local agree at **13,571 photographed and 945 reviewed entries out of
+55,103**, leaving **41,532 photo gaps and 54,158 review gaps**. Public-image preflight (35 blobs), pilot/native
+check, readbacks, preservation, all **954 aggregate quote budgets** and zero-operation convergence passed; all 43
+native pages passed SSR checks (296 photo URLs, 89 excerpts). Rating tests and lint pass. No deployment or
+translations.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{28,29}/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15m/`, `nov15m-{start,after}.json`.
+Next: reviews `[290:340]`; photo sweep next needs a wider source (operator pages, Google, Yelp) since Trip listing
+photos are exhausted.
+
+### November 15 fourteenth round — 38 Hot Pepper photos (35 effective) plus 50 branch review rechecks, synced
+
+**Photos (Japan Hot Pepper Gourmet sweep).** With Trip listing photos exhausted, this round re-read the live Hot Pepper
+Gourmet menu pages (food and drink) for all 111 menus that still had uncovered items. Matching item names exactly
+(Unicode-normalized) against each page's lightbox photos found **54 candidates** we had never captured; a
+difference-hash check showed many were one picture shared by several items. All were visually inspected. Saved
+**38** with honest captions: an oden assortment photo for daikon, egg, fried tofu, chikuwa and konjac (the caption says
+the ingredient is one of several shown); the exact bottle or can label for named sake, shochu and Sapporo products
+(captions say the image is a label, not a serving); the partial plum-and-cucumber pickle; the same chain-managed yakiniku
+photos for three sibling branches; and a few dish photographs (gizzard, mentaiko, sweet-potato smoothie, tsukune skewers,
+beef-tongue stew and nigiri, edamame, message-plate cake). Held 16: promotional price graphics, a gin logo repeated across
+five items, drink-menu graphics, an ambiguous soba set, a marron smoothie shown with sweet-potato smoothies, and an item
+name that appears twice in one menu (no unambiguous target). Live pages and downloaded bytes were re-verified for all 38
+before upload; photos stay in Azure outside Git. Two accepted items sit in a menu a specials record overrides, so the
+effective count rose by **35** rather than 38.
+
+**Reviews.** Rechecked branch ranks `[290:340]` (50 branches): 59 review leads, **16 accepted** across 11 branches (all
+freshly re-fetched; addresses match), 43 held. Retained the so-so handmade beef fried dumplings. Sixteen estimate keys
+stay in local code.
+
+Pushed **38 photo associations and 16 review associations across 22 production profiles**, adding **35 photographed
+and 12 reviewed entries**. Production and local agree at **13,606 photographed and 957 reviewed entries out of 55,103**,
+leaving **41,497 photo gaps and 54,146 review gaps**. Public-image preflight (38 blobs), pilot/native check, readbacks,
+preservation, all **970 aggregate quote budgets** and zero-operation convergence passed; all 22 native pages passed SSR
+checks (585 photo URLs, 29 excerpts). Rating tests and lint pass. No deployment or translations.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{30,31}/` (Hot Pepper page cache, candidates, sheets),
+`.scrape/menu-inventory-prod-sync-2026-11-15n/`, `nov15n-{start,after}.json`.
+Next: reviews `[340:390]`; further photos need operator sites beyond Hot Pepper (most remaining Japan items are PDF or
+course menus without per-item images) or Google/Yelp.
+
+### November 15 fifteenth round — Yelp dish-photo pass on non-San-Diego US venues, 123 photos synced
+
+Per the owner's "go" on the Yelp route in the restaurant skill, this round ran the bulk Yelp matcher (inside a Chrome
+tab on yelp.com, paced, no 403s) over the 22 US venues with the most uncovered food items outside San Diego
+(299 US venues with at least eight uncovered food items remain queued in
+`.scrape/menu-research-all-2026-11-13/yelp-us/venues.json`). Yelp's search resolved 19 of 22 businesses (Esther's Kitchen,
+Gunny's Pub and Elephante did not resolve; BARA ATL resolved to a different business and was dropped; Sawa's match was a
+different branch and its only caption named six dishes, so it was dropped). The matcher required every significant token of
+an item in the photo caption's first segment and dropped photos claimed by two items; I then **visually inspected all 125
+candidate photographs**. Approved **114** and held **11**: a salad captioned chicken liver mousse, a cheesecake captioned
+chocoflan, a strawberry tart captioned lemon tart, a bone-in steak captioned Chateaubriand, a lobster roll captioned
+Lobster, a mixed nigiri board captioned Madai, a tartare that looks like steak captioned tuna, and four ambiguous plates.
+Captions quote the contributor's caption and disclose accompaniments or shared plates (potted beef with Yorkshire pudding,
+gumbo with potato salad, boudin balls on a board, trays with sides). Items that appear twice in one menu (Lincolnshire
+Caesar, Turkey) were left alone; items in two different menus received the photograph in each.
+
+Photographs are in Azure under `restaurant-dishes/<yelp-slug>/` and credited "Yelp reviewer photo, <venue>". Venues:
+Uchi Austin, Hawksmoor Boston, Bluebonnet & Thyme Dallas, Dauphine's Washington, COTE Miami, Grande Pizzeria San Jose,
+Ellizabetta Washington, EggBred Phoenix, Cotto Atlanta, LUNA San Jose, BCN Houston, Kalaya Philadelphia, Escuela Austin,
+Tapestry Houston, Fry Bread House Phoenix, Cattleack Dallas. Expect the usual ~10% error rate of caption matching; any wrong
+image can be removed by a PUT without it.
+
+Pushed **123 photo associations across 16 production profiles**; production and local agree at **13,729 photographed
+and 957 reviewed entries out of 55,103**, leaving **41,374 photo gaps**. Public-image preflight (112 blobs), pilot/native check,
+complete readbacks, preservation and zero-operation convergence passed; all 16 native pages passed SSR checks (118 photo
+URLs). No deployment or translations. Evidence: `.scrape/menu-research-all-2026-11-13/yelp-us/` (dumps, rows, contact sheets),
+`china/deep-reviews32/`, `.scrape/menu-inventory-prod-sync-2026-11-15o/`, `nov15o-{start,after}.json`.
+Next: more of the 299 queued US venues in batches of about 14 (about 6 minutes each; the Chrome tab needs the owner's Yelp
+session), then reviews `[340:390]`.
+
+### November 15 sixteenth round — queued Yelp venues, batches 3 and 4 (118 photos synced)
+
+Resumed the queued US Yelp pass (`yelp-us/batches.json`, 19 batches of 15 venues; batches 0-2 of the queue are now done).
+The matcher is installed once per Chrome tab as `window.RUN/DUMP` helpers, so each batch costs one paste of venue items.
+Batch 0 (15 venues) and batch 1+2 (30 venues) ran without any 403. Resolution misses: Esther's Kitchen, Gunny's Pub,
+Aogami (no photos), Bellissima, three North Italia branches (Kierland, Arcadia) and Nuri (unresolved), State Bird
+Provisions (gallery has no standard heading), Iara (no named photos). Pisco y Nazca resolved to the Doral branch while the saved
+record is Kendall, so it was dropped; no photo was copied between branches.
+
+I visually inspected **132 candidates** (48 + 84) and approved **118**, holding 14: a roll that looks like shrimp tempura
+captioned spicy tuna, sandwiches captioned as entrées (chicken and eggplant parm), a bundt cake captioned financier, plates
+where the named ingredient is not visible, one table shot showing another restaurant's menu card, and similar. Captions quote
+the contributor's caption and disclose shared tables, sides and sauces.
+
+The batch included **specials records** (OpenTable-sourced venues). Fifteen of the 30 profiles have no backing pin on
+production, so their photographs are saved (and read back) but are not visible on a native pin page until pins exist; this
+is the existing "saved specials with no backing pin" gap. The sync script now keys changed records by kind, and the native-page
+check records a missing pin instead of failing.
+
+Pushed **118 photo associations across 30 production profiles**; production and local agree at **13,847 photographed and
+957 reviewed entries out of 55,103**, leaving **41,256 photo gaps**. Image preflight (118 blobs), pilot, complete readbacks,
+preservation and zero-operation convergence passed; the 15 pin-backed pages passed SSR checks (96 photo URLs). No
+deployment or translations. Evidence: `yelp-us/` (dump3, dump4, rows, sheets), `china/deep-reviews33/`,
+`.scrape/menu-inventory-prod-sync-2026-11-15p/`, `nov15p-{start,after}.json`.
+Next: queue batches 3-18 (about 4 left per hour of Chrome time), then reviews `[340:390]`.
+
