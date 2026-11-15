@@ -411,3 +411,14 @@ image; compare downloaded bytes before treating that as a changed photograph, an
 differ. Source-language `restaurantInfo` addresses can resolve garbled English addresses; retain both
 responses and compare the street/building/floor to the saved branch. Review text mentioning a different
 location still takes precedence over an exact listing ID. Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{13,14}/`.
+
+Normalize traditional/simplified Chinese when discovering review candidates, and retain two- and
+three-character Chinese dish aliases. The earlier four-character cutoff missed genuine assessments:
+the November 15 third round found 39 candidates instead of five in the same 40-branch pages after
+normalization. Keep the original source text and publisher translation unchanged; normalization is
+only for discovery, never permission to attach a substring match. Screen ingredients, filled/plain
+variants, other shops named in a review, and tea culture versus a specific drink. If a generated
+English item name conflicts with the original preparation (cashew sauce-fried chicken versus Kung
+Pao, for example), hold it for menu identity repair instead of strengthening the review claim.
+The local discovery helper uses OpenCC under ignored `.scrape/menu-research-all-2026-11-13/python-deps/`;
+this is research tooling, not a product dependency. Evidence: `china/deep-reviews17/` under that queue.

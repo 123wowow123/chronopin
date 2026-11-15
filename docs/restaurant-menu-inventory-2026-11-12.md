@@ -1037,3 +1037,178 @@ local code changes; this data sync did not deploy code or run translations. Prod
 readbacks, whole-inventory snapshots, final audit, convergence and native-page checks). The China
 item ledger marks the 29 distinct affected item keys as verified on production. The standing
 instruction is recorded in `AGENTS.md`, the restaurant research skill and `ToDo.md`.
+
+### November 15 second round — 89 branches, ready data synced to production
+
+Worked the remaining **49 branches in the 20+ review group**, then the next **40 branches with
+5–19 published reviews**. Requested public review pages 1–3 for all 89 branches. This completes
+the current high-review group's first-three-page discovery pass, not the independent-source or
+deeper-review research. The 12 new exact-item leads produced **10 review associations across seven
+profiles**, including osmanthus rice cakes, seafood pasta, steam-pot chicken, seafood platter,
+clams, scallops and tiramisu. A mushroom-hotpot affordability complaint and a historical change
+from a two-tier to one-tier seafood platter, with missing oysters, were retained unscored. They
+do not assert current prices or availability. A descriptive soup passage and venue-wide praise
+followed by a chicken-frame order list were held for clearer dish-specific assessment.
+
+Original Chinese and publisher English were inspected together. Fresh source-language branch
+addresses match the saved locations. Shared clams/scallops praise uses one identical short
+excerpt across both items, remaining within its aggregate source budget. Seven new editorial
+estimate keys assess explicit dish opinions; they remain local code changes.
+
+Inspected **33 uncovered named-photo candidates** and saved **four photographs**: De Chao's garlic
+shrimp over vermicelli in a clay pot; Crab's minced-pork-and-basil rice; Liu Chang Xing Gulou's
+wontons in fish broth; and shiitake mushrooms shown in Xiyuan Temple's noodle bowl. Captions
+identify egg/cucumber/crackers, separate steamed dumplings, or noodle-bowl companions and do not
+promise those extras or a serving count. Exact branch and food IDs were freshly retrieved; the
+fresh source image bytes matched the inspected originals. All public Azure uploads passed byte
+and media checks. De Chao's current listing adds unit 004 at the same Hong Kong Middle Road 65
+location; it does not conflict with the saved plaza address.
+
+The other **29 photo candidates remain held** for specific mismatches or ambiguity: examples
+include raw beef labelled as roasted lamb, wedges/fries swapped, raw clams labelled as spicy
+stir-fried snails, scallops labelled as abalone, a rectangular pastry labelled as swan-shaped,
+and a bottled drink labelled as freshly squeezed coconut juice. A full-size check resolved two
+initially unclear candidates: the clay-pot photo visibly contains vermicelli beneath the shrimp,
+and the basil-rice photo shows minced pork with egg/crackers rather than added seafood. The
+ledger retains every decision and further operator/detail-page and branch-gallery search step.
+
+The combined change touches **11 profiles**, adding **10 review associations and four photos**
+and closing **eight effective review gaps and four photo gaps**. Production and local now agree
+at **13,512 photographed entries and 746 reviewed entries out of 55,103**, leaving **41,591 photo
+gaps and 54,357 review gaps**. Two review additions are extra accounts for the same seafood
+platter and do not close additional effective item gaps.
+
+The production plan had no conflicts or unmatched records. Four public blobs passed preflight;
+the pilot save, full readback and updated native page passed before the remaining saves. Fresh
+whole-inventory snapshots match the planned after-state, preserving all unrelated profile fields,
+enabled states and regions. All **720 aggregate source quote budgets** pass. Local replays and
+the final production comparison converge to **zero changes, conflicts or unmatched records**.
+All **11 local and 11 production native-page checks** returned HTTP 200 and verified **57 photo
+URLs and 11 review excerpts per environment** after specials precedence. These checks cover
+server-rendered/serialized data; hydrated gallery work remains open. The two focused rating
+tests, ESLint and scoped whitespace checks pass. No code deployment or translations were run.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{15,16}/` retains review API pages,
+source-language addresses, original and translated passages, decisions, original photos, fresh
+food records, Azure uploads and local profile readbacks. `deep-reviews15/` also contains the
+combined final audit, local native checks, seven new estimate keys and ledger checkpoint.
+`.scrape/menu-inventory-prod-sync-2026-11-15b/` contains the production plan, preflight, pilot,
+full readbacks, snapshots, audit, convergence and native checks. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15b-{start,after}.json`. The ledger updates 1,032 entries,
+matches all 12 review decisions and marks 12 distinct new item keys as verified on production.
+Resume the 5–19 review group at `[40:80]`, including `deep-reviews15` and `deep-reviews16` in the
+saved-review/source exclusions. All regions remain open for independent sources and exact photos.
+
+### November 15 third round — normalized Chinese discovery, 40 branches synced
+
+Worked rank slice `[40:80]` in the 5–19-review group. The old candidate matcher required four
+characters and did not normalize traditional/simplified Chinese, missing short dish names and
+matching original reviews against a different character form. Re-scanning the same retrieved
+pages with OpenCC normalization and short aliases produced **39 candidates from 31 review sources,
+versus five initial candidates**. Only discovery text is normalized: original Chinese, publisher
+English and saved excerpts remain unchanged. OpenCC is isolated in ignored research tooling,
+with no product dependency added. The skill records the method and manual-screening requirements.
+
+Saved **22 review associations across 15 profiles**, including praise and criticism for Hainan
+noodles, tofu balls, braised pork bones, pan-fried tofu, pork-offal congee, gabacai, oily beef
+noodles, bland mock crab, steamed chicken feet, roasted squab, fish head, salted crab, mantis
+shrimp, chicken, pork jowl, sizzling beef, tea, roast goose and Liaobu beef. Two excerpts remain
+in their original Chinese where the publisher's English misnames the preparation. Shared-source
+quotes for chicken/skewers and beef/goose stay within aggregate budgets. A skewer-quality complaint
+is retained without a taste score. Twenty-one explicit dish opinions received local editorial
+estimate keys. Both focused rating tests and ESLint pass.
+
+The 17 held review associations include a roll explicitly bought at Ding Ji rather than the saved
+Zhengweizhai, miancha discussed among surrounding breakfast shops, taro-filled versus plain pineapple
+buns, crab-bone paste versus crab bones, and several generated English names that conflict with
+their original preparation. The Haiwei Shijia account naming a Benwei outlet is held for exact
+correspondence with the current Jiachang Caiguan Mingzhouli name; the original-language listing
+confirms the Haiwei Shijia brand and saved address, but does not by itself resolve that suffix.
+Fresh source-language street addresses were retained for all 16 branches with review candidates.
+
+Visually inspected all **17 uncovered named-photo candidates** and saved four: Lishi's fried dough
+cake, Su Xiang Xing's crab roe/fat, Shunxingde's lamb with pocket breads, and Island Beer House's
+garlic oysters. Captions distinguish the crab bowl from noodles/prawns and the oyster plate from
+other dishes/drinks, and do not invent serving counts. Fresh exact-branch food IDs and image bytes
+match the inspected originals; all four Azure blobs passed public download and media checks.
+Thirteen other photos remain held for mismatched species, cooking method, missing noodle portions,
+unresolved fillings or ambiguous cuts. No photo was saved solely on a short alias match.
+
+The combined round touches **17 profiles**, adding **22 review associations and four photos** and
+closing **21 effective review gaps and four photo gaps**. One extra review assesses a tofu dish
+already newly counted in this round. Production and local agree at **13,516 photographed entries
+and 767 reviewed entries out of 55,103**, leaving **41,587 photo gaps and 54,336 review gaps**.
+
+The production plan had no conflicts or unmatched records. Public-image preflight, the pilot's
+complete readback and updated native page, and all remaining profile saves pass. Fresh whole-
+inventory snapshots contain exactly the approved image/review changes, preserve enabled states,
+regions and unrelated profile fields, and pass all **740 aggregate source quote budgets**. Local
+replays and production comparison converge to zero changes. All **17 local and 17 production
+native-page checks** returned HTTP 200 and verified **105 photo URLs and 28 excerpts per
+environment**, applying specials precedence. These are server-rendered/serialized checks; hydrated
+gallery work remains open. No deployment or translation run occurred.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews17/` contains both discovery
+versions and candidate sets, retrieved review pages, source-language addresses, original/publisher
+text, all review/photo decisions, fresh food records, inspected photos, Azure uploads, full local
+readbacks, rating checkpoint, preservation audit and native checks. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15c-{start,after}.json`. Production plan, preflight, pilot,
+full readbacks, snapshots, audit, convergence and native checks are in
+`.scrape/menu-inventory-prod-sync-2026-11-15c/`. The ledger updates 565 entries, matches all 39
+review decisions and marks 25 distinct affected item keys as verified on production. Resume
+the 5–19 group at `[80:120]`, excluding saved sources from `deep-reviews17`. Earlier cached
+batches also need the normalized-alias discovery pass; independent sources and exact photos
+remain pending in every region.
+
+### November 15 fourth round — 40 more branches, ready data synced
+
+Worked the next 40 branches in the 5–19-review group, rank slice `[80:120]`, using normalized
+traditional/simplified Chinese and short dish aliases. Manually inspected **22 candidates from
+18 review sources** and saved **15 review associations across nine profiles**. The excerpts retain
+praise for mango pomelo sago, soup dumplings, scallion-braised sea cucumber, spicy chicken,
+truffle noodles, Wenchang chicken, kelp/mung-bean soup and chicken mousse. They also retain a
+cold-abalone complaint, a mixed oily-mousse opinion and an average assessment of crispy rice
+with pork. The bean-paste fritter appearance comment is unscored. Fourteen dish-opinion estimate
+keys remain local code; the two focused rating tests and ESLint pass.
+
+Original Chinese and publisher English were inspected together, with fresh source-language
+addresses retained for all ten branches with review leads. Two excerpts use original Chinese:
+one is a presentation comment and the other avoids the publisher's incorrect soup wording for
+chicken mousse. Hui Ji's account explicitly names a Huangxing South Road Pedestrian Street
+branch while the current original-language listing is IFS Guojin at Sujia Lane; it remains held
+for outlet correspondence, with no missing English translation invented. The other held leads
+are venue pitches/lists or comments omitted to keep the shared source within its quote budget.
+
+Inspected **21 uncovered photo candidates** and saved **three photographs**: Wan Yuan Guanqian
+Street's egg dumplings and thin noodles, and Nanjing Restaurant Yingbin Road's red rice rolls.
+The yellow dumplings, lower-left noodle bowl and rear roll plate are explicitly located in their
+captions; other photographed food is excluded and serving counts are not promised. Nanjing's
+photo source is **Yingbin Road 238**, distinct from the reviewed **Guitang River branch**. Exact
+source/food-ID matching preserves that distinction. Fresh food records and image bytes match
+the inspected originals; all three Azure URLs passed public download and media checks. The
+other 18 candidates remain held for mismatched dishes, ambiguous species/ingredients, missing
+noodle/rice portions, or blurry preparations.
+
+The round touches **11 profiles**, adding **15 review associations and three photos** and closing
+**12 effective review gaps and three photo gaps**. Additional accounts of sea cucumber and chicken
+mousse explain the three reviews beyond newly covered item counts. Production and local agree
+at **13,519 photographed entries and 779 reviewed entries out of 55,103**, leaving **41,584 photo
+gaps and 54,324 review gaps**.
+
+The production plan had no conflicts or unmatched records. Image preflight, pilot/full readbacks,
+the pilot native page and all remaining saves pass. Fresh whole-inventory audits preserve all
+unrelated profile fields, enabled states and regions, and pass all **755 source quote budgets**.
+Local replays and final production comparison converge to **zero changes**. All **11 local and
+11 production native-page checks** returned HTTP 200 and verified **58 photo URLs and 19 excerpts
+per environment**, applying enabled-specials precedence. These are server-rendered/serialized
+checks; hydrated gallery work remains open. No deployment or translations were run.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews18/` contains review pages,
+source-language addresses, original/publisher text, all decisions, fresh food records, visually
+inspected photos, uploads, local readbacks, rating checkpoint, preservation audit and native checks.
+Local snapshots are `.scrape/menu-inventory-2026-11-13/main/nov15d-{start,after}.json`.
+`.scrape/menu-inventory-prod-sync-2026-11-15d/` contains the production plan, preflight, pilot,
+full readbacks, snapshots, audit, convergence and native checks. The ledger updates 391 entries,
+matches all 22 review decisions and marks 15 affected item keys as verified on production.
+Resume the 5–19-review group at `[120:160]`, including `deep-reviews18` in saved-source exclusions.
+Earlier normalized-alias rechecks and independent photo/review sources remain pending.
