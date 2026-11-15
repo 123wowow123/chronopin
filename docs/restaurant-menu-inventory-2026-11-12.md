@@ -1277,3 +1277,160 @@ Resume normalized rechecks of the 20+ group at `[20:40]`, including both latest 
 saved-source exclusions. The current 5–19 group's first-three-page discovery pass is worked,
 but its first 40 branches still need normalization. Independent sources, deeper reviews,
 1–4-review venues and the precise photo gaps remain open; no region is exhausted.
+
+### November 15 sixth round — 20 normalized branch rechecks, synced
+
+Rechecked high-review rank slice `[20:40]`, manually inspecting **43 dish leads from 31 review
+sources** across 20 branches. Selected **30 review associations across ten profiles**, including
+eel sushi, vinegar pork, shrimp-filled lychee, rice cake, cumin meat, eggplant, fish, abalone rice,
+pot-lid barbecue, beef noodles, crispy chicken, eel, squirrel fish, fried shrimp, clay-pot vegetables
+and lotus root, beef tendon/brisket, pumpkin, prawns, chicken feet and maocai duck. Multiple accounts
+of the same dishes close **24 effective review gaps**. Praise and criticism remain separate; the
+shrimp criticism is retained in original Chinese rather than the publisher's shrimp-paste wording.
+
+Shared-source excerpt budgets were checked before saving, including three distinct short excerpts
+for lychee/rice cake/cumin meat and three for beef/eel/pumpkin. Original Chinese also avoids the
+publisher translating tender braised beef (`很烂`) as “very bad,” and avoids misnaming lotus-root
+preparations. Twenty-seven new dish-opinion estimate keys remain local code. The two focused
+rating tests and ESLint pass.
+
+Thirteen review candidates remain held: chain-wide restaurant guides, availability/reputation lists,
+an explicitly untasted chicken-giblet dish, general city popularity or venue praise, and two false
+English substring hits (`eel` inside `feeling`). The actual Guiyuan chicken account contains no
+contradictory street address; its fresh source-language listing matches the saved Chengdu Road 62
+branch. Earlier Guiyuan accounts explicitly naming 101–103 remain held.
+
+Fresh source-language names/addresses were retained for all 11 branches with candidates. All **30
+selected review IDs and exact excerpts** were re-fetched before saving. One Minleyuan review was
+absent from fresh pages 1–3 and found on page 4. The verifier now records all per-branch results
+before asserting completion, so a missing account does not cancel other branches' checks. The
+skill records pagination and short-English-alias precautions.
+
+Inspected **11 photo candidates** and saved **one image** for Guiyuan's named cucumber segments
+with dressing. Full-size inspection resolves their shape and preparation; the exact food ID and
+fresh image bytes match. The fresh branch listing confirms Chengdu Road 62, and the caption does
+not invent a serving count or add an ingredient claim. The Azure upload passes public download
+and media checks. Ten other images remain held, including two nuggets for a five-piece item,
+unresolved dessert variants, raw meat for a braised dish, sushi for tamagoyaki, unshredded chicken,
+white strips for duck blood, and preparations whose required components are not established.
+
+The combined round touches **ten profiles**, adding **30 review associations and one photo** and
+closing **24 effective review gaps and one photo gap**. Production and local agree at **13,524
+photographed entries and 822 reviewed entries out of 55,103**, leaving **41,579 photo gaps and
+54,281 review gaps**. Six additional review accounts assess dishes already newly counted this round.
+
+The production plan had no conflicts or unmatched records. Public-image preflight, pilot and full
+readbacks, the pilot native page and all remaining saves pass. Fresh whole-inventory preservation
+matches exactly the approved additions, with no unrelated profile, enabled-state or region changes.
+All **798 aggregate source quote budgets** pass. Local replays and the final production comparison
+converge to **zero operations or conflicts**. All **ten local and ten production native-page checks**
+returned HTTP 200 and verified **80 photo URLs and 44 excerpts per environment**, after specials
+precedence. These checks cover server-rendered/serialized data; hydrated gallery work remains open.
+No deployment or translation run occurred.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews21/` contains discovery caches,
+fresh review pages through page four, exact-ID verification, original-language addresses, all
+review/photo decisions, inspected images, fresh food records, Azure upload, full local readbacks,
+27 estimate keys, preservation audit, native checks and ledger checkpoint. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15f-{start,after}.json`. Production plan, preflight,
+pilot, full readbacks, snapshots, audit, convergence and native checks are in
+`.scrape/menu-inventory-prod-sync-2026-11-15f/`. The ledger updates 395 entries, matches all 43
+review decisions and marks 25 affected item keys as verified on production. Resume normalized
+high-review rechecks at `[40:60]`, excluding `deep-reviews21` saved sources. The earlier lower-review
+normalization gaps and independent photo/review sources remain pending; no region is exhausted.
+
+
+### November 15 seventh round — 20 normalized branch rechecks, synced
+
+Rechecked high-review branch ranks `[40:60]` using traditional/simplified Chinese aliases and
+English word boundaries, excluding previously saved source associations. Inspected 53 review
+leads and eight original food photographs across 20 branches; updated 370 resumable ledger items.
+Freshly verified all 36 accepted review IDs/excerpts across ten branches and the exact branch,
+food ID and downloaded image bytes for four accepted photos. All source-language addresses match
+the saved branches. Held 17 review leads and four photo candidates with explicit reasons.
+
+Manual aliases recovered two omitted negative assessments: JiaSan's beef soup dumplings and
+Zi Zhou Lou's deboned-fish congee. Retained roast-goose criticism alongside praise. Descriptive
+and comparative excerpts remain unscored; 30 new editorial estimate keys stay in local code.
+Used original Chinese for the red-bean/glutinous-rice-ball tofu pudding because publisher English
+misidentifies rice balls as meatballs. Aquarium stingray references describe animals rather than
+a meal and are held for saved-menu identity research. No unsupported menu deletion was made.
+
+Saved photographs show Kunming Huayi Xianyan's Boston lobster, Yushifandao's pork-belly nest,
+YiLaoma's chilled rice cake and Zi Zhou Lou's traditional steamed fish head. Captions disclose
+separate companions and serving limits; the small lobster source retains its native resolution.
+Rejected ambiguous tiramisu, fish labelled as lamb leg, toast/meat labelled as crispy rice, and
+unresolved green strips labelled as romaine with sesame paste. Azure files remain outside Git.
+
+Pushed **36 review associations and four photos across 11 production profiles**, closing
+**23 review gaps and four photo gaps**. Production and local now agree at **13,528 photographed
+entries and 845 reviewed entries out of 55,103**, leaving **41,575 photo gaps and 54,258 review
+gaps**. Full-inventory audit verifies exact intended profiles, unchanged non-media fields,
+enabled flags and specials regions, and all **825 aggregate source quote budgets**. Public-image
+preflight, pilot save/native check, complete readbacks and zero-operation convergence passed.
+All 11 affected production native pages passed effective-menu SSR/serialized-data checks,
+covering 77 photo URLs and 42 distinct excerpts across those pages. These checks do not claim
+hydrated gallery interaction; that remains pending with browser control unavailable.
+
+The two focused rating tests and lint passed. No code deployment or translation run occurred.
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews22/` holds decisions, manifests,
+fresh responses, readbacks, visual files, quote checks and the local audit;
+`.scrape/menu-inventory-prod-sync-2026-11-15g/` holds production plans, pilot checks, all readbacks,
+whole-inventory audit, convergence and native-page evidence. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15g-{start,after}.json`.
+
+Next: continue normalized high-review rechecks at `[60:80]`, excluding `deep-reviews22` saved
+sources. The first 40 branches of the earlier 5–19 group still need normalization. Independent
+operator/Google/Yelp source work, 1–4-review venues and recorded branch/variant holds remain open;
+no city or region is exhausted.
+
+
+### November 15 eighth round — 20 normalized branch rechecks, synced
+
+Rechecked high-review branch ranks `[60:80]`, excluding previously saved review sources.
+Inspected 51 review leads and ten original photographs across 20 branches; updated 365 ledger
+items. Freshly verified all **32 selected review associations across 12 branches** against the
+exact review IDs and original/publisher text. Source-language branch addresses match the saved
+profiles. Held 19 review leads and six photo candidates with specific evidence gaps.
+
+Retained ordinary noodle criticism, the potsticker reviewer's reported shrimp in a dish named
+vegetarian, and the scallion-oil noodles' authenticity criticism. Cost-only, descriptive and
+comparative excerpts remain unscored. Twenty-six new editorial estimate keys stay local. Held
+Yan Xitang's explicitly named Jinan CBD review rather than copying it to Jinju Alley. Also held
+shrimp-added Pianerchuan and shrimp/eel noodle variants instead of attaching them to plain rows,
+and used the separate Republican-era rabbit row when the reviewer named that preparation.
+
+Yong Shang Ming Zao's original reviews explicitly identify the saved English “king crab” dish as
+crispy egg tofu; its photo also shows tofu. The lizardfish translation conflicts with tofu fish/
+Bombay duck, and Lao RenYi's pork-strip translation conflicts with its halal identity. These
+remain menu-identity research gaps; this round did not rewrite items without direct menu proof.
+
+Four verified photos show Upper Kitchen's pesto mushroom/chicken pasta, Kiku's garlic scallops,
+and Kuiyuanguan's Three-Delicacy Noodles and yellow-croaker noodles. Captions exclude separate
+oysters, drinks and side dishes, and distinguish source-screenshot historical pricing from the
+current menu. Fresh exact food IDs, branch addresses and downloaded image bytes match the
+visually inspected originals. Held unrelated skewers, ambiguous beef knee bone, tofu labelled
+king crab, unresolved Lotus Pond preparation and strips labelled as green beans. Photos stay in
+Azure and ignored research files, outside Git.
+
+Pushed **32 review associations and four photos across 14 production profiles**, closing
+**22 effective review gaps and four photo gaps**. Production and local agree at **13,532
+photographed entries and 867 reviewed entries out of 55,103**, leaving **41,571 photo gaps and
+54,236 review gaps**. Full-inventory checks found no content mismatches or unrelated changes;
+non-media fields, enabled flags and specials regions were preserved. All **854 aggregate source
+quote budgets**, public-image preflight, pilot/native verification, full readbacks and
+zero-operation convergence passed. All 14 affected native pages passed effective-menu
+SSR/serialized-data checks covering 111 photo URLs and 54 excerpts. Hydrated gallery interaction
+remains pending; these checks do not claim browser interaction coverage.
+
+The two focused rating tests and lint passed. No code deployment or translation run occurred.
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews23/` contains decisions, fresh
+source responses, manifests, visual evidence, readbacks and local audit;
+`.scrape/menu-inventory-prod-sync-2026-11-15h/` contains the production plan, pilot, readbacks,
+whole-inventory audit, convergence and native checks. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15h-{start,after}.json`.
+
+Next: normalized high-review rechecks at `[80:100]`, excluding this batch's saved sources. The
+first 40 branches of the 5–19 group still need normalization. Independent operator/Google/Yelp
+research, 1–4-review venues and specific branch/variant/identity holds remain open. No region
+is exhausted.

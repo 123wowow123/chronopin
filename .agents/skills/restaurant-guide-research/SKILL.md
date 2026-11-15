@@ -434,3 +434,11 @@ the sixth round. Paginate to locate the exact ID before holding it, and retain p
 so one missing review does not cancel checks of other branches. Also screen English short aliases
 as whole words: stripping word boundaries matched `eel` inside `feeling`. These remain discovery
 false positives, never grounds for a review save (`china/deep-reviews21/`).
+
+When a review names an abbreviated dish, manually recover an alias only after the original text
+and saved menu establish one exact preparation. The seventh November 15 round recovered criticism
+of beef soup dumplings and deboned-fish congee missed by full-name discovery; retain negative
+assessments alongside praise. A named aquarium animal is not a consumed dish: Ocean Blue's
+stingray references describe the tank and require menu-identity research, not dish reviews.
+Publisher English may also turn glutinous rice balls into “meatballs”; use the verified original
+Chinese excerpt rather than repeating that ingredient error. Evidence: `china/deep-reviews22/`.
