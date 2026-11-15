@@ -428,3 +428,9 @@ sync and verify each exact review ID and excerpt against fresh original/publishe
 the discovery cache and fresh responses. The November 15 fifth round verified all 26 selected
 associations this way (`china/deep-reviews19/verify-fresh-reviews.py` and
 `fresh-review-verification.json` under the queue); cached discovery alone is not the final source check.
+
+Fresh review ordering can change: a selected account missing from pages 1–3 was found on page 4 in
+the sixth round. Paginate to locate the exact ID before holding it, and retain per-branch results
+so one missing review does not cancel checks of other branches. Also screen English short aliases
+as whole words: stripping word boundaries matched `eel` inside `feeling`. These remain discovery
+false positives, never grounds for a review save (`china/deep-reviews21/`).

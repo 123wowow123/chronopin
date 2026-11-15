@@ -72,20 +72,14 @@ export function NavigationProgressBar() {
       }
     }
 
-    let popTimer: ReturnType<typeof setInterval> | null = null;
     function handlePopState() {
       startNavigationProgress();
-      // Finish as soon as the committed route matches the address bar, even if that already happened.
-      if (popTimer) clearInterval(popTimer);
-      let ticks = 0;
-      popTimer = setInterval(() => {
+      // A commit that landed before this listener ran has no effect left to finish the bar, so check once.
+      // Any later commit is finished by RouteWatcher's effect.
+      queueMicrotask(() => {
         const here = `${window.location.pathname}${window.location.search}`;
-        if (here === committedUrl || ++ticks > 240) {
-          if (popTimer) clearInterval(popTimer);
-          popTimer = null;
-          finishNavigationProgress();
-        }
-      }, 50);
+        if (here === committedUrl) finishNavigationProgress();
+      });
     }
 
     window.addEventListener('click', handleClick, { capture: true });
@@ -94,7 +88,6 @@ export function NavigationProgressBar() {
     return () => {
       window.removeEventListener('click', handleClick, { capture: true });
       window.removeEventListener('popstate', handlePopState);
-      if (popTimer) clearInterval(popTimer);
     };
   }, []);
 
