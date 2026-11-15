@@ -1212,3 +1212,68 @@ full readbacks, snapshots, audit, convergence and native checks. The ledger upda
 matches all 22 review decisions and marks 15 affected item keys as verified on production.
 Resume the 5–19-review group at `[120:160]`, including `deep-reviews18` in saved-source exclusions.
 Earlier normalized-alias rechecks and independent photo/review sources remain pending.
+
+### November 15 fifth round — final low-review branches and normalized rechecks
+
+The remaining 5–19-review rank slice `[120:160]` contained **21 branches**, producing two new
+review leads. Added a normalized recheck of the first **20 high-review branches**, using earlier
+page caches for discovery; this produced 41 further leads. In total, inspected **43 associations
+from 33 review sources across 41 branches** and selected **26 review associations across 13
+profiles**. Before production, all selected review IDs and exact excerpts were confirmed again
+against freshly fetched public Trip.com original/publisher text, with fresh responses retained.
+The restaurant skill now requires this final fresh check for cached discovery runs.
+
+New excerpts cover roast duck, truffle/egg pizza, sturgeon, soup dumplings, okra/scallops, barbecue,
+red-bean double-skin milk, cabbage, salt-baked snails, fish-head rice, clay-pot tofu, duck tendons,
+pickled-radish tripe, cured-meat rice and chicken. Shared-source excerpts stay within aggregate
+budgets. A coffee-supply complaint and a puff-value comment are retained unscored; no current
+availability or price is inferred. Twenty-one explicit dish-opinion keys were added locally.
+Several sources have no publisher English: their original Chinese is retained without inventing
+a translation. Both focused rating tests and ESLint pass.
+
+Seventeen review candidates remain held. Longxiyuan's account explicitly locates its meal at
+**Qinling Road 16**, conflicting with the saved **Shantou Road 5** branch. Other holds include
+untasted dumplings, bare dish lists, ingredient/variant substrings, a supplement advertisement
+without food assessment, venue-wide nostalgia, and pastry lists whose actual assessment concerns
+cheese bread. Fresh source-language listing names/addresses were retained for all 15 branches
+with candidates; these never override a contradictory address within an individual account.
+
+Inspected **23 photo candidates** and saved **four photographs**: Silver Pot's orange-peel beef,
+AMANO's truffle/onsen-egg pizza, Jiangjun Xinyang Road's listed 清酒 bottle, and Zhi Ci Yi Jia's
+quail eggs. Full-size inspection matters: Silver Pot's unusual hot-stone photograph itself labels
+the dish `橙皮牛肉配蘸碟`, while the pizza's central egg is visible in the original. The rice-wine
+caption identifies the pictured Lotte 清河 bottle and cup without implying a whole-bottle serving;
+the raw-egg ingredient photo distinguishes the eggs from the meat and mushrooms. All exact food
+IDs and fresh image bytes match the inspected originals. Four public Azure uploads pass download
+and media checks. Nineteen other candidates remain held for mismatched species, missing meal
+components, unclear variants or different preparations.
+
+The combined round touches **14 profiles**, adding **26 review associations and four photos** and
+closing **19 effective review gaps and four photo gaps**. Multiple independent accounts of the
+same dishes explain the seven reviews beyond newly covered item counts. Production and local
+agree at **13,523 photographed entries and 798 reviewed entries out of 55,103**, leaving **41,580
+photo gaps and 54,305 review gaps**.
+
+The production plan had no conflicts or unmatched records. Public-image preflight, pilot and
+complete readbacks, pilot native verification and all remaining saves pass. Fresh whole-inventory
+audits match only the approved image/review changes, preserve unrelated fields, enabled states
+and regions, and pass all **777 source quote budgets**. Local replays and production comparison
+converge to **zero operations or conflicts**. All **14 local and 14 production native-page checks**
+returned HTTP 200 and verified **123 photo URLs and 36 excerpts per environment**, after specials
+precedence. These are server-rendered/serialized checks; hydrated gallery work remains open.
+No code deployment or translations were run.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{19,20}/` retains review pages,
+fresh original-language addresses, all selection/hold decisions, inspected originals, fresh food
+records, Azure uploads and complete local readbacks. `deep-reviews19/` includes combined audits,
+local native checks, 21 estimate keys, the ledger checkpoint and `fresh-review-verification.json`
+covering all 26 selected associations. Local snapshots are
+`.scrape/menu-inventory-2026-11-13/main/nov15e-{start,after}.json`. Production evidence is in
+`.scrape/menu-inventory-prod-sync-2026-11-15e/` (plan, preflight, pilot, full readbacks, snapshots,
+audit, convergence and native checks). The ledger updates 606 entries, matches all 43 decisions
+and marks 22 distinct affected item keys as verified on production.
+
+Resume normalized rechecks of the 20+ group at `[20:40]`, including both latest manifests in
+saved-source exclusions. The current 5–19 group's first-three-page discovery pass is worked,
+but its first 40 branches still need normalization. Independent sources, deeper reviews,
+1–4-review venues and the precise photo gaps remain open; no region is exhausted.

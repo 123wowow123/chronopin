@@ -12,13 +12,19 @@ import {
 const SERVER_SNAPSHOT = { progress: 0, visible: false };
 const getServerSnapshot = () => SERVER_SNAPSHOT;
 
+// The URL the router last committed. A back/forward step whose popstate we hear only after Next
+// already committed the cached page would otherwise start the bar with nothing left to finish it.
+let committedUrl = '';
+
 function RouteWatcher() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const search = searchParams.toString();
 
   useEffect(() => {
+    committedUrl = `${pathname}${search ? `?${search}` : ''}`;
     finishNavigationProgress();
-  }, [pathname, searchParams]);
+  }, [pathname, search]);
 
   return null;
 }
@@ -66,8 +72,20 @@ export function NavigationProgressBar() {
       }
     }
 
+    let popTimer: ReturnType<typeof setInterval> | null = null;
     function handlePopState() {
       startNavigationProgress();
+      // Finish as soon as the committed route matches the address bar, even if that already happened.
+      if (popTimer) clearInterval(popTimer);
+      let ticks = 0;
+      popTimer = setInterval(() => {
+        const here = `${window.location.pathname}${window.location.search}`;
+        if (here === committedUrl || ++ticks > 240) {
+          if (popTimer) clearInterval(popTimer);
+          popTimer = null;
+          finishNavigationProgress();
+        }
+      }, 50);
     }
 
     window.addEventListener('click', handleClick, { capture: true });
@@ -76,6 +94,7 @@ export function NavigationProgressBar() {
     return () => {
       window.removeEventListener('click', handleClick, { capture: true });
       window.removeEventListener('popstate', handlePopState);
+      if (popTimer) clearInterval(popTimer);
     };
   }, []);
 

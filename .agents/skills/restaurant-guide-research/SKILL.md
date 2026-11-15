@@ -422,3 +422,9 @@ English item name conflicts with the original preparation (cashew sauce-fried ch
 Pao, for example), hold it for menu identity repair instead of strengthening the review claim.
 The local discovery helper uses OpenCC under ignored `.scrape/menu-research-all-2026-11-13/python-deps/`;
 this is research tooling, not a product dependency. Evidence: `china/deep-reviews17/` under that queue.
+
+For normalized rechecks of earlier cached review pages, re-fetch the selected reviews before production
+sync and verify each exact review ID and excerpt against fresh original/publisher text. Preserve both
+the discovery cache and fresh responses. The November 15 fifth round verified all 26 selected
+associations this way (`china/deep-reviews19/verify-fresh-reviews.py` and
+`fresh-review-verification.json` under the queue); cached discovery alone is not the final source check.

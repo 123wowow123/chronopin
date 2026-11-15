@@ -3,6 +3,28 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 15 fifth round: remaining low-review branches and normalized earlier-page rechecks.
+  "the best Beijing roasted duck I've had in Kunming—crispy and tender, perfectly balanced.": 4.5,
+  "the black truffle onsen egg pizza and the lemon savory oyster gratin were both delicious.": 4,
+  "The boiled sturgeon was delicious, with tender meat and few bones.": 4.5,
+  "超级喜欢蟹粉汤包，味道好极了": 4.5,
+  "墨鱼汤包，干锅有机花菜，超值海鲜锅，糖醋小排，捞汁秋葵扇贝，都很好吃。": 4,
+  "delicious barbecue and side dishes.": 4,
+  "Red bean double skin milk: very smooth, sweet, the red beans are plump and soft, very delicious!": 4.5,
+  "The texture is crispy and I recommend trying it.": 4,
+  "The salt-baked conchs are very fresh and sweet.": 4.5,
+  "The signature fish head rice porridge tastes great, a little spicy, and fresh.": 4.5,
+  "It still tastes the same and is still delicious.": 4,
+  "特别喜欢吃他们家鱼头泡饭，特别好吃，米饭是现煮的！": 4.5,
+  "特别喜欢鱼头泡饭和私房砂锅豆腐，非常好吃😊": 4.5,
+  "The duck feet tendons are also good": 4,
+  "The radish is sour and refreshing, and the tripe shreds are very crispy.": 4.5,
+  "The pickled radish in it is refreshing and goes well with rice, perfect match!": 4.5,
+  "The duck feet tendons are a must-order; they're very spicy.": 4,
+  "The stir-fried tripe with pickled radish and the duck feet tendons were both quite spicy and appetizing": 4,
+  "I especially loved the preserved meat rice": 4.5,
+  "Sesame chicken nuggets have a great texture, a fragrant aroma, and a delicious meaty flavor.": 4.5,
+  "川香鸡柳很好吃， 很入味， 不错。": 4.5,
   // November 15 fourth round: dish-specific praise, mixed opinions and cold/greasy-food criticism.
   "This mango sago is really good.": 4.5,
   "The soup is rich and delicious, and it is definitely worth a try!": 4.5,
