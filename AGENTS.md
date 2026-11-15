@@ -37,6 +37,8 @@ Store pin images in Azure Blob Storage; never add pin photos or generated thumbn
 
 Guides, tabs, per-tab targets (China 35, Japan 30), west-to-east navigation, backing pins, exact-branch opening dates, menu transcription, specials and photo rules: `.agents/skills/restaurant-guide-research/`. Hard rules: restaurant `utcStartDateTime` is the branch's real opening date (never a research or promotion date), every card links to its native `/pin/[id]/[slug]` page, and never invent dates, discounts, ratings or menu items. Save content through `/api/admin/restaurant-content` and `/api/admin/restaurant-specials` (docs/okf/api/restaurant-content.md).
 
+Owner instruction (2026-11-15): after each all-cities menu photo/review research round, push all verified, ready data to production without asking again. Preflight public images, pilot one profile and check its native page, preserve production-only fields, verify complete readbacks, audit coverage/quote budgets and confirm zero pending operations. Hold only specific unresolved evidence or identity conflicts. This authorizes data synchronization, not code deployment or translation runs.
+
 ## Prediction market pins
 
 In the 06:00 and 18:00 news job, create `Predicted` pins (`dateConfidence: 'estimated'`, dated to event onset) from Polymarket and Kalshi events, and monthly Brent and WTI threads that are updated with the realized settlement. Details: `.agents/skills/prediction-market-pins/`.

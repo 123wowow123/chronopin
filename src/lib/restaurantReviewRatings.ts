@@ -3,6 +3,33 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 15: exact-dish opinions; presentation-only and affordability-only excerpts stay unscored.
+  "The shrimp siu mai was delicious and had a great texture.": 4.5,
+  "Their steamed chicken feet, pan-fried dumplings, and congee with preserved egg and lean pork are all quite good!": 4,
+  "the steamed grouper tastes very good and is very tender.": 4.5,
+  "The winged beans were crisp and green, with a light fragrance, just the way I like them.": 4.5,
+  "The Hainan Qingbuliang (Qingbuliang) is incredibly refreshing and delicious!": 4.5,
+  "Braised Lamb Chops: The flavor is excellent, just right!": 4.5,
+  "I love their braised lamb chops the most.": 4.5,
+  "Shancheng lamb skewers, hand-pulled lamb chops, lamb with skin, spicy lamb cubes, and lamb offal rice noodles are all delicious.": 4,
+  "Cumin lamb, mountain lamb skewers, braised lamb chops, four dishes in one pot, and lamb soup are all good.": 4,
+  "They reminded me of the soft and chewy texture of Jianglong Claws!": 4,
+  "The braised chicken feet and pig tail are just right, with perfectly seasoned braising.": 4,
+  "offers excellent dishes such as Golden Ingot Shrimp, Squirrel-Shaped Mandarin Fish, and Crab Roe Xiao Long Bao.": 4,
+  "Rice cakes, grilled sausages, roasted rice cakes, and braised eggs are all delicious.": 4,
+  "The beef pan-fried dish was completely burnt, and I don't know how long it had been left there but it had already become limp.": 1.5,
+  "The abalone in the Buddha Jumps Over the Wall was excellent": 4.5,
+  "the broth for the Buddha Jumps Over the Wall is incredibly rich and authentic.": 4.5,
+  "Overall it's average, only the dessert (tiramisu) tastes good.": 4,
+  "The original steamed chicken, Yunnan-style squirrel fish, cumin beef, hometown-style cured pork, and cold rice noodles are all very good.": 4,
+  "cumin beef, potstickers and mung bean jelly, Dai-style mandarin fish, and fresh corn juice are all very good.": 4,
+  "Hainan rice noodles, Baoluo rice noodles, and Houan rice noodles are all good.": 4,
+  "The Tianjin Jianbing Guozi is very famous and delicious.": 4,
+  "The roast goose was pretty good; the skin was crispy": 4,
+  "The tiramisu and mango pudding for dessert were both delicious!": 4,
+  "was refreshing and perfectly complemented the truffles.": 4,
+  "My two favorite main dishes are lobster pasta and herb-roasted lamb chops!": 4.5,
+  "The lobster pasta is very tasty": 4,
   // November 14 ninth continuation: exact-dish excerpts from the next China branch batch.
   'My favorite is the juicy lava bun': 4.5,
   'seafood tofu, fresh and sweet, very delicious': 4.5,

@@ -304,7 +304,9 @@ Sapporo, Nagoya, Osaka and Fukuoka (largest gaps first, one agent per group of v
    same-name duplicates; handle those deliberately. Upload goes to the production Azure container by design.
 4. **Remove a bad photo:** `removePhotos.py <content|specials> <id> rules.json [--prod] [--apply]`
    (rules by item name, label or caption text; before/after kept in `.scrape/photo-removals/`).
-5. **Push to production** only when the owner asks: `syncPhotosToProd.py <region> [--apply]` matches each venue
+5. **Push ready data after every round.** Owner instruction (November 15, 2026): all-cities menu photo/review
+   rounds have standing authorization to sync verified, ready data to production without asking again.
+   This covers data synchronization, not code deployment or translation runs. `syncPhotosToProd.py <region> [--apply]` matches each venue
    by exact `pinSourceUrl`, copies images only onto production items without one, requires public Chronopin
    Azure blobs, uses the latest revision and verifies readbacks (evidence in `.scrape/photo-sync/`).
    `syncReviewsToProd.py <region> [--apply]` does the same for item reviews (never replaces or duplicates a
@@ -400,3 +402,12 @@ delete soft-deletes its attachments too. Reader photos remain distinct from sour
 Replay caution (November 14): `menuItemReviews.lane0.ts` now delegates to the main catalog. Its old JSON is historical evidence, not an apply input. Two reviewers can share a Yelp URL; URL-only replacement retains only the last reviewer. Do not restore a lost excerpt without rechecking its original review, reviewer identity and aggregate source quote budget. The main catalog contains the retained audited excerpts and converges locally.
 
 For public Trip review records, empty `translateContent` does not mean unusable when `content` is already English. Verify the original language and use an accurate original-English provider label, retaining the raw original and empty publisher-translation field in provenance. Do not hand-translate missing foreign-language text or call original English a publisher translation.
+
+Trip named-food records remain candidates even when the numeric branch and food IDs match. The November 15
+continuation rejected 29 of 34 uncovered candidates after visual inspection (wrong dishes, preparation,
+packaging, portions or beverage brands). Never let generated descriptions override the photograph. Fetch
+fresh food records before saving. Different locale responses may use different CDN hosts for the same
+image; compare downloaded bytes before treating that as a changed photograph, and inspect again if bytes
+differ. Source-language `restaurantInfo` addresses can resolve garbled English addresses; retain both
+responses and compare the street/building/floor to the saved branch. Review text mentioning a different
+location still takes precedence over an exact listing ID. Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{13,14}/`.

@@ -960,3 +960,80 @@ The production sync plan had no conflicts or unmatched records. The pilot and it
 Twenty-seven exact-dish editorial estimate keys were added locally, bringing the November 14 total to **191**. They remain code changes; no production deployment or translation run occurred. Translations remain with the separate translation agent.
 
 Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews12/` (40-branch candidate set, review API pages, source translations, selection/hold decisions, three visual photo checks, Azure uploads, local profile readbacks and item ledger); `.scrape/menu-inventory-prod-sync-2026-11-14i/` (production plan, Azure preflight, pilot, full readbacks, snapshots, final audit, convergence and 11 native-page checks); and `.scrape/menu-inventory-prod-sync-2026-11-14h/local-after.json` (pre-pass local baseline).
+
+### November 15 continuation — two research batches, synced to production
+
+Resumed the next 80 ranked China branches (`deep-reviews13` and `deep-reviews14`, rank ranges
+`[340:380]` and `[380:420]`). Retrieved three public review pages per branch and manually inspected
+57 exact-dish leads against their original Chinese and publisher English. Saved **31 review
+associations across 15 profiles**, retaining praise, criticism of burnt and limp beef buns, and a
+complaint about jianbing affordability. Original-language branch-address readbacks resolve the
+awkward English Houtang address and confirm Halal JinTongJi's Jiankang Road 185 location. Generic
+recommendations, ingredient-only matches and size-ambiguous fish accounts were held. Grange Grill's
+review mentioning Third Ring Road remains held for correspondence with the saved Shenzhen outlet.
+
+Visually inspected all **34 named-photo candidates still uncovered in these branches**. Only five
+passed: Ming Xuan's Wenchang chicken, Long Quan Ren's coconut juice, Mu De Lao Zhou Jia's sesame
+flatbread, the Dongguan hotel restaurant's grilled steak, and Authentic Baoluo Noodles' shrimp
+dumplings. Fresh exact-branch food IDs and source images were checked before saving. Source-language
+Trip.com responses can use a different CDN hostname for the same image: byte comparison confirmed
+the three second-batch originals were identical. All five Azure uploads passed public download and
+byte checks. Captions disclose companion food, multiple glasses/dumplings, and unresolved serving
+counts without altering prices or offers.
+
+The other 29 photos remain held. Examples include white buns labelled as black lava buns, bivalves
+labelled as whelks, a green soda bottle labelled as Bingfeng orange soda, raw hotpot beef labelled as
+stir-fried beef, and red soup labelled as soy pudding. Named listing records are discovery leads;
+visual mismatch overrides the label. Those items retain exact rejection reasons and further
+operator/detail-page, Google Images/Maps and Yelp steps in the ledger. No region is exhausted.
+
+The combined local change touches **18 profiles** and closes **five effective photo gaps and 24
+effective review gaps**. After enabled-specials precedence and same-name deduplication, local
+coverage is **13,508 photographed entries and 738 reviewed entries out of 55,103**, leaving
+**41,595 photo gaps and 54,365 review gaps**. The seven other review associations belong to dishes
+already counted as reviewed. Production was not written; its last verified November 14 checkpoint
+remains 13,503 photos and 714 reviewed entries.
+
+Full current-revision readbacks and a whole-inventory comparison match an expected after-state
+constructed from the exact approved manifests. There are no unexpected media changes, no other
+profile changes, no enabled/region changes and no quote-budget violations across **711 source URLs**.
+Review and photo replays converge to zero changes. All **18 affected local native pages** returned
+HTTP 200 and verified **99 photo URLs and 43 review excerpts** against their visible merged menus.
+These are server-rendered/serialized checks. Hydrated within-dish and landing-tile checks remain
+open: the CUA tab creation API still fails with `timeoutMs`, and native Chrome focus changed during
+the Por Favor attempt. The temporary verification tab was closed.
+
+Added **26 editorial estimate keys locally** for explicit dish praise/criticism; the swan pastry
+presentation comment and jianbing affordability comment stay unscored. Both focused rating tests
+and ESLint pass. No production deployment or translation run occurred; translations remain with
+the translation agent.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews{13,14}/` contains review pages,
+source-language addresses, source excerpts, all selection/hold decisions, visual photo evidence,
+uploads and complete local profile readbacks. `deep-reviews13/final-audit.json`, `native-checks.json`,
+`new-estimates.json` and `ledger-update.json` record combined verification. Fresh inventory snapshots
+are `.scrape/menu-inventory-2026-11-13/main/nov15-{start,after}.json`. The item ledger preserves prior
+notes and updates 864 entries, with all 57 review decisions matched. Resume ranked range `[420:460]`
+after `deep-reviews14`, including both new manifests in saved-review/source exclusions.
+
+**Production sync completed November 15 after the owner's standing instruction:** push verified, ready
+data after every research round without asking again. This supersedes the earlier per-round request
+requirement for this menu photo/review work; code deployment and translations remain separate.
+
+Synced all **31 review additions and five photo additions across 18 production profiles**, matched
+by exact branch source, record kind, menu label and item name. The fresh plan had no conflicts or
+unmatched records. All five public Azure URLs passed preflight; the pilot profile's full readback
+and updated native page passed before the remaining saves. A fresh whole-production snapshot
+matches the planned after-state with no unrelated profile, enabled-state or region changes. All
+**711 source quote budgets** pass, and the final comparison converges to **zero operations or
+conflicts**. All **18 affected production native pages** returned HTTP 200, verifying **99 photo URLs
+and 43 excerpts** after enabled-specials precedence. These checks cover server-rendered/serialized
+content; hydrated gallery checks remain open as described above.
+
+Production and local now agree at **13,508 photographed entries and 738 reviewed entries out of
+55,103**, with **41,595 photo gaps and 54,365 review gaps** remaining. New editorial estimates remain
+local code changes; this data sync did not deploy code or run translations. Production evidence:
+`.scrape/menu-inventory-prod-sync-2026-11-15/` (fresh plan, public-blob checks, pilot, complete
+readbacks, whole-inventory snapshots, final audit, convergence and native-page checks). The China
+item ledger marks the 29 distinct affected item keys as verified on production. The standing
+instruction is recorded in `AGENTS.md`, the restaurant research skill and `ToDo.md`.
