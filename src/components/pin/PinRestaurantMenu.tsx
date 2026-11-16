@@ -97,7 +97,6 @@ export async function PinRestaurantMenu({ pinId, sourceUrl, today }: { pinId: nu
         <span className={styles.checked}>Checked {checked}</span>
       </div>
       <div className={styles.body}>
-        {rescrapeCandidate ? <p role="status" className={styles.update}>Update due. Showing the last verified menu and specials; check the restaurant’s links for the latest details.</p> : null}
         {dishPhotos.length ? <FoodPhotoStrip items={dishPhotos} pinId={pinId} /> : null}
         <RestaurantMenuTabs tabs={tabs} />
         <p className={styles.footer}>Prices use each menu’s currency. Times are local to the restaurant. Confirm availability before visiting.</p>

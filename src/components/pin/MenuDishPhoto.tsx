@@ -1,4 +1,4 @@
-import { restaurantDishImages, type RestaurantMenuItem } from '@/lib/restaurantMenus';
+import { restaurantDishImages, restaurantMenuAmount, type RestaurantMenuItem } from '@/lib/restaurantMenus';
 import { MenuItemReviews } from './MenuItemReviews';
 import styles from './RestaurantMenu.module.css';
 
@@ -9,7 +9,7 @@ export function FoodPhotoStrip({ items, pinId }: { items: RestaurantMenuItem[]; 
     <ul className={styles.foodStripList}>
       {items.map((item) => <li key={restaurantDishImages(item)[0].src} className={styles.foodStripItem}>
         <MenuItemReviews pinId={pinId} item={item} gallery={items} photoOnly />
-        <span className={styles.foodStripCaption}>{restaurantDishImages(item)[0].caption}</span>
+        <span className={styles.foodStripCaption}>{item.name}{item.priceLabel || item.price != null ? ` · ${item.priceLabel ?? restaurantMenuAmount(item.price as number)}` : ''}</span>
       </li>)}
     </ul>
   </div>;

@@ -33,7 +33,6 @@
 .documentPage { display:block; width:100%; height:auto; border:1px solid var(--menu-rule); border-radius:10px; }
 .documentLink { margin-top:20px; padding:24px; border:1px solid var(--menu-rule); border-radius:10px; }
 .footer { margin-top:24px; border-top:1px solid var(--menu-rule); padding-top:14px; color:var(--menu-muted); font-size:10px; line-height:1.7; }
-.update { margin-bottom:18px; padding:12px 14px; border:1px solid var(--menu-rule); border-radius:8px; color:var(--menu-muted); font-size:12px; line-height:1.7; }
 .offers { display:grid; gap:14px; margin-top:16px; }
 .offer { border:1px solid var(--menu-rule); border-radius:10px; background:color-mix(in srgb,var(--menu-accent) 3%,var(--menu-paper)); padding:18px; }
 .pane .offerTitle { color:var(--menu-accent); font-family:Georgia,'Times New Roman',serif; font-size:21px; font-weight:400; }
