@@ -744,6 +744,15 @@ const hi: Messages = {
       note: 'ऊँचा बेहतर है। धूसर रेखा: अब तक का सर्वश्रेष्ठ स्कोर; खोखले बिंदु ओपन-वेट मॉडल हैं; ऊर्ध्वाधर पट्टी विश्वास अंतराल है।',
       source: 'Epoch AI ECI',
     },
+    timeHorizon: {
+      heading: 'Task length AI completes {percent}% of the time',
+      alt: '{count} AI models by release date against the length of software task they complete, from METR. This pin: {model}.',
+      axis: 'Task duration (for humans)',
+      log: 'Log scale',
+      linear: 'Linear scale',
+      note: 'Length of software task, in human time, at which a model succeeds {percent}% of the time. Dark dots set a new best; the dashed line is the exponential trend through them; the vertical bar is the 90% confidence interval.',
+      source: 'METR time horizons',
+    },
     modelChart: {
       heading: 'लागत बनाम गुणवत्ता',
       asOf: '{date} तक के एरीना स्कोर',

@@ -41,6 +41,7 @@ external site. Seed or link Pin records for all venues and specials.
 Specials. Never use a research/check date, menu publication date or promotion start. Research dates go in
 content `checkedAt`; offer dates in Specials. If only year/month is supported mark the date estimated and explain.
 Don't infer a branch date from the brand's founding or the host building. Queue missing opening evidence.
+Pizzeria Bianco is a concrete trap: its operator dates the grocery-store origin to 1988, a strip-mall move to 1994, and the Heritage Square / 623 Adams Street move to 1997. The Heritage Square pin uses estimated 1997, with its placeholder month/day explained; do not restore the brand's 1988 year. Evidence: `.scrape/menu-research-all-2026-11-13/us/round21/bianco-date-correction.json`.
 
 ## Menus
 Find and display real items, including happy hour and specials, on cards and pin details. Look past the first
@@ -198,6 +199,8 @@ returns 0 photos try inserting or appending `-san-diego`. The loose pass (captio
 words) finds ~3x more photos but needs a by-eye review: drop different dishes and ambiguous combinations; use clearly identified combo photos only with the disclosures above.
 The old alt-text pass found few operator/Instagram matches; that is not a reason to stop. Inspect rendered backgrounds and embedded product data, then verify individual post captions.
 
+Native Chrome fallback (November 15 USA round): if CUA tab creation fails, use the documented native Chrome app interface and normal search/gallery controls. Verify the street address before opening photos; Yelp's first Pizzeria Bianco result was Biltmore, while the saved branch is Heritage Square at 623 E Adams Street. A named gallery photo's `?select=ID` URL supplies the original `https://s3-media0.fl.yelpcdn.com/bphoto/ID/o.jpg` download; retain its caption, contributor and date and visually inspect the file. `select_video` identifies a video, not a still. Keep added-topping variants separate. Do not disable Chrome's console-pasting security warning to run the old bulk helper; normal gallery browsing and operator pages remain alternatives. Record partial batches honestly: USA round 21 saved photos at two venues but did not finish Yelp batch index 3.
+
 ### Reviewed saves and ordinary menus (October 30 follow-up)
 
 Use `scripts/restaurants/yelpDishes/applyReviewed.py` for new batches: its header describes the reviewed JSON
@@ -287,6 +290,8 @@ JSON catalogs are snapshots; content updates don't need a deployment. Preserve s
 verify the pin and landing page. Dining rubric/reviews: see `pin-enrichment-rubrics`.
 
 ### All-cities photo and review runs (November 12-13, 2026)
+
+Owner priority (November 15, 2026): work **USA-based restaurants first** for menu photos and exact-dish reviews. Resume the US ledgers and Yelp queue before non-US queues; retain the latter for later continuation. Current US photo continuation: `.scrape/menu-research-all-2026-11-13/yelp-us/batches.json`, index 3 onward. US review research uses the per-item US ledgers and original sources; the priority does not relax exact branch/item, photo inspection, quote-budget, readback or production-audit requirements. Check `ToDo.md` for the latest checkpoint and queue position.
 
 Inventory and results: `docs/restaurant-menu-inventory-2026-11-12.md`. Workflow that worked for Tokyo,
 Sapporo, Nagoya, Osaka and Fukuoka (largest gaps first, one agent per group of venues, local save then push):

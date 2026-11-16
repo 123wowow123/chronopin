@@ -1816,3 +1816,81 @@ Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews38/`,
 The item ledger records all 40 decisions, updates 714 rows and marks 26 newly reviewed items saved and
 verified on production. The 15 round-sixteen specials profiles without backing pins remain an opening/identity
 and pin-linkage gap.
+
+
+### November 15 priority change — USA-based restaurants first
+
+Owner instruction: prioritize USA-based restaurants for the ongoing menu-photo and exact-dish-review
+inventory. Resume the US photo queue at `yelp-us/batches.json` index 3 (15 venues), then remaining batches;
+continue operator/detail, branch-gallery, Google Images/Maps and original review research through the US
+item ledgers. The next batch includes Phoenix, Nashville, Seattle, Austin, Houston, Miami-area and
+Philadelphia-area venues. Keep exact branch/variant/portion checks, inspect every photo, preserve source
+credits, enforce aggregate quote budgets and the six-review cap, and sync ready data under the standing
+production-data authorization with pilot/native checks and complete audits.
+
+The 85-source China low-review queue is preserved for later. This is a priority/queue update, not a new
+research or data-sync round: verified production remains **13,847 photographed / 1,105 reviewed out of
+55,103 entries**. No new production data, code deployment or translations were applied for this change.
+Queue evidence: `.scrape/menu-research-all-2026-11-13/us/usa-first-plan-2026-11-15.json`.
+
+
+### November 15 twenty-first round — USA-first photos, 11 menu associations and a missing native pin repaired
+
+Worked the next US queue at batch index 3 through operator-page discovery and normal Yelp browsing.
+The Chrome tab API failed; its native interface worked for the source research, but Chrome blocked
+console pasting with a security warning. The warning was left in place. Used normal gallery controls
+and downloaded only observed named photo IDs. Yelp's first Bianco search result was Biltmore; verified
+the separate **623 E Adams Street / Heritage Square** listing before selecting photos.
+
+Operator discovery covered the 15 queued records: 13 supplied usable HTML links (32 requests, 29 successful
+and three HTTP 403). OpenTable-only links and blocked/unnamed galleries still need follow-up. This is
+candidate discovery, not completed per-item research. Chez Zee's source-less hidden images are named
+inside `.image-thumbnail` elements whose CSS backgrounds hold the real food pictures.
+
+Visually inspected **13 dish-image candidates**, approving **11**:
+
+- Pizzeria Bianco: Wiseguy, Sonny Boy, Biancoverde, Margherita, Rosa, Marinara, Farmers Market Salad and
+  Handmade Mozzarella Salad. Six named Yelp photos retain contributors and historical dates; two operator
+  photos come from the exact branch page. The Marinara photograph shows a separate Biancoverde behind it,
+  explicitly disclosed in its caption. The background pizza is not represented as included in the item.
+- Chez Zee: half-order fried pickles, spinach/artichoke dip, steak/mushroom quesadilla. The quesadilla is
+  clearly labelled as the operator's regular-menu photograph; saved happy-hour prices/conditions are preserved.
+
+Held the shared quesadilla card for the chicken/bacon variant and shared pizza card for cheese/pepperoni:
+the pictures do not establish those exact preparations. Also excluded added-tomato-sauce Biancoverde,
+added-mushroom Margherita and a video result from the still-photo set. No picture was copied between branches.
+
+**Chez Zee native pin repaired.** Exact-source and title/alias checks found no existing pin. The operator's
+[history](https://www.chez-zee.com/about-us/) explicitly says the renamed Chez Zee opened in **1989**;
+created local pin **20968** and production pin **[21058](https://www.chronopin.com/pin/21058)** with an
+estimated year, an explained January 1 placeholder, full street address and the saved geocoded point.
+Uploaded and visually verified its interior cover to Azure and read back native media dimensions,
+credits and source URL. This makes **all eight** of its saved menu photos visible, including five older
+photos beyond this round's three additions. Its profile fields and menu prices were preserved.
+
+**Bianco branch date corrected.** The operator's [exact branch page](https://www.pizzeriabianco.com/pizzeria-bianco-heritage-square)
+explicitly distinguishes the 1988 grocery-store origin, 1994 strip-mall move and **1997 move to 623 Adams
+Street**. Corrected pin **[6740](https://www.chronopin.com/pin/6740)** in both environments to estimated
+1997, with an explained January 1 placeholder. Before/after audits confirm its author and every other
+field were preserved apart from the three date fields and update timestamp; caches were expired.
+
+Pushed **11 photo associations across two production profiles**, closing **11 effective photo gaps**.
+Production and local agree at **13,858 photographed and 1,105 reviewed entries out of 55,103**, leaving
+**41,245 photo gaps and 53,998 review gaps**. No reviews were added. Twelve images, including the new
+native cover, were uploaded to Azure and publicly verified. Pilot/native check, complete readbacks,
+whole-inventory menu preservation, all **1,161 review-source quote budgets** and zero-operation convergence
+passed. Both native pages passed server-rendered/serialized menu checks (**16 photo URLs, one excerpt**),
+with all eight saved menu photos visible in each page's data and Food photos strip. Hydrated viewer
+interaction remains pending: Chrome's window became unavailable (`cgWindowNotFound`) after source research.
+No code deployment or translation run occurred; English pin content is left for the translation agent.
+
+The US item ledger records 11 production-verified photo keys and updates 368 rows with explicit discovery
+scope. **Do not advance batch 3:** only selected Bianco items and Chez Zee were completed; other venues,
+remaining items and source avenues remain open. Continue `yelp-us/batch3-progress.json` and the per-item US
+ledger with operator/detail pages, normal Yelp galleries and Google Images/Maps. No venue or region is exhausted.
+The 85-source China queue remains saved for later under the USA-first priority. The 15 missing backing
+pins from round sixteen remain a separate unresolved set; Chez Zee was an additional missing-pin case.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/us/round21/` (source pages, named-photo provenance in the
+manifest, visual sheets, pin/media readbacks, branch-date correction and final-round audit),
+`.scrape/menu-inventory-prod-sync-2026-11-15u/`, `nov15u-{start,after}.json`.

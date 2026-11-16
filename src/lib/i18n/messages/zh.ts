@@ -742,6 +742,15 @@ const zh: Messages = {
       note: '越高越好。灰线：迄今最高得分；空心点为开放权重模型；竖线为置信区间。',
       source: 'Epoch AI ECI',
     },
+    timeHorizon: {
+      heading: 'Task length AI completes {percent}% of the time',
+      alt: '{count} AI models by release date against the length of software task they complete, from METR. This pin: {model}.',
+      axis: 'Task duration (for humans)',
+      log: 'Log scale',
+      linear: 'Linear scale',
+      note: 'Length of software task, in human time, at which a model succeeds {percent}% of the time. Dark dots set a new best; the dashed line is the exponential trend through them; the vertical bar is the 90% confidence interval.',
+      source: 'METR time horizons',
+    },
     modelChart: {
       heading: '成本与质量',
       asOf: '竞技场评分截至 {date}',

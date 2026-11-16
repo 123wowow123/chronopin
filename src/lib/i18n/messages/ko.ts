@@ -741,6 +741,15 @@ const ko: Messages = {
       note: '높을수록 좋습니다. 회색 선: 그때까지의 최고 점수. 속이 빈 점은 오픈 웨이트 모델이며, 세로 막대는 신뢰구간입니다.',
       source: 'Epoch AI ECI',
     },
+    timeHorizon: {
+      heading: 'Task length AI completes {percent}% of the time',
+      alt: '{count} AI models by release date against the length of software task they complete, from METR. This pin: {model}.',
+      axis: 'Task duration (for humans)',
+      log: 'Log scale',
+      linear: 'Linear scale',
+      note: 'Length of software task, in human time, at which a model succeeds {percent}% of the time. Dark dots set a new best; the dashed line is the exponential trend through them; the vertical bar is the 90% confidence interval.',
+      source: 'METR time horizons',
+    },
     modelChart: {
       heading: '비용 대비 품질',
       asOf: '{date} 기준 아레나 점수',

@@ -52,6 +52,7 @@ import { PinHotel } from '@/components/pin/PinHotel';
 import { getResortPricePerNight } from '@/lib/travel';
 import { PinModelChart } from '@/components/pin/PinModelChart';
 import { PinEciChart } from '@/components/pin/PinEciChart';
+import { PinTimeHorizonChart } from '@/components/pin/PinTimeHorizonChart';
 import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds, ResolvedToggle } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
@@ -323,6 +324,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
           <PinEciChart pinId={pin.id} has={modelChart} since={2025} className="mt-4" />
+          <PinTimeHorizonChart pinId={pin.id} has={modelChart} className="mt-4" />
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {perf && !electionPerf ? <PinPerf perf={perf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
