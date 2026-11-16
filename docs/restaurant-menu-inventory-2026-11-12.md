@@ -1920,3 +1920,102 @@ Held Ora King Salmon Cones (search results name tuna cones or rice cakes), Honey
 Production/local: **13,864 photographed / 1,107 reviewed / 55,103 total**, leaving 41,239 photo gaps and 53,996 review gaps. Five public image preflights, pilot, full readbacks, whole-inventory preservation, six-review caps, all 1,162 source quote budgets and zero-operation convergence passed. Native S3 data verifies six photo URLs and one unique excerpt. Hydrated croquette viewer visually shows the correct image, historical caption, credit and linked review; previous-dish navigation loads edamame and its credit; dismissal works. No code deployment or translations.
 
 Evidence: `.scrape/menu-research-all-2026-11-13/us/round23/`, `.scrape/menu-inventory-prod-sync-2026-11-15w/`, `nov15w-{start,after}.json`. The US item ledger and batch progress preserve earlier work and this continuation.
+
+## November 15 — inventory recount after round 25
+
+Read-only recount of **production** (`/api/admin/restaurant-content` and `/api/admin/restaurant-specials`, enabled records, effective menus: specials override same-label ordinary menus, item names counted once per label) using `.scrape/menu-inventory-2026-11-13/main/effective.py` logic. Nothing was changed.
+
+| | Round 23 audit | Now | Change |
+|---|---|---|---|
+| Entries | 55,103 | 55,103 | 0 |
+| Photographed | 13,859 (before) / 13,864 | **13,872** | +8 |
+| Reviewed | 1,107 | **1,107** | 0 |
+| Photo gaps | 41,239 | **41,231** | −8 |
+| Review gaps | 53,996 | **53,996** | 0 |
+
+Per-region movement since the round 23 audit: Seattle photos 96 → 101 (IL BISTRO, five photos) and Philadelphia 138 → 141 (Amada Wayne, three photos). All other regions are unchanged. This matches the round 25 save list; the 13,867 estimate in the earlier note was low by five.
+
+Not repeated in this recount: whole-inventory preservation, aggregate quote budgets and native-page checks for round 25. Evidence: `.scrape/menu-inventory-2026-11-15x/` (`prod.json`, `prod-effective-counts.json`, `count.py`). No deployment or translation run.
+
+## November 15 — round 26, USA-first photos (Pisco y Nazca Doral, 2120, Duke's Green Lake)
+
+Method: from a logged-in Yelp tab, `fetch()` of each branch's `/biz_photos/<slug>?tab=food&start=N` pages and parsing reader captions in the DOM, then keyword filtering against the venue's photo gaps; every candidate was downloaded from `s3-media0.fl.yelpcdn.com/bphoto/<id>/o.jpg` and inspected on a contact sheet. Branch addresses were verified on the Yelp business pages (8551 NW 53rd St Doral; 2120 6th Ave Seattle; Duke's Greenlake slug).
+
+**Saved 13 photos** (local, then production; Azure `restaurant-dishes/us-round26/`):
+- Pisco y Nazca Doral (specials 870, "Lunch specials"): 9 — Ají de Gallina, Resaca Burger*, Causa Crocante, Causa de Pollo, Ceviche Tradicional*, Lomo Saltado Roll*, Tallarín Saltado, Tuna Tartare Tacos*, Yuca a la Huancaína.
+- 2120 (specials 223): 3 — Fried Calamari, Washington Oysters (full platter, disclosed), Brussels Sprouts.
+- Duke's Seafood Green Lake (specials 214): 1 — Award Winning Clam Chowder.
+
+**Result:** effective photographed entries 13,872 → **13,885 / 55,103** (Miami +9, Seattle +4); reviewed unchanged at **1,107**. Gaps: **41,218 photo, 53,996 review**. Production readbacks for all three records matched; whole-inventory comparison shows only those three profiles changed and only in `image` fields; all 1,162 quote budgets still within limits (no item above six reviews); re-running the manifest against production is a no-op (convergence).
+
+**Held / not done:**
+- Pizzeria Bianco (content 89, Heritage Square): all matching gallery photos already saved; remaining gaps (Spiedini, Antipasto, sandwiches, Local Organic Greens, mushrooms, olives, sausage, salami, anchovies, prosciutto, pepperoni) have no exact-named Yelp photos. "Sonny add pepperoni" is an added-topping variant, not the Pepperoni item.
+- Pisco y Nazca Doral: "Two Tostones" (Yelp "Tostones"/"Pork Tostones" topping not established), Empanadas de Pollo (only a mixed plate with avocado toast), Croquetas de Ají de Gallina, Chicharrón de Pescado, Chaufa de Pollo/Mariscos, Poke/Pulled Pork bowls: no exact photo found.
+- Piccolo Trattoria Doylestown: only "Calamari & Hot peppers", "Caprese salad (no prosciutto)", Stuffed Shrimp — none match the happy-hour items. Chez Zee: only "Fancy Fries with truffle oil" (not the French Fries item) and build-your-own pizza.
+- Federal Grill Downtown/Hedwig Village: not searched (four Yelp slugs `federal-american-grill-houston-3/-4/-5/-7`, branch not yet matched to the OpenTable records). Duke's Green Lake further items and S3 unresolved items not re-searched.
+- **No native-page check:** none of the three records (OpenTable sources 158533, 214753, 348751) has a backing Chronopin pin on production (`/api/admin/db/Pin?sourceUrl=` returned 0 rows), so there is no public pin to verify. Create or link backing pins before relying on public coverage; no reviews were researched this round.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/us/round26/` (manifest, uploads, local/prod readbacks, `native.py`) and `.scrape/menu-inventory-2026-11-15x/` (`prod-before-round26.json`, `prod.json`, count files). No deployment or translation run.
+
+## November 15 — round 27, USA-first photos (Federal Grill, Duke's, S3) and one critic review
+
+Method as round 26 (Yelp `biz_photos` food/drink galleries fetched from a logged-in Chrome tab, exact-name regex per gap item, every candidate downloaded from `bphoto/<id>/o.jpg` and inspected on contact sheets, Azure `restaurant-dishes/us-round27/`). Branch addresses verified on Yelp: Federal Downtown = `federal-american-grill-houston-5` (1221 McKinney St), Hedwig Village = `-4` (8731 Katy Fwy); Duke's Lake Union = `dukes-seafood-seattle-17` (1111 Fairview Ave N); Green Lake = `dukes-seafood-greenlake-seattle-4`; S3 = `sun-surf-sand-fort-lauderdale`.
+
+**Saved 28 photos and 1 review** (local, then production; whole-record `PUT` with revision, readback equality asserted):
+- Federal Grill Downtown (specials 479): Pear Bee's Knees, Strawberry Lemon Drop. Hedwig Village (specials 488): Strawberry Lemon Drop, Moscow Mule. (4)
+- Duke's Lake Union (specials 238): Sensational Wild Salmon Bites, Dungeness Crab "Un"Cake, Lobster Risotto Bites, Coco Loco Prawns, Alaska Salmon Sliders, Dungeness Crab Dip, Steamer Clams, Crabby Deviled Egg, Maple Bacon Seafood Bites, The Duke Cheeseburger, Savory Chipotle Wild Salmon Sandwich (caption notes "no bacon"), Crab Cake Sandwich, Award Winning Clam Chowder. (13)
+- Duke's Green Lake (specials 214): Crab Dip, Duke Cheeseburger, Savory Chipotle Wild Salmon Sandwich, Finger Lickin' Chicken Strips, Salmon Bites, Alaska Salmon Sliders. (6)
+- S3 Fort Lauderdale (specials 662, pin 21064): Arrowhead Roll, Crispy Rice Cakes, Dynamite Roll, Spicy Tuna Roll, Yuzu Ginger Mule. (5)
+- Review: S3 Crispy Rice Cakes, Broward Palm Beach New Times critic review "S3: The Scene at the Sea" (published 2013-07-11, quote verified on the article page), 12-word excerpt.
+
+**Result:** effective photographed 13,885 → **13,913 / 55,103** (Houston +4, Seattle +19, Miami +5, incl. S3); reviewed 1,107 → **1,108**. Gaps: **41,190 photo, 53,995 review**. Audit: only specials 214, 238, 479, 488, 662 changed, and only in `image`/`reviews`; 1,163 quoted sources all within the 25-word budget (Reddit exempt), no item above six reviews; re-running the save against production is a no-op. **Native page check passed for S3 (pin 21064: 5/5 new photo URLs present)**; the other four records have no backing pin on production, so no public page exists. Hydrated viewer not rechecked.
+
+**Held / not done:** Federal sliders (only "Cheeseburger Sliders" captions, not Burger Sliders), Federal wings/poutine/Brussels sprouts/meatballs (no exact Hedwig photo), Dragon Roll and the Salmon Cones photo at S3 (cluttered/multi-dish; Ora King identity not established), Duke's Green Lake Steamer Clams ("steamers"), Deviled Egg (generic), Duke's Bellevue (Yelp slug not found), Lake Union Chicken Strips, Havarti burger, Caesar. Review research: web search found no editorial review for Federal Grill or Duke's items; Yelp review text is not a saved source. `yelp-us/batches.json` index 4 onward was not started.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/us/round27/` (`manifest.py`, `save.py`, `photos-manifest.json`, `reviews.json`, before/after records, `native-checks.json`) and `.scrape/menu-inventory-2026-11-15x/` (`prod-before-round27.json`, `prod.json`). No deployment or translation run.
+
+## November 15 — round 28, blocked: Yelp CAPTCHA (no data changed)
+
+Round 28 started `yelp-us/batches.json` index 4. Pin-backed venues in that batch: Olive Juice (6691), 148 Noble Street (6672), Holbox (6686), Handroll Hawker (6688), Veselka Nashville (6992) and Heritage Atlanta (6968); every other index-4 venue (Nusr-Et Miami, Lure Fish House, Amada PHL, Piccolo Newtown, Bulla Aventura, NOVY, Cooper's Hawk Surprise, Donatella, Elliott's) has no backing pin on production. Yelp slugs resolved through search (`holbox-los-angeles-2`, `handroll-hawker-san-francisco-2`, `olive-juice-san-francisco-2`, `nusr-et-steakhouse-miami`, `amada-philadelphia`, `148-noble-street-brooklyn`), but every `biz_photos` request, fetched and navigated, returned HTTP 403 with a Yelp CAPTCHA challenge. CAPTCHAs are not bypassed; the Yelp avenue is paused until the owner clears it in the Chrome tab.
+
+Operator-site alternatives checked and rejected: Duke's Bellevue (its six gallery photos show dishes absent from the Bellevue happy-hour menu, so none match an item), Holbox (generic scenes, no named dishes), Handroll Hawker, Olive Juice, Lure, Amada and Nusr-Et (no dish-captioned photos), Veselka (the New York site; no Nashville branch photos). Reviews: none researched.
+
+Result: **0 photos and 0 reviews added; production unchanged at 13,913 photographed / 1,108 reviewed of 55,103** (round 27 recount stands). No uploads, saves, deployment or translations. Evidence: `.scrape/menu-research-all-2026-11-13/us/round28/`.
+
+## November 15 — round 29: Yelp still blocked, China low-review group scanned, 8 reviews synced
+
+Re-tested Yelp once (`biz_photos/holbox-los-angeles-2?tab=food` in the Chrome tab): still a CAPTCHA page with no content. It was not bypassed, so the Yelp queue (index 4 onward, pin-backed Olive Juice 6691, 148 Noble Street 6672, Holbox 6686, Handroll Hawker 6688, Veselka Nashville 6992, Heritage Atlanta 6968) stays paused. The round moved to the non-US queue.
+
+Ran the normalized first-three-page Trip.com review discovery over the **85 exact China sources with 1–4 reviews**, which completes the normalized discovery pass for all three review groups (20+: 469/469; 5–19: 141/141; 1–4: 85/85). It found 14 leads on 13 sources. **Accepted 8 review associations on 8 profiles; held 6** (generic pork-and-meatballs line, a reviewer who ordered a different noodle than the saved item, two list-only mentions, an affordability-only comment, a recommendation list mixed with atmosphere). Fresh Trip.com API verification confirmed all 8 quotes and all 8 original-language addresses match the saved branches. The Sea Intestine Rice review is saved with the original Chinese quote because Trip's English translation renders 海肠 as "sea cucumber".
+
+Pushed to production: **0 photos, 8 reviews, 8 profiles.** Coverage: **13,913 photographed (unchanged), 1,116 reviewed (+8) of 55,103**; remaining **41,190 photo gaps and 53,987 review gaps**. Public-image preflight had no new URLs; complete readbacks, whole-inventory preservation (only the eight planned profiles changed, review fields only), all **1,171 source quote budgets** and zero-operation convergence passed. All eight backing pins' native pages (14384, 14583, 14653, 14655, 14661, 14682, 14685, 15036) returned HTTP 200 with the new excerpt in server-rendered/serialized data; hydrated interactions were not checked. Procedure note: the pilot record and the remaining seven were applied in one run, so the native-page check came after the saves rather than between pilot and bulk; every page passed.
+
+Queue: `normalized-low-review-remaining.json` is now empty (archived as `deep-reviews39/queue-before.json`). This is discovery coverage only: later review pages, independent sources, held identities and menu-photo research remain open. Not done: item-ledger update, editorial estimate keys for the new excerpts (local code), translations, deployment.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/china/deep-reviews39/`, `.scrape/menu-inventory-prod-sync-2026-11-15y/`, `.scrape/menu-inventory-2026-11-13/main/nov15y-{start,after}.json`, `.scrape/menu-inventory-2026-11-15x/`.
+
+## November 15 — round 30 (no Yelp, owner instruction): 7 critic reviews on three pin-backed US venues
+
+Owner instruction for this round: no Yelp at all. Duke's Bellevue operator pages (happy-hour menu, location gallery) have no dish photos beyond the lunch spread, fish tacos, pesto salmon and a generic bacon cheeseburger, so no photos were saved (cross-branch Duke's photos are not copied onto Bellevue). Holbox's Infatuation photos are not dish-captioned. The round therefore added The Infatuation reviews, each checked against the live article and the record's address:
+
+- **Veselka Nashville (pin 6992, content 301):** Pierogi, Latkes, Beef Stroganoff, Kielbasa (Infatuation Nashville review, 2026-10-12; 23 quoted words in total). Latkes and kielbasa quotes are critical.
+- **Holbox (pin 6686, content 35):** Shrimp Aguachile (Infatuation LA review, 2025-03-20; 18 words).
+- **Handroll Hawker (pin 6688, content 37):** Shrimp Tempura and Crispy Chicken (Infatuation SF review, 2026-10-06; one 15-word quote shared by both items).
+
+Held: Holbox's uni/kanpachi tostada praise (no matching saved item name), Holbox taco dorado (would exceed the 25-word source budget), Olive Juice, 148 Noble Street and Heritage Atlanta (no usable non-Yelp dish source found this round).
+
+Pushed to local then production: **0 photos, 7 reviews, 3 profiles**. Coverage: **13,913 photographed (unchanged), 1,123 reviewed (+7) of 55,103**; remaining **41,190 photo gaps and 53,980 review gaps**. Pilot (Veselka) saved and its native page checked before the other two. Readbacks matched, only the three planned profiles changed (review fields only), all **1,174 source quote budgets** are within 25 words, no item has more than six reviews, and a re-run changes nothing. Native pages 6992, 6686 and 6688 return HTTP 200 with the new excerpts in page data; hydrated interactions not checked. Not done: editorial estimate keys, ledger update, translations, deployment.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/us/round30/` (`reviews.json`, `save.py`, before/after readbacks, native HTML) and `.scrape/menu-inventory-2026-11-15x/` (`prod-before-round30.json`, `prod.json`).
+
+## November 15 — round 31 (no Yelp, owner instruction): 8 operator-site photos at Pho Sedona
+
+Photo-first round without Yelp. Sources tried: operator sites for the largest US photo gaps (EggBred Phoenix, Pho Sedona, Bluebonnet & Thyme, Zane's Pizza, Soluna Eats). Only **Pho Sedona's branch website menu** (`phosedonaaz.com/menu`, one `figure.item-image` per item block, so image-to-name pairing is exact from the HTML structure) had dish-paired photos not yet saved.
+
+Saved to **content record 58** (local + production, Azure `restaurant-dishes/round31/`): Fried Wonton (8), Torpedo Shrimp Rolls (4), Grilled Beef Salad, Lemongrass Chili Chicken With White Rice, Grilled Beef Fried Rice, Grilled Beef Vermicelli, Half Rotisserie Chicken With Red Rice (caption discloses the photo shows one leg quarter), Crispy Salted Roasted Fish With White Rice. Every photo was inspected.
+
+Rejected: Eggrolls and Vegetarian Egg Rolls (the operator uses one identical image for both), Egg Rolls Vermicelli (photo shows grilled chicken slices).
+
+Held / not usable: EggBred (only "Benny Burrito" is named, from a filename on the Chino Hills page; other named photos already saved), Bluebonnet & Thyme (unlabelled gallery), Zane's Pizza (no item photos), Soluna Eats (403), Olive Juice / 148 Noble Street / Heritage Atlanta (not retried beyond round 30; no non-Yelp dish source found this round).
+
+Result: effective photographed **13,913 → 13,921 of 55,103** (Phoenix +8); reviewed unchanged at 1,123. Gaps: 41,182 photo, 53,980 review. Checks: readback equals saved profile; whole-inventory comparison shows only record 58 changed and only `image` fields; all 1,174 quoted sources within the 25-word budget, no item over six reviews; pin 6709 (Pho Sedona Opens in North Phoenix) serves all 8 new photo URLs. Hydrated viewer not checked. No code deployment, translations or commits. Evidence: `.scrape/menu-research-all-2026-11-13/us/round31/` and `.scrape/menu-inventory-2026-11-15x/` (`prod-before-round31.json`, `prod.json`).

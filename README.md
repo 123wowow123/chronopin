@@ -518,3 +518,9 @@ build single daily dashboard landing page, and make it nice, that shows most imp
 
 
 generate clips of long form video media for preview
+
+
+
+Dashboard allows are asking question and will set panel update and reminder for questions like: 
+remind me of babcock and wilcox permitting final approval status
+this will run on 6 am/pm job to refresh information and notify you if updates are defected and likely dates if applicable
