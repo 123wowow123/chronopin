@@ -14,7 +14,7 @@
 .pane .menuTitle { color:var(--menu-ink); font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.25; font-weight:400; }
 .source { display:inline-flex; align-items:center; gap:5px; color:var(--menu-accent)!important; font-size:11px; font-weight:600; text-decoration:none; }
 .source:hover { text-decoration:underline; text-underline-offset:4px; }
-.note { margin-top:10px; max-width:75ch; color:var(--menu-muted); font-size:12px; line-height:1.7; }
+.note { margin-top:10px; color:var(--menu-muted); font-size:12px; line-height:1.7; }
 .menuItems { margin-top:22px; max-height:40rem; overflow-y:auto; overscroll-behavior:contain; padding:0 8px 8px 0; scrollbar-width:thin; scrollbar-color:var(--menu-rule) transparent; }
 .categories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 36px; align-items:start; }
 .category { min-width:0; }

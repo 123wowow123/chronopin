@@ -1894,3 +1894,29 @@ pins from round sixteen remain a separate unresolved set; Chez Zee was an additi
 Evidence: `.scrape/menu-research-all-2026-11-13/us/round21/` (source pages, named-photo provenance in the
 manifest, visual sheets, pin/media readbacks, branch-date correction and final-round audit),
 `.scrape/menu-inventory-prod-sync-2026-11-15u/`, `nov15u-{start,after}.json`.
+
+
+## November 15 — round 22, USA-first batch 3 continuation
+
+Saved one exact-branch Bang Bang Shrimp photograph at [S3, Fort Lauderdale](https://www.chronopin.com/pin/21064). The named Yelp Food gallery caption and street address were verified in native Chrome, and the downloaded original was visually inspected. Its viewer failed to expose the contributor/date; the saved credit names the Yelp user-photo source without inventing either. The caption separates the photographed presentation from current happy-hour serving size and price. No reviews were added: the visible dish-review leads still need original full-review permalink checks.
+
+Created backing pins local 20969 / production 21064, opening May 9, 2013 (confirmed). New Times Broward-Palm Beach, May 23–29, 2013, page 25 explicitly reports the actual opening to the public on May 9 at 505 N Fort Lauderdale Beach Boulevard. The archived PDF page was rendered and visually inspected; the operator independently says May 2013. Full address and saved geocoded point were read back. The cover's old profile alt says interior, but visual inspection shows the oceanfront terrace: the new native Medium attribution accurately calls it a terrace. No existing profile photo fields were changed.
+
+2120 and Federal Downtown exact-branch ordering menus loaded through normal Chrome after direct HTTP 403; their public Apollo menu-item image fields are null. S3 WordPress media search checked shrimp/croquettes/chicken/edamame/roll: its Surf and Turf Roll picture is not a saved dish. Blue crab croquettes differ from saved goat cheese; sushi leads still require the saved four-piece portion. These are partial source checks, not exhausted venues. Google Images/Maps, later Food/Drink pages and other branch sources remain queued.
+
+Production and local agree at **13,859 photographed / 1,105 reviewed / 55,103 entries**, leaving 41,244 photo and 53,998 review gaps. Both Azure assets were publicly verified. Pilot/native verification, full profile and pin/media readbacks, preservation, all 1,161 aggregate quote budgets and zero-operation convergence passed. The hydrated production photo viewer opened with the correct image, full caption and linked credit and closed successfully. No code deployment or translations; English pin content is left to the translation agent.
+
+Batch 3 stays partial; the per-item ledger and batch progress preserve earlier results and add this S3 checkpoint. Evidence: `.scrape/menu-research-all-2026-11-13/us/round22/`, `.scrape/menu-inventory-prod-sync-2026-11-15v/`, `nov15v-{start,after}.json`.
+
+
+## November 15 — round 23, USA-first S3 continuation
+
+Synced **five photos and two exact-dish review associations** at [S3, Fort Lauderdale](https://www.chronopin.com/pin/21064). Native Chrome targeted Yelp searches recovered captioned original photos of Goat Cheese Croquettes (Erin F., February 17, 2021), Wok Charred Edamame (Oriana C., July 1, 2022), Happy Hour Korean Fried Chicken Bites (Samantha D., May 28, 2024), Duck Fat Onion Rings (Kavitha P., September 5, 2024), and Mamasita (Gracie D., March 17, 2019). Every original was downloaded and visually inspected; all images are in Azure with selected-photo provenance. Captions distinguish historical presentation and pictured background drinks from current happy-hour terms. The current operator menu independently names the strawberry Mamasita cocktail.
+
+A freshly opened [original Reddit comment](https://www.reddit.com/r/fortlauderdale/comments/1dxfchd/comment/lc4a7lj/) in “Best Dish in Fort Lauderdale?” explicitly assesses both named S3 appetizers. One 17-word excerpt is associated with each item; unique source text is counted once in aggregate quote budgets. The account is shown as deleted, and the exact publication date is unavailable (null). Direct HTTP returned a generic Reddit shell; original text/permalink were verified with the web reader, and the evidence note records this access distinction. One local 4.5 editorial estimate reflects the explicit praise, passed focused rating tests (2) and ESLint, and remains undeployed.
+
+Held Ora King Salmon Cones (search results name tuna cones or rice cakes), Honey Moon (other cocktails), and sushi portions (saved four-piece serving unresolved). These targeted first-result checks do not exhaust any item/venue. Later galleries, Drink category, original review sources and Google Images/Maps remain open; USA batch 3 stays partial. No backing-pin or existing pin fields changed.
+
+Production/local: **13,864 photographed / 1,107 reviewed / 55,103 total**, leaving 41,239 photo gaps and 53,996 review gaps. Five public image preflights, pilot, full readbacks, whole-inventory preservation, six-review caps, all 1,162 source quote budgets and zero-operation convergence passed. Native S3 data verifies six photo URLs and one unique excerpt. Hydrated croquette viewer visually shows the correct image, historical caption, credit and linked review; previous-dish navigation loads edamame and its credit; dismissal works. No code deployment or translations.
+
+Evidence: `.scrape/menu-research-all-2026-11-13/us/round23/`, `.scrape/menu-inventory-prod-sync-2026-11-15w/`, `nov15w-{start,after}.json`. The US item ledger and batch progress preserve earlier work and this continuation.

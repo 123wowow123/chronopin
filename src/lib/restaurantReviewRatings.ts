@@ -3,6 +3,8 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 15 USA round 23: a diner's explicit assessment of S3's two named appetizers.
+  "Wok Charred Edamame and Goat Cheese Croquettes from S3 are definitely the best appetizers": 4.5,
   // November 15 twentieth round: exact dish assessments, retaining the very salty truffle pork.
   "There are also eggplant stewed with clams and water celery with small yellow flowers, which are very good.": 4,
   "店里的软炸肉，配上蘸料，一口下去，回味无穷。": 4.5,
