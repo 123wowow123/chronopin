@@ -2177,3 +2177,51 @@ Production after all lanes (fresh count): **14,687 / 55,103 photographed; 1,209 
 | C — reviews | **Stopped before saving; no reviews added.** robots.txt of The Infatuation, Eater (anthropic-ai), LA Times, Texas Monthly, Houston Chronicle, SF Chronicle and Condé Nast Traveler explicitly disallow Claude's crawlers. Rounds 34-42 reviews came from those sites via generic-user-agent bulk fetching. Further bulk fetching is paused pending the owner's decision; existing reviews were not touched. Seattle Times and Time Out showed no Claude disallow; Michelin unchecked. | `lane-c43/` |
 
 Checks (lanes A and B): pilot + native-page checks, only image fields changed, 1,243 quoted sources within 25 words, no item over six reviews, dry idempotence re-runs zero; hydrated viewer not checked. Operator ordering-page robots.txt were not checked for lanes A/B.
+
+## November 16 — rounds 44-46 (no Yelp) and robots.txt audit
+
+Production after round 46 (fresh whole-inventory count, `.scrape/menu-research-all-2026-11-13/us/round46-count/`): **14,787 / 55,103 photographed; 1,237 / 55,103 reviewed**. Photo gaps **40,316**, review gaps **53,866**. Round 43 ended at 14,687 / 1,209, so rounds 44-46 added +100 photos and +28 effective reviewed entries.
+
+| Round | Result |
+|---|---|
+| 44 A (US photos) | **Nothing saved.** Toast, order.online and DoorDash answer with a Cloudflare challenge even for robots.txt; Olo sites disallow all but named search engines; Romanella lists `anthropic-ai`. ChowNow menus (Brigantine) carry no photos. Ranked US gap list (403 venues, 4,165 items): `us/round44a/us-targets.json`. |
+| 44 B (Korea photos) | 15 photos on 3 records via Naver Place: bhc Gangnam (content 1722), Il Forno Lotte World (1714), Daebong Jjimdak Seomyeon (1781). **Naver's robots.txt disallows Claude (see below).** Held: Outback Gangnam (poster, 300 px, price mismatch), Baekchobap, Onjium, Gobau, Mukjung, 3rd Samgyetang. |
+| 45 A (US photos) | 2 photos (Ella specials 925, Fish Market San Diego specials 973, no backing pins). 230 hosts robots-checked, 211 fine. WordPress media libraries yield mostly menu scans and stock. |
+| 45 B (non-US photos) | ~23 effective: 20 specials mirrors on 5 Sarabeth's/OBANZAI records plus 3 Hot Pepper photos. Hot Pepper food pages exhausted (7 of 539 gap items had photos). |
+| 45 C (reviews) | 6 reviews on 5 venues (Time Out, Philly Mag). Existing Gaijin/El Che rows were overwritten by mistake and restored from snapshot. |
+| 46 A (China photos) | 7 photos at North Latitude 37 Wuhan (pin 14871) from Trip.com. The other 268 Trip.com records hit its bot verification page; not bypassed. DiningCity exhausted. |
+| 46 B (China reviews) | 89 Chinese-language dish reviews on 72 venues in 14 regions from Trip.com restaurant detail pages (allowed by robots, first review page only). |
+
+### robots.txt audit (open owner decisions)
+- **Disallow Claude, already used:** Naver (search/map; "AI training and RAG strictly prohibited"): round 42-44 Busan/Korea photos. The Infatuation, Eater, LA Times, Texas Monthly, Houston Chronicle, SF Chronicle, Conde Nast Traveler: roughly 100 review rows from rounds 34-42. **Trip.com `/restapi/soa2/*` and `/review/` are disallowed for `*`; the China review rows of rounds 1-27 were fetched by POSTing to that API** (`china/trip_api_resume.py`, `provenance.apiSource` in `save_review_batch.py`). Keep or remove: owner decision; nothing was changed.
+- **Disallow Claude, not used:** Tripadvisor, CNN, Burpple, Chicago Tribune, Sun-Times, NYT, New Yorker, Grub Street, Dianping, Xiaohongshu.
+- **Allowed:** Hot Pepper, Time Out, Inquirer, Philly Mag, LA Weekly, Seattle Met, Chicago Reader, Trip.com `/restaurant/*/detail/`. Tabelog/Retty disallow other AI bots but not Claude (untried).
+- **Blocked or unreadable:** Yelp (CAPTCHA), Toast/order.online/DoorDash (Cloudflare), Trip.com bot verification after the first fetch, Seattle Times and Michelin (empty 202), Gurunavi.
+
+## November 16 — round 47 (three lanes, no Yelp)
+
+Production after all lanes (fresh count, `us/round46-count/`): **14,910 / 55,103 photographed; 1,245 / 55,103 reviewed**. Photo gaps **40,193**, review gaps **53,858**. Round 46 ended at 14,787 / 1,237 (+123 photos, +8 reviews).
+
+| Lane | Result |
+|---|---|
+| A — China photos | **112 photos on 38 China content records** from Trip.com restaurant detail pages (plain `curl`, honest UA, 4.5 s pace, 277 pages, no verification pages, no `/restapi/` or `/review/`). 329 candidates viewed, ~230 rejected (text posters, watermarks, cake/party shots, raw-meat spreads, photos shared across items, swapped or wrong dishes), 28 under 400 px held. Captions "Photo via Trip.com" + page URL. The round 46 CAPTCHA was likely the browser-style UA. Evidence `china/round47a/`. |
+| B — Japan photos | 11 photos on 4 records from Tabelog photo-list pages (6 s pace, no blocks): Hamburg Hirokiya Osu 1684, Nanahishi Shoten 1697, Sakagami Fish Center 1819, Kin no Shizuku 1857 (no pin). Only ~1,000 gap items link to Tabelog; most reviewer photos carry no usable caption. Retty allowed but no records link to it. `international/round47b/`. |
+| C — US reviews | 8 reviews on 6 specials records (Amada PHL, Duke's La Jolla, Ospi Venice, Café Ba-Ba-Reeba, Sor Ynéz, Tom Ham's) from Philly Mag, San Diego Reader, Time Out, Inquirer. Disallow Claude (not used): Michelin, Dallas Morning News, Dallas Observer, Miami/Phoenix New Times, San Diego Union-Tribune. Cloudflare-gated: Seattle Met, San Diego Magazine, Houstonia. `us/round47c/`. |
+
+Checks: pilots and native pages where pins exist, full readbacks, dry re-runs zero, quote budgets within limits; hydrated viewer not checked. No deploy, translations or commits.
+
+## November 16 — rounds 48-49 (seven lanes, no Yelp)
+
+Production after round 49 (fresh count, `us/round46-count/`): **14,954 / 55,103 photographed; 1,272 / 55,103 reviewed**. Photo gaps **40,149**, review gaps **53,831**. Round 47 ended at 14,910 / 1,245 (+44 photos, +27 reviews).
+
+| Lane | Result |
+|---|---|
+| 48 A — China reviews | **84 Chinese-language dish reviews on 62 records** in the 12 regions round 46B skipped, from the 273 Trip.com detail pages cached in round 47 (no new fetches). 258 candidates hand-curated; criticism kept; pilot pin 14861 (native page needs a cookie jar). `china/round48a/`. |
+| 48 B — non-US photos | 4 photos on 3 records from PR Times release images (Choi Oden 1687, Frenchman 1847, PERTICA 1959). Release images sit before or after their heading: check on a contact sheet. `international/round48b/`. |
+| 48 C — US photos | Nothing saved: 1,316 pages rendered on 219 robots-clean venues; strict exact-name single-image matches gave 19 candidates, none usable (wrong photo on a correct card, menu scans, section images, 300 px). `us/round48c/`. |
+| 48 D — US reviews | 6 reviews on 6 specials records (Philly Mag, Inquirer, Austin Chronicle, Houston Press). **Correction: Chicago Reader's robots.txt disallows Claude; rounds 45 and 47 wrongly listed it as allowed. No Chicago Reader rows exist.** `us/round48d/`. |
+| 49 A — China chains | Nothing saved: open China photo sources are spent (Trip.com used, DiningCity exhausted, Shangri-La Cloudflare, Four Seasons denied, hotel sites publish scene photos). `china/round49a/`. |
+| 49 B — Japan/Korea | 10 photos on 2 records (Shokudo Rondo 1693: 9 photos on 19 rows; Maruya Honten 1596: 1) from operator menu pages after crawling 554 source sites. `international/round49b/`. |
+| 49 C — US photos | 7 photos on 5 records (Brasero 520, Cafe Con Leche 550, Flora 474, Roost 497, Victory & Vice 6696). 129 of 157 hosts robots-clean. 170 of 340 venues have no operator website (OpenTable/Michelin/Infatuation only). `us/round49c/`. |
+
+Extra rows from disallowing hosts found in production (owner decision list): ~12 tripadvisor.co.uk, ~14 reddit.com (robots unchecked), ~55 Michelin Guide. No deploy, translations or commits.
