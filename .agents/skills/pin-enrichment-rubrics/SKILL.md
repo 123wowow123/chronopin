@@ -49,16 +49,20 @@ rubric, published specification/benchmark graphs and tables, and relevant credit
   in FLOP, hardware, time, dataset size) like epoch.ai/models/<slug>; cite the opened Epoch/maker page, label estimates
   `basis: 'estimated'`, `null` (shown Unknown) when unpublished.
 - Store images in Azure (see `pin-media-azure`); verify the public blobs and the saved native panels.
-- **Maker comparison tables go on the pin** (owner, 2026-11-18, Gemini 4 Neon pin 21101). When the launch post or the owner
-  hands over the maker's benchmark table (often an image: model vs rival models, grouped by category), save the whole
-  table as a `PinPerf` table, not just a few bars: columns Category / Benchmark / one per model (the pin's model
-  first, then the rivals in the maker's order), one row per benchmark, sub-settings kept in the benchmark name
-  ("SWE-sweep (provider harness)"), `—` where the maker shows no figure, `sourceUrl` = the launch post, and the
-  `note` saying it is the maker's own comparison, who leads where it does not lead, and the methodology URL from
-  the footer. Max 40 rows and 8 columns, cells 200 characters. Transcribe cell by cell and re-check each against the
-  image; never fill a dash. Save with `save_model_tables`, or when no run is open or the pin exists only on
-  production, `PUT /api/pins/:id/performance` (admin-login-refresh; it replaces, so GET first and resend existing
-  charts/tables). Read it back. Translations stay with the translation agent.
+- **Maker comparison tables go in the article body, not the side panel** (owner, 2026-11-18, Gemini 4 Neon pin 21101).
+  When the launch post or the owner hands over the maker's benchmark table (often an image: model vs rival models,
+  grouped by category), transcribe the whole table cell by cell (re-check each against the image; `—` where the
+  maker shows no figure, never fill a dash) into the pin's `longFormSummary`: `<h3>Benchmarks</h3>`, a one-sentence
+  intro (maker-reported, rivals named, dash meaning), a `<table>` with `<th scope="col">` headings (Benchmark (area) /
+  the pin's model first, then the rivals in the maker's order) and `<th scope="row">` benchmark cells (keep
+  sub-settings in the name, "SWE-sweep (provider harness)"), then a sentence naming the rows the pin's model does not
+  lead and the maker's methodology URL, each part with `<cite data-ref="LAUNCH_POST_URL"></cite>`. No markup marks
+  the winner: the page highlights the best cell in each row itself. **Do not also save the benchmark table to
+  `PinPerf`** (the side panel): the side panel keeps specs, pricing, safety, timelines and graphs; remove a duplicate
+  benchmark table with `DELETE /api/pins/:id/performance` when it is the only entry, or a `PUT` that resends the rest.
+  Save the body through `update_pin`, or with no run open `PUT /api/pins/:id` with the whole GET body and only
+  `longFormSummary` changed (read back references, media, author, tags; reference row ids change, that is normal),
+  then look at the live page in Chrome. Translations stay with the translation agent.
 - Preserve authors and existing graphs, tables and media. Synchronize research/replay catalogs.
 - Record specific unpublished figures, unavailable reviews or inaccessible media as research gaps; never invent
   them to fill a chart. Docs: `docs/okf/scraping/daily-jobs.md#modelrubrics`.
