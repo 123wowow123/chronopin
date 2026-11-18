@@ -508,7 +508,7 @@ pin food truck tab and their specials to specials tab on landing page.
 "SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
 
 run todo work
-All-cities menu photo and review inventory — updated November 14, 2026
+All-cities menu photo and review inventory
 
 
 build single daily dashboard landing page, and make it nice, that shows most important information to stay up to date

@@ -168,6 +168,10 @@ Do this without being asked, on every pin you create or repair. Pins about a com
 - Edit through `update_pin`; when it refuses ("No run is open"), `PUT /api/pins/:id` on local, then on prod with a fresh `admin.token` (`admin-login-refresh`), sending the **whole** pin JSON with only `address`, `latitude`, `longitude` changed (the API's PATCH is not a merge: a partial body fails on the NOT NULL `title`). Read back address, coordinates, author, media, tags and parent. Match the prod pin by `sourceUrl` or title first, since ids can differ.
 - Quick check each run: `GET /api/pins/:id` for the pins you touched and flag any whose `address` has no digit and whose coordinates equal a city centre.
 
+## Facility closures say what the site makes (owner, 2026-11-18)
+
+Closure, wind-down and layoff pins about a factory, mill, mine or warehouse state what the site produces in a **second `<p>` paragraph of the description** (HTML, under the lead paragraph; cite it as a reference; never guessed). Pin 19614 is the model. Same rule is in `src/server/extract/systemPrompt.ts`. Fix older pins the same way: `PUT /api/pins/:id` with the whole pin JSON plus a new first bullet and the source in `references`.
+
 ## Market-moving events get a market-impact weight (owner, 2026-11-12)
 
 When a run creates or rewrites a pin about an event that can move a market, score it with `save_market_impact` in the same run; do not wait for `market_impact_candidates` to list it. Owner example: pin 20915 (Jensen Huang resigns as Nvidia CEO, 12 Nov 2026) should be market-moving; saved at weight 8 (NVDA, SOXX, SMH, QQQ, AMD, AVGO, TSM). The reason comes from a page you opened (the 8-K, the company newsroom), not a guess.

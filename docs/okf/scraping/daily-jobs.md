@@ -947,6 +947,8 @@ the group ("Volkswagen" vs "Volkswagen Group"). An empty `companies` in
 
 ### layoffs
 
+**Say what the site makes (owner, 2026-11-18).** A closure/layoff pin about a plant, mill, mine or warehouse states what it produces or does in a second `<p>` paragraph of the description, from a cited source (pin 19614: Reidsville plant = Pella vinyl windows and doors). Add the source as a reference; leave it out if no source says.
+
 **When.** Midnight and the 06:00/18:00 America/Los_Angeles news job
 (owner, 2026-10-15). Every run searches for new layoffs and checks existing
 layoff pins for developments; this is both discovery and maintenance.
