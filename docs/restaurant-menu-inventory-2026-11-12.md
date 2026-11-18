@@ -2225,3 +2225,14 @@ Production after round 49 (fresh count, `us/round46-count/`): **14,954 / 55,103 
 | 49 C — US photos | 7 photos on 5 records (Brasero 520, Cafe Con Leche 550, Flora 474, Roost 497, Victory & Vice 6696). 129 of 157 hosts robots-clean. 170 of 340 venues have no operator website (OpenTable/Michelin/Infatuation only). `us/round49c/`. |
 
 Extra rows from disallowing hosts found in production (owner decision list): ~12 tripadvisor.co.uk, ~14 reddit.com (robots unchecked), ~55 Michelin Guide. No deploy, translations or commits.
+
+
+## Round 50 - Yelp resumed, batches 4-14 (November 18, 2026)
+
+Owner cleared the Yelp CAPTCHA. One agent, one Chrome tab, 3-4 s pacing, stop on 403 (never bypass). Method: verify the Yelp listing's street address against the saved branch, scan Food and Drink galleries, match only exact captioned dishes, view every image, caption as a Yelp reviewer photo with the `?select=` link, upload to Azure, save locally, then production by exact branch source (only items without an image; pilot first).
+
+- Photos added (local / production): batch 4: 37; 5: 54; 6: 48 / 47; 7: 30 / 29; 8: 31 / 31; 9: 44; 10: 34; 11: 26.
+- Production after batch 14: **15,346 / 55,103 photographed; 1,272 reviewed**; 1,418 quote sources, none over 25 words.
+- Traps: `/api/admin/restaurant-specials` ignores `limit`/`offset` and returns everything in one call; a Yelp listing without an address or at a different street number (Mi Vida 1150 vs 1100 Ludlow) is held; OpenTable-sourced specials often have no backing pin, so verify by readback only; reject portion variants, multi-dish and overlaid photos.
+- Crawler-disallow policy: agents do not fetch Infatuation, Eater, LA Times, Texas Monthly, Houston Chronicle, SF Chronicle, Condé Nast, Naver or Trip.com's API; existing rows are kept.
+- Resume at batch 15 index 0 (specials-517 Tanta, Chicago). Saint Ann held: Yelp lists 2501 N Harwood, saved branch is 2550 Harry Hines. Evidence: `.scrape/menu-research-all-2026-11-13/yelp-us/b4/` and `batch*-progress.json`.
