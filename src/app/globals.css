@@ -576,6 +576,12 @@
   .rich-text h4 {
     @apply mt-4 mb-1 font-semibold text-ink;
   }
+  /* Space between a summary's paragraphs, and before a list that follows one. */
+  .rich-text p + p,
+  .rich-text p + ul,
+  .rich-text p + ol {
+    @apply mt-4;
+  }
   .rich-text > :first-child {
     @apply mt-0;
   }
