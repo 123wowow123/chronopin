@@ -70,11 +70,16 @@ export type RestaurantDishReview = { provider: string; title: string; sourceUrl:
 export type RestaurantMenuItem = { name: string; category?: string; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage; images?: RestaurantDishImage[]; reviews?: RestaurantDishReview[] };
 
 // A menu's section tabs in display order: the categories as the menu lists them, except
-// that Food (when there is one) comes first, so it opens selected ahead of Drinks.
+// that food sections come before drink sections, so food opens selected ahead of Drinks.
+const DRINK_CATEGORY = /\b(drinks?|beverages?|cocktails?|beers?|wines?|spirits|alcohol|coffee|tea)\b/i;
 export function restaurantMenuCategories(items: { category?: string }[]): string[] {
   const categories = [...new Set(items.map((item) => item.category || 'Menu'))];
-  const food = categories.findIndex((category) => /^food\b/i.test(category));
-  return food > 0 ? [categories[food], ...categories.slice(0, food), ...categories.slice(food + 1)] : categories;
+  const isDrink = (category: string) => DRINK_CATEGORY.test(category) && !/^food\b/i.test(category);
+  const food = categories.filter((category) => !isDrink(category));
+  const drinks = categories.filter(isDrink);
+  const firstFood = food.findIndex((category) => /^food\b/i.test(category));
+  if (firstFood > 0) food.unshift(...food.splice(firstFood, 1));
+  return [...food, ...drinks];
 }
 
 export function restaurantMenuAmount(value: number, currency = 'USD'): string {

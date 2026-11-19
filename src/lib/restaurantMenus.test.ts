@@ -147,7 +147,8 @@ describe('branch-specific restaurant menus and specials', () => {
 
 describe('restaurantMenuCategories', () => {
   it('puts Food first, so it is the tab that opens, and keeps the rest in menu order', () => {
-    expect(restaurantMenuCategories([{ category: 'Drinks' }, { category: 'Food' }, { category: 'Dessert' }])).toEqual(['Food', 'Drinks', 'Dessert']);
+    expect(restaurantMenuCategories([{ category: 'Drinks' }, { category: 'Food' }, { category: 'Dessert' }])).toEqual(['Food', 'Dessert', 'Drinks']);
+    expect(restaurantMenuCategories([{ category: 'Drinks' }, { category: 'Pub bites' }, { category: 'Plates and boards' }])).toEqual(['Pub bites', 'Plates and boards', 'Drinks']);
     expect(restaurantMenuCategories([{ category: 'Cocktails' }, { category: 'Beer' }, { category: 'Food menu' }])).toEqual(['Food menu', 'Cocktails', 'Beer']);
   });
   it('leaves a menu with no Food category, or with Food already first, as it was', () => {
