@@ -1,4 +1,5 @@
 import { searchPinIdsCreatedSince } from './search';
+import { resolveNear } from '../util/nearFilter';
 import Notification from '../model/notification';
 import SearchAlert, { type DueAlert } from '../model/searchAlert';
 import log from '../util/log';
@@ -25,7 +26,11 @@ const g = globalThis as unknown as { __chronopinSearchAlertTimer?: ReturnType<ty
 async function sweep(search: DueAlert, now: Date): Promise<number> {
   // Read the pins first, claim after: a failed search is tried again from the
   // same watermark rather than skipping what it should have found.
-  const ids = await searchPinIdsCreatedSince(search.query, new Date(search.since), MATCH_LIMIT, { userId: search.userId });
+  const ids = await searchPinIdsCreatedSince(search.query, new Date(search.since), MATCH_LIMIT, {
+    userId: search.userId,
+    // within:me is around the reader's saved default location: no browser is open to say where they are.
+    near: search.locationLatitude != null && search.locationLongitude != null ? resolveNear({ near: `${search.locationLatitude},${search.locationLongitude}`, within: '100mi' }) : null,
+  });
   if (!(await SearchAlert.claim(search.id, search.since, now))) return 0;
   const fresh = await SearchAlert.recordMatches(search.id, ids);
   if (search.notifyBell) {

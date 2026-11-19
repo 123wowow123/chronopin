@@ -856,6 +856,11 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
       if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
       if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
       if (postedWithin) searchParams.set('created_within', postedWithin);
+      // within:me is around the viewer, whose position only this browser knows.
+      if (fetchQuery && parseSearchQuery(fetchQuery).within.includes('me:me')) {
+        const here = await viewerPlace();
+        if (here) searchParams.set('near', `${here.latitude},${here.longitude}`);
+      }
       const res = await fetch(withPageLang(`/api/pins/map?${searchParams.toString()}`), { signal: abort.signal });
       if (!res.ok) throw new Error(res.statusText);
       const { pins } = (await res.json()) as { pins: MapPinJson[] };

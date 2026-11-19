@@ -21,6 +21,8 @@ import { useTodayHold } from '@/lib/client/todayHold';
 import { useCulturalDays } from '@/lib/client/culturalDays';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
+import { viewerPlace } from '@/lib/client/viewerPlace';
+import { parseSearchQuery } from '@/server/util/searchQuery';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, offsetDate, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
@@ -220,6 +222,7 @@ export function SearchResults({
 
   // The filters are the server's to apply now, so a change starts the results
   // over: the sort on screen reloads, the other when it next shows.
+  const nearMe = useMemo(() => parseSearchQuery(query).within.includes('me:me'), [query]);
   function reload(sort: SortBy, posted: string | null, span: typeof startSpan, predicted = showPredicted) {
     const token = ++loadToken.current[sort];
     ahead.clear();
@@ -231,7 +234,15 @@ export function SearchResults({
     if (posted) params.set('created_within', posted);
     if (sort === 'relevance' && span.past) params.set('start_past', span.past);
     if (sort === 'relevance' && span.future) params.set('start_future', span.future);
-    fetchSearchPage(`?${params.toString()}`)
+    // within:me needs the viewer's position, which only this browser knows: it
+    // goes along as near=, and the server's own page (which has none) is
+    // replaced by this one. Without a position the search finds nothing.
+    const place = nearMe ? viewerPlace() : Promise.resolve(null);
+    place
+      .then((here) => {
+        if (here) params.set('near', `${here.latitude},${here.longitude}`);
+        return fetchSearchPage(`?${params.toString()}`);
+      })
       .then(({ pins, links }) => {
         if (token === loadToken.current[sort]) setLists((current) => ({ ...current, [sort]: { pins, links, status: 'ready' } }));
       })
@@ -239,6 +250,14 @@ export function SearchResults({
         if (token === loadToken.current[sort]) setLists((current) => ({ ...current, [sort]: { pins: [], links: {}, status: 'error' } }));
       });
   }
+
+  // The server renders a within:me search without a position, so it is empty:
+  // the page is fetched again here once the browser has one.
+  useEffect(() => {
+    if (nearMe) reload(sortBy, postedWithin, startSpan);
+    // Once per search; the filters reload it themselves.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nearMe, query]);
 
   const changePostedWithin = (within: string | null) => {
     if (within === postedWithin) return;

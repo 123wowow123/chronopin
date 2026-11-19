@@ -2,7 +2,7 @@ import * as db from '../db';
 import { MAX_LABEL_LENGTH, MAX_QUERY_LENGTH, normalizeQuery, type SearchAlertRow } from '@/lib/searchAlerts';
 
 // Saved searches with alerts (0237). Soft delete, as Follow and MoveAlert.
-export type DueAlert = { id: number; userId: number; query: string; notifyBell: boolean; since: Date };
+export type DueAlert = { id: number; userId: number; query: string; notifyBell: boolean; since: Date; locationLatitude: number | null; locationLongitude: number | null };
 
 const ROW = `s."id", s."query", s."label", s."notifyBell", s."notifyDigest"`;
 
@@ -71,7 +71,7 @@ export default class SearchAlert {
   // switched both alerts off are skipped: nothing would come of the matches.
   static due(limit: number): Promise<DueAlert[]> {
     return db.query<DueAlert>(
-      `SELECT s."id", s."userId", s."query", s."notifyBell", s."utcLastCheckedDateTime" AS "since"
+      `SELECT s."id", s."userId", s."query", s."notifyBell", s."utcLastCheckedDateTime" AS "since", u."locationLatitude", u."locationLongitude"
        FROM "SearchAlert" s JOIN "User" u ON u."id" = s."userId" AND u."utcDeletedDateTime" IS NULL
        WHERE s."utcDeletedDateTime" IS NULL AND (s."notifyBell" OR s."notifyDigest")
        ORDER BY s."utcLastCheckedDateTime", s."id" LIMIT $1`,

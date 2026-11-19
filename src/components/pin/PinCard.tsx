@@ -23,6 +23,7 @@ import { MarketImpactBadge } from './MarketImpactBadge';
 import { PinPillRow } from './PinPillRow';
 import { RestaurantPriceRange } from './RestaurantPriceRange';
 import { PinMenu } from './PinMenu';
+import { LocalPill } from './LocalPill';
 import { PinDistance } from './PinDistance';
 import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
@@ -151,6 +152,7 @@ export function PinCard({
   }
 
   const isPredicted = isPredictedPin(pin);
+  const isSeasonalActivity = !!pin.tags?.some((tg) => tg?.name?.toLowerCase() === 'seasonal');
 
   return (
     <article
@@ -177,13 +179,6 @@ export function PinCard({
                 <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly search />
               </span>
             ) : null}
-            {pin.user?.userName ? (
-              <span>
-                <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:text-ink hover:no-underline">
-                  {pin.user.userName}
-                </RefineLink>
-              </span>
-            ) : null}
             {/* How far the pin stands from the reader, once their browser
                 knows where that is. It is the row's last item and the one
                 that gives, cut short rather than wrapping the row (see
@@ -199,6 +194,16 @@ export function PinCard({
             <RefineLink field="tag" value="Curated" className={`${STATUS_PILL} bg-curated/15 font-luxe italic text-curated hover:bg-curated/25`} title={t('card.curatedTitle')}>
               {t('card.curated')}
             </RefineLink>
+          ) : null}
+          {isSeasonalActivity ? (
+            <>
+              {pin.latitude != null && pin.longitude != null ? (
+                <LocalPill latitude={pin.latitude} longitude={pin.longitude} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} />
+              ) : null}
+              <RefineLink field="tag" value="Seasonal" className={`${STATUS_PILL} bg-seasonal/15 text-seasonal hover:bg-seasonal/25`}>
+                {t('card.seasonal')}
+              </RefineLink>
+            </>
           ) : null}
           {isPredicted ? (
             <RefineLink

@@ -45,7 +45,9 @@ export const CONSTRUCTION_STATUS_TAGS = ['Proposed', 'In Progress', 'Completed',
 // Rumor marks an unconfirmed claim (timeline weight 0.4, bagSample.ts). Like the
 // statuses it is typed onto a pin by a curator and kept, and it shows as a site tag.
 export const RUMOR_TAG = 'Rumor';
-const STORED_SITE_TAGS: readonly string[] = [...CONSTRUCTION_STATUS_TAGS, RUMOR_TAG];
+// Anything tied to a season or a holiday run: seasonal activities, pop-ups, menus.
+export const SEASONAL_TAG = 'Seasonal';
+const STORED_SITE_TAGS: readonly string[] = [...CONSTRUCTION_STATUS_TAGS, RUMOR_TAG, SEASONAL_TAG];
 export const isStoredSiteTag = (name: string): boolean => STORED_SITE_TAGS.some((tag) => tag.toLowerCase() === name.toLowerCase());
 
 // Words that make a name an award: any body, ceremony or prize.
@@ -227,13 +229,13 @@ export type ReservedTag = {
   // The term a pick writes.
   // posted and updated are time-relative: their value is a relative day
   // (today, >=yesterday) the search resolves in the viewer's zone when it runs.
-  field: 'tag' | 'seen' | 'confidence' | 'posted' | 'updated' | 'mw' | 'power' | 'cost' | 'energy';
+  field: 'tag' | 'within' | 'seen' | 'confidence' | 'posted' | 'updated' | 'mw' | 'power' | 'cost' | 'energy';
   value: string;
   // For mw: and cost:, the floor the pill sets (megawatts, US dollars).
   min?: number;
   // Evidence-backed site metadata, persisted rather than derived.
   stored?: boolean;
-  icon: 'eye-off' | 'thread' | 'shield' | 'sparkle' | 'clock' | 'bolt' | 'tag';
+  icon: 'eye-off' | 'thread' | 'shield' | 'sparkle' | 'clock' | 'bolt' | 'tag' | 'pin';
 };
 
 // The date confidence levels, firmest first, as their badge writes them
@@ -252,6 +254,9 @@ export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
   ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
   { key: 'rumor', name: RUMOR_TAG, field: 'tag', value: RUMOR_TAG, icon: 'tag', stored: true },
+  // Near the viewer (within:me, 100 miles): needs the browser's position, so it is no stored or counted tag.
+  { key: 'local', name: 'Local', field: 'within', value: 'me', icon: 'pin' },
+  { key: 'seasonal', name: SEASONAL_TAG, field: 'tag', value: SEASONAL_TAG, icon: 'tag', stored: true },
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },
@@ -299,12 +304,15 @@ export function reservedPicked(query: {
   energies?: { op: string; value: number }[];
   powerKinds?: string[];
   unseen?: boolean;
+  within?: string[];
 }): string[] {
   // New and Updated stand for any posted: / updated: term, so a pick made
   // yesterday still reads as picked (and can be taken out) today.
   const has = (r: ReservedTag) =>
     r.field === 'seen'
       ? query.unseen === true
+      : r.field === 'within'
+      ? query.within?.includes('me:me') === true
       : r.field === 'posted'
       ? !!(query.postedDays?.length || query.postedBounds?.length)
       : r.field === 'updated'

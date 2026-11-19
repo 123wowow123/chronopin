@@ -378,7 +378,7 @@ function ReservedFilters({
     .filter((filter) => filter.min === undefined || on(filter.name))
     // Not seen is the viewer's own history: theirs alone, and never counted here.
     // Rumor pins sit under the timeline's confidence floor, so their count here is 0 by design; the chip stays so the search is one click away.
-    .filter((filter) => (filter.field === 'seen' ? isLoggedIn || on(filter.name) : showAll || filter.count > 0 || on(filter.name) || filter.key === 'rumor'))
+    .filter((filter) => (filter.field === 'seen' ? isLoggedIn || on(filter.name) : showAll || filter.count > 0 || on(filter.name) || filter.key === 'rumor' || filter.key === 'local'))
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (
@@ -402,7 +402,7 @@ function ReservedFilters({
             event.dataTransfer.setData('text/plain', text);
             event.dataTransfer.effectAllowed = 'copy';
           }}
-          title={filter.field === 'seen' ? t('tagCloud.reservedTitle', { name: filter.label }) : `${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
+          title={filter.field === 'seen' || filter.field === 'within' ? t('tagCloud.reservedTitle', { name: filter.label }) : `${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
           className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
             isStoredSiteTag(filter.name)
               ? on(filter.name) ? 'border-construction bg-construction/20 text-construction' : 'border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20'
@@ -411,7 +411,7 @@ function ReservedFilters({
         >
           <Icon name={filter.icon} className={`shrink-0 ${large ? 'size-4' : 'size-3'}`} />
           {filter.label}
-          {filter.field !== 'seen' && (
+          {filter.field !== 'seen' && filter.field !== 'within' && (
             <span className={`${isStoredSiteTag(filter.name) ? 'text-current opacity-80' : 'text-subtle'} tabular-nums`}>
               {filter.count}
               <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>

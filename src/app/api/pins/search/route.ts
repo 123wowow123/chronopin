@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { getUser } from '@/server/auth';
 import { json, publicOrigin, route } from '@/server/http';
 import { readSearchRequest, searchPins, searchPinsPage } from '@/server/services/search';
+import { resolveNear } from '@/server/util/nearFilter';
 import { requestTimeZone } from '@/server/viewer';
 import { requestLocale } from '@/lib/i18n/request';
 import { toJson, type PinJson } from '@/lib/types';
@@ -31,6 +32,7 @@ export const GET = route(async (request: NextRequest) => {
         onlyWatched,
         excludePredicted,
         timeZone: params.get('tz')!,
+        near: resolveNear({ near: params.get('near'), within: '100mi' }),
       }),
     );
     await localizePins(all.pins ?? [], locale);

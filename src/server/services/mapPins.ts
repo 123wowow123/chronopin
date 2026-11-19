@@ -6,6 +6,7 @@
 
 import Pins from '../model/pins';
 import { searchPinIds } from './search';
+import type { NearFilter } from '../util/nearFilter';
 import { timelineMinConfidence } from './timeline';
 import { restaurantPriceRange } from '@/server/restaurantPrice';
 import { type MapPinJson, type PinJson } from '@/lib/types';
@@ -24,6 +25,8 @@ export type MapQuery = {
   // The zone a search's date: and posted: days are the viewer's in.
   timeZone: string;
   restaurantsOnly?: boolean;
+  // The viewer's position, for within:me.
+  near?: NearFilter | null;
 };
 
 // Everything off a pin that a marker reads. Applied to a search's results,
@@ -52,7 +55,7 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // A search already answers with every match at once; it is the window and
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
-    const ids = await searchPinIds(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
+    const ids = await searchPinIds(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone, near: query.near });
     const rows = await Pins.queryForMapByIds(ids, { from: query.from, to: query.to, createdSince: query.createdSince, restaurantsOnly: query.restaurantsOnly });
     const pins = withPriceRange(rows);
     // The guide's local snapshot also needs coordinates in the map API.
@@ -113,7 +116,7 @@ const recent = new Map<string, { at: number; pins: Promise<MapPinJson[]> }>();
 export function cachedMapPins(query: MapQuery): Promise<MapPinJson[]> {
   if (query.onlyWatched) return mapPins(query);
   const minute = (date: Date | null) => (date ? Math.floor(date.getTime() / 60_000) : null);
-  const key = JSON.stringify([query.q, query.timeZone, query.restaurantsOnly ?? false, minute(query.from), minute(query.to), minute(query.createdSince)]);
+  const key = JSON.stringify([query.q, query.timeZone, query.restaurantsOnly ?? false, query.near ? [query.near.latitude.toFixed(2), query.near.longitude.toFixed(2)] : null, minute(query.from), minute(query.to), minute(query.createdSince)]);
   const now = Date.now();
   const hit = recent.get(key);
   if (hit && now - hit.at < CACHE_MS) return hit.pins;

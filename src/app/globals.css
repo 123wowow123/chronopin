@@ -83,6 +83,7 @@
   --color-success: var(--color-emerald-400);
   --color-success-soft: var(--color-emerald-300);
   --color-warning: var(--color-amber-400);
+  --color-seasonal: var(--color-pink-400);
   --color-warning-soft: var(--color-amber-300);
   --color-info-soft: var(--color-sky-300);
   --color-trivia-soft: var(--color-emerald-200);
@@ -178,6 +179,7 @@
   --color-success: var(--color-emerald-700);
   --color-success-soft: var(--color-emerald-800);
   --color-warning: var(--color-amber-700);
+  --color-seasonal: var(--color-pink-700);
   --color-warning-soft: var(--color-amber-800);
   --color-info-soft: var(--color-sky-800);
   --color-trivia-soft: var(--color-emerald-800);

@@ -3,6 +3,7 @@ import { getUser } from '@/server/auth';
 import { HttpError, route } from '@/server/http';
 import { cachedMapPins } from '@/server/services/mapPins';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
+import { resolveNear } from '@/server/util/nearFilter';
 import { requestTimeZone } from '@/server/viewer';
 import { pinPath } from '@/lib/seo';
 import { siteUrl } from '@/lib/appConfig';
@@ -23,6 +24,7 @@ export const GET = route(async (request: NextRequest) => {
     userId: user?.id ?? null,
     timeZone: requestTimeZone(request),
     restaurantsOnly: params.get('show') === 'restaurants',
+    near: resolveNear({ near: params.get('near'), within: '100mi' }),
   });
   const features = pins
     .filter((pin) => typeof pin.latitude === 'number' && typeof pin.longitude === 'number')

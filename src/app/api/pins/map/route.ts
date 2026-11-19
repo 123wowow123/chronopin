@@ -3,6 +3,7 @@ import { getUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import { cachedMapPins } from '@/server/services/mapPins';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
+import { resolveNear } from '@/server/util/nearFilter';
 import { requestTimeZone } from '@/server/viewer';
 import { requestLocale } from '@/lib/i18n/request';
 import { localizePins } from '@/server/services/translations';
@@ -35,6 +36,7 @@ export const GET = route(async (request: NextRequest) => {
     userId: user?.id ?? null,
     timeZone: requestTimeZone(request),
     restaurantsOnly: params.get('show') === 'restaurants',
+    near: resolveNear({ near: params.get('near'), within: '100mi' }),
   });
   // ?count=1: only how many, for the map's layer toggle to know a layer is empty.
   if (params.get('count') === '1') return json({ count: pins.length });

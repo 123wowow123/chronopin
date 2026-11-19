@@ -93,6 +93,8 @@ export type SearchFilter = PinSearchFilters & {
   // label fields (the fields above are then only their merge, and unused).
   alternatives?: PinSearchFilters[];
   hits: { id: number; score: number }[] | null;
+  // The viewer's own position, for within:me (the near request parameter); absent, within:me matches nothing.
+  near?: NearFilter | null;
   // The free text those hits came from, which also matches pins standing in
   // the place it names and those whose translated title says it
   // (searchClauses).
@@ -670,7 +672,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       )}
       SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
       FROM "hits"
-        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND ("tg"."kind" = 'reserved' OR "tg"."name" IN ('Proposed'::citext, 'In Progress'::citext, 'Completed'::citext, 'Withdrawn'::citext, 'Rumor'::citext)) AND "tg"."name" <> '${PREDICTED_TAG}'::citext
+        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND ("tg"."kind" = 'reserved' OR "tg"."name" IN ('Proposed'::citext, 'In Progress'::citext, 'Completed'::citext, 'Withdrawn'::citext, 'Rumor'::citext, 'Seasonal'::citext)) AND "tg"."name" <> '${PREDICTED_TAG}'::citext
       GROUP BY "tg"."name"
       UNION ALL
       SELECT 'tag' AS "field", '${PREDICTED_TAG}' AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
@@ -1144,6 +1146,7 @@ const DELAY_AMOUNT: Record<DelayBound['unit'], string> = {
 // scores 1.
 export function searchClauses(filter: SearchFilter) {
   const viewerId = filter.viewerId;
+  const viewerNear = filter.near ?? null;
   const params: unknown[] = [];
   const add = (value: unknown) => {
     params.push(value);
@@ -1282,7 +1285,10 @@ export function searchClauses(filter: SearchFilter) {
     for (const ref of filter.within) {
       const [kind, key] = [ref.slice(0, ref.indexOf(':')), ref.slice(ref.indexOf(':') + 1)];
       const radius = filter.radiusM != null ? add(filter.radiusM) : null;
-      if (kind === 'person') {
+      if (kind === 'me') {
+        // The ring around the viewer: 100 miles unless radius: says otherwise.
+        where.push(viewerNear ? `ST_DWithin("Pin"."location", ${add(viewerNear.point)}::geography, ${filter.radiusM != null ? radius : add(viewerNear.meters)}::float8)` : 'FALSE');
+      } else if (kind === 'person') {
         const seat = `(SELECT ST_Collect(ST_SetSRID(ST_GeomFromGeoJSON("f"."value" -> 'geometry'), 4326)) FROM "PersonDistrict" AS "d" JOIN "Person" AS "pe" ON "pe"."id" = "d"."personId", jsonb_array_elements("d"."geojson" -> 'features') AS "f" WHERE "pe"."slug" = ${add(key)})::geography`;
         where.push(`ST_DWithin("Pin"."location", ${seat}, ${radius ?? '0'}::float8)`);
       } else {

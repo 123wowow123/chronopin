@@ -63,7 +63,7 @@ export async function seedActivities(options: { cities?: string[]; dryRun?: bool
          VALUES ($1, $2, $3, $4, $5, ST_SetSRID(ST_MakePoint($7, $6), 4326)::geography, $8, $9, $10, $11, $12, $13, true, $14) RETURNING "id"`,
         [title, item.description, keyOf(item), summary, item.address, item.latitude, item.longitude, company.id, item.name, item.dateConfidence, item.dateReasoning, `${start}T00:00:00Z`, end > start ? `${end}T00:00:00Z` : null, user.id],
       );
-      const tags = [city.name, 'Seasonal Activities', 'Activities', ...item.seasons.map((s) => SEASON_LABELS[s]), ACTIVITY_CATEGORY_LABELS[item.category], item.neighborhood, 'Travel', ...(CATEGORY_TAGS[item.category] ? [CATEGORY_TAGS[item.category]!] : [])];
+      const tags = [city.name, 'Seasonal', 'Activities', ...item.seasons.map((s) => SEASON_LABELS[s]), ACTIVITY_CATEGORY_LABELS[item.category], item.neighborhood, 'Travel', ...(CATEGORY_TAGS[item.category] ? [CATEGORY_TAGS[item.category]!] : [])];
       const categories = new Set(['Travel', ...(CATEGORY_TAGS[item.category] ? [CATEGORY_TAGS[item.category]!] : [])]);
       await query(`INSERT INTO "PinTag" ("pinId", "name", "kind", "source") SELECT $1, name, CASE WHEN name = ANY($3::text[]) THEN 'category' ELSE 'topic' END, 'user' FROM unnest($2::citext[]) AS name`, [pin.id, [...new Set(tags)], [...categories]]);
       await query(`INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "reasoning") VALUES ($1, $2, $3, 85, $4)`, [pin.id, item.sourceUrl, `${item.name} official information`, item.dateReasoning]);

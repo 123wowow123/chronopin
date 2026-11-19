@@ -1013,6 +1013,8 @@ export function wordStartPattern(text: string): string {
 // 'pin:20630'. A person is named by slug or by name (spaces and case folded
 // the way the person page's own URL is); anything else is not an area.
 export function withinRef(value: string): string | null {
+  // within:me: around the viewer, whose position only their browser knows (the near parameter).
+  if (/^(me|local)$/i.test(value.trim())) return 'me:me';
   const m = /^(person|pin):\s*(.+)$/i.exec(value.trim());
   if (!m) return null;
   if (m[1].toLowerCase() === 'pin') return /^\d+$/.test(m[2].trim()) ? `pin:${Number(m[2])}` : null;

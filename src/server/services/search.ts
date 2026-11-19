@@ -18,6 +18,7 @@ import CompanyExecutive from '../model/companyExecutive';
 import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
 import { HttpError } from '../util/httpError';
+import { resolveNear, type NearFilter } from '../util/nearFilter';
 import { resolveCreatedSince } from '../util/createdFilter';
 import { searchedElection } from './elections';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
@@ -28,7 +29,7 @@ import { isSpan, offsetDate } from '@/lib/postedSpan';
 import { PREDICTED_TAG, uniqueTags, type TagCount } from '@/lib/tags';
 
 // timeZone: the zone date: and posted: days are the viewer's in (UTC when absent).
-type SearchOptions = { userId?: number | null; onlyWatched?: boolean; excludePredicted?: boolean; timeZone?: string };
+type SearchOptions = { userId?: number | null; onlyWatched?: boolean; excludePredicted?: boolean; timeZone?: string; near?: NearFilter | null };
 
 export type SearchSort = 'date' | 'relevance';
 
@@ -41,6 +42,8 @@ export type SearchRequest = {
   sort: SearchSort;
   // The zone date: and posted: days are read in (the tz parameter).
   timeZone: string;
+  // The viewer's position, for within:me (near=lat,lng; the ring is 100 mi).
+  near?: NearFilter | null;
   createdSince: Date | null;
   // When the results start, by relevance only: the timeline shows when.
   startFrom: Date | null;
@@ -138,6 +141,7 @@ export function readSearchRequest(params: URLSearchParams, userId: number | null
     excludePredicted,
     sort,
     timeZone: timeZoneOrUtc(params.get('tz') ?? undefined),
+    near: resolveNear({ near: params.get('near'), within: '100mi' }),
     createdSince,
     startFrom: sort === 'relevance' ? bound('start_from', 'start_past', -1) : null,
     startTo: sort === 'relevance' ? bound('start_to', 'start_future', 1) : null,
@@ -203,6 +207,7 @@ function searchLink(request: SearchRequest, direction: 'previous' | 'next', last
   if (request.onlyWatched) params.set('f', 'watch');
   if (request.excludePredicted) params.set('predicted', '0');
   if (request.timeZone !== 'UTC') params.set('tz', request.timeZone);
+  if (request.near) params.set('near', `${request.near.latitude},${request.near.longitude}`);
   if (request.createdSince) params.set('created_since', request.createdSince.toISOString());
   if (request.startFrom) params.set('start_from', request.startFrom.toISOString());
   if (request.startTo) params.set('start_to', request.startTo.toISOString());
@@ -255,6 +260,7 @@ async function searchFilter(rawQuery: SearchQuery, options: SearchOptions): Prom
     hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     viewerId: options.userId || null,
+    near: options.near ?? null,
     timeZone: timeZoneOrUtc(options.timeZone),
   };
 }
