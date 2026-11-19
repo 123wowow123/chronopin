@@ -1465,7 +1465,7 @@ const pt: Messages = {
     predicted: 'Previsto',
     rumor: 'Boato',
     seasonal: 'Sazonal',
-    local: 'Tempo local',
+    local: 'Local',
     new: 'Novo',
     updated: 'Atualizado',
     confirmed: 'Confirmado',

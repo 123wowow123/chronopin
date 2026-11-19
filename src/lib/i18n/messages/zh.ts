@@ -1468,7 +1468,7 @@ const zh: Messages = {
     predicted: '预测',
     rumor: '传闻',
     seasonal: '季节性',
-    local: '本地天气',
+    local: '本地',
     new: '新',
     updated: '已更新',
     confirmed: '已确认',

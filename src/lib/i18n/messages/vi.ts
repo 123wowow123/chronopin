@@ -1477,7 +1477,7 @@ const vi: Messages = {
     predicted: 'Dự đoán',
     rumor: 'Tin đồn',
     seasonal: 'Theo mùa',
-    local: 'Thời tiết địa phương',
+    local: 'Địa phương',
     new: 'Mới',
     updated: 'Đã cập nhật',
     confirmed: 'Đã xác nhận',

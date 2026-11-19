@@ -1531,7 +1531,7 @@ const ru: Messages = {
     predicted: 'Прогноз',
     rumor: 'Слух',
     seasonal: 'Сезонное',
-    local: 'Местная погода',
+    local: 'Местное',
     new: 'Новое',
     updated: 'Обновлено',
     confirmed: 'Подтверждено',

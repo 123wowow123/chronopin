@@ -2380,3 +2380,15 @@ Tabelog works in Chrome (the Cloudflare check clears by itself after about 5 s; 
 ### Round 67 follow-up 7 (next-candidate check, nothing saved)
 
 Checked and rejected: Sanrio House Cafe (the saved URL is the character merchandise shop, no cafe menu photos), Mia Bocca (store pages only, interior photos; menu not on the page), Jingisukan Ramjiro (facade and interior only), Hatena Coffee (escape-game promo art; the food-menu poster has tiny thumbnails that cannot be matched line by line). Rokumei Coffee and Share CAFE not opened. The remaining Japan zero-photo venues are hotel course menus and small independents; per-venue Tabelog or Instagram work gives about one line each.
+
+### Round 67 follow-up 8 (own-site pass found Yelp is still the best lane; 16 more venues)
+
+Re-ran the Yelp lane on 20 zero-photo North American venues that have a saved phone number; 18 matched by phone, 16 yielded captioned food photos. Slug discovery in one un-awaited loop (search + phone check, ~8 s per venue), then `matcher.browser.js` (about 15 s per venue; 17 venues took about 7 minutes). Note: the Chrome tool blocks any result containing `=` immediately followed by long strings; return `key value` pairs separated by spaces instead.
+
+Applied to prod + local, 104 matches minus 5 dropped on sight = 99 matched items, 102 saved lines after duplicate menu rows: Raíces 3, Rada 1, Published on Main 5, St. Lawrence 1, Il Terrazzo 9, Model Milk 5, RGE RD 4, Odla 1, Primal 2, deer + almond 2, Clementine 13, Passero 4, Canon 9, Workshop Kitchen & Bar 11, Bar Cecil 12, 4 Saints 20 (entries). Dropped on sight: Il Terrazzo Calamari (dark, unclear) and Spaghetti Carbonara (photo shows greens and beef on spaghetti), Workshop Diver scallops (photo shows mussels) and Waffles (photo shows a tart), 4 Saints Caesar (unclear). Dropped on caption: multi-dish captions at Bar Cecil, Passero, Il Terrazzo, St. Lawrence, deer + almond (Sunday), Aogami (no food-tab captions). No match by phone: Toqué! (Montreal), Park Service Coffee, Congaree and Penn. Not run: 4 venues with no phone saved.
+
+Pilot: Clementine pin 6895 public page shows 10 distinct blob paths of the 13 saved.
+
+### Round 67 follow-up 9 (Australian venue sites)
+
+Flower Drum (content 219): the Our Food page carries one dish photo, "Duck Wonton", which matches the line "Duck wonton with tangerine peel in roast duck reduction" (prod + local). Saint Peter: only hotel and room shots with non-descriptive file names. Bennelong: logos only. Press*, Africola, Wildflower, Attica, Bistro Suzette not opened (same fine-dining pattern; Yelp does not cover Australia well). Nothing else saved.

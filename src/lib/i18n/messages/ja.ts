@@ -1468,7 +1468,7 @@ const ja: Messages = {
     predicted: '予測',
     rumor: '噂',
     seasonal: '季節限定',
-    local: '現在地の天気',
+    local: '地元',
     new: '新着',
     updated: '更新',
     confirmed: '確定',

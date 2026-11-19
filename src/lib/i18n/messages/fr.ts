@@ -1474,7 +1474,7 @@ const fr: Messages = {
     predicted: 'Prévu',
     rumor: 'Rumeur',
     seasonal: 'Saisonnier',
-    local: 'Météo locale',
+    local: 'Local',
     new: 'Nouveau',
     updated: 'Mis à jour',
     confirmed: 'Confirmé',

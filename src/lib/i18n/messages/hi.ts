@@ -1484,7 +1484,7 @@ const hi: Messages = {
     predicted: 'अनुमानित',
     rumor: 'अफवाह',
     seasonal: 'मौसमी',
-    local: 'स्थानीय मौसम',
+    local: 'स्थानीय',
     new: 'नया',
     updated: 'अपडेट',
     confirmed: 'पुष्ट',

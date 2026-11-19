@@ -1753,7 +1753,7 @@ const ar: Messages = {
     predicted: 'المتوقعة',
     rumor: 'شائعة',
     seasonal: 'موسمي',
-    local: 'الطقس المحلي',
+    local: 'محلي',
     new: 'جديد',
     updated: 'محدَّث',
     confirmed: 'مؤكد',

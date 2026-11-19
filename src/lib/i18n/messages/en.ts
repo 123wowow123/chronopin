@@ -1478,7 +1478,7 @@ const en = {
     predicted: 'Predicted',
     rumor: 'Rumor',
     seasonal: 'Seasonal',
-    local: 'Local weather',
+    local: 'Local',
     new: 'New',
     updated: 'Updated',
     confirmed: 'Confirmed',

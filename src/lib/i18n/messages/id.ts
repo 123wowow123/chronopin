@@ -1478,7 +1478,7 @@ const id: Messages = {
     predicted: 'Diprediksi',
     rumor: 'Rumor',
     seasonal: 'Musiman',
-    local: 'Cuaca setempat',
+    local: 'Lokal',
     new: 'Baru',
     updated: 'Diperbarui',
     confirmed: 'Dikonfirmasi',

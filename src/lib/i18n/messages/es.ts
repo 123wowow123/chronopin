@@ -1474,7 +1474,7 @@ const es: Messages = {
     predicted: 'Predicho',
     rumor: 'Rumor',
     seasonal: 'De temporada',
-    local: 'Tiempo local',
+    local: 'Local',
     new: 'Nuevo',
     updated: 'Actualizado',
     confirmed: 'Confirmado',

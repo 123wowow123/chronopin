@@ -1464,7 +1464,7 @@ const th: Messages = {
     predicted: 'การคาดการณ์',
     rumor: 'ข่าวลือ',
     seasonal: 'ตามฤดูกาล',
-    local: 'สภาพอากาศท้องถิ่น',
+    local: 'ท้องถิ่น',
     new: 'ใหม่',
     updated: 'อัปเดต',
     confirmed: 'ยืนยันแล้ว',

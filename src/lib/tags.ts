@@ -249,14 +249,15 @@ const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
 // well the pin is evidenced overall (high to low): the order they are shown
 // in, which is their own and not their counts'.
 export const RESERVED_TAGS: ReservedTag[] = [
+  // The stored site tags (the purple chips) lead, together; the derived filters follow.
+  ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
+  { key: 'rumor', name: RUMOR_TAG, field: 'tag', value: RUMOR_TAG, icon: 'tag', stored: true },
+  { key: 'seasonal', name: SEASONAL_TAG, field: 'tag', value: SEASONAL_TAG, icon: 'tag', stored: true },
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
   // Only for a signed-in viewer (the cloud shows it to them alone, uncounted): it reads their own history.
   { key: 'notSeen', name: 'Not seen', field: 'seen', value: 'no', icon: 'eye-off' },
-  ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
-  { key: 'rumor', name: RUMOR_TAG, field: 'tag', value: RUMOR_TAG, icon: 'tag', stored: true },
   // Near the viewer (within:me, 100 miles): needs the browser's position, so it is no stored or counted tag.
   { key: 'local', name: 'Local', field: 'within', value: 'me', icon: 'pin' },
-  { key: 'seasonal', name: SEASONAL_TAG, field: 'tag', value: SEASONAL_TAG, icon: 'tag', stored: true },
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },

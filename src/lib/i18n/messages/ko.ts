@@ -1468,7 +1468,7 @@ const ko: Messages = {
     predicted: '예측됨',
     rumor: '루머',
     seasonal: '시즌 한정',
-    local: '현지 날씨',
+    local: '지역',
     new: '새 글',
     updated: '업데이트',
     confirmed: '확정',

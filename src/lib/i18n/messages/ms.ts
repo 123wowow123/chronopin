@@ -1478,7 +1478,7 @@ const ms: Messages = {
     predicted: 'Diramalkan',
     rumor: 'Khabar angin',
     seasonal: 'Bermusim',
-    local: 'Cuaca setempat',
+    local: 'Tempatan',
     new: 'Baharu',
     updated: 'Dikemas kini',
     confirmed: 'Disahkan',

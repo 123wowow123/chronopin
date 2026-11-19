@@ -94,15 +94,15 @@ describe('tagKind', () => {
 });
 
 describe('reserved filters', () => {
-  it('places stored construction statuses after Thread and the signed-in Not seen filter and keeps them searchable as tags', () => {
-    expect(RESERVED_TAGS.slice(0, 2 + CONSTRUCTION_STATUS_TAGS.length).map((r) => r.name)).toEqual(['Thread', 'Not seen', ...CONSTRUCTION_STATUS_TAGS]);
+  it('leads with the stored site tags (construction statuses, Rumor, Seasonal), then Thread, and keeps them searchable as tags', () => {
+    expect(RESERVED_TAGS.slice(0, CONSTRUCTION_STATUS_TAGS.length + 3).map((r) => r.name)).toEqual([...CONSTRUCTION_STATUS_TAGS, 'Rumor', 'Seasonal', 'Thread']);
     for (const name of CONSTRUCTION_STATUS_TAGS) {
       expect(isStoredSiteTag(name.toLowerCase())).toBe(true);
       expect(reservedTag(name)).toMatchObject({ field: 'tag', value: name, stored: true });
       expect(tagKind(name)).toBe('topic');
     }
     expect(reservedPicked({ tags: ['Completed', 'thread', 'In Progress', 'Proposed', 'withdrawn'], confidences: [], confidenceBands: [] }))
-      .toEqual(['Thread', 'Proposed', 'In Progress', 'Completed', 'Withdrawn']);
+      .toEqual(['Proposed', 'In Progress', 'Completed', 'Withdrawn', 'Thread']);
     expect(reservedSuggestions('in pro').map((r) => r.name)).toContain('In Progress');
   });
 
