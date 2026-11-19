@@ -2392,3 +2392,7 @@ Pilot: Clementine pin 6895 public page shows 10 distinct blob paths of the 13 sa
 ### Round 67 follow-up 9 (Australian venue sites)
 
 Flower Drum (content 219): the Our Food page carries one dish photo, "Duck Wonton", which matches the line "Duck wonton with tangerine peel in roast duck reduction" (prod + local). Saint Peter: only hotel and room shots with non-descriptive file names. Bennelong: logos only. Press*, Africola, Wildflower, Attica, Bistro Suzette not opened (same fine-dining pattern; Yelp does not cover Australia well). Nothing else saved.
+
+### Round 67 follow-up 10 (caption audit, 2026-11-19)
+
+Audit of every saved menu photo on production (19,146 across content and specials): none missing a caption, credit or sourceUrl; none with placeholder or model-note text. Photos shared by items with different names: 70 groups; nearly all are the same dish in two languages, sizes or pours. The genuine multi-dish cases (Neo Nice Burger Kyoto Teramachi, Mr. Fish Sapporo, Gindaco Kita 24-jo, Tomoyuri namul/kimchi, Jonetsu Horumon sauces, Islands Mai Tai/Deep Blue Sea) all carry a caption that says it is a composite and names the position or the other dishes pictured. Nothing changed.
