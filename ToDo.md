@@ -205,7 +205,7 @@ Owner instruction (November 15): **after each round, push all verified, ready da
 - [ ] **Slipped completion:** only the start slip (`originalStartDate`) is stored, so a delayed completion cannot be drawn. Needs an original-completion field (see the new-field checklist in `pin-field-and-api-dev`).
 - [ ] **Milestone dots:** verified only on a one-milestone pin (its "2027" milestone merges with completion, so no dot). Check a pin with a real intermediate milestone (commissioning, first production); dates the parser cannot place ("early 2028", "H2") get no dot.
 - [ ] **Translations:** `map.groundbreak`, `map.withdrawn` and `countdown.completes` are my wording in the 15 non-English locales, unreviewed. Native-speaker pass; pin translations left to the translation agent.
-- [ ] **Perry's Café local copy:** the local end date was written by direct SQL; re-save through the pin API (or call the expire endpoint) so local matches how production was saved.
+- [x] **Perry's Café local copy:** the local end date was written by direct SQL; re-saved through the local pin API (`PUT /api/pins/20640`, author `@BuildDesk` preserved) and expired (`POST /api/admin/pins/expire`); local and prod `utcEndDateTime` both read back `2028-02-16T00:00:00.000Z`.
 
 ## Construction cost estimates (October 31, 2026)
 
