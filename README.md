@@ -501,12 +501,13 @@ mark menu items with largest discount on special deal on restaurant landing page
 
 authentic cuisine section by cuisine type
 
-pin food truck tab and their specials to specials tab on landing page.
+create food truck tab on restaurant landing page and include their specials to specials tab on landing page too.
 
 
 
 "SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
 
+anymore china or japan work for this?
 run todo work
 All-cities menu photo and review inventory
 
@@ -524,6 +525,4 @@ generate clips of long form video media for preview
 Personal dashboard allows are asking question and will set panel update and reminder for questions like: 
 remind me of babcock and wilcox permitting final approval status
 this will run on 6 am/pm job to refresh information and notify you if updates are defected and likely dates if applicable
-
-
 

@@ -25,6 +25,8 @@ export type RestaurantTile = {
   openingConfirmed?: boolean;
   day?: string;
   kidsFriendly?: boolean;
+  // A mobile food truck: listed in the guide's Food trucks tab instead of Top restaurants (kind 'top' only).
+  foodTruck?: boolean;
 };
 export type RestaurantContentProfile = { pinSourceUrl: string; menu?: RestaurantMenuProfile; details?: RestaurantDetails; tile?: RestaurantTile; kidsFriendly?: boolean };
 export type RestaurantContentInput = { profile: RestaurantContentProfile; enabled: boolean };
@@ -77,6 +79,7 @@ export function parseRestaurantContent(value: unknown): RestaurantContentInput {
     check(t.openingConfirmed === undefined || typeof t.openingConfirmed === 'boolean', 'Invalid openingConfirmed');
     if (t.openingConfirmed) check(date(t.day), 'Confirmed opening evidence requires its original day');
     check(t.kidsFriendly === undefined || typeof t.kidsFriendly === 'boolean', 'Invalid tile kidsFriendly');
+    check(t.foodTruck === undefined || (typeof t.foodTruck === 'boolean' && (!t.foodTruck || t.kind === 'top')), 'Invalid tile foodTruck (food trucks use kind top)');
   }
   return { profile: p as RestaurantContentProfile, enabled };
 }
