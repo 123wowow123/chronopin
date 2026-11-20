@@ -13,7 +13,7 @@ import { usesImperial } from '@/lib/weather';
 import { RestaurantOfferMenu } from './RestaurantOfferMenu';
 import styles from './RestaurantGuide.module.css';
 
-const DRINKS = /drink|happy hour|cocktail|\bwine\b|\bbeer\b|\bsake\b|\bbar\b|beverage|spirits|highball/i;
+const DRINKS = /drink|happy hour|cocktail|\bwine\b|\bbeer\b|\bsake\b|\bbar\b|beverage|spirits|highball|mimosa|bottomless|champagne|prosecco|margarita|sangria|spritz|martini|cider|brew|pint|shots?\b|tequila|whisk(?:e)?y|soju|cocktails?/i;
 
 export function RestaurantOfferCard({ card, origin, sort, timeZone }: { card: ScheduledRestaurantOffer; origin?: ViewerPlace; sort: RestaurantSort; timeZone: string }) {
   const id = useId();
