@@ -62,7 +62,7 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
               className={`btn btn-sm ${active ? 'btn-secondary' : 'btn-ghost'}`}
             >
               {s.label}
-              {active ? <span aria-label={sort.descending ? 'descending' : 'ascending'}>{sort.descending ? ' ↓' : ' ↑'}</span> : null}
+              {active ? <span aria-label={sort.descending ? 'descending' : 'ascending'}>{sort.descending ? ' ↑' : ' ↓'}</span> : null}
             </button>
           );
         })}

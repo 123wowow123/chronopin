@@ -5,16 +5,19 @@ import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
 import { RestaurantMenuTabs } from '@/components/pin/RestaurantMenuTabs';
 import { MenuItemReviews } from '@/components/pin/MenuItemReviews';
+import { isDrinkCategory } from '@/lib/menuCategories';
 import { restaurantMenuAmount, restaurantMenuCategories, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
-export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }: { menu?: RestaurantMenu; pinId?: number | null; restaurant: string; specials?: boolean }) {
+export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true, preferDrinks = false }: { menu?: RestaurantMenu; pinId?: number | null; restaurant: string; specials?: boolean; preferDrinks?: boolean }) {
   const id = useId();
-  const [selected, setSelected] = useState<string | null>(null);
+  // A pick made under the other preference no longer applies, so a drink-price sort reopens on drinks.
+  const [pick, setPick] = useState<{ name: string; drinks: boolean } | null>(null);
+  const selected = pick && pick.drinks === preferDrinks ? pick.name : null;
   const [expanded, setExpanded] = useState(false);
   if (!menu) return null;
   const categories = restaurantMenuCategories(menu.items);
-  const category = categories.find((category) => category === selected) ?? categories[0];
+  const category = categories.find((category) => category === selected) ?? (preferDrinks ? categories.find(isDrinkCategory) : undefined) ?? categories[0];
   const items = menu.items.filter((item) => (item.category || 'Menu') === category);
   const shown = expanded ? items : items.slice(0, 6);
   const gallery = menu.items;
@@ -27,7 +30,7 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }
       <Anchor href={source} target="_blank" rel="noopener noreferrer">Published menu ↗</Anchor>
     </div>
     {categories.length > 1 && <div className={styles.offerMenuCategories} role="group" aria-label={`${restaurant} ${specials ? 'specials' : 'menu'} sections`}>
-      {categories.map((categoryName) => <button key={categoryName} type="button" aria-pressed={category === categoryName} onClick={() => { setSelected(categoryName); setExpanded(false); }}>{categoryName}</button>)}
+      {categories.map((categoryName) => <button key={categoryName} type="button" aria-pressed={category === categoryName} onClick={() => { setPick({ name: categoryName, drinks: preferDrinks }); setExpanded(false); }}>{categoryName}</button>)}
     </div>}
     {shown.length > 0 ? <>
       <ul id={id} className={styles.offerMenu} aria-label={`${restaurant} ${category} ${specials ? 'specials' : 'items'}`}>
@@ -41,10 +44,13 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true }
 }
 
 // Keep the card compact while making every saved menu and dish reachable.
-export function RestaurantCardMenus({ menus = [], restaurant, pinId }: { menus?: RestaurantMenu[]; restaurant: string; pinId: number }) {
+export function RestaurantCardMenus({ menus = [], restaurant, pinId, preferDrinks = false }: { menus?: RestaurantMenu[]; restaurant: string; pinId: number; preferDrinks?: boolean }) {
   if (!menus.length) return null;
-  return <div className={styles.cardMenus}><RestaurantMenuTabs label={`${restaurant} menus`} tabs={menus.map((menu) => ({
+  // A drink-price sort opens the drinks menu when the restaurant lists one separately.
+  const isDrinkMenu = (menu: RestaurantMenu) => isDrinkCategory(menu.label) || (menu.items.length > 0 && menu.items.every((item) => isDrinkCategory(item.category || 'Menu')));
+  const first = preferDrinks ? Math.max(0, menus.findIndex(isDrinkMenu)) : 0;
+  return <div className={styles.cardMenus}><RestaurantMenuTabs key={preferDrinks ? 'drinks' : 'food'} initial={first} label={`${restaurant} menus`} tabs={menus.map((menu) => ({
     label: menu.label,
-    content: <><RestaurantOfferMenu menu={menu} pinId={pinId} restaurant={restaurant} specials={false} />{menu.note && <p className={styles.offerSchedule}>{menu.note}</p>}</>,
+    content: <><RestaurantOfferMenu menu={menu} pinId={pinId} restaurant={restaurant} specials={false} preferDrinks={preferDrinks} />{menu.note && <p className={styles.offerSchedule}>{menu.note}</p>}</>,
   }))} /></div>;
 }

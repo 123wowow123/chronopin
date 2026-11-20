@@ -1,4 +1,5 @@
 import profiles from '@/server/data/restaurantMenus.json';
+import { isDrinkCategory } from './menuCategories';
 
 export type RestaurantPhoto = {
   src: string;
@@ -71,10 +72,9 @@ export type RestaurantMenuItem = { name: string; category?: string; price?: numb
 
 // A menu's section tabs in display order: the categories as the menu lists them, except
 // that food sections come before drink sections, so food opens selected ahead of Drinks.
-const DRINK_CATEGORY = /\b(drinks?|beverages?|cocktails?|beers?|wines?|spirits|alcohol|coffee|tea)\b/i;
 export function restaurantMenuCategories(items: { category?: string }[]): string[] {
   const categories = [...new Set(items.map((item) => item.category || 'Menu'))];
-  const isDrink = (category: string) => DRINK_CATEGORY.test(category) && !/^food\b/i.test(category);
+  const isDrink = isDrinkCategory;
   const food = categories.filter((category) => !isDrink(category));
   const drinks = categories.filter(isDrink);
   const firstFood = food.findIndex((category) => /^food\b/i.test(category));

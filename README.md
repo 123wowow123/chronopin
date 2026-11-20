@@ -527,8 +527,3 @@ this will run on 6 am/pm job to refresh information and notify you if updates ar
 
 
 
-
-https://www.reddit.com/r/babcockwilcox/comments/1xweqzk/oliver_co_approves_remaining_plant_permits/
-
-
-add restaurant sort with price of food and drinks

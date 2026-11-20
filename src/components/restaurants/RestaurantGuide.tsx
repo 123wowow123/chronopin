@@ -81,7 +81,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   const establishedOnly = counts.upcoming + counts.new === 0 && counts.top > 0;
   const featuredTop = !featured ? summary.featuredTop ?? Object.values(initialPages).flatMap((page) => page.items).find((item): item is TopRestaurant => 'pinId' in item && Boolean(item.image)) : undefined;
   const selectedSort = top ? topSort : status === 'upcoming' ? upcomingSort : recentSort;
-  const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
+  const pages = useGuidePages<Restaurant | TopRestaurant>(discounts ? null : { region: region.slug, view: status, neighborhood, sort: selectedSort.sort, origin: selectedSort.origin, reverse: selectedSort.reverse }, initialPages as Record<string, GuidePage<Restaurant | TopRestaurant>>);
   const selectedMapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', q: `pin:${pages.ids.join(',')}`, returnTo: queryTabHref(pathname, 'view', status) });
   const shown = pages.total;
   const href = (restaurant: Restaurant) => pinPath(restaurant);
@@ -189,7 +189,7 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
 
 type SortState = ReturnType<typeof useRestaurantSort>;
 function RestaurantSortFeedback({ state }: { state: SortState }) {
-  return <div className={styles.restaurantSortNotes}><RestaurantSortNote state={state} />{state.sort === 'rating' && <p className={styles.offerSortNote}>Highest published rating first. Restaurants without ratings retain their guide order and appear last.</p>}</div>;
+  return <div className={styles.restaurantSortNotes}><RestaurantSortNote state={state} />{(state.sort === 'food-price' || state.sort === 'drink-price') && <p className={styles.offerSortNote}>{state.reverse ? 'Highest' : 'Lowest'} typical {state.sort === 'food-price' ? 'food' : 'drink'} price first (median of published menu prices). Restaurants without published prices retain their guide order and appear last.</p>}{state.sort === 'rating' && <p className={styles.offerSortNote}>{state.reverse ? 'Lowest' : 'Highest'} published rating first. Restaurants without ratings retain their guide order and appear last.</p>}</div>;
 }
 function RestaurantFacts({ details, sortState }: { details?: RestaurantDetails; sortState?: SortState }) {
   const rating = details?.rating;
@@ -224,7 +224,7 @@ function TopRestaurantSection({ pages, pageHref, sortState, mapHref }: { pages: 
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.pinId]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
-          <RestaurantCardMenus pinId={restaurant.pinId} menus={details[restaurant.pinId]?.menus} restaurant={restaurant.name} />
+          <RestaurantCardMenus pinId={restaurant.pinId} menus={details[restaurant.pinId]?.menus} restaurant={restaurant.name} preferDrinks={sortState?.sort === 'drink-price'} />
           <p className={styles.topAddress}>{restaurant.address}</p>
           <div className={styles.topLinks}><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>View restaurant ↗</Link><Anchor href={restaurant.websiteUrl} target="_blank" rel="noopener noreferrer">Visit website ↗</Anchor></div>
         </div>
@@ -252,7 +252,7 @@ function OpeningSection({ pageHref, id, title, subtitle, pages, group, today, hr
           <h3><Link href={href(restaurant)}>{restaurant.name}</Link></h3>
           <RestaurantFacts details={details[restaurant.id]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
-          <RestaurantCardMenus pinId={restaurant.id} menus={details[restaurant.id]?.menus} restaurant={restaurant.name} />
+          <RestaurantCardMenus pinId={restaurant.id} menus={details[restaurant.id]?.menus} restaurant={restaurant.name} preferDrinks={sortState?.sort === 'drink-price'} />
           <div className={styles.cardFoot}><div><span>{group === 'new' ? 'OPENED' : restaurant.day <= today ? 'LAST ANNOUNCED TARGET' : 'EXPECTED OPENING'}</span><strong><time dateTime={restaurant.day}>{restaurant.dateLabel}</time>{restaurant.estimated && <small>Estimated</small>}</strong></div><Link href={href(restaurant)} aria-label={`Read about ${restaurant.name}`} className={styles.cardArrow}>↗</Link></div>
         </div>
       </article>

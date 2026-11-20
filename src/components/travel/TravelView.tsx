@@ -532,7 +532,7 @@ export function TravelView({
                         : gt('sortByRating')
                     }
                   >
-                    {gt('rating')}{isRating ? (sortOrder === 'rating-asc' ? ' ↑' : ' ↓') : ''}
+                    {gt('rating')}{isRating ? (sortOrder === 'rating-asc' ? ' ↓' : ' ↑') : ''}
                   </button>
                   <button
                     type="button"
@@ -546,7 +546,7 @@ export function TravelView({
                         : gt('sortByPrice')
                     }
                   >
-                    {gt('price')}{isPrice ? (sortOrder === 'price-desc' ? ' ↓' : ' ↑') : ''}
+                    {gt('price')}{isPrice ? (sortOrder === 'price-desc' ? ' ↑' : ' ↓') : ''}
                   </button>
                   <button
                     type="button"
@@ -561,7 +561,7 @@ export function TravelView({
                         : gt('sortByDistance')
                     }
                   >
-                    {locating ? gt('findingLocation') : `${gt('distance')}${isDistance ? (sortOrder === 'distance-desc' ? ' ↓' : ' ↑') : ''}`}
+                    {locating ? gt('findingLocation') : `${gt('distance')}${isDistance ? (sortOrder === 'distance-desc' ? ' ↑' : ' ↓') : ''}`}
                   </button>
                 </div>
                 <Link href="/map" className={styles.offerMapButton} prefetch={false}>

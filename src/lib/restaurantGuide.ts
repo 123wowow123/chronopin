@@ -31,7 +31,7 @@ export function guideListPath(slug: string, counts: Record<GuideView, number>, v
 }
 
 // A page request without its offset. `section` is for the discounts view only.
-export type GuideQuery = { region: string; view: GuideView; section?: GuideSection; neighborhood: string; sort: RestaurantSort; origin?: Place };
+export type GuideQuery = { region: string; view: GuideView; section?: GuideSection; neighborhood: string; sort: RestaurantSort; origin?: Place; reverse?: boolean };
 
 export type GuidePage<T> = {
   items: T[];
@@ -50,12 +50,13 @@ export type GuideItem = Restaurant | TopRestaurant | ScheduledRestaurantOffer;
 // Rounded to two decimals (about a kilometre) so nearby viewers share a key.
 export function guideKey(query: GuideQuery): string {
   const origin = query.sort === 'distance' && query.origin ? `${query.origin.latitude.toFixed(2)},${query.origin.longitude.toFixed(2)}` : '';
-  return [query.region, query.view, query.section ?? '', query.neighborhood, query.sort, origin].join('|');
+  return [query.region, query.view, query.section ?? '', query.neighborhood, query.sort, origin].join('|') + (query.reverse ? '|reverse' : '');
 }
 
 export function guideSearchParams(query: GuideQuery, offset: number): URLSearchParams {
   const params = new URLSearchParams({ region: query.region, view: query.view, neighborhood: query.neighborhood, sort: query.sort, offset: String(offset) });
   if (query.section) params.set('section', query.section);
+  if (query.reverse) params.set('reverse', '1');
   if (query.sort === 'distance' && query.origin) {
     params.set('lat', String(query.origin.latitude));
     params.set('lon', String(query.origin.longitude));

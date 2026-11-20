@@ -109,19 +109,19 @@ export async function guidePage(query: GuideQuery, offset: number, now: Date, li
   const withDetails = (items: GuideItem[], idOf: (item: any) => number): GuidePage<GuideItem>['details'] => Object.fromEntries(items.flatMap((item) => (details[idOf(item)] ? [[idOf(item), details[idOf(item)]]] : [])));
   const view: GuideView = query.view;
   if (view === 'discounts') {
-    const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone), { sort: query.sort === 'distance' || query.sort === 'lunch' || query.sort === 'starts' ? query.sort : 'rating', origin: query.origin }, matches);
+    const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone), { sort: query.sort === 'distance' || query.sort === 'lunch' || query.sort === 'starts' || query.sort === 'food-price' || query.sort === 'drink-price' ? query.sort : 'rating', origin: query.origin, reverse: query.reverse }, matches);
     const list = query.section === 'next' ? sections.upcoming : sections.available;
     const located = list.flatMap((offer) => offer.location && Number.isFinite(offer.location.latitude) && Math.abs(offer.location.latitude) <= 90 && Number.isFinite(offer.location.longitude) && Math.abs(offer.location.longitude) <= 180 ? [offer.location] : []);
     const bounds = located.length ? [Math.min(...located.map((place) => place.latitude)), Math.min(...located.map((place) => place.longitude)), Math.max(...located.map((place) => place.latitude)), Math.max(...located.map((place) => place.longitude))].join(',') : undefined;
     return { items: list.slice(offset, offset + limit), offset, total: list.length, ids: list.flatMap((offer) => (offer.offers ?? [offer]).map((item) => item.id)), bounds, details: {} };
   }
   if (view === 'top') {
-    const list = sortRestaurants(tops.filter(matches), (r) => details[r.pinId], query.sort, query.origin);
+    const list = sortRestaurants(tops.filter(matches), (r) => details[r.pinId], query.sort, query.origin, undefined, query.reverse);
     const items = list.slice(offset, offset + limit);
     return { items, offset, total: list.length, ids: list.map((r) => r.pinId), details: withDetails(items, (r) => r.pinId) };
   }
   const source = view === 'upcoming' ? upcoming : recent;
-  const list = sortRestaurants(source.filter(matches), (r) => details[r.id], query.sort, query.origin, view === 'upcoming' ? (r) => r.day : undefined);
+  const list = sortRestaurants(source.filter(matches), (r) => details[r.id], query.sort, query.origin, view === 'upcoming' ? (r) => r.day : undefined, query.reverse);
   const items = list.slice(offset, offset + limit);
   return { items, offset, total: list.length, ids: list.map((r) => r.id), details: withDetails(items, (r) => r.id) };
 }

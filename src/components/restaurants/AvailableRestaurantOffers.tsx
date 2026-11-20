@@ -17,8 +17,8 @@ export function AvailableRestaurantOffers(props: Props) {
 function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZone, city, guide, upcoming }: Props & { upcoming: boolean }) {
   const pathname = usePathname();
   const sortState = useRestaurantSort('Specials', upcoming ? 'starts' : 'rating', guide);
-  const { sort, origin } = sortState;
-  const pages = useGuidePages<ScheduledRestaurantOffer>({ region: regionSlug, view: 'discounts', section: upcoming ? 'next' : 'available', neighborhood, sort, origin }, initialPages);
+  const { sort, origin, reverse } = sortState;
+  const pages = useGuidePages<ScheduledRestaurantOffer>({ region: regionSlug, view: 'discounts', section: upcoming ? 'next' : 'available', neighborhood, sort, origin, reverse }, initialPages);
   const sectionId = upcoming ? 'next-specials' : 'available-now';
   const mapParams = new URLSearchParams({ show: 'restaurants', fit: 'results', past: 'all', future: 'all', specials: JSON.stringify(pages.ids), returnTo: `${pathname}#${sectionId}` });
   if (pages.bounds) mapParams.set('bounds', pages.bounds);
@@ -32,6 +32,7 @@ function RestaurantOfferSection({ regionSlug, neighborhood, initialPages, timeZo
     {upcoming && pages.total > 0 && <p className={styles.offerIntro}>Each restaurant’s specials are shown in tabs with their next local start times.</p>}
     {pages.total > 0 && <RestaurantSortNote state={sortState} />}
     {sortState.sort === 'starts' && pages.total > 0 && <p className={styles.offerSortNote}>Soonest start first. Ties are ordered by rating.</p>}
+    {(sortState.sort === 'food-price' || sortState.sort === 'drink-price') && pages.total > 0 && <p className={styles.offerSortNote}>{sortState.reverse ? 'Highest' : 'Lowest'} typical {sortState.sort === 'food-price' ? 'food' : 'drink'} price first (median of published menu prices). Restaurants without published prices come last, ordered by rating.</p>}
     {sortState.sort === 'lunch' && pages.total > 0 && <p className={styles.offerSortNote}>Lunch specials first. Each group is ordered by rating.</p>}
     {pages.total ? <PagedCardGrid pages={pages}>{(offer) => <RestaurantOfferCard key={restaurantOfferVenueKey(offer)} card={offer} origin={origin} sort={sort} timeZone={timeZone} />}</PagedCardGrid> : pages.ready ? <div className={styles.empty}><h3>{upcoming ? 'No upcoming specials yet.' : 'No specials available right now.'}</h3><p>{upcoming ? 'Try another neighborhood or check back for new offers.' : 'See the next published specials below.'}</p></div> : null}
     <p className={styles.offerIntro}>Offers follow published schedules; item availability can change. Order or redeem directly with the restaurant. Seating restrictions and extra charges are shown with each offer.</p>

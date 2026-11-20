@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { restaurantDistance, sortRestaurants, type RestaurantDetails } from './restaurantSort';
+import { restaurantMenuPrice, restaurantDistance, sortRestaurants, type RestaurantDetails } from './restaurantSort';
 
 const rows = [
   { id: 'unknown', details: {} },
@@ -22,5 +22,13 @@ describe('restaurant tab sorting', () => {
     expect(sortRestaurants(rows, () => ({}), 'rating')).toEqual(rows);
     expect(sortRestaurants(rows, (r) => r.details, 'distance')).toEqual(rows);
     expect(restaurantDistance({ location: { latitude: 91, longitude: 0 } }, { latitude: 0, longitude: 0 })).toBeUndefined();
+  });
+  it('sorts by median food or drink price, cheapest first, unpublished last', () => {
+    const menu = (food: number[], drink: number[]) => ({ menus: [{ label: 'Menu', url: 'x', items: [...food.map((price) => ({ name: 'f', category: 'Mains', price })), ...drink.map((price) => ({ name: 'd', category: 'Drinks', price }))] }] });
+    const list = [{ id: 'none', d: {} }, { id: 'dear', d: menu([30, 40], [4]) }, { id: 'cheap', d: menu([10, 12], [9]) }];
+    expect(sortRestaurants(list, (r) => r.d, 'food-price').map((r) => r.id)).toEqual(['cheap', 'dear', 'none']);
+    expect(sortRestaurants(list, (r) => r.d, 'drink-price').map((r) => r.id)).toEqual(['dear', 'cheap', 'none']);
+    expect(restaurantMenuPrice(menu([10, 20, 60], []).menus, 'food')).toBe(20);
+    expect(restaurantMenuPrice(menu([10], []).menus, 'drink')).toBeUndefined();
   });
 });

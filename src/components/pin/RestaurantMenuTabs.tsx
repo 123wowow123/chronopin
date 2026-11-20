@@ -3,9 +3,9 @@
 import { useId, useState, type ReactNode, type KeyboardEvent } from 'react';
 import styles from './RestaurantMenu.module.css';
 
-export function RestaurantMenuTabs({ tabs, label = 'Restaurant menus and specials' }: { tabs: { label: string; content: ReactNode }[]; label?: string }) {
+export function RestaurantMenuTabs({ tabs, label = 'Restaurant menus and specials', initial = 0 }: { tabs: { label: string; content: ReactNode }[]; label?: string; initial?: number }) {
   const id = useId();
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(initial);
   const active = Math.min(selected, tabs.length - 1);
   if (tabs.length === 1) return <div>{tabs[0].content}</div>;
 

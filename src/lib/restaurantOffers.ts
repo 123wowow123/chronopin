@@ -1,6 +1,7 @@
 import type { RestaurantCardPhoto } from './restaurantPhotos';
 import { TZDate } from '@date-fns/tz';
 import { distanceKm, type Place } from './distance';
+import { restaurantMenuPrice } from './restaurantSort';
 import type { RestaurantMenu, RestaurantPhoto, RestaurantReview, RestaurantSpecial } from './restaurantMenus';
 
 export function isRestaurantPromotion(special: RestaurantSpecial): boolean {
@@ -105,7 +106,7 @@ export function nextRestaurantOffer(special: RestaurantSpecial, now: Date, timeZ
 }
 
 export type ScheduledRestaurantOffer = RestaurantOffer & { end: string; startsAt?: string; offers?: ScheduledRestaurantOffer[] };
-export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch' | 'starts';
+export type RestaurantOfferSort = 'rating' | 'distance' | 'lunch' | 'starts' | 'food-price' | 'drink-price';
 export function restaurantOfferDistance(offer: RestaurantOffer, origin?: Place): number | undefined {
   const valid = (place?: Place) => !!place && Number.isFinite(place.latitude) && Math.abs(place.latitude) <= 90 && Number.isFinite(place.longitude) && Math.abs(place.longitude) <= 180;
   return valid(origin) && valid(offer.location) ? distanceKm(origin!, offer.location!) : undefined;
@@ -157,19 +158,30 @@ const compareOffersByReview = (a: RestaurantOffer, b: RestaurantOffer) => (b.rev
 // Groups eligible offers into one card per restaurant before sorting and paging.
 // `matches` narrows it to a neighborhood before the cap, so a filtered section
 // still fills up. Active venues keep their future specials in the same card.
-export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?: { sort: RestaurantOfferSort; origin?: Place }, matches?: (offer: RestaurantOffer) => boolean): OfferSchedule {
+export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?: { sort: RestaurantOfferSort; origin?: Place; reverse?: boolean }, matches?: (offer: RestaurantOffer) => boolean): OfferSchedule {
   const byReview = compareOffersByReview;
+  const flip = options?.reverse ? -1 : 1;
   const bySelectedSort = (a: RestaurantOffer, b: RestaurantOffer) => {
     // Lunch specials first, each group then by rating.
     if (options?.sort === 'lunch') {
       const difference = Number(b.special.kind === 'lunch') - Number(a.special.kind === 'lunch');
       if (difference) return difference;
     }
-    if (options?.sort === 'distance' && options.origin) {
-      const difference = (restaurantOfferDistance(a, options.origin) ?? Infinity) - (restaurantOfferDistance(b, options.origin) ?? Infinity);
+    // Offers without a value for the sort stay last whichever way it runs.
+    const byValue = (left?: number, right?: number) => {
+      if (left === undefined || right === undefined) return left === right ? 0 : left === undefined ? 1 : -1;
+      return (left - right) * flip;
+    };
+    if (options?.sort === 'food-price' || options?.sort === 'drink-price') {
+      const kind = options.sort === 'food-price' ? 'food' : 'drink';
+      const difference = byValue(restaurantMenuPrice(a.menu ? [a.menu] : undefined, kind), restaurantMenuPrice(b.menu ? [b.menu] : undefined, kind));
       if (difference && !Number.isNaN(difference)) return difference;
     }
-    return byReview(a, b);
+    if (options?.sort === 'distance' && options.origin) {
+      const difference = byValue(restaurantOfferDistance(a, options.origin), restaurantOfferDistance(b, options.origin));
+      if (difference && !Number.isNaN(difference)) return difference;
+    }
+    return options?.sort === 'rating' ? byReview(a, b) * flip : byReview(a, b);
   };
   const active = (matches ? schedule.available.filter(matches) : [...schedule.available]).sort(bySelectedSort);
   const next = matches ? schedule.upcoming.filter(matches) : [...schedule.upcoming];
@@ -195,11 +207,11 @@ export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?
   return { available: available.sort(bySelectedSort), upcoming: unique };
 }
 
-export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
+export function restaurantOfferSections(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place; reverse?: boolean }): { available: ScheduledRestaurantOffer[]; upcoming: ScheduledRestaurantOffer[] } {
   return arrangeRestaurantOfferSections(scheduleRestaurantOffers(offers, now, timeZone), options);
 }
 
-export function restaurantOffersToShow(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place }): { upcoming: boolean; offers: ScheduledRestaurantOffer[] } {
+export function restaurantOffersToShow(offers: RestaurantOffer[], now: Date, timeZone: string, options?: { sort: RestaurantOfferSort; origin?: Place; reverse?: boolean }): { upcoming: boolean; offers: ScheduledRestaurantOffer[] } {
   const sections = restaurantOfferSections(offers, now, timeZone, options);
   return sections.available.length ? { upcoming: false, offers: sections.available } : { upcoming: true, offers: sections.upcoming };
 }
