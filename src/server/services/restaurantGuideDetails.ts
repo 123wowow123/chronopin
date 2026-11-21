@@ -46,10 +46,10 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
       result[source.id] = { ...result[source.id], kidsFriendly };
     }
     const profile = venues.find((v) => restaurantSourceKey(v.profile.pinSourceUrl) === restaurantSourceKey(source.source ?? ''))?.profile;
-    // An iconic-dish card shows the restaurant's own photos (the pin's media, cover first) and the iconic
-    // dish's photos last; every other dish photo stays on its menu item.
-    const iconicImages = tileProfile?.iconicDish
-      ? (record?.profile.menu?.menus ?? []).flatMap((menu) => menu.items.filter((item) => item.iconic).flatMap((item) => restaurantDishImages(item).map((image) => ({ ...image, alt: image.caption, caption: image.caption }))))
+    // An iconic-dish or food-truck card shows the restaurant's own photos (the pin's media, cover first) and
+    // any iconic dish's photos last; every other dish photo stays on its menu item.
+    const iconicImages = tileProfile?.iconicDish || tileProfile?.foodTruck
+      ? (record?.profile.menu?.menus ?? []).flatMap((menu) => menu.items.filter((item) => item.iconic).flatMap((item) => restaurantDishImages(item).map((image) => ({ ...image, alt: image.caption, caption: image.caption })))).slice(0, 2)
       : undefined;
     result[source.id] = { ...result[source.id], photos: iconicImages
       ? restaurantCardPhotos([...photos[source.id] ?? [], ...iconicImages].filter((photo) => photo.src !== tileProfile?.image))

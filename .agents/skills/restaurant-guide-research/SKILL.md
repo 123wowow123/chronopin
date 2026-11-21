@@ -99,7 +99,21 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
   (2) `elchatotacotruck.com` (`cdn.ezsite.ai`) appears unofficial/AI-generated; use the operator's real `elchatola.com`. (3) For production
   audits after pushing, verify native `/pin/<id>/` card links inside `/restaurants/<region>?view=iconic|trucks`, authenticated `/api/admin/...`
   readbacks, and local `http://localhost:3000/pin/<id>`; rapid sequential anonymous `GET /pin/<id>` loops against production trigger Chronopin's
-  `?cg=1` crawler guard (403). Other cities not started.
+  `?cg=1` crawler guard (403).
+- **Austin Food trucks done locally + prod (2026-11-20, 5 trucks -> `Top 03` unchanged, `Trucks 05`, `.scrape/round2-tabs-2026-11-20/`):**
+  Veracruz All Natural — Radio Coffee (4208 Menchaca Rd; local `21001`/`2003`, prod `21148`/`2004`; `32/32` priced via Dripos `order.dripos.com`,
+  `3` item photos, `2` reviews, `3` PinMedia; `CHRONOPIN SELECTION` because Austin's Michelin Bib Gourmand honors brick-and-mortar Veracruz Fonda
+  & Bar at `1905 Aldrich St`), T-Loc's Sonora Hot Dogs (5000 Burnet Rd; local `21002`/`2004`, prod `21138`/`1994`; `29/29` priced via Square, `4`
+  item photos, `1` review, `3` PinMedia), Cuantos Tacos (1108 E 12th St; local `21003`/`2005`, prod `21149`/`2005`; `28/28` priced, `3` item photos,
+  `1` review, `3` PinMedia, `MICHELIN BIB GOURMAND`), KG BBQ (3108 Manor Rd; local `21004`/`2006`, prod `21150`/`2006`; `31/31` priced, `3` item
+  photos, `1` review, `4` PinMedia, `MICHELIN BIB GOURMAND`), Distant Relatives (3901 Promontory Point Dr; local `21005`/`2007`, prod `21151`/`2007`;
+  `17/17` priced, `0` item photos, `1` review, `3` PinMedia, `MICHELIN BIB GOURMAND`).
+  *Held:* Micklethwait Craft Meats (closed its `1309 Rosewood Ave` trailer and moved brick-and-mortar to `4602 Tanney St` on Feb 1, 2025; replaced
+  by T-Loc's).
+  *Traps:* (1) `distantrelativesatx.com` redirects to misspelled `distatantrelativesatx.com`. (2) `/api/admin/restaurant-content` requires
+  explicit `review.publishedDate: null` when unknown (omitting the key fails `Invalid dish review evidence` HTTP 400). (3) `/restaurants/<region>`
+  without `?view=` defaults to Openings whenever opening venues outnumber Top venues (check `?view=top` + `?view=trucks` explicitly in audits).
+  Remaining US/global cities not started.
 
 ## Iconic dishes tab (added 2026-11-20, San Diego first)
 A sixth tab, **Iconic dishes** (`?view=iconic`, hash `#iconic-dishes`), between Top restaurants and Food trucks. Hidden while empty. A record is a
@@ -112,7 +126,7 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
   The pin's native media and the card carousel list **several venue photos** (storefront or sign first, interior or signage next) and then the **1 to 2 most iconic images of the
   iconic dish** last. Weights (0 to 1, descending = display order): venue 1.0, 0.9, 0.8; dish 0.3, 0.2. The tile cover is the first venue photo. Every other dish photo lives only on its
   `profile.menu` item; the iconic item carries `iconic: true` and that dish image (a second goes in `images`). Code: `restaurantGuideDetails.ts` builds an iconic card's carousel from
-  the pin media plus the iconic-flagged item images (cover removed), and no longer merges every menu photo; other cards are unchanged. Pick photos that show the exact dish (Hodad's
+  the pin media plus at most 2 iconic-flagged item images (cover removed); food trucks use the same rule, and no longer merges every menu photo; other cards are unchanged. Pick photos that show the exact dish (Hodad's
   Maps customer burger had no bacon: not used) and the exact venue with the sign or address visible. Caption honestly when a photo is a variant (Point Loma Seafoods' fish *plate* for the fish
   *sandwich*, same fish; Google's auto-title said "calamari", the strips are fillets). Now: Hodad's storefront, interior, single + double bacon cheeseburger; Rubio's shop, signage, fish tacos;
   Point Loma Seafoods sign, market counter, fish plate (the other session's fresh-catch tray was detached, its Medium row 36787 remains).
@@ -182,7 +196,25 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
   Hollywood (`Chicken and waffles`, `1) Scoe’s`; local `20984`/`1986`, prod `21131`/`1987`).
   *Traps:* `coles.la` reopened Nov 18, 2026 (`colesfrenchdip.shop` fails TLS — source current items from LAist's Nov 19 reopening menu report);
   keep French dip attribution neutral between Philippe's and Cole's; on `roscoeschickenandwaffles.com/menu/` note exact Unicode apostrophe in
-  `1) Scoe’s` and `3) Herb’s Special`. Other cities not started.
+  `1) Scoe’s` and `3) Herb’s Special`.
+- **Chicago (`6` -> `Top 09`, `Iconic 06`) & New York (`5` -> `Top 08`, `Iconic 05`) Iconic dishes done locally + prod (2026-11-20, `.scrape/round2-tabs-2026-11-20/`):**
+  - *Chicago:* Lou Malnati's Pizzeria River North (439 N Wells St, `The Malnati Chicago Classic™ Deep Dish`; local `20990`/`1992`, prod `21136`/`1992`;
+    `65` items / `39` priced via `order.loumalnatis.com`), Pequod's Pizza Lincoln Park (2207 N Clybourn Ave, `Small 10" Pan Pizza (Cheese)`; local
+    `20991`/`1993`, prod `21139`/`1995`; `63/63` priced), Gino's East River North (162 E Superior St, `Gino's Supreme`; local `20992`/`1994`, prod
+    `21140`/`1996`; `49/49` priced), Al's `#1 Italian Beef` Little Italy (1079 W Taylor St, `Regular Italian Beef Sandwich`; local `20993`/`1995`,
+    prod `21141`/`1997`; `8` items, counter prices unpublished online), Portillo's River North (100 W Ontario St, `Italian Beef Sandwich`; local
+    `20994`/`1996`, prod `21142`/`1998`; `40/40` priced via `order.portillos.com`), Superdawg Drive-In (6363 N Milwaukee Ave, `Superdawg™`; local
+    `20995`/`1997`, prod `21143`/`1999`; `29/29` priced).
+  - *New York:* Katz's Delicatessen (205 E Houston St, `Katz's Pastrami`; local `20996`/`1998`, prod `21137`/`1993`; `85/85` priced), Joe's Pizza
+    Greenwich Village (7 Carmine St, `Cheese Pizza`; local `20997`/`1999`, prod `21144`/`2000`; `15/15` whole-pie/drink items priced via
+    `slicelife.com`, individual slices unpublished online), Russ & Daughters (179 E Houston St, `Classic Bagel & Lox Sandwich`; local `20998`/`2000`,
+    prod `21145`/`2001`; `136/136` priced), Junior's Restaurant & Bakery Downtown Brooklyn (386 Flatbush Ave Ext, `Our Famous No. 1 Original Cheesecake`;
+    local `20999`/`2001`, prod `21146`/`2002`; `251/251` priced from Main/Bakery/Breakfast PDFs), Nathan's Famous Coney Island (1310 Surf Ave,
+    `Original Nathan's Hot Dog`; local `21000`/`2002`, prod `21147`/`2003`; `15` items, counter prices unpublished online).
+  *Traps:* Ordering sites (`order.loumalnatis.com`, `order.portillos.com`, `slicelife.com`, `order.dripos.com`, Square/Toast) supply verified prices
+  where static brand sites omit them (`slicelife.com` for Joe's lists `$26`–`$40` whole pies, not counter slices); Al's `#1 Italian Beef` (`1079 W
+  Taylor St`, c. 1960), Joe's (`7 Carmine St`, 2005), and Russ & Daughters (`179 E Houston St`, 1920) keep earlier founding history in prose while
+  `utcStartDateTime` uses the exact branch opening date (`estimated`). Leave translations to the translation agent. Remaining cities not started.
 - **Menu, price and photo pass (2026-11-20, local only; content 1977 Rubio's, 1978 Hodad's, 1979 Point Loma Seafoods):**
   - *Hodad's:* use the **branch's own site** (`hodadsoceanbeach.com/food-menu` and `/drink-menu`; the `hodadsburgers.com` landing page only links out).
     29 priced items + shakes/drinks, 11 operator menu photos. The page maps each photo to its item in the DOM: `img` inside the item block whose text has `$`
