@@ -42,10 +42,18 @@
 .offerReview a:hover { text-decoration:underline; }
 .offerReview small { display:block; color:var(--soft); font-size:10px; margin-top:4px; }
 .offerMenu { list-style:none; padding:0; margin:10px 0; }
-.offerMenu li { display:flex; justify-content:space-between; gap:16px; font-size:12px; line-height:1.5; padding:8px 0; border-bottom:1px solid var(--rule); }
-.offerMenu strong { text-align:right; flex-shrink:0; max-width:45%; }
+/* Grid: thumb | name | price, with the review star dropped under the price/Iconic label.
+   Everything is top-aligned so each price sits on the dish name's first line. */
+.offerMenu li { display:grid; grid-template-columns:auto minmax(0,1fr) fit-content(45%); gap:0; align-items:start; font-size:12px; line-height:1.5; padding:8px 0; border-bottom:1px solid var(--rule); }
+/* When any dish in the list has a photo, photo-less dishes keep the same text indent. */
+.offerMenu:has(button[aria-label^="Photo and"]) li { grid-template-columns:58px minmax(0,1fr) fit-content(45%); }
+.offerMenu strong { text-align:right; }
 .offerMenuDish > span { min-width:0; overflow-wrap:anywhere; }
-.offerMenuDish { display:flex; align-items:center; gap:10px; min-width:0; }
+.offerMenuDish { display:contents; }
+.offerMenuDish > button[aria-label^="Photo and"] { grid-column:1; grid-row:1 / span 2; margin-inline-end:10px; }
+.offerMenuDish > button[aria-label^="View"] { grid-column:2; grid-row:1 / span 2; margin-inline-end:16px; }
+.offerMenuDish > button[data-has-reviews] { grid-column:3; grid-row:2; justify-self:end; margin-top:4px; }
+.offerMenuPrice { grid-column:3; grid-row:1; justify-self:end; }
 .offerMenu small { display:block; color:var(--soft); }
 .offerMenuBlock { margin:16px 0; }
 .offerMenuHeading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:11px; }
@@ -242,5 +250,5 @@
 .cardMenus { --menu-paper:var(--paper); --menu-ink:var(--text); --menu-muted:var(--soft); --menu-rule:var(--rule); --menu-accent:var(--green); margin-top:16px; }
 .iconicLabel { display:block; width:max-content; margin:4px 0 0 auto; padding:1px 6px; border-radius:3px; background:#edf0cf; color:#244d39; font-size:9px; font-style:normal; font-weight:600; letter-spacing:.1em; text-transform:uppercase; line-height:1.5; white-space:nowrap; }
 :global([data-theme='dark']) .iconicLabel { background:#263c2e; color:#c6daa4; }
-.offerMenuPrice { display:flex; flex-direction:column; align-items:flex-end; gap:0; flex-shrink:0; max-width:45%; }
+.offerMenuPrice { display:flex; flex-direction:column; align-items:flex-end; gap:0; }
 .offerMenuPrice strong { max-width:none; }
