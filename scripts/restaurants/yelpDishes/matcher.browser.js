@@ -1,5 +1,9 @@
 // Paste into javascript_tool on a yelp.com tab (claude-in-chrome). Pace is deliberate: Yelp 403s fast bursts.
-// 1. window.P = { "<venueId>": ["<yelp-slug>", ["<menu item>", ...]], ... }   (drop drink items first)
+// 1. window.P = { "<venueId>": ["<yelp-slug>", ["<menu item>", ...]], ... }   (drop packaged drinks first)
+//    List each item under several search names that all map back to it: the menu name, its English translation
+//    ("Camaron A La Plancha Tacos" -> "grilled shrimp tacos"), and its menu-description ingredients for house names
+//    ("New York taco" -> "Angus beef taco"). Run it once per Yelp listing at the same address (find them with Yelp
+//    search by name; one business can have unrelated slugs such as kikos-place-seafood-san-diego and kikos-place-san-diego-15).
 // 2. paste this file; poll window.PR2 ({done, stop, err}); calls over 45 s time out so the loop runs un-awaited.
 // 3. dump: document.body.innerHTML='<pre id=o></pre>'; o.textContent = Object.entries(R).filter(([k,v])=>Object.keys(v.m).length)
 //      .map(([k,v])=>k+'|'+v.slug+'|'+Object.entries(v.m).map(([i,[p,c]])=>i+'='+p+'~~'+c).join(';;')).join('\n')
@@ -17,7 +21,7 @@ window.photoCaption = (business, alt) => {
 };
 window.getPh = async slug => {
   const seen = {};
-  for (let s = 0; s <= 180; s += 30) {
+  for (let s = 0; s <= 1500; s += 30) { // every page: some trucks have 1,000+ photos
     if (window.PR2.stop) break;
     let r; try { r = await fetch('/biz_photos/' + slug + '?tab=food&start=' + s); } catch (e) { continue; }
     if (r.status !== 200) { window.PR2.stop = true; window.PR2.err = slug + ' ' + r.status; break; } // bot check: ask the user to clear it
