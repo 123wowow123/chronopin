@@ -1,0 +1,675 @@
+{
+  "round": 33,
+  "date": "2026-11-20",
+  "keys": {
+    "battery-energy-water-rock-bess-nye-nv": 17079,
+    "battery-kickstart-v-ellis-tx": 17080,
+    "battery-prairie-point-ii-wise-tx": 17081,
+    "battery-stein-rapson-huron-mi": 17082,
+    "dc-google-jackson-county-bldg-3-al": 17083,
+    "dc-meta-montgomery-bldg-3-al": 17084,
+    "solar-energy-water-rock-solar-2-nye-nv": 17087,
+    "solar-reynolds-burr-oak-pulaski-in": 17088,
+    "solar-weeds-lake-hiple-cass-mi": 17089,
+    "solar-zeus-mitchell-solar-tx": 17090,
+    "battery-aurora-ec-lake-il": 17091,
+    "battery-bellefield-2-kern-ca": 17092
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "dc-google-jackson-county-bldg-3-al",
+      "id": 17083,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-meta-montgomery-bldg-3-al",
+      "id": 17084,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-aurora-ec-lake-il",
+      "id": 17091,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-bellefield-2-kern-ca",
+      "id": 17092,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-energy-water-rock-bess-nye-nv",
+      "id": 17079,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover direct CAISO publicqueuereport.xlsx after TLS check, identify project developer, exact parcel, any BLM NEPA filing, battery MWh and construction budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-energy-water-rock-solar-2-nye-nv",
+      "id": 17087,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover direct CAISO publicqueuereport.xlsx after TLS check, identify project developer, exact parcel, any BLM NEPA filing, battery MWh and construction budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-kickstart-v-ellis-tx",
+      "id": 17080,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed interconnection agreement, exact Ellis County parcel, battery MWh duration, parent developer and published construction budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-prairie-point-ii-wise-tx",
+      "id": 17081,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed interconnection agreement, exact Wise County parcel, battery MWh duration, parent developer and published construction budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-stein-rapson-huron-mi",
+      "id": 17082,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify Big Mitten MWh storage duration, local Colfax Township site-plan/zoning approval, construction start date, target COD and published construction budget; no project-specific site rendering found (Wix image was generic stock)."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-reynolds-burr-oak-pulaski-in",
+      "id": 17088,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant/developer, current revision status after Pending Revision Approval, updated target COD, exact Pulaski County parcel, permits and published construction budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-weeds-lake-hiple-cass-mi",
+      "id": 17089,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant/developer, exact Cass County parcel, permits, published construction budget and verified site imagery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-zeus-mitchell-solar-tx",
+      "id": 17090,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve ERCOT April 2029 projected COD vs Zeus Red Q2 2027 campus target; verify executed interconnection agreement, exact Mitchell County parcel and published construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-jackson-county-bldg-3-al",
+      "id": 17083,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-meta-montgomery-bldg-3-al",
+      "id": 17084,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-aurora-ec-lake-il",
+      "id": 17091,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-bellefield-2-kern-ca",
+      "id": 17092,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-energy-water-rock-bess-nye-nv",
+      "id": 17079,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover direct CAISO publicqueuereport.xlsx after TLS check, identify project developer, exact parcel, any BLM NEPA filing, battery MWh and construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-energy-water-rock-solar-2-nye-nv",
+      "id": 17087,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover direct CAISO publicqueuereport.xlsx after TLS check, identify project developer, exact parcel, any BLM NEPA filing, battery MWh and construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-kickstart-v-ellis-tx",
+      "id": 17080,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed interconnection agreement, exact Ellis County parcel, battery MWh duration, parent developer and published construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-prairie-point-ii-wise-tx",
+      "id": 17081,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed interconnection agreement, exact Wise County parcel, battery MWh duration, parent developer and published construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-stein-rapson-huron-mi",
+      "id": 17082,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify Big Mitten MWh storage duration, local Colfax Township site-plan/zoning approval, construction start date, target COD and published construction budget; no project-specific site rendering found (Wix image was generic stock)."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-reynolds-burr-oak-pulaski-in",
+      "id": 17088,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant/developer, current revision status after Pending Revision Approval, updated target COD, exact Pulaski County parcel, permits and published construction budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-weeds-lake-hiple-cass-mi",
+      "id": 17089,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant/developer, exact Cass County parcel, permits, published construction budget and verified site imagery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-zeus-mitchell-solar-tx",
+      "id": 17090,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve ERCOT April 2029 projected COD vs Zeus Red Q2 2027 campus target; verify executed interconnection agreement, exact Mitchell County parcel and published construction budget."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 17083,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17084,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17091,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17092,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17079,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17087,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17080,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17081,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17082,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17088,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17089,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17090,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17083,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17084,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17091,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17092,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17079,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17087,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17080,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17081,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17082,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17088,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17089,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17090,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-energy-water-rock-bess-nye-nv-aerial.jpg",
+        "status": 200,
+        "bytes": 384484
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-energy-water-rock-bess-nye-nv-regional.jpg",
+        "status": 200,
+        "bytes": 213960
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-energy-water-rock-bess-nye-nv-topo.jpg",
+        "status": 200,
+        "bytes": 286323
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-kickstart-v-ellis-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 461832
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-kickstart-v-ellis-tx-regional.jpg",
+        "status": 200,
+        "bytes": 96207
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-kickstart-v-ellis-tx-topo.jpg",
+        "status": 200,
+        "bytes": 392281
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-prairie-point-ii-wise-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 544709
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-prairie-point-ii-wise-tx-regional.jpg",
+        "status": 200,
+        "bytes": 128463
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-prairie-point-ii-wise-tx-topo.jpg",
+        "status": 200,
+        "bytes": 500702
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round33-2026-11-20/battery-stein-rapson-huron-mi-relief.jpg",
+        "status": 200,
+        "bytes": 72838
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round33-2026-11-20/battery-stein-rapson-huron-mi-topo.jpg",
+        "status": 200,
+        "bytes": 243104
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round33-2026-11-20/zeus-mitchell-ercot-map.png",
+        "status": 200,
+        "bytes": 2987112
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-energy-water-rock-solar-2-nye-nv-aerial.jpg",
+        "status": 200,
+        "bytes": 395451
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-energy-water-rock-solar-2-nye-nv-regional.jpg",
+        "status": 200,
+        "bytes": 221176
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-energy-water-rock-solar-2-nye-nv-topo.jpg",
+        "status": 200,
+        "bytes": 301697
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-reynolds-burr-oak-pulaski-in-aerial.jpg",
+        "status": 200,
+        "bytes": 362769
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-reynolds-burr-oak-pulaski-in-regional.jpg",
+        "status": 200,
+        "bytes": 86062
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-reynolds-burr-oak-pulaski-in-topo.jpg",
+        "status": 200,
+        "bytes": 416623
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-weeds-lake-hiple-cass-mi-aerial.jpg",
+        "status": 200,
+        "bytes": 509561
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-weeds-lake-hiple-cass-mi-regional.jpg",
+        "status": 200,
+        "bytes": 141688
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-weeds-lake-hiple-cass-mi-topo.jpg",
+        "status": 200,
+        "bytes": 390318
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-zeus-mitchell-solar-tx-aerial.jpg",
+        "status": 200,
+        "bytes": 540283
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-zeus-mitchell-solar-tx-regional.jpg",
+        "status": 200,
+        "bytes": 95643
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-zeus-mitchell-solar-tx-topo.jpg",
+        "status": 200,
+        "bytes": 329775
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 17079,
+        "status": 200,
+        "bytes": 357289
+      },
+      {
+        "environment": "local",
+        "id": 17087,
+        "status": 200,
+        "bytes": 355305
+      },
+      {
+        "environment": "local",
+        "id": 17080,
+        "status": 200,
+        "bytes": 365664
+      },
+      {
+        "environment": "local",
+        "id": 17081,
+        "status": 200,
+        "bytes": 367153
+      },
+      {
+        "environment": "local",
+        "id": 17082,
+        "status": 200,
+        "bytes": 381730
+      },
+      {
+        "environment": "local",
+        "id": 17088,
+        "status": 200,
+        "bytes": 358785
+      },
+      {
+        "environment": "local",
+        "id": 17089,
+        "status": 200,
+        "bytes": 355009
+      },
+      {
+        "environment": "local",
+        "id": 17090,
+        "status": 200,
+        "bytes": 378450
+      },
+      {
+        "environment": "prod",
+        "id": 17079,
+        "status": 200,
+        "bytes": 322615
+      },
+      {
+        "environment": "prod",
+        "id": 17087,
+        "status": 200,
+        "bytes": 322460
+      },
+      {
+        "environment": "prod",
+        "id": 17080,
+        "status": 200,
+        "bytes": 331721
+      },
+      {
+        "environment": "prod",
+        "id": 17081,
+        "status": 200,
+        "bytes": 333471
+      },
+      {
+        "environment": "prod",
+        "id": 17082,
+        "status": 200,
+        "bytes": 347689
+      },
+      {
+        "environment": "prod",
+        "id": 17088,
+        "status": 200,
+        "bytes": 325760
+      },
+      {
+        "environment": "prod",
+        "id": 17089,
+        "status": 200,
+        "bytes": 322235
+      },
+      {
+        "environment": "prod",
+        "id": 17090,
+        "status": 200,
+        "bytes": 344477
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1368,
+      "prod": 1368
+    }
+  },
+  "wikiVerification": {
+    "local": {
+      "pinsVerifiedUnchanged": 97,
+      "sourceUrls": 101,
+      "readySourceWikis": 40,
+      "staleSummaries": 0,
+      "companyWikisVerified": 4,
+      "gapsCount": 61
+    },
+    "prod": {
+      "pinsVerifiedUnchanged": 97,
+      "sourceUrls": 101,
+      "readySourceWikis": 40,
+      "staleSummaries": 0,
+      "companyWikisVerified": 4,
+      "gapsCount": 61
+    }
+  }
+}
