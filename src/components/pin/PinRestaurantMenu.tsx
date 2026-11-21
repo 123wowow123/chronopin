@@ -81,14 +81,16 @@ export async function PinRestaurantMenu({ pinId, sourceUrl, today }: { pinId: nu
   const checked = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${profile.checkedAt}T00:00:00Z`));
   const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items).filter((item) => restaurantDishImages(item).length).map((item) => [restaurantDishImages(item)[0].src, item])).values()];
   const tabs = menus.map((menu) => ({ label: menu.label, content: <MenuContent menu={menu} pinId={pinId} /> }));
-  if (lunch.length) tabs.push({ label: 'Lunch specials', content: <div>
-    <h3 className={styles.menuTitle}>Lunch specials</h3>
-    <div className={styles.offers}>{lunch.map((special) => <Special key={special.title} special={special} />)}</div>
-    {profile.lunchNote ? <p className={styles.note}>{profile.lunchNote.text} <SourceLink url={profile.lunchNote.sourceUrl}>Lunch locations</SourceLink></p> : null}
-  </div> });
-  if (other.length) tabs.push({ label: 'Other specials', content: <div>
-    <h3 className={styles.menuTitle}>Happy hour & other specials</h3>
-    <div className={styles.offers}>{other.map((special) => <Special key={special.title} special={special} />)}</div>
+  if (lunch.length || other.length) tabs.push({ label: 'Specials', content: <div>
+    {lunch.length ? <>
+      <h3 className={styles.menuTitle}>Lunch specials</h3>
+      <div className={styles.offers}>{lunch.map((special) => <Special key={special.title} special={special} />)}</div>
+      {profile.lunchNote ? <p className={styles.note}>{profile.lunchNote.text} <SourceLink url={profile.lunchNote.sourceUrl}>Lunch locations</SourceLink></p> : null}
+    </> : null}
+    {other.length ? <>
+      <h3 className={styles.menuTitle}>Happy hour & other specials</h3>
+      <div className={styles.offers}>{other.map((special) => <Special key={special.title} special={special} />)}</div>
+    </> : null}
   </div> });
   return (
     <section id="restaurant-menu" aria-label="Menu and specials" lang="en" data-rescrape-candidate={rescrapeCandidate ? 'true' : undefined} className={styles.pane}>
