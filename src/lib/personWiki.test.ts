@@ -68,6 +68,11 @@ describe('personWikiPage', () => {
   const compiled = compile(base, new Map(), new Date('2026-10-10T12:00:00Z'));
   const page = personWikiPage(compiled);
 
+  it('uses the stored slug for the canonical resource of a same-name profile', () => {
+    const person = compile({ ...base, name: 'Mike Rogers', slug: 'mike-rogers-2' }, new Map(), new Date('2026-10-10T12:00:00Z'));
+    expect(personWikiPage(person)).toContain('resource: "https://www.chronopin.com/person/mike-rogers-2"');
+  });
+
   it('is an OKF Person concept citing each statement to a listed source', () => {
     expect(page).toContain('type: Person');
     expect(page).toContain('- Religion: Catholic[^s4]');

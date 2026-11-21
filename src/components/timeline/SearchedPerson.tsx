@@ -20,7 +20,7 @@ export function SearchedPersonPanel({ person }: { person: SearchedPerson }) {
     onMouseLeave: () => setPointed(false),
   };
   const line = [person.office, person.party].filter(Boolean).join(' · ');
-  const href = personPath(person.name);
+  const href = personPath(person);
   return (
     <div className="floating flex flex-col gap-3.5 px-4 py-3.5">
       <div>

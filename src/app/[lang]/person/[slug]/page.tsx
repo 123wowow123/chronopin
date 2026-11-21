@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t('person.title', { name: profile.name });
   const description = t('person.description', { name: profile.name, site: siteName });
   const images = await siteCardImages();
-  const links = await alternates(personPath(profile.name));
+  const links = await alternates(personPath(profile));
   return {
     title,
     description,
@@ -56,7 +56,7 @@ async function PersonContent({ params }: Pick<Props, 'params'>) {
   const page = await personPage(slug, t.locale);
   if (!page) notFound();
   // One URL per person: /person/Susan-Collins goes to /person/susan-collins.
-  if (raw !== slug) permanentRedirect(localizePath(personPath(page.profile.name), t.locale));
+  if (raw !== slug) permanentRedirect(localizePath(personPath(page.profile), t.locale));
   const [timeZone, video, premiumMoves] = await Promise.all([viewerTimeZone(), timelineVideo(), TraderPosition.count(slug)]);
   return <PersonView profile={page.profile} pins={page.pins} trades={page.trades} tradeSummary={page.tradeSummary} holdings={page.holdings} committees={page.committees} campaigns={page.campaigns} district={page.district} premiumMoves={premiumMoves} timeZone={timeZone} video={video} t={t} />;
 }

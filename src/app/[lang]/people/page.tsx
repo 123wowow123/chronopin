@@ -42,6 +42,7 @@ async function People() {
   const card = (p: (typeof people)[number], useOffice: boolean) => ({
     id: p.id,
     name: p.name,
+    slug: p.slug,
     photoUrl: p.photoUrl,
     radar: p.radar,
     // What the second row of filters groups by.

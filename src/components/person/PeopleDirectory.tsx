@@ -11,6 +11,7 @@ import { CHART_COLORS, OCTAGON_AXES, octagonPoints, octagonRing, personPath, typ
 
 // One person on the index: just what a card shows.
 export type DirectoryPerson = {
+  slug: string;
   id: number;
   name: string;
   photoUrl: string | null;
@@ -420,7 +421,7 @@ export function PeopleDirectory({
               {list.slice(0, shown).map((p) => (
                 <li key={p.id}>
                   <Link
-                    href={personPath(p.name)}
+                    href={personPath(p)}
                     className="group floating flex h-full flex-col overflow-hidden transition-shadow hover:no-underline hover:shadow-lg focus-visible:ring-2 focus-visible:ring-accent"
                   >
                     <span className="relative block aspect-4/5 w-full overflow-hidden bg-raised">

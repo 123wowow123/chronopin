@@ -1,0 +1,555 @@
+{
+  "date": "2026-11-21",
+  "task": "SEO / indexing follow-ups",
+  "deployment": false,
+  "translationsRun": false,
+  "searchConsole": {
+    "property": "sc-domain:chronopin.com",
+    "pageReportDate": "2026-11-15",
+    "indexed": 9979,
+    "notIndexed": 29396,
+    "excludedNoindex": 12450,
+    "crawledNotIndexed": 7308,
+    "blockedRobots": 83,
+    "serverErrors": 3,
+    "serverErrorValidation": "Started",
+    "crawlReportDate": "2026-11-18",
+    "crawlRequests90DaysApprox": 548000,
+    "averageResponseTimeMs": 343,
+    "ok200Percent": 99,
+    "hostStatus": "No recent crawling difficulty; historical connectivity failures",
+    "sitemapsResubmitted": [
+      "https://www.chronopin.com/sitemap.xml",
+      "https://www.chronopin.com/sitemap-restaurants.xml"
+    ],
+    "indexingRequestsConfirmed": [
+      20806,
+      21010,
+      21020
+    ],
+    "exclusionExampleDrilldownsComplete": false
+  },
+  "sitemap": {
+    "entries": 10010,
+    "uniqueUrls": 10009,
+    "restaurantUniqueUrls": 155,
+    "duplicateUrl": "https://www.chronopin.com/person/mike-rogers"
+  },
+  "redirects": {
+    "rules": 607,
+    "targets": 21,
+    "liveSamples": [
+      {
+        "path": "/pin/16033",
+        "status": 308,
+        "location": "/pin/21010/united-states-billboard-year-end-hot-100-1-singles-2017-2026",
+        "bytes": 71
+      },
+      {
+        "path": "/pin/16988",
+        "status": 308,
+        "location": "/pin/21018/spain-promusicae-top-100-canciones-year-end-1s-2017-2025",
+        "bytes": 67
+      },
+      {
+        "path": "/pin/21010",
+        "status": 308,
+        "location": "/pin/21010/united-states-billboard-year-end-hot-100-1-singles-2017-2026",
+        "bytes": 71
+      },
+      {
+        "path": "/pin/21020",
+        "status": 308,
+        "location": "/pin/21020/united-kingdom-official-singles-chart-year-end-1s-2017-2026",
+        "bytes": 70
+      },
+      {
+        "path": "/pin/20806",
+        "status": 308,
+        "location": "/pin/20806/the-69th-grammys-air-live-on-abc-disney-and-hulu-on-7-february-2027",
+        "bytes": 78
+      },
+      {
+        "path": "/sitemap-restaurants.xml",
+        "status": 200,
+        "location": null,
+        "bytes": 20796
+      }
+    ]
+  },
+  "publicPages": [
+    {
+      "id": 7031,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7031/bailey-at-stassney-affordable-apartments-completes-in-south-austin",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7031/bailey-at-stassney-affordable-apartments-completes-in-south-austin",
+      "newMediaVisible": [
+        true
+      ]
+    },
+    {
+      "id": 7047,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7047/95-everett-boston-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7047/95-everett-boston-affordable-housing"
+    },
+    {
+      "id": 7058,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7058/courtside-apartments-ii-miami-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7058/courtside-apartments-ii-miami-affordable-housing"
+    },
+    {
+      "id": 7059,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7059/sol-on-park-new-york-city-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7059/sol-on-park-new-york-city-affordable-housing"
+    },
+    {
+      "id": 7061,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7061/43-green-east-chicago-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7061/43-green-east-chicago-affordable-housing"
+    },
+    {
+      "id": 7071,
+      "media": 2,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7071/woodhaven-ella-85-01-68th-road-new-york-city-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7071/woodhaven-ella-85-01-68th-road-new-york-city-affordable-housing"
+    },
+    {
+      "id": 7081,
+      "media": 4,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7081/henderson-place-atlanta-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7081/henderson-place-atlanta-affordable-housing"
+    },
+    {
+      "id": 7088,
+      "media": 3,
+      "uncredited": 0,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/7088/vina-apartments-denver-affordable-housing",
+      "noindex": false,
+      "canonical": "https://www.chronopin.com/pin/7088/vina-apartments-denver-affordable-housing"
+    }
+  ],
+  "publicMediaDownloads": [
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/1f11b474-4d04-488b-abbd-2f8c941745d7.jpeg",
+      "status": 200,
+      "bytes": 600176
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/da744345-038b-4627-b089-f83856983e6e.jpeg",
+      "status": 200,
+      "bytes": 1128040
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/f79914c2-e09b-4225-9093-633c35f404d1.jpeg",
+      "status": 200,
+      "bytes": 1133601
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7031-0b636b26f06f1cd4.jpg",
+      "status": 200,
+      "bytes": 565409
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/a831d5f0-13f0-4079-8650-5b0bad0c47c6.jpeg",
+      "status": 200,
+      "bytes": 224172
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/7ddaabc7-461a-4291-94a8-5d9d314a85a1.jpeg",
+      "status": 200,
+      "bytes": 635341
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/6d4defe1-96b1-49ea-9d59-fa288532eecf.jpeg",
+      "status": 200,
+      "bytes": 220473
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/7d490e56-08f4-47c7-903f-68369e058f08.jpeg",
+      "status": 200,
+      "bytes": 311935
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/19683dfb-a23b-41de-b991-6f77bb0594a7.jpeg",
+      "status": 200,
+      "bytes": 1187237
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/e7265d5f-7903-450c-b0fa-e1e31db9c91d.jpeg",
+      "status": 200,
+      "bytes": 734367
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/bbd3250d-19be-4ccf-b2c8-e4c6f1533c32.jpeg",
+      "status": 200,
+      "bytes": 480043
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/3b0d2dcb-1883-4cba-99e8-45caef3e1e82.jpeg",
+      "status": 200,
+      "bytes": 993269
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/378b212a-f7d0-4005-aecc-8146c2e55510.png",
+      "status": 200,
+      "bytes": 1407001
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/965b0ed9-d045-4410-ab16-5826ab8936be.jpeg",
+      "status": 200,
+      "bytes": 709733
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/511ff7fd-3085-43e7-832f-f020748076ef.jpeg",
+      "status": 200,
+      "bytes": 966117
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/8eb346f2-c4f8-4d70-b040-902e80a91c5c.jpeg",
+      "status": 200,
+      "bytes": 339917
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7061-3f2c7272175c8a99.jpg",
+      "status": 200,
+      "bytes": 267198
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/a75000f5-3b90-4105-96fa-e1ecd87d3899.jpeg",
+      "status": 200,
+      "bytes": 334126
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/54ae4cb4-ef8d-4219-89bd-19f1859385c7.jpeg",
+      "status": 200,
+      "bytes": 1116225
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/f58da659-438f-46bb-8ce0-44344df7c871.jpeg",
+      "status": 200,
+      "bytes": 109815
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/95314460-1857-4848-a850-c8b6cb603613.jpeg",
+      "status": 200,
+      "bytes": 128780
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/caf18dd9-fde6-425a-bcc8-5596b17e1d85.jpeg",
+      "status": 200,
+      "bytes": 650481
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/33dc4db5-b8bf-46a0-9dde-007d0d32dab3.jpeg",
+      "status": 200,
+      "bytes": 312109
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-a70444e231659e37.jpg",
+      "status": 200,
+      "bytes": 550029
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-3129f2b194ca2ac9.jpg",
+      "status": 200,
+      "bytes": 897832
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/71a097db-0c4d-4a95-abb7-71a831a01962.jpeg",
+      "status": 200,
+      "bytes": 1093320
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/533683a4-d98c-43fd-aa40-f3867ddb376d.jpeg",
+      "status": 200,
+      "bytes": 894328
+    },
+    {
+      "url": "https://chronopin.blob.core.windows.net/thumb/a698cc9d-3b28-4c18-b7a0-2680e2befbca.jpeg",
+      "status": 200,
+      "bytes": 918553
+    }
+  ],
+  "newAzureMedia": [
+    {
+      "pinId": 7031,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7031-0b636b26f06f1cd4.jpg",
+      "sourceImage": "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F#page=6",
+      "authorName": "TDHCA — Bailey at Stassney 2024 application, page 6, historical site and flood map (USGS National Map 2023 basemap)",
+      "authorUrl": "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F"
+    },
+    {
+      "pinId": 7061,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7061-3f2c7272175c8a99.jpg",
+      "sourceImage": "https://static.wixstatic.com/media/dc2d99_55bfcfb060fb48bb80156f640b4730f6~mv2.jpg/v1/fit/w_1920,h_1243,q_90,enc_avif,quality_auto/dc2d99_55bfcfb060fb48bb80156f640b4730f6~mv2.jpg",
+      "authorName": "Landon Bone Baker Architects — 43 Green Phases 1 and 2 site plan; Phase 2 is labelled",
+      "authorUrl": "https://www.lbba.com/projects/13/43-green-phase-2"
+    },
+    {
+      "pinId": 7081,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-a70444e231659e37.jpg",
+      "sourceImage": "https://framerusercontent.com/images/NxL2U8CSCPYAjcRKQBQqA1ZbUCU.jpg?width=1920&height=1080",
+      "authorName": "GVSA — Henderson Place architectural rendering",
+      "authorUrl": "https://gvsa.com/projects/henderson-place-82"
+    },
+    {
+      "pinId": 7081,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-3129f2b194ca2ac9.jpg",
+      "sourceImage": "https://framerusercontent.com/images/Iu6wcyn7Zt19L4aj0WFLsM8rfI.jpg?width=4213&height=2370",
+      "authorName": "GVSA — Henderson Place site plan",
+      "authorUrl": "https://gvsa.com/projects/henderson-place-82"
+    }
+  ],
+  "pins": [
+    {
+      "id": 7031,
+      "title": "Bailey at Stassney Affordable Apartments Completes in South Austin",
+      "media": [
+        {
+          "id": 16990,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-austin-abe381eea519d88c.jpg",
+          "thumbName": "1f11b474-4d04-488b-abbd-2f8c941745d7.jpeg",
+          "authorName": "National CORE — Bailey at Stassney architectural rendering",
+          "authorUrl": "https://nationalcore.org/communities/bailey-at-stassney-2/"
+        },
+        {
+          "id": 36459,
+          "originalUrl": "https://nationalcore.org/wp-content/uploads/2026/05/National-Core_20260515_OlkerPhoto_19-scaled.jpg",
+          "thumbName": "da744345-038b-4627-b089-f83856983e6e.jpeg",
+          "authorName": "National CORE",
+          "authorUrl": "https://nationalcore.org/"
+        },
+        {
+          "id": 37317,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7031-0b636b26f06f1cd4.jpg",
+          "thumbName": "f79914c2-e09b-4225-9093-633c35f404d1.jpeg",
+          "authorName": "TDHCA — Bailey at Stassney 2024 application, page 6, historical site and flood map (USGS National Map 2023 basemap)",
+          "authorUrl": "https://tdhca.legistar.com/View.ashx?GUID=9B726C4D-C6FC-48EC-8278-4391B91319AC&ID=15070630&M=F"
+        }
+      ]
+    },
+    {
+      "id": 7047,
+      "title": "95 Everett — Boston affordable housing",
+      "media": [
+        {
+          "id": 17008,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-everett-f28f55dcc4f5a375.jpg",
+          "thumbName": "a831d5f0-13f0-4079-8650-5b0bad0c47c6.jpeg",
+          "authorName": "Pennrose — 95 Everett architectural rendering",
+          "authorUrl": "https://www.pennrose.com/apartments/massachusetts/95-everett/"
+        },
+        {
+          "id": 33937,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-7047-0-46d492537274b788.jpg",
+          "thumbName": "7ddaabc7-461a-4291-94a8-5d9d314a85a1.jpeg",
+          "authorName": "Rendering courtesy of DiMella Shaffer, via Connect CRE",
+          "authorUrl": "https://www.connectcre.com/stories/pennrose-breaks-ground-on-allston-brighton-mixed-income-project/"
+        },
+        {
+          "id": 37144,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-7047-1-5395ab1bb55d90d4.jpg",
+          "thumbName": "6d4defe1-96b1-49ea-9d59-fa288532eecf.jpeg",
+          "authorName": "Pennrose",
+          "authorUrl": "https://www.pennrose.com/apartments/massachusetts/95-everett/"
+        }
+      ]
+    },
+    {
+      "id": 7058,
+      "title": "Courtside Apartments II — Miami affordable housing",
+      "media": [
+        {
+          "id": 17019,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-courtside-d7b70d65c984af7b.jpg",
+          "thumbName": "7d490e56-08f4-47c7-903f-68369e058f08.jpeg",
+          "authorName": "Housing Trust Group / AM Affordable Housing — architectural rendering",
+          "authorUrl": "https://www.courtside2htgm.com/"
+        },
+        {
+          "id": 33955,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-7058-0-96020c91ed4e12a5.jpg",
+          "thumbName": "19683dfb-a23b-41de-b991-6f77bb0594a7.jpeg",
+          "authorName": "Miguel Rodriguez (via Florida YIMBY)",
+          "authorUrl": "https://floridayimby.com/2026/10/housing-trust-group-and-am-affordable-housing-celebrate-opening-of-58-million-courtside-apartments-ii-in-overtown-miami.html"
+        },
+        {
+          "id": 36465,
+          "originalUrl": "https://floridayimby.com/wp-content/uploads/2026/10/IMG_7151-scaled.jpeg",
+          "thumbName": "e7265d5f-7903-450c-b0fa-e1e31db9c91d.jpeg",
+          "authorName": "Florida YIMBY",
+          "authorUrl": "https://floridayimby.com/"
+        }
+      ]
+    },
+    {
+      "id": 7059,
+      "title": "Sol on Park — New York City affordable housing",
+      "media": [
+        {
+          "id": 17020,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-solpark-6e45f562460b921e.jpg",
+          "thumbName": "bbd3250d-19be-4ccf-b2c8-e4c6f1533c32.jpeg",
+          "authorName": "NYC Housing Development Corporation",
+          "authorUrl": "https://www.nychdc.com/newsroom/mamdani-administration-nycha-and-development-partners-put-public-land-work-breaking-ground"
+        },
+        {
+          "id": 33938,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-7059-2-442de5cf2b523c6d.jpg",
+          "thumbName": "3b0d2dcb-1883-4cba-99e8-45caef3e1e82.jpeg",
+          "authorName": "Office of the Bronx Borough President (Bronx Times)",
+          "authorUrl": "https://www.bxtimes.com/sol-on-park-groundbreaking-affordable-senior-homes/"
+        },
+        {
+          "id": 36466,
+          "originalUrl": "https://selfhelp.net/wp-content/uploads/2025/02/Sol-on-Park_Rendering1.png",
+          "thumbName": "378b212a-f7d0-4005-aecc-8146c2e55510.png",
+          "authorName": "Selfhelp Realty Group",
+          "authorUrl": "https://selfhelp.net/"
+        }
+      ]
+    },
+    {
+      "id": 7061,
+      "title": "43 Green East — Chicago affordable housing",
+      "media": [
+        {
+          "id": 17022,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-green-d5914389d775d818.jpg",
+          "thumbName": "965b0ed9-d045-4410-ab16-5826ab8936be.jpeg",
+          "authorName": "Landon Bone Baker Architects — 43 Green Phase 2",
+          "authorUrl": "https://www.lbba.com/projects/13/43-green-phase-2"
+        },
+        {
+          "id": 36467,
+          "originalUrl": "https://static.wixstatic.com/media/6d5867_03ffa39f45e54e46a116e000616d55f7~mv2.jpg/v1/fill/w_2000,h_1125,al_c,q_90,usm_0.66_1.00_0.01/6d5867_03ffa39f45e54e46a116e000616d55f7~mv2.jpg",
+          "thumbName": "511ff7fd-3085-43e7-832f-f020748076ef.jpeg",
+          "authorName": "The Habitat Company",
+          "authorUrl": "https://www.habitat.com/post/habitat-tops-off-second-apartment-building-at-43-green-in-chicago-s-historic-bronzeville"
+        },
+        {
+          "id": 37314,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7061-3f2c7272175c8a99.jpg",
+          "thumbName": "8eb346f2-c4f8-4d70-b040-902e80a91c5c.jpeg",
+          "authorName": "Landon Bone Baker Architects — 43 Green Phases 1 and 2 site plan; Phase 2 is labelled",
+          "authorUrl": "https://www.lbba.com/projects/13/43-green-phase-2"
+        }
+      ]
+    },
+    {
+      "id": 7071,
+      "title": "Woodhaven ELLA (85-01 68th Road) — New York City affordable housing",
+      "media": [
+        {
+          "id": 17032,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-woodhaven-0ccb5e43f26f262b.jpg",
+          "thumbName": "a75000f5-3b90-4105-96fa-e1ecd87d3899.jpeg",
+          "authorName": "NYC Housing Development Corporation — Woodhaven ELLA ribbon cutting",
+          "authorUrl": "https://www.nychdc.com/newsroom/smj-development-and-project-partners-celebrate-completion-120-new-affordable-homes-rego"
+        },
+        {
+          "id": 33958,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-7071-0-b6e5f3df9787e91c.jpg",
+          "thumbName": "54ae4cb4-ef8d-4219-89bd-19f1859385c7.jpeg",
+          "authorName": "Shakespeare Gordon Studio (architect)",
+          "authorUrl": "https://sg.studio/multi-family/woodhaven"
+        }
+      ]
+    },
+    {
+      "id": 7081,
+      "title": "Henderson Place — Atlanta affordable housing",
+      "media": [
+        {
+          "id": 17042,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-henderson-adea7a7a21a85f8e.jpg",
+          "thumbName": "f58da659-438f-46bb-8ce0-44344df7c871.jpeg",
+          "authorName": "Mercy Housing — Henderson Place architectural rendering",
+          "authorUrl": "https://www.mercyhousing.org/2024/03/newly-developed-housing-in-atlantas-old-fourth-ward/"
+        },
+        {
+          "id": 36478,
+          "originalUrl": "https://mercyhousing.org/wp-content/uploads/2024/03/Henderson_Place_before-476x255.jpg",
+          "thumbName": "95314460-1857-4848-a850-c8b6cb603613.jpeg",
+          "authorName": "Mercy Housing",
+          "authorUrl": "https://www.mercyhousing.org/"
+        },
+        {
+          "id": 37315,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-a70444e231659e37.jpg",
+          "thumbName": "caf18dd9-fde6-425a-bcc8-5596b17e1d85.jpeg",
+          "authorName": "GVSA — Henderson Place architectural rendering",
+          "authorUrl": "https://gvsa.com/projects/henderson-place-82"
+        },
+        {
+          "id": 37316,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/seo-2026-11-21-7081-3129f2b194ca2ac9.jpg",
+          "thumbName": "33dc4db5-b8bf-46a0-9dde-007d0d32dab3.jpeg",
+          "authorName": "GVSA — Henderson Place site plan",
+          "authorUrl": "https://gvsa.com/projects/henderson-place-82"
+        }
+      ]
+    },
+    {
+      "id": 7088,
+      "title": "Viña Apartments — Denver affordable housing",
+      "media": [
+        {
+          "id": 17049,
+          "originalUrl": "https://chronopin.blob.core.windows.net/thumb/housing/usa-vina-b33d0d6db47119c1.jpg",
+          "thumbName": "71a097db-0c4d-4a95-abb7-71a831a01962.jpeg",
+          "authorName": "Urban Land Conservancy — Viña Apartments",
+          "authorUrl": "https://urbanlandc.org/place/vina-apartments-nonprofit-and-retail-at-48th-race/"
+        },
+        {
+          "id": 36483,
+          "originalUrl": "https://urbanlandc.org/wp-content/uploads/2024/11/Vina8.jpg",
+          "thumbName": "533683a4-d98c-43fd-aa40-f3867ddb376d.jpeg",
+          "authorName": "Urban Land Conservancy",
+          "authorUrl": "https://urbanlandc.org/"
+        },
+        {
+          "id": 36484,
+          "originalUrl": "https://urbanlandc.org/wp-content/uploads/2024/11/Vina16.jpg",
+          "thumbName": "a698cc9d-3b28-4c18-b7a0-2680e2befbca.jpeg",
+          "authorName": "Urban Land Conservancy",
+          "authorUrl": "https://urbanlandc.org/"
+        }
+      ]
+    }
+  ],
+  "preservationChecks": {
+    "environments": [
+      "local",
+      "prod"
+    ],
+    "pinCountPerEnvironment": 7,
+    "allPassed": true
+  }
+}

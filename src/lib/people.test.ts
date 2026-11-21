@@ -84,6 +84,14 @@ describe('money', () => {
 });
 
 describe('links', () => {
+  it('keeps same-name profiles distinct using their stored slugs', () => {
+    const people = [
+      { name: 'Mike Rogers', slug: 'mike-rogers' },
+      { name: 'Mike Rogers', slug: 'mike-rogers-2' },
+    ];
+    expect(people.map(personPath)).toEqual(['/person/mike-rogers', '/person/mike-rogers-2']);
+  });
+
   it('makes the page path from the name and only trusts https links', () => {
     expect(personPath('Susan Collins')).toBe('/person/susan-collins');
     expect(safeUrl('https://example.com/a')).toBe('https://example.com/a');

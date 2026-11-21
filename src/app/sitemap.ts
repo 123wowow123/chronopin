@@ -44,7 +44,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
       .filter((c) => c.pins >= MIN_INDEXED_PINS)
       .map((c) => ({ url: absoluteUrl(companyPath(c.name)), alternates: c.pins >= MIN_TRANSLATED_PINS ? inEveryLanguage(companyPath(c.name)) : undefined, changeFrequency: 'daily' as const, priority: 0.7 })),
     // A person's page is a profile, not a list of pins: every one is worth indexing.
-    ...(await personIndex()).map((p) => ({ url: absoluteUrl(personPath(p.name)), alternates: inEveryLanguage(personPath(p.name)), changeFrequency: 'daily' as const, priority: 0.7 })),
+    ...(await personIndex()).map((p) => ({ url: absoluteUrl(personPath(p)), alternates: inEveryLanguage(personPath(p)), changeFrequency: 'daily' as const, priority: 0.7 })),
   ];
   const hideThin = (await hideThinPins()).enabled;
   // Thin pins say noindex while the admin setting is on (src/lib/searchQuality.ts), so they stay out.

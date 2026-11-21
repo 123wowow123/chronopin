@@ -99,7 +99,7 @@ export function PersonView({
   const matters = sortMatters(profile.matters);
   const meter = misconductMeter(profile.matters, profile.mattersCheckedDate);
   const society = societyMeter(profile.contributions);
-  const path = personPath(profile.name);
+  const path = personPath(profile);
   const description = t('person.description', { name: profile.name, site: siteName });
   const jobTitle = profile.office || t.dynamic(`person.roles.${profile.role}`, profile.role);
   const photo = safeUrl(profile.photoUrl);

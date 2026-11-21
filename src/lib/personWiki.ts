@@ -250,7 +250,7 @@ export function personWikiPage(p: CompiledPerson, origin = 'https://www.chronopi
     type: 'Person',
     title: p.name,
     description: [p.office, p.party, p.birthDate ? `born ${p.birthDate}` : null].filter(Boolean).join('; ') || p.name,
-    resource: `${origin}${personPath(p.name)}`,
+    resource: `${origin}${personPath(p)}`,
     tags,
     sources: p.references.map((r) => ({ id: `s${r.ref}`, resource: r.url, title: r.title ?? r.host })),
     generated: { by: PERSON_WIKI_GENERATOR, at: new Date(p.builtAt) },

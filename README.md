@@ -501,11 +501,7 @@ mark menu items with largest discount on special deal on restaurant landing page
 
 authentic cuisine section by cuisine type
 
-create food truck tab on restaurant landing page and include their specials to specials tab on landing page too.
 
-
-
-"SEO / indexing follow-ups (written 2026-11-08, from the Search Console session)"
 
 anymore china or japan work for this?
 run todo work
@@ -527,3 +523,7 @@ remind me of babcock and wilcox permitting final approval status
 this will run on 6 am/pm job to refresh information and notify you if updates are defected and likely dates if applicable
 
 yes check Los Angeles or Austin trucks on production
+
+
+
+generate video on activites / food / stay per city. post to youtube shorts

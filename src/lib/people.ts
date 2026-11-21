@@ -258,8 +258,11 @@ export type PersonProfile = PersonSummary & {
   researchNotes?: PersonResearchNote[];
 };
 
-export function personPath(name: string): string {
-  return `/person/${encodeURIComponent(topicSlug(name))}`;
+// Stored slugs distinguish people who share a name. Name-only callers retain
+// the default path, but a loaded profile must use its persisted identity.
+export function personPath(person: string | Pick<PersonSummary, 'slug'>): string {
+  const slug = typeof person === 'string' ? topicSlug(person) : person.slug;
+  return `/person/${encodeURIComponent(slug)}`;
 }
 
 // The order the index lists the offices in: the top of the executive first,

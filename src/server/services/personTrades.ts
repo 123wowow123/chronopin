@@ -38,7 +38,7 @@ export async function storeFiling(personId: number, filing: TradeFiling): Promis
       (biggest.amountLow ? ` (up to ${formatAmountRange(biggest.amountLow, biggest.amountHigh)})` : '');
     await Promise.all(
       userIds.map((userId) =>
-        pushToUser(userId, { title: profile.name, body, url: `${personPath(profile.name)}#trades`, image: profile.photoUrl ?? null, tag: `trade-${personId}-${filing.filingId}` }),
+        pushToUser(userId, { title: profile.name, body, url: `${personPath(profile)}#trades`, image: profile.photoUrl ?? null, tag: `trade-${personId}-${filing.filingId}` }),
       ),
     );
   } catch (err) {
