@@ -103,6 +103,7 @@ describe('next restaurant specials', () => {
     const offers = [at('Late favorite', 4.9, '20:00'), at('Early', 4.6, '15:00'), at('Mid', 4.7, '17:00'), at('Early better', 4.8, '15:00')];
     expect(restaurantOfferSections(offers, now, zone, { sort: 'rating' }).upcoming.map((item) => item.name)).toEqual(['Late favorite', 'Early better', 'Mid', 'Early']);
     expect(restaurantOfferSections(offers, now, zone, { sort: 'starts' }).upcoming.map((item) => item.name)).toEqual(['Early better', 'Early', 'Mid', 'Late favorite']);
+    expect(restaurantOfferSections(offers, now, zone, { sort: 'starts', reverse: true }).upcoming.map((item) => item.name)).toEqual(['Early better', 'Early', 'Mid', 'Late favorite'].reverse());
   });
   it('moves an ended recurring offer to upcoming without repeating an active offer there', () => {
     const venue = offer('Favorite');

@@ -202,7 +202,7 @@ export function arrangeRestaurantOfferSections(schedule: OfferSchedule, options?
   // Choose each venue's earliest offer before applying the selected sort.
   // 'starts' is the soonest start first (the section was already built in that
   // order, ties by rating); only upcoming offers have a start to sort by.
-  if (!options || options.sort === 'starts') unique.sort((a, b) => a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b));
+  if (!options || options.sort === 'starts') unique.sort((a, b) => (a.startsAt!.localeCompare(b.startsAt!) || byReview(a, b)) * flip);
   else if (options) unique.sort(bySelectedSort);
   return { available: available.sort(bySelectedSort), upcoming: unique };
 }
