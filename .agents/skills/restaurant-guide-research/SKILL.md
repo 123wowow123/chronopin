@@ -85,6 +85,10 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
     First run (Mariscos Mi Gusto Es, 2026-11-21, local + prod content 1975): scanning `biz_photos?tab=food&start=0..240` alt text for the English names found 9 single-dish photos
     (Camaron/Pulpo Ajillo = garlic shrimp/octopus, Camaron Enchilado = spicy shrimp, Birria Dorado con Queso, Birria, Asada, Aguachile Verde, Pulpo y Camaron Tostadas, Torre de Mariscos);
     "Camaron A La Plancha Tacos" stayed without a photo (the only Yelp hit was a three-dish shot with a hand in it). Write the uploader's English caption into the item caption.
+    *All other trucks (2026-11-21, local + prod):* `matcher.browser.js` with each item listed under its original and its English name (`.scrape/truck-media-2026-11-21/P.json`, 12 trucks, ~8 min un-awaited) found 74 candidates; viewing contact sheets
+    dropped 14 (a hand holding the plate, several dishes, a blurry or tiny shot) and 59 items got a photo (Shawarma Guys 3, Kiko's 3, Mariscos Jalisco 4, Leo's 10, El Chato 4, La Unica 6, Veracruz 8, T-Loc's 6, Cuantos 3, KG BBQ 12; Taco Picasso and Zoe's had no clean single-dish match).
+    Traps: guessed Yelp slugs must be probed first (`t-locs-sonora-hot-dogs-austin` is a different business; the truck is `-austin-4`, found via `/search?find_desc=`); `javascript_tool` blocks output containing photo ids, so dump to `document.body` and read with `get_page_text`;
+    an English alias that drops "a la carte" or size words can match the wrong item (the plate photo is not the 3 oz a la carte item), so keep only exact-dish matches.
   - *Still not usable:* Grubhub/Uber Eats/DoorDash/Postmates (third-party prices with a markup; Zoe's Place and Taco Picasso list no own prices),
     `sandiegofoodtrucks.com` (TLS error), `gotruckster.com` (405). Their prices stay "not published".
   - *Never re-run a bulk menu apply from a stale `menus.json`:* applying all five menus once overwrote Kiko's 119-item Toast menu with
