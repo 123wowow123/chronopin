@@ -76,6 +76,15 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
     shop), multi-dish shots and ambiguous aguachile/campechana, then upload (WebP, Azure `restaurant-dishes/<slug>/`). Credit "Yelp reviewer photo",
     `sourceUrl` = `https://www.yelp.com/biz_photos/<slug>?select=<id>`, caption says date not shown. Results: Kiko's 14, Mi Gusto Es 16, Zoe's Place 15,
     Taco Picasso 8 dish photos. A Yelp search-result snippet is a usable review quote only with `publishedDate: null` and the business URL.
+  - *Items with no matching photo: translate the name to English and search again, for ALL menu items of every restaurant (trucks, iconic dishes, top restaurants, openings, specials venues, every city and language) (owner instruction, 2026-11-21, widened the same day).* When a menu item (Spanish, Chinese, Japanese,
+    Korean...) has no photo after the Yelp/operator pass (English-named items too: search the plain English name plus venue, and common variants), translate it ("Camaron A La Plancha Tacos" = griddled/grilled shrimp tacos; "Pescado Empanizado" = breaded
+    fish; "Costa Azul" = a house name, keep as is) and search with the English name plus the venue (Yelp `biz_photos` caption/tag search, Google Images and Maps
+    photos for the venue, review sites, the operator's Instagram/Facebook captions). Run the Spanish name and the English name both. Accept a photo only if it shows
+    that dish at that venue (visible sign, tray, or the contributor's caption naming the dish); caption honestly when it is a close variant (grilled vs. griddled
+    shrimp) and never use a stock or other-venue photo. Record the items still without a photo in the research notes instead of guessing.
+    First run (Mariscos Mi Gusto Es, 2026-11-21, local + prod content 1975): scanning `biz_photos?tab=food&start=0..240` alt text for the English names found 9 single-dish photos
+    (Camaron/Pulpo Ajillo = garlic shrimp/octopus, Camaron Enchilado = spicy shrimp, Birria Dorado con Queso, Birria, Asada, Aguachile Verde, Pulpo y Camaron Tostadas, Torre de Mariscos);
+    "Camaron A La Plancha Tacos" stayed without a photo (the only Yelp hit was a three-dish shot with a hand in it). Write the uploader's English caption into the item caption.
   - *Still not usable:* Grubhub/Uber Eats/DoorDash/Postmates (third-party prices with a markup; Zoe's Place and Taco Picasso list no own prices),
     `sandiegofoodtrucks.com` (TLS error), `gotruckster.com` (405). Their prices stay "not published".
   - *Never re-run a bulk menu apply from a stale `menus.json`:* applying all five menus once overwrote Kiko's 119-item Toast menu with
