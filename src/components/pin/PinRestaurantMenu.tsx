@@ -27,7 +27,7 @@ function MenuContent({ menu, pinId }: { menu: RestaurantMenu; pinId: number }) {
               <span className={styles.dishLine}><MenuItemReviews pinId={pinId} item={item} gallery={gallery}><span className={styles.dishName}>{item.name}</span></MenuItemReviews><span className={styles.leader} aria-hidden="true" /></span>
               {item.note ? <span className={styles.dishNote}>{item.note}</span> : null}
             </dt>
-            <dd className={styles.price}>{item.price != null ? amount(item.price) : item.priceLabel || 'Price not published'}</dd>
+            <dd className={styles.price}>{item.price != null ? amount(item.price) : item.priceLabel || 'Price not published'}{item.iconic ? <span className={styles.iconicLabel}>Iconic</span> : null}</dd>
           </div>
         ))}</dl>
       </section>

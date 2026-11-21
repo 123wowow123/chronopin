@@ -157,7 +157,7 @@ export async function regionalOpeningDays(city: string): Promise<{ day: string; 
 // all, for /sitemap-restaurants.xml: asking per region repeated the content read,
 // a full-table sourceUrl scan and an opening query ~100 times on the 2-vCPU VM
 // (50 s cold, 2026-10-30). Same rules as regionalOpeningDays / regionalTopRestaurants.
-export async function allRegionalGuideCounts(): Promise<Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number; trucks: number }>> {
+export async function allRegionalGuideCounts(): Promise<Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number; iconic: number; trucks: number }>> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
@@ -183,7 +183,7 @@ export async function allRegionalGuideCounts(): Promise<Record<string, { opening
       [names, [...sourcesByRegion.values()].flat()],
     ),
   ]);
-  const result: Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number; trucks: number }> = {};
+  const result: Record<string, { openings: { day: string; confirmed: boolean }[]; tops: number; iconic: number; trucks: number }> = {};
   for (const region of RESTAURANT_REGIONS) {
     const sources = new Set((sourcesByRegion.get(region.slug) ?? []).map(restaurantSourceKey));
     // A pin tagged with two cities, or matched by city and by source, is one opening.
@@ -196,7 +196,8 @@ export async function allRegionalGuideCounts(): Promise<Record<string, { opening
     });
     const listed = topRecords.filter((record) => record.profile.tile!.regionSlug === region.slug && pins.has(record.profile.pinSourceUrl));
     const trucks = listed.filter((record) => record.profile.tile!.foodTruck).length;
-    result[region.slug] = { openings, tops: listed.length - trucks, trucks };
+    const iconic = listed.filter((record) => record.profile.tile!.iconicDish).length;
+    result[region.slug] = { openings, tops: listed.length - trucks, iconic, trucks };
   }
   return result;
 }

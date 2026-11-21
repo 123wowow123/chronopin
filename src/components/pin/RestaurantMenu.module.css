@@ -107,3 +107,5 @@
 .reviewSourceLink:hover { text-decoration:underline; text-underline-offset:3px; }
 .reviewEmpty { padding:14px 16px; border:1px dashed var(--color-line); border-radius:12px; color:var(--color-subtle); font-size:12px; }
 @media(max-width:500px) { .reviewDialogBody { padding:18px; } .reviewDialogHeading h2 { font-size:25px; } .reviewDialog { border-radius:18px; } }
+.iconicLabel { display:block; width:max-content; margin:4px 0 0 auto; padding:1px 6px; border-radius:3px; background:#edf0cf; color:#244d39; font-size:9px; font-style:normal; font-weight:600; letter-spacing:.1em; text-transform:uppercase; line-height:1.5; white-space:nowrap; }
+:global([data-theme='dark']) .iconicLabel { background:#263c2e; color:#c6daa4; }

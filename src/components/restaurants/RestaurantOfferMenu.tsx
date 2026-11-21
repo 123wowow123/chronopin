@@ -18,7 +18,8 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true, 
   if (!menu) return null;
   const categories = restaurantMenuCategories(menu.items);
   const category = categories.find((category) => category === selected) ?? (preferDrinks ? categories.find(isDrinkCategory) : undefined) ?? categories[0];
-  const items = menu.items.filter((item) => (item.category || 'Menu') === category);
+  // The iconic dish leads its section so the collapsed list always shows it.
+  const items = menu.items.filter((item) => (item.category || 'Menu') === category).sort((a, b) => Number(Boolean(b.iconic)) - Number(Boolean(a.iconic)));
   const shown = expanded ? items : items.slice(0, 6);
   const gallery = menu.items;
   const amount = (price: number) => restaurantMenuAmount(price, menu.currency);
@@ -34,7 +35,7 @@ export function RestaurantOfferMenu({ menu, restaurant, pinId, specials = true, 
     </div>}
     {shown.length > 0 ? <>
       <ul id={id} className={styles.offerMenu} aria-label={`${restaurant} ${category} ${specials ? 'specials' : 'items'}`}>
-        {shown.map((item, index) => <li key={`${item.name}-${index}`}><div className={styles.offerMenuDish}><MenuItemReviews hideEmpty pinId={pinId} item={item} gallery={gallery}><span>{item.name}{item.note && <small>{item.note}</small>}</span></MenuItemReviews></div><strong>{item.priceLabel ?? (item.price != null ? amount(item.price) : 'Price not published')}</strong></li>)}
+        {shown.map((item, index) => <li key={`${item.name}-${index}`}><div className={styles.offerMenuDish}><MenuItemReviews hideEmpty pinId={pinId} item={item} gallery={gallery}><span>{item.name}{item.note && <small>{item.note}</small>}</span></MenuItemReviews></div><div className={styles.offerMenuPrice}><strong>{item.priceLabel ?? (item.price != null ? amount(item.price) : 'Price not published')}</strong>{item.iconic ? <em className={styles.iconicLabel}>Iconic</em> : null}</div></li>)}
       </ul>
       {items.length > 6 && <button type="button" className={styles.offerMenuExpand} aria-expanded={expanded} aria-controls={id} onClick={() => setExpanded((expanded) => !expanded)}>{expanded ? 'Show fewer items' : `Show all ${items.length} items`}</button>}
     </> : menu.pages?.length ? <div className={styles.offerMenuPages}>

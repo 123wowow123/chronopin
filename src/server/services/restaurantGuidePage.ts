@@ -22,13 +22,14 @@ async function guideBase(regionSlug: string) {
   // Food trucks have their own tab; their specials still count (offers read both).
   const tops = allTops.filter((restaurant) => !restaurant.foodTruck);
   const trucks = allTops.filter((restaurant) => restaurant.foodTruck);
+  const iconic = allTops.filter((restaurant) => restaurant.iconicDish);
   const today = dayKeyIn(new Date(), region.timeZone);
   const [offers, details] = await Promise.all([regionalRestaurantOffers(data.restaurants, allTops, today, region.slug), restaurantGuideDetails(data.restaurants, allTops)]);
   const active = data.restaurants.filter((restaurant) => openingGroup(restaurant, today));
   return {
     // Changes only when this cache entry is rebuilt, so it tells a memo below when the offers did.
     version: crypto.randomUUID(),
-    today, tops, trucks, offers, details, previewSnapshot: data.previewSnapshot,
+    today, tops, iconic, trucks, offers, details, previewSnapshot: data.previewSnapshot,
     upcoming: active.filter((restaurant) => openingGroup(restaurant, today) === 'upcoming').sort((a, b) => a.day.localeCompare(b.day)),
     recent: active.filter((restaurant) => openingGroup(restaurant, today) === 'new').sort((a, b) => b.day.localeCompare(a.day)),
   };
@@ -41,7 +42,7 @@ export async function allGuideCounts(now: Date): Promise<Record<string, Record<G
   return Object.fromEntries(RESTAURANT_REGIONS.filter((region) => all[region.slug]).map((region) => {
     const today = dayKeyIn(now, region.timeZone);
     const groups = all[region.slug].openings.map((opening) => openingGroup(opening, today));
-    return [region.slug, { upcoming: groups.filter((g) => g === 'upcoming').length, new: groups.filter((g) => g === 'new').length, top: all[region.slug].tops, trucks: all[region.slug].trucks, discounts: 0 }];
+    return [region.slug, { upcoming: groups.filter((g) => g === 'upcoming').length, new: groups.filter((g) => g === 'new').length, top: all[region.slug].tops, iconic: all[region.slug].iconic, trucks: all[region.slug].trucks, discounts: 0 }];
   }));
 }
 
@@ -67,6 +68,7 @@ export async function guideCounts(regionSlug: string, now: Date, venues?: Restau
     upcoming: groups.filter((group) => group === 'upcoming').length,
     new: groups.filter((group) => group === 'new').length,
     top: tops.length,
+    iconic: allTops.filter((restaurant) => restaurant.iconicDish).length,
     trucks: allTops.length - tops.length,
     discounts,
   };
@@ -91,7 +93,7 @@ function offerSchedule(regionSlug: string, version: string, offers: RestaurantOf
 export async function guideSummary(regionSlug: string, now: Date): Promise<(GuideSummary & { today: string; previewSnapshot: boolean }) | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === regionSlug);
   if (!region) return null;
-  const { today, tops, trucks, offers, upcoming, recent, previewSnapshot, version, details } = await guideBase(region.slug);
+  const { today, tops, iconic, trucks, offers, upcoming, recent, previewSnapshot, version, details } = await guideBase(region.slug);
   const sections = arrangeRestaurantOfferSections(offerSchedule(region.slug, version, offers, now, region.timeZone));
   const names = (list: { neighborhood: string }[]) => [...new Set(list.map((item) => item.neighborhood))].sort();
   const featured = recent.find((restaurant) => restaurant.id === 6434 && restaurant.image) ?? recent.find((restaurant) => restaurant.image && !restaurant.imageNote) ?? recent.find((restaurant) => restaurant.image) ?? upcoming.find((restaurant) => restaurant.image) ?? null;
@@ -100,8 +102,8 @@ export async function guideSummary(regionSlug: string, now: Date): Promise<(Guid
     featuredPhotos: details[featured?.id ?? featuredTop?.pinId ?? 0]?.photos,
     today, previewSnapshot, featured,
     featuredTop,
-    counts: { upcoming: upcoming.length, new: recent.length, top: tops.length, trucks: trucks.length, discounts: sections.available.length + sections.upcoming.length },
-    neighborhoods: { upcoming: names(upcoming), new: names(recent), top: names(tops), trucks: names(trucks), discounts: names(offers) },
+    counts: { upcoming: upcoming.length, new: recent.length, top: tops.length, iconic: iconic.length, trucks: trucks.length, discounts: sections.available.length + sections.upcoming.length },
+    neighborhoods: { upcoming: names(upcoming), new: names(recent), top: names(tops), iconic: names(iconic), trucks: names(trucks), discounts: names(offers) },
   };
 }
 
@@ -109,7 +111,7 @@ export async function guideSummary(regionSlug: string, now: Date): Promise<(Guid
 export async function guidePage(query: GuideQuery, offset: number, now: Date, limit = GUIDE_PAGE_SIZE): Promise<GuidePage<GuideItem> | null> {
   const region = RESTAURANT_REGIONS.find((item) => item.slug === query.region);
   if (!region) return null;
-  const { tops, trucks, offers, details, upcoming, recent, version } = await guideBase(region.slug);
+  const { tops, iconic, trucks, offers, details, upcoming, recent, version } = await guideBase(region.slug);
   const matches = (item: { neighborhood: string }) => query.neighborhood === 'all' || item.neighborhood === query.neighborhood;
   const withDetails = (items: GuideItem[], idOf: (item: any) => number): GuidePage<GuideItem>['details'] => Object.fromEntries(items.flatMap((item) => (details[idOf(item)] ? [[idOf(item), details[idOf(item)]]] : [])));
   const view: GuideView = query.view;
@@ -120,8 +122,8 @@ export async function guidePage(query: GuideQuery, offset: number, now: Date, li
     const bounds = located.length ? [Math.min(...located.map((place) => place.latitude)), Math.min(...located.map((place) => place.longitude)), Math.max(...located.map((place) => place.latitude)), Math.max(...located.map((place) => place.longitude))].join(',') : undefined;
     return { items: list.slice(offset, offset + limit), offset, total: list.length, ids: list.flatMap((offer) => (offer.offers ?? [offer]).map((item) => item.id)), bounds, details: {} };
   }
-  if (view === 'top' || view === 'trucks') {
-    const list = sortRestaurants((view === 'top' ? tops : trucks).filter(matches), (r) => details[r.pinId], query.sort, query.origin, undefined, query.reverse);
+  if (view === 'top' || view === 'iconic' || view === 'trucks') {
+    const list = sortRestaurants((view === 'top' ? tops : view === 'iconic' ? iconic : trucks).filter(matches), (r) => details[r.pinId], query.sort, query.origin, undefined, query.reverse);
     const items = list.slice(offset, offset + limit);
     return { items, offset, total: list.length, ids: list.map((r) => r.pinId), details: withDetails(items, (r) => r.pinId) };
   }

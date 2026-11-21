@@ -1198,5 +1198,125 @@
       "publishedDate": "2013-01-17",
       "checkedAt": "2026-11-16"
     }
+  },
+  {
+    "pinSourceUrl": "https://www.coasterra.com/",
+    "itemName": "Guacamole",
+    "review": {
+      "provider": "San Diego Reader (Candice Reed)",
+      "title": "The best view in town?",
+      "sourceUrl": "https://www.sandiegoreader.com/news/2015/sep/04/feast-coasterra-best-view-in-town/",
+      "quote": "It was as tangy as one might find across the border.",
+      "publishedDate": "2015-09-04",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.herbandwood.com/",
+    "itemName": "Half-pound burger",
+    "review": {
+      "provider": "Axios San Diego (Kate Murphy)",
+      "title": "Herb & Wood's happy hour, happy meal is worth the hype",
+      "sourceUrl": "https://www.axios.com/local/san-diego/2025/03/21/happy-meal-happy-hour-herb-wood-encinitas",
+      "quote": "Don't expect the best cheeseburger or oysters in town",
+      "publishedDate": "2025-03-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://www.herbandwood.com/",
+    "itemName": "Roasted oysters (3)",
+    "review": {
+      "provider": "Axios San Diego (Kate Murphy)",
+      "title": "Herb & Wood's happy hour, happy meal is worth the hype",
+      "sourceUrl": "https://www.axios.com/local/san-diego/2025/03/21/happy-meal-happy-hour-herb-wood-encinitas",
+      "quote": "Don't expect the best cheeseburger or oysters in town",
+      "publishedDate": "2025-03-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Scallop Taco",
+    "review": {
+      "provider": "Chu On This (Dennis Chu)",
+      "title": "HOLBOX",
+      "sourceUrl": "https://chuonthisfood.com/2023/02/21/holbox/",
+      "quote": "these pan-seared scallops struck the right balance",
+      "publishedDate": "2023-02-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Baja Fish Taco",
+    "review": {
+      "provider": "Chu On This (Dennis Chu)",
+      "title": "HOLBOX",
+      "sourceUrl": "https://chuonthisfood.com/2023/02/21/holbox/",
+      "quote": "ratio of batter to fish was really good",
+      "publishedDate": "2023-02-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Baja Shrimp Taco",
+    "review": {
+      "provider": "Chu On This (Dennis Chu)",
+      "title": "HOLBOX",
+      "sourceUrl": "https://chuonthisfood.com/2023/02/21/holbox/",
+      "quote": "least likely for me to get again",
+      "publishedDate": "2023-02-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Scallop Taco",
+    "review": {
+      "provider": "Mouthful of Memory (Gabrielle Lawrence)",
+      "title": "Holbox LA",
+      "sourceUrl": "https://mouthfulofmemory.substack.com/p/holbox-la",
+      "quote": "The scallop taco was the pinnacle of disappointment.",
+      "publishedDate": "2025-05-15",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-san-diego/restaurant/ciccia-osteria",
+    "itemName": "Mushroom Flan",
+    "review": {
+      "provider": "San Diego Magazine (Troy Johnson)",
+      "title": "SDM Guide to San Diego Food + Drink: Ciccia Osteria",
+      "sourceUrl": "https://sandiegomagazine.com/watch/sdms-guide-to-san-diego-food/san-diego-food-drink-ciccia-osteria/",
+      "quote": "one of the best dishes in the city.",
+      "publishedDate": "2026-01-26",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Taco de Pulpo en su Tinta",
+    "review": {
+      "provider": "Chu On This (Dennis Chu)",
+      "title": "HOLBOX",
+      "sourceUrl": "https://chuonthisfood.com/2023/02/21/holbox/",
+      "quote": "was braised well",
+      "publishedDate": "2023-02-21",
+      "checkedAt": "2026-11-20"
+    }
+  },
+  {
+    "pinSourceUrl": "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/holbox",
+    "itemName": "Taco de Pulpo en su Tinta",
+    "review": {
+      "provider": "Mouthful of Memory (Gabrielle Lawrence)",
+      "title": "Holbox LA",
+      "sourceUrl": "https://mouthfulofmemory.substack.com/p/holbox-la",
+      "quote": "The Octopus was tough.",
+      "publishedDate": "2025-05-15",
+      "checkedAt": "2026-11-20"
+    }
   }
 ]

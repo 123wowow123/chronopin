@@ -3,6 +3,18 @@ import type { RestaurantDishReview } from './restaurantMenus';
 // Editorial estimates from the saved excerpts, not scores published by their sources.
 // Descriptions without an assessment deliberately have no estimate.
 const estimates: Record<string, number> = {
+  // November 20 round 94: contrasting assessments of Holbox’s octopus taco.
+  "was braised well": 4,
+  "The Octopus was tough.": 2,
+  // November 20 round 93: exact dish assessments, including contrasting scallop-taco judgments.
+  "these pan-seared scallops struck the right balance": 4,
+  "ratio of batter to fish was really good": 4,
+  "least likely for me to get again": 3.5,
+  "The scallop taco was the pinnacle of disappointment.": 1.5,
+  "one of the best dishes in the city.": 5,
+  // November 20 round 91: comparative criticism and a shortened positive verdict.
+  "Don't expect the best cheeseburger or oysters in town": 3.5,
+  "chicken-stuffed tacos dorados was more successful": 4,
   // November 15 USA round 23: a diner's explicit assessment of S3's two named appetizers.
   "Wok Charred Edamame and Goat Cheese Croquettes from S3 are definitely the best appetizers": 4.5,
   // November 15 twentieth round: exact dish assessments, retaining the very salty truffle pork.

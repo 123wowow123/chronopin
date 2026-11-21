@@ -47,7 +47,7 @@ export function parseSpecialVenue(value: unknown): SpecialVenueInput {
       for (const page of menu.pages) { object(page); check(assetUrl(page.src) && Number.isFinite(page.width) && page.width > 0 && Number.isFinite(page.height) && page.height > 0 && (page.label === undefined || text(page.label)), 'Invalid menu page'); }
     }
     list(menu.items, 1000);
-    for (const item of menu.items) { object(item); check(text(item.name) && item.name.trim(), 'Invalid menu item'); optionalStrings(item, ['category', 'note', 'priceLabel']); check(item.price === undefined || (Number.isFinite(item.price) && item.price >= 0), 'Invalid menu price');
+    for (const item of menu.items) { object(item); check(text(item.name) && item.name.trim(), 'Invalid menu item'); optionalStrings(item, ['category', 'note', 'priceLabel']); check(item.price === undefined || (Number.isFinite(item.price) && item.price >= 0), 'Invalid menu price'); check(item.iconic === undefined || typeof item.iconic === 'boolean', 'Invalid menu item iconic');
       if (item.reviews !== undefined) {
         list(item.reviews, 6);
         for (const review of item.reviews) {

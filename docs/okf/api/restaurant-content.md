@@ -35,6 +35,10 @@ List responses are `{ content: [...] }`. Single-record responses contain `id`, `
 - `details`: branch-specific name, website, phone, opening hours, reservation link, checked date and evidence links.
 - `tile`: `regionSlug`, `kind` (`top` or `opening`), `slug`, `name`, `neighborhood`, `cuisine`, `description`, `address`, `websiteUrl`, `checkedAt`, `recognition`, `priceRange`, `image` and `imageCredit`. An image also requires `imageSourceUrl`; optional `imageNote` records its caption or limitations. Photos must use a public Chronopin Azure Blob URL and are checked for successful decoding before saving. Set `image: null` to clear a tile photo. No fabricated recognition, opening dates or menu items.
 
+A top tile with `iconicDish: "<dish>"` also lists in the guide's Iconic dishes tab (`?view=iconic`) and stays in Top restaurants; it is rejected on an opening tile. A menu item may carry `iconic: true` to show an "Iconic dish" label. An iconic card's photos are the pin's media (restaurant photos first, the 1 to 2 iconic-dish photos last, by `PinMedium.weight` 0 to 1 descending); other dish photos stay on their menu items.
+
+A top tile with `foodTruck: true` lists in the guide's Food trucks tab (`?view=trucks`) instead of Top restaurants; it is rejected on an opening tile. Its specials profile still feeds the Specials tab.
+
 An opening tile may retain `openingConfirmed` plus its original evidence `day`; this only confirms the opening while the pin's live date still matches. The pin itself remains the source of its date, coordinates, title and opening-date confidence. Use the pin management API to change those. The content record's source cannot be moved to another branch.
 
 Create the restaurant pin first, then POST its content using that pin's source URL. Top tiles resolve actual pin IDs rather than storing environment-specific IDs. Disabled content does not fall back to bundled menus or curated top tiles. Country/city navigation stays west to east; Coming soon, Just opened, Top restaurants and Specials retain their eligibility and empty-tab fallback behavior.

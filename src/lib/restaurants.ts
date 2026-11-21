@@ -158,6 +158,7 @@ export type TopRestaurant = {
   imageCredit: string;
   kidsFriendly?: boolean;
   foodTruck?: boolean;
+  iconicDish?: string;
 };
 
 // Passing an estimated opening date never establishes that a restaurant opened.

@@ -68,7 +68,7 @@ export type RestaurantMenu = {
 // A photo of the dish itself (Azure blob), shown as a thumbnail that opens large with its caption.
 export type RestaurantDishImage = { src: string; caption: string; credit: string; sourceUrl: string; width?: number; height?: number };
 export type RestaurantDishReview = { provider: string; title: string; sourceUrl: string; quote: string; publishedDate: string | null; checkedAt: string };
-export type RestaurantMenuItem = { name: string; category?: string; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage; images?: RestaurantDishImage[]; reviews?: RestaurantDishReview[] };
+export type RestaurantMenuItem = { name: string; category?: string; iconic?: boolean; price?: number; priceLabel?: string; note?: string; image?: RestaurantDishImage; images?: RestaurantDishImage[]; reviews?: RestaurantDishReview[] };
 
 // A menu's section tabs in display order: the categories as the menu lists them, except
 // that food sections come before drink sections, so food opens selected ahead of Drinks.

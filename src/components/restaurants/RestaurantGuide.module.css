@@ -200,6 +200,8 @@
 .cardArrow { width:29px; height:29px; display:grid; place-content:center; border:1px solid var(--rule); border-radius:50%; font-size:18px; flex-shrink:0; }
 .cardArrow:hover { background:var(--rule); }
 .topNote { font-size:11px; line-height:1.8; color:var(--soft); margin-bottom:22px; max-width:750px; }
+.iconicDish { margin:2px 0 6px; font-size:13px; font-weight:600; line-height:1.4; }
+.iconicDish span { font-size:9px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--soft); margin-right:4px; }
 .topAddress { font-size:10px; line-height:1.6; color:var(--soft); margin-top:auto; padding-bottom:14px; }
 .topLinks { display:flex; justify-content:space-between; gap:12px; font-size:11px; font-weight:600; border-top:1px solid var(--rule); padding-top:14px; }
 .topLinks a:hover { text-decoration:underline; text-underline-offset:4px; }
@@ -238,3 +240,7 @@
 @media(prefers-reduced-motion:reduce) { .filterFields select { transition:none; } .offerSort button,.offerSort .offerMapButton,.countryNav a,.statusFilters a,.cardArrow { transition:none; } .offerSort button:active,.offerSort .offerMapButton:active,.countryNav a:active,.statusFilters a:active,.cardArrow:active { transform:none; } .featuredImage,.cardImage { transition:none; } .featured:hover .featuredImage,.photoLink:hover .cardImage { transform:none; } }
 
 .cardMenus { --menu-paper:var(--paper); --menu-ink:var(--text); --menu-muted:var(--soft); --menu-rule:var(--rule); --menu-accent:var(--green); margin-top:16px; }
+.iconicLabel { display:block; width:max-content; margin:4px 0 0 auto; padding:1px 6px; border-radius:3px; background:#edf0cf; color:#244d39; font-size:9px; font-style:normal; font-weight:600; letter-spacing:.1em; text-transform:uppercase; line-height:1.5; white-space:nowrap; }
+:global([data-theme='dark']) .iconicLabel { background:#263c2e; color:#c6daa4; }
+.offerMenuPrice { display:flex; flex-direction:column; align-items:flex-end; gap:0; flex-shrink:0; max-width:45%; }
+.offerMenuPrice strong { max-width:none; }

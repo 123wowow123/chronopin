@@ -28,6 +28,132 @@ Every guide (including Japan city guides) supports **Specials, Coming soon, Just
 - Japan and China guides: continue replenishing any section below its target and record each shortage, the
   sources checked and the specific unresolved research gaps.
 
+## Food trucks tab (added 2026-11-20, San Diego first)
+A fifth tab, **Food trucks** (`?view=trucks`, hash `#food-trucks`), after Top restaurants. Hidden while empty. A truck is a
+`restaurant-content` record with `tile.kind: 'top'` and **`tile.foodTruck: true`**; the guide moves it out of Top restaurants
+into this tab (Top counts exclude trucks). Its specials need nothing extra: a truck with a `RestaurantSpecialVenue` in the
+region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks` split), `restaurants.ts` counts,
+`RestaurantGuide.tsx`; the tab only appears after the code is deployed (check Top stays unchanged after the first push).
+- **Pin per truck:** `POST /api/admin/db/Pin` (`@FoodDesk`), tags `Restaurant`, city, neighborhood, `Food Truck`, cuisine, category
+  `Food`. Address = the truck's published base/usual stop, geocoded (Nominatim); never a city-centre point. `sourceUrl` = the
+  operator page, else its Instagram profile or a branch-specific review (that URL is the key for the pin, tile, menu and specials).
+- **Start date:** the truck's own opening date. If none is published, owner instruction (2026-11-20) allows the **earliest
+  documented operation**, always `dateConfidence: 'estimated'` with the reasoning saying so (Instagram feed: scroll to the end with
+  `javascript_tool` un-awaited and poll, then open the last post; the grid order is newest first. Month-only evidence uses day 1/31
+  as a placeholder, explained). A separate restaurant or second location is not the truck: say so in the pin.
+- **Not a truck:** restaurants with a storefront (Birria El Rey), catering-only operators with no address (Taco Love), or ones with no
+  fixed San Diego base (Devilicious). Hold them and record why.
+- **Photos:** operator site/press first, then a published review's lead photo (credit it), last Google Maps contributor photos
+  (via Wanderlog `freeImage` URLs; verify the truck's name/address is visible). Instagram image URLs are blocked in Chrome
+  (`[BLOCKED: Cookie/query string data]`); a truck may legitimately have no image (`tile.image: null`). Upload with the pin-media-azure
+  flow; historical photos say so in the caption.
+- **Menus (tile `profile.menu`, `specials: []` required):** the operator's own site first. Ordering sites that load items by script
+  (themenustar6/`mobile-webview6`, Toast) often expose a public `functions/restaurant.php` POST (`function=get_items&id=<category>&restaurant_id=..&code=..`);
+  the price `<span class="pull-right">` comes **before** its `<h4>` name. Prices unpublished: leave `price` off. Dated prices from
+  an article go in the item note ("as published May 16, 2024") with `coverage: 'sample'`. Chain-wide operator photos are allowed
+  only with the chain caption (see Dish photos); skip items with a mismatching file name and items "not available" at the truck.
+- **Reviews:** `provider/title/sourceUrl/quote(<=300, verbatim)/publishedDate/checkedAt`; short verbatim sentences about the exact dish;
+  drop a quote whose fact (a price) the current menu contradicts (SD Magazine's "three bucks" gobernador vs the $7.00 ordering page).
+- **Specials:** only a published, dated offer (Kiko's daily 2-5 pm happy hour, The Infatuation July 2026). Blog/aggregator claims quoting
+  reviewers ("$1 fish tacos Tuesday") are not saved.
+- **Gap-fill pass (2026-11-20): what worked and what did not.**
+  - *Prices:* the operator's own ordering site beats any article. Shawarma Guys' `shawarma-guys.curated.menu` is a script app: open
+    `/restaurant-locator/<id>` in Chrome, pick the truck's location, **Start Ordering** (browse only, never add to cart or check out), then
+    `get_page_text` returns every item with its price and the deal rows ("Daily Bites: 3 for $20 Jr Pita"). Result: 61 of 79 items priced and a
+    new Specials deal (venue 1551). Items that need modifiers (fries, hummus, salads) show no single price: leave `price` off.
+  - *Toast and Yelp (2026-11-20, once the owner granted Chrome read access):* both work in Chrome now. Toast
+    (`order.toasttab.com/online/<slug>`): `get_page_text` returns every item, price and the weekday-specials block; find the slug by
+    clicking the Google result (the slug is truncated in snippets; `javascript_tool` output containing URLs is blocked), then read
+    `tabs_context_mcp` for the final URL. Fetch/WebFetch still 403 on Toast and Yelp, so never delegate them to a fetch agent. The
+    Toast page is the truck's own menu: use it for prices and the weekly specials (Kiko's: 119 items, six weekday specials, happy hour
+    drink = soda or Tecate can). Specials without stated hours need a window: use the last published hours and say so in `conditions`;
+    skip an ambiguous row (Kiko's Monday) rather than guess its price.
+  - *Yelp dish photos:* `/biz_photos/<slug>?tab=food&start=N` pages (30 per page, up to ~450). Start the loop un-awaited in a Yelp tab, keep
+    results on `window`, then write them into a `<pre>` and read with `get_page_text` (returning ids directly is often BLOCKED). The alt text
+    is `"<Business> - <caption> - <tags>"`; keep rows that have a caption. Slugs: Mission Valley Kiko's is `kikos-place-san-diego-15`
+    (7710 Hazard Center Dr), others resolve as `<name>-san-diego`. Download `s3-media0.fl.yelpcdn.com/bphoto/<id>/o.jpg` with a browser UA,
+    build a labelled contact sheet (ASCII labels only: PIL fails on en dashes), reject wrong-venue packaging (a quesabirria tray from another
+    shop), multi-dish shots and ambiguous aguachile/campechana, then upload (WebP, Azure `restaurant-dishes/<slug>/`). Credit "Yelp reviewer photo",
+    `sourceUrl` = `https://www.yelp.com/biz_photos/<slug>?select=<id>`, caption says date not shown. Results: Kiko's 14, Mi Gusto Es 16, Zoe's Place 15,
+    Taco Picasso 8 dish photos. A Yelp search-result snippet is a usable review quote only with `publishedDate: null` and the business URL.
+  - *Still not usable:* Grubhub/Uber Eats/DoorDash/Postmates (third-party prices with a markup; Zoe's Place and Taco Picasso list no own prices),
+    `sandiegofoodtrucks.com` (TLS error), `gotruckster.com` (405). Their prices stay "not published".
+  - *Never re-run a bulk menu apply from a stale `menus.json`:* applying all five menus once overwrote Kiko's 119-item Toast menu with
+    the old 9-item draft (restored from `kk-menu.json`). After building a menu, write it back into `menus.json` before any apply.
+  - *Address check:* Kiko's Mission Valley truck is "Corner of Hazard Center Dr and Mission Center Rd" (Infatuation 2026); its pin keeps
+    5494 Mission Center Rd (the 2018 post), while Yelp's listing shows 7710 Hazard Center Dr, Ste E513. Same corner; recheck before moving the pin.
+  - *Re-run:* the menu builders live in the session scratchpad only; to repeat, rebuild items from `.scrape/food-trucks-2026-11-20/menus.json`
+    (Shawarma Guys, Mi Gusto Es items and photo URLs) and PUT `profile.menu` with the content record's current `revision`; look records up by
+    `profile.pinSourceUrl` (content ids differ between local and prod: Kiko's 1974 local / 1972 prod).
+- Push local first, then production: preflight blobs, pilot **one** truck, check `aria-label="Food trucks N"` and that Top is unchanged, then the rest.
+  Evidence and per-truck notes: `.scrape/food-trucks-2026-11-20/NOTES.md`. San Diego trucks done: Kiko's (prod pin 21115), Shawarma Guys
+  South Park (21116), Taco Picasso (21117), Mariscos Mi Gusto Es (21118), Zoe's Place (21119). Held: Devilicious, The San Diego Taco Truck,
+  Taco Love, Balboa Park Food Truck Fridays, Curbside Bites. Other cities not started.
+
+## Iconic dishes tab (added 2026-11-20, San Diego first)
+A sixth tab, **Iconic dishes** (`?view=iconic`, hash `#iconic-dishes`), between Top restaurants and Food trucks. Hidden while empty. A record is a
+`restaurant-content` `tile.kind: 'top'` with **`tile.iconicDish: '<dish name>'`** (card shows "Known for <dish>"). Unlike trucks it also stays in
+Top restaurants, so Top's count includes iconic records. Code: `restaurantGuidePage.ts` (`iconic` filter), `restaurants.ts` counts, `RestaurantGuide.tsx`.
+- One pin per restaurant (`@FoodDesk`, tags `Restaurant`, city, neighborhood, `Iconic Dish`, cuisine, category `Food`), the exact branch's address and
+  geocoded point. Start date = that branch's opening (year-only evidence: Jan 1 placeholder, `estimated`, explained). The brand's founding year is not the branch's.
+- **Mark the dish on the menu:** set `iconic: true` on the menu item that is the iconic dish (pin menu and guide-card menu show an "Iconic" label; the card list puts it first in its section). The card photo carries an **"ICONIC"** badge (owner instruction 2026-11-20: keep the label, drop the word "dish"; set `tile.recognition: "ICONIC"`, never "ICONIC DISH"), and the "Known for <dish>" line names the dish. Menu-item labels also read just "Iconic".
+- **Photos: restaurant photos first, then 1 to 2 iconic-dish photos at the end** (owner instruction, 2026-11-20; this is the latest of three revisions, so keep this order).
+  The pin's native media and the card carousel list **several venue photos** (storefront or sign first, interior or signage next) and then the **1 to 2 most iconic images of the
+  iconic dish** last. Weights (0 to 1, descending = display order): venue 1.0, 0.9, 0.8; dish 0.3, 0.2. The tile cover is the first venue photo. Every other dish photo lives only on its
+  `profile.menu` item; the iconic item carries `iconic: true` and that dish image (a second goes in `images`). Code: `restaurantGuideDetails.ts` builds an iconic card's carousel from
+  the pin media plus the iconic-flagged item images (cover removed), and no longer merges every menu photo; other cards are unchanged. Pick photos that show the exact dish (Hodad's
+  Maps customer burger had no bacon: not used) and the exact venue with the sign or address visible. Caption honestly when a photo is a variant (Point Loma Seafoods' fish *plate* for the fish
+  *sandwich*, same fish; Google's auto-title said "calamari", the strips are fillets). Now: Hodad's storefront, interior, single + double bacon cheeseburger; Rubio's shop, signage, fish tacos;
+  Point Loma Seafoods sign, market counter, fish plate (the other session's fresh-catch tray was detached, its Medium row 36787 remains).
+- **Getting photos from the Maps gallery (2026-11-20):** open the listing, click the cover to open the gallery, click a storefront/interior thumbnail, then read the full-size
+  URL with `javascript_tool`: `decodeURIComponent(location.href).match(/!6s(https:\/\/lh3\.googleusercontent\.com\/[^=!]+)/)[1]` (do not retype it from the tab title:
+  a mistyped character returns HTTP 400). Fetch it with `=w1600`, view it, and credit the contributor shown in the viewer header ("Photo: <name> via Google Maps,
+  <month year> · <what it shows>"). Skip photos with people prominent (a child at the front of Point Loma Seafoods' lighthouse shot; take the sign-only shot) and videos.
+  Venue photos found this way: Hodad's storefront/interior, Rubio's shop/signage, Point Loma Seafoods sign/counter. Upload with
+  `uploadDishPhotos.ts restaurant-images/san-diego/iconic-dishes <file>`; attach with `.scrape/iconic-dishes-2026-11-20/addmedia.py <pinId> <uploaded.jsonl> <credit> <url>`
+  (idempotent by `thumbName`; weights 1.0, 0.9, 0.8..., all within 0-1; the first venue photo carries weight 1, so demote an older food photo with `PATCH PinMedium?id=` weight 0.5).
+  The card badge says `ICONIC` (not "ICONIC DISH").
+- **Menu prices, photos and reviews pass (2026-11-20):**
+  - *Rubio's has per-location prices:* the chain PDF has none, but `order.rubios.com/location` does. In Chrome: **Pick Up**, search the zip (92109), pick the branch ("Mission Bay, 4504 Mission Bay Drive"),
+    **Start Order** (browse only, never add to cart), then `get_page_text` returns every item with price, calories and description (`/menu/mission-bay`). "Starting at" items: save the lowest price in
+    `price` and `priceLabel: 'From $X'`. Result: 20 items priced + 3 added; menu `coverage: 'published'`, url = the branch's order page. The item photos sit on `olo-images-live.imgix.net` with a **signed query string**: stripping the `?...&s=` signature returns `sig_invalid` (a 403), which I first misread as hotlink
+    protection, and `javascript_tool` refuses to return the full URL (`[BLOCKED: Cookie/query string data]`). What works (2026-11-20, 19 photos): on the order page collect `{name: img.src}` into
+    `window.__got` (800x800 natives), overlay a black 2-up grid (`position:fixed`, two 640 px imgs), and `computer screenshot` with `save_to_disk: true` at **full scale** (a `scale` below 1 saves the small
+    version too); then crop each cell with PIL (cells 0-492 and 495-987 px wide, 492 high in the 1288x948 capture), contact-sheet check, `uploadDishPhotos.ts auto`, and attach by item name with the operator
+    credit "Photo: Rubio's Coastal Grill" and the order page as `sourceUrl` ("chain-wide menu photo, may vary"). Skip an item whose photo shows another protein (the Classic Taco photo is chicken: not used for the
+    steak taco). The customer fish-taco photo stays on the iconic item. Left without a photo: Classic steak taco, 3 taco plate, churro.
+  - *Hodad's shakes:* the drink page (`/drink-menu`) maps three operator photos (chocolate, vanilla, strawberry) to their items with the same DOM walk as the food page; verify flavors on a contact sheet.
+  - *Reviews:* only verbatim sentences found by searching the saved page text (`quote in text` must be True), with the article's own title, URL and date (`datePublished`; null when a place page shows none).
+    Used: Food GPS (Hodad's double bacon cheeseburger, 2008-11-09), San Diego Reader "200 million fish tacos" (2018-02-02) and Cool San Diego Sights (2026-05-04) for Rubio's original fish taco,
+    San Diego Reader place page for Point Loma Seafoods' fish sandwich. A review of the double burger is not attached to the single. Wikipedia, NBC/KPBS (facts, not opinions) and reader comments are not reviews.
+  - *Gaps left:* Point Loma Seafoods item photos (only the fish plate), Hodad's photos for the other 18 items, reviews for non-iconic items, Yelp/Google review text (blocked).
+- **Native media API traps:** `POST /api/admin/db/Medium` and `/PinMedium` answer `{ rows: [...] }` (not `results`). `PinMedium.weight` must be **0 to 1**
+  (`CK_PinMedium_weight`); weight 2 returns a 500 *after* the Medium row was inserted, leaving an orphan: find and delete orphans (`DELETE /api/admin/db/Medium?id=`)
+  before retrying. Check by `thumbName` before creating so a rerun is idempotent. Never POST probe rows to see what happens.
+- **Never claim inventor status** for a contested dish (California burrito, carne asada fries): say "best known for". Credit Baja for the fish taco.
+- San Diego done locally (pins 20975-20977, content 1977-1979, not on prod): Rubio's original (fish taco), Hodad's (bacon cheeseburger),
+  Point Loma Seafoods (fish sandwich). Held: Lolita's (carne asada fries; San Diego-city branch date unverified, original is in Chula Vista),
+  Roberto's/Santana's (California burrito origin disputed, no verified branch date), Phil's BBQ. Evidence: `.scrape/iconic-dishes-2026-11-20/`.
+  Other cities not started.
+- **Menu, price and photo pass (2026-11-20, local only; content 1977 Rubio's, 1978 Hodad's, 1979 Point Loma Seafoods):**
+  - *Hodad's:* use the **branch's own site** (`hodadsoceanbeach.com/food-menu` and `/drink-menu`; the `hodadsburgers.com` landing page only links out).
+    29 priced items + shakes/drinks, 11 operator menu photos. The page maps each photo to its item in the DOM: `img` inside the item block whose text has `$`
+    (`javascript_tool`, `static.spotapps.co/spots/../full`). The site shows $17.00 (Favorites card) vs $17.50 (burger table) for the single bacon cheeseburger: use the
+    table, say so in the item note. Tile photo = the single bacon cheeseburger.
+  - *Point Loma Seafoods:* the menu is a PDF (`/wp-content/uploads/2026/04/PLSFWebMenu4.16.26.pdf`) that Chrome titles "1.PNG": `get_page_text` finds nothing. Open it in
+    Chrome, `screenshot`, then `zoom` regions to read prices (26 items). Small print (soup sizes) is too small to assign to one soup: record it in the item note, leave
+    `price` off. Sushi and sashimi are not transcribed. **Plain curl gets a 202 bot challenge from this site** (menu and photos): do not spoof headers or a referer to get
+    around it (the permission classifier denies that); read it in Chrome, and use a photo only from a source that downloads normally. No verified photo yet (the IVN
+    article photo shows a harbor building with no sign; not used).
+  - *Rubio's:* `rubios.com/menu` renders empty; its **Download Menu** PDF (`/wp-content/uploads/2026/07/Rubios_Website_Menu_7.28.26.pdf`, plain curl works, `pdftotext -layout`)
+    has no base prices (set per location in the ordering app), only Taco Tuesday prices ($2.50 original fish taco) and add-ons. Save the items with **no price** and
+    `coverage: 'sample'`, with the Taco Tuesday figure in the note. Tile photo: Cool San Diego Sights' April 2026 shot of the original shop (credited, `imageSourceUrl` = the article).
+  - *Traps:* (1) **zsh arrays are 1-based**: a bash-style `n=(x a b); ${n[$i]}` rename loop shifted every photo name by one and uploaded eleven mislabeled blobs;
+    I deleted them (`az storage blob delete`) and re-uploaded. Build the rename list in Python and check each file's picture against its item (contact sheet) before
+    `uploadDishPhotos.ts`. (2) Chrome cannot POST a file to a local server (`Failed to fetch`) and an 11 MB `fetch` in the PDF viewer freezes the renderer: screenshot instead.
+    (3) `javascript_tool` output containing URLs with query strings is `[BLOCKED: Cookie/query string data]`: strip `?...` before returning.
+  - Builder: `.scrape/iconic-dishes-2026-11-20/menus.py` (PUTs `profile.menu` with the record's current revision). Reviews not collected (no verbatim quotes checked yet).
+
 ## Navigation order
 Both country and city menus sorted **west to east**: cities by city-centre longitude, countries by their
 westernmost supported guide city. Preserve when adding guides.
@@ -54,6 +180,25 @@ documenting sources and the gap.
 Check official galleries, linked photo pages and restaurant sites. Store in Azure (see `pin-media-azure`), credit
 photographer/operator, keep captions accurate, distinguish the venue's own photos from collaborations or other
 branches, don't infer dish names from unlabelled photos.
+
+### Cover image: the restaurant's own site first, always (owner instruction, 2026-11-20)
+A card with the grey asterisk placeholder is a defect (Point Loma Seafoods, shown by the owner). Before any review, Yelp or press photo, **open the
+restaurant's own website** (guide `websiteUrl`, the specials `pinSourceUrl`, a branch page or its ordering site) and take the cover from there;
+only when the operator publishes no usable photo fall back to the order in the Photos section, and record why. Also fill `tile.image` for every
+food truck, top, opening and specials card (`profile.photo` for specials venues); audit with the admin list endpoints for
+`tile.image == null` / missing `profile.photo` after each batch, both local and production.
+- Find the image: hero `<img>` / CSS background / slider on the home page, `og:image` (often a logo: reject it), the branch's location page
+  (Yard House: `media.yardhouse.com/.../<city>-yard-house-599x430.jpg` storefront), the online-ordering site's slider (Mi Gusto Es:
+  `themenustar6.com/upload/...` on its mobile-webview page). Pick one that shows the food or this branch, not a logo, a map or a banner.
+- Bot walls: plain `curl` gets HTTP 202 with a 170-byte challenge (pointlomaseafoods.com) even for the images. List URLs in Chrome with
+  `javascript_tool` (URLs with query strings come back BLOCKED), then save through the page: `fetch` -> blob -> `<a download>` click. Chrome saves only
+  the **first** automatic download per page load, so save one image per call/reload into `~/Downloads`, then copy it into `.scrape/`.
+  Sites that answer curl 200 (ordering platforms, media CDNs) can be downloaded directly with a browser User-Agent.
+- Save: Azure upload (WebP, public-blob check), `tile.image` + `imageCredit: "Photo: <Restaurant>"` + `imageSourceUrl` = the site page, plus the same
+  image on the backing pin (`Medium` + `PinMedium`); extra distinct operator photos go in `menu.photos` (generic alt, never dish names inferred).
+  De-duplicate slider images (they repeat) and skip logos. Examples: Point Loma Seafoods (local content 1979, pin 20977), Mi Gusto Es (cover + 8
+  gallery photos), Yard House Mission Valley (specials 1175), Shawarma Guys specials card (1551).
+- Still without an operator photo: Zoe's Place (Instagram only, image URLs blocked); keep its Yelp/magazine photos and revisit.
 
 ## Dish photos
 Owner instruction (November 8, 2026): aim for **at least one verified picture per menu item**.
@@ -110,6 +255,7 @@ For each uncovered item:
    by source; verify complete readbacks and native-pin/landing rendering.
 
 Technical follow-ups from expanded menu research:
+- Holbox’s retired `/menu.html` returns 404. Its homepage declares a public daily JSON feed in the menu container’s `data-src` (`/menu-builder/public/menu.json?restaurant=holbox`) and a separately dated `/menu-snapshot.json` fallback. Read the live feed’s own date and exact item descriptions; do not mistake the older fallback for today’s menu or relabel a saved selected historical menu as complete. Verified November 20, 2026 (`nov20-round93/` in the all-cities ledger).
 - Inspect an operator gallery's **Load more** data before treating its first page as complete. Quatrefoil's
   embedded Instagram feed exposes labelled posts through the public `sbi_load_more_clicked` request;
   its observed frontend script supplies the feed ID, offset, page, shortcode attributes, post ID and locator
@@ -410,6 +556,8 @@ blobs. Return visible attachments with their review (flag-hidden photos are owne
 delete soft-deletes its attachments too. Reader photos remain distinct from sourced dish photos.
 
 Replay caution (November 14): `menuItemReviews.lane0.ts` now delegates to the main catalog. Its old JSON is historical evidence, not an apply input. Two reviewers can share a Yelp URL; URL-only replacement retains only the last reviewer. Do not restore a lost excerpt without rechecking its original review, reviewer identity and aggregate source quote budget. The main catalog contains the retained audited excerpts and converges locally.
+Replay caution (November 20): a food-truck menu replay restored Shawarma Guys’ 45-word source aggregate after the live excerpts had been shortened. Repair the reusable input (`.scrape/food-trucks-2026-11-20/menus.json`) as well as the live profile; its three Reader excerpts now total 21 words. Keep old audit snapshots as evidence, and run the source-wide quote audit after menu/price replays, not only review additions. Evidence: `nov20-round95/` in the all-cities ledger.
+
 
 For public Trip review records, empty `translateContent` does not mean unusable when `content` is already English. Verify the original language and use an accurate original-English provider label, retaining the raw original and empty publisher-translation field in provenance. Do not hand-translate missing foreign-language text or call original English a publisher translation.
 

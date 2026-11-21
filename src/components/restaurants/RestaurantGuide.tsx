@@ -41,6 +41,7 @@ const VIEWS = [
   { key: 'upcoming', label: 'Coming soon', mobileLabel: 'Soon', hash: '#upcoming' },
   { key: 'new', label: 'Just opened', mobileLabel: 'New', hash: '#new' },
   { key: 'top', label: 'Top restaurants', mobileLabel: 'Top', hash: '#top-restaurants' },
+  { key: 'iconic', label: 'Iconic dishes', mobileLabel: 'Iconic', hash: '#iconic-dishes' },
   { key: 'trucks', label: 'Food trucks', mobileLabel: 'Trucks', hash: '#food-trucks' },
 ] as const;
 
@@ -75,8 +76,9 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
   // Empty tabs stay hidden; old links fall back to a populated view.
   const status: GuideView = views.find((view) => view.key === queryView)?.key ?? views.find((view) => view.hash === hash || (view.key === 'discounts' && hash === '#next-specials'))?.key ?? views.find((view) => view.key === initialView)?.key ?? views[0]?.key ?? 'upcoming';
   const truck = status === 'trucks';
-  // Top restaurants and Food trucks share the same card list.
-  const top = status === 'top' || truck;
+  const iconic = status === 'iconic';
+  // Top restaurants, Iconic dishes and Food trucks share the same card list.
+  const top = status === 'top' || iconic || truck;
   const discounts = status === 'discounts';
   const neighborhoods = summary.neighborhoods[status];
   const neighborhood = neighborhoods.includes(selectedNeighborhood) ? selectedNeighborhood : 'all';
@@ -167,18 +169,18 @@ export function RestaurantGuide({ summary, initialView, initialPages, availableR
         </header>
 
         <section id="openings" className={styles.openings} aria-label="Browse restaurants">
-          <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{truck ? 'Good food, on wheels.' : top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
+          <div className={styles.browseHeading}><div><p className={styles.eyebrow}>THE LOCAL LINEUP</p><h2>{truck ? 'Good food, on wheels.' : iconic ? 'The dishes this city is known for.' : top ? 'Great tables, already here.' : 'Something new on the menu.'}</h2></div><span>{region.name} edition</span></div>
           <div className={styles.filters}>
             <nav ref={viewNav} className={styles.statusFilters} aria-label="Restaurant view">
-              {views.map((item) => <Anchor key={item.key} href={queryTabHref(pathname, 'view', item.key)} aria-label={`${item.label} ${counts[item.key]}`} aria-current={status === item.key ? 'location' : undefined} onClick={selectQueryTab('view', item.key, () => { if ((item.key === 'top' || item.key === 'trucks') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); })}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span><span className={styles.viewCount} aria-hidden="true"><span>·</span>{counts[item.key].toString().padStart(2, '0')}</span></Anchor>)}
+              {views.map((item) => <Anchor key={item.key} href={queryTabHref(pathname, 'view', item.key)} aria-label={`${item.label} ${counts[item.key]}`} aria-current={status === item.key ? 'location' : undefined} onClick={selectQueryTab('view', item.key, () => { if ((item.key === 'top' || item.key === 'iconic' || item.key === 'trucks') !== top || (item.key === 'discounts') !== discounts) setNeighborhood('all'); })}><span className={styles.viewLabel} aria-hidden="true">{item.label}</span><span className={styles.mobileViewLabel} aria-hidden="true">{item.mobileLabel}</span><span className={styles.viewCount} aria-hidden="true"><span>·</span>{counts[item.key].toString().padStart(2, '0')}</span></Anchor>)}
             </nav>
             <div className={styles.filterFields}>
               <label className={styles.neighborhoodField}><span className="sr-only">Neighborhood</span><select aria-label="Neighborhood" value={neighborhood} onMouseDown={(event) => { event.currentTarget.dataset.mouse = ''; }} onKeyDown={(event) => { delete event.currentTarget.dataset.mouse; }} onBlur={(event) => { delete event.currentTarget.dataset.mouse; }} onChange={(event) => setNeighborhood(event.target.value)}><option value="all">All neighborhoods</option>{neighborhoods.map((name) => <option key={name} value={name}>{name}</option>)}</select><Icon name="chevron" className={styles.selectChevron} /></label>
             </div>
           </div>
           {discounts ? <AvailableRestaurantOffers key={region.slug} regionSlug={region.slug} neighborhood={neighborhood} initialPages={initialPages as Record<string, GuidePage<ScheduledRestaurantOffer>>} timeZone={timeZone} city={region.name} guide={region} /> : <>
-          {pages.ready && <p className={styles.results} aria-live="polite">{shown} {truck ? (shown === 1 ? 'food truck' : 'food trucks') : top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>}
-          {pages.ready && !shown ? <div className={styles.empty}><h3>{neighborhood !== 'all' ? (truck ? 'No food trucks match those filters.' : top ? 'No top restaurants match those filters.' : 'No openings match those filters.') : truck ? 'No food trucks listed yet.' : top ? 'No top restaurant selections yet.' : status === 'new' ? 'No confirmed openings in the last 90 days yet.' : 'No upcoming openings announced yet.'}</h3><p>{neighborhood !== 'all' ? 'Try another neighborhood.' : 'Check back for newly sourced restaurants in this region.'}</p>{neighborhood !== 'all' && <button type="button" onClick={reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection truck={truck} pageHref={(page) => guidePageHref(pathname, status, page, truck ? '#food-trucks' : '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
+          {pages.ready && <p className={styles.results} aria-live="polite">{shown} {truck ? (shown === 1 ? 'food truck' : 'food trucks') : iconic ? (shown === 1 ? 'iconic dish' : 'iconic dishes') : top ? (shown === 1 ? 'restaurant' : 'restaurants') : (shown === 1 ? 'opening' : 'openings')} to explore{neighborhood !== 'all' ? ` in ${neighborhood}` : ''}</p>}
+          {pages.ready && !shown ? <div className={styles.empty}><h3>{neighborhood !== 'all' ? (truck ? 'No food trucks match those filters.' : iconic ? 'No iconic dishes match those filters.' : top ? 'No top restaurants match those filters.' : 'No openings match those filters.') : truck ? 'No food trucks listed yet.' : iconic ? 'No iconic dishes listed yet.' : top ? 'No top restaurant selections yet.' : status === 'new' ? 'No confirmed openings in the last 90 days yet.' : 'No upcoming openings announced yet.'}</h3><p>{neighborhood !== 'all' ? 'Try another neighborhood.' : 'Check back for newly sourced restaurants in this region.'}</p>{neighborhood !== 'all' && <button type="button" onClick={reset}>Clear filters ↗</button>}</div> : top ? <TopRestaurantSection truck={truck} iconic={iconic} pageHref={(page) => guidePageHref(pathname, status, page, truck ? '#food-trucks' : iconic ? '#iconic-dishes' : '#top-restaurants')} pages={pages as GuidePages<TopRestaurant>} sortState={selectedSort} mapHref={`/map?${selectedMapParams}`} /> : status === 'upcoming'
             ? <OpeningSection pageHref={(page) => guidePageHref(pathname, 'upcoming', page, '#upcoming')} id="upcoming" title="On the horizon" subtitle="Announced openings worth keeping an eye on." pages={pages as GuidePages<Restaurant>} group="upcoming" today={today} href={href} sortState={upcomingSort} mapHref={`/map?${selectedMapParams}`} />
             : <OpeningSection pageHref={(page) => guidePageHref(pathname, 'new', page, '#new')} id="new" title="Freshly opened" subtitle="New tables, new flavors. Opened within the last 90 days." pages={pages as GuidePages<Restaurant>} group="new" today={today} href={href} sortState={recentSort} mapHref={`/map?${selectedMapParams}`} />}
           </>}
@@ -206,14 +208,14 @@ function RestaurantFacts({ details, sortState }: { details?: RestaurantDetails; 
   </>;
 }
 
-function TopRestaurantSection({ truck, pages, pageHref, sortState, mapHref }: { truck?: boolean; pages: GuidePages<TopRestaurant>; pageHref: (page: number) => string; sortState?: SortState; mapHref?: string }) {
+function TopRestaurantSection({ truck, iconic, pages, pageHref, sortState, mapHref }: { truck?: boolean; iconic?: boolean; pages: GuidePages<TopRestaurant>; pageHref: (page: number) => string; sortState?: SortState; mapHref?: string }) {
   const restaurants = pages.items;
   const details = pages.details;
-  const sectionId = truck ? 'food-trucks' : 'top-restaurants';
+  const sectionId = truck ? 'food-trucks' : iconic ? 'iconic-dishes' : 'top-restaurants';
   return <section id={sectionId} className={styles.section} aria-labelledby={`${sectionId}-title`}>
-    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${sectionId}-title`}>{truck ? 'Food trucks' : 'Top restaurants'} <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>{truck ? 'Mobile kitchens worth tracking down.' : 'Established favorites for your next meal.'}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={truck ? 'food trucks' : 'top restaurants'} mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
+    <div className={`${styles.sectionHeading} ${sortState ? styles.sortedSectionHeading : ''}`}><div><h2 id={`${sectionId}-title`}>{truck ? 'Food trucks' : iconic ? 'Iconic dishes' : 'Top restaurants'} <span>{pages.total.toString().padStart(2, '0')}</span></h2><p>{truck ? 'Mobile kitchens worth tracking down.' : iconic ? 'The restaurants behind the city’s most famous local foods.' : 'Established favorites for your next meal.'}</p></div>{sortState && mapHref ? <RestaurantControls state={sortState} label={truck ? 'food trucks' : iconic ? 'iconic dishes' : 'top restaurants'} mapHref={mapHref} /> : <span className={styles.sectionSymbol} aria-hidden="true">✳</span>}</div>
     {sortState && <RestaurantSortFeedback state={sortState} />}
-    {restaurants.length > 0 && <p className={styles.topNote}>{truck ? 'Food trucks move and keep their own schedules. Each card shows the truck’s usual base or most recent verified stop; check the truck’s own page for today’s location and hours.' : restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>}
+    {restaurants.length > 0 && <p className={styles.topNote}>{iconic ? 'Each card names the local dish the restaurant is best known for; the description says where the dish comes from and why it counts. This is a Chronopin editorial selection, not an external award.' : truck ? 'Food trucks move and keep their own schedules. Each card shows the truck’s usual base or most recent verified stop; check the truck’s own page for today’s location and hours.' : restaurants.every((restaurant) => restaurant.recognition.startsWith('MICHELIN')) ? 'A curated selection from the MICHELIN Guide, covering starred dining, Bib Gourmand value picks, and selected restaurants. Each card links to its recognition. Dollar signs are the guide’s price ranges.' : 'A Chronopin editorial selection of established restaurants. Each card links to the restaurant’s information; this selection is not an external award.'} Checked {new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${restaurants[0].checkedAt}T00:00:00Z`))}.</p>}
     <PagedCardGrid pages={pages} pageHref={pageHref}>{(restaurant) => {
       const isKidsFriendly = Boolean(restaurant.kidsFriendly || details[restaurant.pinId]?.kidsFriendly);
       return (
@@ -222,10 +224,11 @@ function TopRestaurantSection({ truck, pages, pageHref, sortState, mapHref }: { 
         <RestaurantPhotoGallery name={restaurant.name} href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })} photos={[
           restaurant.image ? { src: restaurant.image, alt: restaurant.name, credit: restaurant.imageCredit } : undefined,
           ...details[restaurant.pinId]?.photos ?? [],
-        ]} badge={<span className={`${styles.cardBadge} ${styles.openBadge}`}>{restaurant.recognition}</span>} />
+        ]} badge={<span className={`${styles.cardBadge} ${styles.openBadge}`}>{iconic ? 'ICONIC' : restaurant.recognition}</span>} />
         <div className={styles.cardBody}>
           <p className={styles.cardMeta}>{restaurant.neighborhood}<span aria-hidden="true">·</span>{restaurant.cuisine}{restaurant.priceRange && <><span aria-hidden="true">·</span><span aria-label={`Guide price range ${restaurant.priceRange.length} of 4`}>{restaurant.priceRange}</span></>}{isKidsFriendly && <><span aria-hidden="true">·</span><span className={styles.kidsBadge}>Kids friendly</span></>}</p>
           <h3><Link href={pinPath({ id: restaurant.pinId, title: restaurant.pinTitle })}>{restaurant.name}</Link></h3>
+          {iconic && restaurant.iconicDish && <p className={styles.iconicDish}><span>Known for</span> {restaurant.iconicDish}</p>}
           <RestaurantFacts details={details[restaurant.pinId]} sortState={sortState} />
           <p className={styles.cardDescription}>{restaurant.description}</p>
           <RestaurantCardMenus pinId={restaurant.pinId} menus={details[restaurant.pinId]?.menus} restaurant={restaurant.name} preferDrinks={sortState?.sort === 'drink-price'} />

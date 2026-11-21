@@ -2,7 +2,7 @@ import { restaurantCardPhotos, restaurantProfilePhotos } from '@/lib/restaurantP
 import { restaurantPinPhotos } from './restaurantPhotos';
 import * as db from '@/server/db';
 import { listSpecialVenues } from '@/server/model/restaurantSpecialVenue';
-import { restaurantMenuFor, restaurantSourceKey } from '@/lib/restaurantMenus';
+import { restaurantDishImages, restaurantMenuFor, restaurantSourceKey } from '@/lib/restaurantMenus';
 import { restaurantDetailsFor } from '@/lib/restaurantDetails';
 import { listRestaurantContent } from '@/server/model/restaurantContent';
 import { restaurantRating, type RestaurantDetails } from '@/lib/restaurantSort';
@@ -46,9 +46,16 @@ export async function restaurantGuideDetails(restaurants: Restaurant[], tops: To
       result[source.id] = { ...result[source.id], kidsFriendly };
     }
     const profile = venues.find((v) => restaurantSourceKey(v.profile.pinSourceUrl) === restaurantSourceKey(source.source ?? ''))?.profile;
-    result[source.id] = { ...result[source.id], photos: restaurantCardPhotos([
-      ...photos[source.id] ?? [], ...restaurantProfilePhotos(record?.profile.menu), ...restaurantProfilePhotos(profile),
-    ]) };
+    // An iconic-dish card shows the restaurant's own photos (the pin's media, cover first) and the iconic
+    // dish's photos last; every other dish photo stays on its menu item.
+    const iconicImages = tileProfile?.iconicDish
+      ? (record?.profile.menu?.menus ?? []).flatMap((menu) => menu.items.filter((item) => item.iconic).flatMap((item) => restaurantDishImages(item).map((image) => ({ ...image, alt: image.caption, caption: image.caption }))))
+      : undefined;
+    result[source.id] = { ...result[source.id], photos: iconicImages
+      ? restaurantCardPhotos([...photos[source.id] ?? [], ...iconicImages].filter((photo) => photo.src !== tileProfile?.image))
+      : restaurantCardPhotos([
+        ...photos[source.id] ?? [], ...restaurantProfilePhotos(record?.profile.menu), ...restaurantProfilePhotos(profile),
+      ]) };
     // Match native pin precedence without discarding later dishes or menus.
     const mergedMenus = new Map((record?.profile.menu?.menus ?? []).map((menu) => [menu.label, menu]));
     for (const menu of profile?.menus ?? []) mergedMenus.set(menu.label, menu);
