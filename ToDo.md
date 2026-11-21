@@ -18,6 +18,44 @@ Round 67 follow-up 10: caption audit of all 19,146 prod photos, nothing wrong (c
 - [ ] **Small content-table deltas:** `product-blurb` (`17` due / `69` complete), `restaurant-content` (`11` due / `1960` complete), `transit-horoscope` (`1` due / `3` complete).
 - [ ] **Pin/panel/pro-tip delta & final audit:** re-run `python3 .agents/skills/prod-translations/scripts/sync_translations.py --list-ids` (previous check cancelled before finishing), translate any newly due pins/panels/pro-tips, and run `check_translations.py`, `audit_and_clean_content.py`, and `GET /api/admin/content-translations`.
 
+## Restaurant landing-page tabs: Food trucks and Iconic dishes — other cities (added November 20, 2026)
+
+Both tabs exist in code and on production (deployed November 20) but only **San Diego** has content: **Food trucks 5** (Kiko's, Shawarma Guys, Taco Picasso, Mariscos Mi Gusto Es, Zoe's Place) and **Iconic dishes 3** (Rubio's original, Hodad's, Point Loma Seafoods). The other **101 guide cities** show neither tab because empty tabs stay hidden. Skill sections: "Food trucks tab" and "Iconic dishes tab" in `.agents/skills/restaurant-guide-research/SKILL.md`; photo method in "Menu-photo playbook".
+
+**Iconic dishes: next cities (research one city per round; 5 to 10 restaurants each, then push)**
+- [x] **Los Angeles (done November 20, 2026 — local + production, 7 iconic restaurants -> `Top restaurants 10`, `Iconic dishes 07`):**
+  Philippe the Original (French dip, `Beef Dip`; local `20978`/`1980`, prod `21124`/`1980`; 95/95 priced, 71 dish photos, 2 reviews, 5 PinMedia),
+  Cole's French Dip (French dip, `Original French Dip`; local `20979`/`1981`, prod `21126`/`1982`; 9 items / 7 priced from Nov 18 reopening LAist report via `coles.la`, 2 photos, 2 reviews, 3 PinMedia — *trap: `colesfrenchdip.shop` fails TLS*),
+  Langer's Delicatessen-Restaurant (`#19 Pastrami Sandwich`; local `20980`/`1982`, prod `21127`/`1983`; 53/53 priced, 2 photos, 1 review, 3 PinMedia),
+  Pink's Hot Dogs (`Chili dog`; local `20981`/`1983`, prod `21128`/`1984`; 97/97 priced, 14 photos, 1 review, 4 PinMedia),
+  Original Tommy's (`Double chili cheeseburger`; local `20982`/`1984`, prod `21129`/`1985`; 39/39 priced, 2 photos, 1 review, 3 PinMedia),
+  The Apple Pan (`Hickoryburger`; local `20983`/`1985`, prod `21130`/`1986`; 22/22 priced, 6 photos, 1 review, 4 PinMedia),
+  Roscoe's House of Chicken and Waffles, Hollywood (`Chicken and waffles`, `1) Scoe’s`; local `20984`/`1986`, prod `21131`/`1987`; 88 items, 6 photos, 1 review, 3 PinMedia).
+  *Open LA gaps:* Cole's full post-Nov 18 2026 menu pricing beyond the 9 LAist-verified items; Roscoe's board prices (unpublished on `roscoeschickenandwaffles.com/menu/`). Contested French dip credit is kept neutral (never claimed as uncontested inventor on Philippe's or Cole's). Translations left to the translation agent.
+- [ ] **Chicago** (deep-dish at Lou Malnati's / Pequod's / Gino's East, Italian beef at Al's / Portillo's, Chicago dog at Superdawg).
+- [ ] **New York** (pizza slice at Joe's, pastrami at Katz's, bagel at Russ & Daughters, cheesecake at Junior's).
+- [ ] **Philadelphia, Boston, Seattle, San Francisco, Honolulu, Houston, Austin, Nashville, Miami, Las Vegas, Phoenix** (one signature dish each), then Canada, Japan and China cities (each city's guide-level targets still apply).
+- [ ] Per entry: exact-branch address + geocode, branch opening date (year-only = Jan 1 placeholder, `estimated`), `iconicDish`, `iconic: true` menu item, 1 to 2 iconic-dish photos last in media, venue photos first, menu photos and prices from the operator site / ordering site / Yelp caption scan, verbatim reviews only. **Never claim inventor status for contested dishes** (California burrito, carne asada fries, deep-dish, cheesesteak). Push to production only after the owner's go-ahead for the batch; pilot one restaurant first.
+- [ ] **San Diego follow-ups:** Lolita's (carne asada fries; San Diego-city branch date unverified, original is in Chula Vista), Roberto's / Santana's (California burrito; origin disputed, no verified branch date), Phil's BBQ (ribs). Point Loma Seafoods still has 6 items without a photo (cold shrimp sandwich, cold combo, smoked fish cocktail, oyster cocktail, small appetites, fountain drink); Hodad's 16 items without one (small sizes/halves, sodas, coffee); Classic steak taco at Rubio's.
+
+**Food trucks: next cities**
+- [x] **Los Angeles (done November 20, 2026 — local + production, 5 trucks -> `Food trucks 05`):**
+  Mariscos Jalisco (3040 E Olympic Blvd; local `20985`/`1987`, prod `21125`/`1981`; 9 items, 2 photos, 2 reviews, 3 PinMedia; `mariscosjalisco.net` Wix error -> linked Time Out LA + `@mariscosjalisco`),
+  Leo's Tacos Truck (1515 S La Brea Ave; local `20986`/`1988`, prod `21132`/`1988`; 32 items, 2 photos, 2 reviews, 2 PinMedia),
+  El Chato Taco Truck (5300 W Olympic Blvd; local `20987`/`1989`, prod `21133`/`1989`; 18 items, 1 photo, 2 reviews, 2 PinMedia; used `elchatola.com`, skipped unofficial `elchatotacotruck.com`),
+  Tacos y Birria La Unica (2840 E Olympic Blvd; local `20988`/`1990`, prod `21134`/`1990`; 16 items, 2 photos, 1 review, 3 PinMedia),
+  El Flamin' Taco, Echo Park (2028 W Sunset Blvd; local `20989`/`1991`, prod `21135`/`1991`; 44/44 priced from `elflamintaco.com/menu/`, 1 LA Weekly review; `tile.image: null` and 0 item photos because `elflamintaco.com`/`laweekly.com` images sit behind Cloudflare HTML).
+  *Open LA truck gaps:* unpublished board prices on Mariscos Jalisco, Leo's, El Chato, and La Unica; El Flamin' Taco truck/dish photos (needs Chrome session when owner wants them). Translations left to the translation agent.
+- [ ] **San Diego remainder:** held Devilicious, The San Diego Taco Truck, Taco Love, Balboa Park Food Truck Fridays, Curbside Bites (reasons in `.scrape/food-trucks-2026-11-20/NOTES.md`); recheck Kiko's Mission Valley address (5494 Mission Center Rd vs the Hazard Center Dr corner).
+- [ ] **Remaining US guide cities with strong food-truck scenes (Austin, Houston, Phoenix, Las Vegas, Honolulu, Miami, Orlando, Seattle, San Francisco, San Jose)**; Japan/China only where trucks are a documented local format. Same rules: truck's own base address (never a city-centre point), earliest documented operation as `estimated` start when no opening date is published, no delivery-app prices, no aggregator-quoted specials; the tab stays hidden until at least one verified truck exists.
+- [ ] Menu prices for trucks come from the operator's own ordering page when it exposes them; record "price not published" otherwise.
+
+**Both tabs: technical and content follow-ups**
+- [ ] Add the tab labels ("Iconic dishes", "Food trucks", "Iconic", "Trucks", the "Known for" line and the empty-state strings) to every `messages/*.ts` locale; they are English-only strings in `RestaurantGuide.tsx` today (owner rule: edit all locales in the same change).
+- [ ] Decide whether Iconic dishes stay in Top restaurants (current: yes, so Top counts include them: San Diego Top 9 = 6 + 3) or move out like trucks.
+- [ ] Sitemap: confirm `/sitemap-restaurants.xml` lists `?view=iconic` and `?view=trucks` pages only when populated (`guideCounts` returns both).
+- [ ] Translations of the new tile text / menus are left to the translation agent (`restaurant-content` rows).
+
 ## All-cities menu photo and review inventory — updated November 20, 2026
 
 [Full inventory, research queue and production audit](docs/restaurant-menu-inventory-2026-11-12.md) (one section per round, rounds 26-74 with evidence paths and traps).

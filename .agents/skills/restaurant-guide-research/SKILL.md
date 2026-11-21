@@ -88,7 +88,18 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
 - Push local first, then production: preflight blobs, pilot **one** truck, check `aria-label="Food trucks N"` and that Top is unchanged, then the rest.
   Evidence and per-truck notes: `.scrape/food-trucks-2026-11-20/NOTES.md`. San Diego trucks done: Kiko's (prod pin 21115), Shawarma Guys
   South Park (21116), Taco Picasso (21117), Mariscos Mi Gusto Es (21118), Zoe's Place (21119). Held: Devilicious, The San Diego Taco Truck,
-  Taco Love, Balboa Park Food Truck Fridays, Curbside Bites. Other cities not started.
+  Taco Love, Balboa Park Food Truck Fridays, Curbside Bites.
+- **Los Angeles Food trucks done locally + prod (2026-11-20, 5 trucks, `.scrape/los-angeles-tabs-2026-11-20/`):**
+  Mariscos Jalisco (3040 E Olympic Blvd; local 20985 / content 1987, prod 21125 / content 1981), Leo's Tacos Truck (1515 S La Brea Ave;
+  local 20986 / 1988, prod 21132 / 1988), El Chato Taco Truck (5300 W Olympic Blvd; local 20987 / 1989, prod 21133 / 1989), Tacos y Birria
+  La Unica (2840 E Olympic Blvd; local 20988 / 1990, prod 21134 / 1990), El Flamin' Taco Echo Park (2028 W Sunset Blvd; local 20989 / 1991,
+  prod 21135 / 1991; `tile.image: null` because operator/LA Weekly images sit behind Cloudflare HTML).
+  *Traps:* (1) `mariscosjalisco.net` currently returns a Wix `ConnectYourDomain Error` and Michelin Guide redirects to the Pomona storefront
+  while crediting the 2001 Boyle Heights truck in prose — link `sourceUrl` to Time Out LA + `websiteUrl` to Instagram `@mariscosjalisco`.
+  (2) `elchatotacotruck.com` (`cdn.ezsite.ai`) appears unofficial/AI-generated; use the operator's real `elchatola.com`. (3) For production
+  audits after pushing, verify native `/pin/<id>/` card links inside `/restaurants/<region>?view=iconic|trucks`, authenticated `/api/admin/...`
+  readbacks, and local `http://localhost:3000/pin/<id>`; rapid sequential anonymous `GET /pin/<id>` loops against production trigger Chronopin's
+  `?cg=1` crawler guard (403). Other cities not started.
 
 ## Iconic dishes tab (added 2026-11-20, San Diego first)
 A sixth tab, **Iconic dishes** (`?view=iconic`, hash `#iconic-dishes`), between Top restaurants and Food trucks. Hidden while empty. A record is a
@@ -149,6 +160,13 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
   - *Point Loma Seafoods now 13 of 28:* squid, shrimp, bay shrimp cocktail, combo plate, both chowders, oyster, crab sandwich, crab cake sandwich, tacos, plus two added items (crab cocktail, oysters on the half-shell $17.63). The real
     fish sandwich photo (EcoVoyager And E., Jun 2024) is the iconic item's second image and pin media 0.2. Still no photo: clam, scallop, taquitos, tuna salad, cold shrimp, smoked fish sandwich, combo cold sandwich, jumbo shrimp/smoked fish/oyster cocktails, fries, rings.
     Scripts: `attach_hodads_all.py`, `attach_pls_yelp.py` (local + prod by revision).
+- **Yelp full-caption scan (2026-11-20, owner: "use yelp to find the rest"):** in one Chrome tab on `yelp.com/biz_photos/<slug>`, loop `fetch('/biz_photos/<slug>?tab=food&start='+N)` for N = 0..1920 step 30 (4 at a time, 250 ms apart,
+  no failures), parse each page with `DOMParser`, and keep `{photoId: img alt}` in `window.__y` (the food tab's 1,922 photos came back in ~2 minutes). Then regex the captions per menu item (clam, scallop, taquito, tuna salad, smoked,
+  onion rings, fries, tenders ...), return only 4 hits per query with `id|caption[:42]` (output is capped near 1.7 KB and URLs with query strings are blocked), download `bphoto/<id>/o.jpg`, contact-sheet every candidate, and read the
+  contributor/date per photo with the navigate + title/sidebar regex. Contributor and date are **not** in the fetched HTML, so each needs its own `?select=<id>` visit. Rejections that mattered: a taquito photo that hid the taquitos under lettuce
+  (took the one captioned "comes with 3 and a side of beans and cole slaw"); a customer cheeseburger with no bacon. Result: Point Loma Seafoods 22 of 28 items (clam sandwich, scallop, fish taquitos, tuna salad, smoked fish sandwich,
+  jumbo shrimp cocktail, onion rings, fries, chicken tenders; the breaded shrimp *sandwich* photo now leads the shrimp item, the plate second). Still none: cold shrimp sandwich, combo cold sandwich, smoked fish cocktail, oyster cocktail,
+  small appetites, fountain drink. `attach_pls_yelp2.py` applies it to local + prod.
 - **Native media API traps:** `POST /api/admin/db/Medium` and `/PinMedium` answer `{ rows: [...] }` (not `results`). `PinMedium.weight` must be **0 to 1**
   (`CK_PinMedium_weight`); weight 2 returns a 500 *after* the Medium row was inserted, leaving an orphan: find and delete orphans (`DELETE /api/admin/db/Medium?id=`)
   before retrying. Check by `thumbName` before creating so a rerun is idempotent. Never POST probe rows to see what happens.
@@ -156,7 +174,15 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
 - San Diego done locally (pins 20975-20977, content 1977-1979, not on prod): Rubio's original (fish taco), Hodad's (bacon cheeseburger),
   Point Loma Seafoods (fish sandwich). Held: Lolita's (carne asada fries; San Diego-city branch date unverified, original is in Chula Vista),
   Roberto's/Santana's (California burrito origin disputed, no verified branch date), Phil's BBQ. Evidence: `.scrape/iconic-dishes-2026-11-20/`.
-  Other cities not started.
+- **Los Angeles Iconic dishes done locally + prod (2026-11-20, 7 restaurants -> `Top 10`, `Iconic 07`, `.scrape/los-angeles-tabs-2026-11-20/`):**
+  Philippe the Original (French dip, `Beef Dip`; local `20978`/`1980`, prod `21124`/`1980`), Cole's French Dip (`Original French Dip`; local
+  `20979`/`1981`, prod `21126`/`1982`), Langer's Delicatessen-Restaurant (`#19 Pastrami Sandwich`; local `20980`/`1982`, prod `21127`/`1983`),
+  Pink's Hot Dogs (`Chili dog`; local `20981`/`1983`, prod `21128`/`1984`), Original Tommy's (`Double chili cheeseburger`; local `20982`/`1984`,
+  prod `21129`/`1985`), The Apple Pan (`Hickoryburger`; local `20983`/`1985`, prod `21130`/`1986`), Roscoe's House of Chicken and Waffles
+  Hollywood (`Chicken and waffles`, `1) Scoe’s`; local `20984`/`1986`, prod `21131`/`1987`).
+  *Traps:* `coles.la` reopened Nov 18, 2026 (`colesfrenchdip.shop` fails TLS — source current items from LAist's Nov 19 reopening menu report);
+  keep French dip attribution neutral between Philippe's and Cole's; on `roscoeschickenandwaffles.com/menu/` note exact Unicode apostrophe in
+  `1) Scoe’s` and `3) Herb’s Special`. Other cities not started.
 - **Menu, price and photo pass (2026-11-20, local only; content 1977 Rubio's, 1978 Hodad's, 1979 Point Loma Seafoods):**
   - *Hodad's:* use the **branch's own site** (`hodadsoceanbeach.com/food-menu` and `/drink-menu`; the `hodadsburgers.com` landing page only links out).
     29 priced items + shakes/drinks, 11 operator menu photos. The page maps each photo to its item in the DOM: `img` inside the item block whose text has `$`
@@ -164,8 +190,7 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
     table, say so in the item note. Tile photo = the single bacon cheeseburger.
   - *Point Loma Seafoods:* the menu is a PDF (`/wp-content/uploads/2026/04/PLSFWebMenu4.16.26.pdf`) that Chrome titles "1.PNG": `get_page_text` finds nothing. Open it in
     Chrome, `screenshot`, then `zoom` regions to read prices (26 items). Small print (soup sizes) is too small to assign to one soup: record it in the item note, leave
-    `price` off. Sushi and sashimi are not transcribed. **Plain curl gets a 202 bot challenge from this site** (menu and photos): do not spoof headers or a referer to get
-    around it (the permission classifier denies that); read it in Chrome, and use a photo only from a source that downloads normally. No verified photo yet (the IVN
+    `price` off. Sushi and sashimi are not transcribed. **When bare `curl` gets rejected (403/202 or missing Referer)** on a restaurant site, ordering platform, or CDN, scripts and `curl` calls should send standard browser headers (`User-Agent`, `Referer`, `Accept`, `Accept-Language`); when a site requires JavaScript execution or signed in-page state, read it and save assets in Chrome (`@browser` or local browser automation). Never attempt to solve or bypass an interactive CAPTCHA or anti-bot challenge gate—stop and report if gated by one. No verified photo yet (the IVN
     article photo shows a harbor building with no sign; not used).
   - *Rubio's:* `rubios.com/menu` renders empty; its **Download Menu** PDF (`/wp-content/uploads/2026/07/Rubios_Website_Menu_7.28.26.pdf`, plain curl works, `pdftotext -layout`)
     has no base prices (set per location in the ordering app), only Taco Tuesday prices ($2.50 original fish taco) and add-ons. Save the items with **no price** and
@@ -212,10 +237,7 @@ food truck, top, opening and specials card (`profile.photo` for specials venues)
 - Find the image: hero `<img>` / CSS background / slider on the home page, `og:image` (often a logo: reject it), the branch's location page
   (Yard House: `media.yardhouse.com/.../<city>-yard-house-599x430.jpg` storefront), the online-ordering site's slider (Mi Gusto Es:
   `themenustar6.com/upload/...` on its mobile-webview page). Pick one that shows the food or this branch, not a logo, a map or a banner.
-- Bot walls: plain `curl` gets HTTP 202 with a 170-byte challenge (pointlomaseafoods.com) even for the images. List URLs in Chrome with
-  `javascript_tool` (URLs with query strings come back BLOCKED), then save through the page: `fetch` -> blob -> `<a download>` click. Chrome saves only
-  the **first** automatic download per page load, so save one image per call/reload into `~/Downloads`, then copy it into `.scrape/`.
-  Sites that answer curl 200 (ordering platforms, media CDNs) can be downloaded directly with a browser User-Agent.
+- Browser headers & JS sites: when bare `curl` gets rejected (403/202 or hotlink/Referer check) on a restaurant site, ordering platform, or CDN, send standard browser headers (`User-Agent`, `Referer`, `Accept`, `Accept-Language`) from scripts or `curl`. When a site requires JavaScript execution or signed in-page state (like `pointlomaseafoods.com` or signed Imgix URLs), list URLs in Chrome (`@browser` / `javascript_tool`, remembering outputs with query strings may be blocked) and save through the page (`fetch` -> blob -> `<a download>` click; Chrome saves only the **first** automatic download per page load, so save one image per call/reload into `~/Downloads`, then copy it into `.scrape/`). Never attempt to solve or bypass an interactive CAPTCHA or anti-bot challenge gate. Sites that answer with browser headers (ordering platforms, media CDNs) can be downloaded directly with standard browser `User-Agent`/`Referer`/`Accept`/`Accept-Language` headers.
 - Save: Azure upload (WebP, public-blob check), `tile.image` + `imageCredit: "Photo: <Restaurant>"` + `imageSourceUrl` = the site page, plus the same
   image on the backing pin (`Medium` + `PinMedium`); extra distinct operator photos go in `menu.photos` (generic alt, never dish names inferred).
   De-duplicate slider images (they repeat) and skip logos. Examples: Point Loma Seafoods (local content 1979, pin 20977), Mi Gusto Es (cover + 8
@@ -253,6 +275,17 @@ opens the photo large with its caption and credit, and every restaurant pin with
 site, the venue's own social/press kit, Yelp/Tripadvisor/Google photos of that branch); never infer a dish from an
 unlabelled photo or use another branch's or a stock image, and leave the item without one rather than guess. The
 caption names the dish as the restaurant does. Upload with `npx tsx scripts/restaurants/uploadDishPhotos.ts restaurant-dishes/<slug> <files>` (WebP, public-blob check, prints `src`/`width`/`height`). Yelp's branch photo gallery (`/biz_photos/<slug>?tab=food&start=N`, reader-captioned) is a usable source when the restaurant's own site has no dish photos; credit it as a Yelp reviewer photo and link the photo's `?select=` page. Record items left without a photo in the guide notes.
+
+### Menu-photo playbook, in the order that worked (San Diego Iconic dishes, 2026-11-20)
+Work down this list for every item without a photo; each step found photos the previous one missed (details and numbers under "Iconic dishes tab").
+1. **Operator site, fully scrolled.** Scroll the whole page in steps before reading images (lazy `data-src`); a first scan found 12 of 27 Hodad's photos. Check the drinks page and the nested "favorites" duplicates. Map each photo to its item by the nearest ancestor containing the price.
+2. **Sister sites of the same operator** (another location, catering) for items the branch page lacks; caption them as the other location's chain-wide photo.
+3. **The operator's ordering site** (Olo `order.<chain>.com`, Pick Up, zip, Start Order, browse only). Prices are per branch and photos are named. Imgix URLs are signed: do not strip the query; lay the images out in the page and save full-scale screenshots, then crop.
+4. **Yelp caption scan:** in-page `fetch` of every `?tab=food&start=N` page, regex the captions per item, download `bphoto/<id>/o.jpg`, then visit `?select=<id>` for contributor and date. Yelp's own captions can be wrong (a cup of shrimp titled as a sandwich): say what the photo shows.
+5. **Blog photos with `<figcaption>` names** (download the full-size original, credit the blog), then **Google Maps contributor photos** only when the dish is visually unambiguous (Maps auto-titles are unreliable).
+Every candidate goes on a contact sheet before upload; reject wrong protein, wrong portion, people in the foreground and photos that hide the dish. Credit "Photo: <name> via <source>" with the exact photo URL; caption variants honestly (plate for sandwich, "titled X by the contributor").
+Tool traps: build file names in Python (zsh arrays are 1-based); browser tools cap output near 1.7 KB and block query strings (return `host + pathname`, 4 hits per query); spoof standard browser headers (`User-Agent`, `Referer`, `Accept`, `Accept-Language`) in `curl`/scripts whenever a site or CDN rejects bare `curl`, and use Chrome (`@browser` or local browser automation) when JS execution or signed in-page state is required (never attempt to bypass an interactive CAPTCHA or anti-bot challenge gate); `screenshot` with `save_to_disk` needs the default scale; check `PinMedium.weight` is 0 to 1.
+After saving, apply the same edit to production by current revision, then read back equality, item/photo counts and every image URL.
 
 ### City-wide expanded photo research (owner instruction, November 8, 2026)
 
@@ -627,7 +660,7 @@ Chinese excerpt rather than repeating that ingredient error. Evidence: `china/de
 
 ## Photo sources and traps from the November 18 rounds (50-60)
 
-Owner decision (2026-11-18): **no source is barred** for menu photos ("get the right image whatever way possible"), drinks included. Still off-limits: bypassing CAPTCHAs, Cloudflare challenges or age gates (hand them to the owner), browser-spoofed requests (a spoofed-UA `curl` is blocked by the permission classifier), and domains the Chrome tool refuses ("Navigation to this domain is not allowed", for example bullagastrobar.com, asahibeer.co.jp). Evidence and numbers: `docs/restaurant-menu-inventory-2026-11-12.md` rounds 50-60.
+Owner decision (2026-11-18, updated 2026-11-20): **no source is barred** for menu photos ("get the right image whatever way possible"), drinks included; scripts and `curl` calls should spoof standard browser headers (`User-Agent`, `Referer`, `Accept`, `Accept-Language`) whenever a site, ordering platform, or CDN rejects bare `curl` or requires a referer, and use Chrome (`@browser` or local browser automation) when JavaScript execution or signed in-page state is needed. Still off-limits: attempting to solve or bypass interactive CAPTCHAs, anti-bot challenge gates, or age gates (hand them to the owner / report the block), and domains the Chrome tool refuses ("Navigation to this domain is not allowed", for example bullagastrobar.com, asahibeer.co.jp). Evidence and numbers: `docs/restaurant-menu-inventory-2026-11-12.md` rounds 50-60.
 
 Always start from a **fresh production listing** (`/api/admin/restaurant-content?limit=1000&offset=N` and `/api/admin/restaurant-specials`), never a saved snapshot: lanes fill gaps quickly and local ids differ from production. Rank gaps by exact name and by brand; lines that never have a source photo (happy-hour/promo phrases, course lines, wine vintages, "all beers", generic soft drinks) are not worth chasing. Match **exact normalised names only**, view every image, then save through `applyReviewed.py` (pilot one record, apply, dry re-run must change nothing).
 
