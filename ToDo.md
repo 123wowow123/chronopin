@@ -1,5 +1,14 @@
 Round 67 follow-up 10: caption audit of all 19,146 prod photos, nothing wrong (composite shots disclosed in captions). Round 67 follow-up 9: Australian sites gave 1 line (Flower Drum duck wonton); Saint Peter/Bennelong have no dish photos. Round 67 follow-up 8: Yelp lane on 16 more zero-photo venues (Clementine, Canon, 4 Saints, Bar Cecil, Workshop, Il Terrazzo, ...), 102 lines; Toque/Park Service/Congaree not matched. Round 67 follow-up 7: Sanrio House, Mia Bocca, Ramjiro, Hatena checked, no usable photos (see inventory doc). Round 67 follow-up 6: chain sites gave Komeda 62 lines (31 content + 31 specials), Qu'il fait bon Tamba tart 14, Oni wa Soto 3; next Mia Bocca, Share CAFE, Ramjiro, Sanrio House Cafe. Round 67 follow-up 5: Tabelog tried on Ritz Osaka/Kyoto, 1 line (Splendido Margherita pizza); only worth it for single-dish venues. Round 67 follow-up 4: Ritz-Carlton Osaka/Kyoto sites yield 1 line (Mizuki okuizome); Splendido/La Baie have no per-dish photos. Round 67 follow-up 3 (2026-11-19): Yelp photos on 8 more zero-photo venues, 94 lines (Woodwork, Sabor, Berkeley North, Ancaster Mill, Bicycle Thief, MAASS, Daniel's, Side Street Inn); Marilena/BARA/Asado Life/Richmond Station not matched by phone. Round 67 follow-up (2026-11-19): Kirin Lager bottle on 4 lines; Yelp photos on Esther's Kitchen (32 lines, pin 6967) and Heritage Fort Lauderdale (35 lines); 1,114 zero-photo venues remain, next Yelp candidates: Marilena, Sabor, Bicycle Thief, Woodwork, Berkeley North, BARA ATL. Round 67 (2026-11-19): Kirin Ichiban lineup photo on 19 lines and Coca-Cola/Zero/Diet Coke Commons photos on 33 lines, prod + local, pilots 15916 and 6443; Kirin Lager/Premium, Heineken, Calpis open. # To Do
 
+## Sales figures panel — follow-ups (added November 22, 2026)
+
+The `PinSales` panel and the 6am/6pm `productSales` job are deployed. Playbook: "Sales figures panel: backfill and refresh" in `.agents/skills/daily-news-job/SKILL.md`; helper `scripts/sales/nintendo_ir_tables.py`.
+
+- [ ] **Add 14 more PS5 quarters** from Sony results via Gematsu "PS5 shipments top X million" posts (already sourced by the research agent; skip any quarter where outlets disagree). Push to local + production by `sourceUrl`.
+- [ ] **Commit the sales work** (schema `0267`, `src/lib/sales.ts`, `pinSales` model/route/component, `productSales` job, docs, skill, helper script) without the unrelated PreparedImage and menu-component changes from other sessions.
+- [ ] **Re-run `scripts/sales/nintendo_ir_tables.py`** after each Nintendo results release (early Feb, May, Aug, Nov) and push new rows.
+- [ ] **Translations:** sales panel strings are in all 16 locales; no pin translation runs needed (left to the translation agent).
+
 ## Production translations — updated November 15, 2026
 
 **Done on production (15 non-English locales):**

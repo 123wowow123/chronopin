@@ -1,6 +1,7 @@
 // Upload dish photos (local files) to the public thumb container as WebP and verify the public blob.
 // Usage: tsx scripts/restaurants/uploadDishPhotos.ts <blob-prefix> <file>...   (requires an Azure CLI login)
 // With the prefix "auto" each file goes under restaurant-dishes/<its folder name> (one folder per venue).
+// Also uploads its 240/640/1280 WebP renditions (npm run images:prepared backfills).
 // Prints one JSON line per file: { file, src, width, height }.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -8,6 +9,7 @@ import { readFile } from 'node:fs/promises';
 import { basename, dirname } from 'node:path';
 import { BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
 import sharp from 'sharp';
+import { uploadPreparedRenditions } from '@/server/preparedImages';
 
 const [prefix, ...files] = process.argv.slice(2);
 if (!prefix || !files.length) throw new Error('Usage: uploadDishPhotos.ts <blob-prefix> <file>...');
@@ -22,5 +24,7 @@ for (const file of files) {
   const response = await fetch(blob.url);
   if (!response.ok) throw new Error(`Blob download failed (${response.status}): ${blob.url}`);
   if (createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex') !== hash) throw new Error(`Blob bytes differ: ${blob.url}`);
+  // The renditions the site serves it from (src/lib/preparedImage.ts).
+  await uploadPreparedRenditions(container, blob.name, data);
   console.log(JSON.stringify({ file, src: blob.url, width: info.width, height: info.height }));
 }

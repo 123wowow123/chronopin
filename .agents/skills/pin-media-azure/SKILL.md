@@ -48,6 +48,14 @@ site information sheet" with the PDF as `authorUrl`. Template: `scripts/construc
 ## After uploading
 Read the pin back, confirm each media URL loads, and note undownloadable images (the apply script drops them).
 
+## Restaurant and landing photos are served from prepared renditions (2026-11-22)
+Photos under `restaurant-dishes/`, `restaurant-images/`, `restaurant-galleries/` and `landing-galleries/` are shown
+from 240/640/1280 px WebP copies at `r/v1/<width>/<name>[.webp]` in the same `thumb` container, loaded straight
+from Azure (`PreparedImage`, `src/lib/preparedImage.ts`) instead of through the VM's `/_next/image` resizer. A missing
+copy falls back to the resizer, so it still shows, but costs a failed request each time. `uploadDishPhotos.ts`
+makes the copies on upload. Any other upload into those folders needs
+`npm run images:prepared -- --prod --prefix <folder>/<slug>` afterwards (only missing copies, never overwrites, reads each back).
+
 ## Near-duplicates and variety (Canon FPA-1200NZ2C shipment pin, 2026-11-02)
 - `check_image` only catches the same file at another size. Two press shots of the same machine from different
   outlets (Canon's product photo, The Register's composite, eeNews Europe, Bits&Chips) pass it but look alike to a

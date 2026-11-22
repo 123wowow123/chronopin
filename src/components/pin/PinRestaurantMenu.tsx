@@ -1,6 +1,6 @@
 import Anchor from '@/components/ui/Anchor';
 import type { ReactNode } from 'react';
-import Image from 'next/image';
+import { PreparedImage } from '@/components/ui/PreparedImage';
 import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuState, restaurantDishImages, type RestaurantMenu, type RestaurantSpecial } from '@/lib/restaurantMenus';
 import { MenuItemReviews } from './MenuItemReviews';
 import { RestaurantMenuTabs } from './RestaurantMenuTabs';
@@ -46,7 +46,7 @@ function MenuContent({ menu, pinId }: { menu: RestaurantMenu; pinId: number }) {
       {menu.pages?.length ? <div className={styles.documentPages}>
         <RestaurantMenuTabs label={`${menu.label} pages and sections`} tabs={menu.pages.map((page, index) => ({
           label: page.label || `Page ${index + 1}`,
-          content: <Image src={page.src} width={page.width} height={page.height} sizes="(max-width: 760px) 100vw, 80vw" alt={`${menu.label} — ${page.label || `page ${index + 1} of ${menu.pages!.length}`}`} className={styles.documentPage} />,
+          content: <PreparedImage src={page.src} width={page.width} height={page.height} sizes="(max-width: 760px) 100vw, 80vw" alt={`${menu.label} — ${page.label || `page ${index + 1} of ${menu.pages!.length}`}`} className={styles.documentPage} />,
         }))} />
       </div> : menu.documentUrl ? <div className={styles.documentLink}>
         <SourceLink url={menu.documentUrl}>View the full {menu.label.toLowerCase()} document</SourceLink>

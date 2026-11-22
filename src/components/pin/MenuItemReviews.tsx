@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode, type RefObject } from 'react';
 import { createPortal } from 'react-dom';
-import Image from 'next/image';
+import { PreparedImage } from '@/components/ui/PreparedImage';
 import Anchor from '@/components/ui/Anchor';
 import { useMenuItemReviewSummary } from '@/lib/client/menuItemReviewSummaries';
 import { Icon } from '@/components/ui/Icon';
@@ -36,7 +36,7 @@ export function MenuItemReviews({ pinId, item, children, gallery = [], photoOnly
   const canReview = !!pinId || !!item.reviews?.length;
   return <>
     {image ? <button type="button" className={photoOnly ? styles.foodStripButton : styles.dishThumb} onClick={() => setOpen(true)} aria-label={`Photo and reviews for ${item.name}`} aria-haspopup="dialog">
-      <Image src={image.src} alt={image.caption} width={photoOnly ? 240 : 96} height={photoOnly ? 180 : 96} sizes={photoOnly ? '120px' : '48px'} className={photoOnly ? styles.foodStripImg : styles.dishThumbImg} />
+      <PreparedImage src={image.src} alt={image.caption} width={photoOnly ? 240 : 96} height={photoOnly ? 180 : 96} sizes={photoOnly ? '120px' : '48px'} className={photoOnly ? styles.foodStripImg : styles.dishThumbImg} />
     </button> : null}
     {children ? <button type="button" className={styles.reviewText} aria-haspopup="dialog" aria-label={`View ${image ? 'photo and ' : ''}reviews for ${item.name}`} onClick={() => setOpen(true)}>{children}</button> : null}
     {!photoOnly && canReview && (!hideEmpty || count > 0) ? <button type="button" className={styles.reviewButton} data-has-reviews={count > 0} data-rated={rating != null} aria-label={label} title={label} aria-haspopup="dialog" onClick={() => setOpen(true)}>

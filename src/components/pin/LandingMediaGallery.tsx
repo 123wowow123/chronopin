@@ -1,9 +1,9 @@
 'use client';
 
 import { useRef, useState, type ReactNode } from 'react';
-import Image from 'next/image';
 import Link from '@/components/ui/Link';
 import { MediaArrow } from '@/components/ui/MediaArrow';
+import { PreparedImage } from '@/components/ui/PreparedImage';
 import { restaurantCardPhotos, type RestaurantCardPhoto } from '@/lib/restaurantPhotos';
 import styles from '@/components/restaurants/RestaurantGuide.module.css';
 import { CardImage } from './CardImage';
@@ -78,7 +78,7 @@ export function LandingMediaGallery({ name, href, photos = [], media = [], badge
       {slides.length ? slides.map((photo, position) => {
         const medium = photo.medium;
         const isClip = medium && String(medium.type) !== '1';
-        const image = medium ? <CardImage thumbName={medium.thumbName} originalUrl={String(medium.type) === '1' ? medium.originalUrl : undefined} alt={photo.alt} portrait={Boolean(medium.thumbWidth && medium.thumbHeight && medium.thumbHeight > medium.thumbWidth * 1.2)} className={styles.cardImage} /> : <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} draggable={false} />;
+        const image = medium ? <CardImage thumbName={medium.thumbName} originalUrl={String(medium.type) === '1' ? medium.originalUrl : undefined} alt={photo.alt} portrait={Boolean(medium.thumbWidth && medium.thumbHeight && medium.thumbHeight > medium.thumbWidth * 1.2)} className={styles.cardImage} /> : <PreparedImage src={photo.src} alt={photo.alt} fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw" className={styles.cardImage} draggable={false} />;
         return <div key={photo.src} className={`${styles.photoSlide} ${styles.landingSlide}`}>
           {isClip && playing === photo.src && position === index ? <div className={styles.landingPlayer}><PinMedia medium={medium} title={name} sizes="(max-width: 600px) 100vw, 33vw" /></div> : isClip ? <button type="button" className={`${styles.photoLink} ${styles.landingSlideLink}`} aria-label={`Play media ${position + 1} of ${name}`} tabIndex={position === index ? 0 : -1} onClick={() => setPlaying(photo.src)}>{image}<span className={styles.landingPlay} aria-hidden="true">▶</span></button> : <Link href={href} className={`${styles.photoLink} ${styles.landingSlideLink}`} aria-label={`View ${name}: ${photo.alt} (${position + 1} of ${slides.length})`} tabIndex={position === index ? 0 : -1} draggable={false}>{image}</Link>}
           {photo.caption && <span className={styles.slideCaption}>{photo.caption}</span>}
