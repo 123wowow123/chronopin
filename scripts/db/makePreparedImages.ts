@@ -1,7 +1,12 @@
-// Makes the WebP renditions restaurant and landing photos are served from
-// (src/lib/preparedImage.ts), straight from Azure rather than through the VM's
-// /_next/image resizer. Never overwrites or deletes: only missing renditions
-// are made, and each upload is read back from its public URL.
+// Keeps the WebP renditions restaurant and landing photos are served from
+// (src/lib/preparedImage.ts) in step with their originals, so pages load them
+// straight from Azure rather than through the VM's /_next/image resizer.
+// Only what changed is touched:
+//   - an original with a rendition missing gets that rendition made;
+//   - an original modified after its renditions were made gets them remade;
+//   - a rendition whose original was deleted is deleted;
+//   - everything else is left alone.
+// Each upload is read back from its public URL.
 //
 //   npm run images:prepared                       local Azurite
 //   npm run images:prepared -- --prod             production storage (needs `az login`)
@@ -34,39 +39,61 @@ const connection = values.prod
   : config.azureStorage.connectionString;
 const container = BlobServiceClient.fromConnectionString(connection).getContainerClient('thumb');
 
-const existing = new Set<string>();
+// Rendition name -> when it was written.
+const renditions = new Map<string, Date>();
 for (const width of PREPARED_WIDTHS) {
   for (const prefix of prefixes) {
-    for await (const blob of container.listBlobsFlat({ prefix: `r/v1/${width}/${prefix}` })) existing.add(blob.name);
+    for await (const blob of container.listBlobsFlat({ prefix: `r/v1/${width}/${prefix}` })) renditions.set(blob.name, blob.properties.lastModified);
   }
 }
-const todo: string[] = [];
+const expected = new Set<string>();
+const todo: { name: string; widths: number[]; replace: boolean }[] = [];
+let missing = 0, stale = 0;
 for (const prefix of prefixes) {
   for await (const blob of container.listBlobsFlat({ prefix })) {
-    if (isPreparableName(blob.name) && PREPARED_WIDTHS.some((width) => !existing.has(preparedName(blob.name, width)))) todo.push(blob.name);
+    if (!isPreparableName(blob.name)) continue;
+    const widths: number[] = [];
+    let replace = false;
+    for (const width of PREPARED_WIDTHS) {
+      const target = preparedName(blob.name, width);
+      expected.add(target);
+      const written = renditions.get(target);
+      if (!written) { widths.push(width); missing++; }
+      else if (written < blob.properties.lastModified) { widths.push(width); replace = true; stale++; }
+    }
+    if (widths.length) todo.push({ name: blob.name, widths, replace });
   }
 }
-console.log(`${todo.length} originals need renditions (${existing.size} renditions already present).`);
+const orphans = [...renditions.keys()].filter((name) => !expected.has(name));
+console.log(`${renditions.size} renditions present: ${missing} missing, ${stale} older than their original, ${orphans.length} whose original is gone.`);
+console.log(`${todo.length} originals to prepare; ${expected.size - missing - stale} renditions up to date and left alone.`);
 const work = todo.slice(0, limit);
+const removals = orphans.slice(0, limit);
 if (values['dry-run']) {
-  for (const name of work.slice(0, 20)) console.log(`Would prepare ${name}`);
+  for (const item of work.slice(0, 20)) console.log(`Would ${item.replace ? 'remake' : 'make'} ${item.widths.join('/')} for ${item.name}`);
+  for (const name of removals.slice(0, 20)) console.log(`Would delete ${name}`);
   process.exit(0);
 }
 
-let made = 0, done = 0;
+let made = 0, deleted = 0, done = 0;
 const failures: string[] = [];
-async function prepare(name: string) {
-  const original = await container.getBlobClient(name).downloadToBuffer();
-  made += await uploadPreparedRenditions(container, name, original, existing);
+async function pool<T>(items: T[], run: (item: T) => Promise<void>, label: (item: T) => string) {
+  const queue = [...items];
+  await Promise.all(Array.from({ length: concurrency }, async () => {
+    for (let item = queue.shift(); item !== undefined; item = queue.shift()) {
+      try { await run(item); } catch (err) { failures.push(`${label(item)}: ${(err as Error).message}`); }
+      if (++done % 250 === 0) console.log(`${done}/${work.length + removals.length} done, ${made} made, ${deleted} deleted`);
+    }
+  }));
 }
-const queue = [...work];
-await Promise.all(Array.from({ length: concurrency }, async () => {
-  for (let name = queue.shift(); name; name = queue.shift()) {
-    try { await prepare(name); } catch (err) { failures.push(`${name}: ${(err as Error).message}`); }
-    if (++done % 250 === 0) console.log(`${done}/${work.length} originals, ${made} renditions made`);
-  }
-}));
-console.log(`${made} renditions made and verified for ${done - failures.length}/${work.length} originals.`);
+await pool(work, async (item) => {
+  const original = await container.getBlobClient(item.name).downloadToBuffer();
+  made += await uploadPreparedRenditions(container, item.name, original, { widths: item.widths, replace: item.replace });
+}, (item) => item.name);
+await pool(removals, async (name) => {
+  if ((await container.getBlockBlobClient(name).deleteIfExists()).succeeded) deleted++;
+}, (name) => name);
+console.log(`${made} renditions made and verified, ${deleted} orphaned renditions deleted.`);
 if (failures.length) {
   console.log(`${failures.length} failed:`);
   for (const failure of failures.slice(0, 50)) console.log(`  ${failure}`);

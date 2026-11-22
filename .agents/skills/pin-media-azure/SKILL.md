@@ -54,7 +54,9 @@ from 240/640/1280 px WebP copies at `r/v1/<width>/<name>[.webp]` in the same `th
 from Azure (`PreparedImage`, `src/lib/preparedImage.ts`) instead of through the VM's `/_next/image` resizer. A missing
 copy falls back to the resizer, so it still shows, but costs a failed request each time. `uploadDishPhotos.ts`
 makes the copies on upload. Any other upload into those folders needs
-`npm run images:prepared -- --prod --prefix <folder>/<slug>` afterwards (only missing copies, never overwrites, reads each back).
+`npm run images:prepared -- --prod --prefix <folder>/<slug>` afterwards. It only touches what changed: makes missing
+copies, remakes copies older than their original (the original was replaced), deletes copies whose original was
+deleted, leaves the rest alone, and reads each upload back. Run it with `--dry-run` first to see the counts.
 
 ## Near-duplicates and variety (Canon FPA-1200NZ2C shipment pin, 2026-11-02)
 - `check_image` only catches the same file at another size. Two press shots of the same machine from different
