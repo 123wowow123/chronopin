@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function TagsPage() {
   return (
-    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-7xl px-1.5 pt-6 pb-20 sm:px-6">
       <Suspense fallback={<div className="h-[70vh] animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
         <Tags />
       </Suspense>

@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ContactPage() {
   const t = await getT();
   return (
-    <main className="mx-auto max-w-3xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-3xl px-1.5 pt-6 pb-20 sm:px-6">
       <h1 className="mb-3 text-3xl font-semibold tracking-tight">{t('legal.contactTitle')}</h1>
       <p className="mb-8 text-lg text-muted">{t('legal.contactLead')}</p>
       <dl className="mb-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 text-base">

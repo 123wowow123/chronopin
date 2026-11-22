@@ -53,7 +53,7 @@ export function TopicView({
   const latest = page.past[0];
 
   return (
-    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-7xl px-1.5 pt-6 pb-20 sm:px-6">
       <JsonLd data={topicJsonLd({ name: label, path, description, locale: t.locale, hub, company, pins: page.upcoming })} />
 
       <nav aria-label="Breadcrumb" className="mb-4 text-xs text-subtle">

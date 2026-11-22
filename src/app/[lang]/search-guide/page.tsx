@@ -28,7 +28,7 @@ function Example({ q }: { q: string }) {
 export default async function SearchGuidePage() {
   const t = await getT();
   return (
-    <main className="mx-auto max-w-3xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-3xl px-1.5 pt-6 pb-20 sm:px-6">
       <h1 className="mb-2 text-3xl font-semibold tracking-tight">{t('legal.searchTitle')}</h1>
       {t.locale === DEFAULT_LOCALE ? null : <p className="mb-2 text-sm text-subtle">{t('legal.englishOnly')}</p>}
       <div lang="en" dir="ltr" className="text-base leading-relaxed">

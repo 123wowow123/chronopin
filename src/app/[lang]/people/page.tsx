@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function PeoplePage() {
   return (
-    <main className="w-full px-4 pt-6 pb-20 sm:px-6 lg:px-8">
+    <main className="w-full px-1.5 pt-6 pb-20 sm:px-6 lg:px-8">
       <Suspense fallback={<div className="h-[70vh] animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
         <People />
       </Suspense>

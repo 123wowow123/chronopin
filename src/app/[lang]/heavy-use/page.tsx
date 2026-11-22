@@ -29,7 +29,7 @@ export default async function HeavyUse({ searchParams }: { searchParams: Promise
     text: t(`heavy.perk${n}Text` as MessageKey),
   }));
   return (
-    <main className="mx-auto max-w-5xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-5xl px-1.5 pt-6 pb-20 sm:px-6">
       <section className="relative mb-12 overflow-hidden rounded-2xl border border-line bg-raised px-6 py-12 text-center sm:px-12 sm:py-16">
         <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-accent/15 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-28 -left-20 size-72 rounded-full bg-accent/10 blur-3xl" />

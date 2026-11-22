@@ -124,7 +124,7 @@ export default async function PredictionsPage() {
   }
 
   return (
-    <main className="mx-auto max-w-4xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-4xl px-1.5 pt-6 pb-20 sm:px-6">
       <section className="mb-10 pt-6 text-center">
         <p className="mb-3 text-xs font-semibold tracking-wider text-accent uppercase">{t('predictions.eyebrow')}</p>
         <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">{t('predictions.heading')}</h1>

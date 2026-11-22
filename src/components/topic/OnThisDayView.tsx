@@ -24,7 +24,7 @@ export function OnThisDayView({ page, timeZone, video, t }: { page: OnThisDayPag
   const shown = page.years.flatMap((g) => g.pins);
 
   return (
-    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-7xl px-1.5 pt-6 pb-20 sm:px-6">
       <JsonLd
         data={topicJsonLd({ name: t('onThisDay.title', { date }), path, description: t('onThisDay.description', { date, site: siteName }), locale: t.locale, hub: { name: t('onThisDay.hub'), path: '/on-this-day' }, pins: shown })}
       />

@@ -28,7 +28,7 @@ export async function LegalPage({ titleKey, children }: { titleKey: MessageKey; 
   const t = await getT();
   const updated = new Intl.DateTimeFormat(INTL_LOCALES[t.locale], { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${LEGAL_UPDATED}T00:00:00Z`));
   return (
-    <main className="mx-auto max-w-3xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-3xl px-1.5 pt-6 pb-20 sm:px-6">
       <h1 className="mb-2 text-3xl font-semibold tracking-tight">{t(titleKey)}</h1>
       <p className="mb-8 text-sm text-subtle">
         {t('legal.updated', { date: updated })}

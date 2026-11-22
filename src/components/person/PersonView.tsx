@@ -160,7 +160,7 @@ export function PersonView({
   ].filter((n): n is { id: string; label: string } => !!n);
 
   return (
-    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-7xl px-1.5 pt-6 pb-20 sm:px-6">
       <JsonLd
         data={personJsonLd({
           name: profile.name,

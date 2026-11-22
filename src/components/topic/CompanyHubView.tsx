@@ -59,7 +59,7 @@ export function CompanyHubView({
   const about = plainText(hub.summary, 1600);
   const spotlight = page.upcoming[0] ?? page.past[0];
   return (
-    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-7xl px-1.5 pt-6 pb-20 sm:px-6">
       <JsonLd
         data={topicJsonLd({
           name: page.name,

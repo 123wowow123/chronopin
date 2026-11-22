@@ -30,7 +30,7 @@ const MORE: MessageKey[] = ['about.more.threads', 'about.more.delays', 'about.mo
 export default async function AboutPage() {
   const t = await getT();
   return (
-    <main className="mx-auto max-w-3xl px-4 pt-6 pb-20 sm:px-6">
+    <main className="mx-auto max-w-3xl px-1.5 pt-6 pb-20 sm:px-6">
       <h1 className="mb-3 text-3xl font-semibold tracking-tight">{t('about.title')}</h1>
       <p className="mb-10 text-lg text-muted">{t('about.lead', { site: siteName })}</p>
       <Section heading={t('about.findHeading')} items={FIND.map((key) => t(key))} />
