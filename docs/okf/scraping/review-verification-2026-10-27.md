@@ -570,3 +570,11 @@ source checks**, **98 verified-undated entries**, **zero dated reviews awaiting
 sentiment**. No new excerpt was added. Scheduled verification was not retried;
 the prior driver/cooldown failure remains unresolved. No deployment or restart
 occurred.
+
+## 2026-11-21 critic-review lanes
+Six lanes added 157 pins / 417 critic reviews (Gaming 25/68, Movie 36/104, TV 31/78, Music 19/58, Computing 26/66,
+Fashion 20/46). Catalogs: `scripts/products/*-critic-2026-11-21.json`. The Computing replay also wrote to production
+because `JOBS_PROD_BASE` was set; `npm run reviews:critic:prod` then synced all 837 matched rows (6 pins with no
+sourceUrl skipped: 6426, 18964, 20644, 20645, 20647, 20648). Workflow and the prod-write trap are in
+`.agents/skills/pin-enrichment-rubrics/SKILL.md`. Remaining: Movie/TV beyond the sample, famous chart singles,
+Retail and Software.

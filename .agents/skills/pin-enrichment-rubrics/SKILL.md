@@ -174,3 +174,22 @@ FPA-1200NZ2C, prod pins 20710-20712). Pattern for any maker's tool/product line:
 - Pins from `create_pin` landed on prod only here (local returned 404): `refresh_admin_login.sh prod`, PUT performance /
   critic-reviews / competitors with the admin token, then `POST /api/admin/pins/expire`. Reference `confidence` is 0-100.
 - `perf.json` entries for these pins are not yet added.
+
+## Critic-review lanes for unrubric'd categories (2026-11-21)
+Games, films, TV seasons, albums, hardware and fashion products have no rubric table; their dated critic quotes live in
+`PinCriticReview` (0215, `PUT /api/pins/:id/critic-reviews`, 2-8 reviews). Method used for Gaming, Movie, TV, Music,
+Computing and Fashion (157 pins, 417 reviews):
+- One lane per category. Pick only a reviewable work (a game, film, season, album/single, hardware model, collection),
+  never award shows, earnings, tours, chart-ranking or box-office pins. Match the exact version/variant/season.
+- Per pin 2-6 reviews from pages actually opened; each quote a verbatim substring of the page text, title the page's
+  own `<title>`, `publishedDate` the original day or null (null for update/syndication dates), sentiment per passage.
+- Write a catalog `scripts/products/<lane>-critic-<date>.json` (shape of `movie-critic-round14-2026-10-27.json`) and
+  apply it with `npx tsx scripts/products/replayResearchedReviews.ts --file <catalog>`.
+- **Trap: that script also writes to production** whenever `JOBS_PROD_BASE` is set (it is in `.env.local`). To keep a
+  run local, blank it: `JOBS_PROD_BASE= JOBS_PROD_SESSION_SECRET= npx tsx ...`. Run it unblanked only when production
+  is meant to get the rows.
+- Push everything else with `npm run reviews:critic:prod` (dry run first with `-- --dry`); it matches pins by
+  sourceUrl, merges by review URL, keeps hand rows, and skips pins with no sourceUrl.
+- Parallel lanes share the scratchpad: give each lane uniquely named scratch files.
+- Blocked fetches (Slant, Time, RogerEbert.com, AnandTech, Tom's Hardware via WebFetch) mean thinner pins: use other
+  outlets or Chrome, and record the gap rather than padding.
