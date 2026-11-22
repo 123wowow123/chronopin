@@ -1,0 +1,665 @@
+[
+  {
+    "key": "lyon",
+    "pin": {
+      "title": "MEININGER Hotel Lyon Centre Berthelot Opens",
+      "productName": "MEININGER Hotel Lyon Centre Berthelot",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+      "description": "A budget hybrid hotel in Lyon’s 7th arrondissement, with private family rooms, a shared guest kitchen and a game zone.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "7 Rue Professeur Zimmermann, 69007 Lyon, France",
+      "latitude": 45.745965012231,
+      "longitude": 4.836943021434,
+      "utcStartDateTime": "2019-12-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Covivio’s 13 November 2019 owner release specifies 1 December 2019 for Lyon Centre Berthelot. MEININGER’s launch statement confirms the second French hotel opened, and Le Progrès reports the Lyon launch on 2 December. The day comes from the owner announcement, corroborated by contemporaneous launch coverage.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+          "title": "MEININGER Hotel Lyon Centre Berthelot — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+          "title": "New hotel in Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.covivio.eu/app/uploads/sites/6/2023/08/5.-Covivio-inaugurates-the-first-MEININGER-hotel-in-France.pdf",
+          "title": "Covivio inaugurates the first MEININGER hotel in France at Paris Porte de Vincennes",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.leprogres.fr/economie/2019/12/02/le-groupe-hotelier-meininger-s-implante-a-lyon",
+          "title": "Rhône. Le groupe hôtelier Meininger s’implante à Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g187265-d19102216-Reviews-MEININGER_Hotel_Lyon_Centre_Berthelot-Lyon_Rhone_Auvergne_Rhone_Alpes.html",
+          "title": "MEININGER Hotel Lyon Centre Berthelot",
+          "confidence": 100
+        },
+        {
+          "url": "https://meteofrance.s3.sbg.io.cloud.ovh.net/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf",
+          "title": "Météo-France Lyon-Bron — 1991–2020 climate normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hybrid hotel in Lyon’s 7th arrondissement, with private family rooms, a shared guest kitchen and a game zone.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/\"></cite></p><h3>Family and budget stay</h3><p>Choose a private family room for your household and confirm its exact beds, occupancy and any cot requirements. The guest kitchen offers an option for preparing simple meals, while the shared game zone and common areas provide space outside the bedroom.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/\"></cite></p><p>The hotel is south of the central peninsula in the 7th arrondissement. Allow travel time to your chosen sights and compare the private-room total with taxes, breakfast, parking and other extras. A shared dorm-bed price is a different booking product.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/\"></cite></p><h3>Opening</h3><p>Covivio announced 1 December 2019 as the Lyon Centre Berthelot opening date. Contemporaneous coverage on 2 December reported the new Lyon launch.<cite data-ref=\"https://www.covivio.eu/app/uploads/sites/6/2023/08/5.-Covivio-inaugurates-the-first-MEININGER-hotel-in-France.pdf\"></cite></p><p>The operator’s launch account records 169 rooms and 590 beds. These are launch figures. No hotel-specific construction investment is assigned from the separate Paris hotel project.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4,
+      "location": 4,
+      "cleanliness": 4,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g187265-d19102216-Reviews-MEININGER_Hotel_Lyon_Centre_Berthelot-Lyon_Rhone_Auvergne_Rhone_Alpes.html",
+      "basis": "Read 2026-11-22: opened Tripadvisor snapshot, 187 reviews, Rooms 3.8, Service 4.1, Location 4.0, Cleanliness 4.1, Value 3.9 out of 5; rounded to nearest half step. Snapshot counts are not live totals. Guest Audrina V excerpt is displayed for October 2025, with no exact day; date null. The page warns some excerpts may be automatically translated. MICHELIN Lyon directory and Forbes destination pages could not be read completely; no verified Key or Forbes award, acclaim null rather than an invented zero. AAA geographic program does not cover France.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g187265-d19102216-Reviews-MEININGER_Hotel_Lyon_Centre_Berthelot-Lyon_Rhone_Auvergne_Rhone_Alpes.html",
+          "title": "MEININGER Hotel Lyon Centre Berthelot",
+          "publishedDate": null,
+          "quote": "Perfect hotel for a family. Kitchen available and well appointed"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Opening date announced by owner",
+          "value": "1 December 2019; launch corroborated 2 December",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.covivio.eu/app/uploads/sites/6/2023/08/5.-Covivio-inaugurates-the-first-MEININGER-hotel-in-France.pdf",
+            "title": "Covivio inaugurates the first MEININGER hotel in France at Paris Porte de Vincennes",
+            "publishedDate": "2019-11-13",
+            "quote": "in Lyon with the opening on 1 December 2019"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening capacity",
+          "value": "169 rooms / 590 beds at launch",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "publishedDate": null,
+            "quote": "169 rooms with 590 beds"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Opening — owner-announced date, corroborated by launch coverage",
+          "date": "2019-12-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.covivio.eu/app/uploads/sites/6/2023/08/5.-Covivio-inaugurates-the-first-MEININGER-hotel-in-France.pdf",
+            "title": "Covivio inaugurates the first MEININGER hotel in France at Paris Porte de Vincennes",
+            "publishedDate": "2019-11-13",
+            "quote": "in Lyon with the opening on 1 December 2019"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Lyon, France",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm the whole-room bed layout, occupancy and cot availability before booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the communal kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Lyon city exploring",
+        "category": "Culture",
+        "description": "Plan routes from the 7th arrondissement to the rivers, old town and museums.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+    "priceBasis": "Rates on request. Compare the actual room, occupancy, taxes, breakfast and extras for your dates; no guaranteed low nightly price is asserted.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Late spring and early autumn for city walks",
+      "peakSeason": "School holidays and major city events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "7.1°C–28.2°C normal daytime highs",
+      "weatherSummary": "Météo-France Lyon-Bron station 69029001, 1991–2020 normals, used as regional guidance. Temperatures are normal daytime highs; rainfall is classified from monthly millimetres. Summer can be hot and rain occurs year-round.",
+      "whyGo": "Use the seasonal normals to plan outdoor sightseeing and keep indoor options for rain. Check the actual forecast and room total separately.",
+      "climateZone": "Temperate / Lyon",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 13.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 23.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 17.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 11.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "lyon-family",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/a/b/csm_MEININGER-Hotel-Lyon-Centre-Berthelot-2_1-Room-Baby-Bed-WSC7288-Web_eb8d6e5896.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/lyon-family-7ffe4172c182d7f1.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "7ffe4172c182d7f1c47559cf503ccc26eba504b4e23924ff09edd7c80e4fd1a4"
+      },
+      {
+        "key": "lyon-lobby",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/0/b/csm_MEININGER-Hotel-Lyon-Centre-Berthelot-Lobby-2-WSC7657-Web_d3e9380f74.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/lyon-lobby-5d447e72dd31f1e4.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "5d447e72dd31f1e4e7e2d6c03feea01c2c3cb1fa0bf83e44d10dc69b045b4f2d"
+      },
+      {
+        "key": "lyon-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/7/b/csm_MEININGER-Hotel-Lyon-Centre-Berthelot-Guest-Kitchen-1-WSC7217-Web_9c4abcd549.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/lyon-kitchen-ffa25c636a13a45c.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "ffa25c636a13a45c4a1444f6bc11e2112bf9758f4b44ac126aa66ceae1cd8a24"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No verified hotel-specific construction investment or matching cost benchmark; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Lyon MICHELIN and Forbes directories inaccessible; acclaim remains null.",
+      "Owner pre-opening release planned 176 rooms; actual operator launch report gives 169 rooms / 590 beds, used here. Paris €47 million investment is not the Lyon cost.",
+      "Exact opening day is owner-announced; subsequent coverage corroborates the launch but does not independently print the day."
+    ]
+  },
+  {
+    "key": "edinburgh",
+    "pin": {
+      "title": "YOTEL Edinburgh Opens",
+      "productName": "YOTEL Edinburgh",
+      "sourceUrl": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+      "description": "A compact city hotel on Queen Street in Edinburgh’s New Town, with a gym and a bar and lounge, suited to travellers comparing practical city bases.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "68–73 Queen Street, Edinburgh EH2 4NA, Scotland, United Kingdom",
+      "latitude": 55.95348001735,
+      "longitude": -3.205919965732,
+      "utcStartDateTime": "2019-08-05T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator Erskine House Opco Limited annual accounts for 2025, filed at Companies House on 6 July 2026, explicitly record operation since opening on 5 August 2019 (printed page 12 / PDF page 15). This direct operator record resolves conflicting August 1 unveiling reports.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+          "title": "YOTEL Edinburgh — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/11736604/filing-history/MzUyODgyNjM1NGFkaXF6a2N4/document?download=0&format=pdf",
+          "title": "Erskine House Opco Limited — annual accounts for 2025, filed 6 July 2026",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g186525-d16879310-Reviews-YOTEL_Edinburgh-Edinburgh_Scotland.html",
+          "title": "YOTEL Edinburgh",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.yotel.com/en/press/the-times-the-cool-hotel-guide-yotel-edinburgh",
+          "title": "THE TIMES | THE COOL HOTEL GUIDE: YOTEL EDINBURGH",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.metoffice.gov.uk/research/climate/maps-and-data/location-specific-long-term-averages/gcvwd8sjq",
+          "title": "Met Office — Edinburgh, Gogarbank 1991–2020 averages",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A compact city hotel on Queen Street in Edinburgh’s New Town, with a gym and a bar and lounge, suited to travellers comparing practical city bases.<cite data-ref=\"https://www.yotel.com/en/hotels/yotel-edinburgh\"></cite></p><h3>Compact city base</h3><p>The current room list describes the Premium Queen as 16 m² for up to two guests and the Premium Family as 22 m² for up to four. Choose the actual room type and layout for your party. The hotel also lists a gym and Revolve, its ground-floor bar and lounge.<cite data-ref=\"https://www.yotel.com/en/hotels/yotel-edinburgh\"></cite></p><p>The Times’ 2019 hosted-stay review highlighted the location and staff, while noting that some smaller rooms route guests through the bathroom area to reach the bed. Check the current room layout and privacy arrangements. Historic review prices and menus are not current offers.<cite data-ref=\"https://www.yotel.com/en/press/the-times-the-cool-hotel-guide-yotel-edinburgh\"></cite></p><p>Compare the total for your dates, room category, breakfast and extras. The budget collection does not guarantee a low price during festivals or other high-demand dates.<cite data-ref=\"https://www.yotel.com/en/hotels/yotel-edinburgh\"></cite></p><h3>Opening</h3><p>The operating company’s filed annual accounts state that YOTEL Edinburgh opened on 5 August 2019. This is the trading opening recorded by the operator.<cite data-ref=\"https://find-and-update.company-information.service.gov.uk/company/11736604/filing-history/MzUyODgyNjM1NGFkaXF6a2N4/document?download=0&format=pdf\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g186525-d16879310-Reviews-YOTEL_Edinburgh-Edinburgh_Scotland.html",
+      "basis": "Read 2026-11-22: opened Tripadvisor UK snapshot, 1,498 reviews, Rooms 4.1, Service 4.1, Location 4.6, Cleanliness 4.4, Value 4.0 out of 5; rounded to nearest half step. Snapshot counts are not live totals. Independent firsthand review is Ben Clatworthy for The Times, republished by YOTEL, dated 2019-11-16; hosted stay disclosed. Its historical prices, menu and 8/10 verdict are not current offers or guide awards. MICHELIN Edinburgh city list (30 hotels) was read with no YOTEL match; Forbes destination pages inaccessible, acclaim null pending complete coverage. AAA does not cover the United Kingdom.",
+      "reviews": [
+        {
+          "url": "https://www.yotel.com/en/press/the-times-the-cool-hotel-guide-yotel-edinburgh",
+          "title": "THE TIMES | THE COOL HOTEL GUIDE: YOTEL EDINBURGH",
+          "publishedDate": "2019-11-16",
+          "quote": "The location is great and the staff friendly."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 5 August 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://find-and-update.company-information.service.gov.uk/company/11736604/filing-history/MzUyODgyNjM1NGFkaXF6a2N4/document?download=0&format=pdf",
+            "title": "Erskine House Opco Limited — annual accounts for 2025, filed 6 July 2026",
+            "publishedDate": "2026-07-06",
+            "quote": "since its opening on 5 August 2019."
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening-era room count",
+          "value": "276 rooms reported November 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.yotel.com/en/press/the-times-the-cool-hotel-guide-yotel-edinburgh",
+            "title": "THE TIMES | THE COOL HOTEL GUIDE: YOTEL EDINBURGH",
+            "publishedDate": "2019-11-16",
+            "quote": "there are 276"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2019-08-05",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://find-and-update.company-information.service.gov.uk/company/11736604/filing-history/MzUyODgyNjM1NGFkaXF6a2N4/document?download=0&format=pdf",
+            "title": "Erskine House Opco Limited — annual accounts for 2025, filed 6 July 2026",
+            "publishedDate": "2026-07-06",
+            "quote": "since its opening on 5 August 2019."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Edinburgh, Scotland",
+    "topActivities": [
+      {
+        "title": "New Town exploring",
+        "category": "Culture",
+        "description": "Use Queen Street as a base for Edinburgh city sightseeing; check your walking route.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel gym",
+        "category": "Fitness",
+        "description": "Use the hotel workout space, subject to access rules.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Revolve bar and lounge",
+        "category": "Dining",
+        "description": "Check the hotel’s current service hours and menu separately.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+    "priceBasis": "Rates on request. Compare the actual room, occupancy, taxes, breakfast and extras for your dates; no guaranteed low nightly price is asserted.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through summer for milder city walks",
+      "peakSeason": "School holidays and major city events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "6.9°C–19.4°C normal daytime highs",
+      "weatherSummary": "Met Office Edinburgh, Gogarbank station, 1991–2020 normals, used as regional guidance for New Town. Temperatures are normal daytime highs, not mean temperatures. Rain is possible throughout the year; pack layers and a waterproof.",
+      "whyGo": "Use the seasonal normals to plan outdoor sightseeing and keep indoor options for rain. Check the actual forecast and room total separately.",
+      "climateZone": "Temperate / Edinburgh",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.51,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 9.32,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 12.01,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 14.86,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 17.46,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 19.17,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 16.87,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 13.17,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 9.54,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.02,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "edinburgh-exterior",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2025-05/EDI_N1025_medium.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+        "credit": "YOTEL Edinburgh",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/edinburgh-exterior-295c567e5c6c5b48.webp",
+        "width": 1500,
+        "height": 1001,
+        "sha256": "295c567e5c6c5b48df6e21eed578a68065010d1c0ea2949c157929ea8aab68bc"
+      },
+      {
+        "key": "edinburgh-queen",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2020-10/Premium%20Queen%201_0.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+        "credit": "YOTEL Edinburgh",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/edinburgh-queen-2368798c08862bff.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "2368798c08862bffabad0a5eaf4f1662201851f8c966ed172822b31bf8c8d37d"
+      },
+      {
+        "key": "edinburgh-gym",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2025-02/EDI_N83_medium.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+        "credit": "YOTEL Edinburgh",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/edinburgh-gym-d567d5419dada013.webp",
+        "width": 1500,
+        "height": 996,
+        "sha256": "d567d5419dada0136ed71ae40eb639d5904241f26f0de5920175231a8f4f7bce"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No verified hotel-specific construction investment or matching cost benchmark; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Forbes destination directory inaccessible; no Key, Forbes or AAA award asserted.",
+      "Opening date checked directly against scanned operator accounts, visually inspected at printed page 12 / PDF page 15; August 1 press coverage not substituted.",
+      "Historical 2019 review describes Komyuniti and old menus; current official page names Revolve. Old offers omitted."
+    ]
+  }
+]

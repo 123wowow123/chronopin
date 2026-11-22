@@ -32,3 +32,49 @@ export function formatSalesValue(
     }).format(row.value);
   return new Intl.NumberFormat(locale, options).format(row.value);
 }
+
+export type SalesSegment = { year: number; value: number };
+
+const yearOf = (iso: string | null) => (iso ? Number(iso.slice(0, 4)) : null);
+
+// Splits a life-to-date row into what was added in each calendar year, from
+// the other life-to-date rows of the same group (the latest one at or before
+// each year-end). Rows that are not cumulative, or have no date, stay one
+// segment in their own year (or null when undated).
+export function yearSegments(
+  row: PinSalesJson,
+  group: PinSalesJson[],
+): SalesSegment[] | null {
+  const endYear = yearOf(row.asOf);
+  if (endYear === null || !/life to date/i.test(row.period ?? ""))
+    return endYear === null ? null : [{ year: endYear, value: row.value }];
+  const cumulative = group
+    .filter((r) => r.asOf && /life to date/i.test(r.period ?? ""))
+    .sort((a, b) => (a.asOf as string).localeCompare(b.asOf as string));
+  const firstYear = yearOf(cumulative[0]?.asOf ?? null) ?? endYear;
+  const segments: SalesSegment[] = [];
+  let previous = 0;
+  for (let year = firstYear; year <= endYear; year++) {
+    let boundary = previous;
+    if (year === endYear) boundary = row.value;
+    else {
+      for (const r of cumulative)
+        if ((r.asOf as string) <= `${year}-12-31`) boundary = r.value;
+    }
+    const delta = Math.max(0, boundary - previous);
+    if (delta > 0) segments.push({ year, value: delta });
+    previous = Math.max(previous, boundary);
+  }
+  return segments.length ? segments : [{ year: endYear, value: row.value }];
+}
+
+// One cool colour per year (no warm hues), readable on the light and dark
+// surfaces; neighbours differ enough in hue and lightness to tell apart.
+export const SALES_YEAR_COLORS = [
+  "#3374d0", // blue
+  "#2a9d8f", // teal
+  "#6f5fd6", // indigo
+  "#1fa2c4", // cyan
+  "#3f9d5b", // green
+  "#64748b", // slate
+];

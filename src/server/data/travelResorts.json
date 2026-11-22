@@ -2265,5 +2265,272 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Lyon, France",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm the whole-room bed layout, occupancy and cot availability before booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the communal kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Lyon city exploring",
+        "category": "Culture",
+        "description": "Plan routes from the 7th arrondissement to the rivers, old town and museums.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/lyon/hotel-lyon-centre-berthelot/",
+    "priceBasis": "Rates on request. Compare the actual room, occupancy, taxes, breakfast and extras for your dates; no guaranteed low nightly price is asserted.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Late spring and early autumn for city walks",
+      "peakSeason": "School holidays and major city events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "7.1°C–28.2°C normal daytime highs",
+      "weatherSummary": "Météo-France Lyon-Bron station 69029001, 1991–2020 normals, used as regional guidance. Temperatures are normal daytime highs; rainfall is classified from monthly millimetres. Summer can be hot and rain occurs year-round.",
+      "whyGo": "Use the seasonal normals to plan outdoor sightseeing and keep indoor options for rain. Check the actual forecast and room total separately.",
+      "climateZone": "Temperate / Lyon",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 13.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 23.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 17.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 11.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Edinburgh, Scotland",
+    "topActivities": [
+      {
+        "title": "New Town exploring",
+        "category": "Culture",
+        "description": "Use Queen Street as a base for Edinburgh city sightseeing; check your walking route.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel gym",
+        "category": "Fitness",
+        "description": "Use the hotel workout space, subject to access rules.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Revolve bar and lounge",
+        "category": "Dining",
+        "description": "Check the hotel’s current service hours and menu separately.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.yotel.com/en/hotels/yotel-edinburgh",
+    "priceBasis": "Rates on request. Compare the actual room, occupancy, taxes, breakfast and extras for your dates; no guaranteed low nightly price is asserted.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through summer for milder city walks",
+      "peakSeason": "School holidays and major city events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "6.9°C–19.4°C normal daytime highs",
+      "weatherSummary": "Met Office Edinburgh, Gogarbank station, 1991–2020 normals, used as regional guidance for New Town. Temperatures are normal daytime highs, not mean temperatures. Rain is possible throughout the year; pack layers and a waterproof.",
+      "whyGo": "Use the seasonal normals to plan outdoor sightseeing and keep indoor options for rain. Check the actual forecast and room total separately.",
+      "climateZone": "Temperate / Edinburgh",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.51,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 9.32,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 12.01,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 14.86,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 17.46,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 19.17,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 16.87,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 13.17,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 9.54,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.02,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]
