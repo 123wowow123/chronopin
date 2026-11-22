@@ -1,0 +1,270 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 20760,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Amazon_Kindle_devices",
+      "basis": "Original first-generation Amazon Kindle (Nov 2007, $399), not later models. Reviews: Walt Mossberg's Wall Street Journal review as quoted by MacDailyNews (Nov 29, 2007), Marco Arment (Nov 19, 2007) and Living Digitally (Nov 21, 2007). Passage sentiment only.",
+      "reviews": [
+        {
+          "url": "https://macdailynews.com/2007/11/29/mossberg_reviews_amazons_kindle_clumsy_and_poorly_designed/",
+          "title": "Mossberg reviews Amazon’s Kindle: ‘clumsy and poorly designed’ - MacDailyNews",
+          "quote": "Amazon has nailed the electronic-book shopping experience. But it has a lot to learn about designing electronic devices.",
+          "publishedDate": "2007-11-29",
+          "sentiment": 0
+        },
+        {
+          "url": "https://marco.org/2007/11/19/amazon-kindle-ebook-reader-store-wireless-service",
+          "title": "Amazon Kindle: eBook reader, store, wireless service – Marco.org",
+          "quote": "It’s $400 and ugly as sin.",
+          "publishedDate": "2007-11-19",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://livingdigitally.net/2007/11/21/review-of-the-a/",
+          "title": "Review of the Amazon Kindle | Living Digitally",
+          "quote": "The Kindle’s navigation system is reasonably good, though it takes getting used to.",
+          "publishedDate": "2007-11-21",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6344,
+      "pinSourceUrl": "https://www.hodinkee.com/articles/moonswatch-madness-huge-lines-form-around-the-world-on-omega-x-swatch-launch-day",
+      "basis": "Omega x Swatch Speedmaster MoonSwatch line at its March 2022 launch. Hands-on reviews from aBlogtoWatch (May 17, 2022, Uranus model) and Wrist Enthusiast (Jul 20, 2022, Mission to Mars). Passages describe the MoonSwatch watches generally or the specific mission model owned; later modified dates ignored.",
+      "reviews": [
+        {
+          "url": "https://ablogtowatch.com/queueing-for-uranus-omega-swatch-moonswatch-watch-review",
+          "title": "Queueing For Uranus: Omega Swatch MoonSwatch Watch Review | aBlogtoWatch",
+          "quote": "First, it’s a fun reinterpretation of a watchmaking icon",
+          "publishedDate": "2022-05-17",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.wristenthusiast.com/latest/2022/7/20/omega-swatch-moonswatch-review",
+          "title": "Hands-On Omega X Swatch Speedmaster MoonSwatch Mission to Mars Review",
+          "quote": "Those expecting a substantial feeling watch will not get it with the MoonSwatch.",
+          "publishedDate": "2022-07-20",
+          "sentiment": -0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19791,
+      "pinSourceUrl": "https://www.luckincoffee.com/menu/raw-coconut-latte",
+      "basis": "Luckin Coffee's coconut latte (the coconut-milk-flavored latte sold as Raw Coconut Latte / Coconut Latte). Reviews are of the US-market Coconut Latte from Tasting Table (Jul 21, 2025) and Clearly Coffee (undated, so null); same signature drink, tasters outside China, so flavor claims may differ slightly from the mainland recipe.",
+      "reviews": [
+        {
+          "url": "https://www.tastingtable.com/1917998/luckin-coffee-taste-test-starbucks-rival",
+          "title": "Luckin Coffee: We Tried Starbucks' Biggest Rival As First US Location Opens In NYC",
+          "quote": "The coconut doesn't overwhelm the drink, but it makes the beverage creamy and comforting, with a mild sweetness that doesn't get sickly sweet.",
+          "publishedDate": "2025-07-21",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.clearlycoffee.com/?p=3926",
+          "title": "I Taste Tested 3 Signature Luckin Coffee Drinks, Photos (Creamy Dreamy, Big Cheesy, Coconut Latte) – Clearly Coffee",
+          "quote": "This is basically a regular latte with a mix of coconut milk flavors.",
+          "publishedDate": null,
+          "sentiment": -0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7016,
+      "pinSourceUrl": "https://www.prnewswire.com/news-releases/coming-in-hot-absolut-and-tabasco-brand-launch-unique-spicy-vodka-302671906.html",
+      "basis": "Absolut Tabasco (2026 US launch), the Tabasco-flavored vodka. Reviews from The Takeout (Jan 30, 2026), The Daily Pour (Feb 18, 2026) and Sporked (Jan 28, 2026).",
+      "reviews": [
+        {
+          "url": "https://www.thetakeout.com/2089477/absolut-new-tabasco-vodka-review-bloody-mary/",
+          "title": "Review: Absolut Tabasco Vodka Might Just Be Your New Bloody Mary Go-To",
+          "quote": "My first sip of Absolut Tabasco shocked me because of just how closely it tasted like swigging straight Tabasco hot sauce.",
+          "publishedDate": "2026-01-30",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://thedailypour.com/?p=141242",
+          "title": "Review: Absolut Tabasco Is a Spicy, Meme-Worthy Delight",
+          "quote": "Take a round of shots with friends, marvel at the memeable bottle and splash it into an extravagantly garnished Bloody Mary or two for best results.",
+          "publishedDate": "2026-02-18",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://sporked.com/article/absolut-tabasco-review/",
+          "title": "Absolut Tabasco: Our Hot & Spicy Review | Sporked",
+          "quote": "While it’s not for everyone, Absolut Tabasco is a fun, fiery addition to the Absolut line-up",
+          "publishedDate": "2026-01-28",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4482,
+      "pinSourceUrl": "https://www.anheuser-busch.com/newsroom/goose-island-2025-bourbon-county-stout-family",
+      "basis": "2025 Goose Island Bourbon County Brand Stout lineup (Black Friday 2025 release), not other years. Reviews from The Daily Pour (Nov 17, 2025) and InsideHook (Oct 30, 2025) of the full 2025 lineup.",
+      "reviews": [
+        {
+          "url": "https://thedailypour.com/?p=131895",
+          "title": "Goose Island Bourbon County 2025 Lineup, Ranked & Reviewed",
+          "quote": "Simple but incredibly tasty, Chocolate Praline is a straightforward, indulgent stout.",
+          "publishedDate": "2025-11-17",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.insidehook.com/beer/we-tasted-and-ranked-every-2025-goose-island-bourbon-county-stout-variant/amp",
+          "title": "We Tasted Every 2025 Goose Island Bourbon County Stout Variant - InsideHook",
+          "quote": "(It’s worth noting that there’s not a bad beer among them; we’re ranking from “very good” to “excellent” here.)",
+          "publishedDate": "2025-10-30",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4518,
+      "pinSourceUrl": "https://tcg.pokemon.com/en-us/expansions/pitch-black/",
+      "basis": "Pokemon TCG Mega Evolution - Pitch Black expansion (July 2026). ComicBook.com review from 55 sampled packs (published Jul 7, 2026); reviewer disclosed receiving sample product.",
+      "reviews": [
+        {
+          "url": "https://comicbook.com/gaming/review/pokemon-tcg-mega-evolution-pitch-black-review-packs-in-new-mega-ex-but-skimps-on-full-art-pulls/",
+          "title": "Review: Pokemon TCG Mega Evolution - Pitch Black Packs in New Mega ex But Skimps on Full Art Pulls",
+          "quote": "Across the board, I came away slightly more impressed with Pitch Black than I was with Chaos Rising or Perfect Order.",
+          "publishedDate": "2026-07-07",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4510,
+      "pinSourceUrl": "https://magic.wizards.com/en/products/star-trek",
+      "basis": "Magic: The Gathering | Star Trek (TRK) set, Nov 2026. PC Gamer hands-on after playing games (Nov 18, 2026) and an Inquirer.net opinion piece (no publication date found, so null) written around card reveals.",
+      "reviews": [
+        {
+          "url": "https://www.pcgamer.com/games/card-games/set-phasers-to-stun-the-contents-of-my-wallet-magics-star-trek-crossover-is-one-of-the-good-ones/",
+          "title": "Set phasers to stun (the contents of my wallet): Magic's Star Trek crossover is one of the good ones | PC Gamer",
+          "quote": "Having played some games with the cards, yeah, I think Star Trek works.",
+          "publishedDate": "2026-11-18",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://technology.inquirer.net/147902/what-we-think-of-the-star-trek-x-magic-the-gathering-collab",
+          "title": "What we think of the Star Trek x Magic: The Gathering collab",
+          "quote": "Star Trek could be an all time great set.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4535,
+      "pinSourceUrl": "https://www.disneylorcana.com/en-US/news/2026/09/hyp-press-release",
+      "basis": "Disney Lorcana Hyperia City set (Oct 2026). Zatu Games booster-pack review (Oct 9, 2026); a pre-release assessment, not retail play-testing.",
+      "reviews": [
+        {
+          "url": "https://zatu.com/en-us/blogs/reviews/disney-lorcana-hyperia-city-booster-packs-review",
+          "title": "Disney Lorcana Hyperia City Booster Packs review | Zatu Games",
+          "quote": "Overall, Hyperia City seems a very interesting set with plenty of new options and possibilities.",
+          "publishedDate": "2026-10-09",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5153,
+      "pinSourceUrl": "https://www.bandai.com/News/post/latest-news/bntca-corporate-news/gundam-assemble-series-to-launch-in-october-2026",
+      "basis": "Gundam Assemble, Bandai's Gunpla tabletop game (Oct 2026 launch). Goonhammer's Zaku II model review (no date found, null) and Everything Edinburgh's hands-on (Nov 8, 2026). Goonhammer passage is about the kit's build quality.",
+      "reviews": [
+        {
+          "url": "https://goonhammer.com/gundam-assemble-model-review-tp-007b-zaku-ii",
+          "title": "Gundam Assemble Model Review - TP-007B Zaku II - Tabletop Battles",
+          "quote": "The connection points were all super solid and didn't need glue if you really wanted to skip it.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://everythingedinburgh.com/?p=31864",
+          "title": "Gundam Assemble Hands-On: 5cm Gunpla Tabletop Brawls",
+          "quote": "the most credible attempt yet to turn the Gundam plastic-model hobby into a gateway drug for tabletop wargaming",
+          "publishedDate": "2026-11-08",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4508,
+      "pinSourceUrl": "https://magic.wizards.com/en/products/reality-fracture",
+      "basis": "Magic: The Gathering Reality Fracture set (Sept 2026). Draftsim's Limited set review (original Sept 21, 2026; later update ignored) and GameTyrant's set review (Nov 4, 2026).",
+      "reviews": [
+        {
+          "url": "https://draftsim.com/mtg-fra-limited-set-review/",
+          "title": "The Ultimate Reality Fracture Limited Set Review - Draftsim",
+          "quote": "This is one of the coolest and most unique Magic multiverse sets we’ve ever seen.",
+          "publishedDate": "2026-09-21",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://gametyrant.com/news/magic-the-gathering-reality-fracture-set-review",
+          "title": "Magic: The Gathering Reality Fracture Set Review — GameTyrant",
+          "quote": "That said, Reality Fracture has been a particularly fun set to open.",
+          "publishedDate": "2026-11-04",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4520,
+      "pinSourceUrl": "https://tcg.pokemon.com/en-us/expansions/30th-celebration/",
+      "basis": "Pokemon TCG 30th Celebration special set (Sept 2026). Bonus Action review (original Oct 1, 2026; the site also scores it 9/10 per its summary, and notes brutal pull rates in the headline).",
+      "reviews": [
+        {
+          "url": "https://bonus-action.com/review/pokemon-tcg-30th-celebration-review/",
+          "title": "Pokémon TCG: 30th Celebration Review: Stunning Variety and Artwork For Collectors, But with Brutal Pull Rates - Bonus Action",
+          "quote": "As such, opening 30th Celebration is just plain fun.",
+          "publishedDate": "2026-10-01",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4521,
+      "pinSourceUrl": "https://www.pokemon.com/us/news/the-pokemon-tcg-mega-evolution-delta-reign-expansion-arrives-november-6-2026",
+      "basis": "Pokemon TCG Mega Evolution - Delta Reign (Nov 2026). ComicBook.com review (Nov 5, 2026) is positive on the set while complaining of Mega fatigue elsewhere in the piece.",
+      "reviews": [
+        {
+          "url": "https://comicbook.com/gaming/review/pokemon-tcg-delta-reign-cards-review/",
+          "title": "Pokemon TCG: Delta Reign Is a Solid New Expansion, Even if Mega Fatigue Is Beginning to Set In (Review)",
+          "quote": "it’s safe to say that Delta Reign is one of my favorites so far.",
+          "publishedDate": "2026-11-05",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4512,
+      "pinSourceUrl": "https://en.onepiece-cardgame.com/products/boosters/op17/",
+      "basis": "One Piece Card Game OP-17 The World's Strongest Warriors (English release Aug 28, 2026). Geeky Domain first-look set review (Aug 31, 2026); a retailer-affiliated blog, noted as such.",
+      "reviews": [
+        {
+          "url": "https://geekydomain.com/blogs/guides/one-piece-op17-worlds-strongest-warriors-set-review",
+          "title": "OP-17 Set Review: The World's Strongest Warriors, Explained – Geeky Domain",
+          "quote": "legitimately strong option right out of the gate",
+          "publishedDate": "2026-08-31",
+          "sentiment": 0.5
+        }
+      ]
+    }
+  ]
+}

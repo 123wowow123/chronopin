@@ -1,0 +1,431 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 16,
+      "pinSourceUrl": "http://blogs.office.com/2014/03/27/announcing-the-office-you-love-now-on-the-ipad/",
+      "basis": "Exact Office for iPad (Word, Excel, PowerPoint) launched March 27, 2014. Independent reviews from TechCrunch, Engadget and iMore; sentiment describes each passage. Publication days from page metadata.",
+      "reviews": [
+        {
+          "url": "https://techcrunch.com/2014/03/27/office-for-ipad-review-surprisingly-worth-the-wait/",
+          "title": "Office For iPad Review: Surprisingly Worth The Wait | TechCrunch",
+          "quote": "What Microsoft has managed here is nothing short of transforming working with Office files on iPads from a necessary evil to a pleasant experience, and that’s no small feat.",
+          "publishedDate": "2014-03-27",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.engadget.com/2014-03-27-office-for-ipad-review.html",
+          "title": "Office for iPad review: three beautiful apps, each with strong competition",
+          "quote": "In fact, it's a lot better.",
+          "publishedDate": "2014-03-27",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.tomsguide.com/us/microsoft-office-ipad,review-2087.html",
+          "title": "Microsoft Office for iPad Review - Full Productivity Suite | Tom's Guide",
+          "quote": "Microsoft Office for iPad is a powerful, but pricey productivity suite that delivers a robust set of features in a touch-friendly format.",
+          "publishedDate": "2014-03-28",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.imore.com/microsoft-office-ipad-review",
+          "title": "Microsoft Office for iPad review: Yep, it's good | iMore",
+          "quote": "If you only need to create documents, spreadsheets, and presentations here and there, the cost of the subscription isn't (yet) worth it.",
+          "publishedDate": "2014-03-31",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://www.techradar.com/reviews/pc-mac/software/office-for-ipad-1237832/review",
+          "title": "Hands on: Office for iPad review | TechRadar",
+          "quote": "They don't have anything like all the features of Office 2013 for Windows or Office 2011 for Mac, but they do have a great touch interface",
+          "publishedDate": "2014-03-28",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2,
+      "pinSourceUrl": "http://www.eweek.com/enterprise-apps/microsoft-windows-8.1-gets-october-release-date/",
+      "basis": "Exact Windows 8.1 (October 17, 2013 release), not the 2014 Update or Windows 8. Reviews from The Next Web, The Register, Laptop Mag, Expert Reviews and IT Pro; sentiment describes each passage. Publication days only where page metadata shows the original publish day (TNW, The Register); others null.",
+      "reviews": [
+        {
+          "url": "https://thenextweb.com/news/microsoft-windows-8-1-review",
+          "title": "Microsoft Windows 8.1 review: A more customizable, coherent experience with a nod to desktop diehards",
+          "quote": "That’s right you can now snap two or more (up to four, depending on the size of your monitor) Windows 8 apps side by side.",
+          "publishedDate": "2013-10-17",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.theregister.com/2013/10/18/windows_8_1_review/",
+          "title": "Windows 8.1: A bit square, sure, but WAIT! It has a Start button",
+          "quote": "Nevertheless, Windows 8.1 is a step forward and a worthwhile upgrade over Windows 7 even for those sticking with desktop, keyboard and mouse.",
+          "publishedDate": "2013-10-18",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.laptopmag.com/reviews/software/windows-81",
+          "title": "Windows 8.1 Review - Better for Touch Than Desktop - LAPTOP | Laptop Mag",
+          "quote": "Windows 8.1 is a much improved operating system with enhanced multitasking, smarter search and a better selection of pre-loaded apps, but it's still better for touch than desktop use.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.expertreviews.co.uk/software/operating-systems/53188/microsoft-windows-81-review",
+          "title": "Windows 8.1 review - Start Button, Skydrive, Apps and more | Expert Reviews",
+          "quote": "Many users will be glad to have the Start button back on their desktop, but the change is more cosmetic than functional.",
+          "publishedDate": null,
+          "sentiment": 0
+        },
+        {
+          "url": "https://techradar.com/reviews/pc-mac/software/operating-systems/windows-8-1-1161745/review",
+          "title": "Windows 8.1 review | TechRadar",
+          "quote": "So did Windows 8.1 fix what was wrong with Windows 8 ? Mostly, yes, but it wouldn't be until Windows 10 that the most fundamental problems with the OS were rectified once and for all.",
+          "publishedDate": null,
+          "sentiment": 0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19,
+      "pinSourceUrl": "http://arstechnica.com/gadgets/2014/04/mouse-and-keyboard-friendly-windows-8-1-update-arrives-april-8/",
+      "basis": "Exact Windows 8.1 Update (April 8, 2014, aka Update 1), not Windows 8.1 RTM. Reviews from InfoWorld, Laptop Mag and TechRadar; sentiment describes each passage. Dates from page metadata where it is the original publish day; TechRadar hands-on date unverified so null.",
+      "reviews": [
+        {
+          "url": "https://www.infoworld.com/article/2610580/microsoft-windows/review--windows-8-1-update-offers-an-olive-branch-for-mouse-users.html",
+          "title": "Review: Windows 8.1 Update offers an olive branch for mouse users | InfoWorld",
+          "quote": "If you commonly use a mouse with your Windows 8.1 PC, Windows 8.1 Update is not very inspiring, but it’s certainly worth having.",
+          "publishedDate": null,
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://laptopmag.com/reviews/software/windows-8-1-update",
+          "title": "Windows 8.1 Update - Software Reviews - Laptop Mag | Laptop Mag",
+          "quote": "Microsoft's Windows 8.1 Update makes the company's OS more mouse-friendly and intuitive to use, but it still buries important info.",
+          "publishedDate": "2014-04-02",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.techradar.com/news/software/operating-systems/windows-8-1-update-1-what-s-in-microsoft-s-latest-windows-update-1232863",
+          "title": "Windows 8.1 Update 1: hands on with Microsoft's latest Windows update | TechRadar",
+          "quote": "although Update 1 isn't brimming with massive alterations, it's a good start at winning back those who prefer a mouse and keyboard.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4821,
+      "pinSourceUrl": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "basis": "Exact Claude 3.5 Sonnet (June 20-21, 2024 release), not the October 2024 upgraded version. Hands-on and launch reporting from Tom's Guide, Dr Leon Furze (independent education-AI blogger) and The Register; the Register passage reports vendor claims, so its sentiment is mild.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/ai/anthropic-just-dropped-claude-35-sonnet-with-better-vision-and-a-sense-of-humor",
+          "title": "Anthropic just dropped Claude 3.5 Sonnet with better vision and a sense of humor | Tom's Guide",
+          "quote": "I had a quick play with 3.5 Sonnet and it does seem more natural and with a better understanding of sarcasm.",
+          "publishedDate": "2024-06-20",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://leonfurze.com/2024/06/26/hands-on-with-claude-3-5-sonnet/",
+          "title": "Hands on with Claude 3.5 Sonnet – Dr Leon Furze",
+          "quote": "Artifacts and Projects aren’t going to revolutionise education, but for me they’ve secured Claude as my favourite LLM-based application.",
+          "publishedDate": "2024-06-26",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.theregister.com/2024/06/20/anthropic_claude_35",
+          "title": "Anthropic's Claude 3.5 arrives promising OpenAI-beating perf",
+          "quote": "Sonnet 3.5 is available in Anthropic's web and mobile apps, while developers can integrate the model into their projects using APIs, Amazon Bedrock, or Google Vertex AI.",
+          "publishedDate": "2024-06-20",
+          "sentiment": 0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4825,
+      "pinSourceUrl": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "basis": "Exact Claude 3.7 Sonnet (Feb 24, 2025), not Claude 3.5 or Claude 4. Reviews from TechRadar, Tom's Guide (two hands-on tests) and Simon Willison; sentiment describes each passage. Dates from page metadata.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/computing/artificial-intelligence/how-claudes-3-7s-new-extended-thinking-compares-to-chatgpt-o1s-reasoning",
+          "title": "How Claude’s 3.7's new ‘extended' thinking compares to ChatGPT o1's reasoning | TechRadar",
+          "quote": "That makes it great for math, coding, and logic.",
+          "publishedDate": "2025-02-26",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/claude-3-7-sonnet-is-mind-blowing-i-put-anthropics-most-advanced-model-to-the-test-with-7-prompts",
+          "title": "Claude 3.7 Sonnet is mind-blowing — I put Anthropic's most advanced model to the test with 7 prompts | Tom's Guide",
+          "quote": "Users will find Claude 3.7 Sonnet helpful in particular for its ability to strategize with a structured approach.",
+          "publishedDate": "2025-03-12",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/i-tested-chatgpt-4o-vs-claude-3-7-sonnet-with-5-tough-prompts-and-this-one-crushed-the-competition",
+          "title": "I put ChatGPT-4o vs Claude 3.7 Sonnet through a 7-round face-off — one left the other in the dust | Tom's Guide",
+          "quote": "Winner: Claude wins for tighter execution that feels more polished and in the style of Seuss.",
+          "publishedDate": "2025-04-29",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://simonwillison.net/2025/Feb/24/claude-37-sonnet-and-claude-code/",
+          "title": "Claude 3.7 Sonnet and Claude Code",
+          "quote": "As you may expect, 3.7 Sonnet is an improvement over 3.5 Sonnet - and is priced the same, at $3/million tokens for input and $15/m output.",
+          "publishedDate": "2025-02-24",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2880,
+      "pinSourceUrl": "https://blogs.windows.com/windows-insider/2026/08/27/releasing-windows-11-version-26h2-to-the-release-preview-channel/",
+      "basis": "Exact Windows 11 version 26H2 (enablement package, GA late Sept 2026), not 25H2 or 26H1. Reviews from Tom's Guide, PCWorld and Windows Central; the Windows Central feature piece is a pre-release preview, flagged by its July date. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/computing/windows-operating-systems/i-just-tested-windows-11-26h2-heres-how-to-update-now-and-why-microsoft-finally-fixed-the-two-worst-things-about-windows-11",
+          "title": "I just tested Windows 11 26H2 — here’s how to update now and why Microsoft finally fixed the two worst things about Windows 11 | Tom's Guide",
+          "quote": "Docking the taskbar to the left or right side has cleared that scroll depth for web browsing and documents.",
+          "publishedDate": "2026-09-30",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.pcworld.com/article/3251672/windows-11-26h2-isnt-exciting-but-it-does-fix-one-real-problem.html",
+          "title": "Windows 11 26H2 isn't exciting, but it does fix one real problem | PCWorld",
+          "quote": "The update is a bit of a mixed bag as far as how well Microsoft has delivered on its promises",
+          "publishedDate": "2026-10-05",
+          "sentiment": 0
+        },
+        {
+          "url": "https://windowscentral.com/microsoft/windows-11/7-features-im-most-excited-to-use-on-windows-11-version-26h2",
+          "title": "Windows 11 version 26H2 is packed with surprising upgrades, and these 7 features might change how you use your PC | Windows Central",
+          "quote": "The Windows 11 2026 Update isn't about a major redesign. It's about giving users more control, better customization, and smarter everyday features.",
+          "publishedDate": "2026-07-05",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20901,
+      "pinSourceUrl": "https://antigravity.google/blog/introducing-google-antigravity",
+      "basis": "Exact original Google Antigravity IDE public preview (Nov 18, 2025, with Gemini 3), not Antigravity 2.0, the CLI or SDK. Reviews and hands-on reports from SlashGear, DevClass, Simon Willison and VentureBeat; the VentureBeat passage is launch reporting, so its sentiment is mild. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.slashgear.com/2037355/google-antigravity-ai-coding-tool/",
+          "title": "Google's Newest Tool Is A Big Leap Forward For AI Coding",
+          "quote": "I downloaded Antigravity and found it intuitive to use.",
+          "publishedDate": "2025-11-30",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://devclass.com/2025/11/19/googles-antigravity-arrives-agentic-ai-development-but-frustrating-for-early-adopters/",
+          "title": "We take a look at Google's Antigravity: Agentic AI development but some frustrations for early adopters",
+          "quote": "early adopters have expressed frustrations with credits soon running out, and our quick tests soon ran aground because of “model provider overload.”",
+          "publishedDate": "2025-11-19",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://simonwillison.net/b/9156",
+          "title": "Google Antigravity",
+          "quote": "At first glance Antigravity is yet another VS Code fork Cursor clone",
+          "publishedDate": "2025-11-18",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://venturebeat.com/ai/google-antigravity-introduces-agent-first-architecture-for-asynchronous",
+          "title": "Google Antigravity introduces agent-first architecture for asynchronous, verifiable coding workflows | VentureBeat",
+          "quote": "Antigravity is an agentic coding platform that aims to evolve the IDE toward an agent-first future with browser control capabilities, asynchronous interaction patterns, and an agent-first product design.",
+          "publishedDate": "2025-11-18",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 290,
+      "pinSourceUrl": "https://www.macrumors.com/2026/09/11/ios-27-delayed-features/",
+      "basis": "Exact iOS 27 release (September 14, 2026), not betas or iOS 26. Final-release reviews from MacStories, Six Colors, BGR and Beebom (BGR and iCulture-style reviews were written on the release candidate, as their pages state); sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.macstories.net/stories/ios-and-ipados-27-review/",
+          "title": "iOS and iPadOS 27: The MacStories Review - MacStories",
+          "quote": "there’s no denying that iOS 27 is the snappiest (insert meme here), most stable version of iOS I’ve ever tested",
+          "publishedDate": "2026-09-14",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://sixcolors.com/post/2026/09/ios-27-review/",
+          "title": "iOS 27 Review: Little things mean a lot – Six Colors",
+          "quote": "In general, the iOS 27 incarnation of Liquid Glass is far easier on the eyes, dialing down the transparency in favor of legibility.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.bgr.com/2256430/ios-27-review/",
+          "title": "iOS 27 Review: AI Finally Takes Over The iPhone",
+          "quote": "Visually, iOS 27 looks similar to iOS 26, but it's far more polished.",
+          "publishedDate": "2026-09-11",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://gadgets.beebom.com/stories/ios-27-review",
+          "title": "iOS 27 Review – Pros, Cons and Our Verdict | Beebom Gadgets",
+          "quote": "Siri finally gets promoted to Siri AI, a more intelligent version that can understand the context of the conversation, answer open-ended questions and be a little expressive while doing so.",
+          "publishedDate": "2026-09-14",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6619,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/DeepSeek",
+      "basis": "Exact DeepSeek-R1 reasoning model (released Jan 20, 2025), not V3 or the later R1-0528. Hands-on and analysis from Android Authority, The Register and VentureBeat; the Register passage conditions its view on DeepSeek benchmark claims. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.androidauthority.com/deepseek-vs-chatgpt-3520224/",
+          "title": "I tried DeepSeek, the cheap open-source ChatGPT alternative, and I'm blown away",
+          "quote": "My takeaway? OpenAI needs to be seriously worried.",
+          "publishedDate": "2025-01-26",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.theregister.com/2025/01/26/deepseek_r1_ai_cot",
+          "title": "A deep dive into DeepSeek's newest chain of though model",
+          "quote": "Assuming DeepSeek's benchmarks can be believed, R1 manages to achieve performance on par with OpenAI's o1 and even exceeds its performance in the MATH-500 test.",
+          "publishedDate": "2025-01-26",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://venturebeat.com/ai/open-source-revolution-how-deepseek-r1-challenges-openais-o1-with-superior-processing-cost-efficiency",
+          "title": "Open-source revolution: How DeepSeek-R1 challenges OpenAI's o1 with superior processing, cost efficiency | VentureBeat",
+          "quote": "DeepSeek-R1 outperforms OpenAI o1 in speed and cost, providing enterprises with a practical, efficient AI model for high-volume, real-time tasks.",
+          "publishedDate": "2025-02-04",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6528,
+      "pinSourceUrl": "https://bgr.com/2016/10/26/microsoft-event-october-2016-announcements-recap-roundup",
+      "basis": "The pin covers the October 2016 announcement of the Windows 10 Creators Update (version 1703, released April 2017); critic reviews are of that exact release, not the Anniversary Update and not the Mixed Reality headsets. PCWorld, Thurrott, InfoWorld and Digital Trends; sentiment describes each passage; dates from page metadata.",
+      "reviews": [
+        {
+          "url": "https://www.pcworld.com/article/3181985/windows-10-creators-update-review-gaming-inking-and-edge-win-mixed-reality-loses.html",
+          "title": "Windows 10 Creators Update review | PCWorld",
+          "quote": "Microsoft’s Windows 10 Creators Update offers the most significant upgrade to Windows 10 since its launch, splashing a bright, cheery coat of fun over Windows 10’s productivity foundation.",
+          "publishedDate": "2017-03-29",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.thurrott.com/windows/windows-10/109077/windows-10-creators-update-review",
+          "title": "Windows 10 Creators Update Review - Thurrott.com",
+          "quote": "The Creators Update offers very little in the way of new functionality for creators. Indeed, it’s a fairly minor upgrade overall.",
+          "publishedDate": "2017-04-10",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://www.infoworld.com/article/3185403/review-windows-10-creators-update-is-worth-waiting-for.html",
+          "title": "Review: Windows 10 Creators Update is worth waiting for | InfoWorld",
+          "quote": "In fact, wait as long as Microsoft will let you, since this is mostly a minor upgrade",
+          "publishedDate": "2017-03-29",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://digitaltrends.com/computing/windows-10-creators-update-review",
+          "title": "Windows 10 Creators Update review - Digital Trends",
+          "quote": "The latest Windows 10 update hones Edge, but doesn’t deliver for creators",
+          "publishedDate": "2017-03-29",
+          "sentiment": -0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20905,
+      "pinSourceUrl": "https://antigravity.google/blog/introducing-google-antigravity-2",
+      "basis": "Exact Google Antigravity 2.0 standalone desktop agent app (Google I/O, May 2026), not the original Antigravity IDE. Hands-on reviews from Thomas Wiegold (independent developer blog, May 27, 2026) and InfoWorld (Oct 19, 2026); sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://thomas-wiegold.com/blog/google-antigravity-review-i-tested-gemini-3-5-flash/",
+          "title": "Google Antigravity 2.0 Review: I Tested Gemini 3.5 Flash | Thomas Wiegold Blog",
+          "quote": "The parallel multi-agent model is the one real differentiator, and on the right kind of work, fanning tasks out is genuinely faster than grinding through them one at a time.",
+          "publishedDate": "2026-05-27",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.infoworld.com/article/4234567/hands-on-with-antigravity-2-no-ide-just-agent-chat.html",
+          "title": "Hands-on with Antigravity 2: No IDE, just agent chat | InfoWorld",
+          "quote": "Google’s IDE-less Antigravity app pares software development down to agentic interactions, but supports only a few commercial models.",
+          "publishedDate": "2026-10-19",
+          "sentiment": 0
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5943,
+      "pinSourceUrl": "https://news.adobe.com/news/news-details/2023/adobe-unveils-firefly-a-family-of-new-creative-generative-ai",
+      "basis": "Exact Adobe Firefly beta (March 2023: text-to-image and text effects), not later Firefly models or Photoshop Generative Fill. Reviews from CineD, PetaPixel and TechRadar; the TechRadar piece is a launch explainer with an evaluative remark. Sentiment describes each passage; dates from page metadata.",
+      "reviews": [
+        {
+          "url": "https://www.cined.com/adobe-firefly-beta-review-pros-and-cons-of-their-new-generative-ai/",
+          "title": "Adobe Firefly (Beta) Review – Pros and Cons of Their New Generative AI | CineD",
+          "quote": "the interface of Adobe Firefly will blow you away.",
+          "publishedDate": "2023-05-08",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://petapixel.com/2023/03/27/adobe-firefly-is-way-behind-is-the-commitment-to-ethics-to-blame/",
+          "title": "Adobe Firefly is Way Behind: Is the Commitment to Ethics to Blame? | PetaPixel",
+          "quote": "Firefly had no issue generating “prisoners playing sports,” although it’s fair to say the results are bad.",
+          "publishedDate": "2023-03-27",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://www.techradar.com/news/adobe-firefly",
+          "title": "What is Adobe Firefly? The new AI-powered Midjourney rival explained. | TechRadar",
+          "quote": "could ultimately be as influential as the original Photoshop was in 1990.",
+          "publishedDate": "2023-03-21",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2834,
+      "pinSourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "basis": "Exact Gemini 3.8 Flash (Sept 2, 2026), not 3.7 Flash or Gemini 3.8 Flash Cyber. The Register, eesel AI (independent review blog) and Lifehacker Japan (hands-on comparison with the free 3.6 Flash, in Japanese); sentiment describes each passage; dates from page metadata.",
+      "reviews": [
+        {
+          "url": "https://www.theregister.com/a/5294049",
+          "title": "With Gemini 3.8 Flash, Google reminds everyone it's still in the race",
+          "quote": "Gemini 3.8 Flash is its fourth Flash model in as many months and it has improved enough to be considered alongside the highest scoring models in terms of intelligence while also being performant and relatively affordable",
+          "publishedDate": "2026-09-02",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.eesel.ai/blog/gemini-3-8-flash-review",
+          "title": "Gemini 3.8 Flash review 2026: is it worth switching from 3.7 Flash? | eesel AI",
+          "quote": "The verdict is that 3.8 Flash is a real upgrade for exactly one shape of work, and a downgrade in disguise for another.",
+          "publishedDate": "2026-09-08",
+          "sentiment": 0
+        },
+        {
+          "url": "https://www.lifehacker.jp/article/2609gemini-38-flash-mostly-lives-up-to-hype/",
+          "title": "「Gemini 3.8 Flash」を早速レビュー、無料の「3.6 Flash」との差は？ | ライフハッカー・ジャパン",
+          "quote": "精度と速度 ：両モデル間で大きな差は見られず、どちらも受信トレイの内容を正確に要約し、対応が必要なメールを的確に抽出しました。",
+          "publishedDate": "2026-09-07",
+          "sentiment": 0.2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-11-21",
+  "runId": 72,
+  "openedSources": [
+    {
+      "pinId": 567,
+      "url": "https://www.lemonde.fr/en/politics/article/2026/09/18/storms-brew-over-the-eiffel-tower_6757685_5.html",
+      "quote": "A lack of foresight on the part of the directors and a stubborn disregard for institutions and their warnings.",
+      "title": "Storms brew over the Eiffel Tower",
+      "sentiment": -0.8,
+      "publishedDate": "2026-09-18",
+      "scope": "September2026 lawyer criticism of lead-safety management in the20th repainting campaign."
+    },
+    {
+      "pinId": 3390,
+      "url": "https://metro.legistar.com/LegislationDetail.aspx?FullText=1&GUID=5DDBDD13-C1C7-4C46-8F3A-4F86B61A226B&ID=8322415&Options=&Search=",
+      "quote": "As of September 2026, the Project’s remaining unallocated contingency is $6,737,389. This is insufficient to support the Project through the end of construction.",
+      "title": "Metro File 2026-0591 — Westside Purple Line Extension Section 2",
+      "sentiment": -0.4,
+      "publishedDate": "2026-11-19",
+      "scope": "Metro November19 staff contingency assessment, not a passenger review."
+    },
+    {
+      "pinId": 4940,
+      "url": "https://milamdc.com/updates/openai-milam-county-community-compact/",
+      "quote": "SB Energy and OpenAI will cover the full cost of the electricity Milam County Data Center uses",
+      "title": "Milam County Data Center Community Compact",
+      "sentiment": 0.4,
+      "publishedDate": "2026-11-09",
+      "scope": "Campus-level operator energy-cost commitment applies to phase1; pledge not independently confirmed performance."
+    },
+    {
+      "pinId": 6666,
+      "url": "https://news.ifeng.com/c/8xzfJQ0QAAV",
+      "quote": "我们不只是建一座现代化交通枢纽，更要打造‘闽南人文之窗’。",
+      "title": "迈入通航冲刺关键阶段 厦门翔安国际机场配套设施逐步完善",
+      "sentiment": 0.5,
+      "publishedDate": "2026-11-12",
+      "scope": "Original Chinese construction-team design statement in Xiamen Daily/厦门网 reportage reprinted byifeng; not translated and not proof of opening."
+    },
+    {
+      "pinId": 234,
+      "url": "https://www.techradar.com/gaming/gta-6-review",
+      "title": "I’ve played GTA 6 for almost 100 hours, and it’s the most complete single-player game I’ve ever experienced — the tale of Jason and Lucia is an action-packed cinematic masterpiece that’s oozing with class, chaos, spontaneity, and emotion",
+      "publishedDate": "2026-11-18",
+      "quote": "Grand Theft Auto 6 is an absolute triumph",
+      "sentiment": 0.95,
+      "scope": "Three firsthand PS5 launch reviews: Rob Dwiar/TechRadar, Ian Dean/Creative Bloq, Matt Miller/Game Informer. Exact quotes string-matched on opened originals. TechRadar/CreativeBloq publishedNov18; GameInformer current original byline/time saysNov19 (webcache showsNov18). SharedFutureownership of firsttwo disclosed; differentreviewers. No score inferred from reviewaggregate."
+    },
+    {
+      "pinId": 234,
+      "url": "https://www.creativebloq.com/reviews/gta-6-review-holy-sh-t-its-good",
+      "title": "GTA 6 review: Holy sh*t it’s good",
+      "publishedDate": "2026-11-18",
+      "quote": "Funny, sad, euphoric… GTA 6 is the most entertaining and emotionally engaging open world I’ve played.",
+      "sentiment": 0.95,
+      "scope": "Three firsthand PS5 launch reviews: Rob Dwiar/TechRadar, Ian Dean/Creative Bloq, Matt Miller/Game Informer. Exact quotes string-matched on opened originals. TechRadar/CreativeBloq publishedNov18; GameInformer current original byline/time saysNov19 (webcache showsNov18). SharedFutureownership of firsttwo disclosed; differentreviewers. No score inferred from reviewaggregate."
+    },
+    {
+      "pinId": 234,
+      "url": "https://gameinformer.com/review/grand-theft-auto-vi/outrageous-fortune",
+      "title": "Outrageous Fortune",
+      "publishedDate": "2026-11-19",
+      "quote": "Grand Theft Auto VI is a generational game that stands toe-to-toe with many of the great crime stories and satires across other media.",
+      "sentiment": 0.95,
+      "scope": "Three firsthand PS5 launch reviews: Rob Dwiar/TechRadar, Ian Dean/Creative Bloq, Matt Miller/Game Informer. Exact quotes string-matched on opened originals. TechRadar/CreativeBloq publishedNov18; GameInformer current original byline/time saysNov19 (webcache showsNov18). SharedFutureownership of firsttwo disclosed; differentreviewers. No score inferred from reviewaggregate."
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "pinId": 3026,
+      "reason": "Operator news stories September17 andJuly9 are2025; current tour listing has event date, no explicit publication day. What’sOn403; Jadwal result opens unrelatedmatch. No new dated independent reaction confirmed."
+    }
+  ]
+}

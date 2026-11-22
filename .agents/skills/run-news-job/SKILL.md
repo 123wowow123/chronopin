@@ -120,6 +120,12 @@ When the tools are not registered as a connector, the existing stdio MCP protoco
 - Large tool responses can be cut at 40,000 characters inside the JSON string (`industry_forecast_status`), making it invalid JSON. Preserve the response and read the bounded affected rows through the authenticated native admin API; do not treat truncation as an empty queue.
 - Cross-host review panels normally have different `checkedAt` timestamps. Verify all substantive fields and reviews, excluding only that check timestamp; do not report equal content as a failed save merely because the two writes happened milliseconds apart.
 
+## Codex recovery notes from run 72
+
+- A caller timeout does not cancel a combined MCP task. `pin_ads_check` can finish its PinAd sweep and then spend several more minutes on ProductAd checks and movie searches. Retain the JSON-RPC process and eventual response; after a timeout, inspect native checked rows before retrying. Never interpret a missing response as an empty queue or start a second publisher. Match ad replays by verified pin source URL plus ASIN, product ASIN, or holiday plus ASIN; preserve newer production checks and verify each write.
+- If a session is interrupted, inspect the existing JobRun and lane artifacts before preparing another run. Resume the same run while it is still open, preserve completed page readings/readbacks, and report the interruption honestly. A restarted MCP process loses the event-page evidence cache: research/save pairs must use the new retained process.
+- Browser inventory can fail with “browser access host is unavailable” while the owner's native Chrome app remains accessible through CUA. Native Chrome is a valid route for the explicitly required logged-in research; use documented UI actions only. Reddit was readable through that surface in run 72. A policy refusal or site permission block still means stop that step, not route around it. Record an actual native-app failure such as `noWindowsAvailable` as a concrete blocker.
+
 ## Always go all lanes (owner, 2026-11-08)
 
 When asked to "run the 6pm/6am job", work **every** lane to completion in the same session without stopping to

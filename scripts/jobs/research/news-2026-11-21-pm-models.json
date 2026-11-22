@@ -1,0 +1,62 @@
+{
+  "runId": 72,
+  "checkedAt": "2026-11-21",
+  "training": [
+    {
+      "pinId": 15212,
+      "parametersBillions": 30,
+      "trainingComputeFlop": null,
+      "trainingHardware": "NVIDIA GB200 NVL72",
+      "hardwarePinId": null,
+      "trainingDays": null,
+      "datasetSize": 15000000000000.0,
+      "datasetUnit": "tokens",
+      "basis": "published",
+      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-1",
+      "note": "IBM technical post: flagship 30B within the 3B/8B/30B family; all three share the training pipeline, with approximately 15 trillion pretraining tokens. GB200 NVL72 cluster at CoreWeave. Compute and duration are unpublished."
+    },
+    {
+      "pinId": 15125,
+      "parametersBillions": 1020,
+      "trainingComputeFlop": null,
+      "trainingHardware": null,
+      "hardwarePinId": null,
+      "trainingDays": null,
+      "datasetSize": 27000000000000.0,
+      "datasetUnit": "tokens",
+      "basis": "published",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+      "note": "Flagship Pro: the maker states 1.02T total and 42B active parameters, and 27T pretraining tokens using FP8 mixed precision. Compute, hardware and duration are unpublished."
+    },
+    {
+      "pinId": 15156,
+      "parametersBillions": 398,
+      "trainingComputeFlop": null,
+      "trainingHardware": "NVIDIA B300",
+      "hardwarePinId": null,
+      "trainingDays": null,
+      "datasetSize": 17000000000000.0,
+      "datasetUnit": "tokens",
+      "basis": "published",
+      "sourceUrl": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking",
+      "note": "Maker model card for the April 1 Thinking release: approximately 398B total and 13B active parameters, 17 trillion pretraining tokens, and 2,048 NVIDIA B300 GPUs. The reopened Epoch page lists hardware as unknown; the maker identifies B300. Compute and duration are unpublished on this card."
+    }
+  ],
+  "verified": [
+    {
+      "pinId": 15212,
+      "crossHostEqual": true,
+      "inputEqual": true
+    },
+    {
+      "pinId": 15125,
+      "crossHostEqual": true,
+      "inputEqual": true
+    },
+    {
+      "pinId": 15156,
+      "crossHostEqual": true,
+      "inputEqual": true
+    }
+  ]
+}
