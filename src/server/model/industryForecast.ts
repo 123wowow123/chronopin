@@ -80,7 +80,7 @@ export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecas
   // A single-bar chart says little next to a trend line: it sorts after the
   // rest, so a panel with a card limit tucks it behind "Show more". The sort
   // is stable, so everything else keeps its id order.
-  const single = (f: IndustryForecastJson) => !f.live.length && !f.lines.length && (f.projection?.points.length ?? 0) <= 1 && !f.earlier.length;
+  const single = (f: IndustryForecastJson) => !f.live.length && !f.earlier.length && f.lines.reduce((n, l) => n + l.points.length, 0) + (f.projection?.points.length ?? 0) <= 1;
   return [...out.filter((f) => !single(f)), ...out.filter(single)];
 }
 

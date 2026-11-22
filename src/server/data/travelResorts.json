@@ -1476,5 +1476,532 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.shanghaidisneyresort.com/en/hotels/toy-story-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Shanghai, China",
+    "topActivities": [
+      {
+        "title": "Immersive themed rooms",
+        "category": "Kids",
+        "description": "Choose the booked room theme explicitly; the pictured Buzz Lightyear room is a specific category.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Character courtyards",
+        "category": "Kids",
+        "description": "Explore oversized Toy Story figures in the Woody and Buzz Lightyear courtyards.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shanghai Disneyland",
+        "category": "Adventure",
+        "description": "Use resort transport or the signed walking route; park admission is separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+    "priceBasis": "Rates on request. Premium themed-room pricing is documented in the independent review; family membership does not imply budget pricing.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; room rates and climate seasons differ",
+      "tempRange": "8°C–32°C historical average daytime highs",
+      "weatherSummary": "WMO / China Meteorological Administration Shanghai-Hongqiao 1961–1990 averages: older regional context for Pudong, not a contemporary forecast. Summer is hotter and wetter; winter is cooler.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Shanghai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 8.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 12.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 18.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 27.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 31.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 27.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 10.6,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.marriott.com/en-us/hotels/parly-citizenm-paris-gare-de-lyon/overview/",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Paris, France",
+    "topActivities": [
+      {
+        "title": "Rail-connected Paris",
+        "category": "Culture",
+        "description": "Use nearby Gare de Lyon services to explore Paris; allow transit time to major sights."
+      },
+      {
+        "title": "Shared living spaces",
+        "category": "Culture",
+        "description": "Relax in the art-filled common areas outside the compact bedroom."
+      },
+      {
+        "title": "Seine neighbourhood",
+        "category": "Culture",
+        "description": "Explore the riverside area around Gare de Lyon and the 12th arrondissement."
+      }
+    ],
+    "priceSource": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+    "priceBasis": "Rates on request. Bonjour Paris’s editorial value assessment supports relative budget positioning; its 2017 price example is not reused as a current quote.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; room rates and climate seasons differ",
+      "tempRange": "8°C–26°C normal daytime highs",
+      "weatherSummary": "Météo-France Paris-Montsouris station 75114001, 1991–2020 normals. Rain occurs in all seasons; summers are warmer and winter days are cool. These are averages rather than forecasts.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Paris",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 16.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 25.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 16.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Castelnuovo del Garda, Italy",
+    "topActivities": [
+      {
+        "title": "Adventure-themed rooms",
+        "category": "Kids",
+        "description": "Choose an Arctic, Arabian, Jungle or Wild West setting and confirm room occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Tutankhamon Restaurant",
+        "category": "Dining",
+        "description": "The restaurant continues the adventure theme in an Egyptian-temple setting; dining charges apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Gardaland days",
+        "category": "Adventure",
+        "description": "Use resort transport to the park; verify tickets and operating dates.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/",
+    "priceBasis": "Rates on request. Compare exact room theme, dates, tickets, dining and seasonal facilities; no current all-in quote verified.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring and September for outdoor visits",
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather and room rates follow different patterns",
+      "tempRange": "7°C–31°C record-derived average daytime highs",
+      "weatherSummary": "NOTAMET’s NOAA GSOD-derived Verona Villafranca 1991–2020 averages provide regional guidance for southern Lake Garda. Summer is warm; rain occurs in every season.",
+      "whyGo": "Plan outdoor time around the season and check the current forecast. Airport-derived daily extremes can differ from official calendar-day normals; check attraction calendars and date-specific rates separately.",
+      "climateZone": "Northern Italy / southern Lake Garda",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 9.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 14.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 18.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 28,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 30.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 18.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 12.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Berlin, Germany",
+    "topActivities": [
+      {
+        "title": "East Side Gallery",
+        "category": "Culture",
+        "description": "Explore the nearby open-air Berlin Wall art gallery.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole private room for your household; dorm-bed prices are a different product.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the shared guest kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+    "priceBasis": "Rates on request. Compare private family-room totals, occupancy, taxes, breakfast and extras; never treat a shared dorm-bed lead rate as the family-room price.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "May–September for outdoor city exploring",
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather and room rates follow different patterns",
+      "tempRange": "3°C–25°C record-derived average daytime highs",
+      "weatherSummary": "NOTAMET’s Berlin Brandenburg airport table uses NOAA GSOD temperature averages for 1991–2020 and WorldClim 2.1 precipitation for 1970–2000. It is a regional proxy, not a forecast.",
+      "whyGo": "Plan outdoor time around the season and check the current forecast. Airport-derived daily extremes can differ from official calendar-day normals; check attraction calendars and date-specific rates separately.",
+      "climateZone": "Temperate / Berlin region",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 4.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 25.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 13.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

@@ -137,7 +137,11 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
 // needs two points, and a dashed stub says little.
 function Bars({ forecast, large }: { forecast: IndustryForecastJson; large: boolean }) {
   const { VIEW, PAD, PLOT } = dims(large);
-  const points = forecast.projection?.points ?? [];
+  // Reported single points (one base year) stand beside the projected years.
+  const points = [
+    ...forecast.lines.flatMap((l) => l.points.map((p) => ({ ...p, projected: false }))),
+    ...(forecast.projection?.points ?? []).map((p) => ({ ...p, projected: true })),
+  ].sort((a, b) => a.x.localeCompare(b.x));
   const hi = Math.max(...points.map((p) => p.value)) * 1.15 || 1;
   const slot = PLOT.w / points.length;
   const barW = Math.min(slot * 0.6, large ? 90 : 60);
@@ -149,7 +153,7 @@ function Bars({ forecast, large }: { forecast: IndustryForecastJson; large: bool
         const cx = PAD.left + slot * (i + 0.5);
         return (
           <g key={p.x}>
-            <rect x={cx - barW / 2} y={PAD.top + PLOT.h - h} width={barW} height={h} rx="2" className="fill-accent" opacity="0.8">
+            <rect x={cx - barW / 2} y={PAD.top + PLOT.h - h} width={barW} height={h} rx="2" className="fill-accent" opacity={p.projected ? 0.55 : 0.9}>
               <title>{`${p.x}: ${formatForecastValue(forecast, p.value)}`}</title>
             </rect>
             <text x={cx} y={PAD.top + PLOT.h - h - 5} textAnchor="middle" className="fill-current text-[13px] font-semibold text-ink tabular-nums">{formatForecastValue(forecast, p.value)}</text>
@@ -164,7 +168,7 @@ function Bars({ forecast, large }: { forecast: IndustryForecastJson; large: bool
 // The chart a panel gets: bars for a short projection, lines otherwise.
 export function ForecastGraph({ forecast, large = false }: { forecast: IndustryForecastJson; large?: boolean }) {
   const projected = forecast.projection?.points ?? [];
-  const barsOnly = projected.length > 0 && projected.length <= 6 && forecast.lines.every((l) => l.points.length < 2) && forecast.earlier.length === 0;
+  const barsOnly = projected.length > 0 && projected.length + forecast.lines.length <= 6 && forecast.lines.every((l) => l.points.length < 2) && forecast.earlier.length === 0;
   return barsOnly ? <Bars forecast={forecast} large={large} /> : <Chart forecast={forecast} large={large} />;
 }
 

@@ -1,0 +1,677 @@
+[
+  {
+    "key": "garda",
+    "pin": {
+      "title": "Gardaland Adventure Hotel Inaugurated",
+      "productName": "Gardaland Adventure Hotel",
+      "sourceUrl": "https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/",
+      "description": "An adventure-themed family hotel near Lake Garda, with Arctic, Arabian, Jungle and Wild West rooms and an Egyptian-temple restaurant.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "Via Palù 1/A, 37014 Castelnuovo del Garda, Verona, Italy",
+      "latitude": 45.4421,
+      "longitude": 10.7245,
+      "utcStartDateTime": "2016-05-28T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Corriere del Veneto’s May 28, 2016 report says the hotel was inaugurated today. This represents the inauguration, distinct from soft opening and full operation from June 1.",
+      "price": 25000000,
+      "priceCurrency": "EUR",
+      "references": [
+        {
+          "url": "https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/",
+          "title": "Gardaland Adventure Hotel — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml",
+          "title": "Gardaland apre nuovo hotel tematico investimento di 25 milioni di euro",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g644289-d8778974-Reviews-Gardaland_Adventure_Hotel-Castelnuovo_del_Garda_Province_of_Verona_Veneto.html",
+          "title": "Gardaland Adventure Hotel — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel",
+          "title": "Un albergo da sogno per grandi e piccini: il Gardaland Adventure Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.notamet.com/climate/LIPX",
+          "title": "Verona Villafranca airport climate averages",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.travelquotidiano.com/mercato_e_tecnologie/gardaland-nuovo-hotel-e-nuova-attrazione-per-la-stagione-2016/",
+          "title": "Gardaland, nuovo hotel e nuova attrazione per la stagione 2016",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>An adventure-themed family hotel near Lake Garda, with Arctic, Arabian, Jungle and Wild West rooms and an Egyptian-temple restaurant.<cite data-ref=\"https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/\"></cite></p><h3>Family stay</h3><p>The hotel has 100 themed rooms across four adventure settings. Its Egyptian-temple-style Tutankhamon Restaurant extends the theme beyond the bedroom. Select the exact room theme and confirm occupancy and cot availability when booking.<cite data-ref=\"https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/\"></cite><cite data-ref=\"https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel\"></cite></p><p>The hotel is outside Gardaland Park, with resort shuttle connections. Check the current operating calendar, park tickets and seasonal Blue Lagoon water-area access; do not assume every hotel package includes park admission.<cite data-ref=\"https://www.tripadvisor.com/Hotel_Review-g644289-d8778974-Reviews-Gardaland_Adventure_Hotel-Castelnuovo_del_Garda_Province_of_Verona_Veneto.html\"></cite></p><h3>Opening and development</h3><p>The hotel was inaugurated on 28 May 2016. Contemporary trade coverage distinguishes earlier soft opening from full operation beginning on 1 June. Corriere del Veneto reported a EUR25 million investment in this hotel; that is development cost, not a nightly room rate.<cite data-ref=\"https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml\"></cite><cite data-ref=\"https://www.travelquotidiano.com/mercato_e_tecnologie/gardaland-nuovo-hotel-e-nuova-attrazione-per-la-stagione-2016/\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g644289-d8778974-Reviews-Gardaland_Adventure_Hotel-Castelnuovo_del_Garda_Province_of_Verona_Veneto.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (736 reviews). Rooms/Service/Location/Cleanliness/Value: 4.6/4/4.4/4.5/3.6 of 5, rounded to half points. Snapshots can lag live totals; the Gardaland page is an older 2025 snapshot. MICHELIN property-name searches and destination pages, and Forbes Berlin / Lake Garda directories, were checked without a verified distinction for these hotels (Castelnuovo MICHELIN lookup inaccessible). AAA geographic coverage excludes Germany and Italy. Acclaim remains unknown. Berlin’s excerpt is a firsthand dorm stay, not a review of the private family room; only month-level publication is supplied.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel",
+          "title": "Un albergo da sogno per grandi e piccini: il Gardaland Adventure Hotel",
+          "publishedDate": null,
+          "quote": "Un soggiorno lì è un vero sogno, un tuffo in mondi fantastici"
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 3.5
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Inauguration",
+          "value": "Inaugurated 2016-05-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml",
+            "title": "Gardaland apre nuovo hotel tematico investimento di 25 milioni di euro",
+            "publishedDate": "2016-05-28",
+            "quote": "ha inaugurato oggi"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest-room capacity",
+          "value": "100 themed rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml",
+            "title": "Gardaland apre nuovo hotel tematico investimento di 25 milioni di euro",
+            "publishedDate": "2016-05-28",
+            "quote": "100 camere"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported hotel development investment",
+          "value": "EUR 25,000,000; reported at inauguration",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml",
+            "title": "Gardaland apre nuovo hotel tematico investimento di 25 milioni di euro",
+            "publishedDate": "2016-05-28",
+            "quote": "un investimento di 25 milioni di euro"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Inauguration",
+          "date": "2016-05-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://corrieredelveneto.corriere.it/veneto/notizie/cronaca/2016/28-maggio-2016/gardaland-apre-nuovo-hotel-tematico-investimento-25-milioni-euro-240488380226.shtml",
+            "title": "Gardaland apre nuovo hotel tematico investimento di 25 milioni di euro",
+            "publishedDate": "2016-05-28",
+            "quote": "ha inaugurato oggi"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Castelnuovo del Garda, Italy",
+    "topActivities": [
+      {
+        "title": "Adventure-themed rooms",
+        "category": "Kids",
+        "description": "Choose an Arctic, Arabian, Jungle or Wild West setting and confirm room occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Tutankhamon Restaurant",
+        "category": "Dining",
+        "description": "The restaurant continues the adventure theme in an Egyptian-temple setting; dining charges apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Gardaland days",
+        "category": "Adventure",
+        "description": "Use resort transport to the park; verify tickets and operating dates.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.gardaland.it/en/our-hotels/our-themed-hotels/gardaland-adventure-hotel/",
+    "priceBasis": "Rates on request. Compare exact room theme, dates, tickets, dining and seasonal facilities; no current all-in quote verified.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring and September for outdoor visits",
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather and room rates follow different patterns",
+      "tempRange": "7°C–31°C record-derived average daytime highs",
+      "weatherSummary": "NOTAMET’s NOAA GSOD-derived Verona Villafranca 1991–2020 averages provide regional guidance for southern Lake Garda. Summer is warm; rain occurs in every season.",
+      "whyGo": "Plan outdoor time around the season and check the current forecast. Airport-derived daily extremes can differ from official calendar-day normals; check attraction calendars and date-specific rates separately.",
+      "climateZone": "Northern Italy / southern Lake Garda",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 9.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 14.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 18.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 28,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 30.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 18.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 12.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "garda-entrance",
+        "imageSourceUrl": "https://www.laretedellemamme.it/images/cisonostato/Gardaland_Hotel/Gardaland-Adventure-Hotel_ingresso.jpg",
+        "sourceUrl": "https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel",
+        "credit": "La rete delle mamme — Gardaland Adventure Hotel feature",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/garda-entrance-a6a8eeda22126fca.webp",
+        "width": 510,
+        "height": 340,
+        "sha256": "a6a8eeda22126fcaaa911023460d5836e88b176eb4a771591aa34066bc78b21b"
+      },
+      {
+        "key": "garda-reception",
+        "imageSourceUrl": "https://www.laretedellemamme.it/images/cisonostato/Gardaland_Hotel/Gardaland-Adventure-Hotel_ingresso-1.jpg",
+        "sourceUrl": "https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel",
+        "credit": "La rete delle mamme — Gardaland Adventure Hotel feature",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/garda-reception-2f5c84917d52de65.webp",
+        "width": 510,
+        "height": 340,
+        "sha256": "2f5c84917d52de658cfd6856f4a6bfda02b25b9247c023fe37a95b67afef11d0"
+      },
+      {
+        "key": "garda-arctic-detail",
+        "imageSourceUrl": "https://www.laretedellemamme.it/images/cisonostato/Gardaland_Hotel/Gardaland-Adventure-Hotel_Arctic-Adventure_dettaglio_7066.jpg",
+        "sourceUrl": "https://www.laretedellemamme.it/index.php/blog/qui-ci-siamo-stati/630-un-albergo-da-sogno-per-grandi-e-piccini-il-gardaland-adventure-hotel",
+        "credit": "La rete delle mamme — Gardaland Adventure Hotel feature",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/garda-arctic-detail-b2054718c80827b2.webp",
+        "width": 510,
+        "height": 340,
+        "sha256": "b2054718c80827b2bac18b17d121e285cc92e5aa43ddb2180fbec89a797563af"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly booking quote verified.",
+      "Unsupported comparative engineering scores remain null.",
+      "No current property-specific MICHELIN / Forbes distinction verified; AAA does not cover these countries.",
+      "Translations left to the translation agent.",
+      "Climate is secondary airport-derived regional guidance. GSOD daily extrema can differ from official station normals.",
+      "May 28 is inauguration; prior soft opening and June 1 full operation are distinct milestones.",
+      "The source’s historical Arctic photo shows a room-entry/detail, not a full bedroom. All three historical review photos are 510 pixels wide, kept without enlargement."
+    ]
+  },
+  {
+    "key": "berlin",
+    "pin": {
+      "title": "MEININGER Hotel Berlin East Side Gallery Opens",
+      "productName": "MEININGER Hotel Berlin East Side Gallery",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+      "description": "A budget hybrid hotel beside Berlin’s East Side Gallery, with private family rooms, a shared guest kitchen and nearby Ostbahnhof transport.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Am Postbahnhof 4, 10243 Berlin, Germany",
+      "latitude": 52.508359394273,
+      "longitude": 13.436055757774,
+      "utcStartDateTime": "2017-12-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s December 2017 release says the hotel opened on December 1.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+          "title": "MEININGER Hotel Berlin East Side Gallery — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-opened-fifth-hotel-in-berlin/",
+          "title": "Fifth MEININGER hotel in Berlin",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187323-d12819875-Reviews-MEININGER_Hotel_Berlin_East_Side_Gallery-Berlin.html",
+          "title": "MEININGER Hotel Berlin East Side Gallery — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187323-d12819875-Reviews-MEININGER_Hotel_Berlin_East_Side_Gallery-Berlin.html",
+          "title": "Friends trip",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.notamet.com/climate/EDDB",
+          "title": "Berlin Brandenburg airport climate averages",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hybrid hotel beside Berlin’s East Side Gallery, with private family rooms, a shared guest kitchen and nearby Ostbahnhof transport.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/\"></cite></p><h3>Family and budget stay</h3><p>Book a private family room for your household, rather than an individual bed in a shared dorm. The property offers rooms with twin and bunk beds, a guest kitchen, laundry facilities and common areas. Confirm the exact layout, occupancy, bathroom arrangement and linen conditions for the room selected.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/\"></cite></p><p>Ostbahnhof and the East Side Gallery provide a useful base for city exploring. This is practical hybrid-hotel accommodation: the opened guest-score snapshot is stronger for location than rooms, cleanliness or value, so compare its published scores and room details before booking.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187323-d12819875-Reviews-MEININGER_Hotel_Berlin_East_Side_Gallery-Berlin.html\"></cite></p><h3>Opening and booking</h3><p>MEININGER confirms the hotel opened on 1 December 2017 with 245 rooms and 833 beds. Those are opening figures, not a claim about the current inventory. Compare a private room’s complete stay price rather than a dorm-bed lead rate; breakfast, parking, laundry and other extras depend on your booking.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/meininger-opened-fifth-hotel-in-berlin/\"></cite><cite data-ref=\"https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187323-d12819875-Reviews-MEININGER_Hotel_Berlin_East_Side_Gallery-Berlin.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (277 reviews). Rooms/Service/Location/Cleanliness/Value: 3.1/3.3/4.3/3.2/3.2 of 5, rounded to half points. Snapshots can lag live totals; the Gardaland page is an older 2025 snapshot. MICHELIN property-name searches and destination pages, and Forbes Berlin / Lake Garda directories, were checked without a verified distinction for these hotels (Castelnuovo MICHELIN lookup inaccessible). AAA geographic coverage excludes Germany and Italy. Acclaim remains unknown. Berlin’s excerpt is a firsthand dorm stay, not a review of the private family room; only month-level publication is supplied.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187323-d12819875-Reviews-MEININGER_Hotel_Berlin_East_Side_Gallery-Berlin.html",
+          "title": "Friends trip",
+          "publishedDate": null,
+          "quote": "It has a good location, close to the train and bus station."
+        }
+      ],
+      "rooms": 3,
+      "service": 3.5,
+      "location": 4.5,
+      "cleanliness": 3,
+      "value": 3
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparative hotel-buildout benchmark or sufficiently detailed engineering evidence supports a numerical axis score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 2017-12-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-opened-fifth-hotel-in-berlin/",
+            "title": "Fifth MEININGER hotel in Berlin",
+            "publishedDate": null,
+            "quote": "on 1st of December"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest-room capacity",
+          "value": "245 rooms / 833 beds at opening in 2017",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-opened-fifth-hotel-in-berlin/",
+            "title": "Fifth MEININGER hotel in Berlin",
+            "publishedDate": null,
+            "quote": "245 rooms and 833 beds"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2017-12-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-opened-fifth-hotel-in-berlin/",
+            "title": "Fifth MEININGER hotel in Berlin",
+            "publishedDate": null,
+            "quote": "on 1st of December"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Berlin, Germany",
+    "topActivities": [
+      {
+        "title": "East Side Gallery",
+        "category": "Culture",
+        "description": "Explore the nearby open-air Berlin Wall art gallery.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole private room for your household; dorm-bed prices are a different product.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the shared guest kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+    "priceBasis": "Rates on request. Compare private family-room totals, occupancy, taxes, breakfast and extras; never treat a shared dorm-bed lead rate as the family-room price.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "May–September for outdoor city exploring",
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather and room rates follow different patterns",
+      "tempRange": "3°C–25°C record-derived average daytime highs",
+      "weatherSummary": "NOTAMET’s Berlin Brandenburg airport table uses NOAA GSOD temperature averages for 1991–2020 and WorldClim 2.1 precipitation for 1970–2000. It is a regional proxy, not a forecast.",
+      "whyGo": "Plan outdoor time around the season and check the current forecast. Airport-derived daily extremes can differ from official calendar-day normals; check attraction calendars and date-specific rates separately.",
+      "climateZone": "Temperate / Berlin region",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 4.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 25.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 13.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "berlin-family-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/a/e/csm_MEININGER-Hotel-Berlin-East-Side-Gallery-2_2-Room-Premium-3-WSC2338-Web_4b9fbfaa1e.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/berlin-family-room-1633e8741bf19e8b.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "1633e8741bf19e8b2d56ee42ab9cd9ec76f5a7d2dda6b1edbbc4923d4bc67f3a"
+      },
+      {
+        "key": "berlin-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/3/0/csm_MEININGER-Hotel-Berlin-East-Side-Gallery_Kitchen_7_web_ecdf632a42.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/berlin-kitchen-bd1326440503d945.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "bd1326440503d945a5cdadd14d68f5e350e90b5f20136ac37fb27d709f6bb22f"
+      },
+      {
+        "key": "berlin-outdoor",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/6/f/csm_MEININGER-Hotel-Berlin-East-Side-Gallery_Outside-area_2_web_0a3718deb9.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/berlin/hotel-berlin-east-side-gallery/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/berlin-outdoor-d66a37cb5e9aeff0.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "d66a37cb5e9aeff08d21ef0e910314642536ce5de9fc2d57066e16d74bbc15f4"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly booking quote verified.",
+      "Unsupported comparative engineering scores remain null.",
+      "No current property-specific MICHELIN / Forbes distinction verified; AAA does not cover these countries.",
+      "Translations left to the translation agent.",
+      "Climate is secondary airport-derived regional guidance. GSOD daily extrema can differ from official station normals.",
+      "No property-specific construction cost or matching benchmark verified; price/currency remain null.",
+      "Current company portfolio lists 243 rooms / 825 beds; the 245 / 833 opening figures are explicitly historical.",
+      "Berlin precipitation uses WorldClim 1970–2000, distinct from the 1991–2020 temperature period.",
+      "Dorm-stay review does not establish the private family-room experience; room types are explicitly separated."
+    ]
+  }
+]

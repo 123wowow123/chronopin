@@ -1,0 +1,659 @@
+[
+  {
+    "key": "toy",
+    "pin": {
+      "title": "Toy Story Hotel Shanghai Opens",
+      "productName": "Toy Story Hotel Shanghai",
+      "sourceUrl": "https://www.shanghaidisneyresort.com/en/hotels/toy-story-hotel/",
+      "description": "Toy Story character theming, oversized courtyard figures and immersive rooms create a family base for Shanghai Disneyland; room themes and prices vary.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "No. 360 Shendi West Road, Pudong New Area, Shanghai 201205, China",
+      "latitude": 31.141770682829,
+      "longitude": 121.649154816591,
+      "utcStartDateTime": "2016-06-16T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Disney’s D23 property entry explicitly dates the hotel opening to June 16, 2016.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.shanghaidisneyresort.com/en/hotels/toy-story-hotel/",
+          "title": "Toy Story Hotel Shanghai — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://d23.com/a-to-z/toy-story-hotel/",
+          "title": "Toy Story Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+          "title": "Shanghai Disneyland Toy Story Hotel Review",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g308272-d10537922-Reviews-Toy_Story_Hotel-Shanghai.html",
+          "title": "Toy Story Hotel Shanghai — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/city.html?cityId=240",
+          "title": "WMO Shanghai / Hongqiao 1961–1990 climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://disneyparksblog.com/shdl/toy-story-hotel-shanghai-disney-resort/",
+          "title": "Staying at Toy Story Hotel at Shanghai Disney Resort",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>Toy Story character theming, oversized courtyard figures and immersive rooms create a family base for Shanghai Disneyland; room themes and prices vary.<cite data-ref=\"https://disneyparksblog.com/shdl/toy-story-hotel-shanghai-disney-resort/\"></cite></p><h3>Family stay</h3><p>The 800-room hotel opened on 16 June 2016. Woody and Buzz Lightyear inspire its wings and courtyards, while room choices include more deeply themed options. Choose the exact room theme and confirm occupancy when booking; a Buzz Lightyear room photo does not represent every room category.<cite data-ref=\"https://d23.com/a-to-z/toy-story-hotel/\"></cite><cite data-ref=\"https://disneyparksblog.com/shdl/toy-story-hotel-shanghai-disney-resort/\"></cite></p><p>Resort transport connects the hotel and Shanghai Disneyland. The August 2026 Mouse Hacking review also describes a signed walking route taking its family just under 20 minutes; walking times depend on pace and route. Check current transport arrangements and park admission conditions.<cite data-ref=\"https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review\"></cite><cite data-ref=\"https://disneyparksblog.com/shdl/toy-story-hotel-shanghai-disney-resort/\"></cite></p><h3>Budget and booking</h3><p>This is a family selection. The same firsthand review describes premium pricing for its specially themed room, so compare your actual dates and room categories rather than assuming the Toy Story name means a low room rate. Park tickets and meals are separate unless explicitly included in the booked package.<cite data-ref=\"https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g308272-d10537922-Reviews-Toy_Story_Hotel-Shanghai.html",
+      "basis": "Opened 2026-11-22: Tripadvisor property snapshot with 375 reviews; Rooms/Service/Location/Cleanliness/Value 4.6/4.7/4.6/4.6/4.3 of 5, rounded to half points. Snapshot totals and scores may lag the live site; Toy Story’s opened snapshot is an older 2025 page. MICHELIN destination listings and property-name searches, and Forbes Travel Guide destination directories, did not verify a current property-specific distinction; listings are paginated, so absence is not proof of no award. AAA coverage does not include France or China. Acclaim is unknown, not zero.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+          "title": "Shanghai Disneyland Toy Story Hotel Review",
+          "publishedDate": "2026-08-03",
+          "quote": "There is no subtlety in this theming."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened to guests 2016-06-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://d23.com/a-to-z/toy-story-hotel/",
+            "title": "Toy Story Hotel",
+            "publishedDate": null,
+            "quote": "opened June 16, 2016"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest rooms",
+          "value": "800 rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://d23.com/a-to-z/toy-story-hotel/",
+            "title": "Toy Story Hotel",
+            "publishedDate": null,
+            "quote": "800-room hotel"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2016-06-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://d23.com/a-to-z/toy-story-hotel/",
+            "title": "Toy Story Hotel",
+            "publishedDate": null,
+            "quote": "opened June 16, 2016"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Shanghai, China",
+    "topActivities": [
+      {
+        "title": "Immersive themed rooms",
+        "category": "Kids",
+        "description": "Choose the booked room theme explicitly; the pictured Buzz Lightyear room is a specific category.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Character courtyards",
+        "category": "Kids",
+        "description": "Explore oversized Toy Story figures in the Woody and Buzz Lightyear courtyards.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shanghai Disneyland",
+        "category": "Adventure",
+        "description": "Use resort transport or the signed walking route; park admission is separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+    "priceBasis": "Rates on request. Premium themed-room pricing is documented in the independent review; family membership does not imply budget pricing.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; room rates and climate seasons differ",
+      "tempRange": "8°C–32°C historical average daytime highs",
+      "weatherSummary": "WMO / China Meteorological Administration Shanghai-Hongqiao 1961–1990 averages: older regional context for Pudong, not a contemporary forecast. Summer is hotter and wetter; winter is cooler.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Shanghai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 8.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 12.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 18.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 27.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 31.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 27.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 10.6,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "toy-exterior",
+        "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/58520a4e37c58186144df0cf/1781208072756-U0QI6KRMAZE72S0TUFS2/shanghai-disney-toy-story-hotel-entrance.jpeg",
+        "sourceUrl": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+        "credit": "Mouse Hacking",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/toy-exterior-35575be468132e91.webp",
+        "width": 1600,
+        "height": 1200,
+        "sha256": "35575be468132e910038f29276159742d5c2883195701f401098f7522e37930f"
+      },
+      {
+        "key": "toy-room",
+        "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/58520a4e37c58186144df0cf/1781209980284-JBBIG0CXSHTB6TBJ0ZJ8/shanghai-disney-toy-story-hotel-room-corner-01.jpeg",
+        "sourceUrl": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+        "credit": "Mouse Hacking",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/toy-room-323a7d2b73784b66.webp",
+        "width": 1600,
+        "height": 1200,
+        "sha256": "323a7d2b73784b66403a3b573c238c66cf6649d3ee257793d95dbea3673fe004"
+      },
+      {
+        "key": "toy-lobby",
+        "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/58520a4e37c58186144df0cf/1781208073661-U6YC0ALHYA8G1PJP9IUV/shanghai-disney-toy-story-hotel-lobby-01.jpeg",
+        "sourceUrl": "https://www.mousehacking.com/blog/shanghai-disneyland-toy-story-hotel-review",
+        "credit": "Mouse Hacking",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/toy-lobby-5e20c5c5b210b340.webp",
+        "width": 1600,
+        "height": 1200,
+        "sha256": "5e20c5c5b210b3401f2b0a31ce0d10a0e7239937e6d2638182a03eb8a6e9a2f7"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote; rates on request.",
+      "No verified per-property construction investment or matching cost benchmark; price and priceCurrency remain null. Whole-resort budgets are not hotel budgets.",
+      "No verified current property-specific MICHELIN/Forbes distinction; acclaim null. AAA does not cover these countries.",
+      "Translations left to the translation agent.",
+      "English geocoder query returned a city centroid and was rejected; use the Chinese full street-address match at score 100.",
+      "WMO’s published Shanghai/Hongqiao series is 1961–1990, explicitly dated as older regional context.",
+      "No budget membership: the August 2026 firsthand review explicitly challenges value pricing."
+    ]
+  },
+  {
+    "key": "paris",
+    "pin": {
+      "title": "citizenM Paris Gare de Lyon Celebrates Grand Opening",
+      "productName": "citizenM Paris Gare de Lyon",
+      "sourceUrl": "https://www.marriott.com/en-us/hotels/parly-citizenm-paris-gare-de-lyon/overview/",
+      "description": "A compact design hotel beside Gare de Lyon, with an XL bed, shared lounge spaces and easy access to Paris by rail and metro.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "8 Rue Van Gogh, 75012 Paris, France",
+      "latitude": 48.843759013733,
+      "longitude": 2.371708034711,
+      "utcStartDateTime": "2017-09-22T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Bonjour Paris, published Tuesday September 26, 2017, says the hotel celebrated its grand opening last Friday: September 22. This pin represents the opening celebration, not the earlier first guest opening announced for August.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/parly-citizenm-paris-gare-de-lyon/overview/",
+          "title": "citizenM Paris Gare de Lyon — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+          "title": "CitizenM Opens Hotel at Gare de Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+          "title": "CitizenM Opens Hotel at Gare de Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g187147-d12455412-Reviews-CitizenM_Paris_Gare_de_Lyon-Paris_Ile_de_France.html",
+          "title": "citizenM Paris Gare de Lyon — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://meteofrance.s3.sbg.io.cloud.ovh.net/data/synchro_ftp/REF_STATION/FICHECLIM_75114001.pdf",
+          "title": "Météo-France Paris-Montsouris 1991–2020 station normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A compact design hotel beside Gare de Lyon, with an XL bed, shared lounge spaces and easy access to Paris by rail and metro.<cite data-ref=\"https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/\"></cite></p><h3>Opening milestone</h3><p>This pin dates the hotel’s grand-opening celebration on 22 September 2017, described by Bonjour Paris four days later. The celebration is distinct from the earlier guest opening.<cite data-ref=\"https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/\"></cite></p><h3>Value and room tradeoffs</h3><p>Bonjour Paris places the hotel among the city’s more affordable design stays, with 338 rooms and shared living spaces in a converted office tower. Rooms trade floor space for a large bed and access to common areas. This is a practical base near Gare de Lyon rather than a traditional spacious Parisian room; compare the room layout and occupancy before booking.<cite data-ref=\"https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/\"></cite><cite data-ref=\"https://www.tripadvisor.com/Hotel_Review-g187147-d12455412-Reviews-CitizenM_Paris_Gare_de_Lyon-Paris_Ile_de_France.html\"></cite></p><p>The 12th-arrondissement location is well connected by train and metro, but allow transit time to sights such as the Louvre and Eiffel Tower. The 2017 review’s room-price example is historical and is not a current quote. Compare your dates, breakfast, taxes and cancellation terms.<cite data-ref=\"https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/\"></cite><cite data-ref=\"https://www.tripadvisor.com/Hotel_Review-g187147-d12455412-Reviews-CitizenM_Paris_Gare_de_Lyon-Paris_Ile_de_France.html\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g187147-d12455412-Reviews-CitizenM_Paris_Gare_de_Lyon-Paris_Ile_de_France.html",
+      "basis": "Opened 2026-11-22: Tripadvisor property snapshot with 3,275 reviews; Rooms/Service/Location/Cleanliness/Value 4.2/4.4/4.5/4.5/4.2 of 5, rounded to half points. Snapshot totals and scores may lag the live site; Toy Story’s opened snapshot is an older 2025 page. MICHELIN destination listings and property-name searches, and Forbes Travel Guide destination directories, did not verify a current property-specific distinction; listings are paginated, so absence is not proof of no award. AAA coverage does not include France or China. Acclaim is unknown, not zero.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+          "title": "CitizenM Opens Hotel at Gare de Lyon",
+          "publishedDate": "2017-09-26",
+          "quote": "the sombre exterior hides an impressively modern interior."
+        }
+      ],
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No matching property-specific hospitality construction-cost or comparative engineering benchmark was verified in the opened sources; no numerical score inferred.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Opening celebration",
+          "value": "Grand-opening celebration 2017-09-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+            "title": "CitizenM Opens Hotel at Gare de Lyon",
+            "publishedDate": "2017-09-26",
+            "quote": "last Friday"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest rooms",
+          "value": "338 rooms reported in 2017",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+            "title": "CitizenM Opens Hotel at Gare de Lyon",
+            "publishedDate": "2017-09-26",
+            "quote": "the 338 contemporary bedrooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Grand-opening celebration",
+          "date": "2017-09-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+            "title": "CitizenM Opens Hotel at Gare de Lyon",
+            "publishedDate": "2017-09-26",
+            "quote": "last Friday"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Paris, France",
+    "topActivities": [
+      {
+        "title": "Rail-connected Paris",
+        "category": "Culture",
+        "description": "Use nearby Gare de Lyon services to explore Paris; allow transit time to major sights."
+      },
+      {
+        "title": "Shared living spaces",
+        "category": "Culture",
+        "description": "Relax in the art-filled common areas outside the compact bedroom."
+      },
+      {
+        "title": "Seine neighbourhood",
+        "category": "Culture",
+        "description": "Explore the riverside area around Gare de Lyon and the 12th arrondissement."
+      }
+    ],
+    "priceSource": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+    "priceBasis": "Rates on request. Bonjour Paris’s editorial value assessment supports relative budget positioning; its 2017 price example is not reused as a current quote.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; room rates and climate seasons differ",
+      "tempRange": "8°C–26°C normal daytime highs",
+      "weatherSummary": "Météo-France Paris-Montsouris station 75114001, 1991–2020 normals. Rain occurs in all seasons; summers are warmer and winter days are cool. These are averages rather than forecasts.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Paris",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 16.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 25.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 16.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "paris-bedroom",
+        "imageSourceUrl": "https://bonjourparis.com/wp-content/uploads/2017/09/CitizenM_GDL_FR-0166.jpg",
+        "sourceUrl": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+        "credit": "citizenM / Bonjour Paris",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/paris-bedroom-99b4ff25b4cce9e4.webp",
+        "width": 655,
+        "height": 491,
+        "sha256": "99b4ff25b4cce9e4a0a0532694d668e55446603341f7242b9e4a485a1d49ff8c"
+      },
+      {
+        "key": "paris-bar",
+        "imageSourceUrl": "https://bonjourparis.com/wp-content/uploads/2017/09/CitizenM_GDL_FR-0236.jpg",
+        "sourceUrl": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+        "credit": "citizenM / Bonjour Paris",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/paris-bar-5eb1e317f6711020.webp",
+        "width": 655,
+        "height": 484,
+        "sha256": "5eb1e317f671102054d65afd47f4b03d6266a9671a562a5509841ac532f67e49"
+      },
+      {
+        "key": "paris-station-setting",
+        "imageSourceUrl": "https://bonjourparis.com/wp-content/uploads/2017/09/cM-Gare-de-Lyon-V2.jpg",
+        "sourceUrl": "https://bonjourparis.com/budget-hotel-reviews/citizenm-opens-hotel-gare-de-lyon/",
+        "credit": "citizenM / Bonjour Paris",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/paris-station-setting-c9b34917e36e9a4e.webp",
+        "width": 655,
+        "height": 328,
+        "sha256": "c9b34917e36e9a4eec2c2852d41aab15b0fe7067ebba1cfe59d6b0e038746f23"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote; rates on request.",
+      "No verified per-property construction investment or matching cost benchmark; price and priceCurrency remain null. Whole-resort budgets are not hotel budgets.",
+      "No verified current property-specific MICHELIN/Forbes distinction; acclaim null. AAA does not cover these countries.",
+      "Translations left to the translation agent.",
+      "August 1 appears as an announced guest-opening date; this pin instead dates the independently reported September 22 grand-opening celebration. No first-guest day invented.",
+      "Current operator listing may use another frontage of the building; this entry uses the sourced 8 Rue Van Gogh address.",
+      "Property photos from the 2017 review are 655 pixels wide, retained without enlargement; they may predate later interior changes."
+    ]
+  }
+]

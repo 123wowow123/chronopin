@@ -1074,6 +1074,10 @@
         {
           "x": "2026",
           "value": 213.9
+        },
+        {
+          "x": "2028",
+          "value": 234.4
         }
       ]
     },
@@ -1089,9 +1093,15 @@
         "url": "https://www.pocketgamer.biz/global-games-revenue-surpasses-200bn-for-the-first-time-mobile-generates-113bn/",
         "date": "2026-06-19",
         "quote": "Global games revenue reached $201.6 billion in 2025"
+      },
+      {
+        "label": "PocketGamer.biz: Global Games revenue surpasses $200bn (Newzoo)",
+        "url": "https://www.pocketgamer.biz/global-games-revenue-surpasses-200bn-for-the-first-time-mobile-generates-113bn/",
+        "date": "2026-06-19",
+        "quote": "Newzoo forecasts that the global games market will continue to grow to $234.4bn by 2028."
       }
     ],
-    "note": "USD billions across PC, console and mobile games; excludes a separate forecast for tabletop games. Published forecast, not realized annual revenue. History: Only one same-vintage actual verified (Newzoo restates prior years each edition; older 2024 figures of $182.7B/$184.3B are on a different vintage, and newzoo.com/gamesbeat blocked access), so not enough for a line.",
+    "note": "USD billions across PC, console and mobile games; excludes a separate forecast for tabletop games. Published forecast, not realized annual revenue. The 2028 point is from Newzoo's June 2026 quarterly update (the same page's summary bullet says $234.5bn; the body text's $234.4bn is used); no 2027 figure was found. 2025 is the reported actual.",
     "history": [
       {
         "label": "Newzoo reported",
