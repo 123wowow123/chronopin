@@ -1,0 +1,688 @@
+[
+  {
+    "key": "stella",
+    "pin": {
+      "title": "Universal Stella Nova Resort Opens",
+      "productName": "Universal Stella Nova Resort",
+      "sourceUrl": "https://www.loewshotels.com/stella-nova-resort",
+      "description": "A space-themed Prime Value hotel with an Epic Universe walking path, rooms for up to four, a pool and children’s splash area.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "4500 Epic Boulevard, Orlando, FL 32819, United States",
+      "latitude": 28.4333541,
+      "longitude": -81.4496602,
+      "utcStartDateTime": "2025-01-21T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Universal’s property-specific press release published 2025-01-21 confirms the hotel is open and celebrates its first guests.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.loewshotels.com/stella-nova-resort",
+          "title": "Universal Stella Nova Resort — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://media.universalparksusa.com/press-releases/universal-stella-nova-now-open-universal-orlandos-newest-hotel-trade/",
+          "title": "Universal Stella Nova Resort Celebrates Its First Guests During The Out-Of-This-World Opening Day Of Universal Orlando’s Newest Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g34515-d27532006-Reviews-Universal_Stella_Nova_Resort-Orlando_Florida.html",
+          "title": "Universal Stella Nova Resort — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universal-stella-nova-resort-AA139471",
+          "title": "Universal Stella Nova Resort — AAA inspector notes",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits",
+          "title": "Hotel Benefits and Options at Universal Orlando Resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://climatecenter.fsu.edu/products-services/data/1991-2020-normals/orlando",
+          "title": "Florida Climate Center — Orlando 1991–2020 normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://ems-www.pci.org/ProjectProfile?ID=274621",
+          "title": "Stella Nova Resort and Terra Luna Resort — PCI project profile",
+          "confidence": 100
+        },
+        {
+          "url": "https://wanderingindisney.com/2026/06/22/universal-stella-nova-resort-review/",
+          "title": "Universal Stella Nova Resort Review",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A space-themed Prime Value hotel with an Epic Universe walking path, rooms for up to four, a pool and children’s splash area.<cite data-ref=\"https://www.loewshotels.com/stella-nova-resort\"></cite></p><h3>Family stay</h3><p>The hotel opened to its first guests on 2025-01-21 with 750 rooms. Standard rooms have two queen beds and sleep up to four. Confirm the booked room’s occupancy and any connecting-room arrangements for a larger family.<cite data-ref=\"https://media.universalparksusa.com/press-releases/universal-stella-nova-now-open-universal-orlandos-newest-hotel-trade/\"></cite></p><p>Stella Nova offers a dedicated walking path to Epic Universe as well as shuttle service. The other Universal parks require a longer transfer.<cite data-ref=\"https://www.loewshotels.com/stella-nova-resort\"></cite></p><h3>Budget and booking</h3><p>Universal places this hotel in its Prime Value category. Compare your actual dates, room type and total stay cost; a value category does not guarantee the cheapest available room. Overnight self-parking is listed by Loews at $30 plus tax per vehicle per night, subject to change. Meals and park tickets are separate unless expressly included in your package.<cite data-ref=\"https://www.loewshotels.com/stella-nova-resort\"></cite><cite data-ref=\"https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits\"></cite></p><p>Early Park Admission applies to selected attractions with valid park admission and current operating conditions. A hotel stay here does not include the complimentary Universal Express Unlimited benefit offered at Portofino Bay, Hard Rock and Royal Pacific.<cite data-ref=\"https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g34515-d27532006-Reviews-Universal_Stella_Nova_Resort-Orlando_Florida.html",
+      "basis": "Opened 2026-11-22: Tripadvisor property snapshot with 126 reviews, Rooms/Service/Location/Cleanliness/Value 4.1/3.8/4.3/4.4/3.8 of 5, rounded to nearest half point. This snapshot may lag live review totals and reflects a smaller early review sample. AAA property inspection checked; component scores are not Diamond counts. MICHELIN Orlando displayed five other hotels and Forbes Travel Guide’s Orlando directory did not identify this property. No current property-specific award verified; acclaim remains null.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://wanderingindisney.com/2026/06/22/universal-stella-nova-resort-review/",
+          "title": "Universal Stella Nova Resort Review",
+          "publishedDate": "2026-06-22",
+          "quote": "The rooms looked great and were very modern and the outside of the hotel is a spectacle."
+        }
+      ],
+      "rooms": 4,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 2025-01-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-stella-nova-now-open-universal-orlandos-newest-hotel-trade/",
+            "title": "Universal Stella Nova Resort Celebrates Its First Guests During The Out-Of-This-World Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-01-21",
+            "quote": "is now officially open"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest rooms",
+          "value": "750 rooms at opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-stella-nova-now-open-universal-orlandos-newest-hotel-trade/",
+            "title": "Universal Stella Nova Resort Celebrates Its First Guests During The Out-Of-This-World Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-01-21",
+            "quote": "offers 750 rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2025-01-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-stella-nova-now-open-universal-orlandos-newest-hotel-trade/",
+            "title": "Universal Stella Nova Resort Celebrates Its First Guests During The Out-Of-This-World Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-01-21",
+            "quote": "is now officially open"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "topActivities": [
+      {
+        "title": "Pool and splash area",
+        "category": "Water",
+        "description": "Resort-style outdoor pool; weather and operating conditions apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Epic Universe days",
+        "category": "Adventure",
+        "description": "Walk or take a shuttle to Epic Universe; park admission is separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game room",
+        "category": "Kids",
+        "description": "Indoor games for a park break; game charges may apply.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.loewshotels.com/stella-nova-resort",
+    "priceBasis": "Rates on request. Official Prime Value positioning supports relative budget membership; compare your dates, room occupancy, taxes, parking, dining, tickets and any Express purchases.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "bestSeason": "Cooler months for outdoor park days",
+      "peakSeason": "School holidays; check date-specific room rates",
+      "shoulderSeason": "School-term dates in spring and autumn",
+      "lowSeason": "Selected school-term dates; rates vary",
+      "tempRange": "22°C–29°C daytime highs in the cooler months",
+      "weatherSummary": "Orlando International Airport 1991–2020 normals, published by the Florida Climate Center. Summer is hot and wet; winter and early spring usually offer cooler park touring.",
+      "whyGo": "Choose cooler months for longer outdoor park days. Allow indoor breaks during summer rain and heat. Holiday crowds and room prices follow a different pattern from the weather.",
+      "climateZone": "Humid subtropical / Orlando",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 29,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "stella-exterior",
+        "imageSourceUrl": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/678fa5a45362e.jpg/1920x1080/fit;c:0,519,5002,3331;fp:17,45/80/2deb5e87dbc0ec95f290c41452207f84.jpg",
+        "sourceUrl": "https://www.loewshotels.com/stella-nova-resort",
+        "credit": "Loews Hotels & Co / Universal Orlando Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/stella-exterior-4d7c003c1baad68c.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "4d7c003c1baad68c1bf4f2ab9818b659cf619efc4ce59c80a648bea16bc262f6"
+      },
+      {
+        "key": "stella-pool",
+        "imageSourceUrl": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/678fa5dcbaf31.jpg/1920x1080/fit;c:0,376,5002,3191/80/2426affd2f172d5749b776c3a56bcb11.jpg",
+        "sourceUrl": "https://www.loewshotels.com/stella-nova-resort",
+        "credit": "Loews Hotels & Co / Universal Orlando Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/stella-pool-984397d0e9ec01d8.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "984397d0e9ec01d83f6580877373bf3c7230a186f6af5ac0c877643c362ed819"
+      },
+      {
+        "key": "stella-room",
+        "imageSourceUrl": "https://i0.wp.com/live.staticflickr.com/65535/55342081459_c587473317_b.jpg?resize=1024%2C683&ssl=1",
+        "sourceUrl": "https://wanderingindisney.com/2026/06/22/universal-stella-nova-resort-review/",
+        "credit": "Andrew Long / Wandering In Disney",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/stella-room-bde78abbede3d82e.webp",
+        "width": 1024,
+        "height": 683,
+        "sha256": "bde78abbede3d82e1a9c4957e53b7846459783964c0e9cb7da6d7a3a5efa52bd"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote saved; rates on request.",
+      "No verified property-specific construction budget. PCI and the civil contractor describe a combined two-hotel project; no defensible per-property cost allocation or matching cost benchmark was established.",
+      "No numerical engineering scores without a comparative benchmark.",
+      "AAA inspector notes verified but no Diamond count; MICHELIN and Forbes distinction not verified.",
+      "Translation work is left to the separate translation agent."
+    ]
+  },
+  {
+    "key": "terra",
+    "pin": {
+      "title": "Universal Terra Luna Resort Opens",
+      "productName": "Universal Terra Luna Resort",
+      "sourceUrl": "https://www.loewshotels.com/terra-luna-resort",
+      "description": "A space-themed Prime Value hotel near Epic Universe, with rooms for up to four, a resort-style pool and complimentary park shuttles.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "5500 Epic Boulevard, Orlando, FL 32819, United States",
+      "latitude": 28.433907008001,
+      "longitude": -81.45262460292,
+      "utcStartDateTime": "2025-03-25T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Universal’s property-specific press release published 2025-03-25 confirms the hotel is open and celebrates its first guests.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.loewshotels.com/terra-luna-resort",
+          "title": "Universal Terra Luna Resort — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://media.universalparksusa.com/press-releases/universal-terra-luna-resort-grand-opening-trade/",
+          "title": "Universal Terra Luna Resort Celebrates Its First Guests On The Grand Opening Day Of Universal Orlando’s Newest Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g34515-d27701531-Reviews-Universal_Terra_Luna_Resort-Orlando_Florida.html",
+          "title": "Universal Terra Luna Resort — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universal-terra-luna-resort-AA153481",
+          "title": "Universal Terra Luna Resort — AAA inspector notes",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits",
+          "title": "Hotel Benefits and Options at Universal Orlando Resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://climatecenter.fsu.edu/products-services/data/1991-2020-normals/orlando",
+          "title": "Florida Climate Center — Orlando 1991–2020 normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://ems-www.pci.org/ProjectProfile?ID=274621",
+          "title": "Stella Nova Resort and Terra Luna Resort — PCI project profile",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A space-themed Prime Value hotel near Epic Universe, with rooms for up to four, a resort-style pool and complimentary park shuttles.<cite data-ref=\"https://www.loewshotels.com/terra-luna-resort\"></cite></p><h3>Family stay</h3><p>The hotel opened to its first guests on 2025-03-25 with 750 rooms. Standard rooms have two queen beds and sleep up to four. Confirm the booked room’s occupancy and any connecting-room arrangements for a larger family.<cite data-ref=\"https://media.universalparksusa.com/press-releases/universal-terra-luna-resort-grand-opening-trade/\"></cite></p><p>Terra Luna provides complimentary shuttle transport to Universal’s parks and CityWalk. Plan transfer time rather than assuming it has Stella Nova’s dedicated Epic Universe walking path.<cite data-ref=\"https://www.loewshotels.com/terra-luna-resort\"></cite></p><h3>Budget and booking</h3><p>Universal places this hotel in its Prime Value category. Compare your actual dates, room type and total stay cost; a value category does not guarantee the cheapest available room. Overnight self-parking is listed by Loews at $30 plus tax per vehicle per night, subject to change. Meals and park tickets are separate unless expressly included in your package.<cite data-ref=\"https://www.loewshotels.com/terra-luna-resort\"></cite><cite data-ref=\"https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits\"></cite></p><p>Early Park Admission applies to selected attractions with valid park admission and current operating conditions. A hotel stay here does not include the complimentary Universal Express Unlimited benefit offered at Portofino Bay, Hard Rock and Royal Pacific.<cite data-ref=\"https://www.universalorlando.com/web/en/US/places-to-stay/hotels/at-a-glance/hotels-benefits\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g34515-d27701531-Reviews-Universal_Terra_Luna_Resort-Orlando_Florida.html",
+      "basis": "Opened 2026-11-22: Tripadvisor property snapshot with 72 reviews, Rooms/Service/Location/Cleanliness/Value 3.8/3.7/3.9/4.1/3.8 of 5, rounded to nearest half point. This snapshot may lag live review totals and reflects a smaller early review sample. AAA property inspection checked; component scores are not Diamond counts. MICHELIN Orlando displayed five other hotels and Forbes Travel Guide’s Orlando directory did not identify this property. No current property-specific award verified; acclaim remains null.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universal-terra-luna-resort-AA153481",
+          "title": "Universal Terra Luna Resort",
+          "publishedDate": null,
+          "quote": "the shimmering colorful exterior is impossible to miss."
+        }
+      ],
+      "rooms": 4,
+      "service": 3.5,
+      "location": 4,
+      "cleanliness": 4,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "PCI documents the shared precast construction system, but no property-specific comparative hotel benchmark supports a numerical engineering score.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 2025-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-terra-luna-resort-grand-opening-trade/",
+            "title": "Universal Terra Luna Resort Celebrates Its First Guests On The Grand Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-03-25",
+            "quote": "is now officially open"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest rooms",
+          "value": "750 rooms at opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-terra-luna-resort-grand-opening-trade/",
+            "title": "Universal Terra Luna Resort Celebrates Its First Guests On The Grand Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-03-25",
+            "quote": "offers 750 luminous guest rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2025-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalparksusa.com/press-releases/universal-terra-luna-resort-grand-opening-trade/",
+            "title": "Universal Terra Luna Resort Celebrates Its First Guests On The Grand Opening Day Of Universal Orlando’s Newest Hotel",
+            "publishedDate": "2025-03-25",
+            "quote": "is now officially open"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "topActivities": [
+      {
+        "title": "Pool downtime",
+        "category": "Water",
+        "description": "Resort-style outdoor pool; weather and operating conditions apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Epic Universe days",
+        "category": "Adventure",
+        "description": "Use the complimentary shuttle to Epic Universe; park admission is separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game room",
+        "category": "Kids",
+        "description": "Indoor games for a park break; game charges may apply.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.loewshotels.com/terra-luna-resort",
+    "priceBasis": "Rates on request. Official Prime Value positioning supports relative budget membership; compare your dates, room occupancy, taxes, parking, dining, tickets and any Express purchases.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "bestSeason": "Cooler months for outdoor park days",
+      "peakSeason": "School holidays; check date-specific room rates",
+      "shoulderSeason": "School-term dates in spring and autumn",
+      "lowSeason": "Selected school-term dates; rates vary",
+      "tempRange": "22°C–29°C daytime highs in the cooler months",
+      "weatherSummary": "Orlando International Airport 1991–2020 normals, published by the Florida Climate Center. Summer is hot and wet; winter and early spring usually offer cooler park touring.",
+      "whyGo": "Choose cooler months for longer outdoor park days. Allow indoor breaks during summer rain and heat. Holiday crowds and room prices follow a different pattern from the weather.",
+      "climateZone": "Humid subtropical / Orlando",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 29,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "terra-exterior",
+        "imageSourceUrl": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/67e1c4a5be241.jpg/1920x1080/fit;c:0,366,5000,3179/80/cd1b8040bd5dd91ca79f1565fc676dfa.jpg",
+        "sourceUrl": "https://www.loewshotels.com/terra-luna-resort",
+        "credit": "Loews Hotels & Co / Universal Orlando Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/terra-exterior-687f95084c9fd078.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "687f95084c9fd07884c6d130c6b57605e2da73b2f91dbd7a024097e93d36004a"
+      },
+      {
+        "key": "terra-pool",
+        "imageSourceUrl": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/67e1c49fc7183.jpg/1920x1080/fit;c:0,366,5000,3179;fp:27,54/80/3d4f1e6778feacda3a4f1d0dc208cd30.jpg",
+        "sourceUrl": "https://www.loewshotels.com/terra-luna-resort",
+        "credit": "Loews Hotels & Co / Universal Orlando Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/terra-pool-2982c2798dc2368a.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "2982c2798dc2368a0898797d706cb6f5bf893cb809416bcb2932e1a2d19a277a"
+      },
+      {
+        "key": "terra-room",
+        "imageSourceUrl": "https://orlandoinformer.com/wp-content/uploads/2025/03/IMG_9244-1024x683.jpg",
+        "sourceUrl": "https://orlandoinformer.com/universal/universal-terra-luna-resort/",
+        "credit": "Orlando Informer",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/terra-room-9536ae98c5ced36e.webp",
+        "width": 1024,
+        "height": 683,
+        "sha256": "9536ae98c5ced36ebf34f2ad45273f0ee967e042da92c4c4d5275a5c8a618274"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote saved; rates on request.",
+      "No verified property-specific construction budget. PCI and the civil contractor describe a combined two-hotel project; no defensible per-property cost allocation or matching cost benchmark was established.",
+      "No numerical engineering scores without a comparative benchmark.",
+      "AAA inspector notes verified but no Diamond count; MICHELIN and Forbes distinction not verified.",
+      "Translation work is left to the separate translation agent.",
+      "Some older planning material says February 25; the operator’s actual opening release confirms March 25, 2025."
+    ]
+  }
+]

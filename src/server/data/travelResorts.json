@@ -675,5 +675,806 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Billund, Denmark",
+    "topActivities": [
+      {
+        "title": "Themed rooms",
+        "category": "Kids",
+        "description": "Stay in a LEGO castle setting; select the theme and occupancy when booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunt",
+        "category": "Kids",
+        "description": "Solve the in-room cabinet clues for a LEGO surprise.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Outdoor play",
+        "category": "Adventure",
+        "description": "Make time for the castle-themed outdoor playground.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+    "priceBasis": "Rates on request. Compare complete room, ticket, parking, dining and activity costs.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "May–September for milder outdoor park days",
+      "tempRange": "4°C–22°C average daytime highs",
+      "weatherSummary": "Billund Airport record-based 1991–2020 averages from NOAA GSOD, published by NOTAMET. Summer is mild; rain is possible throughout the year.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Temperate maritime / Billund",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "fair",
+          "tempC": 12.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 16.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 21.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 17.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "fair",
+          "tempC": 12.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.greatwolf.com/southern-california",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Garden Grove, California",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Adventure",
+        "description": "Water-park entry is included for registered overnight guests, subject to occupancy and park rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Themed suite stays",
+        "category": "Kids",
+        "description": "Compare standard suites with themed bunk-bed options.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "MagiQuest",
+        "category": "Kids",
+        "description": "Optional interactive adventure; admission and equipment may cost extra.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/southern-california",
+    "priceBasis": "Rates on request. Compare complete room, ticket, parking, dining and activity costs.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for milder outdoor sightseeing",
+      "tempRange": "21°C–32°C normal daytime highs",
+      "weatherSummary": "NOAA Anaheim station USC00040192, 1991–2020 normals. Summer is warmer and drier; winter receives most rain. The indoor water park operates year-round.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Mediterranean / coastal Orange County",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 21.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 21.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 23.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 24.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 27.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 28.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 21.4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.marriott.com/en-us/hotels/lonbs-citizenm-london-bankside/overview/",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "London, United Kingdom",
+    "topActivities": [
+      {
+        "title": "Bankside exploring",
+        "category": "Culture",
+        "description": "Use the hotel as a base for Tate Modern and Borough Market.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Shared living room",
+        "category": "Relaxation",
+        "description": "Read or unwind in the art-filled shared lounge.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Compact city stay",
+        "category": "Culture",
+        "description": "Rooms are designed for two adults; compare space and occupancy before booking.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.oyster.com/london/hotels/citizenm-london-bankside/",
+    "priceBasis": "Rates on request. Compare date-specific room type, occupancy, taxes, fees and inclusions. Budget positioning is relative to the destination, with no universal nightly-price ceiling.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "May, June and September for mild city walks",
+      "tempRange": "8°C–24°C normal daytime highs",
+      "weatherSummary": "Met Office Heathrow 1991–2020 normals are regional guidance for London. Rain occurs in every season; summer is warmer and winter days are cooler.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Temperate maritime / London",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 11.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 18.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 21.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.yotel.com/en/hotels/yotel-singapore",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Orchard Road, Singapore",
+    "topActivities": [
+      {
+        "title": "Pool break",
+        "category": "Relaxation",
+        "description": "Take a break at the hotel pool between city outings.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Orchard Road",
+        "category": "Culture",
+        "description": "Explore the shopping district from the hotel’s Orchard Road location.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Compact cabins",
+        "category": "Relaxation",
+        "description": "Choose the published room type and occupancy limit before booking.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-hotels-in-singapore/",
+    "priceBasis": "Forbes Vetted’s July 2024 editorial selection supports relative value positioning. Its historical starting rate is not a current quote. Rates on request; compare dates, taxes, occupancy and inclusions.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Relatively drier February and June–September",
+      "tempRange": "31°C–32°C normal daytime highs",
+      "weatherSummary": "WMO / Meteorological Service Singapore 1991–2020 normals. Hot and humid year-round; February and June–September are relatively drier, while November–January are wetter.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Equatorial / Singapore",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 30.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 31.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 32.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 31.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 31.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 31.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 31.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 31.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 31.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 30.5,
+          "rainfall": "High"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.loewshotels.com/stella-nova-resort",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "topActivities": [
+      {
+        "title": "Pool and splash area",
+        "category": "Water",
+        "description": "Resort-style outdoor pool; weather and operating conditions apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Epic Universe days",
+        "category": "Adventure",
+        "description": "Walk or take a shuttle to Epic Universe; park admission is separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game room",
+        "category": "Kids",
+        "description": "Indoor games for a park break; game charges may apply.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.loewshotels.com/stella-nova-resort",
+    "priceBasis": "Rates on request. Official Prime Value positioning supports relative budget membership; compare your dates, room occupancy, taxes, parking, dining, tickets and any Express purchases.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "bestSeason": "Cooler months for outdoor park days",
+      "peakSeason": "School holidays; check date-specific room rates",
+      "shoulderSeason": "School-term dates in spring and autumn",
+      "lowSeason": "Selected school-term dates; rates vary",
+      "tempRange": "22°C–29°C daytime highs in the cooler months",
+      "weatherSummary": "Orlando International Airport 1991–2020 normals, published by the Florida Climate Center. Summer is hot and wet; winter and early spring usually offer cooler park touring.",
+      "whyGo": "Choose cooler months for longer outdoor park days. Allow indoor breaks during summer rain and heat. Holiday crowds and room prices follow a different pattern from the weather.",
+      "climateZone": "Humid subtropical / Orlando",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 29,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.loewshotels.com/terra-luna-resort",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "topActivities": [
+      {
+        "title": "Pool downtime",
+        "category": "Water",
+        "description": "Resort-style outdoor pool; weather and operating conditions apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Epic Universe days",
+        "category": "Adventure",
+        "description": "Use the complimentary shuttle to Epic Universe; park admission is separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game room",
+        "category": "Kids",
+        "description": "Indoor games for a park break; game charges may apply.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.loewshotels.com/terra-luna-resort",
+    "priceBasis": "Rates on request. Official Prime Value positioning supports relative budget membership; compare your dates, room occupancy, taxes, parking, dining, tickets and any Express purchases.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "bestSeason": "Cooler months for outdoor park days",
+      "peakSeason": "School holidays; check date-specific room rates",
+      "shoulderSeason": "School-term dates in spring and autumn",
+      "lowSeason": "Selected school-term dates; rates vary",
+      "tempRange": "22°C–29°C daytime highs in the cooler months",
+      "weatherSummary": "Orlando International Airport 1991–2020 normals, published by the Florida Climate Center. Summer is hot and wet; winter and early spring usually offer cooler park touring.",
+      "whyGo": "Choose cooler months for longer outdoor park days. Allow indoor breaks during summer rain and heat. Holiday crowds and room prices follow a different pattern from the weather.",
+      "climateZone": "Humid subtropical / Orlando",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 29,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

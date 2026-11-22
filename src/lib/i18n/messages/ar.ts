@@ -791,6 +791,12 @@ const ar: Messages = {
     ticketsHeading: 'التذاكر',
     ticketsFree: 'مجاني',
     gameInfo: 'معلومات اللعبة',
+    sales: {
+      heading: 'أرقام المبيعات',
+      units: 'الوحدات المباعة',
+      revenue: 'الإيرادات',
+      source: 'المصدر',
+    },
     gameMaturity: 'التصنيف العمري',
     gamePlatforms: 'المنصات',
     taste: {

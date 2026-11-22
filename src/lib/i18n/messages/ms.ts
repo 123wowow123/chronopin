@@ -722,6 +722,12 @@ const ms: Messages = {
     ticketsHeading: 'Tiket',
     ticketsFree: 'Percuma',
     gameInfo: 'Maklumat permainan',
+    sales: {
+      heading: 'Angka jualan',
+      units: 'Unit terjual',
+      revenue: 'Hasil',
+      source: 'Sumber',
+    },
     gameMaturity: 'Penarafan umur',
     gamePlatforms: 'Platform',
     taste: {

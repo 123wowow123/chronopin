@@ -722,6 +722,12 @@ const en = {
     ticketsHeading: 'Tickets',
     ticketsFree: 'Free',
     gameInfo: 'Game info',
+    sales: {
+      heading: 'Sales figures',
+      units: 'Units sold',
+      revenue: 'Revenue',
+      source: 'Source',
+    },
     gameMaturity: 'Rated',
     gamePlatforms: 'Platforms',
     taste: {

@@ -717,6 +717,12 @@ const ko: Messages = {
     ticketsHeading: '티켓',
     ticketsFree: '무료',
     gameInfo: '게임 정보',
+    sales: {
+      heading: '판매 수치',
+      units: '판매량',
+      revenue: '매출',
+      source: '출처',
+    },
     gameMaturity: '등급',
     gamePlatforms: '지원 플랫폼',
     taste: {

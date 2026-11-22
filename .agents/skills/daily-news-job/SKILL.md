@@ -168,6 +168,15 @@ Do this without being asked, on every pin you create or repair. Pins about a com
 - Edit through `update_pin`; when it refuses ("No run is open"), `PUT /api/pins/:id` on local, then on prod with a fresh `admin.token` (`admin-login-refresh`), sending the **whole** pin JSON with only `address`, `latitude`, `longitude` changed (the API's PATCH is not a merge: a partial body fails on the NOT NULL `title`). Read back address, coordinates, author, media, tags and parent. Match the prod pin by `sourceUrl` or title first, since ids can differ.
 - Quick check each run: `GET /api/pins/:id` for the pins you touched and flag any whose `address` has no digit and whose coordinates equal a city centre.
 
+## Detail content describes the subject, in bullets (owner, 2026-11-22)
+
+Pin 20157 (Mario Kart World) had a `longFormSummary` that ended with "Part of the Mario Kart release-history thread. Ports and remakes retain their edition dates...". The owner wants the detail text to describe the top information about the subject (game, product, place), never the thread or its history; the thread already shows on the page.
+- Write a one-sentence `<p>` intro (what it is, platform, release date, with the `<cite data-ref>` for the source), then a `<ul><li><strong>Feature:</strong> ...</li></ul>` list of the top features: modes, scale, key specs, bundle or price. `longFormSummary` is HTML (`safeCitedHtml`), and `<ul><li>` is already used on thousands of pins. Take every fact from the cited official page, never from memory.
+- Do not add "Part of the ... thread", "release-history", "ports and remakes retain edition dates" or similar thread boilerplate to a summary. When you find it on a pin you touch, drop it.
+- Save with `update_pin`; when it refuses ("No run is open"), refresh the token (`admin-login-refresh`) and `PUT /api/pins/:id` with the whole pin JSON and only `longFormSummary` changed.
+- **Trap:** that PUT re-posts the pin's derived award/nomination tags as stored `source: "user"` rows (the view derives them from `PinAward`, so duplicates appear). Right after the PUT, run `DELETE /api/admin/db/PinTag?pinId=<id>&kind.in=award,nomination&source=user` (curl with `-g`; `award` is not a stored source, the check allows only `user`/`auto`), then read back `tags`, `media` and `parentId` and compare to the pre-edit JSON.
+- Translations stay with the translation agent; the 15 locales keep the old text until it re-syncs.
+
 ## Facility closures say what the site makes (owner, 2026-11-18)
 
 Closure, wind-down and layoff pins about a factory, mill, mine or warehouse state what the site produces in a **second `<p>` paragraph of the description** (HTML, under the lead paragraph; cite it as a reference; never guessed). Pin 19614 is the model. Same rule is in `src/server/extract/systemPrompt.ts`. Fix older pins the same way: `PUT /api/pins/:id` with the whole pin JSON plus a new first bullet and the source in `references`.

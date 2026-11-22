@@ -722,6 +722,12 @@ const id: Messages = {
     ticketsHeading: 'Tiket',
     ticketsFree: 'Gratis',
     gameInfo: 'Info gim',
+    sales: {
+      heading: 'Angka penjualan',
+      units: 'Unit terjual',
+      revenue: 'Pendapatan',
+      source: 'Sumber',
+    },
     gameMaturity: 'Peringkat usia',
     gamePlatforms: 'Platform',
     taste: {

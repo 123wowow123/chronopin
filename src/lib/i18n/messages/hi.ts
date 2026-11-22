@@ -720,6 +720,12 @@ const hi: Messages = {
     ticketsHeading: 'टिकट',
     ticketsFree: 'मुफ़्त',
     gameInfo: 'गेम की जानकारी',
+    sales: {
+      heading: 'बिक्री के आंकड़े',
+      units: 'बिकी इकाइयां',
+      revenue: 'राजस्व',
+      source: 'स्रोत',
+    },
     gameMaturity: 'आयु रेटिंग',
     gamePlatforms: 'प्लेटफ़ॉर्म',
     taste: {

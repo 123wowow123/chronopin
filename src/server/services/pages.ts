@@ -38,6 +38,8 @@ import type { PinDatacenterJson } from '@/lib/datacenter';
 import { candidatesForPin } from '../model/pinCandidate';
 import { competitorsForPin } from '../model/pinCompetitor';
 import { gameInfoForPin } from '../model/pinGameInfo';
+import { salesForPin } from '../model/pinSales';
+import type { PinSalesJson } from '@/lib/sales';
 import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
 import { gasCarPerfForPin } from '../model/pinGasCarPerf';
@@ -401,6 +403,14 @@ export async function pinGameInfo(id: number): Promise<PinGameInfoJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return gameInfoForPin(id);
+}
+
+// A product's published sales figures, newest first (empty when none).
+export async function pinSales(id: number): Promise<PinSalesJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return salesForPin(id);
 }
 
 // A consumable pin's taste profile, or null when it has none.

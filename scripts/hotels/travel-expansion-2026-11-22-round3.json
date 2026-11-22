@@ -1,0 +1,1297 @@
+[
+  {
+    "key": "castle",
+    "pin": {
+      "title": "LEGOLAND Castle Hotel Billund Opens",
+      "productName": "LEGOLAND Castle Hotel Billund",
+      "sourceUrl": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+      "description": "A LEGO castle stay beside LEGOLAND Billund, with themed rooms, in-room treasure hunts and an outdoor playground.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "Åstvej 20, 7190 Billund, Denmark",
+      "latitude": 55.733685,
+      "longitude": 9.13087,
+      "utcStartDateTime": "2019-03-29T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source identifies 2019-03-29.",
+      "price": 200000000,
+      "priceCurrency": "DKK",
+      "references": [
+        {
+          "url": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+          "title": "LEGOLAND Castle Hotel Billund — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://via.ritzau.dk/pressemeddelelse/13571259/legoland-castle-hotel-abnede-med-et-brag?publisherId=12878818",
+          "title": "LEGOLAND Castle Hotel åbnede med et brag",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g189531-d15333899-Reviews-Legoland_Castle_Hotel-Billund_South_Jutland_Jutland.html",
+          "title": "LEGOLAND Castle Hotel Billund — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mummytravels.com/legoland-castle-hotel-billund-review/",
+          "title": "Legoland Castle Hotel Billund: Review",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.notamet.com/climate/EKBI",
+          "title": "Billund, Denmark — monthly climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mynewsdesk.com/dk/legolandbillund/pressreleases/legoland-r-udvider-med-kaempe-lego-r-slotshotel-i-2019-2231199",
+          "title": "LEGOLAND udvider med kæmpe LEGO Slotshotel i 2019",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO castle stay beside LEGOLAND Billund, with themed rooms, in-room treasure hunts and an outdoor playground.<cite data-ref=\"https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/\"></cite></p><h3>Stay and planning</h3><p>The hotel opened with 142 themed rooms on 29 March 2019. Choose the room theme and check occupancy and park-ticket inclusions before booking. Confirm park operating days for a winter visit.<cite data-ref=\"https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/\"></cite><cite data-ref=\"https://via.ritzau.dk/pressemeddelelse/13571259/legoland-castle-hotel-abnede-med-et-brag?publisherId=12878818\"></cite></p><h3>Development</h3><p>The operator announced a DKK200 million investment in 2017; this is the announced project investment, not an audited final outturn or a nightly rate.<cite data-ref=\"https://www.mynewsdesk.com/dk/legolandbillund/pressreleases/legoland-r-udvider-med-kaempe-lego-r-slotshotel-i-2019-2231199\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g189531-d15333899-Reviews-Legoland_Castle_Hotel-Billund_South_Jutland_Jutland.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (500 reviews). Rooms/Service/Location/Cleanliness/Value: 4.6/4.6/4.9/4.7/4.2 of 5, rounded to nearest half point; snapshots can lag live totals. MICHELIN and Forbes Travel Guide property-name searches did not verify a current distinction. AAA property inspection was checked for Garden Grove; no Diamond count was verified. AAA country coverage does not cover the three overseas properties. Acclaim is unknown, not zero. The linked independent review is historical; the Castle Hotel review discloses a hosted stay.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.mummytravels.com/legoland-castle-hotel-billund-review/",
+          "title": "Legoland Castle Hotel Billund: Review",
+          "publishedDate": "2019-10-13",
+          "quote": "Most fun of all was the locked cabinet containing Lego ‘treasure’ for the small occupants."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2019-03-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://via.ritzau.dk/pressemeddelelse/13571259/legoland-castle-hotel-abnede-med-et-brag?publisherId=12878818",
+            "title": "LEGOLAND Castle Hotel åbnede med et brag",
+            "publishedDate": "2019-03-29",
+            "quote": "Fredag aften åbnede LEGOLAND® Castle Hotel i Billund med 142 eventyrlige værelser"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Announced project investment",
+          "value": "DKK 200,000,000",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.mynewsdesk.com/dk/legolandbillund/pressreleases/legoland-r-udvider-med-kaempe-lego-r-slotshotel-i-2019-2231199",
+            "title": "LEGOLAND udvider med kæmpe LEGO Slotshotel i 2019",
+            "publishedDate": "2017-10-25",
+            "quote": "en investering på 200 millioner kroner"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2019-03-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://via.ritzau.dk/pressemeddelelse/13571259/legoland-castle-hotel-abnede-med-et-brag?publisherId=12878818",
+            "title": "LEGOLAND Castle Hotel åbnede med et brag",
+            "publishedDate": "2019-03-29",
+            "quote": "Fredag aften åbnede LEGOLAND® Castle Hotel i Billund med 142 eventyrlige værelser"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Billund, Denmark",
+    "topActivities": [
+      {
+        "title": "Themed rooms",
+        "category": "Kids",
+        "description": "Stay in a LEGO castle setting; select the theme and occupancy when booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunt",
+        "category": "Kids",
+        "description": "Solve the in-room cabinet clues for a LEGO surprise.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Outdoor play",
+        "category": "Adventure",
+        "description": "Make time for the castle-themed outdoor playground.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+    "priceBasis": "Rates on request. Compare complete room, ticket, parking, dining and activity costs.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "May–September for milder outdoor park days",
+      "tempRange": "4°C–22°C average daytime highs",
+      "weatherSummary": "Billund Airport record-based 1991–2020 averages from NOAA GSOD, published by NOTAMET. Summer is mild; rain is possible throughout the year.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Temperate maritime / Billund",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "fair",
+          "tempC": 12.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 16.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 21.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 17.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "fair",
+          "tempC": 12.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "castle-exterior",
+        "imageSourceUrl": "https://www.legoland.dk/media/0jynxq1r/udsigt-fra-vejen.jpg",
+        "sourceUrl": "https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-castle-hotel/",
+        "credit": "LEGOLAND Billund Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/castle-exterior-4e0736303d0ac8c4.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "4e0736303d0ac8c426900b1219c0dd0ddc4a5c46185c40d978cae2efda37589e"
+      },
+      {
+        "key": "castle-room",
+        "imageSourceUrl": "https://www.mummytravels.com/wp-content/uploads/2019/10/denmark-billund-legoland-castle-bed.jpg",
+        "sourceUrl": "https://www.mummytravels.com/legoland-castle-hotel-billund-review/",
+        "credit": "Cathy Winston / MUMMYTRAVELS",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/castle-room-fa6c207ed90cdae8.webp",
+        "width": 1500,
+        "height": 1125,
+        "sha256": "fa6c207ed90cdae8e0d767c33702f62cb0e1b6ffff13435d651dec59177ec372"
+      },
+      {
+        "key": "castle-playground",
+        "imageSourceUrl": "https://www.mummytravels.com/wp-content/uploads/2019/10/denmark-billund-legoland-castle-playground.jpg",
+        "sourceUrl": "https://www.mummytravels.com/legoland-castle-hotel-billund-review/",
+        "credit": "Cathy Winston / MUMMYTRAVELS",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/castle-playground-ff0e60f243e70538.webp",
+        "width": 1500,
+        "height": 1077,
+        "sha256": "ff0e60f243e705388c7fffbac87a69ebe35ede606432f299cd4941cf9902b9fb"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote saved.",
+      "No current property-specific MICHELIN / Forbes Travel Guide distinction or AAA Diamond count verified; acclaim left null.",
+      "No published engineering benchmark for buildout axes; scores remain null.",
+      "Translations left to the translation agent.",
+      "NOTAMET derives Billund Airport values from NOAA GSOD; daily extrema can differ from official station normals. Announced investment is not final audited expenditure."
+    ]
+  },
+  {
+    "key": "wolf",
+    "pin": {
+      "title": "Great Wolf Lodge Anaheim / Garden Grove Opens",
+      "productName": "Great Wolf Lodge Anaheim / Garden Grove",
+      "sourceUrl": "https://www.greatwolf.com/southern-california",
+      "description": "A Southern California family lodge with an indoor water park included for registered overnight guests; budget separately for parking and paid attractions.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "12681 Harbor Boulevard, Garden Grove, CA 92840, United States",
+      "latitude": 33.779300844194,
+      "longitude": -117.915684821976,
+      "utcStartDateTime": "2016-02-19T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Contemporaneous reporting published Monday 22 February 2016 says the property opened last Friday, 19 February. This is first guest opening, not its March ceremony.",
+      "price": 250000000,
+      "priceCurrency": "USD",
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/southern-california",
+          "title": "Great Wolf Lodge Anaheim / Garden Grove — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030",
+          "title": "Great Wolf Lodge Opens In Garden Grove",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g32420-d8778649-Reviews-Great_Wolf_Lodge_Anaheim_Garden_Grove_CA-Garden_Grove_California.html",
+          "title": "Great Wolf Lodge Anaheim / Garden Grove — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/great-wolf-lodge-garden-grove-anaheim-AA123930",
+          "title": "Great Wolf Lodge Garden Grove/Anaheim",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00040192&format=json&units=standard&dataTypes=MLY-TMAX-NORMAL%2CMLY-PRCP-NORMAL",
+          "title": "Garden Grove, California — monthly climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030",
+          "title": "Great Wolf Lodge Opens In Garden Grove",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A Southern California family lodge with an indoor water park included for registered overnight guests; budget separately for parking and paid attractions.<cite data-ref=\"https://www.greatwolf.com/southern-california\"></cite></p><h3>Stay and planning</h3><p>The lodge began welcoming guests on 19 February 2016. Water-park access is included with an overnight stay; room occupancy, parking, dining and attractions such as MagiQuest affect the total trip cost. The indoor water park makes this a year-round family option.<cite data-ref=\"https://www.greatwolf.com/southern-california\"></cite><cite data-ref=\"https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030\"></cite></p><h3>Development</h3><p>Bisnow reported a $250 million hotel-and-water-park project at opening. This is project cost, not a nightly room rate.<cite data-ref=\"https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32420-d8778649-Reviews-Great_Wolf_Lodge_Anaheim_Garden_Grove_CA-Garden_Grove_California.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (5,124 reviews). Rooms/Service/Location/Cleanliness/Value: 4.3/4.3/4.5/4.4/3.8 of 5, rounded to nearest half point; snapshots can lag live totals. MICHELIN and Forbes Travel Guide property-name searches did not verify a current distinction. AAA property inspection was checked for Garden Grove; no Diamond count was verified. AAA country coverage does not cover the three overseas properties. Acclaim is unknown, not zero. The linked independent review is historical; the Castle Hotel review discloses a hosted stay.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/great-wolf-lodge-garden-grove-anaheim-AA123930",
+          "title": "Great Wolf Lodge Garden Grove/Anaheim",
+          "publishedDate": null,
+          "quote": "Relax in themed suites featuring cozy wolf dens and kid-friendly bunk beds for the ultimate family getaway."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2016-02-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030",
+            "title": "Great Wolf Lodge Opens In Garden Grove",
+            "publishedDate": "2016-02-22",
+            "quote": "opened last Friday in Garden Grove"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported development cost",
+          "value": "USD 250,000,000",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030",
+            "title": "Great Wolf Lodge Opens In Garden Grove",
+            "publishedDate": "2016-02-22",
+            "quote": "The much anticipated $250M"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2016-02-19",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bisnow.com/news/orange-county/hotel/great-wolf-lodge-hotel-resort-opens-this-friday-in-garden-grove-56030",
+            "title": "Great Wolf Lodge Opens In Garden Grove",
+            "publishedDate": "2016-02-22",
+            "quote": "opened last Friday in Garden Grove"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Garden Grove, California",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Adventure",
+        "description": "Water-park entry is included for registered overnight guests, subject to occupancy and park rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Themed suite stays",
+        "category": "Kids",
+        "description": "Compare standard suites with themed bunk-bed options.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "MagiQuest",
+        "category": "Kids",
+        "description": "Optional interactive adventure; admission and equipment may cost extra.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/southern-california",
+    "priceBasis": "Rates on request. Compare complete room, ticket, parking, dining and activity costs.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        3,
+        4,
+        5,
+        6,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for milder outdoor sightseeing",
+      "tempRange": "21°C–32°C normal daytime highs",
+      "weatherSummary": "NOAA Anaheim station USC00040192, 1991–2020 normals. Summer is warmer and drier; winter receives most rain. The indoor water park operates year-round.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Mediterranean / coastal Orange County",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 21.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 21.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 23.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 24.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 27.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 28.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 21.4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "wolf-exterior",
+        "imageSourceUrl": "https://assets.cdn.greatwolf.com/1920x1278/7f7fc65a7b/anaheim-hero.jpeg",
+        "sourceUrl": "https://www.greatwolf.com/southern-california",
+        "credit": "Great Wolf Lodge Southern California",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/wolf-exterior-f4789e42464c0f97.webp",
+        "width": 1600,
+        "height": 1065,
+        "sha256": "f4789e42464c0f9774e3fb1f7235b7e61ab5e542bf3e0cf53dae62e5483bf797"
+      },
+      {
+        "key": "wolf-room",
+        "imageSourceUrl": "https://assets.cdn.greatwolf.com/cdn-cgi/image/width=3840,format=auto,quality=78/5000x3331/57d8818482/gwl_socal_qnqn_5895_edit.jpg",
+        "sourceUrl": "https://www.greatwolf.com/southern-california",
+        "credit": "Great Wolf Lodge Southern California",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/wolf-room-120959d6c5619378.webp",
+        "width": 1600,
+        "height": 1600,
+        "sha256": "120959d6c5619378690b05ef2d161db4405d293214f95bb11957c91684cd82fc"
+      },
+      {
+        "key": "wolf-waterpark",
+        "imageSourceUrl": "https://assets.cdn.greatwolf.com/cdn-cgi/image/width=3840,format=auto,quality=78/3000x2005/307edafe47/renovation_socal.jpg",
+        "sourceUrl": "https://www.greatwolf.com/southern-california",
+        "credit": "Great Wolf Lodge Southern California",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/wolf-waterpark-f23a4c835cbbdd29.webp",
+        "width": 1600,
+        "height": 1069,
+        "sha256": "f23a4c835cbbdd29a7b160e6628e0bca7f3b1c21a220ae18ca69cad172363242"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote saved.",
+      "No current property-specific MICHELIN / Forbes Travel Guide distinction or AAA Diamond count verified; acclaim left null.",
+      "No published engineering benchmark for buildout axes; scores remain null.",
+      "Translations left to the translation agent.",
+      "19 February first guest opening differs from 4 March ceremonial opening; historical source rounds capacity to 600 while current AAA listing has 603 units."
+    ]
+  },
+  {
+    "key": "citizen",
+    "pin": {
+      "title": "citizenM London Bankside Opens",
+      "productName": "citizenM London Bankside",
+      "sourceUrl": "https://www.marriott.com/en-us/hotels/lonbs-citizenm-london-bankside/overview/",
+      "description": "A compact design hotel near Tate Modern and Borough Market, with rooms for up to two adults and shared lounge space.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "20 Lavington Street, London SE1 0NZ, United Kingdom",
+      "latitude": 51.505116997988,
+      "longitude": -0.098287202464,
+      "utcStartDateTime": "2012-07-04T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source identifies 2012-07-04.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/lonbs-citizenm-london-bankside/overview/",
+          "title": "citizenM London Bankside — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.hospitalitynet.org/news/4056691/london-calling-citizenm-answers-new-bankside-hotel-brings-cool-to-the-capital",
+          "title": "London Calling – citizenM Answers! New Bankside Hotel Brings Cool To The Capital",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g186338-d3199601-Reviews-CitizenM_London_Bankside-London_England.html",
+          "title": "citizenM London Bankside — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.oyster.com/london/hotels/citizenm-london-bankside/",
+          "title": "CitizenM London Bankside",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.metoffice.gov.uk/research/climate/maps-and-data/location-specific-long-term-averages/gcpsveqyg",
+          "title": "London, United Kingdom — monthly climatology",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A compact design hotel near Tate Modern and Borough Market, with rooms for up to two adults and shared lounge space.<cite data-ref=\"https://www.marriott.com/en-us/hotels/lonbs-citizenm-london-bankside/overview/\"></cite></p><h3>Stay and planning</h3><p>Opened on 4 July 2012, this Bankside hotel prioritises a large bed, compact room and shared living-room areas. The operator describes rooms for two adults; this is a city stay for couples or solo visitors. Oyster identifies competitive pricing, but current rates vary by date. The hotel has no on-site parking.<cite data-ref=\"https://www.marriott.com/en-us/hotels/lonbs-citizenm-london-bankside/overview/\"></cite><cite data-ref=\"https://www.hospitalitynet.org/news/4056691/london-calling-citizenm-answers-new-bankside-hotel-brings-cool-to-the-capital\"></cite><cite data-ref=\"https://www.oyster.com/london/hotels/citizenm-london-bankside/\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g186338-d3199601-Reviews-CitizenM_London_Bankside-London_England.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (5,167 reviews). Rooms/Service/Location/Cleanliness/Value: 4.3/4.6/4.5/4.7/4.3 of 5, rounded to nearest half point; snapshots can lag live totals. MICHELIN and Forbes Travel Guide property-name searches did not verify a current distinction. AAA property inspection was checked for Garden Grove; no Diamond count was verified. AAA country coverage does not cover the three overseas properties. Acclaim is unknown, not zero. The linked independent review is historical; the Castle Hotel review discloses a hosted stay.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.oyster.com/london/hotels/citizenm-london-bankside/",
+          "title": "CitizenM London Bankside",
+          "publishedDate": null,
+          "quote": "delivers an original hotel experience at a very competitive price."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2012-07-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hospitalitynet.org/news/4056691/london-calling-citizenm-answers-new-bankside-hotel-brings-cool-to-the-capital",
+            "title": "London Calling – citizenM Answers! New Bankside Hotel Brings Cool To The Capital",
+            "publishedDate": "2012-06-27",
+            "quote": "On July 4, 2012, acclaimed hotel group citizenM opens the doors to its first hotel in London"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2012-07-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hospitalitynet.org/news/4056691/london-calling-citizenm-answers-new-bankside-hotel-brings-cool-to-the-capital",
+            "title": "London Calling – citizenM Answers! New Bankside Hotel Brings Cool To The Capital",
+            "publishedDate": "2012-06-27",
+            "quote": "On July 4, 2012, acclaimed hotel group citizenM opens the doors to its first hotel in London"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "London, United Kingdom",
+    "topActivities": [
+      {
+        "title": "Bankside exploring",
+        "category": "Culture",
+        "description": "Use the hotel as a base for Tate Modern and Borough Market.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Shared living room",
+        "category": "Relaxation",
+        "description": "Read or unwind in the art-filled shared lounge.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Compact city stay",
+        "category": "Culture",
+        "description": "Rooms are designed for two adults; compare space and occupancy before booking.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.oyster.com/london/hotels/citizenm-london-bankside/",
+    "priceBasis": "Rates on request. Compare date-specific room type, occupancy, taxes, fees and inclusions. Budget positioning is relative to the destination, with no universal nightly-price ceiling.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "May, June and September for mild city walks",
+      "tempRange": "8°C–24°C normal daytime highs",
+      "weatherSummary": "Met Office Heathrow 1991–2020 normals are regional guidance for London. Rain occurs in every season; summer is warmer and winter days are cooler.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Temperate maritime / London",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 11.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 18.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 21.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "citizen-lobby",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/0c/18/dc/lobby.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g186338-d3199601-Reviews-CitizenM_London_Bankside-London_England.html",
+        "credit": "Photos via Tripadvisor — citizenM London Bankside",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/citizen-lobby-64fcb191aa566db0.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "64fcb191aa566db0b73fe8d42cc1f51df1c960dab71a6399a66e4c97b5690854"
+      },
+      {
+        "key": "citizen-room",
+        "imageSourceUrl": "https://www.we-heart.com/upload-images/citizenmlondon10.jpg",
+        "sourceUrl": "https://www.we-heart.com/2012/07/10/citizenm-london-bankside/",
+        "credit": "We Heart — citizenM London Bankside",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/citizen-room-8b8b64399c872f94.webp",
+        "width": 561,
+        "height": 421,
+        "sha256": "8b8b64399c872f94834f7c053f84e935d79f5345adb8e5cbb5ba623671f9dce2"
+      },
+      {
+        "key": "citizen-meeting",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/0c/18/ff/meeting-room.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g186338-d3199601-Reviews-CitizenM_London_Bankside-London_England.html",
+        "credit": "Photos via Tripadvisor — citizenM London Bankside",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/citizen-meeting-08901571b8aef502.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "08901571b8aef502100b1b0b15f5171c5e55c1a5294da11e0723c4b118f418e1"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote saved.",
+      "No current property-specific MICHELIN / Forbes Travel Guide distinction or AAA Diamond count verified; acclaim left null.",
+      "No published engineering benchmark for buildout axes; scores remain null.",
+      "Translations left to the translation agent.",
+      "No verified property construction investment; price and priceCurrency remain null."
+    ]
+  },
+  {
+    "key": "yotel",
+    "pin": {
+      "title": "YOTEL Singapore Orchard Road Opens",
+      "productName": "YOTEL Singapore Orchard Road",
+      "sourceUrl": "https://www.yotel.com/en/hotels/yotel-singapore",
+      "description": "A compact Orchard Road city hotel with a pool and easy access to Orchard MRT; Premium Queen rooms are 14 square metres for up to two guests.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "366 Orchard Road, Singapore 238904",
+      "latitude": 1.30631,
+      "longitude": 103.83139,
+      "utcStartDateTime": "2017-10-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source identifies 2017-10-01.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.yotel.com/en/hotels/yotel-singapore",
+          "title": "YOTEL Singapore Orchard Road — official property",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ifastgm.com.sg/igm/bond/relatedBondDocument/1370/Hong%2520Fok%2520Supplemental%2520IM%2520dated%25203%2520November%25202017.pdf",
+          "title": "Hong Fok Corporation — Supplemental Information Memorandum, 3 November 2017, printed page 10",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g294265-d12559807-Reviews-YOTEL_Singapore_Orchard_Road-Singapore.html",
+          "title": "YOTEL Singapore Orchard Road — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ttgasia.com/2017/11/02/yotel-singapore/",
+          "title": "Yotel Singapore",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/city.html?cityId=234",
+          "title": "Orchard Road, Singapore — monthly climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-hotels-in-singapore/",
+          "title": "Forbes Vetted — The 12 Best Hotels In Singapore (18 July 2024)",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A compact Orchard Road city hotel with a pool and easy access to Orchard MRT; Premium Queen rooms are 14 square metres for up to two guests.<cite data-ref=\"https://www.yotel.com/en/hotels/yotel-singapore\"></cite></p><h3>Stay and planning</h3><p>The owner records operations starting on 1 October 2017. The hotel has 610 rooms. Current Premium Queen rooms are 14 square metres with a maximum of two guests; Premium Triple rooms are also 14 square metres and accommodate up to three. Space is the tradeoff for the Orchard Road location. Compare date-specific room rates, taxes and breakfast inclusions.<cite data-ref=\"https://www.yotel.com/en/hotels/yotel-singapore\"></cite><cite data-ref=\"https://www.ifastgm.com.sg/igm/bond/relatedBondDocument/1370/Hong%2520Fok%2520Supplemental%2520IM%2520dated%25203%2520November%25202017.pdf\"></cite></p><h3>Value positioning</h3><p>Forbes Vetted selected YOTEL Singapore as its best-value Singapore hotel in July 2024. This is an editorial recommendation; compare current date-specific rates before booking.<cite data-ref=\"https://www.forbes.com/sites/forbes-personal-shopper/article/best-hotels-in-singapore/\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g294265-d12559807-Reviews-YOTEL_Singapore_Orchard_Road-Singapore.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (4,885 reviews). Rooms/Service/Location/Cleanliness/Value: 4.1/4.4/4.7/4.5/4.2 of 5, rounded to nearest half point; snapshots can lag live totals. MICHELIN and Forbes Travel Guide property-name searches did not verify a current distinction. AAA property inspection was checked for Garden Grove; no Diamond count was verified. AAA country coverage does not cover the three overseas properties. Acclaim is unknown, not zero. The linked independent review is historical; the Castle Hotel review discloses a hosted stay. Forbes Vetted’s editorial value selection is distinct from Forbes Travel Guide awards and is not converted into an acclaim score.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.ttgasia.com/2017/11/02/yotel-singapore/",
+          "title": "Yotel Singapore",
+          "publishedDate": "2017-11-02",
+          "quote": "The room was compact"
+        }
+      ],
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2017-10-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ifastgm.com.sg/igm/bond/relatedBondDocument/1370/Hong%2520Fok%2520Supplemental%2520IM%2520dated%25203%2520November%25202017.pdf",
+            "title": "Hong Fok Corporation — Supplemental Information Memorandum, 3 November 2017, printed page 10",
+            "publishedDate": "2017-11-03",
+            "quote": "The hotel commenced operations on 1 October 2017."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2017-10-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ifastgm.com.sg/igm/bond/relatedBondDocument/1370/Hong%2520Fok%2520Supplemental%2520IM%2520dated%25203%2520November%25202017.pdf",
+            "title": "Hong Fok Corporation — Supplemental Information Memorandum, 3 November 2017, printed page 10",
+            "publishedDate": "2017-11-03",
+            "quote": "The hotel commenced operations on 1 October 2017."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Orchard Road, Singapore",
+    "topActivities": [
+      {
+        "title": "Pool break",
+        "category": "Relaxation",
+        "description": "Take a break at the hotel pool between city outings.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Orchard Road",
+        "category": "Culture",
+        "description": "Explore the shopping district from the hotel’s Orchard Road location.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Compact cabins",
+        "category": "Relaxation",
+        "description": "Choose the published room type and occupancy limit before booking.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-hotels-in-singapore/",
+    "priceBasis": "Forbes Vetted’s July 2024 editorial selection supports relative value positioning. Its historical starting rate is not a current quote. Rates on request; compare dates, taxes, occupancy and inclusions.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Relatively drier February and June–September",
+      "tempRange": "31°C–32°C normal daytime highs",
+      "weatherSummary": "WMO / Meteorological Service Singapore 1991–2020 normals. Hot and humid year-round; February and June–September are relatively drier, while November–January are wetter.",
+      "whyGo": "Use the monthly climate as planning guidance and check opening calendars and date-specific rates before booking.",
+      "climateZone": "Equatorial / Singapore",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 30.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 31.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 32.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 31.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 31.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 31.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 31.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 31.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 31.2,
+          "rainfall": "High"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 30.5,
+          "rainfall": "High"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "yotel-arrival",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2024-11/SOR_N1543_medium.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-singapore",
+        "credit": "YOTEL Singapore",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/yotel-arrival-9c4e850d71504b1c.webp",
+        "width": 1500,
+        "height": 1000,
+        "sha256": "9c4e850d71504b1caea82aba314775ba3a0d698c0dcb371a3576612f69b18053"
+      },
+      {
+        "key": "yotel-room",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2020-11/Yotel%20-%20Premium%20Queen%20Cabin%20Angle%202.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-singapore",
+        "credit": "YOTEL Singapore",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/yotel-room-f4199366ef3d2706.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "f4199366ef3d2706dffe4f906fc31230f48115833afceb34e92b06c2fc3cc9a9"
+      },
+      {
+        "key": "yotel-pool",
+        "imageSourceUrl": "https://www.yotel.com/sites/default/files/2021-01/SIN_N117.jpg",
+        "sourceUrl": "https://www.yotel.com/en/hotels/yotel-singapore",
+        "credit": "YOTEL Singapore",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/yotel-pool-f94c0e705890ab7a.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "f94c0e705890ab7ab48810492c81eb0a0375ebc4429f943c22f8478d37df1f19"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote saved.",
+      "No current property-specific MICHELIN / Forbes Travel Guide distinction or AAA Diamond count verified; acclaim left null.",
+      "No published engineering benchmark for buildout axes; scores remain null.",
+      "Translations left to the translation agent.",
+      "No verified property construction investment; price and priceCurrency remain null.",
+      "Use owner-confirmed 1 October operations date; later tourism guide references a November opening milestone."
+    ]
+  }
+]

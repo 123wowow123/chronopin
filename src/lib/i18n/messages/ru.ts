@@ -726,6 +726,12 @@ const ru: Messages = {
     ticketsHeading: 'Билеты',
     ticketsFree: 'Бесплатно',
     gameInfo: 'О игре',
+    sales: {
+      heading: 'Данные о продажах',
+      units: 'Продано единиц',
+      revenue: 'Выручка',
+      source: 'Источник',
+    },
     gameMaturity: 'Возрастной рейтинг',
     gamePlatforms: 'Платформы',
     taste: {

@@ -27,6 +27,7 @@ import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinGameInfo } from '@/components/pin/PinGameInfo';
+import { PinSales } from '@/components/pin/PinSales';
 import { PinCarPerf } from '@/components/pin/PinCarPerf';
 import { PinGasCarPerf } from '@/components/pin/PinGasCarPerf';
 import { PinGamePerf } from '@/components/pin/PinGamePerf';
@@ -136,7 +137,7 @@ import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSear
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinCompetitorJson } from '@/lib/competitors';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinTranslatedLocales, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinProTips, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinModelTraining, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinTranslatedLocales, pinCandidates, pinCompetitors, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinProject, pinPurpose, pinProTips, pinDam, pinMarketImpact, pinHasSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinGamePerf, pinAircraftPerf, pinVideoPerf, pinLlmPerf, pinModelTraining, pinServiceStatus, pinDining, pinFactory, pinIndustries, pinHotel, pinCriticReviews, pinGameInfo, pinSales, pinTaste, pinComments, pinUpdates, threadPins, pinCompanyHub, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { soft } from '@/server/util/soft';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
@@ -207,7 +208,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, purpose, proTips, dam, marketImpact, hasSiteShape, perf, gameInfo, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, modelTraining, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, project, purpose, proTips, dam, marketImpact, hasSiteShape, perf, gameInfo, sales, taste, carPerf, gasCarPerf, gamePerf, aircraftPerf, videoPerf, llmPerf, modelTraining, dining, factory, industries, hotel, criticReviews, candidates, competitors, ads, adsense, viewer, alternateNames, serviceStatus] = await Promise.all([
     soft(pinUpdates(pin.id), [], 'pinUpdates'),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -225,6 +226,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     soft(pinHasSiteShape(pin.id), false, 'pinHasSiteShape'),
     soft(pinPerf(pin.id), null, 'pinPerf'),
     pin.categories?.includes('Gaming') ? soft(pinGameInfo(pin.id), null, 'pinGameInfo') : null,
+    soft(pinSales(pin.id), [], 'pinSales'),
     soft(pinTaste(pin.id), null, 'pinTaste'),
     soft(pinCarPerf(pin.id), null, 'pinCarPerf'),
     soft(pinGasCarPerf(pin.id), null, 'pinGasCarPerf'),
@@ -322,6 +324,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {/* An earnings pin's EPS-vs-estimate and revenue-vs-earnings charts (Nasdaq), as on Yahoo Finance. */}
           {pin.tags?.some((tag) => tag.name === 'Earnings') ? <PinEarningsTrends pinId={pin.id} /> : null}
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
+          <PinSales rows={sales} t={t} className="mt-4" />
           <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
           <PinEciChart pinId={pin.id} has={modelChart} since={2025} className="mt-4" />
           <PinTimeHorizonChart pinId={pin.id} has={modelChart} className="mt-4" />

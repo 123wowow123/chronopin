@@ -718,6 +718,12 @@ const zh: Messages = {
     ticketsHeading: '门票',
     ticketsFree: '免费',
     gameInfo: '游戏信息',
+    sales: {
+      heading: '销售数据',
+      units: '销量',
+      revenue: '收入',
+      source: '来源',
+    },
     gameMaturity: '分级',
     gamePlatforms: '支持平台',
     taste: {

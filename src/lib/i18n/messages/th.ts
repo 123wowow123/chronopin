@@ -714,6 +714,12 @@ const th: Messages = {
     ticketsHeading: 'บัตร',
     ticketsFree: 'ฟรี',
     gameInfo: 'ข้อมูลเกม',
+    sales: {
+      heading: 'ตัวเลขยอดขาย',
+      units: 'จำนวนที่ขายได้',
+      revenue: 'รายได้',
+      source: 'แหล่งที่มา',
+    },
     gameMaturity: 'การจัดเรตติ้ง',
     gamePlatforms: 'แพลตฟอร์ม',
     taste: {

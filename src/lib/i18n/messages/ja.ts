@@ -717,6 +717,12 @@ const ja: Messages = {
     ticketsHeading: 'チケット',
     ticketsFree: '無料',
     gameInfo: 'ゲーム情報',
+    sales: {
+      heading: '販売実績',
+      units: '販売数',
+      revenue: '売上高',
+      source: '出典',
+    },
     gameMaturity: '年齢区分',
     gamePlatforms: '対応プラットフォーム',
     taste: {

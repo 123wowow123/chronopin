@@ -721,6 +721,12 @@ const vi: Messages = {
     ticketsHeading: 'Vé',
     ticketsFree: 'Miễn phí',
     gameInfo: 'Thông tin game',
+    sales: {
+      heading: 'Số liệu bán hàng',
+      units: 'Số lượng đã bán',
+      revenue: 'Doanh thu',
+      source: 'Nguồn',
+    },
     gameMaturity: 'Phân loại độ tuổi',
     gamePlatforms: 'Nền tảng',
     taste: {

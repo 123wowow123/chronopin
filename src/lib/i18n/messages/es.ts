@@ -717,6 +717,12 @@ const es: Messages = {
     ticketsHeading: 'Entradas',
     ticketsFree: 'Gratis',
     gameInfo: 'Datos del juego',
+    sales: {
+      heading: 'Cifras de ventas',
+      units: 'Unidades vendidas',
+      revenue: 'Ingresos',
+      source: 'Fuente',
+    },
     gameMaturity: 'Clasificación',
     gamePlatforms: 'Plataformas',
     taste: {
