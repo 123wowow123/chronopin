@@ -158,6 +158,10 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
   `Tacos Tierra Caliente` (`2003 W Alabama St`; local `21018`/`2020`, prod `21167`/`2010`; `11/11` priced via Square, `4` dish photos, `2` reviews, `4` PinMedia, `CHRONOPIN SELECTION`), `El Taconazo` (`4003 Fulton St`; local `21019`/`2021`, prod `21178`/`2021`; `7` core window items unpriced online, `4` dish photos, `1` review, `3` PinMedia, `CHRONOPIN SELECTION`), `Rosemeyer Bar-B-Q` (`2111 Riley Fuzzel Rd`, Spring; local `21020`/`2022`, prod `21179`/`2022`; `30/30` priced via Square, `3` dish photos, `1` review, `4` PinMedia, `MICHELIN BIB GOURMAND`), `Abu Omar Halal` (`7925 Westheimer Rd` truck, Toast `7927 Westheimer Rd`; local `21021`/`2023`, prod `21180`/`2023`; `65/65` priced via Toast, `7` dish photos, `1` review, `4` PinMedia, `CHRONOPIN SELECTION`), `Oh My Gogi! Food Truck` (`801 St Emanuel St`; local `21022`/`2024`, prod `21181`/`2024`; `14/14` Square `truckItems` priced, `7` dish photos, `1` review, `5` PinMedia, `CHRONOPIN SELECTION`).
   *Held:* `Clutch City Cluckers` (`5550 Val Verde St` no longer listed; moved brick-and-mortar to `5600 Richmond Ave`), `El Ultimo Taco Truck` (`7645 Long Point Rd` closed/inactive), `The Waffle Bus` (brick-and-mortar storefronts).
   *Traps:* `Oh My Gogi! Food Truck` (`801 St Emanuel St`) uses Square `truckItems` (`14` items) separately from the Galleria restaurant; `Abu Omar Halal`'s Westheimer truck sits at `7925 Westheimer Rd` while Toast lists `7927 Westheimer Rd`; Popmenu image URLs with `format=auto` can return AVIF when `Accept: image/avif` is sent—request `format=jpeg` explicitly before downloading/converting.
+- **Honolulu Food trucks done locally + prod (2026-11-21, 5 trucks -> `Top 03` unchanged, `Trucks 05`, `.scrape/round4-tabs-2026-11-21/`):**
+  `Giovanni's Shrimp Truck (Kahuku)` (`56-505 Kamehameha Hwy`; local `21035`/`2037`, prod `21184`/`2027`; `7/7` priced, `2` item photos, `2` reviews, `3` PinMedia), `Leonard's Malasadamobile (Waikele)` (`94-894 Lumiaina St`, Waipahu; local `21036`/`2038`, prod `21195`/`2038`; `8` sample items unpriced online, `2` item photos, `3` reviews, `5` PinMedia; dated to `2011` SFGate Waikele documentation, never 1952 Kapahulu store), `Da Bald Guy` (`56-565 Kamehameha Hwy`, Kahuku Sugar Mill; local `21037`/`2039`, prod `21196`/`2039`; `6` sample items unpriced online, `3` item photos, `2` reviews, `5` PinMedia), `Five Star Poke` (`206 Kapuni St`, Waikiki; local `21038`/`2040`, prod `21197`/`2040`; `5` sample items unpriced online, `2` item photos, `2` reviews, `3` PinMedia), `Jenny's Shrimp` (`66-532 Kamehameha Hwy`, Haleiwa; local `21039`/`2041`, prod `21198`/`2041`; `6` sample items unpriced online, `3` item photos, `3` reviews, `4` PinMedia), all `CHRONOPIN SELECTION`.
+  *Held:* `Hono's Shrimp Truck`, `Mike's Huli Chicken`, `North Shore Tacos (Sharks Cove)` (site Cloudflare-gated).
+  *Traps:* `jennysshrimptruck.zoyaf.com` publishes unofficial `"Price (Approx.)"` estimates—exclude it and use `@jenny_s_shrimp`; verify Google Maps/blog galleries on contact sheets (`NateEatsHawaii` Kahuku Giovanni's shot pictured adjacent `Corn Stars BBQ`, and its Waikele Malasadamobile entry showed the Kapahulu brick store instead of the red-and-white trailer).
   Remaining US/global cities not started.
 
 ## Iconic dishes tab (added 2026-11-20, San Diego first)
@@ -272,14 +276,36 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
     online, 3 dish photos, 1 review, 5 PinMedia), `Parker's Restaurant` (`60 School St`, `Boston cream pie`; local `21016`/`2018`, prod `21176`/`2019`;
     `4` signatures unpriced due to `menus.omnihotels.com` TLS cert failure, 3 dish photos, 1 review, 5 PinMedia), `James Hook & Co.` (`440 Atlantic Ave`,
     `Lobster roll`; local `21017`/`2019`, prod `21177`/`2020`; `52`/`51` priced, 3 dish photos, 1 review, 5 PinMedia).
+  * **San Francisco** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `.scrape/round4-tabs-2026-11-21/`): `Swan Oyster Depot` (`1517 Polk St`,
+    `Dungeness crab & Sicilian sashimi`; local `21023`/`2025`, prod `21182`/`2025`; `8` sample items unpriced, 3 item photos, 3 reviews, 5 PinMedia),
+    `Golden Boy Pizza` (`542 Green St`, `Clam & garlic focaccia square slice`; local `21024`/`2026`, prod `21185`/`2028`; `10/10` priced, 2 item photos,
+    2 reviews, 4 PinMedia), `House of Prime Rib` (`1906 Van Ness Ave`, `Tableside carved 21-day aged prime rib`; local `21025`/`2027`, prod `21186`/`2029`;
+    `8` sample items unpriced, 3 item photos, 2 reviews, 5 PinMedia), `Tadich Grill` (`240 California St`, `Seafood cioppino & mesquite sole`; local
+    `21026`/`2028`, prod `21187`/`2030`; `10/9` priced from May 2026 PDF, 2 item photos, 3 reviews, 5 PinMedia), `Zuni Café` (`1658 Market St`,
+    `Brick-oven roast chicken & bread salad`; local `21027`/`2029`, prod `21188`/`2031`; `8/1` priced [`$75` Chicken for Two], 3 item photos, 3 reviews,
+    5 PinMedia), `Tartine Bakery` (`600 Guerrero St`, `Morning bun & country sourdough`; local `21028`/`2030`, prod `21189`/`2032`; `9/9` priced from PDF,
+    3 item photos, 3 reviews, 5 PinMedia). *Held:* `La Taqueria` (`lataqueriasf.net/menu` empty; swapped to `Golden Boy Pizza`).
+  * **Seattle** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `.scrape/round4-tabs-2026-11-21/`): `Dick's Drive-In (Wallingford)` (`111 NE
+    45th St`, `Dick's Deluxe & hand-cut fries`; local `21029`/`2031`, prod `21183`/`2026`; `8/8` priced, 2 item photos, 2 reviews, 5 PinMedia), `Ivar's Acres
+    of Clams` (`1001 Alaskan Way Pier 54`, `White clam chowder & steamed clams`; local `21030`/`2032`, prod `21190`/`2033`; `8/8` priced, 4 item photos,
+    2 reviews, 5 PinMedia), `Pike Place Chowder` (`1530 Post Alley`, `New England clam chowder bread bowl`; local `21031`/`2033`, prod `21191`/`2034`; `8`
+    sample items unpriced [Toast Cloudflare 403], 5 item photos, 3 reviews, 4 PinMedia), `Beecher's Handmade Cheese` (`1600 Pike Pl`, `"World's Best" Mac &
+    Cheese`; local `21032`/`2034`, prod `21192`/`2035`; `7` sample items unpriced [Toast Cloudflare 403], 2 item photos, 2 reviews, 5 PinMedia), `Piroshky
+    Piroshky` (`1908 Pike Pl`, `Smoked salmon pate piroshky`; local `21033`/`2035`, prod `21193`/`2036`; `9` sample items unpriced [JS-only Toast pickup],
+    2 item photos, 2 reviews, 5 PinMedia), `Un Bien (Ballard)` (`7302 15th Ave NW`, `#1 Caribbean Roast pork sandwich`; local `21034`/`2036`, prod
+    `21194`/`2037`; `9/8` priced, 3 item photos, 2 reviews, 4 PinMedia). *Held:* `Toshio's Teriyaki` (swapped to `Un Bien`).
   *Traps:* Ordering sites (`order.loumalnatis.com`, `order.portillos.com`, `slicelife.com`, `order.dripos.com`, Square/Toast) supply verified prices
-  where static brand sites omit them (`slicelife.com` for Joe's lists `$26`–`$40` whole pies, not counter slices); Al's `#1 Italian Beef` (`1079 W
-  Taylor St`, c. 1960), Joe's (`7 Carmine St`, 2005), Russ & Daughters (`179 E Houston St`, 1920), Termini Brothers (`1523 S 8th St` 1938 flagship vs
-  1921 shop at `1514 S 8th St`), and Tommy DiNic's (`1136 Arch St` RTM Stall B5 opened 1980; `51 N 12th St` absent from official sites) keep earlier
-  founding history in prose while `utcStartDateTime` uses the exact branch opening date (`estimated`). Keep cheesesteak invention neutral between
-  Pat's and Geno's. Note `Neptune Oyster`'s e-tab PDF/page omits lobster roll and raw bar items, `James Hook & Co.` publishes lower dine-in pricing on
-  `/dinein-menu` than marked-up Menufy, `Mike's Pastry` leaves `mikespastry.com/gallery/` unpriced online vs Goldbelly/Grubhub, and filter empty
-  `<tr>` rows from HTML tables (e.g. `johnsroastpork.com/menu-2/`). Leave translations to the translation agent. Remaining cities not started.
+  where static brand sites omit them (`slicelife.com` for Joe's lists `$26`–`$40` whole pies, not counter slices); `restaurantContentValidation` (`parseSpecialVenue`)
+  only permits `menu.coverage` in `['published', 'sample', 'link']` (using `'partial'` throws HTTP 400 `Invalid menu coverage`); `houseofprimerib.com` is an
+  aftermarket parked domain while the live official site runs at `houseofprimerib.net`; `swanoysterdepot.net` disclaims `"This is not the official website"` (use
+  Instagram `@swan.oyster.official`); `order.toasttab.com` and `northshoretacos.com` return Cloudflare 403 challenges (leave prices unset as `sample` rather than
+  scraping third-party aggregators); `Al's #1 Italian Beef` (`1079 W Taylor St`, c. 1960), `Joe's` (`7 Carmine St`, 2005), `Russ & Daughters` (`179 E Houston St`,
+  1920), `Termini Brothers` (`1523 S 8th St` 1938 flagship vs 1921 shop at `1514 S 8th St`), `Tommy DiNic's` (`1136 Arch St` RTM Stall B5 opened 1980), `Tadich
+  Grill` (`240 California St` 1967 move vs 1849 founding), and `Ivar's Acres of Clams` (`Pier 54` 1946 flagship vs 1938 fish bar) keep earlier founding history in
+  prose while `utcStartDateTime` uses the exact branch opening date (`estimated`). Keep cheesesteak invention neutral between Pat's and Geno's. Note `Neptune Oyster`'s
+  e-tab PDF/page omits lobster roll and raw bar items, `James Hook & Co.` publishes lower dine-in pricing on `/dinein-menu` than marked-up Menufy, `Mike's Pastry`
+  leaves `mikespastry.com/gallery/` unpriced online vs Goldbelly/Grubhub, and filter empty `<tr>` rows from HTML tables (e.g. `johnsroastpork.com/menu-2/`). Leave
+  translations to the translation agent. Remaining cities not started.
 - **Menu, price and photo pass (2026-11-20, local only; content 1977 Rubio's, 1978 Hodad's, 1979 Point Loma Seafoods):**
   - *Hodad's:* use the **branch's own site** (`hodadsoceanbeach.com/food-menu` and `/drink-menu`; the `hodadsburgers.com` landing page only links out).
     29 priced items + shakes/drinks, 11 operator menu photos. The page maps each photo to its item in the DOM: `img` inside the item block whose text has `$`

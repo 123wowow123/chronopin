@@ -527,3 +527,7 @@ yes check Los Angeles or Austin trucks on production
 
 
 generate video on activites / food / stay per city. post to youtube shorts
+
+
+do
+Round 13+
