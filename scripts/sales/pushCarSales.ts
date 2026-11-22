@@ -13,7 +13,7 @@ let n = 0, rows = 0;
 for (const f of readdirSync(dir).filter((x) => x.endsWith('.out.json')).sort()) {
   for (const p of JSON.parse(readFileSync(`${dir}/${f}`, 'utf8')).pins) {
     const figures = p.figures.filter((g: any) => ok.has(`${p.pinId}|${g.sourceUrl}|${g.quote}`));
-    if (!figures.length || n >= limit) continue;
+    if (figures.length < 2 || n >= limit) continue;
     try {
       await savePinSales(p.pinId, figures);
       const prod = await pushPinSales(p.pinId, figures).catch((e) => `PROD FAIL ${e.message}`);

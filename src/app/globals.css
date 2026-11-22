@@ -584,6 +584,12 @@
   .rich-text p + ol {
     @apply mt-4;
   }
+  /* A paragraph after a list (e.g. "What it means:") gets the same gap as a
+     section heading above it. */
+  .rich-text ul + p,
+  .rich-text ol + p {
+    @apply mt-5;
+  }
   .rich-text > :first-child {
     @apply mt-0;
   }
