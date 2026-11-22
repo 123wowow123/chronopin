@@ -51,7 +51,7 @@ import { importCampaigns } from '../services/personCampaignsImport';
 import PersonCampaign from '../model/personCampaign';
 import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
 import { campaignRefreshDue, cycleOf } from '@/lib/campaigns';
-import { personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { pushPinSales, personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -67,6 +67,7 @@ import { ACTIONS, INSTRUMENTS, TRADER_SOURCES } from '@/lib/traders';
 import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
 import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
+import { salesStatus, savePinSales } from './productSales';
 import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
@@ -591,6 +592,35 @@ export const TOOLS: JobTool[] = [
       const result = await saveResearched(input);
       await act(ctx, { tool: 'save_industry_forecast', detail: `${result.slug}${result.production ? '; prod saved' : ''}` });
       return result;
+    },
+  },
+  // --- Sales figures on product pins (the productSales task) ---------------
+  {
+    name: 'product_sales_status',
+    description:
+      "Pins for the productSales task: `refresh` = pins that already show a Sales figures panel, least recently saved first (each with its row count, newest asOf date and when it was last saved), `candidates` = goods pins tagged Released in the last 120 days with no figure yet. At most `limit` (default 8, at most 15) per call; `remaining` is how many more wait. Research by the rules in daily-jobs.md#productsales, then save_pin_sales; pass pins judged to have nothing published in `skip`.",
+    input_schema: obj({ limit: num('At most this many pins, default 8, at most 15'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already handled or with nothing published this run' } }),
+    run: async (input, ctx) => {
+      const result = await salesStatus(int(input.limit, 8, 1, 15), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'product_sales_status', detail: `${result.refresh.length} to refresh, ${result.candidates.length} new candidate(s), ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_pin_sales',
+    description:
+      "Replaces a product pin's Sales figures panel with `figures`: [{ metric: 'units' | 'revenue', value (a number as stated, no estimates), currency (ISO, revenue only), asOf (YYYY-MM-DD the figure is dated), period (at most 80 characters, plain words such as 'Life to date' or 'First four days'), scope ('Worldwide'), sourceUrl (HTTPS page opened this run), quote (verbatim sentence, at most 500 characters) }]. Send every row the pin should show, existing ones included, newest figures plus the launch-window figure. Saved here, and on production when the run writes there.",
+    input_schema: obj({ pinId: num('Pin id'), figures: { type: 'array', items: { type: 'object' } } }, ['pinId', 'figures']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const rows = await savePinSales(pinId, input.figures);
+      expirePinPage(pinId);
+      const pushed = await pushPinSales(pinId, input.figures as unknown[]).catch((err) => {
+        log.warn(`pin ${pinId}'s sales figures did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_pin_sales', pinId, detail: `${rows.length} figure(s)${pushed ? '; prod saved' : ''}` });
+      return { pinId, figures: rows.length, production: pushed };
     },
   },
   // --- Competing products on goods pins (the productCompetitors task) -------

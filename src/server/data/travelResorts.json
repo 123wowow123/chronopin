@@ -2003,5 +2003,267 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Amsterdam, Netherlands",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole private room and confirm the published bed layout and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the shared kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Amsterdam by rail",
+        "category": "Culture",
+        "description": "Use nearby Amstel station to explore the city, allowing time to reach central sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+    "priceBasis": "Rates on request. Compare private family-room totals, occupancy, taxes, breakfast and extras; a shared dorm-bed rate is not a family-room quote.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare property rates",
+      "shoulderSeason": "Dates outside major holidays and city events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "6°C–23°C normal daytime highs",
+      "weatherSummary": "KNMI Schiphol station 240, 1991–2020 normals, used as regional guidance for Amsterdam. Rain occurs year-round; spring is relatively drier and summer is warmer.",
+      "whyGo": "Plan outdoor exploring around the season and keep indoor museum options available for rain. Check the forecast and date-specific prices separately.",
+      "climateZone": "Temperate maritime / Amsterdam",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 6.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 17.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 20.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 22.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 22.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 10,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.marriott.com/en-us/hotels/tyoox-moxy-tokyo-kinshicho/overview/",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Tokyo, Japan",
+    "topActivities": [
+      {
+        "title": "Social lobby",
+        "category": "Culture",
+        "description": "Relax in the design-led shared lounge or bar; purchases may cost extra."
+      },
+      {
+        "title": "City exploring",
+        "category": "Culture",
+        "description": "Use Kinshicho rail connections and check routes to your planned Tokyo sights."
+      },
+      {
+        "title": "Gym break",
+        "category": "Wellness",
+        "description": "Use the hotel fitness room between city outings; check current access conditions."
+      }
+    ],
+    "priceSource": "https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1",
+    "priceBasis": "Rates on request. MICHELIN and an independent review support relative value positioning; no current date-specific all-in quote is claimed.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for city exploring",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "JMA Tokyo station 1991–2020 normals: summers are hot and humid, and September–October have high normal rainfall. This is city-region guidance for Sumida.",
+      "whyGo": "Spring and autumn generally suit outdoor city walks. Allow for rain, check current forecasts and compare holiday and event rates separately.",
+      "climateZone": "Humid subtropical / Tokyo",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

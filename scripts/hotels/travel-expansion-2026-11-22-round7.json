@@ -1,0 +1,654 @@
+[
+  {
+    "key": "amstel",
+    "pin": {
+      "title": "MEININGER Hotel Amsterdam Amstel Opens",
+      "productName": "MEININGER Hotel Amsterdam Amstel",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+      "description": "A budget hybrid hotel beside Amsterdam Amstel station, with private family rooms, a shared guest kitchen and quick public transport connections.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Julianaplein 6, 1097 DN Amsterdam, Netherlands",
+      "latitude": 52.34584652928,
+      "longitude": 4.919433772992,
+      "utcStartDateTime": "2018-03-25T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s March 2018 operator release explicitly says the hotel opened March 25.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+          "title": "MEININGER Hotel Amsterdam Amstel — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/second-meininger-hotel-in-amsterdam/",
+          "title": "Second MEININGER hotel in Amsterdam",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.trip.com/hotels/amsterdam-hotel-detail-15679055/meininger-hotel-amsterdam-amstel/review.html",
+          "title": "Reviews of Meininger Hotel Amsterdam Amstel",
+          "confidence": 100
+        },
+        {
+          "url": "https://cdn.knmi.nl/knmi/map/page/klimatologie/klimaatatlas/tabel/stationsdata/klimtab_9120_240.pdf",
+          "title": "KNMI Schiphol 1991–2020 climate table",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hybrid hotel beside Amsterdam Amstel station, with private family rooms, a shared guest kitchen and quick public transport connections.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/\"></cite></p><h3>Family and budget stay</h3><p>Choose a private family room for your household rather than individual beds in a shared dorm. The hotel offers family rooms, a guest kitchen and shared common areas. Check the exact bed layout, occupancy, bathroom arrangement and any cot requirements for your selected room.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/\"></cite></p><p>Amstel station provides rail and metro connections for exploring the city. This is outside the central canal belt: allow public transport time for museums and central sights. Compare private-room totals with taxes, breakfast, parking, laundry and other extras; a dorm-bed lead price is a different product.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/\"></cite></p><h3>Opening</h3><p>The operator records opening on 25 March 2018 with 186 rooms and 806 beds. These are the opening figures rather than a claim about current inventory. The hotel forms part of Amstel Tower; no whole-tower construction price is attributed to the hotel.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/second-meininger-hotel-in-amsterdam/\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.trip.com/hotels/amsterdam-hotel-detail-15679055/meininger-hotel-amsterdam-amstel/review.html",
+      "basis": "Read 2026-11-22: opened Trip.com property snapshot with 40 reviews, Location/Service/Cleanliness each 8.8/10, divided by two and rounded to 4.5. Rooms and Value not separately published; null. Amenities is not relabelled as a room score. The small weighted review sample is not a live-count promise. Operator TrustYou figures were read separately but not mixed into this score. MICHELIN Amsterdam listing (38 hotels) and Forbes Amsterdam directory read; no match found, acclaim 0 for these checked 2026 selections. AAA coverage excludes Netherlands.",
+      "acclaim": 0,
+      "reviews": [
+        {
+          "url": "https://www.trip.com/hotels/amsterdam-hotel-detail-15679055/meininger-hotel-amsterdam-amstel/review.html",
+          "title": "Reviews of Meininger Hotel Amsterdam Amstel",
+          "publishedDate": "2026-10-10",
+          "quote": "It is good value for money."
+        }
+      ],
+      "rooms": null,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": null
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 2018-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/second-meininger-hotel-in-amsterdam/",
+            "title": "Second MEININGER hotel in Amsterdam",
+            "publishedDate": null,
+            "quote": "on March 25th"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening capacity",
+          "value": "186 rooms / 806 beds at opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/second-meininger-hotel-in-amsterdam/",
+            "title": "Second MEININGER hotel in Amsterdam",
+            "publishedDate": null,
+            "quote": "186 rooms and 806 beds"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2018-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/second-meininger-hotel-in-amsterdam/",
+            "title": "Second MEININGER hotel in Amsterdam",
+            "publishedDate": null,
+            "quote": "on March 25th"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Amsterdam, Netherlands",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole private room and confirm the published bed layout and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Guest kitchen",
+        "category": "Dining",
+        "description": "Prepare simple meals in the shared kitchen, subject to availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Amsterdam by rail",
+        "category": "Culture",
+        "description": "Use nearby Amstel station to explore the city, allowing time to reach central sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+    "priceBasis": "Rates on request. Compare private family-room totals, occupancy, taxes, breakfast and extras; a shared dorm-bed rate is not a family-room quote.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare property rates",
+      "shoulderSeason": "Dates outside major holidays and city events",
+      "lowSeason": "Date-specific; weather and room-rate seasons differ",
+      "tempRange": "6°C–23°C normal daytime highs",
+      "weatherSummary": "KNMI Schiphol station 240, 1991–2020 normals, used as regional guidance for Amsterdam. Rain occurs year-round; spring is relatively drier and summer is warmer.",
+      "whyGo": "Plan outdoor exploring around the season and keep indoor museum options available for rain. Check the forecast and date-specific prices separately.",
+      "climateZone": "Temperate maritime / Amsterdam",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 6.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 17.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 20.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 22.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 22.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 10,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 6.9,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "amstel-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/a/f/csm_MEININGER-Hotel-Amsterdam-Amstel-2_2-Bed-Room-Handicap-Accessible-3-WSC3239-Web_1c88b1fb5a.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/amstel-room-679dfbee63c8d757.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "679dfbee63c8d757b86b307a474096a77fe2301815c5fbfa6a047f1aeaa59b72"
+      },
+      {
+        "key": "amstel-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/f/d/csm_MEININGER-Hotel-Amsterdam-Amstel-Guest-Kitchen-5-WSC4369-Web_2cf879b876.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/amstel-kitchen-4c37864264f86661.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "4c37864264f86661b814c6c947d7aa7521f2c06010b8a9b610d6c37502430cbe"
+      },
+      {
+        "key": "amstel-exterior",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/6/2/csm_MEININGER-Hotel-Amsterdam-Amstel-Exterior-View-3-WSC4082R-Web_3321e5d6be.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/amsterdam/hotel-amsterdam-amstel/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/amstel-exterior-7fbab88025e5422b.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "7fbab88025e5422b5951c92c9fc79f36b5746fa7fa3361554f52d1bd278e8304"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No verified hotel-specific construction investment or matching cost benchmark; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Rooms and Value components unavailable in opened Trip.com table; not inferred from Amenities.",
+      "Booking pages required JavaScript; no unopenable Booking score is used.",
+      "Amsterdam City West is a different property and is not substituted."
+    ]
+  },
+  {
+    "key": "moxy",
+    "pin": {
+      "title": "Moxy Tokyo Kinshicho Opens",
+      "productName": "Moxy Tokyo Kinshicho",
+      "sourceUrl": "https://www.marriott.com/en-us/hotels/tyoox-moxy-tokyo-kinshicho/overview/",
+      "description": "A compact, design-led Kinshicho hotel with a social lobby, bar and gym; compare dates and allow train travel to other Tokyo neighbourhoods.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "3-4-2 Kotobashi, Sumida-ku, Tokyo 130-0022, Japan",
+      "latitude": 35.693540780662,
+      "longitude": 139.813453303563,
+      "utcStartDateTime": "2017-11-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Marriott’s May 22, 2018 release explicitly states that Moxy Tokyo Kinshicho and Osaka Honmachi opened together on November 1, 2017.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/tyoox-moxy-tokyo-kinshicho/overview/",
+          "title": "Moxy Tokyo Kinshicho — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000178.000011305.html",
+          "title": "モクシー東京錦糸町（Moxy Tokyo Kinshicho）24時間オープンのロビーラウンジで外国人向けスタンドアップコメディーショー開催",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho",
+          "title": "Moxy Tokyo Kinshicho",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662",
+          "title": "JMA Tokyo 1991–2020 normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g1066459-d12817652-Reviews-Moxy_Tokyo_Kinshicho-Sumida_Tokyo_Tokyo_Prefecture_Kanto.html",
+          "title": "Moxy Tokyo Kinshicho — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1",
+          "title": "MOXY Tokyo Kinshicho — MICHELIN Guide selection",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A compact, design-led Kinshicho hotel with a social lobby, bar and gym; compare dates and allow train travel to other Tokyo neighbourhoods.<cite data-ref=\"https://www.marriott.com/en-us/hotels/tyoox-moxy-tokyo-kinshicho/overview/\"></cite></p><h3>Compact city stay</h3><p>Marriott confirms the hotel opened on 1 November 2017. MICHELIN lists this 205-room property and describes it as a relatively affordable design option, with compact rooms and a shared social centre.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000178.000011305.html\"></cite><cite data-ref=\"https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1\"></cite></p><p>Condé Nast Traveler’s review supports its value positioning while noting small entry-level rooms. Compare your actual dates, room layout and total price; there is no current guaranteed low nightly rate.<cite data-ref=\"https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho\"></cite></p><p>The Kinshicho setting suits visitors comfortable using trains to explore Tokyo. Check your routes and room occupancy before booking. Breakfast, meals and other extras depend on the rate selected.<cite data-ref=\"https://www.marriott.com/en-us/hotels/tyoox-moxy-tokyo-kinshicho/overview/\"></cite></p><h3>Guide recognition</h3><p>The MICHELIN hotel selection is verified. A MICHELIN Key award is not claimed.<cite data-ref=\"https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g1066459-d12817652-Reviews-Moxy_Tokyo_Kinshicho-Sumida_Tokyo_Tokyo_Prefecture_Kanto.html",
+      "basis": "Read 2026-11-22: Tripadvisor property components Rooms/Service/Location/Cleanliness/Value 4.2/4.2/3.8/4.6/3.9 of 5, rounded to half points. Opened snapshot totals vary, so no live count is claimed. MICHELIN property selection verified in the current opened page; editorial acclaim 2 represents a guide listing, not a Key count. Forbes Tokyo directory checked, no property distinction verified. AAA coverage excludes Japan. Condé Nast Traveler provides an independent undated stay review.",
+      "acclaim": 2,
+      "reviews": [
+        {
+          "url": "https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho",
+          "title": "Moxy Tokyo Kinshicho",
+          "publishedDate": null,
+          "quote": "Value is the driving factor here, so entry-level rooms are minimal both in size and decor."
+        }
+      ],
+      "rooms": 4,
+      "service": 4,
+      "location": 4,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 2017-11-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://prtimes.jp/main/html/rd/p/000000178.000011305.html",
+            "title": "モクシー東京錦糸町（Moxy Tokyo Kinshicho）24時間オープンのロビーラウンジで外国人向けスタンドアップコメディーショー開催",
+            "publishedDate": "2018-05-22",
+            "quote": "2017年11月1日同時オープン"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Guest rooms",
+          "value": "205 rooms in MICHELIN property listing",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1",
+            "title": "MOXY Tokyo Kinshicho",
+            "publishedDate": null,
+            "quote": "205 Rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2017-11-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://prtimes.jp/main/html/rd/p/000000178.000011305.html",
+            "title": "モクシー東京錦糸町（Moxy Tokyo Kinshicho）24時間オープンのロビーラウンジで外国人向けスタンドアップコメディーショー開催",
+            "publishedDate": "2018-05-22",
+            "quote": "2017年11月1日同時オープン"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Tokyo, Japan",
+    "topActivities": [
+      {
+        "title": "Social lobby",
+        "category": "Culture",
+        "description": "Relax in the design-led shared lounge or bar; purchases may cost extra."
+      },
+      {
+        "title": "City exploring",
+        "category": "Culture",
+        "description": "Use Kinshicho rail connections and check routes to your planned Tokyo sights."
+      },
+      {
+        "title": "Gym break",
+        "category": "Wellness",
+        "description": "Use the hotel fitness room between city outings; check current access conditions."
+      }
+    ],
+    "priceSource": "https://guide.michelin.com/ie/en/hotels-stays/tokyo/moxy-tokyo-kinshicho-8912?viamichelin=1",
+    "priceBasis": "Rates on request. MICHELIN and an independent review support relative value positioning; no current date-specific all-in quote is claimed.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for city exploring",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "JMA Tokyo station 1991–2020 normals: summers are hot and humid, and September–October have high normal rainfall. This is city-region guidance for Sumida.",
+      "whyGo": "Spring and autumn generally suit outdoor city walks. Allow for rain, check current forecasts and compare holiday and event rates separately.",
+      "climateZone": "Humid subtropical / Tokyo",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "moxy-library",
+        "imageSourceUrl": "https://media.cntraveler.com/photos/60093a498ebb4b589a89b570/16:9/w_2560%2Cc_limit/Library_Fireplace_7913_V2.jpg",
+        "sourceUrl": "https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho",
+        "credit": "isaac maiselman / Courtesy Moxy Tokyo Kinshicho, via Condé Nast Traveler",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/moxy-library-92e2b747999bb04b.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "92e2b747999bb04bf34bbe639cdad5bbcc7461a49f310ae5944ffe2741aa453b"
+      },
+      {
+        "key": "moxy-room",
+        "imageSourceUrl": "https://media.cntraveler.com/photos/60093a508ebb4b589a89b576/16:9/w_2560%2Cc_limit/TYOOX_Guestroom_Queen_8117.jpg",
+        "sourceUrl": "https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho",
+        "credit": "isaac maiselman / Courtesy Moxy Tokyo Kinshicho, via Condé Nast Traveler",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/moxy-room-f9de4ffafea6c900.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "f9de4ffafea6c900b6974a3c6e18aa2dca00633317deb9890cc2a93a75acc857"
+      },
+      {
+        "key": "moxy-reception",
+        "imageSourceUrl": "https://media.cntraveler.com/photos/60093a498ebb4b589a89b56f/16:9/w_2560%2Cc_limit/Front_Desk_Day_8843.jpg",
+        "sourceUrl": "https://www.cntraveler.com/hotels/tokyo/moxy-tokyo-kinshicho",
+        "credit": "isaac maiselman / Courtesy Moxy Tokyo Kinshicho, via Condé Nast Traveler",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/moxy-reception-39064e82de2fed41.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "39064e82de2fed41121b6b12003dbaa0394c92dd05f46a3ce93e815bb78c501a"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No verified hotel-specific construction investment or matching cost benchmark; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN selection verified; no Key award or Forbes distinction asserted.",
+      "Marriott raw page download blocked but exact property page was read through web; Pacifica launch PDF timed out, so Marriott’s opened retrospective statement supplies the confirmed date."
+    ]
+  }
+]

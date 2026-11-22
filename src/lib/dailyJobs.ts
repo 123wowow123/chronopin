@@ -208,6 +208,11 @@ export const TASKS = {
     label: 'Industry forecast panels',
     summary: "Refresh the Census BTOS AI-adoption lines, then check each forecast panel's projection against its publisher's newest edition (Gartner, Goldman Sachs, FactSet, IDC) and save revisions, keeping the replaced figures as a grey dotted earlier edition.",
   },
+  productSales: {
+    group: 'scores',
+    label: 'Sales figures on product pins',
+    summary: "Re-check each pin's Sales figures panel against the publisher's newest announcement (units sold, revenue, launch-window figures), and look for a first figure on goods pins released in the last 120 days. Only stated, sourced figures with a verbatim quote; never an estimate.",
+  },
   marketImpact: {
     group: 'scores',
     label: 'Market-moving weights',
@@ -300,7 +305,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'sentiment'],
+      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'marketImpact', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: null,
@@ -350,7 +355,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

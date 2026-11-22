@@ -163,6 +163,22 @@ export async function pushEventInfo(pinId: number, reading: { fields: Record<str
   return true;
 }
 
+// A pin's sales figures (PUT /api/pins/:id/sales, the productSales task) to
+// production, found there by sourceUrl since ids differ; the readback must have
+// the same number of rows.
+export async function pushPinSales(pinId: number, figures: unknown[]): Promise<boolean> {
+  if (!prodBase()) return false;
+  const [local] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
+  if (!local?.sourceUrl) throw new Error(`Pin ${pinId}: missing sourceUrl for production sales`);
+  const token = await adminToken('product sales figures');
+  const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(local.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token });
+  if (found.rows.length !== 1) throw new Error(`Pin ${pinId}: production sourceUrl is missing or ambiguous`);
+  const id = found.rows[0].id;
+  const saved = await call<unknown[]>('PUT', `/api/pins/${id}/sales`, { token, body: { figures } });
+  if (!Array.isArray(saved) || saved.length !== figures.length) throw new Error(`Pin ${id}: sales readback verification failed`);
+  return true;
+}
+
 // A pin's tone score uses the lightweight score endpoint, never a full pin
 // PUT (which also starts search, media, source-wiki and other save work).
 // The server checks ownership and the hash again at the time of the write.
