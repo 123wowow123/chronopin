@@ -54,7 +54,7 @@ async function Construction({ searchParams }: Props) {
   const href = (y: number, all: boolean) => `/construction?year=${y}${all ? '&country=all' : ''}`;
   const pill = 'rounded-full border border-line px-3 py-1 text-sm hover:bg-panel';
   return (
-    <main className="mx-auto w-full max-w-[120rem] px-4 py-6">
+    <main className="mx-auto w-full max-w-[120rem] px-1.5 py-6 sm:px-4">
       <h1 className="text-2xl font-semibold">{t('guides.construction.heading', { year: range, place: everywhere ? t('guides.construction.worldwide') : t('guides.construction.usa') })}</h1>
       <p className="mt-1 max-w-3xl text-muted">{t('guides.construction.description', { site: siteName })}</p>
       <div className="my-4 flex flex-wrap items-center gap-2">

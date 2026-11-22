@@ -20,7 +20,7 @@ export function NearestRestaurantGuide() {
     return () => { active = false; };
   }, [router]);
   return (
-    <main className="mx-auto min-h-[75vh] max-w-7xl px-6 py-16">
+    <main className="mx-auto min-h-[75vh] max-w-7xl px-1.5 py-16 sm:px-6">
       <p role="status" className="text-muted">Finding your nearest restaurant guide…</p>
       <Link href="/restaurants/san-diego" className="mt-4 inline-block text-primary">Browse San Diego</Link>
     </main>

@@ -16,5 +16,5 @@ async function CardAds({ children }: { children: ReactNode }) {
 export default function RestaurantLayout({ children }: { children: ReactNode }) {
   // Keep this boundary mounted across city routes. During a navigation
   // transition React retains the current guide until the next one is ready.
-  return <Suspense fallback={<main className="mx-auto min-h-[75vh] max-w-7xl px-6 py-16" aria-busy="true"><p role="status"><span className={styles.citySpinner} aria-hidden="true" /> Loading the restaurant guide…</p></main>}><CardAds>{children}</CardAds></Suspense>;
+  return <Suspense fallback={<main className="mx-auto min-h-[75vh] max-w-7xl px-1.5 py-16 sm:px-6" aria-busy="true"><p role="status"><span className={styles.citySpinner} aria-hidden="true" /> Loading the restaurant guide…</p></main>}><CardAds>{children}</CardAds></Suspense>;
 }

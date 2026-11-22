@@ -157,7 +157,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         preference={personal}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
-      <nav aria-label={t('timeline.pagesLabel')} className="flex flex-wrap justify-between gap-x-4 gap-y-2 px-4 pb-20 text-sm lg:ms-[190px] lg:max-w-[906px]">
+      <nav aria-label={t('timeline.pagesLabel')} className="flex flex-wrap justify-between gap-x-4 gap-y-2 px-1.5 pb-20 text-sm sm:px-4 lg:ms-[190px] lg:max-w-[906px]">
         {page.links.previous ? (
           <Link href={`/${page.links.previous}`} prefetch={false} rel="prev" className="whitespace-nowrap">
             {isRtl(t.locale) ? '→' : '←'} {t('timeline.pinsBefore', { date: firstDay ? formatDayKey(firstDay, t.locale) : '' })}

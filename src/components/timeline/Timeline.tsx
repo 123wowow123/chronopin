@@ -753,7 +753,7 @@ export function Timeline({
 
   return (
     <TimelineVideoProvider setting={video}>
-      <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pe-[288px]">
+      <div className="px-[max(0.375rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pe-[288px]">
         <FloatingControls
           merge
           typing={sliderTyping}

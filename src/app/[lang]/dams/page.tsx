@@ -46,7 +46,7 @@ async function Dams() {
   );
   const tallest = totals.tallestId != null ? dams.find((d) => d.id === totals.tallestId) : null;
   return (
-    <main className="mx-auto w-full max-w-[90rem] px-4 py-6" data-dams-page>
+    <main className="mx-auto w-full max-w-[90rem] px-1.5 py-6 sm:px-4" data-dams-page>
       <h1 className="text-2xl font-semibold">{TITLE}</h1>
       <p className="mt-1 max-w-3xl text-muted">{DESCRIPTION}</p>
       {dams.length ? (
