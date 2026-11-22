@@ -1,0 +1,487 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4067,
+      "pinSourceUrl": "https://numero.com/en/fashion/fashion-week-en/chanel-a-glorious-debut-show-by-matthieu-blazy/",
+      "basis": "Exact Matthieu Blazy debut Chanel Spring/Summer 2026 ready-to-wear show (Grand Palais, 6 Oct 2025), not later Chanel collections. Independent outlet reviews quoted from pages opened; sentiment describes each passage. The Impression page has no reliable original-day label, so its date is null.",
+      "reviews": [
+        {
+          "url": "https://www.thezoereport.com/fashion/chanel-spring-summer-2026-review",
+          "title": "Matthieu Blazy’s Chanel Spring/Summer 2026 Collection Is Refreshingly Bold",
+          "quote": "it’s safe to say Blazy’s first show was a smashing success.",
+          "publishedDate": "2025-10-06",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://elle.com.sg/fashion/paris-fashion-week-spring-summer-2026-chanel-matthieu-blazy-review/",
+          "title": "Matthieu Blazy Reawakens Chanel",
+          "quote": "Under a constellation of brightly coloured planets lit like galactic lanterns, he closed out Paris Fashion Week on a soaring note",
+          "publishedDate": "2025-10-08",
+          "sentiment": 0.85
+        },
+        {
+          "url": "https://theimpression.com/chanel-spring-2026-fashion-show-review/",
+          "title": "Chanel Spring 2026 Fashion Show Review | The Impression",
+          "quote": "Blazy’s debut masterfully balanced the desire for renewal with the need to stay close to the brands core pillars",
+          "publishedDate": null,
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.whowhatwear.com/fashion/runway/chanel-paris-fashion-week-spring-summer-2026",
+          "title": "Inside Matthieu Blazy's S/S 2026 Chanel Collection | Who What Wear",
+          "quote": "It was arguably the most anticipated designer debut of the season.",
+          "publishedDate": "2025-10-06",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4191,
+      "pinSourceUrl": "https://hypebeast.com/2025/10/loewe-spring-summer-2026-ss26-paris-fashion-week-runway-show-collection-info-jack-mccollough-lazaro-hernandez",
+      "basis": "Exact Jack McCollough and Lazaro Hernandez debut Loewe Spring/Summer 2026 show (Paris, early Oct 2025). Publication days are from each page's published-time metadata.",
+      "reviews": [
+        {
+          "url": "https://www.whowhatwear.com/fashion/runway/loewe-paris-fashion-week-spring-2026",
+          "title": "A Review of Jack McCollough and Lazaro Hernandez's Loewe Debut | Who What Wear",
+          "quote": "which is why the spring 2026 collection was such an exciting hit.",
+          "publishedDate": "2025-10-03",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://highsnobiety.com/p/loewe-ss26/",
+          "title": "LOEWE's New Era Is More Modern, Still LOEWE",
+          "quote": "On that front, their debut was an absolute success.",
+          "publishedDate": "2025-10-03",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://hypebeast.com/2025/10/loewe-spring-summer-2026-ss26-paris-fashion-week-runway-show-collection-info-jack-mccollough-lazaro-hernandez",
+          "title": "Loewe SS26 Paris Fashion Week Runway Show Collection | Hypebeast",
+          "quote": "nurturing the established hallmarks of Loewe with respect, while injecting a burst of fresh energy into where Anderson left off.",
+          "publishedDate": "2025-10-03",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4076,
+      "pinSourceUrl": "https://www.irishtimes.com/business/2025/10/01/jonathan-anderson-presents-first-womenswear-collection-at-paris-fashion-week/",
+      "basis": "Exact Jonathan Anderson debut Dior womenswear show, Spring/Summer 2026 (Paris, 1 Oct 2025), not his Dior menswear. Mixed set: AP and Zoe Report passages are critical or qualified; AnOther and Highsnobiety praise. Highsnobiety piece is a later close-up (2 Jan 2026) of the same collection.",
+      "reviews": [
+        {
+          "url": "https://www.news4jax.com/entertainment/2025/10/01/andersons-dior-womenswear-debut-is-a-montage-of-ideas-but-not-a-new-look/",
+          "title": "Anderson’s Dior womenswear debut is a montage of ideas, but not a 'New Look'",
+          "quote": "Critics who wanted a single, defining jolt — a Slimane-style bolt of clarity or a Simons-like manifesto — will have left underwhelmed.",
+          "publishedDate": "2025-10-01",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.anothermag.com/fashion-beauty/16660/jonathan-anderson-dior-spring-summer-2026-show-review",
+          "title": "Jonathan Anderson’s Dior: Busting Ghosts, Finding Beauty and Looking New | AnOther",
+          "quote": "Anderson’s Dior was often beautiful – unconventionally, unexpectedly, occasionally unabashedly.",
+          "publishedDate": "2025-10-01",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thezoereport.com/fashion/dior-spring-summer-2026-show-review",
+          "title": "Dior's Spring/Summer 2026 Show Cast Jonathan Anderson's Fresh Vision For The Brand",
+          "quote": "Some fashion followers criticized the fresh offering, calling it a “work in progress” and “all over the place,” but a vast majority recognized the foundation Anderson was laying out.",
+          "publishedDate": "2025-10-01",
+          "sentiment": 0.0
+        },
+        {
+          "url": "https://www.highsnobiety.com/p/dior-jonathan-anderson-debut/",
+          "title": "Up Close With Jonathan Anderson's Debut Dior Collection",
+          "quote": "its real potency lies in how it elegantly strolls a middle ground between the glamourous and the grounded, the fantasy and reality.",
+          "publishedDate": "2026-01-02",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4224,
+      "pinSourceUrl": "https://ny1.com/nyc/all-boroughs/ap-top-news/2025/09/26/dario-vitale-debuts-as-versace-creative-director-in-intimate-event-with-vips-and-sex-charged-looks",
+      "basis": "Exact Dario Vitale debut Versace Spring/Summer 2026 collection (Milan, 26 Sep 2025). Wallpaper passage is descriptive, so scored near neutral.",
+      "reviews": [
+        {
+          "url": "https://www.thezoereport.com/fashion/versace-spring-summer-2026-review",
+          "title": "Versace's Spring/Summer 2026 Was An '80s Fever Dream",
+          "quote": "Ahead, see more highlights from Versace’s Spring/Summer 2026 show, which is truly the dawn of a new and exciting era.",
+          "publishedDate": "2025-09-27",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.whowhatwear.com/fashion/runway/versace-milan-fashion-week-spring-2026",
+          "title": "Inside Dario Vitale's Debut Versace Collection for S/S 26 | Who What Wear",
+          "quote": "Vitale's vision for the Italian fashion brand is bold, cinematic, and fresh",
+          "publishedDate": "2025-10-01",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.wallpaper.com/fashion-beauty/dario-vitale-debut-milan-versace-s-s-2026",
+          "title": "Dario Vitale makes sexually-charged debut for Versace, digging into to the Gianni Versace’s 1980s archive | Wallpaper*",
+          "quote": "the show itself was a departure from the glossy, bombshell glamour which defined Donatella Versace’s tenure",
+          "publishedDate": "2025-09-27",
+          "sentiment": 0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4082,
+      "pinSourceUrl": "https://www.wallpaper.com/fashion-beauty/gucci-aw-2026-demna-debut-runway-set",
+      "basis": "Exact Demna's first Gucci runway show (Primavera, Milan, 27 Feb 2026). Mixed: Metal Magazine and The Impression praise energy; Glamcult criticizes the silhouettes. Glamcult and The Impression pages carry no reliable original-day label, so dates are null.",
+      "reviews": [
+        {
+          "url": "https://metalmagazine.eu/en/post/gucci-fw-2026",
+          "title": "Gucci F/W 2026 | Metal Magazine",
+          "quote": "it is safe to say this has been one of the most discussed debuts in years",
+          "publishedDate": "2026-03-02",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.glamcult.com/?p=91522",
+          "title": "Gucci FW26 by Demna",
+          "quote": "Demna’s mischief still shines through the at-times flat, sterile silhouettes",
+          "publishedDate": null,
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://theimpression.com/gucci-fall-2026-fashion-show-review/",
+          "title": "Gucci Fall 2026 Fashion Show Review | The Impression",
+          "quote": "Demna infused Gucci with a new energy that felt thrilling, rather than a pandering to market expectations.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4410,
+      "pinSourceUrl": "https://about.puma.com/en/newsroom/product-and-brand-news/2025/15-09-2025-puma-and-tyrese-haliburton-confirm-hali-1-opal",
+      "basis": "Exact PUMA Hali 1 basketball shoe (Tyrese Haliburton). WearTesters performance review (Puma supplied a pair, no content control per the site) and HoopsGeek pros/cons summary; HoopsGeek page carries no single publication date.",
+      "reviews": [
+        {
+          "url": "https://weartesters.com/puma-hali-1-performance-review",
+          "title": "Puma Hali 1 Performance Review - WearTesters",
+          "quote": "The Puma Hali 1 is a very solid debut signature shoe for Tyrese Haliburton, offering a great balance of performance with it’s cushion and traction.",
+          "publishedDate": "2025-09-29",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thehoopsgeek.com/shoe-reviews/puma-hali-1/",
+          "title": "Puma Hali 1 - Review, Deals ($60), Pics of 7 Colorways",
+          "quote": "Fantastic traction performance Support and lockdown work well",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4539,
+      "pinSourceUrl": "https://www2.hm.com/en_asia3/editorial/inspiration/presenting-stella-mccartney-hm-collaboration.html",
+      "basis": "Exact H&M x Stella McCartney collection (on sale 7 May 2026), not the 2005 collaboration.",
+      "reviews": [
+        {
+          "url": "https://www.hellomagazine.com/shopping/899891/h-and-m-stella-mccartney-collection-best-pieces-how-to-shop/",
+          "title": "H&M x Stella McCartney is their chicest collaboration yet - these are the seven pieces I'm ordering",
+          "quote": "There are several stand-out dresses, with a red mini that's arguably the star of the show",
+          "publishedDate": "2026-05-07",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://neofeed.com.br/finde/por-que-a-volta-de-stella-mccartney-a-hm-incomoda/en/",
+          "title": "Why Stella McCartney's return to H&M is causing concern - NeoFeed",
+          "quote": "By all accounts, the Stella McCartney + H&M collection has already been a success.",
+          "publishedDate": "2026-05-09",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4538,
+      "pinSourceUrl": "https://www2.hm.com/en_us/editorial/inspiration/introducing-glenn-martens-hm-collection.html",
+      "basis": "Exact H&M x Glenn Martens collection (launched 30 Oct 2025). Try-on editors; one passage notes a fit difficulty.",
+      "reviews": [
+        {
+          "url": "https://coveteur.com/glenn-martens-and-hm-collaboration-try-on",
+          "title": "We Tried On The Glenn Martens And H&M Collaboration",
+          "quote": "I love this foil bonded men's bomber jacket that you can manipulate into different shapes.",
+          "publishedDate": "2025-10-31",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.marieclaire.co.uk/fashion/h-and-m-x-glenn-martens",
+          "title": "H&M X Glenn Martens Try-On: Editor's Picks | Marie Claire UK",
+          "quote": "Standing at 5'4, I can confirm that wearing these thigh-high boots was no easy feat.",
+          "publishedDate": "2025-10-17",
+          "sentiment": -0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4540,
+      "pinSourceUrl": "https://abcnews.com/GMA/Shop/hm-wardrobenyc-collaboration/story?id=135358754",
+      "basis": "Exact H&M x WARDROBE.NYC collection (launched 6 Aug 2026). Editor try-on pieces; Zoe Report editor notes a fit caveat before styling it.",
+      "reviews": [
+        {
+          "url": "https://www.whowhatwear.com/fashion/affordable/hm-wardrobe-nyc-collab-try-on-2026",
+          "title": "The H&M X Wardrobe.NYC Collab Is Here—15 Pieces Selling Fast | Who What Wear",
+          "quote": "the balanced collection offers endless styling possibilities, with foundation pieces that will hold their own in our wardrobes for many years to come.",
+          "publishedDate": "2026-08-06",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thezoereport.com/fashion/wardrobenyc-hm-new-collaboration",
+          "title": "Wardrobe.NYC x H&M's New Collaboration Has Everything You Need For A Perfect Outfit",
+          "quote": "I have to admit, because of my petite frame, strong-shouldered tops and jackets are tricky for me to pull off.",
+          "publishedDate": "2026-08-06",
+          "sentiment": 0.0
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4541,
+      "pinSourceUrl": "https://hmgroup.com/news/announcing-elie-saab-hm-a-celebration-of-glamour-and-timeless-elegance/",
+      "basis": "Exact Elie Saab x H&M collection (on sale 22 Oct 2026). Stylist page has no readable publication date, so null.",
+      "reviews": [
+        {
+          "url": "https://www.stylist.co.uk/fashion/best-hm-elie-saab-collaboration-fashion-buys/1121516",
+          "title": "H&M x Elie Saab collaborations: best fashion buys",
+          "quote": "The funnel-collar leather jacket is so cool and is bound to sell out fast.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4544,
+      "pinSourceUrl": "https://corporate.target.com/press/release/2026/07/target-brings-rosie-assoulin-s-bold,-joyful-designs-to-guests-at-an-incredible-value",
+      "basis": "Exact Rosie Assoulin x Target collection (25 Jul 2026). Preview-based editor opinion, not a long-term wear test.",
+      "reviews": [
+        {
+          "url": "https://fashionweekdaily.com/rosie-assouline-target-collaboration/",
+          "title": "Rosie Assouline x Target Is Utterly Charming - Daily Front Row",
+          "quote": "My favorite thing about this collection — and all of Rosie’s work — is her ability to pair bold silhouettes, expressive color and an unmistakable point of view with pieces that feel effortless to wear.",
+          "publishedDate": "2026-07-21",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4270,
+      "pinSourceUrl": "https://www.victoriassecret.com/us/vs/vsinsider/fashion-show/2026-show-location",
+      "basis": "Exact 2026 Victoria's Secret Fashion Show (Los Angeles, Oct 2026). Mixed: NYT critic strongly negative, Her Campus mixed, Who What Wear positive.",
+      "reviews": [
+        {
+          "url": "https://thenightly.com.au/lifestyle/fashion/the-new-york-times-victorias-secret-brings-back-the-fantasy-bra-and-an-old-stereotype-of-sexy-c-23051650",
+          "title": "THE NEW YORK TIMES: Victoria’s Secret brings back the fantasy bra — and an old stereotype of sexy | The Nightly",
+          "quote": "By reverting to these old gender stereotypes, VS is reverting to a time when “sexy” was defined by the male gaze and catering to it.",
+          "publishedDate": "2026-10-21",
+          "sentiment": -0.8
+        },
+        {
+          "url": "https://www.hercampus.com/?p=2280905",
+          "title": "2026 Victoria's Secret Runway Review",
+          "quote": "I feel like it was missing that “wow factor.”",
+          "publishedDate": "2026-10-28",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.whowhatwear.com/fashion/runway/victorias-secret-fashion-show-2026",
+          "title": "The Most Iconic Victoria's Secret Fashion Show 2026 Looks | Who What Wear",
+          "quote": "the result feels like a love letter to the Victoria's Secret shows of the 2000s and 2010s.",
+          "publishedDate": "2026-10-19",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4068,
+      "pinSourceUrl": "https://www.cnn.com/2025/12/03/style/chanel-metiers-art-show-new-york",
+      "basis": "Exact Chanel Metiers d'Art 2026 show in a New York subway station (Matthieu Blazy, 3 Dec 2025). Dazed page has no readable date, so null.",
+      "reviews": [
+        {
+          "url": "https://www.thezoereport.com/fashion/chanel-metiers-dart-2026-show-review",
+          "title": "Chanel's Métiers D'Art 2026 Show In New York Was A Pop Celebration",
+          "quote": "demonstrating “a joyful cavalcade of personalities” as well as whimsical, bold takes on traditional Chanel design codes.",
+          "publishedDate": "2025-12-03",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.dazeddigital.com/fashion/article/69205/1/chanel-metiers-d-art-2026-new-york-subway-show-matthieu-blazy-ayo-edebiri",
+          "title": "Everything you missed at Chanel’s New York subway fashion show | Dazed",
+          "quote": "If the point of the Metiers D’Art show is to showcase the skill and precision of the house artisans, then Blazy and his team delivered on every front.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4057,
+      "pinSourceUrl": "https://laforma.club/milan-fashion-week-september-2026-schedule/",
+      "basis": "Exact Louise Trotter Bottega Veneta Spring/Summer 2027 show (Milan, 26 Sep 2026), her third collection. The Impression page has no reliable original-day label, so null.",
+      "reviews": [
+        {
+          "url": "https://www.whowhatwear.com/fashion/runway/bottega-veneta-milan-fashion-week-spring-summer-2027",
+          "title": "Kendall Jenner Closes the Bottega Veneta Show During MFW | Who What Wear",
+          "quote": "delivering what many critics are calling her best collection to date on Saturday.",
+          "publishedDate": "2026-09-28",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.anothermag.com/fashion-beauty/17511/bottega-veneta-louise-trotter-spring-summer-2027-ss27-review",
+          "title": "Louise Trotter’s Bottega Veneta Is in Full Bloom | AnOther",
+          "quote": "Trotter’s take on Bottega Veneta is warm and cuddly, her volumes inviting embrace",
+          "publishedDate": "2026-09-28",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://theimpression.com/bottega-veneta-spring-2027-fashion-show-review/",
+          "title": "Bottega Veneta Spring 2027 Fashion Show Review | The Impression",
+          "quote": "By shaving down materials and opening up intrecciato, Trotter brought greater ease, optimism, and seasonal adaptability to her evolving vision of the house.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4156,
+      "pinSourceUrl": "https://manofmany.com/watches/swatch-x-audemars-piguet-royal-oak-royal-pop-official",
+      "basis": "Exact Swatch x Audemars Piguet Royal Pop pocket watch (May 2026).",
+      "reviews": [
+        {
+          "url": "https://monochrome-watches.com/audemars-piguet-x-swatch-royal-pop-convertible-pocket-watch-sistem51-video-review-availability-price/",
+          "title": "In-Depth: Everything You Need to Know about the Audemars Piguet x Swatch Royal Pop (Live Photos & Video)",
+          "quote": "this highly anticipated and very cool Audemars Piguet x Swatch Royal Pop",
+          "publishedDate": "2026-05-12",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://watchesbysjx.com/2026/05/swatch-audemars-piguet-royal-pop.html",
+          "title": "The Surprising Royal Pop from Swatch and Audemars Piguet | SJX Watches",
+          "quote": "This could be seen as AP having a little fun on a project set in motion by a Swatch-obsessed former CEO, or long-term thinking to cultivate the next generation of customers.",
+          "publishedDate": "2026-05-13",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.wallpaper.com/watches-jewellery/swatch-audemars-piguet-royal-pop-collection",
+          "title": "Inside Swatch and Audemars Piguet's surprising collaboration | Wallpaper*",
+          "quote": "It’s inspired by Genta’s design language for the Royal Oak but is not a copy, bringing it to younger generations in a surprising format",
+          "publishedDate": "2026-05-14",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 3726,
+      "pinSourceUrl": "https://wwd.com/footwear-news/sneaker-news/alo-sunset-sneaker-release-info-1237998392/",
+      "basis": "Exact Alo Sunset low-profile suede sneaker; Marie Claire is a wear-test by its writer (sponsored-free sentence about blisters).",
+      "reviews": [
+        {
+          "url": "https://www.marieclaire.com/fashion/kendall-jenner-alo-yoga-sunset-sneakers/",
+          "title": "Kendall Jenner's New $225 Alo Sneakers Find Filled a Trend Gap in My Closet | Marie Claire",
+          "quote": "After wearing this sneaker all through outdoor yoga, I can happily report there wasn't a blister in sight.",
+          "publishedDate": "2025-08-06",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4545,
+      "pinSourceUrl": "https://www.haveagood-holiday.com/en/articles/uniqlo-u-2026-fall-winter-collection-confidence-in-form",
+      "basis": "Exact Uniqlo U Fall/Winter 2026 collection, Christophe Lemaire and Sarah-Linh Tran's final season. Stylist page has no readable date, so null.",
+      "reviews": [
+        {
+          "url": "https://www.stylerave.com/uniqlo-u-10th-anniversary-collection/",
+          "title": "Uniqlo U’s 10th Anniversary Collection Is A Finale Worth Shopping",
+          "quote": "For men building a fall wardrobe, the result is particularly strong.",
+          "publishedDate": "2026-09-15",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.insidehook.com/style/uniqlo-u-fall-winter-2026",
+          "title": "Uniqlo U's Farewell Collection Might Just Be Its Best Ever - InsideHook",
+          "quote": "Save the best for last.",
+          "publishedDate": "2026-09-14",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.stylist.co.uk/fashion/uniqlo-u-collection/1107759",
+          "title": "Uniqlo U 10 anniversary collection by Christophe Lemaire",
+          "quote": "Lemaire’s design aesthetic is clear in his collections for Uniqlo U, hence the success, with a focus on careful tailoring and timeless designs with an affordable price tag.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4154,
+      "pinSourceUrl": "https://monochrome-watches.com/all-the-new-patek-philippe-presented-at-watches-and-wonders-2026/",
+      "basis": "Exact Patek Philippe ref. 6105G-001 Celestial Sunrise and Sunset (Watches and Wonders 2026). SJX hands-on.",
+      "reviews": [
+        {
+          "url": "https://watchesbysjx.com/2026/05/patek-philippe-6105g-celestial-sunrise-sunset.html",
+          "title": "Hands On: Patek Philippe’s Celestial Goes to Space | SJX Watches",
+          "quote": "Some of Patek Philippe’s recent experiments with design have been so-so in attractiveness, but the ref. 6105G scores well, maybe even the best amongst the brand’s adventurous designs.",
+          "publishedDate": "2026-05-04",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6348,
+      "pinSourceUrl": "https://nationaljeweler.com/articles/14881-these-are-the-new-rolex-watches-for-2026",
+      "basis": "Rolex 2026 Oyster Perpetual centenary releases at Watches and Wonders 2026. Reviewers discuss the Oyster Perpetual range and the 41 100th Anniversary.",
+      "reviews": [
+        {
+          "url": "https://www.insidehook.com/watches/rolex-watches-and-wonders-2026",
+          "title": "The Best New Rolex Releases From Watches & Wonders 2026 - InsideHook",
+          "quote": "With its relatively subtle design and accessible 41mm size, the Oyster Perpetual 41 100th Anniversary seems poised as one of the standouts of Watches and Wonders 2026 and an instant classic.",
+          "publishedDate": "2026-04-15",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.t3.com/luxury/watches/i-tested-every-new-rolex-at-watches-and-wonders-2026-my-favourite-surprised-me",
+          "title": "I tested every new Rolex at Watches and Wonders 2026 – my favourite surprised me | T3",
+          "quote": "2026 has felt like a coming of age moment for this range.",
+          "publishedDate": "2026-04-18",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 3737,
+      "pinSourceUrl": "https://wwd.com/accessories-news/handbags/alo-luxury-handbag-launch-1238086014/",
+      "basis": "Exact Alo first luxury handbag collection (Aug/Sep 2025). Single reviewer passage; The Impression page date unreliable so null.",
+      "reviews": [
+        {
+          "url": "https://theimpression.com/?p=11709482",
+          "title": "Alo Launches First Luxury-Handbag Line | The Impression",
+          "quote": "The design choices—from hand-painted edges to removable pouches—demonstrate a deliberate effort to merge functional polish with a quiet luxury aesthetic.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ]
+    }
+  ]
+}

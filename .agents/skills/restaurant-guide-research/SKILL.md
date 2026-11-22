@@ -162,6 +162,13 @@ region shows in Specials like any venue. Code: `restaurantGuidePage.ts` (`trucks
   `Giovanni's Shrimp Truck (Kahuku)` (`56-505 Kamehameha Hwy`; local `21035`/`2037`, prod `21184`/`2027`; `7/7` priced, `2` item photos, `2` reviews, `3` PinMedia), `Leonard's Malasadamobile (Waikele)` (`94-894 Lumiaina St`, Waipahu; local `21036`/`2038`, prod `21195`/`2038`; `8` sample items unpriced online, `2` item photos, `3` reviews, `5` PinMedia; dated to `2011` SFGate Waikele documentation, never 1952 Kapahulu store), `Da Bald Guy` (`56-565 Kamehameha Hwy`, Kahuku Sugar Mill; local `21037`/`2039`, prod `21196`/`2039`; `6` sample items unpriced online, `3` item photos, `2` reviews, `5` PinMedia), `Five Star Poke` (`206 Kapuni St`, Waikiki; local `21038`/`2040`, prod `21197`/`2040`; `5` sample items unpriced online, `2` item photos, `2` reviews, `3` PinMedia), `Jenny's Shrimp` (`66-532 Kamehameha Hwy`, Haleiwa; local `21039`/`2041`, prod `21198`/`2041`; `6` sample items unpriced online, `3` item photos, `3` reviews, `4` PinMedia), all `CHRONOPIN SELECTION`.
   *Held:* `Hono's Shrimp Truck`, `Mike's Huli Chicken`, `North Shore Tacos (Sharks Cove)` (site Cloudflare-gated).
   *Traps:* `jennysshrimptruck.zoyaf.com` publishes unofficial `"Price (Approx.)"` estimates—exclude it and use `@jenny_s_shrimp`; verify Google Maps/blog galleries on contact sheets (`NateEatsHawaii` Kahuku Giovanni's shot pictured adjacent `Corn Stars BBQ`, and its Waikele Malasadamobile entry showed the Kapahulu brick store instead of the red-and-white trailer).
+- **Orlando Food trucks done locally + prod (2026-11-21, 5 trucks -> `Top 03` unchanged, `Trucks 05`, `.scrape/round5-tabs-2026-11-21/`):**
+  `The Pastrami Project` (`825 N Magnolia Ave`; local `21052`/`2054`, prod `21203`/`2044`; `11/11` priced via `pastramiproject.square.site`, `5` item photos, `3` reviews, `4` PinMedia, `2014-07-01` estimated), `Ceylon Hut (Ceylon Roti Hut)` (`609 Irvington Ave`; local `21053`/`2055`, prod `21214`/`2055`; `4` sample items unpriced online, `5` item photos, `2` reviews, `4` PinMedia, `2022-07-01` exact), `Piacere Wood Fired Pizza` (`609 Irvington Ave`; local `21054`/`2056`, prod `21215`/`2056`; `11/11` priced via `piacerepizza.online` Square catalog, `5` item photos, `2` reviews, `4` PinMedia, `2025-06-01` estimated), `Barrio Español` (`2207 E Michigan St`; local `21055`/`2057`, prod `21216`/`2057`; `5` sample items unpriced online, `4` item photos, `2` reviews, `4` PinMedia, `2024-05-01` exact), `La Taquería 503` (`2207 E Michigan St`; local `21056`/`2058`, prod `21217`/`2058`; `4` sample items unpriced online [Toast link behind Cloudflare challenge], `5` item photos, `3` reviews, `4` PinMedia, `2024-05-01` exact), all `CHRONOPIN SELECTION`.
+  *Traps:* `lataqueria503.com` footer prints `2207 East Michigan St. Orlando, FL 32807` whereas À La Cart SoDo is ZIP `32806`; Nominatim snapped `2207 E Michigan St` east to Conway and `825 N Magnolia Ave` to a road midpoint—use the US Census Geocoder for rooftop points (`geocode.json` `*_census`); leave translations to the translation agent.
+- **San Francisco Food trucks done locally + prod (2026-11-21, 5 trucks -> `Top 09` & `Iconic 06` unchanged, `Trucks 05`, `.scrape/round6-tabs-2026-11-21/`):**
+  `El Tonayense` (`1719 Harrison St`, Best Buy flagship; local `21069`/`2071`, prod `21231`/`2072`; `6` sample items unpriced [legacy `2011`/`2018` prices skipped], `1` item photo, `2` reviews, `3` PinMedia, `2006-01-01` estimated), `El Norteño Taco Truck` (`801 Bryant St`; local `21070`/`2072`, prod `21232`/`2073`; `11/11` priced via `orderelnortenotacotruck.com/order`, `1` item photo, `2` reviews, `3` PinMedia, `1996-01-01` estimated), `Firetrail Pizza` (`601 Mission Bay Blvd North`, SPARK Social SF; local `21071`/`2073`, prod `21220`/`2061`; `6` sample items unpriced, `2` item photos, `3` reviews, `4` PinMedia, `2016-06-01` estimated), `SPRO Coffee Lab (SPARK Social SF)` (`601 Mission Bay Blvd North`; local `21072`/`2074`, prod `21233`/`2074`; `12/12` priced via Square Mission Bay catalog, `3` item photos, `3` reviews, `4` PinMedia, `2017-01-01` estimated), `El Gallo Giro` (`998 Treat Ave`; local `21073`/`2075`, prod `21234`/`2075`; `5` sample items unpriced, `1` item photo, `3` reviews, `4` PinMedia, `2002-01-01` estimated), all `CHRONOPIN SELECTION`.
+  *Held:* `Street Meet Taco Truck` (`428 11th St` vs `777 Mariposa St` conflicting addresses, `0` major editorial hits).
+  *Traps:* `tonayense.com/menu` carries legacy `© 2011`/`2018` PDF pricing (`$3.00` tacos, `$8.50` burritos)—leave unpriced as `sample` rather than presenting legacy prices as current; `gallogiro.com` is an unrelated Southern California bakery chain—strictly exclude it in favor of Mission Local / Eater SF / Time Out SF; WOWSlider blog photos (`brian-coffee-spot.com`) carry white letterboxing margins and small bottom watermarks—crop cleanly before upload and do not attach Church St-specific review quotes (`filternotes.com`) to the Mission Bay trailer.
   Remaining US/global cities not started.
 
 ## Iconic dishes tab (added 2026-11-20, San Diego first)
@@ -294,6 +301,47 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
     Piroshky` (`1908 Pike Pl`, `Smoked salmon pate piroshky`; local `21033`/`2035`, prod `21193`/`2036`; `9` sample items unpriced [JS-only Toast pickup],
     2 item photos, 2 reviews, 5 PinMedia), `Un Bien (Ballard)` (`7302 15th Ave NW`, `#1 Caribbean Roast pork sandwich`; local `21034`/`2036`, prod
     `21194`/`2037`; `9/8` priced, 3 item photos, 2 reviews, 4 PinMedia). *Held:* `Toshio's Teriyaki` (swapped to `Un Bien`).
+  * **Miami** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `.scrape/round5-tabs-2026-11-21/`): `Joe's Stone Crab` (`11 Washington Ave, Miami Beach`,
+    `Florida stone crab claws & mustard sauce`; local `21040`/`2042`, prod `21201`/`2042`; `11/12` priced from Fall 2026 PDF [standalone Key Lime Pie price
+    omitted], 4 item photos, 3 reviews, 5 PinMedia, `1913-01-01` estimated), `Versailles Restaurant` (`3555 SW 8th St`, `Cuban sandwich, ropa vieja & La Ventanita
+    cafecito`; local `21041`/`2043`, prod `21204`/`2045`; `10/10` priced, 4 item photos, 3 reviews, 5 PinMedia, `1971-01-01` estimated), `Sanguich de Miami` (`2057
+    SW 8th St`, `El Cubano & Croqueta Preparada`; local `21042`/`2044`, prod `21205`/`2046`; `8` sample items unpriced online [Cloudflare 520/challenge on menu &
+    order pages], 5 item photos, 3 reviews, 5 PinMedia, `2018-01-01` estimated Calle Ocho flagship vs 2015 pop-up), `El Rey de las Fritas` (`1821 SW 8th St`, `Frita
+    Cubana & Frita Suprema`; local `21043`/`2045`, prod `21206`/`2047`; `8` sample items unpriced online, 5 item photos, 3 reviews, 4 PinMedia, `1979-01-01`
+    estimated), `La Carreta (Calle Ocho)` (`3632 SW 8th St`, `Vaca frita, lechón asado & ventanita cafecito`; local `21044`/`2046`, prod `21207`/`2048`; `8`
+    sample items unpriced online, 4 item photos, 2 reviews, 5 PinMedia, `1976-01-01` estimated), `Garcia's Seafood Grille & Fish Market` (`398 NW North River Dr`,
+    `Fresh stone crabs & whole yellowtail snapper`; local `21045`/`2047`, prod `21208`/`2049`; `8/10` priced [Whole Yellowtail Snapper & Fresh Stone Crabs market
+    price], 4 item photos, 3 reviews, 5 PinMedia, `1976-01-01` estimated dining room vs 1966 market).
+  * **Nashville** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `.scrape/round5-tabs-2026-11-21/`): `Prince's Hot Chicken (South Nashville)` (`5814
+    Nolensville Pike, Suite 110`, `Cayenne-crusted half chicken on white bread`; local `21046`/`2048`, prod `21202`/`2043`; `8/1` priced [`$5.00` Draft Beer], 5
+    item photos, 2 reviews, 4 PinMedia, `2016-09-01` estimated), `Hattie B's Hot Chicken (Midtown)` (`112 19th Ave S`, `Bone-in hot chicken, tenders & pimento
+    mac`; local `21047`/`2049`, prod `21209`/`2050`; `7` sample items unpriced [Toast Cloudflare challenge], 4 item photos, 3 reviews, 4 PinMedia, `2012-08-09`
+    exact), `Arnold's Country Kitchen` (`605 8th Ave S`, `Carved roast beef tray & chess pie`; local `21048`/`2050`, prod `21210`/`2051`; `7` sample items
+    unpriced on menu board PNG, 5 item photos, 3 reviews, 4 PinMedia, `1982-01-01` estimated), `Loveless Cafe` (`8400 Hwy 100`, `Scratchmade buttermilk biscuits &
+    country ham`; local `21049`/`2051`, prod `21211`/`2052`; `9/9` priced, 5 item photos, 2 reviews, 5 PinMedia, `1951-01-01` estimated), `Monell's (Germantown)`
+    (`1235 6th Ave N`, `Skillet fried chicken communal boarding-house spread`; local `21050`/`2052`, prod `21212`/`2053`; `6/6` priced, 4 item photos, 2 reviews, 4
+    PinMedia, `1995-11-23` exact), `Bolton's Spicy Chicken & Fish` (`624 Main St`, `Dry-rubbed spicy leg quarter & hot catfish`; local `21051`/`2053`, prod
+    `21213`/`2054`; `6` sample items unpriced on client-rendered site, 5 item photos, 2 reviews, 5 PinMedia, `1997-01-01` estimated).
+  * **Austin** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `Food trucks 05`, `.scrape/round6-tabs-2026-11-21/`): `Franklin Barbecue` (`900 E 11th St`,
+    `Post-oak smoked USDA Prime brisket`; local `21057`/`2059`, prod `21218`/`2059`; `12/12` priced, `2` item photos, `3` reviews, `5` PinMedia, `2011-03-01` estimated
+    brick-and-mortar vs 2009 trailer), `Terry Black's Barbecue` (`1003 Barton Springs Rd`, `Giant wood-smoked Dino beef rib & brisket`; local `21058`/`2060`, prod
+    `21221`/`2062`; `12/12` priced, `2` item photos, `3` reviews, `5` PinMedia, `2014-06-01` estimated), `Matt's El Rancho` (`2613 S Lamar Blvd`, `Bob Armstrong Dip &
+    Asadero Tacos`; local `21059`/`2061`, prod `21222`/`2063`; `11/11` priced, `2` item photos, `3` reviews, `5` PinMedia, `1986-12-01` estimated S Lamar vs 1952 downtown),
+    `Home Slice Pizza` (`1415 S Congress Ave`, `18-inch White Clam Pizza & Italian Assorted Sub`; local `21060`/`2062`, prod `21223`/`2064`; `11/11` priced from
+    `MainMenu_091626.pdf`, `2` item photos, `3` reviews, `5` PinMedia, `2005-11-01` estimated), `Juan in a Million` (`2300 E Cesar Chavez St`, `Don Juan El Taco Grande`;
+    local `21061`/`2063`, prod `21224`/`2065`; `12/12` priced, `1` item photo, `3` reviews, `4` PinMedia, `1980-07-01` estimated), `Kerbey Lane Cafe (Original)` (`3704
+    Kerbey Ln`, `Kerbey Queso & made-from-scratch pancakes`; local `21062`/`2064`, prod `21225`/`2066`; `11/11` priced, `3` item photos, `2` reviews, `4` PinMedia,
+    `1980-05-05` exact).
+  * **Houston** (`done 2026-11-21`; `Top restaurants 09`, `Iconic dishes 06`, `Food trucks 05`, `.scrape/round6-tabs-2026-11-21/`): `The Original Ninfa's on Navigation`
+    (`2704 Navigation Blvd`, `Tacos al Carbon (beef skirt steak fajitas) & Ninfarita`; local `21063`/`2065`, prod `21219`/`2060`; `11/11` priced from Oct 2026 PDF, `2`
+    item photos, `3` reviews, `5` PinMedia, `1973-07-13` exact), `The Breakfast Klub` (`3711 Travis St`, `Wings & Waffle and Katfish & Grits`; local `21064`/`2066`, prod
+    `21226`/`2067`; `11/11` priced from `tbk_menu.pdf`, `3` item photos, `3` reviews, `4` PinMedia, `2001-09-01` estimated), `Crawfish & Noodles` (`11360 Bellaire Blvd,
+    Suite 990`, `Viet-Cajun boiled crawfish in garlic butter`; local `21065`/`2067`, prod `21227`/`2068`; `8` sample items unpriced, `4` item photos, `3` reviews, `4`
+    PinMedia, `2008-01-01` estimated), `Goode Company Barbeque` (`5109 Kirby Dr`, `Mesquite brisket, Jalapeño Cheese Bread & Brazos Bottom Pecan Pie`; local
+    `21066`/`2068`, prod `21228`/`2069`; `10/10` priced from Kirby ToastTab, `3` item photos, `3` reviews, `4` PinMedia, `1977-01-01` estimated), `Brennan's of Houston`
+    (`3300 Smith St`, `Snapping Turtle Soup & tableside Bananas Foster`; local `21067`/`2069`, prod `21229`/`2070`; `12/12` priced [`Soups 1-1-1` $16 / `Chef's Package` $48],
+    `4` item photos, `3` reviews, `5` PinMedia, `1967-01-01` estimated), `The Original Kolache Shoppe` (`5404 Telephone Rd`, `Scratch Czech kolaches, Sausage Klobásníky &
+    Fajita Hand Pies`; local `21068`/`2070`, prod `21230`/`2071`; `11/11` priced, `3` item photos, `3` reviews, `5` PinMedia, `1956-01-01` estimated).
   *Traps:* Ordering sites (`order.loumalnatis.com`, `order.portillos.com`, `slicelife.com`, `order.dripos.com`, Square/Toast) supply verified prices
   where static brand sites omit them (`slicelife.com` for Joe's lists `$26`–`$40` whole pies, not counter slices); `restaurantContentValidation` (`parseSpecialVenue`)
   only permits `menu.coverage` in `['published', 'sample', 'link']` (using `'partial'` throws HTTP 400 `Invalid menu coverage`); `houseofprimerib.com` is an
@@ -304,8 +352,19 @@ Top restaurants, so Top's count includes iconic records. Code: `restaurantGuideP
   Grill` (`240 California St` 1967 move vs 1849 founding), and `Ivar's Acres of Clams` (`Pier 54` 1946 flagship vs 1938 fish bar) keep earlier founding history in
   prose while `utcStartDateTime` uses the exact branch opening date (`estimated`). Keep cheesesteak invention neutral between Pat's and Geno's. Note `Neptune Oyster`'s
   e-tab PDF/page omits lobster roll and raw bar items, `James Hook & Co.` publishes lower dine-in pricing on `/dinein-menu` than marked-up Menufy, `Mike's Pastry`
-  leaves `mikespastry.com/gallery/` unpriced online vs Goldbelly/Grubhub, and filter empty `<tr>` rows from HTML tables (e.g. `johnsroastpork.com/menu-2/`). Leave
-  translations to the translation agent. Remaining cities not started.
+  leaves `mikespastry.com/gallery/` unpriced online vs Goldbelly/Grubhub, and filter empty `<tr>` rows from HTML tables (e.g. `johnsroastpork.com/menu-2/`).
+  In Round 5: `Sanguich de Miami` returns Cloudflare `520` / challenge pages on menu/order links (`2018` Calle Ocho flagship vs `2015` pop-up); `garciasmiami.com`
+  hosts the riverfront dining menu (`1976` dining room vs `1966` fish market) whereas `garciabrosseafood.com` is the Shopify mail-order store; `Prince's Hot Chicken
+  (South Nashville)` uses the Nolensville Pike `2016-09` opening and exterior photo rather than `Fifth + Broad` Assembly Food Hall assets; apostrophes become `-s-`
+  in `/pin/<id>/<slug>` card links (match card links by `/pin/(\d+)/` regex rather than `tile.slug`); and `GET /api/admin/db/Pin` returns PostGIS `location`
+  (`SRID=4326;POINT(lng lat)`) rather than top-level `latitude`/`longitude` keys. In Round 6: Austin Chronicle's `"First Look: Black's Barbecue"` (`3110 Guadalupe St`)
+  covers Kent/Barrett Black's Lockhart spinoff rather than `Terry Black's Barbecue` (`1003 Barton Springs Rd`)—keep separate; `The Original Kolache Shoppe` (`5404
+  Telephone Rd`, `originalkolache.com`, Kevin Dowd, `1956`) is completely separate from the newer `Kolache Shoppe` chain (`kolacheshoppe.com`); `Crawfish & Noodles`'s
+  Wix `/hh-and-lunch-menu` subpage returns `"Application is no longer available"` and its `ORDER NOW` redirects to UberEats—keep regular items `sample` unpriced and
+  exclude `tb-static.uber.com` images; `goodecompanybarbeque.com` sits behind a SiteGround JS challenge while its official Kirby ordering catalog lives on ToastTab
+  (`order.toasttab.com/online/goode-company-barbeque-bbq1`); keep Mama Ninfa's fajita history balanced (popularized/introduced tacos al carbon broadly rather than
+  claiming uncontested invention); and `GET /api/admin/restaurant-content` defaults to `limit=100` (max `limit=1000`, `400` above `1000`), so preflight/audit quote
+  budgets must paginate `offset=0,1000,2000,...`. Leave translations to the translation agent. Remaining cities not started.
 - **Menu, price and photo pass (2026-11-20, local only; content 1977 Rubio's, 1978 Hodad's, 1979 Point Loma Seafoods):**
   - *Hodad's:* use the **branch's own site** (`hodadsoceanbeach.com/food-menu` and `/drink-menu`; the `hodadsburgers.com` landing page only links out).
     29 priced items + shakes/drinks, 11 operator menu photos. The page maps each photo to its item in the DOM: `img` inside the item block whose text has `$`

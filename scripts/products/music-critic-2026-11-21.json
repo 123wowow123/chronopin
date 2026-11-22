@@ -1,0 +1,563 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 4357,
+      "pinSourceUrl": "https://www.billboard.com/music/chart-beat/bts-returns-no-1-artist-100-debuts-13-songs-hot-100-arirang-1236211170/",
+      "basis": "Exact release: BTS's Arirang (20 Mar 2026), not earlier BTS albums. Reviews by NME (Rhian Daly), NPR, Rolling Stone Australia and The Korea Times read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/bts-arirang-review-3936294",
+          "title": "BTS – ‘Arirang’ review: Korea’s pop kings make a grand return",
+          "quote": "After nearly four years, BTS are back doing what they do best – serving as both ambassadors and explorers, fuelled by curiosity and creativity.",
+          "publishedDate": "2026-03-24",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.npr.org/2026/03/20/nx-s1-5753919/bts-arirang-kpop-comeback-review",
+          "title": "‘Arirang’ is BTS' return to the K-pop moment it created : NPR",
+          "quote": "Arirang is a full-circle moment that feels like a fulfillment of that promise.",
+          "publishedDate": "2026-03-20",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-album-reviews/bts-album-review-arirang-92771",
+          "title": "BTS Nails Its Comeback With 'Arirang'",
+          "quote": "That’s the power of Arirang — seven different voices, but united again and stronger than ever.",
+          "publishedDate": "2026-03-20",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.koreatimes.co.kr/entertainment/bts-arirang/20260320/bts-revisits-roots-swims-forward-on-new-album-arirang",
+          "title": "[REVIEW] BTS revisits roots, swims forward on new album 'ARIRANG' - The Korea Times",
+          "quote": "In an era when pop music often prizes stylistic ambiguity, BTS’ emotional directness may feel almost countercultural.",
+          "publishedDate": "2026-03-20",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4359,
+      "pinSourceUrl": "https://www.billboard.com/music/country/ella-langley-album-dandelion-announcement-1236164101/",
+      "basis": "Exact release: Ella Langley's second album Dandelion (10 Apr 2026), not Hungover or the standalone single. Reviews by NME (Kayleigh Watson), American Songwriter, Holler and Paste read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/ella-langley-dandelion-review-3940125",
+          "title": "Ella Langley – ‘Dandelion’ review: infectious, irresistible country pop for those who dare to dream bigger",
+          "quote": "Because, if we’re being honest, her wildcard authenticity and fiery free spirit is the reason all eyes are on her now.",
+          "publishedDate": "2026-04-15",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://americansongwriter.com/review-ella-langley-lets-the-breeze-in-on-dandelion",
+          "title": "Review: Ella Langley Lets the Breeze in on ‘Dandelion’ - American Songwriter",
+          "quote": "Simply put, Dandelion is a breath of fresh air—a long exhale after holding everything in just a little too long.",
+          "publishedDate": "2026-04-11",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.holler.country/news/general/ella-langley-dandelion-review",
+          "title": "Ella Langley \"Dandelion\" Review 2026: New Music, Highlights & Verdict",
+          "quote": "By the end, it’s clear she hasn’t just found her place—she’s carved it out entirely for herself, at the very top.",
+          "publishedDate": "2026-04-10",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.pastemagazine.com/music/ella-langley/ella-langley-dandelion-album-review",
+          "title": "Ella Langley, 'Dandelion' Album Review",
+          "quote": "Even when it feels like her tales are lacking in texture, particularly on the hometown fantasy of “Somethin’ Simple,” Dandelion arrives with a healthy level of assurance.",
+          "publishedDate": "2026-04-10",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4376,
+      "pinSourceUrl": "https://www.billboard.com/music/music-news/blackpink-new-album-deadline-release-date-1236154808/",
+      "basis": "Exact release: BLACKPINK's mini-album/EP DEADLINE (27 Feb 2026), not their earlier releases. Reviews by Clash (Robin Murray), NPR, Rolling Stone Australia and The Star (AP review, repost so date left null) read on their own pages; other dates are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.clashmusic.com/reviews/blackpink-deadline/",
+          "title": "BLACKPINK – [DEADLINE] | Reviews | Clash Magazine Music News, Reviews & Interviews",
+          "quote": "Extending outwards while remaining tethered to their core, the group tread the perfect line between evolution and honouring their trademark style.",
+          "publishedDate": "2026-02-27",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.npr.org/2026/03/05/nx-s1-5732970/blackpink-deadline-review-reunion",
+          "title": "'DEADLINE' finds Blackpink in competition with own legacy : NPR",
+          "quote": "Instead, DEADLINE submits an homage to a preexisting group identity that is starting to slip away.",
+          "publishedDate": "2026-03-05",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-album-reviews/blackpink-deadline-new-music-jump-review-91733",
+          "title": "Blackpink Are Back in Peak Form on 'Deadline'",
+          "quote": "But Deadline leaves you ready for more.",
+          "publishedDate": "2026-03-01",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thestar.com.my/lifestyle/entertainment/2026/03/01/039deadline039-review-blackpink039s-new-ep-is-a-fantastic-if-too-short-return-to-form",
+          "title": "'Deadline' review: Blackpink's new EP is a fantastic, if too short, return to form | The Star",
+          "quote": "Overall, the mini-album is a satisfying chapter in the band’s discography.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4377,
+      "pinSourceUrl": "https://variety.com/2026/music/news/noah-kahan-announces-new-album-the-great-divide-1236643577/",
+      "basis": "Exact release: Noah Kahan's The Great Divide (24 Apr 2026), not Stick Season. Reviews by Paste, The Upcoming and Rolling Stone Canada read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.pastemagazine.com/music/noah-kahan/noah-kahan-the-great-divide-album-review",
+          "title": "Noah Kahan, 'The Great Divide' Album Review",
+          "quote": "There is likely a very good Noah Kahan album somewhere inside The Great Divide, but right now it’s obscured by its sheer volume.",
+          "publishedDate": "2026-04-24",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.theupcoming.co.uk/2026/04/24/noah-kahan-the-great-divide-album-review/",
+          "title": "Noah Kahan – The Great Divide | Album review | The Upcoming",
+          "quote": "The Great Divide does not lean too heavily on the success of Stick Season, but rather expands upon it and acts as its fully realised older brother.",
+          "publishedDate": "2026-04-24",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://ca.rollingstone.com/noah-kahan-the-great-divide-review/",
+          "title": "Noah Kahan Is a Rock Star Now, and a Good Dude, Too, on ‘The Great Divide’ - Rolling Stone Canada",
+          "quote": "adds top-shelf studio juice to Kahan’s confessional songwriting and improves on its predecessor in other ways.",
+          "publishedDate": "2026-04-23",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4378,
+      "pinSourceUrl": "https://www.billboard.com/lists/drake-iceman-habibti-maid-of-honour-top-billboard-200-chart/",
+      "basis": "Exact release: Drake's May 2026 three-album drop (Iceman with Habibti and Maid of Honour), not earlier Drake albums. NME and NPR review all three records together; Variety, The FADER and HotNewHipHop review Iceman. Pages read directly; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/drake-iceman-habibti-maid-of-honor-review-3946845",
+          "title": "Drake – ‘Iceman’/‘Habibti’/’Maid Of Honor’ review: a stumbling rap king's valiant attempt to keep his crown",
+          "quote": "The trilogy doesn’t restore Drake’s invincibility, but beneath the spectacle and the streaming bait is an ageing superstar still stubbornly clinging onto his crown with both fists.",
+          "publishedDate": "2026-05-22",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://au.variety.com/2026/music/global/drake-iceman-album-review-36640/",
+          "title": "Drake's 'Iceman' Is Exactly the Fun and Vindictive Comeback Record He Needed: Album Review",
+          "quote": "It’s by no means his best album, but it feels like one of his most honest, perhaps his most nimble since “Scorpion.”",
+          "publishedDate": "2026-05-15",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.npr.org/2026/05/20/nx-s1-5823694/drake-iceman-maid-honour-habibti-review",
+          "title": "Drake's three-album 'Iceman' drop aims for max consumption : NPR",
+          "quote": "There is still a slickness to much of what he does, but it can feel spiritless, inert, in its service to the status quo.",
+          "publishedDate": "2026-05-20",
+          "sentiment": -0.6
+        },
+        {
+          "url": "https://www.thefader.com/2026/05/19/drake-iceman-review-exactly-what-needed-not-much-more",
+          "title": "ICEMAN did exactly what Drake needed (and not much more) | The FADER",
+          "quote": "At a pivotal moment in his career, it makes perfect sense that he’d recenter on his origins. That’s where legacies begin.",
+          "publishedDate": "2026-05-19",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://hotnewhiphop.com/995459-drake-iceman-album-review",
+          "title": "Drake \"ICEMAN\" Album Review",
+          "quote": "ICEMAN proves that Drake finally understands that he isn’t untouchable after all.",
+          "publishedDate": "2026-05-19",
+          "sentiment": 0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4383,
+      "pinSourceUrl": "https://consequence.net/2026/07/tyla-announces-apop-world-tour/",
+      "basis": "Exact release: Tyla's second album A*Pop (July 2026), not her 2024 debut or its singles. Reviews by NME, The FADER, RIFF and Beats Per Minute read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/tyla-apop-review-3958756",
+          "title": "Tyla – ‘A*Pop’ review: safe, polished pop that could’ve gone further",
+          "quote": "Tyla’s second album might be called ‘A*Pop’, but as someone earmarked for greatness, it falls short of earning top marks.",
+          "publishedDate": "2026-07-24",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://www.thefader.com/2026/07/24/tyla-a-pop-album-review",
+          "title": "Tyla’s revolution of African pop | The FADER",
+          "quote": "By spotlighting the multiple variants of amapiano and South African house and soul in her orbit on parts of A*POP, Tyla has achieved a new high for African music — if only she doubled down on that ambition more prominently.",
+          "publishedDate": "2026-07-24",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://riffmagazine.com/album-reviews/tyla-apop/",
+          "title": "ALBUM REVIEW: Tyla takes amapiano to global heights on 'A*POP' | RIFF",
+          "quote": "While “Water” introduced Tyla to the global pop landscape, A*POP suggests she’s here to reshape it.",
+          "publishedDate": "2026-07-24",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://beatsperminute.com/album-review-tyla-apop/",
+          "title": "Album Review: Tyla – A*Pop – Beats Per Minute",
+          "quote": "an album titled like a manifesto could stand to sound more like one. Still, the thing she set out to do, she did.",
+          "publishedDate": "2026-07-27",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4387,
+      "pinSourceUrl": "https://billboardphilippines.com/music/news/katseye-wild-ep-hybe-geffen-records/",
+      "basis": "Exact release: KATSEYE's third EP WILD (14 Aug 2026), not their earlier EPs. Reviews by NME (Rhian Daly), Melodic and an Indiana Daily Student column read on their own pages; the student column shows no machine-readable date so its date is null. Passages are mixed to negative; sentiment describes each passage, not a score.",
+      "reviews": [
+        {
+          "url": "https://nme.com/reviews/album/katseye-wild-ep-review-3962561",
+          "title": "KATSEYE – ‘Wild’ EP review: global girl group struggle to find the sweet spot",
+          "quote": "You’d hope by the time their eventual debut album comes around, they’ll have found the sweet spot between chart-friendly and boundary-pushing without compromising on quality or edge.",
+          "publishedDate": "2026-08-14",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://www.melodicmag.com/reviews/album-ep-reviews/katseye-wild-ep-review/",
+          "title": "Katseye's third EP, 'WILD,' brings chaotic, catchy tunes — EP Review - // MELODIC Magazine",
+          "quote": "“Hootie Frutti” makes for an earworm of a song.",
+          "publishedDate": "2026-08-18",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://idsnews.com/article/2026/08/katseye-new-ep-releases-refuses-to-use-member-talent",
+          "title": "COLUMN: KATSEYE’s new ‘WILD’ EP refuses to effectively use the girls’ talents - Indiana Daily Student",
+          "quote": "continue to give them pop slop that, despite being inherently catchy, isn’t musically interesting.",
+          "publishedDate": null,
+          "sentiment": -0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4395,
+      "pinSourceUrl": "https://consequence.net/2026/08/queens-of-the-stone-age-new-album-perfecth-single-insignificant-other-stream/",
+      "basis": "Exact release: Queens of the Stone Age's ninth album Perfecth (Matador, 30 Oct 2026), not earlier QOTSA albums. Reviews by NME (Andrew Trendell), Clash and The AU Review read on their own pages; publication days are the pages' own timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://nme.com/reviews/album/queens-of-the-stone-age-perfecth-album-review-3974374",
+          "title": "Queens Of The Stone Age – ‘Perfecth’ album review",
+          "quote": "Like life and love, the album is knowingly not perfect, but nothing is. You’d rather drift off a little less and be anchored down by a little more bite and brimstone, but what you’ve got is a record with open arms and an open mind to the last stretch of road ahead.",
+          "publishedDate": "2026-10-29",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.clashmusic.com/reviews/queens-of-the-stone-age-perfecth/",
+          "title": "Queens Of The Stone Age - Perfecth | Reviews | Clash Magazine Music News, Reviews & Interviews",
+          "quote": "A superb, eclectic, and fired up return",
+          "publishedDate": "2026-10-29",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.theaureview.com/?p=313415",
+          "title": "Queens of the Stone Age: Perfecth album review",
+          "quote": "an album that grabs you at first listen and improves with repeated spins.",
+          "publishedDate": "2026-10-30",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 4718,
+      "pinSourceUrl": "https://www.cp24.com/news/entertainment/2026/09/25/taylor-swift-releases-encore-to-her-hit-showgirl-album/",
+      "basis": "Exact release: Taylor Swift's The Life of a Showgirl: The Encore (four new songs added to the 2025 album, 25 Sep 2026), not the original Showgirl album. Reviews by t2 (Telegraph India), Atwood Magazine and The Boar (a student paper, no machine-readable date so null) read on their own pages. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://t2online.in/music/reviews/taylor-swift-showgirl-encore-review--four-songs--few-fixes/2008300",
+          "title": "Taylor Swift The Life of a Showgirl: The Encore review | t2ONLINE",
+          "quote": "The Encore makes Showgirl slightly better, but it doesn't fix it.",
+          "publishedDate": "2026-09-28",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://atwoodmagazine.com/tlse-taylor-swift-the-life-of-a-showgirl-the-encore-album-review-music-feature/",
+          "title": "Taylor Swift Adds One More Act to the Show in ‘The Life of a Showgirl: The Encore’ - Atwood Magazine",
+          "quote": "They feel spontaneous, playful and occasionally unruly, like Swift stepping back onto the stage after everyone thought the curtain had fallen.",
+          "publishedDate": "2026-10-06",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://theboar.org/2026/10/taylor-swift-the-encore-review/",
+          "title": "Is Taylor Swift’s ‘The Encore’ any better than ‘The Life of a Showgirl’? - The Boar",
+          "quote": "While the production outshines the main album in some senses, the lyricism is unclear",
+          "publishedDate": null,
+          "sentiment": -0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7386,
+      "pinSourceUrl": "https://www.billboard.com/lists/madonna-confessions-ii-number-one-billboard-200-chart/",
+      "basis": "Exact release: Madonna's Confessions II (3 Jul 2026), not the 2005 Confessions on a Dance Floor. Reviews by NME (Nick Levine), Paste, Variety and Far Out read on their own pages; publication days are the pages' timestamps. Far Out's piece is a 3/5 review with mixed framing. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/madonna-confessions-ii-review-3954470",
+          "title": "Madonna – 'Confessions II' review: thrilling return to the dancefloor",
+          "quote": "By drawing from her past, both personally and musically, Madonna has made her most vital album in over two decades. This grande dame still knows how to make us move.",
+          "publishedDate": "2026-07-02",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.pastemagazine.com/music/madonna/madonna-confessions-ii-album-review",
+          "title": "Review: Madonna is ready to party again on 'Confessions II'",
+          "quote": "In sticking to a simple formula, Madonna brings her longtime passion for dance music front and center",
+          "publishedDate": "2026-07-06",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://au.variety.com/2026/music/global/madonna-confessions-ii-album-review-38251/",
+          "title": "Madonna's 'Confessions II' Is Her Best Album in Decades: Review",
+          "quote": "Much like the lot of “Confessions II,” it’s a reminder that while the old Madonna may be long gone, Madonna is still here, reigning over the dance floor as though a second hasn’t ticked by.",
+          "publishedDate": "2026-07-03",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://faroutmagazine.co.uk/madonna-confessions-ii-album-review/",
+          "title": "Madonna - 'Confessions II' album review",
+          "quote": "there’s something optimistic about it. It looks forward to a hopeful future, one we were told didn’t actually exist.",
+          "publishedDate": "2026-07-03",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7391,
+      "pinSourceUrl": "https://www.officialcharts.com/albums/sienna-spiro-visitor-0/",
+      "basis": "Exact release: Sienna Spiro's debut album Visitor (3 Jul 2026), not her earlier singles/EPs. Reviews by NME (Hollie Geraghty) and Hot Press read on their own pages; publication days are the pages' timestamps. Slant and The Guardian pages were blocked to automated reading so are not quoted. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.nme.com/reviews/album/sienna-spiro-visitor-review-3954052",
+          "title": "Sienna Spiro – ‘Visitor’ review: a gifted vocalist finding her place in the spotlight",
+          "quote": "It’s not difficult to envision Spiro performing these songs centre stage with a live orchestra, like the ovation-worthy starlet she’s becoming. On ‘Visitor’, though, the artist behind the voice occasionally gets lost in the spotlight.",
+          "publishedDate": "2026-07-01",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.hotpress.com/music/album-review-sienna-spiro-visitor-23149076",
+          "title": "Album Review: Sienna Spiro, Visitor | Hotpress",
+          "quote": "In the end, Visitor is a rousing debut that places Sienna Spiro in the pantheon of great English neo-soul artists.",
+          "publishedDate": "2026-07-03",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7396,
+      "pinSourceUrl": "https://www.universalmusic.ca/press-releases/olivia-dean-releases-brand-new-track-man-i-need/",
+      "basis": "Exact release: Olivia Dean's single 'Man I Need' (third single from The Art of Loving), not the album. Reviews by NPR (critical) and 102.7 The Peak read on their own pages; dates are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.npr.org/2025/09/29/g-s1-90670/olivia-dean-man-i-need",
+          "title": "While the pop girls skewer boys, Olivia Dean’s 'Man I Need' has hope : NPR",
+          "quote": "Despite being billed as a song that isn't afraid of expression, \"Man I Need\" hedges, takes the easy way out, settles for sentimentality.",
+          "publishedDate": "2025-09-29",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://www.thepeak.fm/?p=39885",
+          "title": "Olivia Dean – “Man I Need” | Song of the Week | 102.7 THE PEAK | Alternative Vancouver",
+          "quote": "It’s a song about vulnerability wrapped in confidence, where longing dances with self-assuredness",
+          "publishedDate": "2025-11-10",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7398,
+      "pinSourceUrl": "https://www.whiskeyriff.com/2025/10/15/ella-langley-says-choosin-texas-was-inspired-by-miranda-lambert-getting-pulled-over-with-a-live-kangaroo-in-the-front-seat/",
+      "basis": "Exact release: Ella Langley's single 'Choosin' Texas' (lead single of Dandelion, 2025), not the album. Reviews by The Singles Jukebox (multi-critic panel; the quoted passage is Wayne Weizhen Zhang's blurb, page dated 2 Feb 2026) and Stay Free Radio (blog; page date is a republish timestamp so null). Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://thesinglesjukebox.com/?p=29690",
+          "title": "Ella Langley – Choosin’ Texas – The Singles Jukebox",
+          "quote": "Yes, the Miranda lineage here is clear and strong, but Langley’s precise delivery nails the conceit about place and lost love.",
+          "publishedDate": "2026-02-02",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.stayfreeradioip.com/post/ella-langley-choosin-texas-meaning-and-review",
+          "title": "Ella Langley Choosin' Texas Lyrics Meaning Explained",
+          "quote": "\"Choosin' Texas\" succeeds because it does not try to dazzle. It simply settles.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7400,
+      "pinSourceUrl": "https://www.billboard.com/music/music-news/olivia-rodrigo-new-song-the-cure-release-date-announced-1236251700/",
+      "basis": "Exact release: Olivia Rodrigo's single 'the cure' (22 May 2026), second single from you seem pretty sad for a girl so in love, not the album or 'drop dead'. Reviews by Clash (Robin Murray), Atwood Magazine and Consequence (page shows no machine-readable date so null) read on their own pages. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.clashmusic.com/?p=453843",
+          "title": "Olivia Rodrigo’s ‘The Cure’ Is Her Crowning Achievement | Reviews | Clash Magazine Music News, Reviews & Interviews",
+          "quote": "A wonderful piece of pop songwriting that revels in honesty on the biggest stage of all, it further underlines Olivia Rodrigo’s place as one of this generation’s defining icons.",
+          "publishedDate": "2026-05-22",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://atwoodmagazine.com/ortc-olivia-rodrigo-the-cure-song-review/",
+          "title": "Olivia Rodrigo Unravels Heartbreak from a New Perspective on “the cure” - Atwood Magazine",
+          "quote": "The duality of “drop dead” and “the cure” has made for a captivating introduction to Rodrigo’s latest era",
+          "publishedDate": "2026-06-12",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://concerts.consequence.net/articles/olivia-rodrigo-the-cure-stream-review",
+          "title": "Olivia Rodrigo’s New Single Is Called “the cure,” But Owes More to The Smashing Pumpkins | Consequence Live",
+          "quote": "unlike another possible reference, Taylor Swift’s “Blank Space,” Rodrigo’s narrator isn’t campy, but vulnerable.",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7401,
+      "pinSourceUrl": "https://www.officialcharts.com/chart-news/harry-styles-aperture-single-when-released",
+      "basis": "Exact release: Harry Styles's single 'Aperture' (23 Jan 2026), lead single of Kiss All the Time. Disco, Occasionally, not the album. Reviews by Clash, The FADER and Plugged In read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.clashmusic.com/?p=444052",
+          "title": "Harry Styles - 'Aperture'; The CLASH Verdict | Reviews | Clash Magazine Music News, Reviews & Interviews",
+          "quote": "I’d say Styles’ creative risk into this new genre will play out well for him.",
+          "publishedDate": "2026-01-23",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.thefader.com/2026/01/23/aperture-harry-styles-song-review",
+          "title": "“Aperture” by Harry Styles continues a sleepy dance pop trend | The FADER",
+          "quote": "It is, as some would say, a “vibe,” but it’s not the thrill of dance music.",
+          "publishedDate": "2026-01-23",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.pluggedin.com/track-reviews/harry-styles-aperture/",
+          "title": "Aperture - Plugged In",
+          "quote": "But it’s still lacking substance, so any potential growth remains hollow in a life stuck in party mode.",
+          "publishedDate": "2026-02-13",
+          "sentiment": -0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7402,
+      "pinSourceUrl": "https://www.promonews.tv/videos/2025/10/08/olivia-dean-so-easy-jake-erland/92812",
+      "basis": "Exact release: Olivia Dean's single 'So Easy (To Fall in Love)', not The Art of Loving as a whole. Reviews by The Singles Jukebox (multi-critic panel; the quoted passage is Jel Bugle's blurb, page dated 3 Feb 2026) and Neon Music (page timestamp unreliable so date null). Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://thesinglesjukebox.com/?p=29693",
+          "title": "Olivia Dean – So Easy (to Fall in Love) – The Singles Jukebox",
+          "quote": "Easy listening, bit bland, hard to feel anything much about it.",
+          "publishedDate": "2026-02-03",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://neonmusic.co.uk/?p=70565",
+          "title": "So Easy to Fall in Love Meaning: Who Wrote Olivia Dean's Hit | Neon Music",
+          "quote": "The rhythm stays loose and the muted trumpet shadows her vocal like a second thought that agrees with her.",
+          "publishedDate": null,
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7403,
+      "pinSourceUrl": "https://thewaltdisneycompany.com/news/taylor-swift-toy-story-5/",
+      "basis": "Exact release: Taylor Swift's single 'I Knew It, I Knew You' for Toy Story 5 (5 Jun 2026), not the Showgirl albums. Reviews by The Singles Jukebox (a multi-critic panel; the quoted passage is one writer's blurb, dated by the page 6 Jul 2026), Consequence (no machine-readable date, null) and Ratings Game Music (conflicting page/URL dates, null). Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://thesinglesjukebox.com/?p=29958",
+          "title": "Taylor Swift – I Knew It, I Knew You – The Singles Jukebox",
+          "quote": "“I Knew It, I Knew You” dares to answer: it doesn’t have to be. Not if you play along for these few minutes, and burrow so deeply into the Hollywood dream that for a moment it seems the only possible reality.",
+          "publishedDate": "2026-07-06",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://concerts.consequence.net/articles/taylor-swift-toy-story-5-i-knew-it-i-knew-you-stream",
+          "title": "Taylor Swift’s Toy Story 5 Single “I Knew It, I Knew You” Hits All the Right Oscar Notes | Consequence Live",
+          "quote": "the sort of aggressively pleasant and sweet track likely to slip into the Oscars race.",
+          "publishedDate": null,
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://ratingsgamemusic.com/2026/06/04/taylor-swift-brings-nostalgia-and-heart-to-i-knew-it-i-knew-you-from-toy-story-5/",
+          "title": "Taylor Swift Brings Nostalgia and Heart to “I Knew It, I Knew You” from Toy Story 5  | RGM",
+          "quote": "It is sweet without being overly sentimental, and it captures the spirit of Toy Story beautifully.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7404,
+      "pinSourceUrl": "https://www.universalmusic.ca/press-releases/ariana-grande-releases-highly-anticipated-single-hate-that-i-made-you-love-me/",
+      "basis": "Exact release: Ariana Grande's single 'hate that i made you love me' (29 May 2026), first single from petal, not the album. Reviews by Consequence (page shows no machine-readable date so null) and The Musical Hype read on their own pages. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://concerts.consequence.net/articles/ariana-grande-hate-that-i-made-you-love-me-new-song-stream",
+          "title": "Ariana Grande Plays It Too Safe on “hate that i made you love me”: Stream | Consequence Live",
+          "quote": "doesn’t tell us quite enough about what’s really going through Grande’s head",
+          "publishedDate": null,
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://themusicalhype.com/ariana-grande-hate-that-i-made-you-love-me-song-review/",
+          "title": "Ariana Grande, hate that i made you love me → Song Review",
+          "quote": "While this song is a bummer thematically because of forced love, there is nothing to hate about it – it’s quality pop.",
+          "publishedDate": "2026-06-03",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 7405,
+      "pinSourceUrl": "https://www.stereogum.com/2496044/olivia-rodrigo-drop-dead/music/",
+      "basis": "Exact release: Olivia Rodrigo's single 'drop dead' (17 Apr 2026), not the album you seem pretty sad for a girl so in love as a whole. Reviews by Clash (Robin Murray) and The Musical Hype read on their own pages; publication days are the pages' timestamps. Sentiment describes each passage, not a converted score.",
+      "reviews": [
+        {
+          "url": "https://www.clashmusic.com/?p=450844",
+          "title": "Olivia Rodrigo’s ‘drop dead’ Is Fuelled By Intense Feeling | Reviews | Clash Magazine Music News, Reviews & Interviews",
+          "quote": "A bold statement of intent, it reinforces Olivia Rodrigo’s place in pop’s heavenly pantheon.",
+          "publishedDate": "2026-04-17",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://themusicalhype.com/olivia-rodrigo-drop-dead-song-review/",
+          "title": "Olivia Rodrigo, drop dead → Song Review",
+          "quote": "Pop superstar Olivia Rodrigo brings the heat, and the infatuation, on “drop dead,” the lead single from her third studio album.",
+          "publishedDate": "2026-04-22",
+          "sentiment": 0.7
+        }
+      ]
+    }
+  ]
+}

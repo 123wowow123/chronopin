@@ -1,0 +1,675 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 20784,
+      "pinSourceUrl": "https://www.engadget.com/gaming/nintendo/the-nintendo-switch-2-arrives-on-june-5-132838214.html",
+      "basis": "Exact Nintendo Switch 2 console (2025), not the 2017 Switch. Four original hardware reviews opened (Engadget, Tom's Guide, Gizmodo, TechRadar); passages are praise for the hardware, dated by publication-day metadata. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/gaming/nintendo/nintendo-switch-2-review-more-of-what-you-love-120048430.html",
+          "title": "Nintendo Switch 2 review: More of what you love",
+          "quote": "The Switch 2 has everything that made the original so great, but now there's more of it to enjoy.",
+          "publishedDate": "2025-06-11",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.tomsguide.com/gaming/nintendo/nintendo-switch-2-console-review",
+          "title": "Nintendo Switch 2 review — no gimmicks here, just a fantastic hybrid console",
+          "quote": "Nintendo Switch 2 feels like the ultimate version of the Switch concept, taking everything great about its predecessor and buffing it to a fine sheen.",
+          "publishedDate": "2025-06-10",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://gizmodo.com/nintendo-switch-2-review-the-ultimate-handheld-and-its-not-even-close-2000615016",
+          "title": "Nintendo Switch 2 Review: The Ultimate Handheld and It's Not Even Close",
+          "quote": "The Switch 2 is the communal console for our current gaming era.",
+          "publishedDate": "2025-06-20",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.techradar.com/gaming/nintendo/nintendo-switch-2-review",
+          "title": "Nintendo Switch 2 review: an evolution in almost every way",
+          "quote": "The Nintendo Switch 2 is an apt name for the company's latest console, as it is essentially a more powerful version of its predecessor.",
+          "publishedDate": "2025-06-19",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19803,
+      "pinSourceUrl": "https://web.archive.org/web/20200917082957/https://www.polygon.com/2020/9/16/21323105/ps5-price-playstation-5-release-date-pre-orders",
+      "basis": "Exact Sony PlayStation 5 launch console (Nov 2020). Engadget and The Next Web launch reviews (original Nov 6, 2020 days) and Tom's Hardware's review (current page date is a later update, so publishedDate left null). Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/sony-PlayStation-5-review-130048353.html",
+          "title": "PlayStation 5 review: Great 4K gaming with an odd design",
+          "quote": "This is the ideal next-generation console from Sony, with powerful hardware, fast load times, a great controller and a choice selection of launch titles.",
+          "publishedDate": "2020-11-06",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://thenextweb.com/news/playstation-5-review-bold-and-beautiful",
+          "title": "PlayStation 5 review: Bold and beautiful",
+          "quote": "The PlayStation 5 is a brilliant console that will be a great showcase for next-gen games — whenever we eventually get them.",
+          "publishedDate": "2020-11-06",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomshardware.com/reviews/playstation-5-sony-ps5",
+          "title": "PlayStation 5 Review: Tower of Power",
+          "quote": "The Sony PlayStation 5 is a powerful game console with an incredible controller and tons of potential.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19784,
+      "pinSourceUrl": "https://www.pcworld.com/article/393454/microsofts-499-xbox-series-x-and-299-xbox-series-s-launch-november-10.html",
+      "basis": "Reviews of the Xbox Series X (the pin covers Series X and Series S; none of these passages claims to rate the Series S). Original TechCrunch (Nov 5) and The Next Web (Nov 11) days; Tom's Hardware and TechRadar page dates are later updates so publishedDate is null. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/reviews/xbox-series-x",
+          "title": "Xbox Series X Review: Game Pass to the Future",
+          "quote": "The Xbox Series X is a powerful console with good looks, quiet operation, and backwards compatibility for both games and accessories, launching Xbox into a new era and offering gamers a ton of choices in how they play.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://techcrunch.com/2020/11/05/review-the-xbox-series-x-is-ahead-of-its-time",
+          "title": "Review: Microsoft's Xbox Series X is ahead of its time",
+          "quote": "The Series X is just a giant black box that plays games better than any Xbox before it.",
+          "publishedDate": "2020-11-05",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://thenextweb.com/news/xbox-series-x-review",
+          "title": "Xbox Series X review: Give this beautiful cinderblock games",
+          "quote": "Overall, the Series X feels a little safe for a next-gen console, but only in the sense that its upgrades are not flashy ones.",
+          "publishedDate": "2020-11-11",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.techradar.com/reviews/xbox-series-x",
+          "title": "Xbox Series X review: a tower of power",
+          "quote": "The Xbox Series X utilizes its powerful specs to significantly reduce load times and improve game performance and visual fidelity.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19802,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/PlayStation_4",
+      "basis": "Exact original PlayStation 4 (Nov 2013). Engadget (Nov 14) and Fortune (Nov 13) launch-week reviews; bit-tech's UK launch review (page date is not clearly original, so null). Fortune's passage is critical. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2013-11-14-sony-playstation-4-review.html",
+          "title": "PlayStation 4 review: fast, powerful, worth it",
+          "quote": "After a marathon week with the PlayStation 4, we feel confident in saying it will be worth your hard-earned money when it goes on sale tomorrow.",
+          "publishedDate": "2013-11-14",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://fortune.com/2013/11/13/playstation-4-review-not-quite-yet-worth-it/",
+          "title": "PlayStation 4 review: Not quite yet worth it",
+          "quote": "there wasn’t anything gameplay-wise that screamed “next-generation.”",
+          "publishedDate": "2013-11-13",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://www.bit-tech.net/reviews/gaming/playstation/playstation-4-review/6/",
+          "title": "PlayStation 4 Review",
+          "quote": "The Xbox One might be the most advanced new console in terms of features, but the PlayStation 4 has it licked as a dedicated games machine.",
+          "publishedDate": null,
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19788,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Xbox_One",
+      "basis": "Exact original Xbox One (Nov 2013). Engadget (Nov 22) and Fortune (Nov 20) launch reviews. Engadget's passage is a measured verdict. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2013-11-22-review-xbox-one.html",
+          "title": "Review: Xbox One",
+          "quote": "The success of the Xbox One is largely dependent on what you need for the living room, and whether you intend to use the system for multiple forms of media, with multiple people in mind.",
+          "publishedDate": "2013-11-22",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://fortune.com/2013/11/20/xbox-one-review-this-is-the-console-of-the-future/",
+          "title": "Xbox One review: This is the console of the future",
+          "quote": "A new console may live or die based on its initial games, and here is where the Xbox One trumps the PlayStation 4.",
+          "publishedDate": "2013-11-20",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20783,
+      "pinSourceUrl": "https://businesswire.com/news/home/20170112006168/en/Nintendo-Switch-Launches-March-3-at-299.99",
+      "basis": "Exact original Nintendo Switch (Mar 2017). Engadget's review is critical of the rushed launch; Fortune's passage praises battery performance. Original March 1 launch-review days. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2017-03-01-nintendo-switch-review.html",
+          "title": "Nintendo Switch review: Revolutionary, but it still needs work",
+          "quote": "Clearly, Nintendo was in a bit of a rush to launch the Switch.",
+          "publishedDate": "2017-03-01",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://fortune.com/2017/03/01/review-the-switch-is-the-nintendo-system-weve-been-waiting-for/",
+          "title": "Review: The Switch Is the Nintendo System We’ve Been Waiting For",
+          "quote": "In practice, the fact that I’ve managed to get about 3 hours out of a game as hungry as Breath of the Wild is impressive.",
+          "publishedDate": "2017-03-01",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20754,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Intel_Arc",
+      "basis": "Reviews of the Intel Arc A770 (the pin covers A770 and A750; neither opened review rates the A750 alone). Tom's Hardware's Oct 5, 2022 launch review of the A770 Limited Edition and Trusted Reviews' Apr 24, 2024 A770 review. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/reviews/intel-arc-a770-limited-edition-review",
+          "title": "Intel Arc A770 Limited Edition Review: Bringing Back Midrange GPUs",
+          "quote": "The Intel Arc A770 LE delivers a compelling midrange option for anyone willing to take a chance on continued driver support.",
+          "publishedDate": "2022-10-05",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.trustedreviews.com/reviews/intel-arc-a770",
+          "title": "Intel Arc A770 Review",
+          "quote": "The Intel Arc A770 is a bizarre graphics card.",
+          "publishedDate": "2024-04-24",
+          "sentiment": -0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20673,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Alder_Lake",
+      "basis": "Reviews of the Core i9-12900K, the Alder Lake flagship. Digital Trends' original Nov 4, 2021 review; Tom's Hardware and TechRadar page dates are later updates, so null. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/reviews/intel-core-i9-12900k-and-core-i5-12600k-review-retaking-the-gaming-crown",
+          "title": "Intel Core i9-12900K and Core i5-12600K Review: Retaking the Gaming Crown",
+          "quote": "The Intel Core i9-12900K is the fastest gaming processor on the planet while the Core i5-12600K offers unprecedented gaming performance at its price point.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.techradar.com/reviews/intel-core-i9-12900k-and-core-i5-12600k",
+          "title": "Intel Core i9-12900K and Core i5-12600K review",
+          "quote": "Both the Intel Core i9-12900K and Core i5-12600K are among the best processors Intel has released in years, with incredible performance.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.digitaltrends.com/desktop-computer-reviews/intel-core-i9-12900k-review/",
+          "title": "Intel Core i9-12900K review: Call it a comeback",
+          "quote": "Intel promised a massive leap forward with Alder Lake, and based on my results, the Core i9-12900K delivers.",
+          "publishedDate": "2021-11-04",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20676,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Lunar_Lake",
+      "basis": "Reviews of the Core Ultra 7 258V (Lunar Lake) in the Asus Zenbook S14 (Tom's Hardware) and Notebookcheck's CPU analysis; both launch-day Sep 24, 2024. Sentiment describes each passage; Tom's Hardware also criticizes weak multi-core performance elsewhere.",
+      "reviews": [
+        {
+          "url": "https://www.notebookcheck.net/Intel-Lunar-Lake-CPU-analysis-The-Core-Ultra-7-258V-s-multi-core-performance-is-disappointing-but-its-everyday-efficiency-is-good.893405.0.html",
+          "title": "Intel Lunar Lake CPU analysis - The Core Ultra 7 258V's multi-core performance is disappointing, but its everyday efficiency is good",
+          "quote": "The new Core Ultra 7 258V's single-core performance is great and Intel was also able to increase its efficiency, even if the ARM competition still has its advantages.",
+          "publishedDate": "2024-09-24",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.tomshardware.com/laptops/asus-zenbook-s14-review-lunar-lake-ultra-7-258v",
+          "title": "Asus Zenbook S14 review: Intel Core Ultra 7 258V makes its debut",
+          "quote": "The Asus Zenbook S14, with Intel's \"Lunar Lake\" processor, has better battery life than the previous generation of Intel chips, packed into a beautiful design.",
+          "publishedDate": "2024-09-24",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20677,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Arrow_Lake_(microprocessor)",
+      "basis": "Reviews of the Core Ultra 9 285K, the Arrow Lake desktop flagship; all launch-day Oct 24, 2024. Mixed to critical on gaming. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/pc-components/cpus/intel-core-ultra-9-285k-cpu-review",
+          "title": "Intel Core Ultra 9 285K and Core 5 245K Review: Intel Throws a Lateral with Arrow Lake",
+          "quote": "Intel's Core Ultra 9 285K makes strong gains in productivity workloads, but it struggles to match its prior-gen counterpart in gaming performance.",
+          "publishedDate": "2024-10-24",
+          "sentiment": 0
+        },
+        {
+          "url": "https://www.notebookcheck.net/Intel-Core-Ultra-9-285K-Arrow-Lake-S-Review-589-CPU-sacrifices-gaming-crown-to-match-AMD-Zen-5-Ryzen-9000-in-power-efficiency.901799.0.html",
+          "title": "Intel Core Ultra 9 285K Arrow Lake-S Review: $589 CPU sacrifices gaming crown to match AMD Zen 5 Ryzen 9000 in power efficiency",
+          "quote": "In cumulative CPU benchmarks, the Core Ultra 9 285K matches the Core i9-14900K and nearly reaches Ryzen 9 9950X performance levels.",
+          "publishedDate": "2024-10-24",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://digitaltrends.com/computing/intel-core-ultra-9-285k-review",
+          "title": "Intel Core Ultra 9 285K review: impressive, not necessarily good",
+          "quote": "it ends up being a tough CPU to actually recommend you go out and buy.",
+          "publishedDate": "2024-10-24",
+          "sentiment": -0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20678,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Panther_Lake_(microprocessor)",
+      "basis": "Reviews of the Core Ultra X9 388H and Core Ultra Series 3 (Panther Lake) from its Jan 26, 2026 review embargo day. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.notebookcheck.net/Intel-Panther-Lake-Core-Ultra-X9-388H-performance-analysis-Outpaces-Arrow-Lake-and-exceeds-Zen-5-in-efficiency.1212583.0.html",
+          "title": "Intel Panther Lake Core Ultra X9 388H performance analysis - Outpaces Arrow Lake and exceeds Zen 5 in efficiency",
+          "quote": "With the new Panther Lake mobile processors, Intel has managed to successfully combine the two previous generations, Arrow Lake and Lunar Lake, as the performance is even better than with Arrow Lake, while efficiency has been improved at the same time.",
+          "publishedDate": "2026-01-26",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.club386.com/intel-core-ultra-series-3-panther-lake-review/",
+          "title": "Intel Core Ultra Series 3 review: Panther Lake benchmarks",
+          "quote": "Core Ultra Series 3 looks like it might just be that brilliant bunny.",
+          "publishedDate": "2026-01-26",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomsguide.com/computing/we-just-benchmarked-the-intel-core-ultra-x9-388h-amd-is-officially-on-notice",
+          "title": "We just benchmarked the Intel Core Ultra X9 388H — AMD is officially on notice",
+          "quote": "Panther Lake is the real deal. AMD and other competitors are officially on notice.",
+          "publishedDate": "2026-01-26",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 3943,
+      "pinSourceUrl": "https://www.qualcomm.com/news/releases/2025/09/new-snapdragon-x2-elite-extreme-and-snapdragon-x2-elite-are-the-",
+      "basis": "Snapdragon X2 Elite Extreme analyses: Tom's Guide's Sep 29, 2025 benchmark of the chip (a pre-retail benchmark piece, not a full laptop review) and Notebookcheck's Apr 7, 2026 retail analysis. Does not cover the X2 Elite non-Extreme separately. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.notebookcheck.net/Qualcomm-Snapdragon-X2-Elite-Extreme-Analysis-Benchmarks-Efficiency-Serious-rival-for-Apple-and-a-problem-for-AMD-Intel.1266974.0.html",
+          "title": "Qualcomm Snapdragon X2 Elite Extreme Analysis, Benchmarks & Efficiency - Serious rival for Apple and a problem for AMD & Intel",
+          "quote": "The new Snapdragon X2 generation left a very good impression during our analysis and the performance was significantly increased for the CPU as well as the GPU.",
+          "publishedDate": "2026-04-07",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomsguide.com/computing/cpus/i-benchmarked-the-snapdragon-x2-elite-extreme-heres-how-it-compares-to-apple-m4-intel-core-ultra-9-and-more",
+          "title": "I benchmarked the Snapdragon X2 Elite Extreme — here's how it compares to Apple M4, Intel Core Ultra 9 and more",
+          "quote": "Snapdragon X2 Elite Extreme is setting itself up to be one of the most powerful chips on the market.",
+          "publishedDate": "2025-09-29",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20675,
+      "pinSourceUrl": "https://www.intel.com/content/www/us/en/newsroom/news/core-ultra-client-computing-news-1.html",
+      "basis": "Reviews of the Core Ultra 7 155H, the Meteor Lake (Core Ultra Series 1) mobile chip; both Dec 14, 2023 launch-day pieces. Both passages are lukewarm. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.notebookcheck.net/Intel-Meteor-Lake-Analysis-Core-Ultra-7-155H-only-convinces-with-GPU-performance.783320.0.html",
+          "title": "Intel Meteor Lake Analysis - Core Ultra 7 155H only convinces with GPU performance",
+          "quote": "The overall CPU performance is pretty much the same as it was with Raptor Lake, but the new H-series chips now cover an even wider TDP range (28-115 Watts), so especially the multi-core performance can vary significantly between different laptops.",
+          "publishedDate": "2023-12-14",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://digitaltrends.com/?p=3489280",
+          "title": "Intel's new Core Ultra chips needed to be more than this",
+          "quote": "While the improvements in integrated graphics are impressive, the overall year-over-year performance has left me scratching my head.",
+          "publishedDate": "2023-12-14",
+          "sentiment": -0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20666,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Haswell_(microarchitecture)",
+      "basis": "Reviews of the Core i7-4770K, the Haswell desktop flagship (the pin covers the 4th-gen Core family). Original June 2013 review days from page metadata. Tom's Hardware's passage is neutral. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/reviews/core-i7-4770k-haswell-review,3521.html",
+          "title": "The Core i7-4770K Review: Haswell Is Faster; Desktop Enthusiasts Yawn",
+          "quote": "So, before you drop several hundred dollars on a brand new platform, let’s figure out if Core i7-4770K is worth the investment.",
+          "publishedDate": "2013-06-01",
+          "sentiment": 0
+        },
+        {
+          "url": "https://www.techradar.com/reviews/pc-mac/pc-components/processors/intel-core-i7-4770k-1156062/review",
+          "title": "Intel Core i7-4770K review",
+          "quote": "Still the best mainstream PC processor",
+          "publishedDate": "2013-06-03",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.expertreviews.co.uk/pcs/cpus/52677/intel-core-i7-4770k-review",
+          "title": "Intel Core i7-4770K (Haswell) Review",
+          "quote": "This is an impressive increase in performance when you consider that the die hasn’t shrunk and that the i7-4770K’s base and boost clock frequencies are the same as the i7-3770K’s.",
+          "publishedDate": "2013-06-01",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20782,
+      "pinSourceUrl": "https://shacknews.com/article/43853/wii-249-on-november-19",
+      "basis": "Reviews of the Nintendo Wii console (2006). Digital Trends' Nov 15, 2006 review and The Register's Dec 8, 2006 UK-launch review of the same console. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://digitaltrends.com/gaming/nintendo-wii-review",
+          "title": "Nintendo Wii Review",
+          "quote": "A fantastic effort that you’ll have to try firsthand to believe, the Wii finally sees Nintendo return to form.",
+          "publishedDate": "2006-11-15",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.theregister.com/2006/12/08/review_nintendo_wii/?page=4",
+          "title": "Nintendo Wii",
+          "quote": "Wii introduces an amazing new control system that not only provides players with a fresh take on traditional videogames but creates a platform for a diverse array of new, more physical computer entertainment.",
+          "publishedDate": "2006-12-08",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19787,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Xbox_360",
+      "basis": "Reviews of the Xbox 360 at launch (Nov-Dec 2005): PC Magazine text on Fox News (Nov 23) and bit-tech's UK launch review (Dec 2). Fox's praise carries a heat/size caveat. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.foxnews.com/story/review-xbox-360-fantastic-but-literally-very-hot",
+          "title": "Review: Xbox 360 Fantastic, but Literally Very Hot",
+          "quote": "All in all, the Xbox 360 is a fantastic gaming platform, despite its still-too-big, heat-generating design.",
+          "publishedDate": "2005-11-23",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://bit-tech.net/reviews/gaming/xbox/xbox_360_uk_review/10/",
+          "title": "Xbox 360 UK launch review",
+          "quote": "The console itself is a gorgeous, desirable bit of kit.",
+          "publishedDate": "2005-12-02",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20778,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Nintendo_DS",
+      "basis": "Reviews of the Nintendo DS (2004). TechRadar's retro review (original date unclear, so null) and The Register's Mar 16, 2005 review, which is mixed. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/reviews/gaming/handheld-consoles/nintendo-ds-93912/review",
+          "title": "Nintendo DS (2004) review",
+          "quote": "Despite the oddball interface, the Nintendo DS (2004) is simply enormous fun, filled with genuine possibility, and thus is far more the thinking gamer's handheld than the multi-talented high-brow PSP can ever hope to be.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.theregister.co.uk/2005/03/16/review_nintendo_ds?page=1",
+          "title": "Nintendo DS handheld games console",
+          "quote": "The old Nintendo magic hasn't left the company yet.",
+          "publishedDate": "2005-03-16",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 6339,
+      "pinSourceUrl": "https://www.apple.com/newsroom/2015/03/09Apple-Watch-Available-in-Nine-Countries-on-April-24/",
+      "basis": "Reviews of the original Apple Watch (2015): TechCrunch (Apr 29) and Engadget (Apr 30). Engadget is a measured verdict. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2015-04-30-apple-watch-review.html",
+          "title": "Apple Watch review: a status symbol for iOS devotees",
+          "quote": "The bottom line is: The Watch is the nicest smartwatch available, but it's more status symbol than wearable revolutionary.",
+          "publishedDate": "2015-04-30",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://techcrunch.com/2015/04/29/apple-watch-review/",
+          "title": "Apple Watch Review",
+          "quote": "That said, during the course of my experience with Apple Watch, it’s become apparent that I won’t go back to life without one.",
+          "publishedDate": "2015-04-29",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 78,
+      "pinSourceUrl": "https://arstechnica.com/gadgets/2017/05/hands-on-with-the-surface-laptop-well-its-a-laptop/",
+      "basis": "Reviews of the 2017 Microsoft Surface Laptop (Windows 10 S). Engadget (Jun 13, 2017) criticizes Windows 10 S; PCWorld's verdict is positive (page shows an Updated date, so publishedDate null). Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2017-06-13-microsoft-surface-laptop-review.html",
+          "title": "The Surface Laptop is the pinnacle of design",
+          "quote": "But Windows 10 S is still too limited for most.",
+          "publishedDate": "2017-06-13",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.pcworld.com/article/3203937/surface-laptop-review.html",
+          "title": "Surface Laptop review: Microsoft’s MacBook Air killer nails what students need",
+          "quote": "Microsoft’s Surface Laptop is a reasonably-priced premium laptop whose excellent battery life and light weight outweigh any restrictions placed upon users by the Windows 10 S operating system.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 80,
+      "pinSourceUrl": "https://www.macrumors.com/2017/05/23/microsoft-introduces-new-surface-pro/",
+      "basis": "Reviews of the 2017 Microsoft Surface Pro (fifth generation). Engadget (Jun 23) and Windows Central (Jun 15) days; Digital Trends page is a later update so publishedDate null. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2017/06/23/surface-pro-review/",
+          "title": "Surface Pro review: Microsoft's best hybrid notebook plays it safe",
+          "quote": "Finally, a Surface Pro with great battery life.",
+          "publishedDate": "2017-06-23",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.windowscentral.com/surface-pro-2017",
+          "title": "Surface Pro (5th Gen) review: A 2-in-1 tablet you'll actually want to use",
+          "quote": "The colors, brightness, clarity and the new enhanced color profile make this display the best Surface Pro yet.",
+          "publishedDate": "2017-06-15",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.digitaltrends.com/computing/microsoft-surface-pro-2017-review/",
+          "title": "Microsoft Surface Pro (2017) review",
+          "quote": "Microsoft's Surface Pro is the best 2-in-1 you can buy.",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 83,
+      "pinSourceUrl": "https://www.macrumors.com/2017/06/13/10-5-inch-ipad-pro-hands-on/",
+      "basis": "Reviews of the 10.5-inch iPad Pro (2017). Engadget Jun 12, 2017; Macworld and TechRadar dates are not clearly original so null. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.engadget.com/2017/06/12/apple-ipad-pro-10-5-review",
+          "title": "iPad Pro 10.5 review: Where execution and ambition meet",
+          "quote": "The Pro 10.5 ($649+) feels very familiar, not to mention surprisingly powerful, but that's no surprise — every new iPad Pro that Apple releases is the best one out there.",
+          "publishedDate": "2017-06-12",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.macworld.com/article/3201035/105-inch-ipad-pro-review.html",
+          "title": "10.5-inch iPad Pro review: If any iPad replaces the MacBook, it’s this one",
+          "quote": "Now, the new 10.5-inch iPad Pro has solved all of those issues for me, making it the best iPad to have ever come out of Cupertino and the one most likely to replace the MacBook.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.techradar.com/reviews/ipad-pro-105",
+          "title": "iPad Pro 10.5 (2017) review",
+          "quote": "The iPad Pro 10.5 is a great iPad you can buy if you want an Apple tablet that balances entertainment, productivity and a sleek 10.5-inch form factor.",
+          "publishedDate": null,
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20665,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)",
+      "basis": "Reviews of the Core i7-3770K, the Ivy Bridge desktop flagship. Original Apr 23, 2012 launch day. Passages call it a small step. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomshardware.com/reviews/ivy-bridge-benchmark-core-i7-3770k,3181-25.html",
+          "title": "Intel Core i7-3770K Review: A Small Step Up For Ivy Bridge",
+          "quote": "An Evolution That Makes Sense, But Doesn't Impress",
+          "publishedDate": "2012-04-23",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://techradar.com/reviews/pc-mac/pc-components/processors/intel-core-i7-3770k-1077181/review",
+          "title": "Intel Core i7 3770K review",
+          "quote": "A quick chip, but Ivy Bridge is proof that Intel is no longer terribly interested in the desktop PC",
+          "publishedDate": "2012-04-23",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://www.expertreviews.co.uk/?p=51724",
+          "title": "Intel Core i7-3770K review (Ivy Bridge)",
+          "quote": "This led to overall scores of 132 from the i7-3770K, compared to 112 from the overclocked i7-2600K – the new chip is around 15% faster in our benchmarks.",
+          "publishedDate": "2012-04-23",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20663,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Nehalem_(microarchitecture)",
+      "basis": "Reviews of the Core i7-920 and its Nehalem siblings (the pin covers the 1st-gen Core i7 launch). The Register Nov 3, 2008; TechRadar's Core i7 920 review (page date 2009). Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.theregister.com/2008/11/03/review_cpu_intel_core_i7",
+          "title": "Intel Core i7 'Nehalem' processor and X58 chipset",
+          "quote": "Intel’s new processor seems to owe very little to Core 2 yet it behaves like Core 2 on steroids.",
+          "publishedDate": "2008-11-03",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://techradar.com/reviews/pc-mac/pc-components/processors/intel-core-i7-920-495040/review",
+          "title": "Intel Core i7 920 review",
+          "quote": "This is one of the fastest processors available but its a massive shame the mobos to support it cost about the same, if not more",
+          "publishedDate": null,
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 316,
+      "pinSourceUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+      "basis": "Reviews of the 2026 Mac Studio: Macworld and PetaPixel review the M5 Max, Tom's Guide the M5 Ultra; all Sep 21, 2026. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.macworld.com/article/3238319/mac-studio-m5-max-review.html",
+          "title": "Mac Studio (M5 Max) review: Shifting into overdrive",
+          "quote": "Sure it’s expensive, but if you want the best Mac ever made, accept no substitute.",
+          "publishedDate": "2026-09-21",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomsguide.com/au/computing/apple-desktops/apple-mac-studio-m5-ultra-review",
+          "title": "Mac Studio M5 Ultra review",
+          "quote": "The Apple Mac Studio is undeniably the fastest Apple computer ever, capable of making short work of even the most demanding tasks while running cool and quiet.",
+          "publishedDate": "2026-09-21",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://petapixel.com/2026/09/21/mac-studio-with-m5-max-review-the-best-mac-for-photo-and-video-weve-tested/",
+          "title": "Mac Studio With M5 Max Review: The Best Mac for Photo and Video We've Tested",
+          "quote": "However, based on our benchmarks for the M5 Max desktop machine, it’s challenging to imagine the Mac Studio with M5 Max not being Apple’s best overall choice for desktop-seeking photographers.",
+          "publishedDate": "2026-09-21",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 315,
+      "pinSourceUrl": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
+      "basis": "Reviews of the Mac mini with the M5 Pro (the pin also names the base M6 model, which these reviews do not rate). Macworld (Sep 22, 2026) is value-critical; Fstoppers (Sep 21, 2026) is praise. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.macworld.com/article/3239233/mac-mini-m5-pro-review-killer-performance-at-a-lethal-price.html",
+          "title": "Mac mini (M5 Pro) review",
+          "quote": "Some things are objectively good, but still very hard to recommend.",
+          "publishedDate": "2026-09-22",
+          "sentiment": -0.2
+        },
+        {
+          "url": "https://fstoppers.com/gear/mac-mini-m5-pro-review-fast-silent-desktop-photo-and-video-work-904700",
+          "title": "Mac mini M5 Pro: Desktop Power for Creatives",
+          "quote": "It is the fastest small desktop Apple has built, and for photo and video work, it is the best value in the entire Mac lineup.",
+          "publishedDate": "2026-09-21",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5006,
+      "pinSourceUrl": "https://9to5google.com/2026/09/30/samsung-galaxy-tab-s12-official/",
+      "basis": "Reviews of the Galaxy Tab S12 Ultra (the pin also names the S12+; these reviews rate the Ultra). Tom's Guide and Expert Reviews, Sep 30, 2026. Sentiment describes each passage.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/computing/android-tablets/samsung-galaxy-tab-s12-ultra-review",
+          "title": "Samsung Galaxy Tab S12 Ultra review",
+          "quote": "The Samsung Galaxy Tab S12 Ultra isn’t a revolutionary update, but it still features what we loved about the previous model, especially its enormous 14.6-inch OLED panel as well as its sleek, thin, and light design.",
+          "publishedDate": "2026-09-30",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.expertreviews.co.uk/technology/tablets-ereaders/samsung-galaxy-tab-s12-ultra-review",
+          "title": "Samsung Galaxy Tab S12 Ultra review: The biggest, baddest tablet around",
+          "quote": "The Samsung Galaxy Tab S12 Ultra, as far as its hardware is concerned, is right up there with the very best tablets money can buy.",
+          "publishedDate": "2026-09-30",
+          "sentiment": 0.8
+        }
+      ]
+    }
+  ]
+}

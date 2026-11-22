@@ -1,0 +1,681 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 234,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+      "basis": "Exact Grand Theft Auto VI (PS5/PS5 Pro, released 2026-11-19), launch-eve reviews published 2026-11-18 by Game Informer, GamingTrend, Creative Bloq and TechRadar. Three are highly positive; the TechRadar passage is a criticism (30 fps target) inside an otherwise glowing review. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.gameinformer.com/review/grand-theft-auto-vi/outrageous-fortune",
+          "title": "Grand Theft Auto VI Review: Outrageous Fortune",
+          "quote": "Grand Theft Auto VI is a generational game that stands toe-to-toe with many of the great crime stories and satires across other media.",
+          "publishedDate": "2026-11-18",
+          "sentiment": 1
+        },
+        {
+          "url": "https://gamingtrend.com/reviews/grand-theft-auto-vi-review/",
+          "title": "Grand Theft Auto VI Review",
+          "quote": "With impossible production values, details that matter, and an interconnected set of world systems that bring this world to life, GTA VI is unlike anything we’ve ever seen.",
+          "publishedDate": "2026-11-18",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.creativebloq.com/reviews/gta-6-review-holy-sh-t-its-good",
+          "title": "GTA 6 review: A generational release everyone should play",
+          "quote": "13 years? The wait has been worthwhile.",
+          "publishedDate": "2026-11-18",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.techradar.com/gaming/gta-6-review",
+          "title": "GTA 6 review: the most complete open-world experience you’ll ever play — brilliant, breathtaking, emotional, and cinematically excellent",
+          "quote": "Perhaps the only thing holding GTA 6 back in the year 2026, and on expensive home consoles, is the game’s limited target of 30fps.",
+          "publishedDate": "2026-11-18",
+          "sentiment": -0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 5453,
+      "pinSourceUrl": "https://www.cdprojekt.com/en/media/news/anniversary-celebrations-for-the-witcher-3-wild-hunt-kick-off/",
+      "basis": "The Witcher 3: Wild Hunt at its May 2015 launch. Game Informer's review (published 2015-05-12, PS4 version) and PC Gamer's PC review (page metadata is a republish date, so null). Game Informer strongly positive; the PC Gamer passage tempers expectations. Not the later next-gen or Complete Edition releases. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gameinformer.com/games/the_witcher_3_wild_hunt/b/playstation4/archive/2015/05/12/the-witcher-3-wild-hunt-review-game-informer",
+          "title": "The Witcher 3: Wild Hunt Review: Choice On A Grand Scale",
+          "quote": "Great writing and intense decisions aside, the gameplay has also vastly improved.",
+          "publishedDate": "2015-05-12",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.pcgamer.com/uk/the-witcher-3-review/",
+          "title": "The Witcher 3 PC review",
+          "quote": "These aren’t criticisms so much as observations that The Witcher 3 isn’t the great leap forward some might have hoped.",
+          "publishedDate": null,
+          "sentiment": -0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 19803,
+      "pinSourceUrl": "https://web.archive.org/web/20200917082957/https://www.polygon.com/2020/9/16/21323105/ps5-price-playstation-5-release-date-pre-orders",
+      "basis": "Sony PlayStation 5 console (November 2020 launch). VGC's launch review (published 2020-11-09) and TechRadar's PS5 review, whose page has since been updated with later-year impressions (so its date is left null and its verdict reflects the updated page). Both positive. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.videogameschronicle.com/review/ps5-launch-review/",
+          "title": "Launch review: PS5 is an exciting console built for blockbusters",
+          "quote": "There’s no denying Sony’s PS5 approach is exciting, if only because all that ceremonial flair makes the console feel new and ‘next-gen’.",
+          "publishedDate": "2020-11-09",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.techradar.com/reviews/ps5",
+          "title": "PS5 review: an exciting portal to next-gen gameplay",
+          "quote": "Whichever PS5 model you choose, though, we can wholeheartedly recommend the console as a welcome upgrade over the PS4, and an exciting portal to new-gen gameplay.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20090,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/Starfield_(video_game)",
+      "basis": "Exact Starfield at its August 2023 launch on Xbox Series X/S and PC, not later updates or expansions. Launch reviews by Windows Central, PC Gamer, TechRadar and GamesRadar+, all published 2023-08-31; verdicts range from enthusiastic (Windows Central, GamesRadar+) to disappointed (PC Gamer) and lukewarm (TechRadar). Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.windowscentral.com/gaming/starfield-review",
+          "title": "Starfield Review",
+          "quote": "With great storytelling and an exciting new world, Starfield is a triumph.",
+          "publishedDate": "2023-08-31",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://gamesradar.com/starfield-review",
+          "title": "Starfield review: \"The best thing Bethesda's done since Oblivion\"",
+          "quote": "For me, Starfield is the best thing Bethesda has done since The Elder Scrolls 4: Oblivion",
+          "publishedDate": "2023-08-31",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://pcgamer.com/starfield-review",
+          "title": "Starfield review",
+          "quote": "I'm disappointed to say I don't love Starfield the way I love other Bethesda RPGs.",
+          "publishedDate": "2023-08-31",
+          "sentiment": -0.3
+        },
+        {
+          "url": "https://www.techradar.com/au/gaming/starfield-review",
+          "title": "Starfield review - deep, space",
+          "quote": "The role-playing game is best enjoyed like this too; as a lightweight and competently made amusement box that lets you interact with the world around you in whichever way suits you best.",
+          "publishedDate": "2023-08-31",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20091,
+      "pinSourceUrl": "https://en.wikipedia.org/wiki/The_Outer_Worlds_2",
+      "basis": "Exact The Outer Worlds 2 (October 2025, PS5/Xbox/PC), not the 2019 original. Launch reviews by PC Gamer, GamesRadar+, Windows Central and TechRadar; all positive, PC Gamer notes some jank. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.pcgamer.com/games/rpg/the-outer-worlds-2-review",
+          "title": "The Outer Worlds 2 review",
+          "quote": "The Outer Worlds 2 is not a new Obsidian all-timer, but it's one of the best games I've played this year and an RPG I'll happily revisit down the line.",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.gamesradar.com/games/rpg/the-outer-worlds-2-review",
+          "title": "The Outer Worlds 2 review: \"The Fallout New Vegas creators have crafted a masterful space age RPG that's willing to play game master to my silliest decisions\"",
+          "quote": "The Outer Worlds 2 is peak Obsidian in every possible way, and as a lifelong RPG fan, it has exactly the kind of feedback and breadth of choice I constantly crave.",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.windowscentral.com/gaming/xbox/the-outer-worlds-2-review",
+          "title": "The Outer Worlds 2 review: More of a great thing",
+          "quote": "I also deeply appreciate how crunchy the skill system is.",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.techradar.com/gaming/the-outer-worlds-2-review",
+          "title": "The Outer Worlds 2 review: it might just be Obsidian’s best game since New Vegas",
+          "quote": "If you enjoy solving problems in RPGs that don’t end in bloody shootouts, The Outer Worlds 2 is for you.",
+          "publishedDate": "2025-10-24",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20129,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/animal-crossing-new-horizons-switch/",
+      "basis": "Exact Animal Crossing: New Horizons (Switch, March 2020), launch reviews by TechRadar, GamesRadar+ and Tom's Guide, all published 2020-03-16. All positive; GamesRadar+ notes time-based frustrations. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/reviews/animal-crossing-new-horizons",
+          "title": "Animal Crossing: New Horizons review",
+          "quote": "Animal Crossing has always had a very distinct charm that other games can mimic well but never quite surpass; that charm has been retained, even enhanced, in New Horizons.",
+          "publishedDate": "2020-03-16",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://gamesradar.com/animal-crossing-new-horizons-review",
+          "title": "Animal Crossing: New Horizons review: \"The ultimate getaway from reality\"",
+          "quote": "This is an Animal Crossing game through and through, and although that comes with some time-based frustrations, that urge to just spend 'five more minutes' on your island deepens with every passing day.",
+          "publishedDate": "2020-03-16",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/animal-crossing-new-horizons",
+          "title": "Animal Crossing: New Horizons review",
+          "quote": "Animal Crossing: New Horizons allows the player to spruce up their island in ways that make things more personalized than ever before.",
+          "publishedDate": "2020-03-16",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20131,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/bayonetta-origins-cereza-and-the-lost-demon-switch/",
+      "basis": "Exact Bayonetta Origins: Cereza and the Lost Demon (Switch, March 2023), not the mainline Bayonetta games. Launch reviews by GamesRadar+ and Game Informer, both 2023-03-14; both positive, GamesRadar+ notes combat limits. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gamesradar.com/bayonetta-origins-cereza-and-the-lost-demon-review",
+          "title": "Bayonetta Origins: Cereza and the Lost Demon Review",
+          "quote": "Bayonetta Origins is a neat little adventure.",
+          "publishedDate": "2023-03-14",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://gameinformer.com/review/bayonetta-origins-cereza-and-the-lost-demon/a-worthy-apprentice",
+          "title": "Bayonetta Origins Review: A Worthy Apprentice",
+          "quote": "Bayonetta Origins’ story is my favorite of the entire franchise.",
+          "publishedDate": "2023-03-14",
+          "sentiment": 0.9
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20134,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/donkey-kong-bananza-switch-2/",
+      "basis": "Exact Donkey Kong Bananza on Nintendo Switch 2 (July 2025). Reviews by Tom's Guide, VGC and Engadget; all positive, VGC notes undercooked mechanics and performance/camera issues. Engadget's page date is not verifiable as the original day, so left null. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/gaming/nintendo/donkey-kong-bananza-review",
+          "title": "Donkey Kong Bananza review: Switch 2's first true system seller",
+          "quote": "Donkey Kong Bananza really feels like the first must-have game for the new console",
+          "publishedDate": "2025-07-16",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://videogameschronicle.com/review/donkey-kong-bananza-review",
+          "title": "Donkey Kong Bananza review",
+          "quote": "Bananza is still a thoroughly entertaining platformer that gives the ape his most memorable adventure in a while, and the best reason so far to buy a Switch 2.",
+          "publishedDate": "2025-07-16",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.engadget.com/gaming/nintendo/donkey-kong-bananza-review-nintendos-latest-3d-platformer-is-an-instant-classic-143048108.html",
+          "title": "Donkey Kong Bananza review: Nintendo's latest 3D platformer is an instant classic",
+          "quote": "That somewhat unexpected combo of heart and destruction has kept me engrossed in Donkey Kong Bananza for the last week",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20140,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/fire-emblem-engage-switch/",
+      "basis": "Exact Fire Emblem Engage (Switch, January 2023), not Three Houses or Warriors spin-offs. Reviews by NME, TechRadar (2023-01-17) and SlashGear (page date 2023-02-10); all positive about combat, SlashGear and others criticise the cast size and story. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://nme.com/reviews/game-reviews/fire-emblem-engage-review-3378736",
+          "title": "'Fire Emblem Engage' review: an adventurous triumph",
+          "quote": "In terms of combat, this is the best Fire Emblem has ever been.",
+          "publishedDate": "2023-01-17",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://techradar.com/reviews/fire-emblem-engage-review-breathes-life-into-old-combat",
+          "title": "Fire Emblem Engage review - breathes new life into old combat",
+          "quote": "Fire Emblem Engage is full of innovations on the series’ old mechanics.",
+          "publishedDate": "2023-01-17",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.slashgear.com/1195513/fire-emblem-engage-review-engaging-where-it-counts",
+          "title": "Fire Emblem Engage Review: Engaging Where It Counts",
+          "quote": "Despite its bloated roster of too many characters I want to use and not enough space on the battlefield to use them, the lackluster and predictable plot, and the sometimes inconsistent attack accuracy, I've had an absolute blast.",
+          "publishedDate": "2023-02-10",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20148,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/kirby-air-riders-switch-2/",
+      "basis": "Exact Kirby Air Riders (Switch 2, November 2025), not the 2003 GameCube Kirby Air Ride. Launch reviews by GamesRadar+, TechRadar and VGC, published 2025-11-19; verdicts range from lukewarm to enthusiastic. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.gamesradar.com/games/kirby/kirby-air-riders-review",
+          "title": "Kirby Air Riders review: \"This racer is also equal parts fighting game, minigame collection, and roguelike – and I'm shocked at how well that works\"",
+          "quote": "I don't regret the time I've spent with Kirby Air Riders, nor am I necessarily hungry for more.",
+          "publishedDate": "2025-11-19",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.techradar.com/gaming/kirby-air-riders-review",
+          "title": "Kirby Air Riders review: this Switch 2 racer feels like Smash on wheels",
+          "quote": "If you enjoy these two chaotic Nintendo series, then I’m almost certain you’ll have some fun with Kirby Air Riders.",
+          "publishedDate": "2025-11-19",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://videogameschronicle.com/review/kirby-air-riders-review",
+          "title": "Kirby Air Riders Review",
+          "quote": "Kirby Air Riders really didn't need a combined 107 minutes of Nintendo Direct presentations to sell players on its merits, because it only takes a few races to see how fun it can be.",
+          "publishedDate": "2025-11-19",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20150,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/luigis-mansion-3-switch/",
+      "basis": "Exact Luigi's Mansion 3 (Switch, October 2019), not Luigi's Mansion 2 HD. Launch reviews by GamesRadar+ and VGC, both 2019-10-28; both positive. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gamesradar.com/luigis-mansion-3-review",
+          "title": "Luigi's Mansion 3 review: \"Proves the green plumber can be the star of the show\"",
+          "quote": "Overall, Luigi's Mansion 3 manages to get the right balance between old and new to deliver a refreshing spin on the formula we've come to know and love from the series.",
+          "publishedDate": "2019-10-28",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.videogameschronicle.com/reviews/luigis-mansion-3/",
+          "title": "Review: Luigi’s Mansion 3 is Switch’s unlikely blockbuster",
+          "quote": "Luigi’s Mansion 3 is a stunning, spooky adventure that puts its hero, and the game’s Canadian developer, firmly on the map.",
+          "publishedDate": "2019-10-28",
+          "sentiment": 0.9
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20157,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+      "basis": "Exact Mario Kart World on Nintendo Switch 2 (June 2025), not Mario Kart 8 Deluxe. Reviews by GamesRadar+, TechRadar and VGC read in full; all praise the driving and Knockout Tour while questioning the open-world/Free Roam design, so the passages range from clearly positive to mixed. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gamesradar.com/games/racing/mario-kart-world-review",
+          "title": "Mario Kart World review",
+          "quote": "Mario Kart World is indisputably the best first-party launch game for the new Nintendo Switch 2 console",
+          "publishedDate": "2025-06-05",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.techradar.com/gaming/nintendo/mario-kart-world-review",
+          "title": "Mario Kart World review: sublime driving, questionable design",
+          "quote": "Mario Kart World is easily the standout launch title on Nintendo Switch 2.",
+          "publishedDate": "2025-06-13",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://www.videogameschronicle.com/review/mario-kart-world-review/",
+          "title": "Mario Kart World review: Nintendo’s latest racer is at its best when it’s doing what it’s always done",
+          "quote": "Ultimately then, despite its new open world gimmickry, Mario Kart World is at its best when it’s doing what the series has always done.",
+          "publishedDate": "2025-06-12",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20165,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/mario-tennis-fever-switch-2/",
+      "basis": "Exact Mario Tennis Fever (Switch 2, February 2026). Launch reviews by TechRadar, Tom's Guide and VGC, all 2026-02-10; verdicts range from enthusiastic (Tom's Guide) to mixed (VGC, TechRadar on the Adventure mode). Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/gaming/mario-tennis-fever-review",
+          "title": "Mario Tennis Fever review: new rackets make the court as frantic as a Mario Kart race",
+          "quote": "The consolation is that there is at least plenty more for you to do in Fever, even if you've rolled credits in Adventure mode.",
+          "publishedDate": "2026-02-10",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://www.tomsguide.com/gaming/nintendo/mario-tennis-fever-review",
+          "title": "Mario Tennis Fever review: Aces abound in this smash hit",
+          "quote": "Nintendo got it right in so many ways with its latest iteration of Mario Tennis, making this a must-play for Switch 2 owners.",
+          "publishedDate": "2026-02-10",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.videogameschronicle.com/review/mario-tennis-fever/",
+          "title": "Mario Tennis Fever review: Camelot serves a double fault with another fun but flawed entry",
+          "quote": "Mario Tennis Fever is another solid enough sports game from Camelot, but a disappointingly short single-player offering and a real risk of imbalance",
+          "publishedDate": "2026-02-10",
+          "sentiment": 0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20167,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/metroid-dread-switch/",
+      "basis": "Exact Metroid Dread (Switch, October 2021). Launch reviews by TechRadar, GamesRadar+ and Tom's Guide, all published 2021-10-06; GamesRadar+ is the most critical (boss frustration). Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/reviews/metroid-dread",
+          "title": "Metroid Dread review",
+          "quote": "However, if you've been craving a classic new Metroid title with a couple of pleasing twists, Metroid Dread won't disappoint.",
+          "publishedDate": "2021-10-06",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://gamesradar.com/metroid-dread-review",
+          "title": "Metroid Dread review",
+          "quote": "There's a great game buried in here, but you'll need to constantly push through some frustrating encounters and points of friction to find it.",
+          "publishedDate": "2021-10-06",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://www.tomsguide.com/reviews/metroid-dread",
+          "title": "Metroid Dread review",
+          "quote": "If you’ve been waiting for the series’ triumphant return, this is it.",
+          "publishedDate": "2021-10-06",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20169,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/metroid-prime-4-beyond-switch/",
+      "basis": "Exact Metroid Prime 4: Beyond (Switch 2 / Switch, December 2025). Reviews by TechRadar, GamesRadar+ and Tom's Guide (played on Switch 2); all praise the levels and visuals and criticise the desert overworld. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/gaming/metroid-prime-4-beyond-review",
+          "title": "Metroid Prime 4: Beyond review: seeing is believing",
+          "quote": "Flaws and all, I still think Metroid Prime 4: Beyond is a brilliant entry in the series.",
+          "publishedDate": "2025-12-02",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://gamesradar.com/games/metroid/metroid-prime-4-beyond-review",
+          "title": "Metroid Prime 4: Beyond review: \"The series' atmosphere has never been better, while being dragged down by a boring overworld and clunky psychic powers\"",
+          "quote": "Within its actual levels, Metroid Prime 4 is triumphant, delivering immersive first-person exploration like nothing else in the genre",
+          "publishedDate": "2025-12-02",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.tomsguide.com/gaming/nintendo/metroid-prime-4-beyond-review",
+          "title": "Metroid Prime 4: Beyond: The shooter the Switch 2 needed",
+          "quote": "Metroid Prime 4: Beyond delivers an excellent 3D Metroid experience that’s even better on Switch 2.",
+          "publishedDate": "2025-12-03",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20171,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/paper-mario-the-thousand-year-door-switch/",
+      "basis": "Exact Paper Mario: The Thousand-Year Door (Switch remake, May 2024), not the 2004 GameCube original or The Origami King. Launch reviews by TechRadar and Game Informer, both published 2024-05-21; both positive, Game Informer notes repeated areas and slow combat. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/gaming/paper-mario-the-thousand-year-door-review",
+          "title": "Paper Mario: The Thousand-Year Door review: papercrafted perfection",
+          "quote": "The Thousand-Year Door’s locales are all brilliantly varied.",
+          "publishedDate": "2024-05-21",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.gameinformer.com/review/paper-mario-the-thousand-year-door/back-and-forward",
+          "title": "Paper Mario: The Thousand-Year Door Review: Back And Forward",
+          "quote": "For all the annoyances of repeating areas and slow (but engaging) combat, Thousand-Year Door is now a series highlight.",
+          "publishedDate": "2024-05-21",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20175,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/pikmin-4-switch/",
+      "basis": "Exact Pikmin 4 (Switch, July 2023). Launch reviews by GamesRadar+ and VGC, both 2023-07-19; both positive, VGC notes a sluggish first half. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gamesradar.com/pikmin-4-review",
+          "title": "Pikmin 4 review: \"The most approachable Pikmin entry ever\"",
+          "quote": "It all combines to create the most approachable Pikmin entry ever.",
+          "publishedDate": "2023-07-19",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.videogameschronicle.com/review/pikmin-4/",
+          "title": "Review: Pikmin 4 is a brilliant entry point for new players, but takes a while to bloom",
+          "quote": "Pikmin 4 is a brilliant entry point for new players, and once it gets going it really blooms.",
+          "publishedDate": "2023-07-19",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20179,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-arceus-switch/",
+      "basis": "Exact Pokémon Legends: Arceus (Switch, January 2022). Launch reviews by GamesRadar+ and Digital Trends, both 2022-01-26; both positive with reservations (performance, pace of series change). Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.gamesradar.com/pokemon-legends-arceus-review/",
+          "title": "Pokemon Legends Arceus review: \"A refreshing take on the Pokemon formula\"",
+          "quote": "Problems with the performance are the one thing holding Pokemon Legends: Arceus back from perfection.",
+          "publishedDate": "2022-01-26",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://digitaltrends.com/gaming/pokemon-legends-arceus-review",
+          "title": "Pokémon Legends: Arceus review: Bidoof of the Wild",
+          "quote": "Pokémon Legends: Arceus takes a lot of experimental swings — and many of them are successful.",
+          "publishedDate": "2022-01-26",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20180,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/pokemon-legends-z-a-switch/",
+      "basis": "Exact Pokémon Legends: Z-A (October 2025). The pin lists the Switch release; the TechRadar review was played on Switch 2 (the game is also on Switch), VGC and Pocket Tactics review the same game. All positive overall with reservations about pacing/exploration noted elsewhere in the reviews. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/gaming/nintendo-switch/pokemon-legends-z-a-review",
+          "title": "Pokémon Legends: Z-A review: near perfection in a Pokémon game",
+          "quote": "I’ve tried a lot of what the Nintendo Switch 2 has had to offer so far, and this is easily one of the best games out there for the fledgling system.",
+          "publishedDate": "2025-10-14",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.videogameschronicle.com/review/pokemon-legends-z-a-review/",
+          "title": "Pokémon Legends Z-A Review: A love letter to older fans that betters Arceus in every way",
+          "quote": "Pokémon Legends Z-A is a game that understands its audience and feels like a love letter to both players who grew up with X & Y and those who’ve been here the whole time.",
+          "publishedDate": "2025-10-14",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.pockettactics.com/pokemon-legends-z-a/review",
+          "title": "Pokemon Legends: Z-A review - rooftops, rogues, and rising the ranks",
+          "quote": "Movement feels better than it has in any other Pokémon game, the Rogue Mega Pokémon battles are epic in scale, and the story is the most original I've experienced from Game Freak in a long time.",
+          "publishedDate": "2025-10-14",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20185,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/",
+      "basis": "Exact Super Mario Odyssey (Switch, October 2017). Reviews by GamesRadar+ (published at launch) and TechRadar (page date 2017-11-16 not verifiable as the original day, so null); both positive. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.gamesradar.com/super-mario-odyssey-review",
+          "title": "Super Mario Odyssey review",
+          "quote": "Super Mario Odyssey successfully brings the series up to date and opens it up to a new audience, while still retaining every ounce of its nostalgia and retro charm.",
+          "publishedDate": "2017-10-26",
+          "sentiment": 0.85
+        },
+        {
+          "url": "https://www.techradar.com/news/super-mario-odyssey-review",
+          "title": "Super Mario Odyssey review: one of Mario's finest adventures",
+          "quote": "it's fresh and different enough to what has gone before to comfortably rank as one of Mario's finest adventures in recent memory.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20188,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/super-mario-bros-wonder-switch/",
+      "basis": "Exact Super Mario Bros. Wonder (Switch, October 2023). Reviews by TechRadar, GamesRadar+ and Tom's Guide, all positive. Tom's Guide page metadata (2023-11-16) is not verifiable as the original day, so left null. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://techradar.com/gaming/nintendo-switch/super-mario-bros-wonder-review-sheer-joy-in-video-game-form",
+          "title": "Super Mario Bros. Wonder review - sheer joy in video game form",
+          "quote": "Super Mario Bros. Wonder is a triumphant evolution of 2D Mario, with a non-stop flow of creative ideas wrapped up in a visually delightful package, bursting with character.",
+          "publishedDate": "2023-10-18",
+          "sentiment": 0.95
+        },
+        {
+          "url": "https://gamesradar.com/super-mario-bros-wonder-review",
+          "title": "Super Mario Bros. Wonder Review: \"A brilliant 2D platformer\"",
+          "quote": "Super Mario Bros. Wonder is an excellent 2D Mario game with easily the most impressive world-building we've seen in this style.",
+          "publishedDate": "2023-10-18",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://tomsguide.com/reviews/super-mario-bros-wonder",
+          "title": "Super Mario Bros. Wonder review: The perfect mix of classic and new",
+          "quote": "As the first entirely new 2D Mario game for the Nintendo Switch , Super Mario Bros. Wonder was certainly worth the wait.",
+          "publishedDate": null,
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20194,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/",
+      "basis": "Exact Super Smash Bros. Ultimate (Switch, December 2018). Reviews by GamesRadar+ (published 2018-12-06) and TechRadar (page date 2019-01-30 not verifiable as original, so null); both positive. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://gamesradar.com/super-smash-bros-ultimate-review",
+          "title": "Super Smash Bros. Ultimate Review: “Makes a 20-year-old franchise feel brand new”",
+          "quote": "The amount of content in Ultimate blows most other fighters out of the water.",
+          "publishedDate": "2018-12-06",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.techradar.com/news/super-smash-bros-ultimate-review",
+          "title": "Super Smash Bros Ultimate review: the ultimate brawler for Switch",
+          "quote": "But whether you’re here to hone your skills, take some fun snaps, or just smash that controller to high heaven, Ultimate has something for you, and enough fighters to offer near endless replay value",
+          "publishedDate": null,
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20197,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-echoes-of-wisdom-switch/",
+      "basis": "Exact The Legend of Zelda: Echoes of Wisdom (Switch, September 2024). Launch reviews by TechRadar and GamesRadar+, published 2024-09-25. GamesRadar+ is positive; TechRadar's chosen passage is a performance criticism within a positive review. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://techradar.com/gaming/the-legend-of-zelda-echoes-of-wisdom-review",
+          "title": "The Legend of Zelda: Echoes of Wisdom review: a charming throwback adventure",
+          "quote": "As good as it looks, Echoes of WIsdom has its fair share of performance issues.",
+          "publishedDate": "2024-09-25",
+          "sentiment": -0.4
+        },
+        {
+          "url": "https://gamesradar.com/games/the-legend-of-zelda/the-legend-of-zelda-echoes-of-wisdom-review",
+          "title": "The Legend of Zelda: Echoes of Wisdom review – \"A refreshing, magic-filled retool of the Link's Awakening engine\"",
+          "quote": "Echoes of Wisdom hits a much sweeter spot between classic Zelda tropes and fully refreshed gameplay.",
+          "publishedDate": "2024-09-25",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20202,
+      "pinSourceUrl": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-x-definitive-edition-switch/",
+      "basis": "Exact Xenoblade Chronicles X: Definitive Edition (Switch, March 2025), not the 2015 Wii U original. Launch reviews by TechRadar, VGC and RPG Site, all 2025-03-18; positive with notes on dull cutscenes. Sentiment describes each passage only.",
+      "reviews": [
+        {
+          "url": "https://www.techradar.com/gaming/xenoblade-chronicles-x-definitive-edition-review",
+          "title": "Xenoblade Chronicles X Definitive Edition review: an RPG classic gets the Switch glow-up it deserves",
+          "quote": "If you’re playing the enhanced Wii U title for the first time, you’ll undoubtedly be dazzled by its breathtaking open world and astonishingly deep battle system.",
+          "publishedDate": "2025-03-18",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.videogameschronicle.com/review/xenoblade-chronicles-x-definitive-edition-review/",
+          "title": "Xenoblade Chronicles X: Definitive Edition review",
+          "quote": "While its plot and performances sometimes had our eyes glazing over, there's still no doubt that Xenoblade Chronicles X: Definitive Edition is an impressively vast adventure",
+          "publishedDate": "2025-03-18",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://rpgsite.net/review/17032-xenoblade-chronicles-x-definitive-edition-review",
+          "title": "Xenoblade Chronicles X: Definitive Edition Review",
+          "quote": "There’s also a lot to be said about how impressive it is to play such a sprawling and complex open-world game on what is essentially a portable device.",
+          "publishedDate": "2025-03-18",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 20784,
+      "pinSourceUrl": "https://www.engadget.com/gaming/nintendo/the-nintendo-switch-2-arrives-on-june-5-132838214.html",
+      "basis": "Exact Nintendo Switch 2 console (June 2025 launch hardware), not the original Switch or the OLED. Launch-window reviews by Tom's Guide, GamesRadar+ and TechRadar. Tom's Guide and GamesRadar+ passages are positive on the hardware; the TechRadar passage compares performance to PS5 and Switch OLED. Sentiment describes each passage, not a score or a consensus. Dates from each page's own publication metadata.",
+      "reviews": [
+        {
+          "url": "https://www.tomsguide.com/gaming/nintendo/nintendo-switch-2-console-review",
+          "title": "Nintendo Switch 2 review — no gimmicks here, just a fantastic hybrid console",
+          "quote": "Nintendo Switch 2 takes what worked about its best-selling predecessor and makes impactful upgrades across the board.",
+          "publishedDate": "2025-06-10",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://gamesradar.com/platforms/nintendo-switch-2/nintendo-switch-2-review",
+          "title": "Nintendo Switch 2 review: \"We're in for an excellent generation\"",
+          "quote": "The Nintendo Switch 2 is a tangible upgrade, with impressive performance, a streamlined design, and surprisingly adept additional features.",
+          "publishedDate": "2025-06-10",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.techradar.com/gaming/nintendo/nintendo-switch-2-review",
+          "title": "Nintendo Switch 2 review: an evolution in almost every way",
+          "quote": "While it does lack the sheer power of the former, it’s not too far off the mark as we see with some of the Switch 2’s excellent ports.",
+          "publishedDate": "2025-06-19",
+          "sentiment": 0.5
+        }
+      ]
+    }
+  ]
+}

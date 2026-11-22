@@ -1,0 +1,799 @@
+{
+  "checkedAt": "2026-11-21",
+  "entries": [
+    {
+      "table": "PinCriticReview",
+      "pinId": 15343,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3599222/silo-3x01-who-are-you",
+      "basis": "Exact Silo season 3 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://slashfilm.com/2202790/silo-season-3-review-apple-tv/",
+          "title": "Silo Season 3 Review: Past And Future Collide In Apple TV's Addictive Sci-Fi Series",
+          "quote": "It's like a salty snack you just can't put down, even if you know there are far more nutritious meals to be had.",
+          "publishedDate": "2026-06-29",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://gizmodo.com/silo-season-3-review-apple-tv-2000779017",
+          "title": "'Silo' Season 3 Is Hugely Revealing and Satisfying... Eventually",
+          "quote": "just know season three is much better than season two.",
+          "publishedDate": "2026-06-29",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.empireonline.com/tv/reviews/silo-season-3/",
+          "title": "Sile: Season 3 review — 'One of TV's smartest sci-fi dramas'",
+          "quote": "The pace remains glacial, the science-fiction dense, and the dialogue often takes the form of cryptic half-truths.",
+          "publishedDate": "2026-07-02",
+          "sentiment": -0.1
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15346,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3334680/the-diplomat-3x01-emperor-dead",
+      "basis": "Exact The Diplomat season 3 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.pastemagazine.com/tv/netflix/the-diplomat-season-3-review",
+          "title": "The Diplomat Season 3 Review: Bonkers Politics, Messy Marriages",
+          "quote": "But this season shines brightest when it’s willing to directly confront Kate’s ambition.",
+          "publishedDate": "2025-10-16",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.npr.org/2025/10/27/nx-s1-5587334/now-in-season-3-the-diplomat-is-the-rare-show-that-keeps-getting-better",
+          "title": "Now in Season 3, 'The Diplomat' is the rare show that keeps getting better : NPR",
+          "quote": "is one of those rare TV series that manages to get even better every season.",
+          "publishedDate": "2025-10-27",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15325,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2867111/the-lord-of-the-rings-the-rings-of-power-2x01-elven-kings-under-the-sky",
+      "basis": "Exact The Rings of Power season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.slashfilm.com/1651616/lord-of-the-rings-the-rings-of-power-season-2-review/",
+          "title": "Lord Of The Rings The Rings Of Power Season 2 Review: Darker & More Complex",
+          "quote": "a darker, bolder, and more complex story in every way.",
+          "publishedDate": "2024-08-28",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thewrap.com/lord-of-the-rings-rings-of-power-season-2-review-prime-video/",
+          "title": "Rings of Power Season 2 Review: Stunningly Boring",
+          "quote": "Season 2 of the most expensive TV series ever made is here, and it still feels like something of a loss leader.",
+          "publishedDate": "2024-08-28",
+          "sentiment": -0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15349,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3224566/the-gilded-age-3x01-who-is-in-charge-here",
+      "basis": "Exact The Gilded Age season 3 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.pastemagazine.com/tv/hbo/the-gilded-age-season-3-review",
+          "title": "The Gilded Age Season 3 Review: The Show's Best Installment Yet",
+          "quote": "The Gilded Age has never been better, and it’s a joy to watch it so confidently become the show it was always meant to be",
+          "publishedDate": "2025-06-12",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://thecontending.com/the-gilded-age-season-three-review/",
+          "title": "The Gilded Age Season Three Is Most Accomplished Season Yet - The Contending",
+          "quote": "I’m thrilled to proclaim that The Gilded Age season three is easily its best yet.",
+          "publishedDate": "2025-06-20",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.irishtimes.com/culture/tv-radio/2025/06/23/the-gilded-age-review-pretty-but-dour-show-about-snobbish-new-yorkers",
+          "title": "The Gilded Age review: Pretty but dour show about snobbish New Yorkers – The Irish Times",
+          "quote": "The Gilded Age is nothing more than a dour show about snobbish New Yorkers.",
+          "publishedDate": "2025-06-23",
+          "sentiment": -0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15318,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3219795/dexter-resurrection-1x01-a-beating-heart",
+      "basis": "Exact Dexter: Resurrection season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/dexter-resurrection-review-michael-c-hall-1236310507/",
+          "title": "'Dexter: Resurrection' Review: Michael C. Hall Returns as Killer",
+          "quote": "there’s entertainment to be found here.",
+          "publishedDate": "2025-07-10",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://www.npr.org/2025/07/25/g-s1-78731/dexter-resurrection-review",
+          "title": "'Dexter: Resurrection' review: The show is back, and Michael C. Hall is better than ever : NPR",
+          "quote": "It's at the dinner party, when the usually antisocial killers meet and swap stories, where Dexter: Resurrection regains its formerly strong footing.",
+          "publishedDate": "2025-07-25",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15327,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3313174/percy-jackson-and-the-olympians-2x01-i-play-dodgeball-with-cannibals",
+      "basis": "Exact Percy Jackson and the Olympians season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.thewrap.com/percy-jackson-and-the-olympians-season-2-review-disney-plus",
+          "title": "Percy Jackson and the Olympians Season 2 Review: A Bold Return",
+          "quote": "Instead, the first half of the season feels mostly like a side quest, a more personal story about the characters discovering themselves rather than discovering the world.",
+          "publishedDate": "2025-12-04",
+          "sentiment": 0.1
+        },
+        {
+          "url": "https://www.inverse.com/entertainment/percy-jackson-the-olympians-season-2-review",
+          "title": "'Percy Jackson And The Olympians' Season 2 Review: Disney's Big Fantasy Franchise Is Here To Stay",
+          "quote": "every episode wraps up with a finality that makes for a truly satisfying viewing experience.",
+          "publishedDate": "2025-12-04",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.looper.com/2042974/percy-jackson-and-the-olympians-season-2-disney-plus-review",
+          "title": "Percy Jackson And The Olympians Season 2 Review: A Faithful But Flat Adaptation",
+          "quote": "it still feels rushed, with little room for anything but the briefest of character moments.",
+          "publishedDate": "2025-12-04",
+          "sentiment": -0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15329,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3263745/nobody-wants-this-2x01-dinner-party",
+      "basis": "Exact Nobody Wants This season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.thewrap.com/nobody-wants-this-season-2-review-netflix",
+          "title": "Nobody Wants This Season 2 Review: Better Than Season 1",
+          "quote": "What is clear is that the show is sharper now, with more heft and a deeper dive into the lives of its characters, both central and ancillary",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.avclub.com/nobody-wants-this-season-2-review-netflix",
+          "title": "Nobody Wants This season 2 review",
+          "quote": "thankfully, season two maintains that status quo.",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.tomsguide.com/entertainment/netflix/nobody-wants-this-season-2-review-netflix",
+          "title": "I've already binge-watched 'Nobody Wants This' season 2 — and I fell for Netflix's hit romantic comedy series even harder | Tom's Guide",
+          "quote": "Simply put, this is another batch of mature, witty and warm-hearted episodes",
+          "publishedDate": "2025-10-23",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15309,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2565324/ahsoka-1x01-part-one-master-and-apprentice",
+      "basis": "Exact Ahsoka season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://digitaltrends.com/movies/star-wars-ahsoka-season-one-review-disney-plus",
+          "title": "Ahsoka review: A Star Wars celebration of the old and new - Digital Trends",
+          "quote": "Thankfully, the newest series, Ahsoka, earns its place among Lucasfilm’s best streaming originals.",
+          "publishedDate": "2023-08-23",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://readysteadycut.com/2023/08/23/ahsoka-season-1-review",
+          "title": "Ahsoka Season 1 Review - Better the rebels you know",
+          "quote": "Disney+ have been making a tremendous fuss about their new Star Wars miniseries Ahsoka and for seemingly good reason.",
+          "publishedDate": "2023-08-23",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15312,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2278380/the-terminal-list-1x01-the-engram",
+      "basis": "Exact The Terminal List season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://empireonline.com/tv/reviews/the-terminal-list",
+          "title": "The Terminal List Review | TV Show - Empire",
+          "quote": "a brawny, boring ‘thriller’ (in intent if not execution), strips Pratt of all his appealing qualities.",
+          "publishedDate": "2022-07-01",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-terminal-list-review-1235173286/",
+          "title": "'The Terminal List' Review: Chris Pratt's Bland Amazon Action Series",
+          "quote": "from likable TV comic foil with unexpectedly strong bone structure to increasingly generic leading man.",
+          "publishedDate": "2022-06-29",
+          "sentiment": -0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15356,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2687415/elsbeth-1x01-pilot",
+      "basis": "Exact Elsbeth season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/elsbeth-review-carrie-preston-good-wife-cbs-1235839070/",
+          "title": "'Elsbeth' Review: Carrie Preston in 'The Good Wife' Spinoff",
+          "quote": "A comfort-food spinoff.",
+          "publishedDate": "2024-02-29",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://avclub.com/elsbeth-review-tv-cbs-carrie-preston-procedural-1851287773",
+          "title": "Elsbeth review: Carrie Preston shines in a kooky twist on the network procedural",
+          "quote": "a show that has all the trappings of a weekly CBS procedural wrapped in a kooky sensibility that feels in short supply in the post-Peak TV era.",
+          "publishedDate": "2024-02-28",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15345,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2975690/the-diplomat-2x01-when-a-stranger-calls",
+      "basis": "Exact The Diplomat season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.avclub.com/the-diplomat-season-2-review",
+          "title": "The Diplomat season 2 review: More pulpy thrills",
+          "quote": "While not nearly as sharp or moving as that FX gem, The Diplomat has some addictive pulpy thrills",
+          "publishedDate": "2024-10-30",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.thewrap.com/the-diplomat-season-2-review-netflix-keri-russell-allison-janney",
+          "title": "The Diplomat Season 2 Review: Keri Russell's Excellent Return",
+          "quote": "Whip-smart, psychologically insightful and sexy without sleaze, the series created by Debora Cahn is only getting better as it speeds into its second lap on Netflix this Halloween.",
+          "publishedDate": "2024-10-30",
+          "sentiment": 0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15348,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2628282/the-gilded-age-2x01-you-dont-even-like-opera",
+      "basis": "Exact The Gilded Age season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.pastemagazine.com/tv/hbo-max/the-gilded-age-season-2-review",
+          "title": "The Gilded Age Season 2 Review: Well Dressed and Diverting",
+          "quote": "Thankfully, its second season finally seems to realize that fact, gleefully jettisoning its dullest, preachiest elements in favor of even more breathtaking gowns, jaw-dropping architecture, and petty society squabbles.",
+          "publishedDate": "2023-10-24",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://thewrap.com/the-gilded-age-season-2-review-hbo",
+          "title": "The Gilded Age Season 2 Review: Drama Boasts Flashy Sets, Falters on Story",
+          "quote": "The storyline challenges audiences to invest heavily in a clash the women take with deadly seriousness but is less than compelling.",
+          "publishedDate": "2023-10-29",
+          "sentiment": -0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15324,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2141182/the-lord-of-the-rings-the-rings-of-power-1x01-a-shadow-of-the-past",
+      "basis": "Exact The Rings of Power season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://readysteadycut.com/2022/08/31/review-the-lord-of-the-rings-the-rings-of-power-season-1-amazon-prime-video-series",
+          "title": "The Lord of the Rings: The Rings of Power Season 1 Review",
+          "quote": "I am delighted to report that they have, somehow, delivered.",
+          "publishedDate": "2022-08-31",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.eyeforfilm.co.uk/review/the-lord-of-the-rings-the-rings-of-power-2022-film-review-by-jennie-kermode",
+          "title": "The Lord Of The Rings: The Rings Of Power - Season 1 (2022) - Film Review - Eye For Film",
+          "quote": "Hand to hand mêlées are painfully badly choreographed and the augmentation used in a high profile cavalry charge could be done better with free software on a phone.",
+          "publishedDate": null,
+          "sentiment": -0.8
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15310,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2878876/bad-monkey-1x01-the-floating-human-body-parts-capital-of-america",
+      "basis": "Exact Bad Monkey season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://tvline.com/reviews/bad-monkey-review-vince-vaughn-apple-tv-plus-1235307618",
+          "title": "'Bad Monkey' Review, Vince Vaughn, Apple TV Plus",
+          "quote": "He's back in his wheelhouse here, and in fine form, as the star of the new Apple TV+ mystery comedy",
+          "publishedDate": "2024-08-13",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.denofgeek.com/tv/bad-monkey-review-apple-tvs-captivating-end-of-summer-romp",
+          "title": "Bad Monkey Review: Apple TV+'s Captivating End-of-Summer Romp | Den of Geek",
+          "quote": "getting to know these eccentric characters is half the fun of this series.",
+          "publishedDate": "2024-08-14",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://avclub.com/bad-monkey-review",
+          "title": "Vince Vaughn’s Bad Monkey ain’t half bad",
+          "quote": "while not as propulsive as the book, gives it a mostly pleasant and palatable time in the sun.",
+          "publishedDate": "2024-08-13",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://www.pastemagazine.com/tv/apple-tv-plus/bad-monkey-review",
+          "title": "Bad Monkey Review: Apple TV+ Series Is Just Plain Bad",
+          "quote": "As much as I enjoy Vince Vaughn talking my ear off with ridiculous nonsense, his constant babble is a lot to endure here.",
+          "publishedDate": "2024-08-13",
+          "sentiment": -0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15315,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3153952/stick-1x01-pilot",
+      "basis": "Exact Stick season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.thewrap.com/stick-review-owen-wilson-apple-tv-ted-lasso",
+          "title": "Stick Review: Owen Wilson's Wonky Apple TV+ Golf Dramedy",
+          "quote": "Even as it benefits from the reliable, if rather familiar, charm of Owen Wilson and a winning ensemble cast, it can’t overcome an overly sentimental, woefully scattered story that barely holds together.",
+          "publishedDate": "2025-05-30",
+          "sentiment": -0.5
+        },
+        {
+          "url": "https://avclub.com/stick-review-apple-tv-plus-owen-wilson-series",
+          "title": "Stick review: Owen Wilson gets stuck in the sand trap of shallow TV",
+          "quote": "Stick is a show that didn’t get out of the concept phase, leaning into melodrama and shallow characters instead of giving viewers anything honestly emotional or even funny to hold onto.",
+          "publishedDate": "2025-05-30",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://www.irishtimes.com/culture/tv-radio/2025/06/04/stick-review-owen-wilson-is-full-of-charm-in-this-wry-unassuming-golf-comedy",
+          "title": "Stick review: Owen Wilson is full of charm in this wry, unassuming golf comedy – The Irish Times",
+          "quote": "It coasts on the melancholic charm that was a feature of Wilson’s early career",
+          "publishedDate": "2025-06-04",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15340,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3270173/the-hunting-wives-1x01-strange-and-unfamiliar-places",
+      "basis": "Exact The Hunting Wives season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-hunting-wives-review-brittany-snow-netflix-1236319841/",
+          "title": "'The Hunting Wives' Review: Malin Akerman in Netflix's Sudsy Drama",
+          "quote": "It might all be incredibly frustrating, if it were not also so wildly entertaining.",
+          "publishedDate": "2025-07-20",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.avclub.com/the-hunting-wives-review-netflix-tv",
+          "title": "The Hunting Wives review: This summer's guiltiest TV pleasure",
+          "quote": "Her shifting allegiances and growing number of secrets are all the juicy drama THW needs to remain both entertaining and awkward.",
+          "publishedDate": "2025-07-21",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.pastemagazine.com/tv/netflix/the-hunting-wives-review",
+          "title": "The Hunting Wives Review: Enjoyable Soapy Summer Escapism",
+          "quote": "we’ve had something of a dearth of shows that exist solely to entertain, full of the kind of soapy excess and utterly outlandish shock twists that mean the journey is often more important than the destination.",
+          "publishedDate": "2025-07-16",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.npr.org/2025/08/02/nx-s1-5485977/the-hunting-wives-review-netflix",
+          "title": "'The Hunting Wives' review: A sexy, thriller murder mystery on Netflix : NPR",
+          "quote": "But if it's up your alley, you might find it a pretty well-executed bit of summer entertainment.",
+          "publishedDate": "2025-08-02",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15344,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2506901/the-diplomat-1x01-the-cinderella-thing",
+      "basis": "Exact The Diplomat season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-diplomat-review-keri-russell-netflix-1235391549/",
+          "title": "'The Diplomat' Review: Keri Russell in Netflix’s Political Drama",
+          "quote": "The Diplomat has an impeccable understanding of genre tropes",
+          "publishedDate": "2023-04-19",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.npr.org/2023/04/19/1170685432/the-diplomat-review-keri-russell",
+          "title": "'The Diplomat': Keri Russell is a sharp ambassador in Netflix's new drama : NPR",
+          "quote": "an excellent new Netflix political thriller series that stars Keri Russell",
+          "publishedDate": "2023-04-19",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://readysteadycut.com/2023/04/20/the-diplomat-season-1-review",
+          "title": "The Diplomat Season 1 Review",
+          "quote": "The Diplomat is very smart and very good, and probably smarter and better in hindsight once you know where it’s all going.",
+          "publishedDate": "2023-04-20",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.rollingstone.com/tv-movies/tv-movie-reviews/the-diplomat-review-netflix-keri-russell-the-americans-tv-political-thriller-feminism-vp-rufus-sewell-1234715683/",
+          "title": "‘The Diplomat’ Gives Keri Russell the Meaty Post-‘Americans’ Role She Deserves",
+          "quote": "Oh, and it’s also extremely entertaining, and ever-so-slightly more thematically ambitious than many of its counterparts.",
+          "publishedDate": "2023-04-19",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15326,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2625342/percy-jackson-and-the-olympians-1x01-i-accidentally-vaporize-my-pre-algebra-teacher",
+      "basis": "Exact Percy Jackson and the Olympians season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.denofgeek.com/?p=925493",
+          "title": "Percy Jackson and the Olympians Review: A Fun and Faithful Adaptation | Den of Geek",
+          "quote": "Overall, Percy Jackson and the Olympians is a lot of fun and finally does justice to a world that so many have found solace in for nearly two decades.",
+          "publishedDate": "2023-12-20",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://www.tvguide.com/news/percy-jackson-olympians-show-review-disney-fantasy-adaptation",
+          "title": "Percy Jackson and the Olympians Review: Disney Adaptation Is a Fun but Lightweight Coming-of-Age Fantasy - TV Guide",
+          "quote": "Percy Jackson and the Olympians gets off to a fun and well-paced start, but it’s a rather generic example of the coming-of-age fantasy formula.",
+          "publishedDate": "2023-12-14",
+          "sentiment": 0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15328,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2870332/nobody-wants-this-1x01-pilot",
+      "basis": "Exact Nobody Wants This season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://tvline.com/reviews/nobody-wants-this-review-netflix-kristen-bell-adam-brody-1235339703",
+          "title": "'Nobody Wants This' Review, Netflix, Kristen Bell, Adam Brody",
+          "quote": "Bell and Brody have such terrific chemistry right away that it's surprising we haven't seen them paired up on screen more often.",
+          "publishedDate": "2024-09-26",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://empireonline.com/tv/reviews/nobody-wants-this",
+          "title": "Nobody Wants This Review – 'Knows how to construct instantly iconic romcom sequences'",
+          "quote": "The lead pair both ooze charm from the get-go",
+          "publishedDate": "2024-10-01",
+          "sentiment": 0.7
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15347,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2217924/the-gilded-age-1x01-never-the-new",
+      "basis": "Exact The Gilded Age season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.pastemagazine.com/tv/hbo/the-gilded-age-review",
+          "title": "The Gilded Age Review: HBO’s Overstuffed American Downton Abbey Is a Pretty, Muddled Diversion",
+          "quote": "there’s still something here that’s fun to watch, even if you’re never quite sure how the show wants you to view any of these people.",
+          "publishedDate": "2022-01-20",
+          "sentiment": 0.2
+        },
+        {
+          "url": "https://thecrimson.com/article/2022/2/8/gilded-age-hbo-premiere-review",
+          "title": "‘The Gilded Age’ Season Premiere Review: A Shallow But Entertaining Spectacle | The Harvard Crimson",
+          "quote": "looks promising, or at the very least entertaining, and audiences should look forward to indulging in this gilded escapism.",
+          "publishedDate": "2022-02-08",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15330,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2939434/st-denis-medical-1x01-welcome-to-st-denis",
+      "basis": "Exact St. Denis Medical season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.avclub.com/st-denis-medical-review-nbc-tv",
+          "title": "St. Denis Medical TV review: A winning workplace comedy",
+          "quote": "the lens here remains sharp yet wholesome, even if it lacks the nuanced commentary on topics like unions, the gig economy, and immigration that made Superstore special.",
+          "publishedDate": "2024-11-06",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.thewrap.com/st-denis-medical-review-nbc-allison-tolman-wendi-mclendon-covey",
+          "title": "St. Denis Medical Review: A Mockumentary With Potential",
+          "quote": "But I was pleasantly surprised to find the show dramatically improves throughout the rest of the six episodes provided for review.",
+          "publishedDate": "2024-11-12",
+          "sentiment": 0.4
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15313,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3239583/the-lowdown-1x01-pilot",
+      "basis": "Exact The Lowdown season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://tvline.com/reviews/the-lowdown-review-fx-hulu-ethan-hawke-1235516381",
+          "title": "'The Lowdown' Review, FX Hulu, Ethan Hawke",
+          "quote": "Hawke takes it up a notch, delivering a hilariously eccentric lead performance that ranks as one of his best ever",
+          "publishedDate": "2025-09-23",
+          "sentiment": 0.9
+        },
+        {
+          "url": "https://www.npr.org/2025/09/22/nx-s1-5550035/the-lowdown-review-ethan-hawke-fx",
+          "title": "'The Lowdown' review: Ethan Hawke carries Sterlin Harjo's new series : NPR",
+          "quote": "Though The Lowdown occasionally meanders or misfires, every episode of the FX series is bracingly alive.",
+          "publishedDate": "2025-09-22",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-lowdown-review-ethan-hawke-fx-sterlin-harjo-1236361426/",
+          "title": "'The Lowdown' Review: Ethan Hawke in Sterlin Harjo's New FX Charmer",
+          "quote": "Harjo’s follow-up to one of television’s great half-hours of the decade/century/ever is still finding its way, based on the five episodes sent to critics.",
+          "publishedDate": "2025-09-05",
+          "sentiment": 0.3
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15350,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2545245/tracker-1x01-klamath-falls",
+      "basis": "Exact Tracker season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/tracker-review-justin-hartley-cbs-1235821369/",
+          "title": "'Tracker' Review: Justin Hartley in Bland CBS Procedural",
+          "quote": "Tracker has a solid action leading man",
+          "publishedDate": "2024-02-11",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.tvguide.com/news/tracker-review-justin-hartley-cbs-procedural",
+          "title": "Tracker Review: Justin Hartley's CBS Procedural Has Promise but Plays It Too Safe - TV Guide",
+          "quote": "Hartley is well cast here, even if he does seem a bit muzzled in this role.",
+          "publishedDate": "2024-02-09",
+          "sentiment": 0.3
+        },
+        {
+          "url": "https://www.pastemagazine.com/tv/cbs-paramount-plus/tracker-series-review",
+          "title": "Tracker Review: CBS' New Crime Drama Is Addictively Entertaining",
+          "quote": "Full of suspense, intrigue, and a ton of Hartley charisma, Tracker is sure to be CBS’ next big hit.",
+          "publishedDate": "2024-02-01",
+          "sentiment": 0.9
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15314,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3269046/the-rainmaker-1x01-episode-1",
+      "basis": "Exact The Rainmaker season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-rainmaker-review-usa-john-grisham-john-slattery-1236340453/",
+          "title": "'The Rainmaker' Review: USA's Conventionally Satisfying Grisham Series",
+          "quote": "This kind of law might be gross, but it’s fun!",
+          "publishedDate": "2025-08-14",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://screenanarchy.com/2025/08/the-rainmaker-review-sturdy-legal-drama-strains-against-expectations.html",
+          "title": "THE RAINMAKER Review: Sturdy Legal Drama Strains Against Expectations",
+          "quote": "The shame of it is that this is a very easy show to enjoy, even if the first five episodes, kindly provided in advance, prompted me to talk back to the screen as often as not.",
+          "publishedDate": "2025-08-14",
+          "sentiment": 0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15338,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2918905/ncis-origins-1x01-enter-sandman",
+      "basis": "Exact NCIS: Origins season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://tvline.com/reviews/ncis-origins-prequel-spinoff-young-gibbs-cbs-2-1235349620",
+          "title": "'NCIS Origins' Review Of Young Gibbs 'NCIS' Prequel Spinoff On CBS",
+          "quote": "While Gibbs feels his way around NIS and his duties, the ensemble cast shines, and there are some real winners among this lot.",
+          "publishedDate": "2024-10-13",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thewrap.com/ncis-origins-review-gibbs-prequel-cbs-austin-stowell",
+          "title": "NCIS Origins Review: Gibbs Prequel Will Please Fans",
+          "quote": "The formula ain’t broke",
+          "publishedDate": "2024-10-14",
+          "sentiment": 0.5
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15336,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/2941339/georgie-mandys-first-marriage-1x01-the-610-to-lubbock",
+      "basis": "Exact Georgie & Mandy's First Marriage season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/georgie-and-mandys-first-marriage-review-1236034179/",
+          "title": "'Georgie & Mandy's First Marriage' Review: 'Young Sheldon' CBS Spinoff",
+          "quote": "It has a good cast and, with Lorre, Steven Molaro and Steve Holland as creators, an appealing proficiency with the format.",
+          "publishedDate": "2024-10-17",
+          "sentiment": 0.4
+        },
+        {
+          "url": "https://tvline.com/reviews/georgie-and-mandys-first-marriage-review-young-sheldon-spinoff-cbs-1235347655",
+          "title": "Georgie & Mandy's First Marriage Review — Young Sheldon Spinoff On CBS",
+          "quote": "All told, Georgie & Mandy's First Marriage is a solid family comedy.",
+          "publishedDate": "2024-10-14",
+          "sentiment": 0.6
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15332,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3058709/doc-1x01-if-at-first-you-dont-succeed",
+      "basis": "Exact Doc season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/doc-review-fox-molly-parker-1236091888/",
+          "title": "'Doc' Review: Molly Parker in Fox Medical Drama About Amnesiac Doctor",
+          "quote": "And it’s so bland you’re probably going to forget it even as you’re reading this paragraph.",
+          "publishedDate": "2025-01-02",
+          "sentiment": -0.7
+        },
+        {
+          "url": "https://sg.news.yahoo.com/review-foxs-amnesia-drama-doc-132243775.html",
+          "title": "Review: Fox's amnesia drama 'Doc' is a maudlin mess - Yahoo News Singapore",
+          "quote": "It’s awkward, unenjoyable and irritating.",
+          "publishedDate": null,
+          "sentiment": -0.9
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 15320,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3301108/boston-blue-1x01-faith-and-family",
+      "basis": "Exact Boston Blue season 1 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.aol.com/articles/boston-blue-review-donnie-wahlbergs-161601019.html",
+          "title": "“Boston Blue” review: Donnie Wahlberg's “Blue Bloods” spinoff gets the job done - AOL",
+          "quote": "Sure, it’s on the nose, but Wahlberg and Martin-Green seem to be having fun, so it works.",
+          "publishedDate": "2025-10-14",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://www.thewrap.com/boston-blue-review-cbs-donnie-wahlberg",
+          "title": "Boston Blue Review: Blue Bloods Spinoff Sticks to the Formula",
+          "quote": "is following the exact formula as “Blue Bloods,”",
+          "publishedDate": "2025-10-13",
+          "sentiment": -0.1
+        },
+        {
+          "url": "https://www.thestar.com.my/lifestyle/entertainment/2025/12/12/039boston-blue039-review-comfy-as-an-old-shoe-but-pinches-in-places",
+          "title": "'Boston Blue' review: Comfy as an old shoe, but pinches in places | The Star",
+          "quote": "The show follows a tried-and-tested formula, a little too closely and slavishly perhaps, while the new characters take some getting used to.",
+          "publishedDate": "2025-12-12",
+          "sentiment": -0.2
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2026,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3615626/the-terminal-list-2x01-tba",
+      "basis": "Exact The Terminal List season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.tvguide.com/news/the-terminal-list-season-2-review-chris-pratt-action-thriller",
+          "title": "The Terminal List Season 2 Review: Chris Pratt's Action Thriller Is Back With a Vengeance - TV Guide",
+          "quote": "The long lead time means Season 2 gets to be bigger and more ambitious, with an expanded cast, a globetrotting production, and a lot of action.",
+          "publishedDate": "2026-10-21",
+          "sentiment": 0.5
+        },
+        {
+          "url": "https://seat42f.com/the-terminal-list-season-2-review/",
+          "title": "The Terminal List Season 2 Review: Action and a Stronger Cast",
+          "quote": "The result is a more varied season, with muscular action and an ensemble that can sustain attention when Reece retreats into his familiar silence.",
+          "publishedDate": "2026-10-21",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.thedailybeast.com/obsessed/the-terminal-list-chris-pratts-maga-fever-dream-show-is-laughably-awful",
+          "title": "‘The Terminal List’: Chris Pratt’s MAGA Fever Dream Show Is Laughably Awful",
+          "quote": "is pure right-wing propaganda in Season 2.",
+          "publishedDate": "2026-10-21",
+          "sentiment": -0.9
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2057,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3697174/the-lowdown-2x01-the-rupidoop",
+      "basis": "Exact The Lowdown season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.inverse.com/entertainment/the-lowdown-season-2-review-fx-noir-ethan-hawke",
+          "title": "The Best Neo-Noir You’re Not Watching Is Better Than Ever",
+          "quote": "The shaggy charms of The Lowdown are on full display in Season 2",
+          "publishedDate": "2026-10-15",
+          "sentiment": 0.7
+        },
+        {
+          "url": "https://www.thedailybeast.com/obsessed/the-lowdown-tvs-best-series-starring-ethan-hawke-gets-even-better-in-season-2/",
+          "title": "‘The Lowdown’: TV’s Best Series Starring Ethan Hawke Gets Even Better in Season 2",
+          "quote": "With its second season, The Lowdown continues to be the best show on television—and quite frankly, it’s not close.",
+          "publishedDate": "2026-10-07",
+          "sentiment": 0.95
+        }
+      ]
+    },
+    {
+      "table": "PinCriticReview",
+      "pinId": 2027,
+      "pinSourceUrl": "https://www.tvmaze.com/episodes/3748281/dexter-resurrection-2x01-tba",
+      "basis": "Exact Dexter: Resurrection season 2 as reviewed by the cited critics (pages opened; quotes verbatim), not other seasons or episodes of the franchise. Sentiment describes each passage, not a converted rating or consensus. Dates are the pages' original publication days where shown, otherwise null.",
+      "reviews": [
+        {
+          "url": "https://www.inverse.com/entertainment/dexter-resurrection-season-2-review-paramount",
+          "title": "Paramount+ Is Quietly Releasing The Best 'Dexter' Show Since The Original",
+          "quote": "Dexter: Resurrection Season 2 Is A Goofy Delight",
+          "publishedDate": "2026-10-29",
+          "sentiment": 0.8
+        },
+        {
+          "url": "https://wifihifi.com/dexter-resurrection-season-2-review-killer-have-midlife-crises-too/",
+          "title": "Dexter Resurrection Season 2 Review: Dexter Might Be Losing His Edge, But the Show Isn't",
+          "quote": "So, to see the original opening sequence return for the sequel series Dexter: Resurrection, complete with a fitting refresh, was an instant delight.",
+          "publishedDate": "2026-10-29",
+          "sentiment": 0.6
+        },
+        {
+          "url": "https://www.flickeringmyth.com/dexter-resurrection-season-2-video-review-dexters-midlife-crisis-is-killer/",
+          "title": "Dexter: Resurrection Season 2 Video Review - Dexter’s Midlife Crisis Is Killer!",
+          "quote": "In what could be one of the show’s best seasons in years",
+          "publishedDate": "2026-10-28",
+          "sentiment": 0.7
+        }
+      ]
+    }
+  ]
+}
