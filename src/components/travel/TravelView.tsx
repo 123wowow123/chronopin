@@ -71,6 +71,11 @@ export function TravelView({
   const gt = (key: string, values?: Record<string, string | number>) => t(`guides.travel.${key}` as MessageKey, values);
   const em = { em: (c: ReactNode) => <em>{c}</em>, strong: (c: ReactNode) => <strong>{c}</strong> };
   const seasonName = (id: string) => gt(`season.${id}`);
+  const shelfLabel = (shelf: { id: string; label: string }) => {
+    const key = `shelf.${shelf.id}`;
+    const text = gt(key);
+    return text === `guides.travel.${key}` ? shelf.label : text;
+  };
   const seasonLabel = (season: { id: string; months: readonly number[] }) => {
     if (season.id === 'all') return seasonName('all');
     const month = (m: number) => new Intl.DateTimeFormat(intl, { month: 'short', timeZone: 'UTC' }).format(Date.UTC(2024, m - 1, 1));
@@ -482,7 +487,7 @@ export function TravelView({
                         : 'text-[var(--soft,#627069)] hover:bg-[var(--rule,#d8dcd0)]'
                     }`}
                   >
-                    {shelf.label} <span>· {shelf.pins.length.toString().padStart(2, '0')}</span>
+                    {shelfLabel(shelf)} <span>· {shelf.pins.length.toString().padStart(2, '0')}</span>
                   </button>
                 ))}
               </nav>
@@ -492,7 +497,7 @@ export function TravelView({
             <div className={`${styles.sectionHeading} ${styles.sortedSectionHeading} mt-8 mb-6`}>
               <div>
                 <h2 className="text-2xl font-serif font-normal text-[var(--text,#263c32)]">
-                  {activeShelfId === 'all' ? gt('allCuratedHeading') : currentShelf?.label}
+                  {activeShelfId === 'all' ? gt('allCuratedHeading') : (currentShelf ? shelfLabel(currentShelf) : '')}
                 </h2>
                 <p className="mt-1 text-sm text-[var(--soft,#627069)]">
                   {sortOrder === 'price-asc'
@@ -506,7 +511,7 @@ export function TravelView({
                     : sortOrder === 'distance-desc'
                     ? gt('sortDistanceDesc')
                     : sortOrder === 'rating-desc' && activeShelfId !== 'all'
-                    ? gt('sortRatingShelf', { shelf: currentShelf?.label ?? gt('collection') })
+                    ? gt('sortRatingShelf', { shelf: currentShelf ? shelfLabel(currentShelf) : gt('collection') })
                     : gt('sortDefault')}
                 </p>
                 {(locating || locationError) && (

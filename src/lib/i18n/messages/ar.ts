@@ -3292,6 +3292,14 @@ const ar: Messages = {
         Dining: 'فنون الطهي',
         Nature: 'الحياة البرية والطبيعة',
       },
+      shelf: {
+        'top-resorts': 'الأعلى تقييمًا',
+        'coastal-escapes': 'الجزر والسواحل',
+        'cultural-sanctuaries': 'تاريخي',
+        'wonder-retreats': 'جبال الألب',
+        'kids-family': 'عائلي',
+        'budget-friendly': 'اقتصادي',
+      },
       season: {
         all: 'طوال العام',
         spring: 'الربيع',

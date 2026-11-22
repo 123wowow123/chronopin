@@ -2910,6 +2910,14 @@ const th: Messages = {
         Dining: 'อาหารชั้นเลิศ',
         Nature: 'สัตว์ป่าและธรรมชาติ',
       },
+      shelf: {
+        'top-resorts': 'คะแนนสูงสุด',
+        'coastal-escapes': 'เกาะและชายฝั่ง',
+        'cultural-sanctuaries': 'ประวัติศาสตร์',
+        'wonder-retreats': 'แอลไพน์',
+        'kids-family': 'ครอบครัว',
+        'budget-friendly': 'ประหยัด',
+      },
       season: {
         all: 'ตลอดปี',
         spring: 'ฤดูใบไม้ผลิ',

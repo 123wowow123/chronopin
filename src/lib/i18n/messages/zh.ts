@@ -2914,6 +2914,14 @@ const zh: Messages = {
         Dining: '美食',
         Nature: '野生动物与自然',
       },
+      shelf: {
+        'top-resorts': '口碑最佳',
+        'coastal-escapes': '海岛海滨',
+        'cultural-sanctuaries': '历史人文',
+        'wonder-retreats': '高山',
+        'kids-family': '亲子',
+        'budget-friendly': '经济实惠',
+      },
       season: {
         all: '全年',
         spring: '春季',

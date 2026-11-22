@@ -104,6 +104,33 @@ function buildMonths(
   });
 }
 
+// Orlando International Airport 1991–2020 normals, Florida Climate Center:
+// https://climatecenter.fsu.edu/products-services/data/1991-2020-normals/orlando
+// Temperatures are monthly normal daytime highs, rounded to whole Celsius.
+// Season ratings are editorial planning guidance, not weather forecasts.
+export const ORLANDO_TIMING: BestTimeToGo = {
+  recommendedMonths: [1, 2, 3, 4, 11, 12],
+  bestSeason: 'Cooler months for outdoor park days',
+  peakSeason: 'School holidays; check date-specific room rates',
+  shoulderSeason: 'School-term dates in spring and autumn',
+  lowSeason: 'Selected school-term dates; rates vary by resort',
+  tempRange: '22°C – 29°C daytime highs in the cooler months',
+  weatherSummary: 'Summer is hot and wet. Winter and early spring usually offer cooler park touring; pools may feel cool on some winter days.',
+  whyGo: 'Choose cooler months for long outdoor park days. June through September have the highest normal rainfall, so allow for indoor breaks. Holiday crowds and room prices follow a different pattern from the weather.',
+  climateZone: 'Humid subtropical',
+  months: buildMonths(Object.fromEntries(
+    [71.8, 74.9, 78.9, 83.6, 88.4, 90.8, 92.0, 91.6, 89.6, 84.7, 78.3, 73.8].map((highF, index) => {
+      const month = index + 1;
+      const rainIn = [2.48, 2.04, 3.03, 2.58, 4.02, 8.05, 7.46, 7.69, 6.37, 3.46, 1.79, 2.48][index];
+      return [month, {
+        status: ([1, 2, 3, 4, 11, 12].includes(month) ? 'prime' : [5, 10].includes(month) ? 'good' : 'fair') as MonthStatus,
+        tempC: Math.round((highF - 32) * 5 / 9),
+        rainfall: (rainIn >= 6 ? 'High' : rainIn >= 3 ? 'Moderate' : 'Low') as MonthWeather['rainfall'],
+      }];
+    }),
+  )),
+};
+
 // Destination and seasonal timing repository for all curated resorts and hotels.
 const RESORT_TIMING_MAP: Record<number, { destination: string; timing: BestTimeToGo }> = {
   // Capella Kyoto
@@ -1334,7 +1361,8 @@ const DEFAULT_TIMING: BestTimeToGo = {
   }),
 };
 
-export function getBestTimeToGo(pinId: number): { destination: string; timing: BestTimeToGo } {
+export function getBestTimeToGo(pinId: number, region?: 'orlando'): { destination: string; timing: BestTimeToGo } {
+  if (region === 'orlando') return { destination: 'Orlando, Florida, USA', timing: ORLANDO_TIMING };
   return RESORT_TIMING_MAP[pinId] ?? { destination: 'Worldwide Resort', timing: DEFAULT_TIMING };
 }
 

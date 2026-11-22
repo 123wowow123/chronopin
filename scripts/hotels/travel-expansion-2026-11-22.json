@@ -1,0 +1,857 @@
+[
+  {
+    "key": "cabana",
+    "pin": {
+      "title": "Universal Cabana Bay Beach Resort Opens",
+      "productName": "Universal Cabana Bay Beach Resort",
+      "description": "Retro Florida resort with two pool complexes, a lazy river, bowling and family suites sleeping up to six near Universal’s theme parks.",
+      "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "6550 Adventure Way, Orlando, FL 32819, USA",
+      "latitude": 28.465102104687,
+      "longitude": -81.473349026159,
+      "utcStartDateTime": "2014-03-31T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source explicitly identifies 2014-03-31. This pin dates the first guest opening, not a research date or a later expansion.",
+      "references": [
+        {
+          "url": "https://orlandoinformer.com/universal/cabana-bay-beach-resort/",
+          "title": "Universal Cabana Bay Beach Resort: Overview",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort",
+          "title": "Universal Cabana Bay Beach Resort — official hotel information",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g34515-d3932244-Reviews-Universal_Cabana_Bay_Beach_Resort-Orlando_Florida.html",
+          "title": "Universal Cabana Bay Beach Resort — Tripadvisor guest ratings",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-cabana-bay-beach-resort-AA135762",
+          "title": "Universal Cabana Bay Beach Resort — AAA Trip Canvas",
+          "confidence": 100
+        }
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "longFormSummary": "<p>Retro Florida resort with two pool complexes, a lazy river, bowling and family suites sleeping up to six near Universal’s theme parks.<cite data-ref=\"https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort\"></cite></p><p>The first guest opening was 2014-03-31.<cite data-ref=\"https://orlandoinformer.com/universal/cabana-bay-beach-resort/\"></cite></p><h3>Planning a stay</h3><p>AAA listed rooms from $179 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; family suites can cost more.<cite data-ref=\"https://www.aaa.com/tripcanvas/hotel/universals-cabana-bay-beach-resort-AA135762\"></cite></p><p>Room rates are separate from theme park tickets. Check the operator’s current conditions before booking.</p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d3932244-Reviews-Universal_Cabana_Bay_Beach_Resort-Orlando_Florida.html",
+      "basis": "Checked 2026-11-22. Tripadvisor (24,949 reviews), Rooms/Service/Location/Cleanliness/Value: 4.3/4.3/4.6/4.4/4.2 of 5, rounded to nearest half point. AAA property inspector page checked; no diamond count inferred from component scores. Forbes Orlando directory checked, no listing found. MICHELIN Orlando URL redirected to a generic catalog; current Keys selection could not be verified. Acclaim remains null.",
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-cabana-bay-beach-resort-AA135762",
+          "title": "Universal Cabana Bay Beach Resort — AAA Diamond Inspector Notes",
+          "publishedDate": null,
+          "quote": "Rooms are vibrant, some have great views of Volcano Bay."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating status",
+          "value": "Opened to guests 2014-03-31",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://orlandoinformer.com/universal/cabana-bay-beach-resort/",
+            "title": "Universal Cabana Bay Beach Resort: Overview",
+            "publishedDate": "2025-10-13",
+            "quote": "Cabana Bay opened in phases, with the North Courtyard opening on March 31, 2014"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First guest opening",
+          "date": "2014-03-31",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://orlandoinformer.com/universal/cabana-bay-beach-resort/",
+            "title": "Universal Cabana Bay Beach Resort: Overview",
+            "publishedDate": "2025-10-13",
+            "quote": "Cabana Bay opened in phases, with the North Courtyard opening on March 31, 2014"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 179,
+      "currency": "USD",
+      "formatted": "$179 (before tax)"
+    },
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-cabana-bay-beach-resort-AA135762",
+    "priceBasis": "AAA listed rooms from $179 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; family suites can cost more.",
+    "topActivities": [
+      {
+        "title": "Pools & lazy river",
+        "category": "Water",
+        "description": "Two pool complexes and a winding lazy river for resort downtime.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Galaxy Bowl",
+        "category": "Kids",
+        "description": "On-site bowling offers another family activity; separate fees apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Theme park days",
+        "category": "Adventure",
+        "description": "Shuttles and walking paths serve Universal parks. Park tickets are separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "media": [
+      {
+        "key": "cabana-pool",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ab/e7/3f/universal-s-cabana-bay.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d3932244-Reviews-Universal_Cabana_Bay_Beach_Resort-Orlando_Florida.html",
+        "credit": "Universal Cabana Bay Beach Resort / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cabana-pool-6f0d4080aab7c7c0.webp",
+        "width": 1600,
+        "height": 1045,
+        "sha256": "6f0d4080aab7c7c09e1449365a3ae9abb1b329fc402f75bb2b00630e8dac0013"
+      },
+      {
+        "key": "cabana-lobby",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ab/e7/49/universal-s-cabana-bay.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d3932244-Reviews-Universal_Cabana_Bay_Beach_Resort-Orlando_Florida.html",
+        "credit": "Universal Cabana Bay Beach Resort / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cabana-lobby-4e7bb263f00e392f.webp",
+        "width": 1600,
+        "height": 1066,
+        "sha256": "4e7bb263f00e392f78e81167b40e0e24b1db1632dad616ed73da98bd18df9e2d"
+      },
+      {
+        "key": "cabana-river",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4c/63/c5/universal-s-cabana-bay.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d3932244-Reviews-Universal_Cabana_Bay_Beach_Resort-Orlando_Florida.html",
+        "credit": "Universal Cabana Bay Beach Resort / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cabana-river-079ac5602298c661.webp",
+        "width": 1600,
+        "height": 1097,
+        "sha256": "079ac5602298c6614c2fa244fe94605f09498f3bc3cc382584f3bec977fdfcac"
+      }
+    ],
+    "researchGaps": [
+      "Construction budget and a directly comparable resort cost benchmark were not verified; pin cost remains null.",
+      "MICHELIN destination lookup redirected; do not claim Keys or numeric acclaim.",
+      "Independent expert review with a verified day-level publication date remains unavailable; AAA inspector excerpt is undated."
+    ]
+  },
+  {
+    "key": "surfside",
+    "pin": {
+      "title": "Universal Endless Summer Resort – Surfside Inn and Suites Opens",
+      "productName": "Universal Endless Summer Resort – Surfside Inn and Suites",
+      "description": "A surf-themed Universal value hotel with a surfboard-shaped pool, two-bedroom suites sleeping up to six and shuttle transport to the parks.",
+      "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-surfside-inn-and-suites",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "7000 Universal Boulevard, Orlando, FL 32819, USA",
+      "latitude": 28.46111965294,
+      "longitude": -81.465289993894,
+      "utcStartDateTime": "2019-06-27T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source explicitly identifies 2019-06-27. This pin dates the first guest opening, not a research date or a later expansion.",
+      "references": [
+        {
+          "url": "https://media.universalorlando.com/wp-content/uploads/2019/06/01_Universals-Endless-Summer-Resort-Surfside-Inn-and-Suites-Now-Open.pdf",
+          "title": "NOW OPEN: UNIVERSAL’S ENDLESS SUMMER RESORT – SURFSIDE INN AND SUITES",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-surfside-inn-and-suites",
+          "title": "Universal Endless Summer Resort – Surfside Inn and Suites — official hotel information",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g34515-d15021774-Reviews-Universal_Endless_Summer_Resort_Surfside_Inn_And_Suites-Orlando_Florida.html",
+          "title": "Universal Endless Summer Resort – Surfside Inn and Suites — Tripadvisor guest ratings",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-surfside-inn-and-suites-AA126987",
+          "title": "Universal Endless Summer Resort – Surfside Inn and Suites — AAA Trip Canvas",
+          "confidence": 100
+        }
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "longFormSummary": "<p>A surf-themed Universal value hotel with a surfboard-shaped pool, two-bedroom suites sleeping up to six and shuttle transport to the parks.<cite data-ref=\"https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-surfside-inn-and-suites\"></cite></p><p>The first guest opening was 2019-06-27.<cite data-ref=\"https://media.universalorlando.com/wp-content/uploads/2019/06/01_Universals-Endless-Summer-Resort-Surfside-Inn-and-Suites-Now-Open.pdf\"></cite></p><h3>Planning a stay</h3><p>AAA listed rooms from $127 before taxes and fees when checked November 22, 2026. This is an indicative starting rate, not a quote for a six-person suite.<cite data-ref=\"https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-surfside-inn-and-suites-AA126987\"></cite></p><p>Room rates are separate from theme park tickets. Check the operator’s current conditions before booking.</p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d15021774-Reviews-Universal_Endless_Summer_Resort_Surfside_Inn_And_Suites-Orlando_Florida.html",
+      "basis": "Checked 2026-11-22. Tripadvisor (2,094 reviews), Rooms/Service/Location/Cleanliness/Value: 4.4/4.5/4.7/4.6/4.4 of 5, rounded to nearest half point. AAA property inspector page checked; no diamond count inferred from component scores. Forbes Orlando directory checked, no listing found. MICHELIN Orlando URL redirected to a generic catalog; current Keys selection could not be verified. Acclaim remains null.",
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-surfside-inn-and-suites-AA126987",
+          "title": "Universal Endless Summer Resort – Surfside Inn and Suites — AAA Diamond Inspector Notes",
+          "publishedDate": null,
+          "quote": "Rooms are designed in beach-surf decor and the family suites have a small kitchen area."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating status",
+          "value": "Opened to guests 2019-06-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalorlando.com/wp-content/uploads/2019/06/01_Universals-Endless-Summer-Resort-Surfside-Inn-and-Suites-Now-Open.pdf",
+            "title": "NOW OPEN: UNIVERSAL’S ENDLESS SUMMER RESORT – SURFSIDE INN AND SUITES",
+            "publishedDate": "2019-06-27",
+            "quote": "The 750-room hotel is the destination’s seventh property in partnership with Loews Hotels & Co."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First guest opening",
+          "date": "2019-06-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.universalorlando.com/wp-content/uploads/2019/06/01_Universals-Endless-Summer-Resort-Surfside-Inn-and-Suites-Now-Open.pdf",
+            "title": "NOW OPEN: UNIVERSAL’S ENDLESS SUMMER RESORT – SURFSIDE INN AND SUITES",
+            "publishedDate": "2019-06-27",
+            "quote": "The 750-room hotel is the destination’s seventh property in partnership with Loews Hotels & Co."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 127,
+      "currency": "USD",
+      "formatted": "$127 (before tax)"
+    },
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-surfside-inn-and-suites-AA126987",
+    "priceBasis": "AAA listed rooms from $127 before taxes and fees when checked November 22, 2026. This is an indicative starting rate, not a quote for a six-person suite.",
+    "topActivities": [
+      {
+        "title": "Surfboard pool",
+        "category": "Water",
+        "description": "A surfboard-shaped pool with zero-entry access.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Suite downtime",
+        "category": "Kids",
+        "description": "Two-bedroom suites sleep up to six and include a kitchenette area.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Theme park shuttles",
+        "category": "Adventure",
+        "description": "Complimentary shuttles connect the resort with Universal; park admission is separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "media": [
+      {
+        "key": "surfside-pool",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/1a/b1/84/universal-s-endless-summer.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d15021774-Reviews-Universal_Endless_Summer_Resort_Surfside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Surfside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/surfside-pool-6bde96cd9756c8d8.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "6bde96cd9756c8d8d82db56830e2b009925ceeec32e347ef43bc74bf56b2752a"
+      },
+      {
+        "key": "surfside-exterior",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/1a/a8/86/universal-s-endless-summer.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d15021774-Reviews-Universal_Endless_Summer_Resort_Surfside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Surfside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/surfside-exterior-67ebb28aeff81f36.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "67ebb28aeff81f368577871e0f7b717d585cce4fc7a9a2f4fc03d21299858a6a"
+      },
+      {
+        "key": "surfside-lobby",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/1a/b1/10/universal-s-endless-summer.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d15021774-Reviews-Universal_Endless_Summer_Resort_Surfside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Surfside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/surfside-lobby-ac590e433fc27030.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "ac590e433fc27030f08806e8da38bb8afdc2ea9cc297301fde363ec627587939"
+      }
+    ],
+    "researchGaps": [
+      "Construction budget and a directly comparable resort cost benchmark were not verified; pin cost remains null.",
+      "MICHELIN destination lookup redirected; do not claim Keys or numeric acclaim.",
+      "Independent expert review with a verified day-level publication date remains unavailable; AAA inspector excerpt is undated."
+    ]
+  },
+  {
+    "key": "dockside",
+    "pin": {
+      "title": "Universal Endless Summer Resort – Dockside Inn and Suites Opens",
+      "productName": "Universal Endless Summer Resort – Dockside Inn and Suites",
+      "description": "A coastal-themed Universal value hotel with two pools, a food court and two-bedroom suites sleeping up to six.",
+      "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-dockside-inn-and-suites",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "7125 Universal Boulevard, Orlando, FL 32819, USA",
+      "latitude": 28.459296756638,
+      "longitude": -81.4620622068,
+      "utcStartDateTime": "2020-12-15T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source explicitly identifies 2020-12-15. This pin dates the first guest opening, not a research date or a later expansion.",
+      "references": [
+        {
+          "url": "https://www.visitfloridamedia.com/releases/post/universals-endless-summer-resort-dockside-inn-and-suites-is-now-open/",
+          "title": "Universal's Endless Summer Resort - Dockside Inn and Suites is Now Open",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-dockside-inn-and-suites",
+          "title": "Universal Endless Summer Resort – Dockside Inn and Suites — official hotel information",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g34515-d17765126-Reviews-Universal_Endless_Summer_Resort_Dockside_Inn_And_Suites-Orlando_Florida.html",
+          "title": "Universal Endless Summer Resort – Dockside Inn and Suites — Tripadvisor guest ratings",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-dockside-inn-and-suites-AA126986",
+          "title": "Universal Endless Summer Resort – Dockside Inn and Suites — AAA Trip Canvas",
+          "confidence": 100
+        }
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "longFormSummary": "<p>A coastal-themed Universal value hotel with two pools, a food court and two-bedroom suites sleeping up to six.<cite data-ref=\"https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-dockside-inn-and-suites\"></cite></p><p>The first guest opening was 2020-12-15.<cite data-ref=\"https://www.visitfloridamedia.com/releases/post/universals-endless-summer-resort-dockside-inn-and-suites-is-now-open/\"></cite></p><h3>Planning a stay</h3><p>AAA listed rooms from $167 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; two-bedroom suites can cost more.<cite data-ref=\"https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-dockside-inn-and-suites-AA126986\"></cite></p><p>Room rates are separate from theme park tickets. Check the operator’s current conditions before booking.</p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d17765126-Reviews-Universal_Endless_Summer_Resort_Dockside_Inn_And_Suites-Orlando_Florida.html",
+      "basis": "Checked 2026-11-22. Tripadvisor (3,256 reviews), Rooms/Service/Location/Cleanliness/Value: 4.2/4.3/4.6/4.4/4.3 of 5, rounded to nearest half point. AAA property inspector page checked; no diamond count inferred from component scores. Forbes Orlando directory checked, no listing found. MICHELIN Orlando URL redirected to a generic catalog; current Keys selection could not be verified. Acclaim remains null.",
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-dockside-inn-and-suites-AA126986",
+          "title": "Universal Endless Summer Resort – Dockside Inn and Suites — AAA Diamond Inspector Notes",
+          "publishedDate": null,
+          "quote": "The family hotel has varying room types including rooms that sleep up to six."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating status",
+          "value": "Opened to guests 2020-12-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.visitfloridamedia.com/releases/post/universals-endless-summer-resort-dockside-inn-and-suites-is-now-open/",
+            "title": "Universal's Endless Summer Resort - Dockside Inn and Suites is Now Open",
+            "publishedDate": "2020-12-15",
+            "quote": "The extra-affordable resort adds 2,050 guest rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First guest opening",
+          "date": "2020-12-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.visitfloridamedia.com/releases/post/universals-endless-summer-resort-dockside-inn-and-suites-is-now-open/",
+            "title": "Universal's Endless Summer Resort - Dockside Inn and Suites is Now Open",
+            "publishedDate": "2020-12-15",
+            "quote": "The extra-affordable resort adds 2,050 guest rooms"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 167,
+      "currency": "USD",
+      "formatted": "$167 (before tax)"
+    },
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-dockside-inn-and-suites-AA126986",
+    "priceBasis": "AAA listed rooms from $167 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; two-bedroom suites can cost more.",
+    "topActivities": [
+      {
+        "title": "Two resort pools",
+        "category": "Water",
+        "description": "Choose between two outdoor pools for a break from park touring.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pier 8 Market",
+        "category": "Dining",
+        "description": "A casual food court provides breakfast, lunch and dinner.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family suite stays",
+        "category": "Kids",
+        "description": "Two-bedroom suites sleep up to six with a kitchenette and picnic table.",
+        "kidsFriendly": true
+      }
+    ],
+    "media": [
+      {
+        "key": "dockside-pool",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/35/19/45/kph-pool.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d17765126-Reviews-Universal_Endless_Summer_Resort_Dockside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Dockside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dockside-pool-bf3ecb33dc719295.webp",
+        "width": 1500,
+        "height": 1000,
+        "sha256": "bf3ecb33dc7192955be6e0120f07d47a803a97d5e35ae644e77f134e6477c712"
+      },
+      {
+        "key": "dockside-exterior",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/0e/d3/f1/universal-s-endless-summer.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d17765126-Reviews-Universal_Endless_Summer_Resort_Dockside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Dockside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dockside-exterior-bd6f3ce6adb1f28d.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "bd6f3ce6adb1f28d6b292871d90faef7ab6ca271919f4d6a30b8702ae881529d"
+      },
+      {
+        "key": "dockside-lobby",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/35/19/51/ga-lobby.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d17765126-Reviews-Universal_Endless_Summer_Resort_Dockside_Inn_And_Suites-Orlando_Florida.html",
+        "credit": "Universal Endless Summer Resort – Dockside Inn and Suites / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dockside-lobby-696f95525cc85e13.webp",
+        "width": 1500,
+        "height": 1000,
+        "sha256": "696f95525cc85e1386084f8bc3057940cbe77387ac576dc3ac0357cb51451411"
+      }
+    ],
+    "researchGaps": [
+      "Construction budget and a directly comparable resort cost benchmark were not verified; pin cost remains null.",
+      "MICHELIN destination lookup redirected; do not claim Keys or numeric acclaim.",
+      "Independent expert review with a verified day-level publication date remains unavailable; AAA inspector excerpt is undated."
+    ]
+  },
+  {
+    "key": "pop",
+    "pin": {
+      "title": "Disney’s Pop Century Resort Opens",
+      "productName": "Disney’s Pop Century Resort",
+      "description": "Disney value resort with larger-than-life pop-culture icons, three pools and Skyliner connections to EPCOT and Disney’s Hollywood Studios.",
+      "sourceUrl": "https://disneyworld.disney.go.com/resorts/pop-century-resort/",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resort",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "1050 Century Drive, Lake Buena Vista, FL 32830, USA",
+      "latitude": 28.35037589462,
+      "longitude": -81.542988308493,
+      "utcStartDateTime": "2003-12-14T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening source explicitly identifies 2003-12-14. This pin dates the first guest opening, not a research date or a later expansion.",
+      "references": [
+        {
+          "url": "https://d23.com/a-to-z/pop-century-resort-disneys/",
+          "title": "Pop Century Resort, Disney’s",
+          "confidence": 100
+        },
+        {
+          "url": "https://disneyworld.disney.go.com/resorts/pop-century-resort/",
+          "title": "Disney’s Pop Century Resort — official hotel information",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g24176024-d207235-Reviews-Pop_Century_Resort-Bay_Lake_Florida.html",
+          "title": "Disney’s Pop Century Resort — Tripadvisor guest ratings",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/disneys-pop-century-resort-AA115198",
+          "title": "Disney’s Pop Century Resort — AAA Trip Canvas",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mousesavers.com/2026-pop-century-room-rates-season-dates/",
+          "title": "2026 Pop Century Room Rates & Season Dates",
+          "confidence": 100
+        }
+      ],
+      "price": null,
+      "priceCurrency": null,
+      "longFormSummary": "<p>Disney value resort with larger-than-life pop-culture icons, three pools and Skyliner connections to EPCOT and Disney’s Hollywood Studios.<cite data-ref=\"https://disneyworld.disney.go.com/resorts/pop-century-resort/\"></cite></p><p>The first guest opening was 2003-12-14.<cite data-ref=\"https://d23.com/a-to-z/pop-century-resort-disneys/\"></cite></p><h3>Planning a stay</h3><p>MouseSavers’ 2026 rack-rate table lists standard rooms from $212 to $396 including 12.5% tax, depending on date. Sub-$250 prices apply only on selected dates; holidays cost more.<cite data-ref=\"https://www.mousesavers.com/2026-pop-century-room-rates-season-dates/\"></cite></p><p>Room rates are separate from theme park tickets. Check the operator’s current conditions before booking.</p><p>Disney flags construction and refurbishment at this resort; check the current advisory before booking.<cite data-ref=\"https://disneyworld.disney.go.com/resorts/pop-century-resort/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g24176024-d207235-Reviews-Pop_Century_Resort-Bay_Lake_Florida.html",
+      "basis": "Checked 2026-11-22. Tripadvisor (12,973 reviews), Rooms/Service/Location/Cleanliness/Value: 3.8/4.3/4.3/4.3/4.3 of 5, rounded to nearest half point. AAA property inspector page checked; no diamond count inferred from component scores. Forbes Orlando directory checked, no listing found. MICHELIN Orlando URL redirected to a generic catalog; current Keys selection could not be verified. Acclaim remains null.",
+      "reviews": [
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/disneys-pop-century-resort-AA115198",
+          "title": "Disney’s Pop Century Resort — AAA Diamond Inspector Notes",
+          "publishedDate": null,
+          "quote": "The inviting rooms are ideal for resting, and the pool areas are popular."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating status",
+          "value": "Opened to guests 2003-12-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://d23.com/a-to-z/pop-century-resort-disneys/",
+            "title": "Pop Century Resort, Disney’s",
+            "publishedDate": null,
+            "quote": "The first phase, the Classic Years, opened December 14, 2003."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First guest opening",
+          "date": "2003-12-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://d23.com/a-to-z/pop-century-resort-disneys/",
+            "title": "Pop Century Resort, Disney’s",
+            "publishedDate": null,
+            "quote": "The first phase, the Classic Years, opened December 14, 2003."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Lake Buena Vista, Florida, USA",
+    "pricePerNight": {
+      "amount": 212,
+      "maxAmount": 396,
+      "isRange": true,
+      "currency": "USD",
+      "formatted": "$212–396 (2026, incl. tax)"
+    },
+    "priceSource": "https://www.mousesavers.com/2026-pop-century-room-rates-season-dates/",
+    "priceBasis": "MouseSavers’ 2026 rack-rate table lists standard rooms from $212 to $396 including 12.5% tax, depending on date. Sub-$250 prices apply only on selected dates; holidays cost more.",
+    "topActivities": [
+      {
+        "title": "Pool afternoons",
+        "category": "Water",
+        "description": "Hippy Dippy, Bowling and Computer pools offer a break from the parks.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Skyliner rides",
+        "category": "Kids",
+        "description": "Gondolas connect with EPCOT and Disney’s Hollywood Studios; park tickets are separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pop-culture stroll",
+        "category": "Culture",
+        "description": "Explore giant toys and decorations celebrating the 1950s through the 1990s.",
+        "kidsFriendly": true
+      }
+    ],
+    "media": [
+      {
+        "key": "pop-exterior",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/28/e0/9a/disney-s-pop-century.jpg",
+        "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g24176024-d207235-Reviews-Pop_Century_Resort-Bay_Lake_Florida.html",
+        "credit": "Disney’s Pop Century Resort / photo via Tripadvisor",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pop-exterior-86e6b095e502df0c.webp",
+        "width": 1360,
+        "height": 764,
+        "sha256": "86e6b095e502df0c50d7796b6ff2772943460bd88956a5806138cced09a8163a"
+      },
+      {
+        "key": "pop-grounds",
+        "imageSourceUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/places-to-stay/pop-century/pop-century-resort-01.jpg",
+        "sourceUrl": "https://disneyworld.disney.go.com/resorts/pop-century-resort/",
+        "credit": "Disney",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pop-grounds-dfcb0323fb742f37.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "dfcb0323fb742f37a3ff215d67bd168e02578b87adac679b3a98d277c1b00fa1"
+      },
+      {
+        "key": "pop-shop",
+        "imageSourceUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/vision-dam/digital/parks-platform/parks-global-assets/disney-world/resorts/disneys-pop-century-resort/experience/WDW_POP_PopShop_SignWider_BS-16x9.jpg",
+        "sourceUrl": "https://disneyworld.disney.go.com/resorts/pop-century-resort/",
+        "credit": "Disney",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pop-shop-ccfb40a7b64f2ad2.webp",
+        "width": 1600,
+        "height": 900,
+        "sha256": "ccfb40a7b64f2ad23f8b36c3c0cbabbdd97a5c9f1eb6609735b3aa9ee8e5e0b9"
+      }
+    ],
+    "researchGaps": [
+      "Construction budget and a directly comparable resort cost benchmark were not verified; pin cost remains null.",
+      "MICHELIN destination lookup redirected; do not claim Keys or numeric acclaim.",
+      "Independent expert review with a verified day-level publication date remains unavailable; AAA inspector excerpt is undated."
+    ]
+  }
+]

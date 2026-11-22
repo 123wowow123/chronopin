@@ -2924,6 +2924,14 @@ const id: Messages = {
         Dining: 'Gastronomi',
         Nature: 'Satwa liar & alam',
       },
+      shelf: {
+        'top-resorts': 'Peringkat Teratas',
+        'coastal-escapes': 'Pulau & Pantai',
+        'cultural-sanctuaries': 'Bersejarah',
+        'wonder-retreats': 'Alpen',
+        'kids-family': 'Keluarga',
+        'budget-friendly': 'Hemat',
+      },
       season: {
         all: 'Sepanjang tahun',
         spring: 'Musim semi',

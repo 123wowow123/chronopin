@@ -2911,6 +2911,14 @@ const it: Messages = {
         Dining: 'Gastronomia',
         Nature: 'Natura e fauna',
       },
+      shelf: {
+        'top-resorts': 'Più votati',
+        'coastal-escapes': 'Isole e coste',
+        'cultural-sanctuaries': 'Storico',
+        'wonder-retreats': 'Alpino',
+        'kids-family': 'Famiglia',
+        'budget-friendly': 'Economico',
+      },
       season: {
         all: 'Tutto l’anno',
         spring: 'Primavera',

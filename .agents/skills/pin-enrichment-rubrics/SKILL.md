@@ -26,6 +26,11 @@ If a figure or review is unavailable, record a specific research gap instead of 
 ## Type-specific rules
 
 - **Hotels**: always check Michelin Keys, Forbes and AAA acclaim in a rubric pass (`PinHotel`).
+  Travel shelf additions use `src/server/data/travelResorts.json`, matched by the pin's exact `sourceUrl`
+  rather than shared local/production IDs. Replay example: `scripts/hotels/expandTravelShelves.mjs`
+  and its dated research JSON. Use database-allocated IDs, verify Azure images before creating pins,
+  preserve rate qualifiers (tax, season, room type) and leave construction cost separate from nightly rates.
+  Source-URL shelf membership is application code and needs an explicitly requested deploy to go live.
 - **Competitors**: same segment and market at the pin's own time; name product and maker; link `competitorPinId`
   when we have the pin; one-line `summary`. Save locally and on production, matching prod pins by `sourceUrl`
   (ids differ). Not for restaurants, films, events or projects. Never invent a rival; queue the pin with a reason

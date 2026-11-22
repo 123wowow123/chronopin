@@ -3012,6 +3012,14 @@ const ru: Messages = {
         Dining: 'Гастрономия',
         Nature: 'Дикая природа',
       },
+      shelf: {
+        'top-resorts': 'Лучшие',
+        'coastal-escapes': 'Острова и побережье',
+        'cultural-sanctuaries': 'Исторические',
+        'wonder-retreats': 'Альпы',
+        'kids-family': 'Семейные',
+        'budget-friendly': 'Бюджетные',
+      },
       season: {
         all: 'Весь год',
         spring: 'Весна',

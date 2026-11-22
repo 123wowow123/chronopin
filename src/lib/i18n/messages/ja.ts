@@ -2914,6 +2914,14 @@ const ja: Messages = {
         Dining: '美食',
         Nature: '野生動物・自然',
       },
+      shelf: {
+        'top-resorts': '高評価',
+        'coastal-escapes': '島とビーチ',
+        'cultural-sanctuaries': '歴史と文化',
+        'wonder-retreats': 'アルプス',
+        'kids-family': 'ファミリー',
+        'budget-friendly': 'お手頃',
+      },
       season: {
         all: '通年',
         spring: '春',

@@ -2915,6 +2915,14 @@ const ko: Messages = {
         Dining: '미식',
         Nature: '야생동물·자연',
       },
+      shelf: {
+        'top-resorts': '최고 평점',
+        'coastal-escapes': '섬·해안',
+        'cultural-sanctuaries': '역사',
+        'wonder-retreats': '알파인',
+        'kids-family': '가족',
+        'budget-friendly': '가성비',
+      },
       season: {
         all: '연중',
         spring: '봄',

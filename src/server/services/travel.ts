@@ -18,6 +18,16 @@ import { toJson, type PinJson } from '@/lib/types';
 import { TAGS } from './cache';
 import { timelineMinConfidence } from './timeline';
 import { localizePins } from './translations';
+import travelResorts from '../data/travelResorts.json';
+
+// Match curated additions by source identity: local and production IDs differ.
+const additionalResorts = travelResorts as Array<
+  Pick<TravelResortPin, 'destination' | 'pricePerNight' | 'topActivities'> & {
+    sourceUrl: string;
+    shelves: string[];
+  }
+>;
+const additionalBySource = new Map(additionalResorts.map(resort => [resort.sourceUrl, resort]));
 
 function acclaimLabel(acclaim: number | null): string | undefined {
   if (acclaim == null) return undefined;
@@ -48,43 +58,43 @@ const SHELF_DEFINITIONS = [
   {
     id: 'top-resorts',
     name: 'Top Sanctuaries',
-    label: 'Top-Ranked Sanctuaries',
+    label: 'Top Ranked',
     tagline: 'The world’s highest-scoring properties on guest satisfaction and critic acclaim.',
     pinIds: [15302, 15274, 15290, 15292, 15303, 4058, 15283, 15284, 15288, 15289, 4129, 15278],
   },
   {
     id: 'coastal-escapes',
     name: 'Island & Coastal',
-    label: 'Island & Coastal Escapes',
+    label: 'Island & Coast',
     tagline: 'Sun-soaked beachfront havens, private island villas, and coastal retreats timed to calm waters and dry seasons.',
     pinIds: [15289, 15295, 15275, 15293, 4129, 15278, 15279, 15280],
   },
   {
     id: 'cultural-sanctuaries',
     name: 'Historic & Cultural',
-    label: 'Historic & Cultural Sanctuaries',
+    label: 'Historic',
     tagline: 'Storied palaces, heritage conversions, and urban retreats immersed in world history and art.',
     pinIds: [15294, 15302, 15282, 15285, 15288, 15276, 15292, 15290, 15286, 15291, 15281, 15277],
   },
   {
     id: 'wonder-retreats',
     name: 'Alpine & Wonder',
-    label: 'Alpine & Wonder Escapes',
+    label: 'Alpine',
     tagline: 'Architectural feats, subarctic ice hotels, mountain cloud forests, and family wonderlands.',
     pinIds: [763, 15287, 520, 836, 5156, 3234, 3404],
   },
   {
     id: 'kids-family',
     name: 'Kids & Family',
-    label: 'Kids & Family Escapes',
-    tagline: 'Waterpark havens, theme park kingdoms, reindeer safaris, and nature retreats designed for family wonder.',
+    label: 'Family',
+    tagline: 'Waterpark havens, theme park hotels, reindeer safaris, and nature retreats designed for family wonder.',
     pinIds: [5156, 3234, 836, 763, 15801, 15808, 15804, 15279, 15275, 4129, 3404],
   },
   {
     id: 'budget-friendly',
     name: 'Budget-Friendly',
-    label: 'Budget-Friendly Escapes',
-    tagline: 'Remarkable boutique resorts, coastal bungalows, and eco-lodges delivering world-class character under $250/night.',
+    label: 'Budget',
+    tagline: 'Boutique stays, eco-lodges, and family resorts with selected nightly rates below $250. Dates, room types, taxes, and fees affect the total.',
     pinIds: [15801, 15802, 15803, 15804, 15805, 15806, 15807, 15808],
   },
 ] as const;
@@ -153,10 +163,13 @@ export async function travelShelves(locale: Locale = DEFAULT_LOCALE): Promise<Tr
   for (const [id, pin] of pinById.entries()) {
     const hotel = hotelMap.get(id);
     if (!hotel) continue;
-    const { destination, timing } = getBestTimeToGo(id);
+    const addition = pin.sourceUrl ? additionalBySource.get(pin.sourceUrl) : undefined;
+    const { destination, timing } = addition
+      ? { destination: addition.destination, timing: getBestTimeToGo(id, 'orlando').timing }
+      : getBestTimeToGo(id);
     const rubricScore = computeRubricScore(hotel);
     const label = acclaimLabel(hotel.acclaim);
-    const pricePerNight = getResortPricePerNight(
+    const pricePerNight = addition?.pricePerNight ?? getResortPricePerNight(
       id,
       pin.priceLowerBound ?? pin.price,
       pin.priceCurrency,
@@ -171,7 +184,7 @@ export async function travelShelves(locale: Locale = DEFAULT_LOCALE): Promise<Tr
       destination,
       bestTimeToGo: timing,
       pricePerNight,
-      topActivities: getResortTopActivities(id),
+      topActivities: addition?.topActivities ?? getResortTopActivities(id),
     });
   }
 
@@ -186,6 +199,13 @@ export async function travelShelves(locale: Locale = DEFAULT_LOCALE): Promise<Tr
       if (resort) {
         pins.push(resort);
         assigned.add(id);
+      }
+    }
+    for (const resort of resortsById.values()) {
+      const addition = resort.sourceUrl ? additionalBySource.get(resort.sourceUrl) : undefined;
+      if (addition?.shelves.includes(def.id) && !pins.some(pin => pin.id === resort.id)) {
+        pins.push(resort);
+        assigned.add(resort.id);
       }
     }
     // If shelf is Top Sanctuaries, keep all top curated.

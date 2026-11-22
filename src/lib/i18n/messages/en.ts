@@ -2925,6 +2925,14 @@ const en = {
         Dining: 'Gastronomy',
         Nature: 'Wildlife & Nature',
       },
+      shelf: {
+        'top-resorts': 'Top Ranked',
+        'coastal-escapes': 'Island & Coast',
+        'cultural-sanctuaries': 'Historic',
+        'wonder-retreats': 'Alpine',
+        'kids-family': 'Family',
+        'budget-friendly': 'Budget',
+      },
       season: {
         all: 'All Year',
         spring: 'Spring',

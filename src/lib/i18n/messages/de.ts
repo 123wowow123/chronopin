@@ -2920,6 +2920,14 @@ const de: Messages = {
         Dining: 'Gastronomie',
         Nature: 'Tierwelt & Natur',
       },
+      shelf: {
+        'top-resorts': 'Bestbewertet',
+        'coastal-escapes': 'Inseln & Küste',
+        'cultural-sanctuaries': 'Historisch',
+        'wonder-retreats': 'Alpin',
+        'kids-family': 'Familie',
+        'budget-friendly': 'Günstig',
+      },
       season: {
         all: 'Ganzjährig',
         spring: 'Frühling',

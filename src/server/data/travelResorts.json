@@ -1,0 +1,148 @@
+[
+  {
+    "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 179,
+      "currency": "USD",
+      "formatted": "$179 (before tax)"
+    },
+    "topActivities": [
+      {
+        "title": "Pools & lazy river",
+        "category": "Water",
+        "description": "Two pool complexes and a winding lazy river for resort downtime.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Galaxy Bowl",
+        "category": "Kids",
+        "description": "On-site bowling offers another family activity; separate fees apply.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Theme park days",
+        "category": "Adventure",
+        "description": "Shuttles and walking paths serve Universal parks. Park tickets are separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-cabana-bay-beach-resort-AA135762",
+    "priceBasis": "AAA listed rooms from $179 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; family suites can cost more.",
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-surfside-inn-and-suites",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 127,
+      "currency": "USD",
+      "formatted": "$127 (before tax)"
+    },
+    "topActivities": [
+      {
+        "title": "Surfboard pool",
+        "category": "Water",
+        "description": "A surfboard-shaped pool with zero-entry access.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Suite downtime",
+        "category": "Kids",
+        "description": "Two-bedroom suites sleep up to six and include a kitchenette area.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Theme park shuttles",
+        "category": "Adventure",
+        "description": "Complimentary shuttles connect the resort with Universal; park admission is separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-surfside-inn-and-suites-AA126987",
+    "priceBasis": "AAA listed rooms from $127 before taxes and fees when checked November 22, 2026. This is an indicative starting rate, not a quote for a six-person suite.",
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-endless-summer-resort-dockside-inn-and-suites",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Orlando, Florida, USA",
+    "pricePerNight": {
+      "amount": 167,
+      "currency": "USD",
+      "formatted": "$167 (before tax)"
+    },
+    "topActivities": [
+      {
+        "title": "Two resort pools",
+        "category": "Water",
+        "description": "Choose between two outdoor pools for a break from park touring.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pier 8 Market",
+        "category": "Dining",
+        "description": "A casual food court provides breakfast, lunch and dinner.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family suite stays",
+        "category": "Kids",
+        "description": "Two-bedroom suites sleep up to six with a kitchenette and picnic table.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.aaa.com/tripcanvas/hotel/universals-endless-summer-resort-dockside-inn-and-suites-AA126986",
+    "priceBasis": "AAA listed rooms from $167 before taxes and fees when checked November 22, 2026. Dates, room type and availability affect the rate; two-bedroom suites can cost more.",
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://disneyworld.disney.go.com/resorts/pop-century-resort/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Lake Buena Vista, Florida, USA",
+    "pricePerNight": {
+      "amount": 212,
+      "maxAmount": 396,
+      "isRange": true,
+      "currency": "USD",
+      "formatted": "$212–396 (2026, incl. tax)"
+    },
+    "topActivities": [
+      {
+        "title": "Pool afternoons",
+        "category": "Water",
+        "description": "Hippy Dippy, Bowling and Computer pools offer a break from the parks.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Skyliner rides",
+        "category": "Kids",
+        "description": "Gondolas connect with EPCOT and Disney’s Hollywood Studios; park tickets are separate.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pop-culture stroll",
+        "category": "Culture",
+        "description": "Explore giant toys and decorations celebrating the 1950s through the 1990s.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.mousesavers.com/2026-pop-century-room-rates-season-dates/",
+    "priceBasis": "MouseSavers’ 2026 rack-rate table lists standard rooms from $212 to $396 including 12.5% tax, depending on date. Sub-$250 prices apply only on selected dates; holidays cost more.",
+    "checkedAt": "2026-11-22"
+  }
+]

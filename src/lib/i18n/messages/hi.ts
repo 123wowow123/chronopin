@@ -2931,6 +2931,14 @@ const hi: Messages = {
         Dining: 'खान-पान',
         Nature: 'वन्यजीव और प्रकृति',
       },
+      shelf: {
+        'top-resorts': 'शीर्ष रेटेड',
+        'coastal-escapes': 'द्वीप और तट',
+        'cultural-sanctuaries': 'ऐतिहासिक',
+        'wonder-retreats': 'आल्पाइन',
+        'kids-family': 'परिवार',
+        'budget-friendly': 'किफ़ायती',
+      },
       season: {
         all: 'पूरा साल',
         spring: 'वसंत',

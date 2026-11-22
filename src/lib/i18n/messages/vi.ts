@@ -2923,6 +2923,14 @@ const vi: Messages = {
         Dining: 'Ẩm thực',
         Nature: 'Động vật hoang dã & thiên nhiên',
       },
+      shelf: {
+        'top-resorts': 'Đánh giá cao',
+        'coastal-escapes': 'Đảo & biển',
+        'cultural-sanctuaries': 'Lịch sử',
+        'wonder-retreats': 'Alpine',
+        'kids-family': 'Gia đình',
+        'budget-friendly': 'Tiết kiệm',
+      },
       season: {
         all: 'Cả năm',
         spring: 'Mùa xuân',

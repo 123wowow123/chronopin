@@ -2924,6 +2924,14 @@ const ms: Messages = {
         Dining: 'Gastronomi',
         Nature: 'Hidupan liar & alam semula jadi',
       },
+      shelf: {
+        'top-resorts': 'Penilaian Tertinggi',
+        'coastal-escapes': 'Pulau & Pantai',
+        'cultural-sanctuaries': 'Bersejarah',
+        'wonder-retreats': 'Alpine',
+        'kids-family': 'Keluarga',
+        'budget-friendly': 'Jimat',
+      },
       season: {
         all: 'Sepanjang tahun',
         spring: 'Musim bunga',
