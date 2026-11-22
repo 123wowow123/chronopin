@@ -25,6 +25,7 @@ const additionalResorts = travelResorts as Array<
   Pick<TravelResortPin, 'destination' | 'pricePerNight' | 'topActivities'> & {
     sourceUrl: string;
     shelves: string[];
+    bestTimeToGo?: TravelResortPin['bestTimeToGo'];
   }
 >;
 const additionalBySource = new Map(additionalResorts.map(resort => [resort.sourceUrl, resort]));
@@ -94,7 +95,7 @@ const SHELF_DEFINITIONS = [
     id: 'budget-friendly',
     name: 'Budget-Friendly',
     label: 'Budget',
-    tagline: 'Boutique stays, eco-lodges, and family resorts with selected nightly rates below $250. Dates, room types, taxes, and fees affect the total.',
+    tagline: 'Value-focused hotels, eco-lodges, and family stays. Compare dates, room types, taxes, and fees before booking.',
     pinIds: [15801, 15802, 15803, 15804, 15805, 15806, 15807, 15808],
   },
 ] as const;
@@ -165,7 +166,7 @@ export async function travelShelves(locale: Locale = DEFAULT_LOCALE): Promise<Tr
     if (!hotel) continue;
     const addition = pin.sourceUrl ? additionalBySource.get(pin.sourceUrl) : undefined;
     const { destination, timing } = addition
-      ? { destination: addition.destination, timing: getBestTimeToGo(id, 'orlando').timing }
+      ? { destination: addition.destination, timing: addition.bestTimeToGo ?? getBestTimeToGo(id, 'orlando').timing }
       : getBestTimeToGo(id);
     const rubricScore = computeRubricScore(hotel);
     const label = acclaimLabel(hotel.acclaim);

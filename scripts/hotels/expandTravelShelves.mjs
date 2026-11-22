@@ -1,5 +1,5 @@
 // Resumable, source-URL matched hotel additions. Database-allocated IDs only.
-// node scripts/hotels/expandTravelShelves.mjs [--apply]
+// node scripts/hotels/expandTravelShelves.mjs [--catalog scripts/hotels/<batch>.json] [--apply]
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -7,10 +7,14 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import { BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
 
-const file = 'scripts/hotels/travel-expansion-2026-11-22.json';
+const catalogFlag = process.argv.indexOf('--catalog');
+const file = catalogFlag < 0 ? 'scripts/hotels/travel-expansion-2026-11-22.json' : process.argv[catalogFlag + 1];
+if (!file?.match(/^scripts\/hotels\/[\w-]+\.json$/)) throw Error('Expected a research catalog in scripts/hotels.');
 const catalog = JSON.parse(fs.readFileSync(file, 'utf8'));
 const apply = process.argv.includes('--apply');
-const stateDir = '.scrape/prod-batches/travel-2026-11-22';
+const stateDir = catalogFlag < 0
+  ? '.scrape/prod-batches/travel-2026-11-22'
+  : `.scrape/prod-batches/${file.split('/').at(-1).replace(/\.json$/, '')}`;
 fs.mkdirSync(stateDir, { recursive: true });
 const postedFile = `${stateDir}/posted.json`;
 const posted = fs.existsSync(postedFile) ? JSON.parse(fs.readFileSync(postedFile, 'utf8')) : {};
@@ -102,7 +106,11 @@ for (const [environment, base, tokenFile] of [
 }
 
 if (apply) {
-  const runtime = catalog.map(({ pin, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis }) => ({ sourceUrl: pin.sourceUrl, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, checkedAt: '2026-11-22' }));
-  fs.writeFileSync('src/server/data/travelResorts.json', JSON.stringify(runtime, null, 2) + '\n');
+  const runtime = catalog.map(({ pin, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, bestTimeToGo }) => ({ sourceUrl: pin.sourceUrl, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, ...(bestTimeToGo ? { bestTimeToGo } : {}), checkedAt: '2026-11-22' }));
+  const runtimeFile = 'src/server/data/travelResorts.json';
+  const existing = fs.existsSync(runtimeFile) ? JSON.parse(fs.readFileSync(runtimeFile, 'utf8')) : [];
+  const merged = new Map(existing.map(entry => [entry.sourceUrl, entry]));
+  for (const entry of runtime) merged.set(entry.sourceUrl, entry);
+  fs.writeFileSync(runtimeFile, JSON.stringify([...merged.values()], null, 2) + '\n');
   console.log('Saved source-URL based travel shelf catalog.');
 }

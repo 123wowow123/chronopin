@@ -144,5 +144,536 @@
     "priceSource": "https://www.mousesavers.com/2026-pop-century-room-rates-season-dates/",
     "priceBasis": "MouseSavers’ 2026 rack-rate table lists standard rooms from $212 to $396 including 12.5% tax, depending on date. Sub-$250 prices apply only on selected dates; holidays cost more.",
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.com.my/hotel/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Iskandar Puteri, Johor, Malaysia",
+    "topActivities": [
+      {
+        "title": "Themed room stays",
+        "category": "Kids",
+        "description": "Kingdom rooms include separate children’s sleeping space; confirm the room’s occupancy limit.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunt",
+        "category": "Kids",
+        "description": "Solve the in-room treasure chest clues for a LEGO surprise.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND park days",
+        "category": "Adventure",
+        "description": "The hotel is beside the theme park; ticket inclusions depend on the booked package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/",
+    "priceBasis": "The operator advertises Kingdom rooms starting at RM679. The page does not establish a date-specific all-in quote; confirm taxes, fees, occupancy and park tickets when booking. This is a local-currency nightly room-rate observation, not construction cost.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        2,
+        6
+      ],
+      "bestSeason": "Relatively drier February and June",
+      "tempRange": "31°C–33°C normal daytime highs",
+      "weatherSummary": "Warm and wet year-round. The Malaysian Meteorological Department series published by WMO covers 1974–2000; February and June are relatively drier, not dry months.",
+      "whyGo": "Plan outdoor rides earlier in the day and keep indoor LEGO activities available for rain breaks. This older Johor Bahru climate series is regional guidance for Iskandar Puteri, not a weather forecast.",
+      "climateZone": "Equatorial / southern Johor",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "High"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 32,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 32.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "fair",
+          "tempC": 32.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 32.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 32.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "fair",
+          "tempC": 31.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 30.6,
+          "rainfall": "High"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://all.accor.com/hotel/B2X6/index.en.shtml",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Urayasu, Chiba, Japan",
+    "topActivities": [
+      {
+        "title": "Disney park shuttle",
+        "category": "Adventure",
+        "description": "Use the operator’s free shuttle to the Disney parks; check the current timetable.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family room options",
+        "category": "Kids",
+        "description": "Four- and five-bed room configurations offer alternatives to booking separate rooms.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Breakfast creations",
+        "category": "Dining",
+        "description": "The firsthand review describes make-your-own croffles and hot sandwiches; breakfast can cost extra.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/",
+    "priceBasis": "The independent firsthand review recommends this hotel for keeping costs down. Current room rates vary with dates and occupancy; obtain a live quote from Accor. Breakfast, parking and the room configuration affect the complete stay cost.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "Tokyo station 1991–2020 normals: summers are hot and humid, while September and October have high normal rainfall. Tokyo is a regional climate proxy for Urayasu.",
+      "whyGo": "Spring and autumn usually make long outdoor park days more comfortable. Allow for rain in autumn and cool evenings near Tokyo Bay. These are climate-based suggestions, not crowd forecasts.",
+      "climateZone": "Humid subtropical / Tokyo Bay",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.tokyodisneyresort.jp/en/hotel/dch.html",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Urayasu, Chiba, Japan",
+    "topActivities": [
+      {
+        "title": "Disney-themed rooms",
+        "category": "Kids",
+        "description": "Disney murals and sofa beds extend the theme-park atmosphere into the hotel.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Wish and Discover lobbies",
+        "category": "Kids",
+        "description": "Explore the contrasting dream-and-fantasy and adventure-and-discovery themes.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Park shuttle days",
+        "category": "Adventure",
+        "description": "Allow about 20 minutes for the bus to the parks, plus waiting time; check the current schedule.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+    "priceBasis": "The operator positions Celebration as a value-type Disney hotel, and the independent review recommends it for a lower-budget Disney-themed stay. No reliable current nightly room quote was verified. Check a date-specific quote; value category does not guarantee a low holiday rate or included park tickets.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "Tokyo station 1991–2020 normals: summers are hot and humid, while September and October have high normal rainfall. Tokyo is a regional climate proxy for Urayasu.",
+      "whyGo": "Spring and autumn usually make long outdoor park days more comfortable. Allow for rain in autumn and cool evenings near Tokyo Bay. These are climate-based suggestions, not crowd forecasts.",
+      "climateZone": "Humid subtropical / Tokyo Bay",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.rovehotels.com/en/hotels/downtown/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Downtown Dubai, United Arab Emirates",
+    "topActivities": [
+      {
+        "title": "Downtown sightseeing",
+        "category": "Culture",
+        "description": "Explore Dubai Mall and the Burj Khalifa neighbourhood; attractions may require separate tickets.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pool breaks",
+        "category": "Water",
+        "description": "The hotel’s outdoor pool offers downtime between sightseeing trips.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family room planning",
+        "category": "Kids",
+        "description": "A standard room is for up to two adults and one child; larger families should confirm connecting rooms.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.thenationalnews.com/rove-downtown-dubai-a-fashionable-destination-1.233174",
+    "priceBasis": "The National’s property review describes Rove’s affordable midscale positioning. Obtain a fresh hotel quote and confirm taxes, the Tourism Dirham fee and any breakfast charge.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "bestSeason": "Cooler November through March",
+      "tempRange": "24°C–31°C historical normal daytime highs in recommended months",
+      "weatherSummary": "The UAE climatology published by WMO covers 1974–1991. It shows much hotter summers than winters; these older averages are historical context, not current forecasts.",
+      "whyGo": "The cooler months suit walks around Downtown Dubai. In summer, plan around indoor attractions and use transport for longer journeys. Weather suitability does not guarantee lower room rates.",
+      "climateZone": "Hot desert / Dubai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 27.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 36.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 38.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 40.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 40.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 38.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 35.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

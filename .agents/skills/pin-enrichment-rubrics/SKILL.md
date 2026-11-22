@@ -31,6 +31,10 @@ If a figure or review is unavailable, record a specific research gap instead of 
   and its dated research JSON. Use database-allocated IDs, verify Azure images before creating pins,
   preserve rate qualifiers (tax, season, room type) and leave construction cost separate from nightly rates.
   Source-URL shelf membership is application code and needs an explicitly requested deploy to go live.
+  Subsequent batches use `--catalog scripts/hotels/<dated-catalog>.json`; replay merges the runtime
+  catalog by source URL and retains the earlier batches. Supply property-specific `bestTimeToGo` data
+  outside Orlando, with the climate station and averaging period stated. Never reuse an expired room
+  promotion or compare a local-currency nightly amount numerically with USD room rates.
 - **Competitors**: same segment and market at the pin's own time; name product and maker; link `competitorPinId`
   when we have the pin; one-line `summary`. Save locally and on production, matching prod pins by `sourceUrl`
   (ids differ). Not for restaurants, films, events or projects. Never invent a rival; queue the pin with a reason

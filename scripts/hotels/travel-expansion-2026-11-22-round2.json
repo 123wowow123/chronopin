@@ -1,0 +1,1273 @@
+[
+  {
+    "key": "legoland",
+    "pin": {
+      "title": "LEGOLAND Malaysia Hotel Opens",
+      "productName": "LEGOLAND Malaysia Hotel",
+      "sourceUrl": "https://www.legoland.com.my/hotel/",
+      "description": "A LEGO-themed family hotel beside LEGOLAND Malaysia, with themed rooms, a separate children’s sleeping area and in-room treasure hunts.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "No. 1, Jalan Medini Utara 3, Bandar Medini Iskandar Malaysia, 79250 Iskandar Puteri, Johor, Malaysia",
+      "latitude": 1.4265858,
+      "longitude": 103.631889,
+      "utcStartDateTime": "2013-11-29T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening record identifies 2013-11-29.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com.my/hotel/",
+          "title": "LEGOLAND Malaysia Hotel — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.littledayout.com/legoland-hotel-opens/",
+          "title": "LEGOLAND Hotel Opens",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/",
+          "title": "LEGOLAND Malaysia Hotel — published rate",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g14149941-d4860383-Reviews-Legoland_Malaysia_Resort-Iskandar_Puteri_Johor_Bahru_District_Johor.html",
+          "title": "LEGOLAND Malaysia Hotel — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g14149941-d4860383-Reviews-or10-Legoland_Malaysia_Resort-Iskandar_Puteri_Johor_Bahru_District_Johor.html",
+          "title": "Legoland Malaysia Resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/city.html?cityId=78",
+          "title": "WMO — johor climatology",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO-themed family hotel beside LEGOLAND Malaysia, with themed rooms, a separate children’s sleeping area and in-room treasure hunts.<cite data-ref=\"https://www.legoland.com.my/hotel/\"></cite></p><h3>Family stay</h3><p>The operator’s Kingdom room page says rooms sleep a family of five and include a separate children’s sleeping area. Theme park admission and other inclusions depend on the package booked.<cite data-ref=\"https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/\"></cite></p><h3>Budget and booking</h3><p>The operator advertises Kingdom rooms starting at RM679. The page does not establish a date-specific all-in quote; confirm taxes, fees, occupancy and park tickets when booking. This is a local-currency nightly room-rate observation, not construction cost.<cite data-ref=\"https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/\"></cite></p><p>Compare the complete stay cost and verify tickets, transport schedules and occupancy before booking.</p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g14149941-d4860383-Reviews-Legoland_Malaysia_Resort-Iskandar_Puteri_Johor_Bahru_District_Johor.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (5,156 reviews). Rooms/Service/Location/Cleanliness/Value: 4.4/4.3/4.3/4.3/3.9 of 5, rounded to half points. Snapshots may lag live totals. AAA 2026 coverage excludes these countries. Forbes destination directories and MICHELIN destination lookups were checked; no property-specific current distinction was verified (Johor lookup inaccessible; Tokyo lookup paginated). Acclaim remains unknown, not inferred from the hotel class.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g14149941-d4860383-Reviews-or10-Legoland_Malaysia_Resort-Iskandar_Puteri_Johor_Bahru_District_Johor.html",
+          "title": "Legoland Malaysia Resort",
+          "publishedDate": null,
+          "quote": "The location is just right outside the entrance to Legoland."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2013-11-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.littledayout.com/legoland-hotel-opens/",
+            "title": "LEGOLAND Hotel Opens",
+            "publishedDate": "2013-11-29",
+            "quote": "29 November 2013 – LEGOLAND Hotel, Asia’s first, opens its doors to guests today."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2013-11-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.littledayout.com/legoland-hotel-opens/",
+            "title": "LEGOLAND Hotel Opens",
+            "publishedDate": "2013-11-29",
+            "quote": "29 November 2013 – LEGOLAND Hotel, Asia’s first, opens its doors to guests today."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Iskandar Puteri, Johor, Malaysia",
+    "topActivities": [
+      {
+        "title": "Themed room stays",
+        "category": "Kids",
+        "description": "Kingdom rooms include separate children’s sleeping space; confirm the room’s occupancy limit.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunt",
+        "category": "Kids",
+        "description": "Solve the in-room treasure chest clues for a LEGO surprise.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND park days",
+        "category": "Adventure",
+        "description": "The hotel is beside the theme park; ticket inclusions depend on the booked package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/",
+    "priceBasis": "The operator advertises Kingdom rooms starting at RM679. The page does not establish a date-specific all-in quote; confirm taxes, fees, occupancy and park tickets when booking. This is a local-currency nightly room-rate observation, not construction cost.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        2,
+        6
+      ],
+      "bestSeason": "Relatively drier February and June",
+      "tempRange": "31°C–33°C normal daytime highs",
+      "weatherSummary": "Warm and wet year-round. The Malaysian Meteorological Department series published by WMO covers 1974–2000; February and June are relatively drier, not dry months.",
+      "whyGo": "Plan outdoor rides earlier in the day and keep indoor LEGO activities available for rain breaks. This older Johor Bahru climate series is regional guidance for Iskandar Puteri, not a weather forecast.",
+      "climateZone": "Equatorial / southern Johor",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 31,
+          "rainfall": "High"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 32,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 32.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "fair",
+          "tempC": 32.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 32.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 32.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 31.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "fair",
+          "tempC": 31.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 30.6,
+          "rainfall": "High"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "legoland-exterior",
+        "imageSourceUrl": "https://www.legoland.com.my/media/xsaaac4g/img_5867.jpg",
+        "sourceUrl": "https://www.legoland.com.my/hotel/",
+        "credit": "LEGOLAND Malaysia Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/legoland-exterior-71448dd8dd8a410e.webp",
+        "width": 1600,
+        "height": 1200,
+        "sha256": "71448dd8dd8a410e1fdeea954a2b38bc72b84662330cd5be15d68c0e53758b73"
+      },
+      {
+        "key": "legoland-room",
+        "imageSourceUrl": "https://www.legoland.com.my/media/durnn0zu/kingdom-themed-1-1800x1200.jpg",
+        "sourceUrl": "https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/",
+        "credit": "LEGOLAND Malaysia Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/legoland-room-6bb78fdd567dd69a.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "6bb78fdd567dd69aae212f130f9dd134f85c7457d4488b52d179d8f7910d4ad2"
+      },
+      {
+        "key": "legoland-treasure",
+        "imageSourceUrl": "https://www.legoland.com.my/media/zymgphjo/1800x1200-treasure-chest.jpg",
+        "sourceUrl": "https://www.legoland.com.my/hotel/",
+        "credit": "LEGOLAND Malaysia Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/legoland-treasure-8b9c68674c122e5f.webp",
+        "width": 1600,
+        "height": 1721,
+        "sha256": "8b9c68674c122e5fee41d81d2b4b19400fb2af65fc5eb2add42dc3d9456f3fc8"
+      }
+    ],
+    "researchGaps": [
+      "No current property-specific MICHELIN/Forbes distinction verified; no award score invented.",
+      "Hotel construction budget and a directly comparable cost benchmark were not verified."
+    ],
+    "publishedNightlyRate": {
+      "amount": 679,
+      "currency": "MYR",
+      "sourceUrl": "https://www.legoland.com.my/hotel/discover/room-overview/kingdom-theme/",
+      "basis": "Operator starting rate; not an all-in date-specific booking quote. Kept in native article, not compared numerically with USD rates."
+    }
+  },
+  {
+    "key": "ibis",
+    "pin": {
+      "title": "ibis Styles Tokyo Bay Opens",
+      "productName": "ibis Styles Tokyo Bay",
+      "sourceUrl": "https://all.accor.com/hotel/B2X6/index.en.shtml",
+      "description": "A value-focused Shin-Urayasu hotel with colourful rooms, family room configurations and a free shuttle to Tokyo Disney Resort.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "2-1-1 Hinode, Urayasu, Chiba 279-0013, Japan",
+      "latitude": 35.648940967232,
+      "longitude": 139.921624278613,
+      "utcStartDateTime": "2018-07-02T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening record identifies 2018-07-02.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://all.accor.com/hotel/B2X6/index.en.shtml",
+          "title": "ibis Styles Tokyo Bay — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tabino-yado.com/hotels/16562/",
+          "title": "イビススタイルズ東京ベイ",
+          "confidence": 100
+        },
+        {
+          "url": "https://ibisstylestokyobay.com/en/rooms/",
+          "title": "ibis Styles Tokyo Bay — rooms and facilities",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/",
+          "title": "ibis Styles Tokyo Bay Review | An Affordable Shin-Urayasu Hotel with International-Brand Style",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g298162-d14203000-Reviews-Ibis_Styles_Tokyo_Bay-Urayasu_Chiba_Prefecture_Kanto.html",
+          "title": "ibis Styles Tokyo Bay — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662",
+          "title": "Tokyo regional climatological normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A value-focused Shin-Urayasu hotel with colourful rooms, family room configurations and a free shuttle to Tokyo Disney Resort.<cite data-ref=\"https://all.accor.com/hotel/B2X6/index.en.shtml\"></cite></p><h3>Family stay</h3><p>The operator lists rooms with four or five beds, and a free shuttle connects with the Disney parks. It is a bus-based stay rather than a hotel at the park gates. Check the current shuttle schedule before travelling.<cite data-ref=\"https://ibisstylestokyobay.com/en/rooms/\"></cite></p><h3>Budget and booking</h3><p>The independent firsthand review recommends this hotel for keeping costs down. Current room rates vary with dates and occupancy; obtain a live quote from Accor. Breakfast, parking and the room configuration affect the complete stay cost.<cite data-ref=\"https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/\"></cite></p><p>Compare the complete stay cost and verify tickets, transport schedules and occupancy before booking.</p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g298162-d14203000-Reviews-Ibis_Styles_Tokyo_Bay-Urayasu_Chiba_Prefecture_Kanto.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (89 reviews). Rooms/Service/Location/Cleanliness/Value: 4.5/4.3/3.9/4.9/4.5 of 5, rounded to half points. Snapshots may lag live totals. AAA 2026 coverage excludes these countries. Forbes destination directories and MICHELIN destination lookups were checked; no property-specific current distinction was verified (Johor lookup inaccessible; Tokyo lookup paginated). Acclaim remains unknown, not inferred from the hotel class.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/",
+          "title": "ibis Styles Tokyo Bay Review | An Affordable Shin-Urayasu Hotel with International-Brand Style",
+          "publishedDate": "2022-05-25",
+          "quote": "You can stay somewhere with a nice atmosphere while keeping costs down."
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4,
+      "cleanliness": 5,
+      "value": 4.5
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2018-07-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tabino-yado.com/hotels/16562/",
+            "title": "イビススタイルズ東京ベイ",
+            "publishedDate": null,
+            "quote": "2018年7月2日に新浦安にニューオープン"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2018-07-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tabino-yado.com/hotels/16562/",
+            "title": "イビススタイルズ東京ベイ",
+            "publishedDate": null,
+            "quote": "2018年7月2日に新浦安にニューオープン"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Urayasu, Chiba, Japan",
+    "topActivities": [
+      {
+        "title": "Disney park shuttle",
+        "category": "Adventure",
+        "description": "Use the operator’s free shuttle to the Disney parks; check the current timetable.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family room options",
+        "category": "Kids",
+        "description": "Four- and five-bed room configurations offer alternatives to booking separate rooms.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Breakfast creations",
+        "category": "Dining",
+        "description": "The firsthand review describes make-your-own croffles and hot sandwiches; breakfast can cost extra.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/",
+    "priceBasis": "The independent firsthand review recommends this hotel for keeping costs down. Current room rates vary with dates and occupancy; obtain a live quote from Accor. Breakfast, parking and the room configuration affect the complete stay cost.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "Tokyo station 1991–2020 normals: summers are hot and humid, while September and October have high normal rainfall. Tokyo is a regional climate proxy for Urayasu.",
+      "whyGo": "Spring and autumn usually make long outdoor park days more comfortable. Allow for rain in autumn and cool evenings near Tokyo Bay. These are climate-based suggestions, not crowd forecasts.",
+      "climateZone": "Humid subtropical / Tokyo Bay",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "ibis-reception",
+        "imageSourceUrl": "https://www.ahstatic.com/photos/b2x6_ho_00_p_1024x768.jpg",
+        "sourceUrl": "https://all.accor.com/hotel/B2X6/index.en.shtml",
+        "credit": "Accor / ibis Styles Tokyo Bay",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/ibis-reception-21272648e33f510a.webp",
+        "width": 1024,
+        "height": 768,
+        "sha256": "21272648e33f510a204433db7f0f7f2531d7b1a6385e29228583db92d6de7b31"
+      },
+      {
+        "key": "ibis-room",
+        "imageSourceUrl": "https://www.ahstatic.com/photos/b2x6_ro_00_p_1024x768.jpg",
+        "sourceUrl": "https://all.accor.com/hotel/B2X6/index.en.shtml",
+        "credit": "Accor / ibis Styles Tokyo Bay",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/ibis-room-314488d04def2e5e.webp",
+        "width": 1024,
+        "height": 768,
+        "sha256": "314488d04def2e5e1326e2c92129ed64cf2cc948438e734ab2775bef7090aef8"
+      },
+      {
+        "key": "ibis-breakfast",
+        "imageSourceUrl": "https://www.maihamastays.jp/photos/039/20220519-PXL_20220519_001740015-1280.3b1acf13276640f2.webp",
+        "sourceUrl": "https://www.maihamastays.jp/en/en-maihama-ibisstyles-tokyobay/",
+        "credit": "Maihama Hotel Stays / firsthand breakfast photograph",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/ibis-breakfast-021763d7af9c81b0.webp",
+        "width": 1280,
+        "height": 964,
+        "sha256": "021763d7af9c81b0daeea381fbe600b175fda7c59c4d20e39838fbf0a31d2886"
+      }
+    ],
+    "researchGaps": [
+      "No current property-specific MICHELIN/Forbes distinction verified; no award score invented.",
+      "Hotel construction budget and a directly comparable cost benchmark were not verified.",
+      "No reliable current date-specific nightly room rate verified; use rates on request."
+    ]
+  },
+  {
+    "key": "celebration",
+    "pin": {
+      "title": "Tokyo Disney Celebration Hotel Reopens as a Disney Hotel",
+      "productName": "Tokyo Disney Celebration Hotel",
+      "sourceUrl": "https://www.tokyodisneyresort.jp/en/hotel/dch.html",
+      "description": "A value-category Disney hotel in Shin-Urayasu, with Disney-themed rooms and lobbies and shuttle buses to Tokyo Disneyland and Tokyo DisneySea.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "7-1-1 Akemi, Urayasu, Chiba 279-8502, Japan",
+      "latitude": 35.637851541693,
+      "longitude": 139.929221048918,
+      "utcStartDateTime": "2016-06-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The property-specific opening record identifies 2016-06-01.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.tokyodisneyresort.jp/en/hotel/dch.html",
+          "title": "Tokyo Disney Celebration Hotel — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.olc.co.jp/en/news/news_tdr/news_tdr7754323339668860387/main/0/link/MRH20160107_01.pdf",
+          "title": "Reservations for First Phase of Tokyo Disney Celebration Hotel to Begin Early 2016",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+          "title": "Tokyo Disney Celebration Hotel Review: Disney Rooms and Breakfast, and a Bus Ride to the Parks",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g298162-d1087558-Reviews-Tokyo_Disney_Celebration_Hotel-Urayasu_Chiba_Prefecture_Kanto.html",
+          "title": "Tokyo Disney Celebration Hotel — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662",
+          "title": "Tokyo regional climatological normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A value-category Disney hotel in Shin-Urayasu, with Disney-themed rooms and lobbies and shuttle buses to Tokyo Disneyland and Tokyo DisneySea.<cite data-ref=\"https://www.tokyodisneyresort.jp/en/hotel/dch.html\"></cite></p><h3>Family stay</h3><p>Wish opened on June 1, 2016 and Discover followed on September 10, 2016. The buildings converted the former Palm & Fountain Terrace Hotel. A firsthand review describes rooms sleeping up to four and a park shuttle taking about 20 minutes. It is farther from the parks than the hotels at their entrances.<cite data-ref=\"https://www.maihamastays.jp/en/en-maihama-disneycelebration/\"></cite></p><h3>Budget and booking</h3><p>The operator positions Celebration as a value-type Disney hotel, and the independent review recommends it for a lower-budget Disney-themed stay. No reliable current nightly room quote was verified. Check a date-specific quote; value category does not guarantee a low holiday rate or included park tickets.<cite data-ref=\"https://www.maihamastays.jp/en/en-maihama-disneycelebration/\"></cite></p><p>Compare the complete stay cost and verify tickets, transport schedules and occupancy before booking.</p><p>The date on this pin is the Wish building’s Disney rebranding opening, June 1, 2016; it is not the opening of the earlier hotel.<cite data-ref=\"https://www.olc.co.jp/en/news/news_tdr/news_tdr7754323339668860387/main/0/link/MRH20160107_01.pdf\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g298162-d1087558-Reviews-Tokyo_Disney_Celebration_Hotel-Urayasu_Chiba_Prefecture_Kanto.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (253 reviews). Rooms/Service/Location/Cleanliness/Value: 3.6/3.9/3.3/4.0/3.9 of 5, rounded to half points. Snapshots may lag live totals. AAA 2026 coverage excludes these countries. Forbes destination directories and MICHELIN destination lookups were checked; no property-specific current distinction was verified (Johor lookup inaccessible; Tokyo lookup paginated). Acclaim remains unknown, not inferred from the hotel class.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+          "title": "Tokyo Disney Celebration Hotel Review: Disney Rooms and Breakfast, and a Bus Ride to the Parks",
+          "publishedDate": "2022-05-26",
+          "quote": "Many rooms are set up to sleep up to four, with sofas that turn into beds"
+        }
+      ],
+      "rooms": 3.5,
+      "service": 4,
+      "location": 3.5,
+      "cleanliness": 4,
+      "value": 4
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Disney rebranding opening 2016-06-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.olc.co.jp/en/news/news_tdr/news_tdr7754323339668860387/main/0/link/MRH20160107_01.pdf",
+            "title": "Reservations for First Phase of Tokyo Disney Celebration Hotel to Begin Early 2016",
+            "publishedDate": "2016-01-07",
+            "quote": "officially opens on June 1, 2016."
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Disney rebranding opening",
+          "date": "2016-06-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.olc.co.jp/en/news/news_tdr/news_tdr7754323339668860387/main/0/link/MRH20160107_01.pdf",
+            "title": "Reservations for First Phase of Tokyo Disney Celebration Hotel to Begin Early 2016",
+            "publishedDate": "2016-01-07",
+            "quote": "officially opens on June 1, 2016."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Urayasu, Chiba, Japan",
+    "topActivities": [
+      {
+        "title": "Disney-themed rooms",
+        "category": "Kids",
+        "description": "Disney murals and sofa beds extend the theme-park atmosphere into the hotel.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Wish and Discover lobbies",
+        "category": "Kids",
+        "description": "Explore the contrasting dream-and-fantasy and adventure-and-discovery themes.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Park shuttle days",
+        "category": "Adventure",
+        "description": "Allow about 20 minutes for the bus to the parks, plus waiting time; check the current schedule.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+    "priceBasis": "The operator positions Celebration as a value-type Disney hotel, and the independent review recommends it for a lower-budget Disney-themed stay. No reliable current nightly room quote was verified. Check a date-specific quote; value category does not guarantee a low holiday rate or included park tickets.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for outdoor park days",
+      "tempRange": "17°C–24°C normal daytime highs in recommended months",
+      "weatherSummary": "Tokyo station 1991–2020 normals: summers are hot and humid, while September and October have high normal rainfall. Tokyo is a regional climate proxy for Urayasu.",
+      "whyGo": "Spring and autumn usually make long outdoor park days more comfortable. Allow for rain in autumn and cool evenings near Tokyo Bay. These are climate-based suggestions, not crowd forecasts.",
+      "climateZone": "Humid subtropical / Tokyo Bay",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 29.9,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 31.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 27.5,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 16.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "celebration-lobby",
+        "imageSourceUrl": "https://www.maihamastays.jp/photos/039/20220521-IMG_6896-1280.8fe67ee4f8765e03.webp",
+        "sourceUrl": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+        "credit": "Maihama Hotel Stays / firsthand property photos",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/celebration-lobby-a1c90a9a577cb4b0.webp",
+        "width": 1280,
+        "height": 853,
+        "sha256": "a1c90a9a577cb4b0e9985f9c52202b8590e175882c9a91032160fff322a30bf4"
+      },
+      {
+        "key": "celebration-room",
+        "imageSourceUrl": "https://www.maihamastays.jp/photos/039/20220520-IMG_6376-1280.d836ee27c3cf0119.webp",
+        "sourceUrl": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+        "credit": "Maihama Hotel Stays / firsthand property photos",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/celebration-room-bd539870eaa9e9a5.webp",
+        "width": 1280,
+        "height": 853,
+        "sha256": "bd539870eaa9e9a5f585a76934ed1d2d5d790b1b2d546821d82cbfb7c1494f2d"
+      },
+      {
+        "key": "celebration-buildings",
+        "imageSourceUrl": "https://www.maihamastays.jp/photos/019/20210319-IMG_3799-1280.df15909cd588dd02.webp",
+        "sourceUrl": "https://www.maihamastays.jp/en/en-maihama-disneycelebration/",
+        "credit": "Maihama Hotel Stays / Wish and Discover hotel buildings",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/celebration-buildings-cc52dd2e7844603c.webp",
+        "width": 1280,
+        "height": 853,
+        "sha256": "cc52dd2e7844603c8807a412cf94fb72a3410d1068c7db3dc1ea9706b401c425"
+      }
+    ],
+    "researchGaps": [
+      "No current property-specific MICHELIN/Forbes distinction verified; no award score invented.",
+      "Hotel construction budget and a directly comparable cost benchmark were not verified.",
+      "No reliable current date-specific nightly room rate verified; use rates on request."
+    ]
+  },
+  {
+    "key": "rove",
+    "pin": {
+      "title": "Rove Downtown Opens",
+      "productName": "Rove Downtown",
+      "sourceUrl": "https://www.rovehotels.com/en/hotels/downtown/",
+      "description": "A design-led midscale hotel near Dubai Mall and Burj Khalifa, with a pool, family-friendly room options and a self-service laundrette.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "312 Al Mustaqbal Street, Zaa’beel Second, Dubai, United Arab Emirates",
+      "latitude": 25.2027026,
+      "longitude": 55.2794005,
+      "utcStartDateTime": "2016-05-04T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Rove COO Paul Bridger explicitly states May 4, 2016 in his firsthand BOTT interview, May–June 2022 issue, printed page 39. This establishes the exact opening day beyond the contemporaneous reports that gave only May 2016.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.rovehotels.com/en/hotels/downtown/",
+          "title": "Rove Downtown — rooms and facilities",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tradearabia.com/News/180675/Rove-Downtown-Dubai-opens",
+          "title": "Rove Downtown Dubai opens",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.thenationalnews.com/rove-downtown-dubai-a-fashionable-destination-1.233174",
+          "title": "Rove Downtown Dubai: A fashionable destination",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g295424-d9853524-Reviews-Rove_Downtown-Dubai_Emirate_of_Dubai.html",
+          "title": "Rove Downtown — published guest component scores",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/city.html?cityId=1190",
+          "title": "WMO — dubai climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://bottindia.com/wp-content/uploads/2022/05/BOTT-SATTE-Magazine-MAY-JUNE-2022.pdf",
+          "title": "Rove Hotels : A Dubai hotel chain charming guests with its fresh vibe",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A design-led midscale hotel near Dubai Mall and Burj Khalifa, with a pool, family-friendly room options and a self-service laundrette.<cite data-ref=\"https://www.rovehotels.com/en/hotels/downtown/\"></cite></p><h3>Family stay</h3><p>The operator’s room selector limits a standard room to two adults and one child aged 4–16. For larger families, request connecting rooms and confirm availability. The hotel has an outdoor pool, gym and self-service laundry.<cite data-ref=\"https://www.rovehotels.com/en/hotels/downtown/\"></cite></p><h3>Budget and booking</h3><p>The National’s property review describes Rove’s affordable midscale positioning. Obtain a fresh hotel quote and confirm taxes, the Tourism Dirham fee and any breakfast charge.<cite data-ref=\"https://www.thenationalnews.com/rove-downtown-dubai-a-fashionable-destination-1.233174\"></cite></p><p>Compare the complete stay cost and verify tickets, transport schedules and occupancy before booking.</p><p>Rove Downtown opened on May 4, 2016, according to Rove COO Paul Bridger’s interview in BOTT’s May–June 2022 issue (page 39).<cite data-ref=\"https://bottindia.com/wp-content/uploads/2022/05/BOTT-SATTE-Magazine-MAY-JUNE-2022.pdf\"></cite></p>"
+    },
+    "hotel": {
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g295424-d9853524-Reviews-Rove_Downtown-Dubai_Emirate_of_Dubai.html",
+      "basis": "Read 2026-11-22 from an opened Tripadvisor property snapshot (6,167 reviews). Rooms/Service/Location/Cleanliness/Value: 4.6/4.7/4.9/4.8/4.6 of 5, rounded to half points. Snapshots may lag live totals. AAA 2026 coverage excludes these countries. Forbes destination directories and MICHELIN destination lookups were checked; no property-specific current distinction was verified (Johor lookup inaccessible; Tokyo lookup paginated). Acclaim remains unknown, not inferred from the hotel class.",
+      "acclaim": null,
+      "reviews": [
+        {
+          "url": "https://www.thenationalnews.com/rove-downtown-dubai-a-fashionable-destination-1.233174",
+          "title": "Rove Downtown Dubai: A fashionable destination",
+          "publishedDate": "2016-09-13",
+          "quote": "Rove Downtown offers a new approach to hotel stays in Dubai, and is aimed at the savvy destination traveller"
+        }
+      ],
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 5,
+      "cleanliness": 5,
+      "value": 4.5
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No comparable hotel-buildout benchmark or facility-specific engineering evidence was published in the opened hospitality sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Opened to guests 2016-05-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bottindia.com/wp-content/uploads/2022/05/BOTT-SATTE-Magazine-MAY-JUNE-2022.pdf",
+            "title": "Rove Hotels : A Dubai hotel chain charming guests with its fresh vibe",
+            "publishedDate": null,
+            "quote": "The first Rove Hotel opened on May 4, 2016, Rove downtown"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2016-05-04",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://bottindia.com/wp-content/uploads/2022/05/BOTT-SATTE-Magazine-MAY-JUNE-2022.pdf",
+            "title": "Rove Hotels : A Dubai hotel chain charming guests with its fresh vibe",
+            "publishedDate": null,
+            "quote": "The first Rove Hotel opened on May 4, 2016, Rove downtown"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Downtown Dubai, United Arab Emirates",
+    "topActivities": [
+      {
+        "title": "Downtown sightseeing",
+        "category": "Culture",
+        "description": "Explore Dubai Mall and the Burj Khalifa neighbourhood; attractions may require separate tickets.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Pool breaks",
+        "category": "Water",
+        "description": "The hotel’s outdoor pool offers downtime between sightseeing trips.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Family room planning",
+        "category": "Kids",
+        "description": "A standard room is for up to two adults and one child; larger families should confirm connecting rooms.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.thenationalnews.com/rove-downtown-dubai-a-fashionable-destination-1.233174",
+    "priceBasis": "The National’s property review describes Rove’s affordable midscale positioning. Obtain a fresh hotel quote and confirm taxes, the Tourism Dirham fee and any breakfast charge.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "bestSeason": "Cooler November through March",
+      "tempRange": "24°C–31°C historical normal daytime highs in recommended months",
+      "weatherSummary": "The UAE climatology published by WMO covers 1974–1991. It shows much hotter summers than winters; these older averages are historical context, not current forecasts.",
+      "whyGo": "The cooler months suit walks around Downtown Dubai. In summer, plan around indoor attractions and use transport for longer journeys. Weather suitability does not guarantee lower room rates.",
+      "climateZone": "Hot desert / Dubai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 27.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 36.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 38.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 40.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 40.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 38.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 35.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "rove-0",
+        "imageSourceUrl": "https://rhm.beetlecdn.com/wp-content/uploads/2026/10/ROVE-DOWNTOWN-08-336045.jpg",
+        "sourceUrl": "https://www.rovehotels.com/en/hotels/downtown/",
+        "credit": "Rove Hotels / Rove Downtown",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/rove-0-e8748abe1d6bd521.webp",
+        "width": 1600,
+        "height": 986,
+        "sha256": "e8748abe1d6bd5214816997a03cb9ce5d0793a431f68bac93acf6b3b680a7dea"
+      },
+      {
+        "key": "rove-2",
+        "imageSourceUrl": "https://rhm.beetlecdn.com/wp-content/uploads/2026/10/ROVE-DOWNTOWN-21-534525.jpg",
+        "sourceUrl": "https://www.rovehotels.com/en/hotels/downtown/",
+        "credit": "Rove Hotels / Rove Downtown",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/rove-2-4480dc38a5a2411d.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "4480dc38a5a2411dbde29e11394a5618b8e768af0ffc3899a99245165ac099a0"
+      },
+      {
+        "key": "rove-3",
+        "imageSourceUrl": "https://rhm.beetlecdn.com/wp-content/uploads/2026/10/ROVE-DOWNTOWN-05-297734.jpg",
+        "sourceUrl": "https://www.rovehotels.com/en/hotels/downtown/",
+        "credit": "Rove Hotels / Rove Downtown",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/rove-3-93e4457d07ad1595.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "93e4457d07ad1595f9db731659462522a882fcfb3935717bc0699d42851be83f"
+      }
+    ],
+    "researchGaps": [
+      "No current property-specific MICHELIN/Forbes distinction verified; no award score invented.",
+      "Hotel construction budget and a directly comparable cost benchmark were not verified.",
+      "No reliable current date-specific nightly room rate verified; use rates on request."
+    ]
+  }
+]
