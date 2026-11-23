@@ -1,0 +1,703 @@
+[
+  {
+    "key": "dresden",
+    "pin": {
+      "title": "MEININGER Dresden Zentrum Opens",
+      "productName": "MEININGER Hotel Dresden Zentrum",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+      "description": "A budget hotel and hostel hybrid beside Dresden’s main station, with private family rooms, a guest kitchen, shared spaces and music-inspired interiors.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Wiener Platz 5, 01069 Dresden, Germany",
+      "latitude": 51.042367,
+      "longitude": 13.72969,
+      "utcStartDateTime": "2022-09-14T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s September 2022 release gives 14 September. Radio Dresden’s dated 14 September 2022 report explicitly says the hotel opens that Wednesday. This is separate from the supermarket’s September 2021 opening and the earlier planned 2021 hotel date.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+          "title": "MEININGER Hotel Dresden Zentrum — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-dresden/",
+          "title": "New hotel in Dresden",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.radiodresden.de/beitrag/neues-hotel-in-dresden-meininger-oeffnet-seine-tueren-737639/",
+          "title": "Neues Hotel in Dresden: Meininger öffnet seine Türen",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187399-d24150936-Reviews-MEININGER_Hotel_Dresden_Zentrum-Dresden_Saxony.html",
+          "title": "MEININGER Hotel Dresden Zentrum — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/monthly/kl/historical/monatswerte_KL_01048_19340101_20251231_hist.zip",
+          "title": "DWD Dresden-Klotzsche station 01048 — historical monthly observations",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/9223785747",
+          "title": "OpenStreetMap — Meininger Hotel at Wiener Platz 5",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/dresden",
+          "title": "MICHELIN Guide — Dresden and surroundings hotels",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid beside Dresden’s main station, with private family rooms, a guest kitchen, shared spaces and music-inspired interiors.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/\"></cite></p><h3>Family and budget stay</h3><p>Book a whole private family room and confirm beds, occupancy and cot needs. Dormitory beds are separate products. The guest kitchen, game zone and lounge support longer stays and time between outings; check equipment, storage and house rules. Music-inspired decoration includes disco balls in guestrooms.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-dresden/\"></cite></p><p>The station-side location supports rail travel and city exploring. Plan walking or tram routes to the historic centre, especially with children or luggage. Compare the full private-room price, taxes, breakfast, parking, luggage storage and cancellation terms for your dates.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/\"></cite></p><h3>Guest feedback</h3><p>Guests value the station access, while accounts raise housekeeping, replenishment of essentials, paid luggage storage, service and value concerns. Both private-room and dormitory feedback merit attention. These are guest reports; confirm cleaning arrangements and accessibility for the exact room. The rubric is a dated snapshot with a small review sample, and retains the lower cleanliness score.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187399-d24150936-Reviews-MEININGER_Hotel_Dresden_Zentrum-Dresden_Saxony.html\"></cite></p><h3>Opening and capacity</h3><p>The hotel opened on 14 September 2022, as reported that day by Radio Dresden. The grocery store in the same building had opened earlier; its date is not used for the hotel.<cite data-ref=\"https://www.radiodresden.de/beitrag/neues-hotel-in-dresden-meininger-oeffnet-seine-tueren-737639/\"></cite></p><p>The launch release reports 173 rooms and 719 beds. These opening-era figures replace earlier planned capacities. No hotel-specific construction investment was verified; the mixed-use building’s cost is not allocated to this hotel.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-dresden/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 3.5,
+      "location": 4.5,
+      "cleanliness": 3,
+      "value": 3.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187399-d24150936-Reviews-MEININGER_Hotel_Dresden_Zentrum-Dresden_Saxony.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK refreshed snapshot 34 reviews, overall 3.2/5. Rooms 3.3, Service 3.5, Location 4.7, Cleanliness 3.1, Value 3.6, rounded to half steps. Birgit B firsthand couple review displayed August 2026, site-translated from German; no exact publication day, date null. Small sample, housekeeping, supplies, storage fees and value concerns explicit. MICHELIN complete Dresden list 1–9 of 9 has no MEININGER match; Forbes Dresden unavailable; AAA excludes Germany. Acclaim null due guide gap.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187399-d24150936-Reviews-MEININGER_Hotel_Dresden_Zentrum-Dresden_Saxony.html",
+          "title": "Price/performance ratio not OK!",
+          "publishedDate": null,
+          "quote": "Leaving luggage at the hotel after checkout costs extra."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel guest opening",
+          "value": "14 September 2022",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.radiodresden.de/beitrag/neues-hotel-in-dresden-meininger-oeffnet-seine-tueren-737639/",
+            "title": "Neues Hotel in Dresden: Meininger öffnet seine Türen",
+            "quote": "öffnet am Mittwoch seine Türen",
+            "publishedDate": "2022-09-14"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "173 rooms / 719 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-dresden/",
+            "title": "New hotel in Dresden",
+            "quote": "173 rooms with 719 beds",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel guest opening",
+          "date": "2022-09-14",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.radiodresden.de/beitrag/neues-hotel-in-dresden-meininger-oeffnet-seine-tueren-737639/",
+            "title": "Neues Hotel in Dresden: Meininger öffnet seine Türen",
+            "quote": "öffnet am Mittwoch seine Türen",
+            "publishedDate": "2022-09-14"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Dresden, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm the exact whole-room beds, occupancy and cot needs.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare meals subject to equipment, storage and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Historic-centre exploring",
+        "category": "Culture",
+        "description": "Plan walking or tram routes from the station-side hotel to Dresden’s sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+    "priceBasis": "Rates on request. Compare the exact private room, occupancy, taxes, breakfast, parking, storage and fees for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor activities",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "3.0°C–24.5°C normal daytime highs",
+      "weatherSummary": "DWD Dresden-Klotzsche station 01048 historical monthly observations. Calculated 1991–2020 means of monthly daily maximum temperature MO_TX and precipitation MO_RR, with exactly 30 valid observations for every calendar month and no -999 missing values. Airport-area regional guidance, not a hotel forecast; central-city conditions can differ. Winter cold, summer heat and rain remain possible.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate continental / Dresden",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 4.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 8.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 18.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 22.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 24.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 13.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.1,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "dresden-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/e/8/csm_MEININGER-Hotels-Dresden-Zentrum_6Bed-Room-3_447131d21d.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dresden-room-5f922d76cc7c9745.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "5f922d76cc7c9745eff01dab78bcc2a4e3bb88d0897db110719dce8ab1d99b09"
+      },
+      {
+        "key": "dresden-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/9/4/csm_MEININGER_Hotels_Dresden_Zentrum_Guest-Kitchen-3_c145019542.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dresden-kitchen-d791edf3ef727bf6.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "d791edf3ef727bf6dbb99127c9f1ff388915fa3541e1fd2bce84b8d49985929c"
+      },
+      {
+        "key": "dresden-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/1/e/csm_MEININGER_Hotels_Dresden_Zentrum_Lounge-1_19992070a9.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/dresden/hotel-dresden-city-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dresden-lounge-c5884bbdf812eff1.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "c5884bbdf812eff1ab7b4b208cfa46aedd9add24d2ae8e8d482dbe38763ca62a"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No hotel-specific construction budget or comparative engineering scores verified; null.",
+      "Opening inventory is separate from older 165-room/639-bed plans and the supermarket’s earlier opening.",
+      "Forbes Dresden directory unavailable; acclaim null.",
+      "Operator map point 51.0411038/13.7341923 is east of the property and rejected. OSM named Meininger Hotel node 9223785747 at Wiener Platz 5 agrees with ArcGIS named hotel and exact street address; selected hotel point 51.0423670/13.7296900.",
+      "Tripadvisor sample only 34 reviews; lower cleanliness score and housekeeping concerns retained.",
+      "Translations left to the translation agent."
+    ]
+  },
+  {
+    "key": "williamsburg",
+    "pin": {
+      "title": "Great Wolf Lodge Williamsburg Opens",
+      "productName": "Great Wolf Lodge Williamsburg",
+      "sourceUrl": "https://www.greatwolf.com/williamsburg",
+      "description": "A family resort near Williamsburg, Virginia, with suites, overnight indoor water-park access, daily family activities and additional paid attractions.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resorts",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "549 East Rochambeau Drive, Williamsburg, VA 23188, USA",
+      "latitude": 37.3484073,
+      "longitude": -76.7293726,
+      "utcStartDateTime": "2005-03-23T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator’s 2004 annual report shareholder letter, written after year-end, explicitly states that the 301-suite Williamsburg resort opened on 23 March 2005. PDF page 4 was rendered and visually verified. This is the original opening, not later expansions to 405 suites.",
+      "price": 48000000,
+      "priceCurrency": "USD",
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/williamsburg",
+          "title": "Great Wolf Lodge Williamsburg — official resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.greatwolf.com/williamsburg/about-us",
+          "title": "Great Wolf Lodge Williamsburg — Our Story",
+          "confidence": 100
+        },
+        {
+          "url": "https://media.corporate-ir.net/media_files/irol/18/185610/reports/AR04.pdf",
+          "title": "Great Wolf Resorts 2004 Annual Report — shareholder letter, PDF page 4",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.hotel-online.com/news/archive-15298",
+          "title": "Hotel Waterpark Resorts — Construction Report 2005",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1294538/000095014405005295/g94864a2posam.htm",
+          "title": "Great Wolf Resorts — 2005 SEC registration filing",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+          "title": "Great Wolf Lodge Williamsburg — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/great-wolf-lodge-AA118012",
+          "title": "AAA Trip Canvas — Great Wolf Lodge Williamsburg",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00449151&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Williamsburg 2 N 1991–2020 monthly normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbestravelguide.com/destinations/williamsburg-virginia",
+          "title": "Forbes Travel Guide — Williamsburg hotels",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A family resort near Williamsburg, Virginia, with suites, overnight indoor water-park access, daily family activities and additional paid attractions.<cite data-ref=\"https://www.greatwolf.com/williamsburg\"></cite></p><h3>Family water-park stay</h3><p>Choose the exact suite layout, beds and booked occupancy; standard, themed, loft and larger suites have different limits. Overnight water-park access and daily family activities are included. Confirm operating hours, height restrictions, wristbands, supervision and arrival-day or departure-day access.<cite data-ref=\"https://www.greatwolf.com/williamsburg\"></cite></p><p>Paid attractions, dining, parking and other extras can add to the bill. Compare the complete stay price and package terms for the actual dates. Historic Triangle visits are separate outings: plan driving times, admission and attraction calendars.<cite data-ref=\"https://www.greatwolf.com/williamsburg\"></cite></p><h3>Guest feedback</h3><p>Families praise the water park, activities and some helpful staff. Accounts also report cleaning and maintenance concerns, inconsistent service, booking-price disputes and extra parking costs. These are guest accounts; review current suite-specific feedback and confirm the full bill. Component scores are a dated available-page snapshot rather than live ratings.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html\"></cite></p><p>AAA’s exact-property inspector profile describes family lofts, kids’ cabin suites and fireplaces, and lists 405 units. Confirm which features are included in the booked suite.<cite data-ref=\"https://www.aaa.com/tripcanvas/hotel/great-wolf-lodge-AA118012\"></cite></p><h3>Opening and original resort development</h3><p>The operator’s shareholder letter explicitly dates the original opening to 23 March 2005, with 301 suites and 66,000 square feet of indoor entertainment space. Entertainment space includes more than the water park. Those are opening-era figures, separate from later expansion.<cite data-ref=\"https://media.corporate-ir.net/media_files/irol/18/185610/reports/AR04.pdf\"></cite></p><p>The 2005 hotel-waterpark construction report records US$48 million in total cost for the original Williamsburg resort. This is a reported historical project cost, distinct from earlier proposals, later expansion budgets and nightly rates.<cite data-ref=\"https://www.hotel-online.com/news/archive-15298\"></cite></p><p>The current operator profile lists 405 suites across 13 suite types. Check the exact category and occupancy rather than assuming every suite has the same beds, kitchen facilities or accessibility.<cite data-ref=\"https://www.greatwolf.com/williamsburg/about-us\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 3.5,
+      "location": 4,
+      "cleanliness": 4,
+      "value": 3,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+      "basis": "Read 2026-11-22: available cached Tripadvisor UK snapshot 425 reviews, overall 3.6/5; not live. Rooms 3.8, Service 3.6, Location 4.0, Cleanliness 3.9, Value 3.1, rounded to half steps. Travelc2018 firsthand family review displayed July 2025 with no exact day, date null. Recent housekeeping, maintenance, service, parking and booking-price concerns retained as guest reports. Forbes Williamsburg directory has no Great Wolf match; MICHELIN Williamsburg unavailable. AAA exact-property inspector profile verified, but no supported numeric-acclaim mapping from its program components; acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+          "title": "Fun for families and Clean",
+          "publishedDate": null,
+          "quote": "We loved the fireplace suite. It was huge and very clean."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Original resort guest opening",
+          "value": "23 March 2005",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.corporate-ir.net/media_files/irol/18/185610/reports/AR04.pdf",
+            "title": "Great Wolf Resorts 2004 Annual Report — shareholder letter",
+            "quote": "March 23, 2005",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Original opening inventory and indoor entertainment area",
+          "value": "301 suites / 66,000 square feet indoor entertainment, not water-park-only area",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.corporate-ir.net/media_files/irol/18/185610/reports/AR04.pdf",
+            "title": "Great Wolf Resorts 2004 Annual Report — shareholder letter",
+            "quote": "301-suite resort",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported original resort cost",
+          "value": "USD 48 million; 2005 construction report, excludes later expansions and nightly rates",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hotel-online.com/news/archive-15298",
+            "title": "Hotel Waterpark Resorts — Construction Report 2005",
+            "quote": "Total cost was $48 million.",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Original resort guest opening",
+          "date": "2005-03-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://media.corporate-ir.net/media_files/irol/18/185610/reports/AR04.pdf",
+            "title": "Great Wolf Resorts 2004 Annual Report — shareholder letter",
+            "quote": "March 23, 2005",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Williamsburg, Virginia, USA",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Water",
+        "description": "Overnight access is included; check hours, height restrictions and supervision rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Daily family activities",
+        "category": "Kids",
+        "description": "Check the resort calendar and included activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Paid attractions and Historic Triangle outings",
+        "category": "Culture",
+        "description": "Attraction passes, offsite admissions and travel are separate; compare age rules and schedules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/williamsburg",
+    "priceBasis": "Rates on request. Compare the exact suite, guests, taxes, parking, meals, paid attractions and fees for your actual dates. Historical project cost is separate.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        10
+      ],
+      "bestSeason": "Spring and autumn for milder outdoor exploring",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "9.5°C–31.4°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Williamsburg 2 N USC00449151, 1991–2020 monthly normals in metric units. Nearby regional guidance rather than an onsite forecast. Values are normal daily highs and monthly precipitation. Summer heat, humidity and storms and winter cold remain possible; July rainfall exceeds 150 mm. Indoor swimming does not guarantee outdoor-pool operation or offsite attraction availability.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Virginia Historic Triangle",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 11.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 15.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 29.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 31.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 30.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 26.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 21.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 16.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 11.4,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "williamsburg-1",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/80/67/ce/great-wolf-lodge-williamsburg.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+        "credit": "Great Wolf Lodge / Tripadvisor property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/williamsburg-1-f5ce0cfc032587a8.webp",
+        "width": 900,
+        "height": 500,
+        "sha256": "f5ce0cfc032587a8ccab3687fa2989a8b33ed594e9819fabbc1f0801854814d2"
+      },
+      {
+        "key": "williamsburg-2",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/80/66/b2/great-wolf-lodge-williamsburg.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+        "credit": "Great Wolf Lodge / Tripadvisor property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/williamsburg-2-c1b546ac37b8d657.webp",
+        "width": 767,
+        "height": 434,
+        "sha256": "c1b546ac37b8d657b48c2fdd77c1680da68e7bb56d745ecd36406320156ecfa4"
+      },
+      {
+        "key": "williamsburg-3",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/80/66/0e/great-wolf-lodge-williamsburg.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g58313-d528447-Reviews-Great_Wolf_Lodge_Williamsburg_VA-Williamsburg_Virginia.html",
+        "credit": "Great Wolf Lodge / Tripadvisor property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/williamsburg-3-8bf30ea004106cae.webp",
+        "width": 767,
+        "height": 434,
+        "sha256": "8bf30ea004106caeb8ef36d04af8682f9067968f9c6c1a20ea9afb7071dca44c"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "USD48m is the reported original-resort cost from a 2005 construction report, not an earlier estimate, later expansion or nightly rate.",
+      "Unsupported comparative engineering scores remain null.",
+      "Original opening 301 suites and 66,000 square feet indoor entertainment are separate from current 405-suite inventory and water-park-only area.",
+      "MICHELIN Williamsburg unavailable. AAA exact-property inspector profile verified, but no supported numeric-acclaim mapping from its program components; acclaim null.",
+      "Tripadvisor UK available page is cached; 425-review snapshot is not represented as live. Older US-domain snapshot excluded.",
+      "Named ArcGIS resort point corroborated by full 549 East Rochambeau Drive address; no city-centre point.",
+      "Three exact-Williamsburg property-gallery photos visually checked and credited.",
+      "Translations left to the translation agent."
+    ]
+  }
+]

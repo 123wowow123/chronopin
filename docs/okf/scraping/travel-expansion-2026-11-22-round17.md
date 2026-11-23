@@ -70,3 +70,14 @@ Rainfall bands below 75 / below 150 / at least 150 mm. Weather suitability does 
 seasons or guarantee attraction availability.
 
 English only; translations left to the separate agent. No code deployment performed.
+
+| Property | Production pin | Local pin |
+| --- | --- | --- |
+| MEININGER Budapest Great Market Hall | 21340 | 21181 |
+| Center Parcs Woburn Forest | 21341 | 21182 |
+
+Both hosts passed native title/source/date/address/coordinates/author/references/media-credit,
+hotel rubric and factory metrics/milestones readbacks. Woburn GBP250m project cost read back correctly.
+All four native pages returned HTTP 200. Local `/travel` renders both additions without application
+errors: **Family 43 / Budget 32**. All 10 existing travel tests and `git diff --check` passed.
+No data writes remain pending. Production category display awaits an explicitly requested deploy.

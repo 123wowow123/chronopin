@@ -1,0 +1,683 @@
+[
+  {
+    "key": "cologne",
+    "pin": {
+      "title": "MEININGER Hotel Cologne West Opens",
+      "productName": "MEININGER Hotel Cologne West",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+      "description": "A budget hotel and hostel hybrid in western Cologne, with private family rooms, a shared guest kitchen, laundry and social spaces.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Stolberger Straße 347, 50933 Cologne, Germany",
+      "latitude": 50.9419716,
+      "longitude": 6.8891037,
+      "utcStartDateTime": "2023-09-22T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator opening report republished by Hotel News Resource on 22 September 2023 explicitly says the hotel opens today. The official MEININGER LinkedIn opening post has datePublished 2023-09-22, corroborating the exact day. The operator release itself displays September only; the later 2 October trade report is not treated as the event date.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+          "title": "MEININGER Hotel Cologne West — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-cologne/",
+          "title": "New MEININGER hotel in Cologne",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.hotelnewsresource.com/article128294.html",
+          "title": "MEININGER Hotel Cologne West Opens",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/portfolio/",
+          "title": "MEININGER current hotel portfolio",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187371-d26431091-Reviews-Meininger_Hotel_Koln_West-Cologne_North_Rhine_Westphalia.html",
+          "title": "MEININGER Hotel Köln West — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/monthly/kl/historical/monatswerte_KL_02667_19570901_20251231_hist.zip",
+          "title": "DWD Köln/Bonn monthly observations — 1991–2020 derivation",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/cologne",
+          "title": "MICHELIN — Cologne hotels",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid in western Cologne, with private family rooms, a shared guest kitchen, laundry and social spaces.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/\"></cite></p><h3>Family and budget stay</h3><p>Choose a whole private family room and confirm its beds, occupancy and cot requirements. Shared dormitory beds are a separate booking product. The guest kitchen, laundry and social spaces can help families manage meals and longer stays; check charges, equipment and house rules.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/\"></cite></p><p>The hotel is in the western Braunsfeld area, outside the historic city centre. Plan public transport and walking with luggage or children. Compare the full private-room price, breakfast, taxes, parking, storage and cancellation conditions for the actual travel dates.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/\"></cite></p><h3>Guest feedback</h3><p>A firsthand student-group account describes clean, functional rooms, a quiet position at the end of a corridor, breakfast and nearby public transport. These are individual experiences rather than guarantees for every room. The guest-score snapshot has 83 reviews, so check recent feedback and the exact room layout before booking.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187371-d26431091-Reviews-Meininger_Hotel_Koln_West-Cologne_North_Rhine_Westphalia.html\"></cite></p><h3>Opening and inventory</h3><p>MEININGER opened this property on 22 September 2023. The opening report explicitly dates the start of operations that day; later press coverage is not a second opening.<cite data-ref=\"https://www.hotelnewsresource.com/article128294.html\"></cite></p><p>The current operator portfolio lists 209 rooms and 750 beds. This is the portfolio inventory at research time, rather than a separately verified opening-day count.<cite data-ref=\"https://www.meininger-hotels.com/en/portfolio/\"></cite></p><p>The hotel forms part of the OVUM mixed-use development. No hotel-specific construction investment was verified; a budget for the wider development should not be treated as this hotel’s cost.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-cologne/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 4,
+      "location": 3.5,
+      "cleanliness": 4,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187371-d26431091-Reviews-Meininger_Hotel_Koln_West-Cologne_North_Rhine_Westphalia.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 83 reviews, overall 4.1/5; Rooms 3.7, Service 3.9, Location 3.5, Cleanliness 4.0, Value 4.0 rounded to half steps. Sandra K firsthand student-group review, Solid hotel, published October 2026 without exact day; site-translated from German. Small sample and outside-centre location explicit. Complete MICHELIN Cologne list 1–8 of 8 has no match. Forbes Cologne unavailable; AAA excludes Germany. Acclaim null because guide coverage incomplete.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187371-d26431091-Reviews-Meininger_Hotel_Koln_West-Cologne_North_Rhine_Westphalia.html",
+          "title": "Solid hotel",
+          "publishedDate": null,
+          "quote": "The rooms are absolutely fine and clean."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opening",
+          "value": "22 September 2023",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hotelnewsresource.com/article128294.html",
+            "title": "MEININGER Hotel Cologne West Opens",
+            "quote": "Today marks the opening",
+            "publishedDate": "2023-09-22"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Current operator portfolio inventory",
+          "value": "209 rooms / 750 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/portfolio/",
+            "title": "MEININGER hotel portfolio",
+            "quote": "Köln West Germany 2023 209 750",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "MEININGER hotel opened",
+          "date": "2023-09-22",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hotelnewsresource.com/article128294.html",
+            "title": "MEININGER Hotel Cologne West Opens",
+            "quote": "Today marks the opening",
+            "publishedDate": "2023-09-22"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Cologne, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room beds, occupancy and cot availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare meals subject to equipment, storage and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Cologne city outings",
+        "category": "Culture",
+        "description": "Plan public transport and walking from the western district; tickets are separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+    "priceBasis": "Rates on request. Compare the exact private room, occupancy, taxes, breakfast, parking, storage, transport tickets and cancellation conditions for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring to early autumn for city outings",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "5.9°C–24.9°C normal daytime highs",
+      "weatherSummary": "DWD Köln/Bonn station 02667: 1991–2020 monthly means of MO_TX normal daytime highs and MO_RR monthly rainfall, exactly 30 valid observations per calendar month. Nearby regional airport guidance, not an onsite forecast; west Cologne may differ.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Cologne",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 5.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 11.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 16.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 22.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 9.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 6.5,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "cologne-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/b/2/csm_MEININGER-Hotel-K%C3%B6ln-West-2_1-Room-Baby-cot-02_0be396ff53.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cologne-room-92ee4137daf8bcfb.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "92ee4137daf8bcfb5a8fcd7bfb91ccae0b9f39fd30e1ef7a643acb8019a86aac"
+      },
+      {
+        "key": "cologne-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/b/5/csm_MEININGER-Hotel-K%C3%B6ln-West-Guest-Kitchen-60_0_839e120f29.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cologne-kitchen-b2b58c6e59480008.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "b2b58c6e594800081b10f54626d0416cdd0894f346c2d43e3b9e8c1f42935ad8"
+      },
+      {
+        "key": "cologne-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/7/f/csm_MEININGER-Hotel-K%C3%B6ln-West-Bar-52_0_05ca146286.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/cologne/hotel-cologne-west/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/cologne-lounge-668dddb09eb3e9e0.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "668dddb09eb3e9e0a69f11ae0a2046eb7a1235e13761975002a7dc2887e3ce64"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "No property-specific construction cost verified; wider OVUM mixed-use budgets are not assigned to the hotel.",
+      "209 rooms / 750 beds are current portfolio figures, not separately verified opening-day inventory.",
+      "Forbes Cologne unavailable; numeric acclaim remains null.",
+      "Operator map point corroborated by exact-address PointAddress geocoding.",
+      "DWD Köln/Bonn is a regional airport station; 30 valid samples per calendar month in 1991–2020."
+    ]
+  },
+  {
+    "key": "concord",
+    "pin": {
+      "title": "Great Wolf Lodge Concord Grand Opening",
+      "productName": "Great Wolf Lodge Concord",
+      "sourceUrl": "https://www.greatwolf.com/concord",
+      "description": "A family resort in Concord, North Carolina, with suites, overnight indoor water-park access, daily family activities and additional paid attractions.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resorts",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "10175 Weddington Road, Concord, NC 28027, USA",
+      "latitude": 35.36153,
+      "longitude": -80.71178094,
+      "utcStartDateTime": "2009-04-23T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "This pin dates the formal community grand-opening celebration on 23 April 2009, documented the following day by local attendees Team Honeycutt. The operator’s 5 May SEC-filed earnings release explicitly distinguishes opening at the end of the first quarter from a community event in late April. Earlier guest operations are not dated to this ceremony.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/concord",
+          "title": "Great Wolf Lodge Concord — official resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.greatwolf.com/concord/about-us",
+          "title": "Great Wolf Lodge Concord — Our Story",
+          "confidence": 100
+        },
+        {
+          "url": "https://activerain.com/blogsview/1048977/great-wolf-lodge-grand-opening",
+          "title": "Great Wolf Lodge Grand Opening — firsthand community visit",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1294538/000129993309001986/exhibit1.htm",
+          "title": "Great Wolf Resorts 2009 first-quarter results",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+          "title": "Great Wolf Lodge Concord — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/great-wolf-lodgecharlotte-concord-AA120061",
+          "title": "AAA Trip Canvas — Great Wolf Lodge Charlotte/Concord",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00311975&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Concord 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A family resort in Concord, North Carolina, with suites, overnight indoor water-park access, daily family activities and additional paid attractions.<cite data-ref=\"https://www.greatwolf.com/concord\"></cite></p><h3>Family water-park stay</h3><p>Confirm the exact suite layout, beds and booked occupancy. Overnight stays include indoor water-park admission and daily family activities; check hours, height restrictions, wristbands, supervision and arrival-day or departure-day access. MagiQuest, arcade games and other paid attractions have separate terms.<cite data-ref=\"https://www.greatwolf.com/concord\"></cite></p><p>Compare the full stay cost, including parking, dining, taxes, attraction passes and package conditions. The outdoor pool and other outdoor activities depend on season, weather and operating calendars. The resort is in Concord, rather than downtown Charlotte.<cite data-ref=\"https://www.greatwolf.com/concord\"></cite></p><h3>Guest feedback</h3><p>A September 2026 family account describes a clean, spacious suite, helpful staff and enjoyable water-park time, while noting a check-in queue, paid parking and expensive resort dining. A November guest separately reports insects in dining and shopping areas and concerns about sofa-bed bedding; that guest also describes apologies, a meal adjustment and a breakfast refund. These are individual guest reports, and experiences differ. Review recent feedback and confirm the booked suite and full bill.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html\"></cite></p><h3>Formal opening and inventory</h3><p>The community opening celebration took place on 23 April 2009, according to local attendees writing the next morning.<cite data-ref=\"https://activerain.com/blogsview/1048977/great-wolf-lodge-grand-opening\"></cite></p><p>The operator’s May 2009 results release says the resort had already opened at the end of the first quarter, then held its community grand-opening event in late April. The ceremony date therefore differs from the start of guest operations.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1294538/000129993309001986/exhibit1.htm\"></cite></p><p>The current operator profile lists 402 suites and an 80,000-square-foot indoor water park, and records a 2019 renovation. These current descriptions are kept separate from early promotional room counts.<cite data-ref=\"https://www.greatwolf.com/concord/about-us\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 5,397 reviews, overall 4.2/5. Rooms 4.3, Service 4.4, Location 4.6, Cleanliness 4.4, Value 3.8 rounded to half steps. Victoria C firsthand family review September 2026, exact day unknown. Positive stay and November insect/bedding complaint retained. AAA exact-address 402-unit resort verified. Forbes Charlotte no match; MICHELIN Concord unavailable, acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+          "title": "Great Family Trip",
+          "publishedDate": null,
+          "quote": "Our room was ready on time, clean"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Formal community grand opening",
+          "value": "23 April 2009; guest operations began earlier",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://activerain.com/blogsview/1048977/great-wolf-lodge-grand-opening",
+            "title": "Great Wolf Lodge Grand Opening",
+            "quote": "On Thursday, April 23, 2009",
+            "publishedDate": "2009-04-24"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Current operator-listed inventory",
+          "value": "402 suites / 80,000-square-foot indoor water park",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.greatwolf.com/concord/about-us",
+            "title": "Great Wolf Lodge Concord — Our Story",
+            "quote": "402 suites",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Formal community grand opening",
+          "date": "2009-04-23",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://activerain.com/blogsview/1048977/great-wolf-lodge-grand-opening",
+            "title": "Great Wolf Lodge Grand Opening",
+            "quote": "On Thursday, April 23, 2009",
+            "publishedDate": "2009-04-24"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Concord / Charlotte region, North Carolina, USA",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Water",
+        "description": "Overnight access is included; check hours, height rules and supervision.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Daily family activities",
+        "category": "Kids",
+        "description": "Check the resort calendar and included activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "MagiQuest and paid attractions",
+        "category": "Adventure",
+        "description": "Compare passes and attraction charges separately; outdoor operation depends on weather.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/concord",
+    "priceBasis": "Rates on request. Compare the exact suite, booked guests, taxes, parking, meals, paid attractions and package fees for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and autumn for outdoor activities; indoor swimming year-round",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "11.6°C–33.2°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Concord station USC00311975, 1991–2020 monthly normals in metric units. Regional station northeast of the resort, not an onsite forecast. Normal daytime highs and monthly rainfall; summer heat and thunderstorms remain possible. Indoor swimming is separate from seasonal outdoor attractions.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / North Carolina Piedmont",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 11.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 13.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 18.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 23.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 27.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 31.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 33.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 32.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 28.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 23.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 17.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 13.1,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "concord-1",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/6e/e9/31/concord-nc.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/concord-1-27d8d2f8dc8a43f9.webp",
+        "width": 1200,
+        "height": 753,
+        "sha256": "27d8d2f8dc8a43f9cbdd1be66e33a1ad51583853a2cbfa0a642767b31a459563"
+      },
+      {
+        "key": "concord-2",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/6e/e9/32/concord-nc.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/concord-2-63f39b51287946ee.webp",
+        "width": 1200,
+        "height": 773,
+        "sha256": "63f39b51287946ee2f470ae6ea46daabd3be7b28600d1fe4b9a7198c973fcae7"
+      },
+      {
+        "key": "concord-3",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/6f/03/55/concord-nc.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g49049-d1424547-Reviews-Great_Wolf_Lodge_Concord-Concord_North_Carolina.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/concord-3-8bf30ea004106cae.webp",
+        "width": 767,
+        "height": 434,
+        "sha256": "8bf30ea004106caeb8ef36d04af8682f9067968f9c6c1a20ea9afb7071dca44c"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Whole-resort cost unresolved: a USD50m aquatics construction profile has unclear scope; a different development-cost comparison PDF could not be inspected. Construction loans are not project cost. Price/currency null.",
+      "Formal 23 April 2009 community celebration distinguished from earlier first-quarter guest opening.",
+      "MICHELIN Concord unavailable; numeric acclaim null. AAA exact-address property and 402 units verified.",
+      "Official operator map point corroborated by exact-address PointAddress at Weddington Road Extension; nearby StreetAddress interpolation rejected.",
+      "Current November guest insect and bedding complaint retained alongside positive September stay.",
+      "Three exact-Concord management-gallery images visually checked and credited."
+    ]
+  }
+]

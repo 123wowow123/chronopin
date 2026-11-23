@@ -501,4 +501,4 @@ generate video on activites / food / stay per city. post to youtube shorts
 
 
 do
-Round 13+
+open menu-pricing gaps, and verification notes.

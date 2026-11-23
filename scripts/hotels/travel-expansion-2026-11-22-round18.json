@@ -1,0 +1,666 @@
+[
+  {
+    "key": "bordeaux",
+    "pin": {
+      "title": "MEININGER Bordeaux Gare Saint-Jean Opens",
+      "productName": "MEININGER Hotel Bordeaux Gare Saint-Jean",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+      "description": "A budget hotel and hostel hybrid near Bordeaux Saint-Jean station, with private family rooms, a shared guest kitchen and a game zone.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "12 rue du Commerce, 33800 Bordeaux, France",
+      "latitude": 44.8272023,
+      "longitude": -0.5519396,
+      "utcStartDateTime": "2021-05-26T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator’s May 2021 release explicitly states that the hotel opened on 26 May. Opening-era capacity is distinguished from differing later directory counts.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+          "title": "MEININGER Hotel Bordeaux Gare Saint-Jean — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-bordeaux/",
+          "title": "New hotel in Bordeaux",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187079-d23283846-Reviews-MEININGER_Hotel_Bordeaux_Gare_Saint_Jean-Bordeaux_Gironde_Nouvelle_Aquitaine.html",
+          "title": "MEININGER Hotel Bordeaux Gare Saint-Jean — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://meteofrance.s3.sbg.io.cloud.ovh.net/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+          "title": "Météo-France — Bordeaux-Mérignac 1991–2020 climate normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/bordeaux",
+          "title": "MICHELIN Guide — Bordeaux hotels",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid near Bordeaux Saint-Jean station, with private family rooms, a shared guest kitchen and a game zone.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/\"></cite></p><h3>Family and budget stay</h3><p>Book a whole private family room and confirm its bed layout, occupancy and cot needs. Individual dorm beds are a separate product. The guest kitchen supports preparing meals, while shared lounge and game spaces offer somewhere to relax. Check kitchen equipment and house rules.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/\"></cite></p><p>The property is near Saint-Jean station, rather than directly opposite it. Plan walking or public-transport routes to the historic centre, especially with luggage or young children. Compare the full private-room price, city tax, breakfast, parking, luggage storage and cancellation terms for your dates.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/\"></cite></p><h3>Guest feedback</h3><p>Guests praise the communal kitchen, quiet rooms and helpful staff. Reviews also note the walk to central sights, parking limitations and cancellation-policy concerns. These are guest accounts; read current room-specific feedback. Component scores are a dated research snapshot.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187079-d23283846-Reviews-MEININGER_Hotel_Bordeaux_Gare_Saint_Jean-Bordeaux_Gironde_Nouvelle_Aquitaine.html\"></cite></p><h3>Opening and capacity</h3><p>MEININGER announced that the hotel opened on 26 May 2021, with 162 rooms accommodating 493 guests. These are opening-era figures; later directory room counts differ. No property-specific construction investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-bordeaux/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4,
+      "cleanliness": 4.5,
+      "value": 4.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187079-d23283846-Reviews-MEININGER_Hotel_Bordeaux_Gare_Saint_Jean-Bordeaux_Gironde_Nouvelle_Aquitaine.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 130 reviews, overall 4.3/5. Rooms 4.2, Service 4.5, Location 4.0, Cleanliness 4.5, Value 4.4, rounded to half steps. Taggert1 firsthand review displayed June 2026 with no exact publication day, date null. Walking-distance, parking and cancellation tradeoffs retained. Complete MICHELIN Bordeaux list has no MEININGER match; Forbes Bordeaux directory unavailable; AAA awards exclude France. Acclaim null due guide evidence gap.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187079-d23283846-Reviews-MEININGER_Hotel_Bordeaux_Gare_Saint_Jean-Bordeaux_Gironde_Nouvelle_Aquitaine.html",
+          "title": "Short stay",
+          "publishedDate": null,
+          "quote": "The kitchen has both hobs microwaves and fridges."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel guest opening",
+          "value": "26 May 2021",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-bordeaux/",
+            "title": "New hotel in Bordeaux",
+            "publishedDate": null,
+            "quote": "opened 26 May"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "162 rooms / capacity for 493 guests at opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-bordeaux/",
+            "title": "New hotel in Bordeaux",
+            "publishedDate": null,
+            "quote": "493 guests in a total of 162 rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel guest opening",
+          "date": "2021-05-26",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-hotel-in-bordeaux/",
+            "title": "New hotel in Bordeaux",
+            "publishedDate": null,
+            "quote": "opened 26 May"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Bordeaux, France",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm a whole-room booking, beds, occupancy and cot needs.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare meals subject to house rules and available equipment.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Bordeaux city walks",
+        "category": "Culture",
+        "description": "Plan station and historic-centre routes, allowing for walking distances.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, city tax, breakfast, parking and fees for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "10.5°C–27.6°C normal daytime highs",
+      "weatherSummary": "Météo-France Bordeaux-Mérignac station 33281001, 1991–2020 normals. Average daily maximum temperatures and monthly precipitation from page 1, visually checked. Nearby airport station provides regional guidance, not a hotel forecast. Summer heat and rain remain possible; record extremes are excluded.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Bordeaux",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 10.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 12,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 15.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 18,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 27.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 27.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 24.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 19.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 14.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 11,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "bordeaux-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/c/1/csm_MEININGER-Hotel-Bordeaux-Gare-Saint-Jean_2_2_Room_01---Copy_0d458bc7e6.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/bordeaux-room-ea9d9f3004063b7d.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "ea9d9f3004063b7df60ae990e0e0848faa2b38873fafa0547ebdb9ee06be0876"
+      },
+      {
+        "key": "bordeaux-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/7/3/csm_MEININGER-Hotel-Bordeaux-Gare-Saint-Jean_Cuisine-invit%C3%A9s_03_0e5634ade2.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/bordeaux-kitchen-c9ba16514225189d.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "c9ba16514225189d2a05f47ff5b731a9ee8c1249c414b76988b5f52ec766bd9c"
+      },
+      {
+        "key": "bordeaux-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/4/8/csm_MEININGER-Hotel-Bordeaux-Gare-Saint-Jean_Bar_03_4c660e3fb2.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/bordeaux/hotel-bordeaux-gare-saint-jean/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/bordeaux-lounge-68f2d670e0529007.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "68f2d670e0529007b599b405f146ad447a900a71b9995ad6944fb70e3b9fce8a"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction budget or comparative engineering scores verified; null.",
+      "Opening-era 162-room figure differs from later directory counts; not treated as current inventory.",
+      "Forbes Bordeaux directory unavailable; acclaim null.",
+      "Operator street address and point corroborated by ArcGIS and OSM exact address; city-centre coordinates excluded.",
+      "Translations left to the translation agent."
+    ]
+  },
+  {
+    "key": "arizona",
+    "pin": {
+      "title": "Great Wolf Lodge Arizona Opens",
+      "productName": "Great Wolf Lodge Arizona",
+      "sourceUrl": "https://www.greatwolf.com/arizona",
+      "description": "A family resort at Scottsdale/Salt River with suites, an indoor water park included with overnight stays, and additional paid attractions.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resorts",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "7333 N. Pima Road, Scottsdale, AZ 85258, USA",
+      "latitude": 33.5435031,
+      "longitude": -111.8902864,
+      "utcStartDateTime": "2019-09-27T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "ABC15’s 30 September 2019 report explicitly dates the public guest opening to 27 September. The tribal newspaper’s 7 November 2019 issue records the separate grand-opening celebration on 17 October; the ceremony is not substituted for guest opening.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/arizona",
+          "title": "Great Wolf Lodge Arizona — official resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.abc15.com/local/great-wolf-lodge-is-officially-open-in-scottsdale",
+          "title": "Great Wolf Lodge is officially open in Scottsdale",
+          "confidence": 100
+        },
+        {
+          "url": "https://oan.srpmic-nsn.gov/wp-content/uploads/2024/06/OAN_11_07_19.pdf",
+          "title": "The Great Wolf Lodge Arizona Opens — O’odham Action News, 7 November 2019, page 12",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.greatwolf.com/arizona/venues/accommodations",
+          "title": "Great Wolf Lodge Arizona — accommodations",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+          "title": "Great Wolf Lodge Scottsdale / Salt River — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USW00003192&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Scottsdale Municipal Airport 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A family resort at Scottsdale/Salt River with suites, an indoor water park included with overnight stays, and additional paid attractions.<cite data-ref=\"https://www.greatwolf.com/arizona\"></cite></p><h3>Family water-park stay</h3><p>Choose the exact suite layout and booked occupancy; themed and larger suites have different beds and limits. Overnight stays include indoor water-park access, with arrival-day and departure-day access subject to operating hours and admission rules. Check height requirements, wristbands and supervision needs.<cite data-ref=\"https://www.greatwolf.com/arizona\"></cite></p><p>The operator lists included daily family activities. Adventure Park attractions, the arcade, food and other extras can add to the bill. Compare the complete stay cost including parking, meals, paid activities and packages; this resort is included in Family rather than the Budget shelf.<cite data-ref=\"https://www.greatwolf.com/arizona\"></cite></p><h3>Guest feedback</h3><p>Families praise the water park and easy access back to their rooms. Recent accounts also describe inconsistent service, cleaning and maintenance, plus expensive extras. These are guest reports rather than independently established faults. Read current suite-specific reviews and check outdoor-pool operating hours. Scores are a dated snapshot.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html\"></cite></p><h3>Opening and resort development</h3><p>The resort opened to guests on 27 September 2019, according to contemporary ABC15 reporting. This precedes the formal October celebration.<cite data-ref=\"https://www.abc15.com/local/great-wolf-lodge-is-officially-open-in-scottsdale\"></cite></p><p>The Salt River Pima-Maricopa Indian Community newspaper dates the grand-opening ceremony to 17 October 2019 and describes 350 suites and an 85,000-square-foot indoor water park. These are opening-era figures. No verified property-specific construction investment is assigned.<cite data-ref=\"https://oan.srpmic-nsn.gov/wp-content/uploads/2024/06/OAN_11_07_19.pdf\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 3.5,
+      "location": 4.5,
+      "cleanliness": 4,
+      "value": 3.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 596 reviews, overall 3.7/5. Rooms 3.9, Service 3.6, Location 4.3, Cleanliness 4.0, Value 3.4, rounded to half steps. Lily firsthand family review displayed April 2025, stay March 2025; exact publication day unavailable, date null. Recent service, cleaning, maintenance and cost tradeoffs retained. Forbes Scottsdale directory has no Great Wolf match; MICHELIN Scottsdale unavailable; AAA Scottsdale directory could not establish exact-property Diamond recognition and timed out on recheck. Acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+          "title": "Fun family resort!",
+          "publishedDate": null,
+          "quote": "My kids loved it"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel guest opening",
+          "value": "27 September 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.abc15.com/local/great-wolf-lodge-is-officially-open-in-scottsdale",
+            "title": "Great Wolf Lodge is officially open in Scottsdale",
+            "publishedDate": null,
+            "quote": "officially opened its doors on Sept. 27"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "350 suites / 85,000-square-foot indoor water park at opening",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://oan.srpmic-nsn.gov/wp-content/uploads/2024/06/OAN_11_07_19.pdf",
+            "title": "The Great Wolf Lodge Arizona Opens — O’odham Action News",
+            "publishedDate": null,
+            "quote": "350 suites designed to accommodate families and groups of all sizes"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel guest opening",
+          "date": "2019-09-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.abc15.com/local/great-wolf-lodge-is-officially-open-in-scottsdale",
+            "title": "Great Wolf Lodge is officially open in Scottsdale",
+            "publishedDate": null,
+            "quote": "officially opened its doors on Sept. 27"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Scottsdale / Salt River, Arizona, USA",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Water",
+        "description": "Overnight access is included; check hours, height rules and supervision requirements.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Daily family activities",
+        "category": "Kids",
+        "description": "Check the resort calendar and which activities are included.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Adventure Park and arcade",
+        "category": "Adventure",
+        "description": "Additional charges apply; compare passes and age or height requirements.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/arizona",
+    "priceBasis": "Rates on request. Compare the exact suite, booked guests, taxes, parking, meals, activity passes and other fees for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "bestSeason": "Late autumn through early spring for outdoor comfort",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "18.1°C–40.1°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Scottsdale Municipal Airport USW00003192, 1991–2020 monthly normals in metric units. Values are normal daily highs and monthly precipitation. Nearby regional guidance, not a resort forecast. June–August normal highs approach 39–40°C; indoor swimming does not remove outdoor heat exposure. Low monthly rainfall does not rule out monsoon storms.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Hot desert / Scottsdale",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 19.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 20.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 24.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 28.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 33.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "avoid",
+          "tempC": 38.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "avoid",
+          "tempC": 40.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "avoid",
+          "tempC": 39.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 36.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 30.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 23.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 18.1,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "arizona-1",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/62/13/ba/salt-river-az.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/arizona-1-c0530a410819fa7a.webp",
+        "width": 900,
+        "height": 500,
+        "sha256": "c0530a410819fa7a4394c383a8255160bbb86874a418ab1df19a1231d823103e"
+      },
+      {
+        "key": "arizona-2",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/62/15/d9/salt-river-az.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/arizona-2-6f1e4f3f0458f0f9.webp",
+        "width": 900,
+        "height": 500,
+        "sha256": "6f1e4f3f0458f0f91378842026e521cfa64a26a6f1a9183d75adad98ce853210"
+      },
+      {
+        "key": "arizona-3",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/62/15/d6/salt-river-az.jpg?h=500&s=1&w=900",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g31350-d19097797-Reviews-Great_Wolf_Lodge_Scottsdale_Salt_River_AZ-Scottsdale_Arizona.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/arizona-3-efe42fe7781234b2.webp",
+        "width": 900,
+        "height": 500,
+        "sha256": "efe42fe7781234b2254fa5384b734b26fab184ed2a0434b6cac09fd534ec9489"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction budget or comparative engineering scores verified; null.",
+      "Guest opening 27 September 2019 distinguished from 17 October grand-opening ceremony.",
+      "MICHELIN Scottsdale unavailable; exact-property AAA Diamond recognition not established. Acclaim null.",
+      "Operator photos blocked direct retrieval; three exact-property management-gallery images verified visually and credited.",
+      "Opening inventory explicitly dated; suite occupancy varies by category.",
+      "ArcGIS named resort point corroborated by OSM Great Wolf Lodge at 7333 North Pima Road, not Scottsdale centre.",
+      "Translations left to the translation agent."
+    ]
+  }
+]
