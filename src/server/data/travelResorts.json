@@ -3327,5 +3327,537 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/paris/hotel-paris-porte-de-vincennes/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Paris, France",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm the whole-room bed layout, occupancy and any cot availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Use the communal kitchen subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Paris by public transport",
+        "category": "Culture",
+        "description": "Plan routes and transit time from the eastern 12th arrondissement to central sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/paris/hotel-paris-porte-de-vincennes/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; room rates and climate seasons differ",
+      "tempRange": "8°C–26°C normal daytime highs",
+      "weatherSummary": "Météo-France Paris-Montsouris station 75114001, 1991–2020 normals, used as regional guidance for eastern Paris. Temperatures are normal daytime highs; rain occurs in every season. These are averages, not property forecasts.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Paris",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 16.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 25.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 25.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 16.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.co.uk/short-breaks/accommodation/the-legoland-castle-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Windsor, England",
+    "topActivities": [
+      {
+        "title": "Knights and Wizards rooms",
+        "category": "Kids",
+        "description": "Choose the exact theme and confirm bed layout and room occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "In-room treasure hunt",
+        "category": "Kids",
+        "description": "Check the current room experience and package details for your stay.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared resort facilities",
+        "category": "Kids",
+        "description": "Confirm access and booking rules for the neighbouring Resort Hotel pool and shared Playroom.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.co.uk/short-breaks/accommodation/the-legoland-castle-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; compare property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and price seasons differ",
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "May, June and September for mild city walks",
+      "tempRange": "8°C–24°C normal daytime highs",
+      "weatherSummary": "Met Office Heathrow station, 1991–2020 normals, used as nearby regional guidance for Windsor. The first 1991–2020 table was rechecked; values are normal daytime highs. Rain occurs in every season and actual park operating dates must be checked separately.",
+      "whyGo": "Milder months suit outdoor park time, while wet days call for flexible plans. Check the forecast, park calendar and exact package price separately.",
+      "climateZone": "Temperate maritime / Windsor",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 11.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 18.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 21.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 11.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Copenhagen, Denmark",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and confirm beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food in the communal kitchen subject to house rules and equipment availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Tivoli and Copenhagen walks",
+        "category": "Culture",
+        "description": "Plan admission and opening dates separately; the hotel is near Central Station and Tivoli.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring to early autumn for outdoor sightseeing",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "2°C–20°C normal daytime highs",
+      "weatherSummary": "WMO World Weather Information Service / Danish Meteorological Institute Copenhagen station, 1961–1990 historical normals. This older baseline is regional guidance, not current climate normals or a forecast. Temperatures are average daytime highs; low monthly rainfall totals do not mean rain-free days.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Copenhagen",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 10,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 20,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 20,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 17,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Winter Haven, Florida, United States",
+    "topActivities": [
+      {
+        "title": "LEGO-themed family rooms",
+        "category": "Kids",
+        "description": "Select the exact theme, separate children’s sleeping area and occupancy for your party.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "In-room treasure hunts",
+        "category": "Kids",
+        "description": "Check the booked room and package for the current treasure-hunt experience.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel pool and park visits",
+        "category": "Pool",
+        "description": "Check pool conditions and park calendars; tickets depend on your selected package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "bestSeason": "Late autumn and spring for less summer heat",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "22.8°C–33.8°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Winter Haven station USC00089707, 1991–2020 monthly normals in metric units. Local regional guidance for the hotel: normal daytime highs, not a forecast. Summer is hot and wet; check tropical-weather outlooks and attraction calendars.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Winter Haven",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 22.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 29.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

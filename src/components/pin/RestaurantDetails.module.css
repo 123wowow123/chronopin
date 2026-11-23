@@ -18,4 +18,4 @@
 .note { margin-top:10px; color:var(--details-muted); font-size:12px; line-height:1.7; }
 .footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:16px 28px; border-top:1px solid var(--details-rule); font-size:11px; color:var(--details-muted); }
 .sources { display:flex; flex-wrap:wrap; gap:12px; }
-@media(max-width:700px) { .header { padding:20px; } .pane .title { font-size:28px; } .details { padding:0 20px; } .row { grid-template-columns:1fr; gap:8px; padding:18px 0; } .footer { padding:16px 20px; } }
+@media(max-width:700px) { .header { padding:16px 12px; } .pane .title { font-size:28px; } .details { padding:0 12px; } .row { grid-template-columns:1fr; gap:8px; padding:18px 0; } .footer { padding:14px 12px; } }

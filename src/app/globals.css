@@ -789,3 +789,13 @@ body:has(main[data-fullscreen]) [data-site-footer] {
     display: none;
   }
 }
+
+/* Phones: the pin page's cards keep 12px inside their border instead of
+   16-20px, so content runs nearly edge to edge (the page itself has 6px).
+   Unlayered, so it wins over the cards' own padding utilities; only cards
+   that had padding are touched. */
+@media (width < 40rem) {
+  [data-pin-page] .surface:is(.p-4, .p-5, .p-6, .px-4, .px-5, .px-6) {
+    padding-inline: 0.75rem;
+  }
+}

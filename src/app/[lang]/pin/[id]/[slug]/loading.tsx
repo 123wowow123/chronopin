@@ -5,7 +5,7 @@
 export default function PinLoading() {
   const block = 'animate-pulse rounded-xl bg-panel border border-line motion-reduce:animate-none';
   return (
-    <main className="mx-auto max-w-5xl px-1.5 pt-6 pb-20 sm:px-6" role="status" aria-busy="true">
+    <main data-pin-page className="mx-auto max-w-5xl px-1.5 pt-6 pb-20 sm:px-6" role="status" aria-busy="true">
       <span className="sr-only">Loading pin…</span>
       {/* Back to timeline / breadcrumb row */}
       <div className="mb-4 flex items-center gap-2">

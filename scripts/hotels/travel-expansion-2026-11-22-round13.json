@@ -1,0 +1,675 @@
+[
+  {
+    "key": "copenhagen",
+    "pin": {
+      "title": "MEININGER Hotel Copenhagen Joins Group",
+      "productName": "MEININGER Hotel Copenhagen",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+      "description": "A budget hotel and hostel hybrid near Copenhagen Central Station, with private family rooms, a shared guest kitchen and lively common spaces.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Colbjørnsensgade 5–11, 1652 Copenhagen, Denmark",
+      "latitude": 55.672239044529,
+      "longitude": 12.562296834105,
+      "utcStartDateTime": "2017-01-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator explicitly states that Urban House Copenhagen officially joined its portfolio on 01/01/2017. This pin dates the portfolio entry, not the original 2015 hotel opening. The same property adopted its current MEININGER Hotel Copenhagen name in December 2025.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+          "title": "MEININGER Hotel Copenhagen — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/urban-house-copenhagen-by-meininger/",
+          "title": "New addition: Urban House Copenhagen",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-hotel-copenhagen-new-name/",
+          "title": "MEININGER Hotel Copenhagen: New hotel name",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g189541-d7375442-Reviews-MEININGER_Hotel_Copenhagen-Copenhagen_Zealand.html",
+          "title": "MEININGER Hotel Copenhagen",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/json/190_en.json",
+          "title": "WMO / Danish Meteorological Institute — Copenhagen 1961–1990 climate normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/copenhagen",
+          "title": "MICHELIN Guide — Copenhagen hotels",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbestravelguide.com/destinations/copenhagen-denmark",
+          "title": "Copenhagen Luxury Hotels — Forbes Travel Guide",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid near Copenhagen Central Station, with private family rooms, a shared guest kitchen and lively common spaces.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/\"></cite></p><h3>Family and budget stay</h3><p>Choose a whole private family room and confirm beds, occupancy and any cot needs. An individual bed in a shared dormitory is a different booking product. The communal guest kitchen can help families prepare food; access is subject to house rules and available equipment.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/\"></cite></p><p>The Colbjørnsensgade property is near Copenhagen Central Station and Tivoli. Compare the full private-room charge, breakfast, taxes and other extras for your dates. The bar and social spaces suit travellers comfortable with a lively hotel atmosphere.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/\"></cite></p><h3>Review tradeoffs</h3><p>Guest feedback supports the useful kitchen and central location, while other recent guests report tired rooms and weekend street noise. Read recent reviews and request a suitable room if quiet sleep matters. Tripadvisor component scores are a research snapshot, not live ratings.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g189541-d7375442-Reviews-MEININGER_Hotel_Copenhagen-Copenhagen_Zealand.html\"></cite></p><h3>Portfolio entry and current name</h3><p>Urban House Copenhagen had operated since 2015 when it officially joined the MEININGER portfolio on 1 January 2017. The opening-era operator release listed 218 rooms. This dated pin marks that portfolio entry.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/urban-house-copenhagen-by-meininger/\"></cite></p><p>A December 2025 operator release renamed the same property MEININGER Hotel Copenhagen and reported 235 rooms and 873 beds. That later inventory is distinct from the 2017 count. No property-specific construction or conversion investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/meininger-hotel-copenhagen-new-name/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g189541-d7375442-Reviews-MEININGER_Hotel_Copenhagen-Copenhagen_Zealand.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 4,634 reviews; Rooms 4.0, Service 4.0, Location 4.6, Cleanliness 4.3, Value 4.1, rounded to nearest half step. Sarah M firsthand family review displayed August 2026 without exact publication day, date null. Recent wear/noise tradeoffs retained. MICHELIN complete Copenhagen list 1–20 of 20 has no MEININGER or Urban House; Forbes Copenhagen directory likewise has no match. AAA geographic awards program does not cover Denmark. Acclaim 0 means no distinction verified in those checked directories.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g189541-d7375442-Reviews-MEININGER_Hotel_Copenhagen-Copenhagen_Zealand.html",
+          "title": "Great base for exploring — MEININGER Hotel Copenhagen",
+          "publishedDate": null,
+          "quote": "Having access to the kitchen is perfect, so we could keep stuff in the fridge."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Operating milestone",
+          "value": "Joined MEININGER on 1 January 2017; originally operating as Urban House since 2015",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/urban-house-copenhagen-by-meininger/",
+            "title": "New addition: Urban House Copenhagen",
+            "publishedDate": null,
+            "quote": "On 01/01/2017"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Operator inventory, December 2025",
+          "value": "235 rooms / 873 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-hotel-copenhagen-new-name/",
+            "title": "MEININGER Hotel Copenhagen: New hotel name",
+            "publishedDate": null,
+            "quote": "235 rooms and 873 beds"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Joined MEININGER portfolio",
+          "date": "2017-01-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/urban-house-copenhagen-by-meininger/",
+            "title": "New addition: Urban House Copenhagen",
+            "publishedDate": null,
+            "quote": "On 01/01/2017"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Copenhagen, Denmark",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and confirm beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food in the communal kitchen subject to house rules and equipment availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Tivoli and Copenhagen walks",
+        "category": "Culture",
+        "description": "Plan admission and opening dates separately; the hotel is near Central Station and Tivoli.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring to early autumn for outdoor sightseeing",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "2°C–20°C normal daytime highs",
+      "weatherSummary": "WMO World Weather Information Service / Danish Meteorological Institute Copenhagen station, 1961–1990 historical normals. This older baseline is regional guidance, not current climate normals or a forecast. Temperatures are average daytime highs; low monthly rainfall totals do not mean rain-free days.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Copenhagen",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 10,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 20,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 20,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 17,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 12,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "copenhagen-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/6/9/csm_Urban-House-Copenhagen-by-MEININGER-2_2-Room-4-WSC5846-Web_65a7432689.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/copenhagen-room-51d37497b4aa2280.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "51d37497b4aa22809d921d2413ab789529b3e680c6d35111b4c99a3113ac4561"
+      },
+      {
+        "key": "copenhagen-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/f/e/csm_Urban-House-Copenhagen-MEININGER_Selfkitchen_160_c139fad1e1.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/copenhagen-kitchen-657b0d436deb7076.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "657b0d436deb70768ee53d38beae06f40dc1a2aa72d7bc69a7ed913b2c5b3031"
+      },
+      {
+        "key": "copenhagen-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/d/3/csm_Urban-House-Copenhagen-MEININGER_Bar_Lounge_016_web_6986415342.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/copenhagen/hotel-copenhagen/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/copenhagen-lounge-777a4251c551dda2.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "777a4251c551dda20c193b9866157b9b2c5a44af23c6abee1dfd84befd531115"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction or conversion investment verified; project price and currency null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "WMO Copenhagen table is the older 1961–1990 baseline, explicitly labelled; newer station-specific monthly normals not verified.",
+      "Colbjørnsensgade 11 address point and current MEININGER ArcGIS POI agree and are corroborated by the renamed hotel OSM node. The street range also includes number 5, whose different point is not used.",
+      "The 2017 joining count is 218 rooms; 235 rooms / 873 beds is the later December 2025 operator inventory."
+    ]
+  },
+  {
+    "key": "florida",
+    "pin": {
+      "title": "LEGOLAND Hotel Florida Opens",
+      "productName": "LEGOLAND Hotel Florida",
+      "sourceUrl": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+      "description": "A LEGO-themed family hotel beside the LEGOLAND Florida park entrance, with themed bedrooms, a separate children’s sleeping area, treasure hunts and a hotel pool.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "1 LEGOLAND Way, Winter Haven, FL 33884, United States",
+      "latitude": 27.9882458,
+      "longitude": -81.6917568,
+      "utcStartDateTime": "2015-05-15T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "LEGOLAND Florida Resort’s release issued 15 May 2015 says the 152-room LEGOLAND Hotel officially opened today. This is the original hotel, separate from the theme park opening and the later Pirate Island Hotel.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+          "title": "LEGOLAND Hotel — LEGOLAND Florida Resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/legoland-hotel-at-legoland-florida-resort-makes-its-long-awaited-debut-300084294.html",
+          "title": "LEGOLAND® Hotel at LEGOLAND® Florida Resort Makes Its Long Awaited Debut",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g34746-d7176594-Reviews-Legoland_Hotel_Florida-Winter_Haven_Florida.html",
+          "title": "Legoland Hotel Florida",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/florida/places-to-stay/vacation-packages/room-only/",
+          "title": "LEGOLAND Florida Room Only",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/legoland-hotel-florida-resort-AA126109",
+          "title": "LEGOLAND Hotel Florida Resort — AAA Trip Canvas",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00089707&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Winter Haven USC00089707, 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO-themed family hotel beside the LEGOLAND Florida park entrance, with themed bedrooms, a separate children’s sleeping area, treasure hunts and a hotel pool.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/legoland-hotel/\"></cite></p><h3>Family stay</h3><p>Choose the exact room theme and bed layout for your party. Current room themes and refurbishments differ from the original launch inventory. The hotel advertises interactive play, in-room treasure hunts and a pool; verify scheduled activities and pool operating conditions for your stay.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/legoland-hotel/\"></cite></p><p>The resort also sells room-only stays, so park admission is not included in every booking. Check your chosen package for tickets, breakfast, occupancy, fees and cancellation terms. The hotel is distinct from Pirate Island Hotel and Beach Retreat.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/vacation-packages/room-only/\"></cite></p><h3>Review tradeoffs</h3><p>Guests praise the immersive theming and walk to the park. Recent family reviews also describe dated rooms, restaurant service delays and expensive food. The Tripadvisor Value component is 3.6/5 in the opened snapshot; compare the complete holiday cost rather than assuming a budget stay.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g34746-d7176594-Reviews-Legoland_Hotel_Florida-Winter_Haven_Florida.html\"></cite></p><h3>Opening and scale</h3><p>LEGOLAND Florida Resort announced the hotel’s opening on 15 May 2015, with 152 rooms and suites. Its original release describes separate adult and children’s sleeping areas. This is the hotel opening, not the 2011 park opening. No hotel-specific development investment was verified; the historical 2015 room promotion is not used as a current rate.<cite data-ref=\"https://www.prnewswire.com/news-releases/legoland-hotel-at-legoland-florida-resort-makes-its-long-awaited-debut-300084294.html\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 3.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g34746-d7176594-Reviews-Legoland_Hotel_Florida-Winter_Haven_Florida.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 1,642 reviews; Rooms 4.4, Service 4.1, Location 4.4, Cleanliness 4.4, Value 3.6, rounded to nearest half step. Firsthand Jonathan V review displayed 14 November with November 2026 stay, publication 2026-11-14. Dining, room wear and value tradeoffs retained. AAA exact-property listing and inspector notes verified, but numeric Diamond designation not established in opened text; no award count inferred. MICHELIN Winter Haven directory unavailable; Forbes Orlando checked without match but not proof of complete Winter Haven coverage; acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g34746-d7176594-Reviews-Legoland_Hotel_Florida-Winter_Haven_Florida.html",
+          "title": "Truly magical, and now our go-to in Florida — Legoland Hotel Florida",
+          "publishedDate": "2026-11-14",
+          "quote": "The hotel is steps away from Legoland"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opened",
+          "value": "15 May 2015",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/legoland-hotel-at-legoland-florida-resort-makes-its-long-awaited-debut-300084294.html",
+            "title": "LEGOLAND® Hotel at LEGOLAND® Florida Resort Makes Its Long Awaited Debut",
+            "publishedDate": "2015-05-15",
+            "quote": "opened today"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "152 rooms and suites",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/legoland-hotel-at-legoland-florida-resort-makes-its-long-awaited-debut-300084294.html",
+            "title": "LEGOLAND® Hotel at LEGOLAND® Florida Resort Makes Its Long Awaited Debut",
+            "publishedDate": "2015-05-15",
+            "quote": "152 guest rooms and suites"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "LEGOLAND Hotel opened",
+          "date": "2015-05-15",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/legoland-hotel-at-legoland-florida-resort-makes-its-long-awaited-debut-300084294.html",
+            "title": "LEGOLAND® Hotel at LEGOLAND® Florida Resort Makes Its Long Awaited Debut",
+            "publishedDate": "2015-05-15",
+            "quote": "opened today"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Winter Haven, Florida, United States",
+    "topActivities": [
+      {
+        "title": "LEGO-themed family rooms",
+        "category": "Kids",
+        "description": "Select the exact theme, separate children’s sleeping area and occupancy for your party.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "In-room treasure hunts",
+        "category": "Kids",
+        "description": "Check the booked room and package for the current treasure-hunt experience.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel pool and park visits",
+        "category": "Pool",
+        "description": "Check pool conditions and park calendars; tickets depend on your selected package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "bestSeason": "Late autumn and spring for less summer heat",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "22.8°C–33.8°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Winter Haven station USC00089707, 1991–2020 monthly normals in metric units. Local regional guidance for the hotel: normal daytime highs, not a forecast. Summer is hot and wet; check tropical-weather outlooks and attraction calendars.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Winter Haven",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 22.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 29.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "florida-exterior",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/mpcgms3w/legoland-hotel-florida-outside-2023-3x2-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/florida-exterior-2e8f58e09cbe93e4.webp",
+        "width": 1600,
+        "height": 1066,
+        "sha256": "2e8f58e09cbe93e41ac29f88ff81a414df14d219c491c92c3de3619e519db658"
+      },
+      {
+        "key": "florida-room",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/3vpl2xbn/kingdom-room-kids-bunkbed-3x2-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/florida-room-391621e909c1f2d9.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "391621e909c1f2d9769adc5492d10229a804561c0f4e0c3b8d244c8ad2368826"
+      },
+      {
+        "key": "florida-pool",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/rebhemlu/2017-10-04_legolandflorida_hotel_pool_067-1.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/florida-pool-91a2f8eef52daa8e.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "91a2f8eef52daa8e769f2fa587f0311d53a589bb59f5acbd5fe70516f918708b"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction or conversion investment verified; project price and currency null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Numeric AAA Diamond designation not verified despite a property-specific inspector listing; MICHELIN Winter Haven directory unavailable, so acclaim remains null.",
+      "No current all-in room quote verified; the 2015 opening promotion and undated AAA starting rate are not reused.",
+      "Coordinates use the exact hotel OSM point, corroborated by ArcGIS hotel POI, rather than the park centre or Pirate Island Hotel."
+    ]
+  }
+]
