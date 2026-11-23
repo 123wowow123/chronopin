@@ -1,0 +1,704 @@
+[
+  {
+    "key": "frankfurt",
+    "pin": {
+      "title": "MEININGER Hotel Frankfurt Airport Opens",
+      "productName": "MEININGER Hotel Frankfurt/Main Airport",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+      "description": "A budget hotel and hostel hybrid at Frankfurt Airport’s Gateway Gardens, with private family rooms, a children’s corner and shared lounge spaces.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Bessie-Coleman-Straße 11, 60549 Frankfurt am Main, Germany",
+      "latitude": 50.0559385,
+      "longitude": 8.5913113,
+      "utcStartDateTime": "2012-01-05T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Frankfurt’s municipal history institute chronology explicitly places the airport MEININGER opening under 5 January 2012. Götz A. Primke’s invited opening-visit report published that day independently says the hotel opens today. This is the airport property, not the separate former Messe hotel.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+          "title": "MEININGER Frankfurt/Main Airport — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.stadtgeschichte-ffm.de/de/stadtgeschichte/stadtchronik/2012",
+          "title": "Frankfurt municipal chronology — 2012",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/portfolio/",
+          "title": "MEININGER current hotel portfolio",
+          "confidence": 100
+        },
+        {
+          "url": "https://help-center.meininger-hotels.com/en/support/solutions/articles/79000143727-guest-kitchen-frankfurt-main-airport",
+          "title": "Frankfurt Airport hotel — guest-kitchen guidance",
+          "confidence": 100
+        },
+        {
+          "url": "https://help-center.meininger-hotels.com/en/support/solutions/articles/79000143747-getting-to-meininger-hotel-frankfurt-main-airport",
+          "title": "Getting to MEININGER Frankfurt/Main Airport",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.fraport.com/en/newsroom/press-releases/2026/q2/terminal-2-closed-for-refurbishment-starting-today.html",
+          "title": "Fraport — Terminal 2 closure from 9 June 2026",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187337-d2399984-Reviews-Meininger_Hotel_Frankfurt_Main_Airport-Frankfurt_Hesse.html",
+          "title": "MEININGER Frankfurt/Main Airport — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/monthly/kl/historical/monatswerte_KL_01420_19350701_20251231_hist.zip",
+          "title": "DWD Frankfurt/Main 01420 — 1991–2020 monthly derivation",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid at Frankfurt Airport’s Gateway Gardens, with private family rooms, a children’s corner and shared lounge spaces.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/\"></cite></p><h3>Family and budget stopover</h3><p>Choose a whole private family room and confirm its beds, booked occupancy and cot requirements. Shared dormitory beds are a different product. The children’s corner and lounge provide shared space; compare the full room bill, breakfast, taxes, parking, storage and cancellation terms.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/\"></cite></p><p>This property has no guest kitchen, according to the operator’s current help page. Plan meal costs separately rather than assuming self-catering facilities.<cite data-ref=\"https://help-center.meininger-hotels.com/en/support/solutions/articles/79000143727-guest-kitchen-frankfurt-main-airport\"></cite></p><p>Plan the transfer to your actual airline terminal with children and luggage. The hotel is near Gateway Gardens station; check current tickets, routes and operating hours.<cite data-ref=\"https://help-center.meininger-hotels.com/en/support/solutions/articles/79000143747-getting-to-meininger-hotel-frankfurt-main-airport\"></cite></p><p>Terminal 2 closed to passenger operations on 9 June 2026, with its airlines relocated to Terminal 3. Older descriptions of a short walk to Terminal 2 should not be treated as a transfer plan for a current flight.<cite data-ref=\"https://www.fraport.com/en/newsroom/press-releases/2026/q2/terminal-2-closed-for-refurbishment-starting-today.html\"></cite></p><h3>Guest feedback</h3><p>Guests describe simple, clean rooms and useful airport access. Several 2026 accounts report hot or stuffy rooms and cooling that did not provide relief, including a family with a baby. Other tradeoffs include small rooms and noise with open windows. Confirm the actual room’s cooling arrangements and recent feedback, particularly for summer travel. Scores are a dated guest snapshot.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187337-d2399984-Reviews-Meininger_Hotel_Frankfurt_Main_Airport-Frankfurt_Hesse.html\"></cite></p><h3>Opening and inventory</h3><p>The hotel opened on 5 January 2012, as recorded by Frankfurt’s municipal history institute. This dates the airport hotel rather than the separate former Messe property.<cite data-ref=\"https://www.stadtgeschichte-ffm.de/de/stadtgeschichte/stadtchronik/2012\"></cite></p><p>The current operator portfolio lists 168 rooms and 414 beds. Older presentations listing 167 rooms and 412 beds are not substituted for the current portfolio. No property-specific construction investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/portfolio/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 4,
+      "location": 4,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187337-d2399984-Reviews-Meininger_Hotel_Frankfurt_Main_Airport-Frankfurt_Hesse.html",
+      "basis": "Read 2026-11-23: refreshed Tripadvisor UK snapshot 1,165 reviews, overall 3.7/5. Rooms 3.7, Service 3.8, Location 4.2, Cleanliness 4.3, Value 4.0 rounded to half steps. gethicla76 firsthand couple review June 2026, site-translated from French; exact day unknown. Strong 2026 heat/cooling concerns retained. MICHELIN Frankfurt complete 1–15 of 15 no match; Forbes Frankfurt unavailable, AAA excludes Germany. Acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187337-d2399984-Reviews-Meininger_Hotel_Frankfurt_Main_Airport-Frankfurt_Hesse.html",
+          "title": "Simple, clean, and efficient.",
+          "publishedDate": null,
+          "quote": "Simple, clean room"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-23",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opening",
+          "value": "5 January 2012",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.stadtgeschichte-ffm.de/de/stadtgeschichte/stadtchronik/2012",
+            "title": "Stadtchronik 2012",
+            "quote": "5.1.2012",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Current operator portfolio inventory",
+          "value": "168 rooms / 414 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/portfolio/",
+            "title": "Portfolio",
+            "quote": "Frankfurt/Main Airport Germany 2012 168 414",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Airport MEININGER opened",
+          "date": "2012-01-05",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.stadtgeschichte-ffm.de/de/stadtgeschichte/stadtchronik/2012",
+            "title": "Stadtchronik 2012",
+            "quote": "5.1.2012",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Gateway Gardens / Frankfurt Airport, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and confirm beds, occupancy and cot needs.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Children’s corner and lounge",
+        "category": "Kids",
+        "description": "Shared play and lounge space; supervise children and check opening arrangements.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Frankfurt city outings",
+        "category": "Culture",
+        "description": "Plan rail connections and the return to your actual flight terminal; tickets are separate.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+    "priceBasis": "Rates on request. Compare the exact private room, booked guests, taxes, breakfast, parking, storage, terminal transfers and cancellation conditions for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring to early autumn for outdoor outings; verify room cooling",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "4.9°C–26.1°C normal daytime highs",
+      "weatherSummary": "DWD Frankfurt/Main station 01420, 1991–2020 monthly means of MO_TX daytime highs and MO_RR precipitation, exactly 30 valid samples per month. Regional airport guidance, not a hotel forecast. Monthly precipitation includes snow’s water equivalent. Check current weather and actual room cooling; guest reports identify summer heat concerns.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate / Frankfurt Rhine-Main lowlands",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 4.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 6.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 11.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 16.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 26.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 25.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 20.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 8.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 5.5,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "frankfurt-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/d/6/csm_MEININGER-Hotel-Frankfurt-Main-Airport-Quad-Room-1_web_254285155b.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/frankfurt-room-e192c3e0430d4618.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "e192c3e0430d461812ed41e6094019ea9a798d5eba5a479f209cf176ea257ded"
+      },
+      {
+        "key": "frankfurt-kids",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/3/5/csm_MEININGER_Hotels_Frankfurt-Airport_3543x2316-Kids-corner_963f5acb04.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/frankfurt-kids-2ec007c4e4b28da1.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "2ec007c4e4b28da146758b081340050afd6db9525a013da75d97bf10ca3ddcbc"
+      },
+      {
+        "key": "frankfurt-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/2/f/csm_MEININGER-Hotel-Frankfurt-Main-Airport-Lounge-1-people-web_d0ebb5d9ca.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/frankfurt-main/hotel-frankfurt-airport/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/frankfurt-lounge-ff56af1714adff7b.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "ff56af1714adff7b51a0c57bedf134a9210d1204268f1f0258e2f905c438160e"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "No hotel-specific construction investment or applicable contemporaneous regional benchmark verified; project price/currency null.",
+      "Current portfolio 168 rooms / 414 beds differs from old presentation 167 / 412.",
+      "No guest kitchen verified by operator; older launch amenities not reused as current.",
+      "Fraport confirms Terminal 2 passenger closure 9 June 2026; current airline terminal and transfers need checking.",
+      "Cooling complaints conflict on equipment terminology; retain guest reports and ask hotel about actual room arrangements.",
+      "Forbes Frankfurt unavailable; acclaim null.",
+      "Operator point corroborated by exact Bessie-Coleman-Straße 11 PointAddress."
+    ]
+  },
+  {
+    "key": "minnesota",
+    "pin": {
+      "title": "Great Wolf Lodge Minnesota Grand Opening",
+      "productName": "Great Wolf Lodge Minnesota",
+      "sourceUrl": "https://www.greatwolf.com/minnesota",
+      "description": "A family resort in Bloomington near the Mall of America, with suites, indoor water-park admission included with overnight stays and additional paid attractions.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resorts",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "1700 American Boulevard East, Bloomington, MN 55425, USA",
+      "latitude": 44.8607855,
+      "longitude": -93.2506764,
+      "utcStartDateTime": "2017-12-12T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "This dates the formal Great Wolf grand-opening celebration on 12 December 2017. Twin Cities Frugal Mom’s firsthand media-tour account explicitly says the author attended on December 12th. This is a rebranding and renovation of Water Park of America, whose earlier opening and any earlier guest previews are separate.",
+      "price": 30000000,
+      "priceCurrency": "USD",
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/minnesota",
+          "title": "Great Wolf Lodge Minnesota — official resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.greatwolf.com/minnesota/about-us",
+          "title": "Great Wolf Lodge Minnesota — Our Story",
+          "confidence": 100
+        },
+        {
+          "url": "https://twincitiesfrugalmom.com/2017/12/tour-new-great-wolf-lodge-bloomington/",
+          "title": "Bloomington grand-opening media tour",
+          "confidence": 100
+        },
+        {
+          "url": "https://mspmag.com/travel-and-visitors-guide/great-wolf-lodge-minnesota-nears-opening/",
+          "title": "Great Wolf Lodge Minnesota Nears Opening",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+          "title": "Great Wolf Lodge Minnesota — guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/great-wolf-lodge-minnesota-AA136247",
+          "title": "AAA — Great Wolf Lodge Minnesota",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USW00014922&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Minneapolis/St Paul Airport 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A family resort in Bloomington near the Mall of America, with suites, indoor water-park admission included with overnight stays and additional paid attractions.<cite data-ref=\"https://www.greatwolf.com/minnesota\"></cite></p><h3>Family water-park stay</h3><p>Confirm the exact suite layout, beds and booked guests. Overnight stays include water-park admission; check operating hours, wristbands, height restrictions and supervision. Dining, parking, arcade games and other paid attractions add to the bill. Compare the full package and arrival-day or departure-day admission terms.<cite data-ref=\"https://www.greatwolf.com/minnesota\"></cite></p><p>The operator lists 404 suites and a 75,000-square-foot indoor water park, with a microwave in each suite and no fitness centre at this lodge. The resort is in Bloomington near the Mall of America, rather than in central Minneapolis or St. Paul.<cite data-ref=\"https://www.greatwolf.com/minnesota/about-us\"></cite></p><h3>Guest feedback</h3><p>A September family account describes fun activities and helpful staff while criticizing changing space, places to hang wet swimwear and food value. A November guest reports a comfortable room and children enjoying the stay, alongside costly extras, disappointing food and noise from a water-park-facing balcony room. These are individual guest reports. Check recent feedback and the exact room location; scores are a dated snapshot.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html\"></cite></p><h3>Grand opening and renovation</h3><p>The Great Wolf grand-opening celebration took place on 12 December 2017. A firsthand attendee documents the media celebration and the renovation of the former Water Park of America. This is the Great Wolf conversion event, rather than the original resort’s first opening.<cite data-ref=\"https://twincitiesfrugalmom.com/2017/12/tour-new-great-wolf-lodge-bloomington/\"></cite></p><p>Contemporary reporting put the conversion renovation at US$30 million, covering water-park, restaurant and room updates. The later opening-tour account repeats that renovation figure. It is separate from the property purchase price, original construction and nightly room rates; it is not an audited final-cost breakdown.<cite data-ref=\"https://mspmag.com/travel-and-visitors-guide/great-wolf-lodge-minnesota-nears-opening/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4,
+      "value": 3,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+      "basis": "Read 2026-11-23: refreshed Tripadvisor UK snapshot 1,687 reviews, overall 3.6/5. Rooms 3.9, Service 3.8, Location 4.4, Cleanliness 4.1, Value 3.2 rounded to half steps. Teresa E firsthand family review September 2026, exact day unknown. Changing space, wet-clothing storage, dining costs and November balcony-noise complaints retained. AAA exact 404-unit resort verified. MICHELIN Bloomington route is Indiana, rejected; Minnesota route and Forbes Minneapolis unavailable. Acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+          "title": "Fun for the kids but spendy and some issues",
+          "publishedDate": null,
+          "quote": "staff were friendly and helpful."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-23",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Great Wolf brand grand opening after renovation",
+          "value": "12 December 2017",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://twincitiesfrugalmom.com/2017/12/tour-new-great-wolf-lodge-bloomington/",
+            "title": "A Tour of the NEW Great Wolf Lodge in Bloomington, Minnesota",
+            "quote": "December 12th",
+            "publishedDate": "2017-12-30"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Current operator-listed inventory",
+          "value": "404 suites / 75,000-square-foot indoor water park",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.greatwolf.com/minnesota/about-us",
+            "title": "Great Wolf Lodge Minnesota — Our Story",
+            "quote": "404 suites",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported Great Wolf conversion renovation",
+          "value": "USD 30 million; excludes property acquisition and original construction",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://twincitiesfrugalmom.com/2017/12/tour-new-great-wolf-lodge-bloomington/",
+            "title": "A Tour of the NEW Great Wolf Lodge in Bloomington, Minnesota",
+            "quote": "$30 million renovation",
+            "publishedDate": "2017-12-30"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Formal Great Wolf grand opening after conversion",
+          "date": "2017-12-12",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://twincitiesfrugalmom.com/2017/12/tour-new-great-wolf-lodge-bloomington/",
+            "title": "A Tour of the NEW Great Wolf Lodge in Bloomington, Minnesota",
+            "quote": "December 12th",
+            "publishedDate": "2017-12-30"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Bloomington / Minneapolis–St. Paul region, Minnesota, USA",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Water",
+        "description": "Overnight admission is included; check height rules, hours and supervision.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Daily family activities",
+        "category": "Kids",
+        "description": "Check the resort calendar and included activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "MagiQuest and paid attractions",
+        "category": "Adventure",
+        "description": "Compare passes and charges separately; nearby mall outings require separate planning.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/minnesota",
+    "priceBasis": "Rates on request. Compare the exact suite, booked guests, taxes, parking, dining, paid attractions and package fees for your dates. Renovation cost is separate.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor outings; indoor swimming year-round",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "−4.7°C–28.6°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Minneapolis/St Paul Airport USW00014922, 1991–2020 metric monthly normals. Nearby regional guidance, not an onsite resort forecast. Precipitation includes snow’s liquid equivalent; low winter totals do not mean snow-free conditions. Expect freezing weather and possible snow/ice in winter; check current forecasts and travel conditions. Indoor swimming follows its operating calendar.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid continental / Twin Cities",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": -4.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": -1.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "fair",
+          "tempC": 5.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 13.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 26.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 28.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 27.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 22.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 5.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": -1.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "minnesota-1",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/7e/09/61/bloomington-mn.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/minnesota-1-1d80d85b65dd62b0.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "1d80d85b65dd62b041efb97401a23b80b906bac7b8b571c1e88b93f80cb3c9e2"
+      },
+      {
+        "key": "minnesota-4",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/7e/0d/f2/bloomington-mn.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/minnesota-4-3968f42d9f60c4b0.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "3968f42d9f60c4b01d742b0a4b3b77a09631149d40499039bf7a5f39c32fd531"
+      },
+      {
+        "key": "minnesota-6",
+        "imageSourceUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/7e/12/4b/bloomington-mn.jpg?h=800&s=1&w=1200",
+        "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g42881-d13071979-Reviews-Great_Wolf_Lodge_Minneapolis_Bloomington_MN-Bloomington_Minnesota.html",
+        "credit": "Great Wolf Lodge / Tripadvisor management gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-23/minnesota-6-fa2ac84c252c28e4.webp",
+        "width": 1183,
+        "height": 787,
+        "sha256": "fa2ac84c252c28e4869a63861b13ae480df77a1772bb16ebc2dc41ce612a7ebf"
+      }
+    ],
+    "researchGaps": [
+      "No date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "USD30m is the reported 2017 conversion renovation, distinct from acquisition, original build and later spending; no audited final breakdown.",
+      "Formal December 12 celebration distinguished from earlier guest previews and original Water Park of America opening.",
+      "Current 404-suite inventory, no fitness centre and in-suite microwave verified by operator.",
+      "MICHELIN Bloomington returned Indiana and was rejected; Minnesota route and Forbes Minneapolis unavailable. AAA exact property verified; acclaim null.",
+      "Named Bloomington resort point corroborated by exact east-American-Boulevard address; west-American-Boulevard candidate rejected.",
+      "Three exact-property management images visually checked and credited.",
+      "Raw official resort pages returned 403; current text read through web tool."
+    ]
+  }
+]

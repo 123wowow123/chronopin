@@ -204,3 +204,19 @@ When a run creates or rewrites a pin about an event that can move a market, scor
 - Local and prod ids differ for pins created since the last pull (local 20950 = IPS Nationwide layoffs, prod 20950 = NVIDIA Hopper). `get_pin` and `update_pin` act on prod, `find_pins`, `pins_this_week` and `revisit_queue` read local: match by `sourceUrl` before any edit, and treat a 409 on `create_pin` as the real prod duplicate check.
 - `/api/admin/industry-forecasts` is PUT-only (GET returns 405); read forecast rows from the local database.
 - `record_event_info` answers "kept the reading set by hand" for hand rows: compare the page, then advance only `checkedAt` with `PUT /api/pins/:id/event-info` (`source: "hand"`) on local and prod.
+
+## Market-moving pins are always scored (owner, 2026-11-23)
+
+Pin 21096 (Nvidia's board reinstates Jensen Huang, NVDA +30% at the open, S&P +4%) had no market-impact score until the
+owner pointed at the card. Every news run, in the scores lane:
+
+- Run `market_impact_candidates` and score every pin about a listed company or a market-wide event: CEO/board changes,
+  earnings, guidance, mergers, regulatory or court rulings, central-bank and macro releases, tariffs, sanctions, big
+  layoffs or contracts, commodity shocks, and **Polymarket/Kalshi pins whose resolution moves a ticker** (give those the
+  ticker). Weight from the opened page's own market reaction (a mega-cap moving 5%+ or an index moving 2%+ is 8-10).
+- Also scan the run's own new/updated pins (`pins_changed_since_last_run`) for these, because the candidate list is
+  ordered by market cap and can bury them. A pin whose event happened today and moved a stock is scored the same run.
+- Skip only pins with no market angle (restaurants, trailers, episodes); never skip a listed-company event as "immaterial"
+  without a stated reason in the run note.
+- After `save_market_impact`, read the feed back (`GET /api/pins?search=<title>` shows `marketImpact`) and, if the card
+  is stale, re-send `PUT /api/pins/:id/market-impact` with the same body (admin token), which invalidates the pin's cache.

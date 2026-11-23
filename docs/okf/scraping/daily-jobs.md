@@ -1269,6 +1269,8 @@ and `save_market_impact` with a 1-10 weight, a one-sentence sourced reason and t
 show the icon. A pin with no market angle (restaurant, trailer) goes in `skip`, never scored 1 to clear it. Never invent a
 mechanism; queue a specific evidence gap only. The save also pushes to production by sourceUrl.
 
+Owner, 2026-11-23: listed-company and market-wide events are always scored (pin 21096, Nvidia reinstating Huang, was missed). Score CEO/board changes, earnings, deals, rulings, macro releases and ticker-moving prediction-market pins each run, scan the run's own new pins too, and re-PUT `/api/pins/:id/market-impact` if the card stays stale after the save. See `daily-news-job` "Market-moving pins are always scored".
+
 ### industryForecasts
 
 **Reads** `industry_forecast_status` (every forecast panel: tags, FRED handles, newest survey day, projection points, earlier editions, sources, last check). See [industry-forecasts.md](../../industry-forecasts.md).

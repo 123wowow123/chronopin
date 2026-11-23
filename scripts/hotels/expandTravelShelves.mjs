@@ -11,6 +11,7 @@ const catalogFlag = process.argv.indexOf('--catalog');
 const file = catalogFlag < 0 ? 'scripts/hotels/travel-expansion-2026-11-22.json' : process.argv[catalogFlag + 1];
 if (!file?.match(/^scripts\/hotels\/[\w-]+\.json$/)) throw Error('Expected a research catalog in scripts/hotels.');
 const catalog = JSON.parse(fs.readFileSync(file, 'utf8'));
+const batchDate = file.match(/\d{4}-\d{2}-\d{2}/)?.[0] ?? '2026-11-22';
 const apply = process.argv.includes('--apply');
 const stateDir = catalogFlag < 0
   ? '.scrape/prod-batches/travel-2026-11-22'
@@ -32,7 +33,7 @@ if (apply) {
         // These exact images were visually reviewed in the research contact sheet.
         const output = await sharp(input).rotate().resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 85 }).toBuffer({ resolveWithObject: true });
         const sha256 = createHash('sha256').update(output.data).digest('hex');
-        const blob = container.getBlockBlobClient(`travel/2026-11-22/${media.key}-${sha256.slice(0, 16)}.webp`);
+        const blob = container.getBlockBlobClient(`travel/${batchDate}/${media.key}-${sha256.slice(0, 16)}.webp`);
         if (!(await blob.exists())) await blob.uploadData(output.data, { conditions: { ifNoneMatch: '*' }, blobHTTPHeaders: { blobContentType: 'image/webp', blobCacheControl: 'public, max-age=31536000, immutable' } });
         Object.assign(media, { blobUrl: blob.url, width: output.info.width, height: output.info.height, sha256 });
       }
@@ -106,7 +107,7 @@ for (const [environment, base, tokenFile] of [
 }
 
 if (apply) {
-  const runtime = catalog.map(({ pin, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, bestTimeToGo }) => ({ sourceUrl: pin.sourceUrl, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, ...(bestTimeToGo ? { bestTimeToGo } : {}), checkedAt: '2026-11-22' }));
+  const runtime = catalog.map(({ pin, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, bestTimeToGo }) => ({ sourceUrl: pin.sourceUrl, shelves, destination, pricePerNight, topActivities, priceSource, priceBasis, ...(bestTimeToGo ? { bestTimeToGo } : {}), checkedAt: batchDate }));
   const runtimeFile = 'src/server/data/travelResorts.json';
   const existing = fs.existsSync(runtimeFile) ? JSON.parse(fs.readFileSync(runtimeFile, 'utf8')) : [];
   const merged = new Map(existing.map(entry => [entry.sourceUrl, entry]));
