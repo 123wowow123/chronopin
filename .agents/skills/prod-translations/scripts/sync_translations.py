@@ -35,6 +35,7 @@ from typing import Dict, List, Optional, Set, Tuple
 sys.dont_write_bytecode = True
 sys.stdout.reconfigure(line_buffering=True)
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 CACHE_DIR = pathlib.Path('.scrape/translations-cache')
 CACHE_DIR.mkdir(exist_ok=True, parents=True)
 
@@ -91,9 +92,25 @@ def ensure_admin_token() -> str:
         token_file.write_text(token.strip(), encoding='utf-8')
         return token
 
+class SqlUnavailable(RuntimeError):
+    """SSH/SQL to the production VM failed; callers fall back to the HTTPS admin API (prod_https.py)."""
+
+_SQL_DOWN = False
+_API = None
+
+def https_api():
+    global _API
+    if _API is None:
+        import prod_https
+        _API = prod_https.Api(ensure_admin_token)
+    return _API
+
 def run_prod_sql(sql: str) -> str:
+    global _SQL_DOWN
+    if _SQL_DOWN:
+        raise SqlUnavailable('SQL over SSH already failed this run')
     last_err = None
-    for attempt in range(3):
+    for attempt in range(2):
         res = subprocess.run(
             ['scripts/prod-sql.sh'],
             input=sql.encode('utf-8'),
@@ -103,6 +120,10 @@ def run_prod_sql(sql: str) -> str:
             return res.stdout.decode('utf-8')
         last_err = res.stderr.decode('utf-8', errors='replace')
         time.sleep(1.0 * (attempt + 1))
+    if 'timed out' in (last_err or '') or 'Connection' in (last_err or '') or 'ssh:' in (last_err or ''):
+        _SQL_DOWN = True
+        print('SQL over SSH unavailable; using the HTTPS admin API fallback (prod_https.py).', file=sys.stderr)
+        raise SqlUnavailable(last_err)
     print(f"SQL Error:\n{last_err}", file=sys.stderr)
     raise subprocess.CalledProcessError(res.returncode, ['scripts/prod-sql.sh'], output=res.stdout, stderr=res.stderr)
 
@@ -293,7 +314,11 @@ WHERE ps."pinId" = pps."pinId"
   AND (ps."summarizedWikiVersion" IS NULL OR ps."summarizedWikiVersion" < GREATEST(s."wikiVersion", 1));
 """
     print(f"Recording translation tracking in SourceWiki for {len(ids)} pin(s)...")
-    run_prod_sql(sql)
+    try:
+        run_prod_sql(sql)
+    except SqlUnavailable:
+        import prod_https
+        prod_https.record_wiki_tracking(https_api(), ids)
 
 def _extract_mkewbc_text(inner: list, locale: str) -> Optional[str]:
     try:
@@ -1131,7 +1156,11 @@ JOIN "Pin" p ON p.id = pp."pinId" AND p."utcDeletedDateTime" IS NULL
 WHERE 1=1 {pin_filter}
 ORDER BY pp."pinId";
 """
-    raw = run_prod_sql(sql)
+    try:
+        raw = run_prod_sql(sql)
+    except SqlUnavailable:
+        import prod_https
+        return prod_https.fetch_due_panel_pins(https_api(), _chart_locale_ok, _table_locale_ok, LOCALES, pin_ids=pin_ids, limit=limit)
     due: List[dict] = []
     for line in raw.splitlines():
         line = line.strip()
@@ -1408,7 +1437,11 @@ JOIN "Pin" p ON p.id = t."pinId" AND p."utcDeletedDateTime" IS NULL
 WHERE 1=1 {pin_filter}
 ORDER BY t."pinId", t.id;
 """
-    raw = run_prod_sql(sql)
+    try:
+        raw = run_prod_sql(sql)
+    except SqlUnavailable:
+        import prod_https
+        return prod_https.fetch_due_pro_tips(https_api(), target_locales, pin_ids=pin_ids, limit=limit)
     due: List[dict] = []
     seen_pins: Set[int] = set()
     for line in raw.splitlines():
@@ -1584,7 +1617,10 @@ def main():
         pin_ids = {int(args.pin)}
 
     if not args.dry_run and not args.no_prep and not args.panels:
-        prepare_mangled_rows_for_repair(pin_ids=pin_ids)
+        try:
+            prepare_mangled_rows_for_repair(pin_ids=pin_ids)
+        except SqlUnavailable:
+            print('WARNING: mangled-row repair prep needs SQL over SSH and was skipped; re-run it when SSH is back.', file=sys.stderr)
 
     token = ensure_admin_token()
     only_panels = args.panels and not args.pro_tips
