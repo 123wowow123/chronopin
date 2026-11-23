@@ -1,0 +1,685 @@
+[
+  {
+    "key": "barcelona",
+    "pin": {
+      "title": "MEININGER Hotel Barcelona Fira Gran Via Opens",
+      "productName": "MEININGER Hotel Barcelona Fira Gran Via",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+      "description": "A budget hybrid hotel near Fira Gran Via in L’Hospitalet de Llobregat, with private family rooms and a shared microwave, fridge and kettle area.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Carrer de la Botànica 41, 08908 L’Hospitalet de Llobregat, Barcelona, Spain",
+      "latitude": 41.351966681588,
+      "longitude": 2.132002954433,
+      "utcStartDateTime": "2026-06-25T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator’s retrospective Spain expansion release explicitly records opening on 25 June 2026, consistent with its launch announcement; supersedes earlier projected opening schedules.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+          "title": "MEININGER Hotel Barcelona Fira Gran Via — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-arrives-in-barcelona/",
+          "title": "MEININGER Hotels opens in Barcelona",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/",
+          "title": "MEININGER's expansion plan for Spain",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187497-d34452901-Reviews-MEININGER_Hotel_Barcelona_Fira_Gran_Via-Barcelona_Catalonia.html",
+          "title": "MEININGER Hotel Barcelona Fira Gran Via",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/ShowUserReviews-g187497-d34452901-r1079499623-MEININGER_Hotel_Barcelona_Fira_Gran_Via-Barcelona_Catalonia.html",
+          "title": "Average - Review of MEININGER Hotel Barcelona Fira Gran Via",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aemet.es/en/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0076",
+          "title": "AEMET — Standard climate values: Barcelona Aeropuerto",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hybrid hotel near Fira Gran Via in L’Hospitalet de Llobregat, with private family rooms and a shared microwave, fridge and kettle area.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/\"></cite></p><h3>Family and budget stay</h3><p>The operator describes this property as exclusively private rooms, including family configurations for up to four guests. Confirm your selected bed layout and cot requirements. Its communal Heat & Eat area lists microwaves, a fridge and a kettle; check the equipment you need before relying on self-catering.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/\"></cite><cite data-ref=\"https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/\"></cite></p><p>The hotel is in the Fira Gran Via exhibition district rather than the historic centre. Allow transit time to central Barcelona and compare the actual room total for your dates, including tax, breakfast, parking and other extras.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/\"></cite></p><h3>Review tradeoffs</h3><p>The opened Tripadvisor snapshot is a small early sample of nine reviews, with a 3.2/5 overall rating. Published service and cleanliness components are 3.2 and 3.4/5. Read recent reviews about those points and basic in-room amenities before booking; these are dated research snapshots, not live scores.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187497-d34452901-Reviews-MEININGER_Hotel_Barcelona_Fira_Gran_Via-Barcelona_Catalonia.html\"></cite></p><h3>Opening and investment</h3><p>The hotel opened on 25 June 2026 with 162 rooms. The operator reports nearly €4 million spent on furniture, fixtures and equipment. That is a limited fit-out component, not a complete property development budget; no whole-project cost is assigned.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 3,
+      "location": 4.5,
+      "cleanliness": 3.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187497-d34452901-Reviews-MEININGER_Hotel_Barcelona_Fira_Gran_Via-Barcelona_Catalonia.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK opened snapshot, nine reviews, Rooms 4.0, Service 3.2, Location 4.4, Cleanliness 3.4, Value 3.8 out of 5; rounded to nearest half step. Overall 3.2/5 and tiny early sample are explicit in the article. Counts are snapshot values, not live totals. Cw189’s firsthand review Average is English, displayed September 2026 without an exact publication day, date null. MICHELIN Barcelona directory first page covers 48 of 62 hotels, no verified property award; incomplete pagination and raw download blocked, acclaim null. Forbes Barcelona directory read without a match; AAA geographic program excludes Spain.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/ShowUserReviews-g187497-d34452901-r1079499623-MEININGER_Hotel_Barcelona_Fira_Gran_Via-Barcelona_Catalonia.html",
+          "title": "Average",
+          "publishedDate": null,
+          "quote": "You get what you pay for. Very basic hotel."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 25 June 2026",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/",
+            "title": "MEININGER's expansion plan for Spain",
+            "publishedDate": null,
+            "quote": "opening on 25 June 2026"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Room count",
+          "value": "162 rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/",
+            "title": "MEININGER's expansion plan for Spain",
+            "publishedDate": null,
+            "quote": "162 rooms"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported FF&E investment — partial project scope",
+          "value": "Nearly €4 million for furniture, fixtures and equipment only; complete development cost unpublished in opened sources",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/",
+            "title": "MEININGER's expansion plan for Spain",
+            "publishedDate": null,
+            "quote": "total investment of nearly €4 million in furniture, fixtures, and equipment (FF&E)"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2026-06-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/meininger-expansion-plan-spain/",
+            "title": "MEININGER's expansion plan for Spain",
+            "publishedDate": null,
+            "quote": "opening on 25 June 2026"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Barcelona area, Spain",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Choose a private room and confirm its precise layout and occupancy, up to four in the listed family configurations.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Heat & Eat area",
+        "category": "Dining",
+        "description": "Shared microwaves, fridge and kettle are listed; confirm the equipment you need.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Barcelona by public transport",
+        "category": "Culture",
+        "description": "Plan transit time from the Fira Gran Via district to central sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+    "priceBasis": "Rates on request. Compare the booked room, occupancy, taxes, breakfast, other fees and any park-access inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city exploring",
+      "peakSeason": "Summer holidays and major Fira events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and exhibition events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "14°C–29°C historical normal daytime highs",
+      "weatherSummary": "AEMET Barcelona Aeropuerto station 0076, 1981–2010 normals, used as regional guidance for L’Hospitalet. Values are normal daytime highs, not mean temperatures. Autumn rain totals are higher than in early summer.",
+      "whyGo": "Milder months suit city walks. Keep indoor plans for rain and check both the forecast and date-specific prices separately.",
+      "climateZone": "Mediterranean / Barcelona area",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 13.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 16.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 18,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 17.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "barcelona-family",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/0/4/csm_MEININGER-Hotel-Barcelona-GranFira-Quad-Room-7-web_a6bc286f24.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/barcelona-family-c8cccb461aae7bfe.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "c8cccb461aae7bfe3b60cb25f927afd2861d40645f2f0a525c560399208bc188"
+      },
+      {
+        "key": "barcelona-exterior",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/a/c/csm_MEININGER-Hotel-Barcelona-GranFira-HotelEntranceOutside-02_265647860a.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/barcelona-exterior-7fd23532aea6dce1.webp",
+        "width": 1200,
+        "height": 892,
+        "sha256": "7fd23532aea6dce1e083b4feecfa7df11031c9ff366f6d3bc05e774b82fa8651"
+      },
+      {
+        "key": "barcelona-heat-eat",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/a/e/csm_MEININGER-Hotel-Barcelona-GranFira-GuestKitchen-04_1_b7cf43978e.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/barcelona-heat-eat-02e3298114e2fef4.webp",
+        "width": 1200,
+        "height": 892,
+        "sha256": "02e3298114e2fef410a4b4b87d2229ef89d63c08efbeea29cff699c3739fa8ed"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No complete hotel-specific development budget or suitable conversion/themed-hotel benchmark verified; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN pagination not fully read; no Key or Forbes award asserted.",
+      "Nearly €4 million is FF&E only; not promoted to a complete development cost.",
+      "Some generic brand copy says guest kitchen; property equipment list specifies microwaves, fridge and kettle, used here. Exclusively private rooms: no shared dorm offer is inferred.",
+      "Opening-era guest sample is very small and mixed; service/cleanliness tradeoffs retained."
+    ]
+  },
+  {
+    "key": "dubai",
+    "pin": {
+      "title": "LEGOLAND Hotel Dubai Opens",
+      "productName": "LEGOLAND Hotel Dubai",
+      "sourceUrl": "https://www.legoland.com/dubai/legoland-hotel/",
+      "description": "A LEGO-themed family hotel at Dubai Parks and Resorts, with dedicated children’s sleeping areas, in-room treasure hunts, a lobby play area and a hotel pool.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "LEGOLAND Hotel, Riverland Street, Dubai Parks and Resorts, off Sheikh Zayed Road, Jebel Ali, Dubai, United Arab Emirates",
+      "latitude": 24.9176845,
+      "longitude": 55.0096305,
+      "utcStartDateTime": "2022-01-21T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The Merlin opening announcement carried by Hospitality Net is dated 21 January 2022 and explicitly states guests are welcomed on that date. The National’s March 2022 firsthand stay corroborates the January opening; the park’s 2016 opening is a separate event.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com/dubai/legoland-hotel/",
+          "title": "LEGOLAND Hotel — Overview & Booking",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.hospitalitynet.org/announcement/41007558/bricktacular-adventures-await-families-at-legoland-dubai-resort-with-the-launch-of-the-legoland-hotel-at-dubai-parks-and-resorts",
+          "title": "Bricktacular Adventures Await Families at LEGOLAND Dubai Resort with the Launch of the LEGOLAND Hotel at Dubai Parks and Resorts!",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.thenationalnews.com/travel/2022/03/23/checking-in-at-legoland-hotel-dubai-where-every-child-is-a-vip-hotel-insider/",
+          "title": "Legoland Hotel Dubai review: where every child is a VIP - Hotel Insider",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.com/Hotel_Review-g295424-d21121518-Reviews-LEGOLAND_Hotel-Dubai_Emirate_of_Dubai.html",
+          "title": "LEGOLAND Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://worldweather.wmo.int/en/city.html?cityId=1190",
+          "title": "WMO — Dubai climatology",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/dubai/security-privacy/operational-updates/",
+          "title": "LEGOLAND Operational Updates",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO-themed family hotel at Dubai Parks and Resorts, with dedicated children’s sleeping areas, in-room treasure hunts, a lobby play area and a hotel pool.<cite data-ref=\"https://www.legoland.com/dubai/legoland-hotel/\"></cite></p><h3>Family stay</h3><p>The current hotel page lists themed, fully themed and accessible rooms for up to five guests, with a dedicated children’s sleeping area in the same room. Two-bedroom family suites with a living room are listed for up to eight. Check the exact room category, bed configuration and occupancy for your household.<cite data-ref=\"https://www.legoland.com/dubai/legoland-hotel/\"></cite></p><p>The hotel is at Dubai Parks and Resorts in the Jebel Ali area, suited to a park-focused visit. Plan transport separately for central Dubai sights. Compare package totals and check exactly which park tickets, breakfast, fees and extras are included.<cite data-ref=\"https://www.legoland.com/dubai/legoland-hotel/\"></cite></p><p>The National’s March 2022 hosted family stay describes an imaginative themed room and treasure hunt. It is a historical firsthand review: its old rates, pandemic-era practices and inclusions are not current booking promises.<cite data-ref=\"https://www.thenationalnews.com/travel/2022/03/23/checking-in-at-legoland-hotel-dubai-where-every-child-is-a-vip-hotel-insider/\"></cite></p><p>Check current park operating hours, ride availability and height restrictions for the dates you choose. The operator maintains a separate operational-updates page.<cite data-ref=\"https://www.legoland.com/dubai/security-privacy/operational-updates/\"></cite></p><h3>Opening</h3><p>The 250-room hotel welcomed overnight guests on 21 January 2022. This hotel milestone is separate from the theme park opening.<cite data-ref=\"https://www.hospitalitynet.org/announcement/41007558/bricktacular-adventures-await-families-at-legoland-dubai-resort-with-the-launch-of-the-legoland-hotel-at-dubai-parks-and-resorts\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g295424-d21121518-Reviews-LEGOLAND_Hotel-Dubai_Emirate_of_Dubai.html",
+      "basis": "Read 2026-11-22: opened Tripadvisor US snapshot, 995 reviews, Rooms 4.6, Service 4.6, Location 4.5, Cleanliness 4.6, Value 4.5 out of 5; rounded to nearest half step. Count is a snapshot, not a live total. Firsthand review Joe Jenkins, The National, 2022-03-23, conducted at hotel invitation; hosted stay and historical context disclosed. MICHELIN Dubai first-page list covers 48 of 54 hotels and does not establish a property award; remaining pagination not read and raw download blocked, acclaim null. Forbes Dubai directory read without LEGOLAND match; AAA geographic program excludes UAE. Star classification and Tripadvisor awards are not relabelled as Keys/Forbes acclaim.",
+      "reviews": [
+        {
+          "url": "https://www.thenationalnews.com/travel/2022/03/23/checking-in-at-legoland-hotel-dubai-where-every-child-is-a-vip-hotel-insider/",
+          "title": "Legoland Hotel Dubai review: where every child is a VIP - Hotel Insider",
+          "publishedDate": "2022-03-23",
+          "quote": "the level of detail to which each room has been themed and decorated is not far from bewilderingly imaginative."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 21 January 2022",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hospitalitynet.org/announcement/41007558/bricktacular-adventures-await-families-at-legoland-dubai-resort-with-the-launch-of-the-legoland-hotel-at-dubai-parks-and-resorts",
+            "title": "Bricktacular Adventures Await Families at LEGOLAND Dubai Resort with the Launch of the LEGOLAND Hotel at Dubai Parks and Resorts!",
+            "publishedDate": "2022-01-21",
+            "quote": "21 January 2022"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening capacity",
+          "value": "250 themed rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hospitalitynet.org/announcement/41007558/bricktacular-adventures-await-families-at-legoland-dubai-resort-with-the-launch-of-the-legoland-hotel-at-dubai-parks-and-resorts",
+            "title": "Bricktacular Adventures Await Families at LEGOLAND Dubai Resort with the Launch of the LEGOLAND Hotel at Dubai Parks and Resorts!",
+            "publishedDate": "2022-01-21",
+            "quote": "250 themed rooms"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2022-01-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.hospitalitynet.org/announcement/41007558/bricktacular-adventures-await-families-at-legoland-dubai-resort-with-the-launch-of-the-legoland-hotel-at-dubai-parks-and-resorts",
+            "title": "Bricktacular Adventures Await Families at LEGOLAND Dubai Resort with the Launch of the LEGOLAND Hotel at Dubai Parks and Resorts!",
+            "publishedDate": "2022-01-21",
+            "quote": "21 January 2022"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Dubai Parks and Resorts, UAE",
+    "topActivities": [
+      {
+        "title": "In-room treasure hunts",
+        "category": "Kids",
+        "description": "Explore the themed room’s treasure hunt and confirm the current experience for your booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Lobby play area",
+        "category": "Kids",
+        "description": "Enjoy LEGO-themed play space under the hotel’s current house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel pool",
+        "category": "Swimming",
+        "description": "Use the family pool subject to opening times, supervision and access rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/dubai/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked room, occupancy, taxes, breakfast, other fees and any park-access inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "bestSeason": "Cooler November through March",
+      "tempRange": "24°C–31°C historical normal daytime highs in recommended months",
+      "weatherSummary": "UAE National Center of Meteorology climatology published by WMO for Dubai, 1974–1991, used as older regional context for the Jebel Ali park district. Summer daytime highs are much hotter than winter; this is not a property forecast.",
+      "whyGo": "Cooler months better suit outdoor theme-park time. Plan shade and indoor breaks for hot dates, and check the actual forecast, operating hours and package prices separately.",
+      "climateZone": "Hot desert / Dubai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 27.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 36.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 38.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 40.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 40.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 38.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 35.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "dubai-exterior",
+        "imageSourceUrl": "https://www.legoland.com/dubai/media/d0bj3jx0/legoland-hotel.jpg",
+        "sourceUrl": "https://www.legoland.com/dubai/legoland-hotel/",
+        "credit": "LEGOLAND Dubai Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dubai-exterior-bb58ae655c4857e7.webp",
+        "width": 1400,
+        "height": 837,
+        "sha256": "bb58ae655c4857e726906cbd50c84bc6186c55ee5558f9c118921c478fed514f"
+      },
+      {
+        "key": "dubai-room",
+        "imageSourceUrl": "https://www.legoland.com/dubai/media/oekk15fu/legoland-hotel-room.jpg",
+        "sourceUrl": "https://www.legoland.com/dubai/legoland-hotel/",
+        "credit": "LEGOLAND Dubai Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dubai-room-3c968e375f201fd8.webp",
+        "width": 1400,
+        "height": 933,
+        "sha256": "3c968e375f201fd892d2fa7093ea6512d40e3081d6a76aea219d96c2057745f8"
+      },
+      {
+        "key": "dubai-play",
+        "imageSourceUrl": "https://www.legoland.com/dubai/media/5etbtl1m/legoland-hotel-lobby-play-area.jpg",
+        "sourceUrl": "https://www.legoland.com/dubai/legoland-hotel/",
+        "credit": "LEGOLAND Dubai Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/dubai-play-374ea610360c2d1e.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "374ea610360c2d1ecb676d35e866437dbe18aa7a0a4e59def7f66be7cbc015c7"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No complete hotel-specific development budget or suitable conversion/themed-hotel benchmark verified; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN pagination incomplete; no Key or Forbes award asserted.",
+      "Original 2019 DXB financial-statements PDF download timed out and web copy exceeded its size limit; no unverified financing amount, reserve or wider-resort cost is assigned to this hotel.",
+      "ArcGIS returned only street/locality fallbacks, rejected. Nominatim exact hotel footprint way 1022722697 supplies coordinates and Riverland Street; Sheikh Zayed Road resort approach is corroborated by Tripadvisor.",
+      "Older WMO regional climate period is explicit, not current station normals.",
+      "Park benefits and historic review rates are not assumed for every current booking."
+    ]
+  }
+]

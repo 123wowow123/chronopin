@@ -1,0 +1,673 @@
+[
+  {
+    "key": "krakow",
+    "pin": {
+      "title": "MEININGER Kraków Centrum Family Stay Reviewed",
+      "productName": "MEININGER Kraków Centrum",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+      "description": "A budget hybrid hotel east of Kraków’s Old Town, offering private family rooms, a shared guest kitchen and a game zone.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Grzegórzecka 10, 31-530 Kraków, Poland",
+      "latitude": 50.058929827092,
+      "longitude": 19.949702452845,
+      "utcStartDateTime": "2024-02-26T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "This pin marks publication of the firsthand family-stay review, not the hotel opening. Publisher JSON-LD datePublished and matching itemProp datePublished both give 2024-02-26; dateModified is 2026-01-27 and is not substituted. Operator opening source confirms October 2023 without a verified day, retained as month-only in the article and development profile.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+          "title": "MEININGER Kraków Centrum — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-krakow/",
+          "title": "New MEININGER Hotel in Krakow",
+          "confidence": 100
+        },
+        {
+          "url": "https://upgradedpoints.com/travel/hotels/meininger-krakow-centrum-review/",
+          "title": "Why a $55-a-Night Hostel Is My Favorite Hotel Chain for Families in Europe [MEININGER Kraków Centrum Review]",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g274772-d26710798-Reviews-Meininger_Krakow_Centrum-Krakow_Lesser_Poland_Province_Southern_Poland.html",
+          "title": "Meininger Kraków Centrum",
+          "confidence": 100
+        },
+        {
+          "url": "https://klimat.imgw.pl/pl/climate-normals/TMAX_AVE",
+          "title": "IMGW-PIB — 1991–2020 mean maximum temperatures",
+          "confidence": 100
+        },
+        {
+          "url": "https://klimat.imgw.pl/pl/climate-normals/OPAD_SUMA",
+          "title": "IMGW-PIB — 1991–2020 monthly precipitation",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hybrid hotel east of Kraków’s Old Town, offering private family rooms, a shared guest kitchen and a game zone.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/\"></cite></p><h3>Family and budget stay</h3><p>Choose a private family room with the exact bed layout and occupancy your household needs. The hotel lists a shared guest kitchen and game zone. Confirm cot availability, kitchen equipment and access arrangements for your booking.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/\"></cite></p><p>The Grzegórzki location is east of the Old Town. Plan your routes and compare the total private-room cost with taxes, breakfast, parking and other extras. A bed in a shared dorm is a different booking product.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/\"></cite></p><h3>Firsthand family review</h3><p>Keri Stooksbury’s Upgraded Points family-stay review was first published on 26 February 2024 and later updated. It describes the family room, shared facilities and the game zone enjoyed by her children. Its historical room price and savings comparison are not current offers.<cite data-ref=\"https://upgradedpoints.com/travel/hotels/meininger-krakow-centrum-review/\"></cite></p><p>The opened Tripadvisor snapshot contains 60 reviews and gives Service 3.4/5. Read recent comments on service and noise before deciding whether the social hotel-and-hostel atmosphere suits your household.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g274772-d26710798-Reviews-Meininger_Krakow_Centrum-Krakow_Lesser_Poland_Province_Southern_Poland.html\"></cite></p><h3>Opening</h3><p>The operator’s October 2023 launch account records 135 rooms and 507 beds. A precise opening day has not been verified. The date of this pin is the review publication milestone, rather than an invented opening day.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-krakow/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 3.5,
+      "location": 4.5,
+      "cleanliness": 4,
+      "value": 4,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g274772-d26710798-Reviews-Meininger_Krakow_Centrum-Krakow_Lesser_Poland_Province_Southern_Poland.html",
+      "basis": "Read 2026-11-22: opened Tripadvisor UK snapshot, 60 reviews, Rooms 4.0, Service 3.4, Location 4.3, Cleanliness 4.1, Value 4.0 out of 5; nearest-half rounding. Counts are snapshots, not live totals. Firsthand family review by Keri Stooksbury, Upgraded Points, first published 2024-02-26 per two matching publisher metadata fields, updated 2026-01-27. Historic prices omitted. Complete MICHELIN Krakow directory (18 hotels) read without MEININGER match; Forbes Krakow directory lists Bachleda, no MEININGER match. Acclaim 0 for these checked guide selections, not a claim about every design award. AAA country program excludes Poland.",
+      "reviews": [
+        {
+          "url": "https://upgradedpoints.com/travel/hotels/meininger-krakow-centrum-review/",
+          "title": "Why a $55-a-Night Hostel Is My Favorite Hotel Chain for Families in Europe [MEININGER Kraków Centrum Review]",
+          "publishedDate": "2024-02-26",
+          "quote": "The game zone was the most fun room in the hotel."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Opening month — exact day unverified",
+          "value": "Opened October 2023",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-krakow/",
+            "title": "New MEININGER Hotel in Krakow",
+            "publishedDate": null,
+            "quote": "Berlin in October 2023"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening capacity",
+          "value": "135 rooms / 507 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-meininger-hotel-in-krakow/",
+            "title": "New MEININGER Hotel in Krakow",
+            "publishedDate": null,
+            "quote": "135 rooms with 507 beds"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Firsthand family-stay review published — not hotel opening",
+          "date": "2024-02-26",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://upgradedpoints.com/travel/hotels/meininger-krakow-centrum-review/",
+            "title": "Why a $55-a-Night Hostel Is My Favorite Hotel Chain for Families in Europe [MEININGER Kraków Centrum Review]",
+            "publishedDate": "2024-02-26",
+            "quote": "The game zone was the most fun room in the hotel."
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Kraków, Poland",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room occupancy and bed layout for your household.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Use the communal guest kitchen, subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game zone",
+        "category": "Kids",
+        "description": "Enjoy the shared games area under the hotel’s current access rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+    "priceBasis": "Rates on request. Compare the selected private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring and early autumn for city exploring",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "1.6°C–25.3°C normal daytime highs",
+      "weatherSummary": "IMGW-PIB Kraków station 12566, 1991–2020 normals. Mean daily maxima are taken from TMAX_AVE and monthly rain from OPAD_SUMA, used as regional guidance. Winters are cold; summer has higher rainfall totals.",
+      "whyGo": "Use milder months for outdoor exploring, keep indoor plans for wet days, and check the actual forecast and room or package total separately.",
+      "climateZone": "Temperate continental / Kraków",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 1.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 25.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 25,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 2.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "krakow-family",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/8/0/csm_MEININGER-Hotel-Krakow-Centrum-Quad-Room-_no2507_-6_0_8b5560e6fc.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/krakow-family-5d33abf771211253.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "5d33abf771211253fc52a80fcb8c816f89220036cc6a11c881a35dc45ae2fe03"
+      },
+      {
+        "key": "krakow-exterior",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/7/a/csm_MEININGER-Hotel-Krakow-Centrum-Exterior-Entrance-3_0_2653453382.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/krakow-exterior-1df1887c9fba5fd2.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "1df1887c9fba5fd268082ccedbec7a55b177edd4332f4a71acfb2225683b0eba"
+      },
+      {
+        "key": "krakow-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/4/7/csm_MEININGER-Hotel-Krakow-Centrum-Guest-Kitchen-2_0_86d1c70332.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/krakow-kitchen-7a1f1ffc9d8b03aa.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "7a1f1ffc9d8b03aa63e225fc331921de096dd8140c8117255227281cbf0323bc"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No complete hotel-specific construction investment or matching conversion/themed-hotel benchmark verified; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Opening is verified only to October 2023. Pin date is the separately verified 2024-02-26 review publication, explicitly labelled.",
+      "Earlier proposed capacity was 503 beds; actual launch source says 507, used here.",
+      "No current low-rate or discount promise is derived from the historical review headline."
+    ]
+  },
+  {
+    "key": "nagoya",
+    "pin": {
+      "title": "LEGOLAND Japan Hotel Opens",
+      "productName": "LEGOLAND Japan Hotel",
+      "sourceUrl": "https://www.legoland.jp/en/hotel/",
+      "description": "A LEGO-themed family hotel opposite LEGOLAND Japan, with themed bedrooms, treasure hunts and hotel play spaces in Nagoya’s Kinjo-futo district.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "2-7-1 Kinjofuto, Minato-ku, Nagoya, Aichi 455-8606, Japan",
+      "latitude": 35.050637523,
+      "longitude": 136.846373097,
+      "utcStartDateTime": "2018-04-28T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator release dated 2018-04-28 states that LEGOLAND Japan Hotel grand-opened that day. This is distinct from the theme park’s 2017 opening and SEA LIFE Nagoya’s 2018-04-15 opening.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.jp/en/hotel/",
+          "title": "LEGOLAND Japan Hotel — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.jp/operation/news/press-release/press-release-40/",
+          "title": "2018年4月28日（土）『LEGOLAND Japan Resort』グランドオープン",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.jp/en/hotel/room/",
+          "title": "LEGOLAND Hotel Room Types",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.jp/en/hotel/about-the-hotel/",
+          "title": "Hotel information — LEGOLAND Japan Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.jp/hotel/about-the-hotel/faq/",
+          "title": "よくあるご質問｜レゴランド・ジャパン・ホテル",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g298106-d13846938-Reviews-Legoland_Japan_Hotel-Nagoya_Aichi_Prefecture_Tokai_Chubu.html",
+          "title": "Legoland Japan Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=51&block_no=47636&year=&month=&day=&view=",
+          "title": "JMA — Nagoya 1991–2020 climate normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO-themed family hotel opposite LEGOLAND Japan, with themed bedrooms, treasure hunts and hotel play spaces in Nagoya’s Kinjo-futo district.<cite data-ref=\"https://www.legoland.jp/en/hotel/\"></cite></p><h3>Family rooms and play</h3><p>The current room list includes 30 m² Standard and Premium rooms for four guests and Premium Plus rooms for five, with an additional child’s bed. Some 45 m² suites list five or six guests depending on their playroom or living-room configuration. Confirm the exact room category, bed layout and occupancy before booking.<cite data-ref=\"https://www.legoland.jp/en/hotel/room/\"></cite></p><p>Hotel information lists children’s play space and a Water Play Area that requires reservations. Check availability, activity access and the current booking rules for your stay.<cite data-ref=\"https://www.legoland.jp/en/hotel/about-the-hotel/\"></cite></p><p>This is a park-focused stay in Kinjo-futo, outside central Nagoya. Compare the selected package carefully: breakfast and park-ticket arrangements depend on the published plan, and historic guest-review inclusions are not a promise for every booking.<cite data-ref=\"https://www.legoland.jp/en/hotel/\"></cite></p><h3>Review context</h3><p>The opened Tripadvisor snapshot has 162 reviews. Guests describe themed rooms and treasure hunts; the location is convenient for LEGOLAND but requires planning for trips elsewhere in Nagoya. Compare recent dining, service and room-layout comments with your family’s needs.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g298106-d13846938-Reviews-Legoland_Japan_Hotel-Nagoya_Aichi_Prefecture_Tokai_Chubu.html\"></cite></p><h3>Opening</h3><p>The operator confirms that LEGOLAND Japan Hotel grand-opened on 28 April 2018. The adjacent park and SEA LIFE aquarium have separate opening milestones.<cite data-ref=\"https://www.legoland.jp/operation/news/press-release/press-release-40/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g298106-d13846938-Reviews-Legoland_Japan_Hotel-Nagoya_Aichi_Prefecture_Tokai_Chubu.html",
+      "basis": "Read 2026-11-22: opened Tripadvisor UK snapshot, 162 reviews, Rooms 4.5, Service 4.1, Location 4.5, Cleanliness 4.4, Value 4.1 out of 5; nearest-half rounding. Count is a snapshot, not a live total. English firsthand guest Mauritian diplomat review displayed December 2025, exact day unpublished, date null; stay month October 2025 not substituted. MICHELIN Nagoya full three-hotel directory read, no LEGOLAND match. Forbes Nagoya destination page unavailable and property search did not establish recognition; acclaim null because coverage incomplete. AAA country program excludes Japan. Star class is not a Key award.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g298106-d13846938-Reviews-Legoland_Japan_Hotel-Nagoya_Aichi_Prefecture_Tokai_Chubu.html",
+          "title": "Legoland Japan Hotel",
+          "publishedDate": null,
+          "quote": "The themed rooms were a hit with our kids and they LOVED the bunk beds."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / resort hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel grand opening",
+          "value": "Opened 28 April 2018",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.legoland.jp/operation/news/press-release/press-release-40/",
+            "title": "2018年4月28日（土）『LEGOLAND Japan Resort』グランドオープン",
+            "publishedDate": "2018-04-28",
+            "quote": "本日4月28日（土）グランドオープンいたしました。"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Listed room inventory",
+          "value": "252 rooms in opened property listing",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.tripadvisor.co.uk/Hotel_Review-g298106-d13846938-Reviews-Legoland_Japan_Hotel-Nagoya_Aichi_Prefecture_Tokai_Chubu.html",
+            "title": "Legoland Japan Hotel",
+            "publishedDate": null,
+            "quote": "252"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel grand opening",
+          "date": "2018-04-28",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.legoland.jp/operation/news/press-release/press-release-40/",
+            "title": "2018年4月28日（土）『LEGOLAND Japan Resort』グランドオープン",
+            "publishedDate": "2018-04-28",
+            "quote": "本日4月28日（土）グランドオープンいたしました。"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Nagoya, Japan",
+    "topActivities": [
+      {
+        "title": "Themed family rooms",
+        "category": "Kids",
+        "description": "Choose the exact theme, occupancy and bed layout for your household.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel play areas",
+        "category": "Kids",
+        "description": "Check current access rules; the Water Play Area requires reservations.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND park visit",
+        "category": "Kids",
+        "description": "Confirm tickets and operating hours for your booked package and dates.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.jp/en/hotel/",
+    "priceBasis": "Rates on request. Compare the selected private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for park visits",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "9.3°C–33.2°C normal daytime highs",
+      "weatherSummary": "Japan Meteorological Agency Nagoya station 47636, 1991–2020 normals, used as regional guidance for Kinjo-futo. Values are normal daytime highs and monthly rainfall. Summer is hot; rain is substantial in the wet season and early autumn.",
+      "whyGo": "Use milder months for outdoor exploring, keep indoor plans for wet days, and check the actual forecast and room or package total separately.",
+      "climateZone": "Humid subtropical / Nagoya",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 20.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 27.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 31.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 33.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 29.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 23.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 17.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 11.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "nagoya-exterior",
+        "imageSourceUrl": "https://www.legoland.jp/media/3thoh1si/1400ホテル外観.jpg",
+        "sourceUrl": "https://www.legoland.jp/en/hotel/",
+        "credit": "LEGOLAND Japan Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/nagoya-exterior-26caef59cb781991.webp",
+        "width": 1400,
+        "height": 450,
+        "sha256": "26caef59cb781991c07ee3b4ace5a32a949abc38a2f351249c0c8025b3602124"
+      },
+      {
+        "key": "nagoya-room",
+        "imageSourceUrl": "https://www.legoland.jp/media/ublbtys2/ninjago-room_01-resized.jpg",
+        "sourceUrl": "https://www.legoland.jp/en/hotel/",
+        "credit": "LEGOLAND Japan Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/nagoya-room-6fde9e37d0d83a34.webp",
+        "width": 900,
+        "height": 634,
+        "sha256": "6fde9e37d0d83a34bd78e12c45a7b66798b4a51f321a708b6a368872663c5b5a"
+      },
+      {
+        "key": "nagoya-dining",
+        "imageSourceUrl": "https://www.legoland.jp/media/qmzlcckj/bfr3.jpg",
+        "sourceUrl": "https://www.legoland.jp/en/hotel/",
+        "credit": "LEGOLAND Japan Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/nagoya-dining-5af1ea7183cc89cd.webp",
+        "width": 1600,
+        "height": 1072,
+        "sha256": "5af1ea7183cc89cd8900bcd84a9b24ba1b2806b8f4f77969c49fc9e0c1d3b194"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "No complete hotel-specific construction investment or matching conversion/themed-hotel benchmark verified; price/currency null.",
+      "Unsupported engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Forbes Nagoya directory unavailable; no Key or Forbes recognition asserted.",
+      "Japanese official FAQ gives postal code 455-8606; older English FAQ/listings show 455-8605. Use the current Japanese hotel FAQ for mailing details. Exact street address is consistent.",
+      "Initial address geocode differed from hotel POI; exact Japanese hotel-name POI matches score 100, used instead of a park or city point.",
+      "No current date-specific low rate supports a budget-shelf addition."
+    ]
+  }
+]

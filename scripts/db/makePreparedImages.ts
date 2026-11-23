@@ -88,7 +88,10 @@ async function pool<T>(items: T[], run: (item: T) => Promise<void>, label: (item
 }
 await pool(work, async (item) => {
   const original = await container.getBlobClient(item.name).downloadToBuffer();
-  made += await uploadPreparedRenditions(container, item.name, original, { widths: item.widths, replace: item.replace });
+  // Awaited first: `made += await` reads `made` before the await and loses
+  // the other workers' counts.
+  const count = await uploadPreparedRenditions(container, item.name, original, { widths: item.widths, replace: item.replace });
+  made += count;
 }, (item) => item.name);
 await pool(removals, async (name) => {
   if ((await container.getBlockBlobClient(name).deleteIfExists()).succeeded) deleted++;

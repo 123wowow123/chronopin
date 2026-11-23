@@ -1,0 +1,669 @@
+[
+  {
+    "key": "vienna",
+    "pin": {
+      "title": "JO&JOE Vienna Opens",
+      "productName": "JO&JOE Vienna",
+      "sourceUrl": "https://www.joandjoe.com/en/destinations/vienna/",
+      "description": "A social hotel-hostel beside Vienna’s Westbahnhof, offering private rooms, shared dorms, a rooftop terrace and a bar-and-events atmosphere.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Europaplatz 1/6, 1150 Vienna, Austria",
+      "latitude": 48.195968865508,
+      "longitude": 16.337923526921,
+      "utcStartDateTime": "2021-08-26T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "Accor’s launch release hosted by its Austrian PR agency explicitly states that JO&JOE Vienna opened on 26 August 2021 on the fifth and sixth floors of the Hus building. The later September press coverage is not substituted for the actual opening.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.joandjoe.com/en/destinations/vienna/",
+          "title": "JO&JOE Vienna — official hotel-hostel",
+          "confidence": 100
+        },
+        {
+          "url": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+          "title": "XXL-Dachterrasse, Streetart und ein privates Kino: Accor Lifestyle-Marke JO&JOE jetzt auch in Wien",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g190454-d23630608-Reviews-JO_JOE_Wien-Vienna.html",
+          "title": "JO&JOE Wien",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.wien.gv.at/statistik/klimamittelwerte-1991-2020",
+          "title": "Langjährige Klimamittelwerte 1991–2020 — Stadt Wien",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A social hotel-hostel beside Vienna’s Westbahnhof, offering private rooms, shared dorms, a rooftop terrace and a bar-and-events atmosphere.<cite data-ref=\"https://www.joandjoe.com/en/destinations/vienna/\"></cite></p><h3>Budget city stay</h3><p>Choose between a private room and an individual bed in a shared dorm; compare the price of the booking product you actually need. The current official page lists private and atypical rooms for up to three guests and shared dormitories for up to twelve. Confirm the exact room, bathroom, linen and towel conditions.<cite data-ref=\"https://www.joandjoe.com/en/destinations/vienna/\"></cite></p><p>The Westbahnhof location offers public-transport connections for exploring Vienna. The bar, events and rooftop are part of the social setting. Check event schedules and room location if quiet sleep is a priority, and read recent reviews about bedding and dorm cleanliness.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g190454-d23630608-Reviews-JO_JOE_Wien-Vienna.html\"></cite></p><p>The opened Tripadvisor snapshot has 58 reviews and a published Sleep Quality component of 2.9/5. A July 2026 guest praised the common areas but criticised dorm housekeeping. Check current shared food-preparation equipment before relying on a full kitchen.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g190454-d23630608-Reviews-JO_JOE_Wien-Vienna.html\"></cite></p><h3>Opening</h3><p>The operator’s launch release confirms opening on 26 August 2021, with 345 beds in the hotel-hostel. The accommodation sits above the IKEA store in the same building; no whole-building investment is assigned as the hotel cost.<cite data-ref=\"https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4,
+      "value": 3.5,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g190454-d23630608-Reviews-JO_JOE_Wien-Vienna.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot, 58 reviews, Rooms 3.7, Service 4.0, Location 4.7, Cleanliness 3.8, Value 3.7 out of five, nearest-half rounding. Published Sleep Quality 2.9 is retained in the article, not relabelled as another axis. Counts are snapshots rather than live totals. Sami M’s English firsthand dorm review is displayed July 2026 without a precise publication day; date null. MICHELIN Vienna full 35-hotel list and Forbes Vienna directory read, no JO&JOE match; acclaim 0 for these checked guide selections. AAA geographic program excludes Austria.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g190454-d23630608-Reviews-JO_JOE_Wien-Vienna.html",
+          "title": "Really good common areas, but dorms are overly disappointing.",
+          "publishedDate": null,
+          "quote": "the lack of cleanliness in the dorms really let it down."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel-hostel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 26 August 2021",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+            "title": "XXL-Dachterrasse, Streetart und ein privates Kino: Accor Lifestyle-Marke JO&JOE jetzt auch in Wien",
+            "publishedDate": null,
+            "quote": "Am 26. August 2021"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening capacity",
+          "value": "345 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+            "title": "XXL-Dachterrasse, Streetart und ein privates Kino: Accor Lifestyle-Marke JO&JOE jetzt auch in Wien",
+            "publishedDate": null,
+            "quote": "345 Betten"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2021-08-26",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+            "title": "XXL-Dachterrasse, Streetart und ein privates Kino: Accor Lifestyle-Marke JO&JOE jetzt auch in Wien",
+            "publishedDate": null,
+            "quote": "Am 26. August 2021"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Vienna, Austria",
+    "topActivities": [
+      {
+        "title": "Vienna by public transport",
+        "category": "Culture",
+        "description": "Use nearby Westbahnhof connections and check actual routes to your sights.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Rooftop terrace",
+        "category": "Scenery",
+        "description": "Check weather, access and event arrangements for the shared roof terrace.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Social bar and events",
+        "category": "Dining",
+        "description": "Check the current event schedule and consider the lively setting when choosing a room.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.joandjoe.com/en/destinations/vienna/",
+    "priceBasis": "Rates on request. Compare the actual room or bed, occupancy, taxes, breakfast, parking and any activity extras for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "3.5°C–26.4°C normal daytime highs",
+      "weatherSummary": "City of Vienna / GeoSphere Austria, Wien Hohe Warte, 1991–2020 climate averages. Normal daytime highs and monthly rain totals are used as regional guidance for the Westbahnhof district; rain occurs throughout the year.",
+      "whyGo": "Use the seasonal normals for outdoor planning, check the actual forecast, and compare room totals separately. Indoor activities can provide alternatives in poor weather.",
+      "climateZone": "Temperate continental / Vienna",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 6.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 26.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "vienna-room",
+        "imageSourceUrl": "https://newsroom.ketchum.at/Content/543073/38a56b86-e751-41d9-8ea1-4cac6b993967/1200/2400/.jpg",
+        "sourceUrl": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+        "credit": "Accor / Philipp Lipiarski, via Ketchum Austria",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/vienna-room-a539e573a2c77151.webp",
+        "width": 1200,
+        "height": 1801,
+        "sha256": "a539e573a2c77151ceea674d8f5b73e82d9bb9aa43edc722e8467ce846ad599f"
+      },
+      {
+        "key": "vienna-rooftop",
+        "imageSourceUrl": "https://newsroom.ketchum.at/Content/542845/933b26ed-566f-47d2-865d-e01923a4ca6b/1200/2400/.jpg",
+        "sourceUrl": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+        "credit": "Accor / Philipp Lipiarski, via Ketchum Austria",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/vienna-rooftop-c8b8e457340bff61.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "c8b8e457340bff616d7f612a08814bd6600381375700ea7736a21de19ac68999"
+      },
+      {
+        "key": "vienna-exterior",
+        "imageSourceUrl": "https://newsroom.ketchum.at/Content/543066/ddc114f6-a55b-4de9-9184-96ee77cba731/1200/2400/.jpg",
+        "sourceUrl": "https://newsroom.ketchum.at/news--xxl-dachterrasse-streetart-und-ein-privates-kino-accor-lifestyle-marke-jojoe-jetzt-auch-in-wien-?id=138856&l=deutsch&menueid=13159",
+        "credit": "Accor / Philipp Lipiarski, via Ketchum Austria",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/vienna-exterior-15b37136594fd090.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "15b37136594fd09063494a609b5dc49e05fae9bf873fcd015d746f99f6778e51"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "No hotel-specific development cost or matching mixed-use allocation benchmark verified; pin price/currency null.",
+      "Official JO&JOE raw download returned 403; exact property page read through web. Its launch gallery downloads normally.",
+      "City of Vienna direct fetch returned 403/500; its complete cached primary table was read through web search, including all twelve months, column labels, station and period.",
+      "Shared kitchen equipment is limited in a recent guest review; no full cooking kitchen is promised."
+    ]
+  },
+  {
+    "key": "colorado",
+    "pin": {
+      "title": "Great Wolf Lodge Colorado Springs Opens",
+      "productName": "Great Wolf Lodge Colorado Springs",
+      "sourceUrl": "https://www.greatwolf.com/colorado-springs",
+      "description": "A family water-park resort on the north side of Colorado Springs, with all-suite accommodation, an indoor water park and additional dry-land activities.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "9494 Federal Drive, Colorado Springs, CO 80921, United States",
+      "latitude": 38.995896679813,
+      "longitude": -104.811197707807,
+      "utcStartDateTime": "2016-12-16T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The Gazette’s 27 January 2017 contemporary launch report explicitly states that Great Wolf actually opened December 16, before the later ceremonial opening. That corroborated 2016 guest date is used; the superseded December 26 advance schedule is not substituted.",
+      "price": 100000000,
+      "priceCurrency": "USD",
+      "references": [
+        {
+          "url": "https://www.greatwolf.com/colorado-springs",
+          "title": "Great Wolf Lodge Colorado Springs — official resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/",
+          "title": "Great Wolf Lodge launches water park and family resort in Colorado Springs",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.visitcos.com/directory/great-wolf-lodge/",
+          "title": "Great Wolf Lodge — Visit Colorado Springs",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.visitcos.com/directory/great-wolf-lodge-full-service-hotels/",
+          "title": "Great Wolf Lodge — meetings property gallery",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g33364-d11236013-Reviews-Great_Wolf_Lodge_Colorado_Springs_CO-Colorado_Springs_El_Paso_County_Colorado.html",
+          "title": "Great Wolf Lodge - Colorado Springs, CO",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.weather.gov/pub/climateCosDailyNormalsRecords",
+          "title": "Colorado Springs — 1991–2020 normals and extremes",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A family water-park resort on the north side of Colorado Springs, with all-suite accommodation, an indoor water park and additional dry-land activities.<cite data-ref=\"https://www.greatwolf.com/colorado-springs\"></cite></p><h3>Family water-park stay</h3><p>The operator describes a 50,000-square-foot indoor water park and standard, themed and larger premium suites. Choose the precise suite and occupancy for your household. Check water-park access, opening hours, height requirements and any activity restrictions for your booking.<cite data-ref=\"https://www.greatwolf.com/colorado-springs\"></cite></p><p>The property is at 9494 Federal Drive in northern Colorado Springs. Allow transport time for outings elsewhere in the region. Compare the complete stay cost, including taxes, parking, meals, paid activities and any optional packages.<cite data-ref=\"https://www.visitcos.com/directory/great-wolf-lodge/\"></cite></p><p>The opened Tripadvisor snapshot gives Value 3.5/5. Read recent comments about rooms, service and extras, and confirm what the selected room booking includes rather than assuming every activity is covered.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g33364-d11236013-Reviews-Great_Wolf_Lodge_Colorado_Springs_CO-Colorado_Springs_El_Paso_County_Colorado.html\"></cite></p><h3>Opening and investment</h3><p>Contemporaneous reporting states that the resort opened to guests on 16 December 2016; the later January 2017 ribbon-cutting was a separate event. The launch report describes 311 suites and about US$100 million invested, including acquisition of the unfinished hotel, completion, amenities and the water park. This reported combined project investment is not a nightly rate or a construction-only subtotal.<cite data-ref=\"https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 3.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g33364-d11236013-Reviews-Great_Wolf_Lodge_Colorado_Springs_CO-Colorado_Springs_El_Paso_County_Colorado.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK opened snapshot, 3,189 reviews, Rooms 4.2, Service 4.3, Location 4.5, Cleanliness 4.5, Value 3.5 out of five, nearest-half rounding. Count is a snapshot rather than a live total. Selvia priska W’s firsthand family review displayed November 2026, precise publication day unavailable, date null. MICHELIN Colorado Springs full five-hotel directory and Forbes destination list read, no Great Wolf match. Visit Colorado Springs lists AAA 3 Diamond and a Forbes 3 Star field, but a current AAA primary property record was not verified and the Forbes field is not corroborated by Forbes Travel Guide. Acclaim null pending primary verification; neither secondary field is promoted to a confirmed guide award.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g33364-d11236013-Reviews-Great_Wolf_Lodge_Colorado_Springs_CO-Colorado_Springs_El_Paso_County_Colorado.html",
+          "title": "Great Wolf Lodge - Colorado Springs, CO",
+          "publishedDate": null,
+          "quote": "The kids had so much fun at the water park and Adventure Park."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / water-park resort",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Guest opening",
+          "value": "Opened 16 December 2016",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/",
+            "title": "Great Wolf Lodge launches water park and family resort in Colorado Springs",
+            "publishedDate": "2017-01-27",
+            "quote": "Great Wolf actually opened Dec. 16"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Launch accommodation",
+          "value": "311 suites",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/",
+            "title": "Great Wolf Lodge launches water park and family resort in Colorado Springs",
+            "publishedDate": "2017-01-27",
+            "quote": "311-room, all-suites"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Reported acquisition and completion investment",
+          "value": "About US$100 million including property acquisition, hotel completion, amenities and the water park; not construction-only",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/",
+            "title": "Great Wolf Lodge launches water park and family resort in Colorado Springs",
+            "publishedDate": "2017-01-27",
+            "quote": "invested about $100 million in the Springs property"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Guest opening",
+          "date": "2016-12-16",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://gazette.com/2017/01/27/great-wolf-lodge-launches-water-park-and-family-resort-in-colorado-springs/",
+            "title": "Great Wolf Lodge launches water park and family resort in Colorado Springs",
+            "publishedDate": "2017-01-27",
+            "quote": "Great Wolf actually opened Dec. 16"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Colorado Springs, Colorado",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Kids",
+        "description": "Check access, operating hours, supervision and height requirements for your stay.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Themed family suites",
+        "category": "Kids",
+        "description": "Choose the actual suite layout and confirm whole-room occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Dry-land attractions",
+        "category": "Kids",
+        "description": "Check individual activities and additional charges before buying optional packages.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/colorado-springs",
+    "priceBasis": "Rates on request. Compare the actual room or bed, occupancy, taxes, breakfast, parking and any activity extras for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for regional outings",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "7°C–30.3°C normal daytime highs",
+      "weatherSummary": "NWS Pueblo Colorado Springs 1991–2020 normals, used as regional outdoor guidance for the northern city district. Published Fahrenheit daytime highs are converted to Celsius; precipitation inches are converted to millimetres for rain bands. Winter is cold and summer has higher precipitation totals. Indoor water-park conditions are separate from outdoor weather.",
+      "whyGo": "Use the seasonal normals for outdoor planning, check the actual forecast, and compare room totals separately. Indoor activities can provide alternatives in poor weather.",
+      "climateZone": "High-elevation semi-arid / Colorado Springs",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 8.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 16.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 27.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 18.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 11.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "colorado-hero",
+        "imageSourceUrl": "https://www.visitcos.com/imager/files_idss_com/C88/4477be1f-8335-4099-bb71-2ae0411fc167/ead4a078-f5aa-4bd0-b551-587f20913a9a/c7db535f-ef1f-48e9-ad2c-972419678c70_91852798b59be8b28fc00edfe4aec23a.jpg",
+        "sourceUrl": "https://www.visitcos.com/directory/great-wolf-lodge-full-service-hotels/",
+        "credit": "Visit Colorado Springs — Great Wolf Lodge property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/colorado-hero-5b5f32583ea7e4e8.webp",
+        "width": 525,
+        "height": 275,
+        "sha256": "5b5f32583ea7e4e821a06bba259ed74c10a2b1788ecf0c7fcaee8800292f5eb6"
+      },
+      {
+        "key": "colorado-4",
+        "imageSourceUrl": "https://www.visitcos.com/imager/files_idss_com/C88/4477be1f-8335-4099-bb71-2ae0411fc167/caa1f84d-8e79-4778-8cb8-9d51df421a1a/5acee502-4f2a-4a8a-a88f-d61c32e980e4_e45adf5f6bc0c5c2a30a39868f44eab6.jpg",
+        "sourceUrl": "https://www.visitcos.com/directory/great-wolf-lodge-full-service-hotels/",
+        "credit": "Visit Colorado Springs — Great Wolf Lodge property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/colorado-4-c2b768d28b065b2d.webp",
+        "width": 600,
+        "height": 400,
+        "sha256": "c2b768d28b065b2d7a770a92039bf16e2fcce3d9b8955f1f128487fca50654c5"
+      },
+      {
+        "key": "colorado-6",
+        "imageSourceUrl": "https://www.visitcos.com/imager/files_idss_com/C88/4477be1f-8335-4099-bb71-2ae0411fc167/caa1f84d-8e79-4778-8cb8-9d51df421a1a/2f4e9130-6415-4d43-9f6a-bd55026d843e_e45adf5f6bc0c5c2a30a39868f44eab6.jpg",
+        "sourceUrl": "https://www.visitcos.com/directory/great-wolf-lodge-full-service-hotels/",
+        "credit": "Visit Colorado Springs — Great Wolf Lodge property gallery",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/colorado-6-ae31c76d093f6cd8.webp",
+        "width": 600,
+        "height": 400,
+        "sha256": "ae31c76d093f6cd8a545946c9edb6faab2b5011ffff6fc61fb153717f1014943"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Current AAA primary property award not verified; secondary tourism rating fields remain unconfirmed, acclaim null.",
+      "Operator raw site fetch returned 403, but exact resort page was read through web. Tourism property galleries provide downloaded photos.",
+      "Tourism gallery images are modest resolution; no upscaling or unrelated sibling-property stock image is substituted.",
+      "Expired operator Black Friday and old opening promotions are omitted.",
+      "NWS normal table is regional guidance; its climate-summary caveat remains applicable. No current forecast or engineering claim is inferred."
+    ]
+  }
+]

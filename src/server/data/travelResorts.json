@@ -2532,5 +2532,800 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Barcelona area, Spain",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Choose a private room and confirm its precise layout and occupancy, up to four in the listed family configurations.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Heat & Eat area",
+        "category": "Dining",
+        "description": "Shared microwaves, fridge and kettle are listed; confirm the equipment you need.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Barcelona by public transport",
+        "category": "Culture",
+        "description": "Plan transit time from the Fira Gran Via district to central sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/barcelona/hotel-barcelona-fira-gran-via/",
+    "priceBasis": "Rates on request. Compare the booked room, occupancy, taxes, breakfast, other fees and any park-access inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city exploring",
+      "peakSeason": "Summer holidays and major Fira events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and exhibition events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "14°C–29°C historical normal daytime highs",
+      "weatherSummary": "AEMET Barcelona Aeropuerto station 0076, 1981–2010 normals, used as regional guidance for L’Hospitalet. Values are normal daytime highs, not mean temperatures. Autumn rain totals are higher than in early summer.",
+      "whyGo": "Milder months suit city walks. Keep indoor plans for rain and check both the forecast and date-specific prices separately.",
+      "climateZone": "Mediterranean / Barcelona area",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 13.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 16.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 18,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 26,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 17.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.com/dubai/legoland-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Dubai Parks and Resorts, UAE",
+    "topActivities": [
+      {
+        "title": "In-room treasure hunts",
+        "category": "Kids",
+        "description": "Explore the themed room’s treasure hunt and confirm the current experience for your booking.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Lobby play area",
+        "category": "Kids",
+        "description": "Enjoy LEGO-themed play space under the hotel’s current house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel pool",
+        "category": "Swimming",
+        "description": "Use the family pool subject to opening times, supervision and access rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/dubai/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked room, occupancy, taxes, breakfast, other fees and any park-access inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "peakSeason": "School and public holidays; check property rates",
+      "shoulderSeason": "School-term dates outside major holidays",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "recommendedMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "bestSeason": "Cooler November through March",
+      "tempRange": "24°C–31°C historical normal daytime highs in recommended months",
+      "weatherSummary": "UAE National Center of Meteorology climatology published by WMO for Dubai, 1974–1991, used as older regional context for the Jebel Ali park district. Summer daytime highs are much hotter than winter; this is not a property forecast.",
+      "whyGo": "Cooler months better suit outdoor theme-park time. Plan shade and indoor breaks for hot dates, and check the actual forecast, operating hours and package prices separately.",
+      "climateZone": "Hot desert / Dubai",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "prime",
+          "tempC": 24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 27.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 32.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "fair",
+          "tempC": 36.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 38.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 40.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 40.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 38.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 35.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 30.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Kraków, Poland",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room occupancy and bed layout for your household.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Use the communal guest kitchen, subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Game zone",
+        "category": "Kids",
+        "description": "Enjoy the shared games area under the hotel’s current access rules.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/krakow/krakow-center/",
+    "priceBasis": "Rates on request. Compare the selected private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring and early autumn for city exploring",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "1.6°C–25.3°C normal daytime highs",
+      "weatherSummary": "IMGW-PIB Kraków station 12566, 1991–2020 normals. Mean daily maxima are taken from TMAX_AVE and monthly rain from OPAD_SUMA, used as regional guidance. Winters are cold; summer has higher rainfall totals.",
+      "whyGo": "Use milder months for outdoor exploring, keep indoor plans for wet days, and check the actual forecast and room or package total separately.",
+      "climateZone": "Temperate continental / Kraków",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 1.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 8.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 23.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 25.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 25,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 7.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 2.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.jp/en/hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Nagoya, Japan",
+    "topActivities": [
+      {
+        "title": "Themed family rooms",
+        "category": "Kids",
+        "description": "Choose the exact theme, occupancy and bed layout for your household.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Hotel play areas",
+        "category": "Kids",
+        "description": "Check current access rules; the Water Play Area requires reservations.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND park visit",
+        "category": "Kids",
+        "description": "Confirm tickets and operating hours for your booked package and dates.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.jp/en/hotel/",
+    "priceBasis": "Rates on request. Compare the selected private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "bestSeason": "Spring and autumn for park visits",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "9.3°C–33.2°C normal daytime highs",
+      "weatherSummary": "Japan Meteorological Agency Nagoya station 47636, 1991–2020 normals, used as regional guidance for Kinjo-futo. Values are normal daytime highs and monthly rainfall. Summer is hot; rain is substantial in the wet season and early autumn.",
+      "whyGo": "Use milder months for outdoor exploring, keep indoor plans for wet days, and check the actual forecast and room or package total separately.",
+      "climateZone": "Humid subtropical / Nagoya",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 9.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 10.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 14.5,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 20.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "good",
+          "tempC": 27.6,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 31.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 33.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "good",
+          "tempC": 29.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 23.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 17.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 11.7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.joandjoe.com/en/destinations/vienna/",
+    "shelves": [
+      "budget-friendly"
+    ],
+    "destination": "Vienna, Austria",
+    "topActivities": [
+      {
+        "title": "Vienna by public transport",
+        "category": "Culture",
+        "description": "Use nearby Westbahnhof connections and check actual routes to your sights.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Rooftop terrace",
+        "category": "Scenery",
+        "description": "Check weather, access and event arrangements for the shared roof terrace.",
+        "kidsFriendly": false
+      },
+      {
+        "title": "Social bar and events",
+        "category": "Dining",
+        "description": "Check the current event schedule and consider the lively setting when choosing a room.",
+        "kidsFriendly": false
+      }
+    ],
+    "priceSource": "https://www.joandjoe.com/en/destinations/vienna/",
+    "priceBasis": "Rates on request. Compare the actual room or bed, occupancy, taxes, breakfast, parking and any activity extras for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring and early autumn for city walks",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "3.5°C–26.4°C normal daytime highs",
+      "weatherSummary": "City of Vienna / GeoSphere Austria, Wien Hohe Warte, 1991–2020 climate averages. Normal daytime highs and monthly rain totals are used as regional guidance for the Westbahnhof district; rain occurs throughout the year.",
+      "whyGo": "Use the seasonal normals for outdoor planning, check the actual forecast, and compare room totals separately. Indoor activities can provide alternatives in poor weather.",
+      "climateZone": "Temperate continental / Vienna",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 6.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 20.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 26.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 26.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 14.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 8.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.greatwolf.com/colorado-springs",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Colorado Springs, Colorado",
+    "topActivities": [
+      {
+        "title": "Indoor water park",
+        "category": "Kids",
+        "description": "Check access, operating hours, supervision and height requirements for your stay.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Themed family suites",
+        "category": "Kids",
+        "description": "Choose the actual suite layout and confirm whole-room occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Dry-land attractions",
+        "category": "Kids",
+        "description": "Check individual activities and additional charges before buying optional packages.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.greatwolf.com/colorado-springs",
+    "priceBasis": "Rates on request. Compare the actual room or bed, occupancy, taxes, breakfast, parking and any activity extras for your dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for regional outings",
+      "peakSeason": "School holidays and major events; compare exact dates",
+      "shoulderSeason": "Dates outside major holidays and events",
+      "lowSeason": "Date-specific; weather and room-price seasons differ",
+      "tempRange": "7°C–30.3°C normal daytime highs",
+      "weatherSummary": "NWS Pueblo Colorado Springs 1991–2020 normals, used as regional outdoor guidance for the northern city district. Published Fahrenheit daytime highs are converted to Celsius; precipitation inches are converted to millimetres for rain bands. Winter is cold and summer has higher precipitation totals. Indoor water-park conditions are separate from outdoor weather.",
+      "whyGo": "Use the seasonal normals for outdoor planning, check the actual forecast, and compare room totals separately. Indoor activities can provide alternatives in poor weather.",
+      "climateZone": "High-elevation semi-arid / Colorado Springs",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 8.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 16.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 27.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 30.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 25.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 18.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "fair",
+          "tempC": 11.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]
