@@ -4,6 +4,7 @@ import { Jimp } from 'jimp';
 import sharp from 'sharp';
 import { cardThumbName, smallThumbName } from '@/lib/appConfig';
 import { createCardThumb } from './cardThumb';
+import { uploadPreparedRenditions } from './preparedImages';
 import * as azureBlob from './azureBlob';
 import config from './config';
 import { imageHash } from './imageHash';
@@ -283,6 +284,8 @@ export async function saveThumb<T extends { thumbName: string; buffer: Buffer; m
     // A list row can live without it (it shows a tile), so a failure here must not lose the pin's picture.
     await uploadSmallThumb(thumb.thumbName, thumb.buffer).catch((err) => log.warn('small-thumb error:', thumb.thumbName, (err as Error).message));
     await uploadCardThumb(thumb.thumbName, thumb.buffer).catch((err) => log.warn('card-thumb error:', thumb.thumbName, (err as Error).message));
+    // The WebP sizes pin pages load straight from Azure (src/lib/preparedImage.ts); without them the page falls back to /_next/image.
+    await uploadPreparedRenditions(azureBlob.thumbContainerClient(), thumb.thumbName, thumb.buffer).catch((err) => log.warn('prepared-thumb error:', thumb.thumbName, (err as Error).message));
     return thumb;
   } catch (err) {
     log.error('save-thumb error:', err);

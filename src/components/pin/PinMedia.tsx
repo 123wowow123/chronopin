@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { MediaArrow } from '@/components/ui/MediaArrow';
 import { blobUrl } from '@/lib/appConfig';
+import { preparedSources } from '@/lib/preparedImage';
 import type { MediumJson } from '@/lib/types';
 import { tweetHtml, videoPlayerHtml } from '@/lib/embedHtml';
 import { videoSource } from '@/lib/videoEmbed';
@@ -117,6 +118,8 @@ function ImageMedium({
   onMissing?: () => void;
 }) {
   const [useOriginal, setUseOriginal] = useState(!medium.thumbName);
+  // Its Azure renditions first (src/lib/preparedImage.ts), then the resizer, then the original.
+  const [skipPrepared, setSkipPrepared] = useState(false);
   const [failed, setFailed] = useState(false);
   const width = medium.thumbWidth || medium.originalWidth || 1000;
   const height = medium.thumbHeight || medium.originalHeight || 562;
@@ -128,21 +131,24 @@ function ImageMedium({
 
   // A server-rendered image can fail before hydration attaches onError; a
   // finished image with no pixels failed.
+  const thumb = blobUrl(medium.thumbName);
+  const prepared = !useOriginal && !skipPrepared && thumb ? preparedSources(thumb) : null;
+  const onPrepared = Boolean(prepared);
   const imgRef = useCallback(
     (img: HTMLImageElement | null) => {
       if (img?.complete && img.naturalWidth === 0) {
-        if (useOriginal) setFailed(true);
+        if (onPrepared) setSkipPrepared(true);
+        else if (useOriginal) setFailed(true);
         else setUseOriginal(true);
       }
     },
-    [useOriginal],
+    [useOriginal, onPrepared],
   );
 
   if (missing) {
     return null;
   }
 
-  const thumb = blobUrl(medium.thumbName);
   const isExternalThumb = Boolean(
     thumb &&
     /^https?:\/\//i.test(thumb) &&
@@ -162,6 +168,22 @@ function ImageMedium({
       className="block h-auto w-full"
       referrerPolicy="no-referrer"
       onError={() => setFailed(true)}
+    />
+  ) : prepared ? (
+    // eslint-disable-next-line @next/next/no-img-element -- prepared renditions live in Azure
+    <img
+      ref={imgRef}
+      src={prepared.src}
+      srcSet={prepared.srcSet}
+      sizes={sizes}
+      alt={title}
+      width={width}
+      height={height}
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : undefined}
+      decoding="async"
+      className="block h-auto w-full"
+      onError={() => setSkipPrepared(true)}
     />
   ) : (
     <Image

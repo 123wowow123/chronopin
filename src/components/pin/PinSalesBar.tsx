@@ -34,19 +34,33 @@ export function PinSalesBar({
   return (
     <li className="grid gap-1 px-4 py-2.5">
       <div className="flex items-baseline justify-between gap-3">
-        <span className="min-w-0 text-muted">{label}</span>
+        <span className="min-w-0 truncate text-muted" title={label}>
+          {label}
+        </span>
+        {/* Every possible text is stacked in one grid cell and only the active
+            one is visible, so hovering never changes the cell's size: a size
+            change re-wraps the label, moves the bar and ends the hover. */}
         <span
-          className="shrink-0 font-semibold text-ink tabular-nums"
+          className="grid shrink-0 justify-items-end font-semibold text-ink tabular-nums"
           aria-live="polite"
         >
-          {hovered ? (
-            <>
-              <span className="font-normal text-muted">{hovered.label} · </span>
-              {hovered.valueText}
-            </>
-          ) : (
-            valueText
-          )}
+          <span
+            className={`col-start-1 row-start-1 ${hovered ? "invisible" : ""}`}
+          >
+            {valueText}
+          </span>
+          {segments.map((seg) => (
+            <span
+              key={seg.key}
+              className={`col-start-1 row-start-1 ${
+                hovered?.key === seg.key ? "" : "invisible"
+              }`}
+              aria-hidden={hovered?.key === seg.key ? undefined : true}
+            >
+              <span className="font-normal text-muted">{seg.label} · </span>
+              {seg.valueText}
+            </span>
+          ))}
         </span>
       </div>
       <div

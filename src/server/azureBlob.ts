@@ -18,6 +18,11 @@ function getThumbContainer(): ContainerClient {
   return thumbContainer;
 }
 
+// For callers that upload several related blobs (src/server/preparedImages.ts).
+export function thumbContainerClient(): ContainerClient {
+  return getThumbContainer();
+}
+
 export function createThumbContainer() {
   return getThumbContainer().createIfNotExists({ access: 'blob' });
 }

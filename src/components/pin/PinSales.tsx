@@ -1,5 +1,6 @@
 import {
   formatSalesValue,
+  isCumulative,
   SALES_UNKNOWN_COLOR,
   SALES_YEAR_COLORS,
   yearSegments,
@@ -42,12 +43,9 @@ export function PinSales({
         const max = Math.max(...group.map((row) => row.value));
         // The newest life-to-date bar already splits into years, so the
         // older life-to-date snapshots only feed its segments.
-        const newestToDate = group.find((row) =>
-          /life to date/i.test(row.period ?? ""),
-        );
+        const newestToDate = group.find((row) => isCumulative(row.period));
         const shown = group.filter(
-          (row) =>
-            row === newestToDate || !/life to date/i.test(row.period ?? ""),
+          (row) => row === newestToDate || !isCumulative(row.period),
         );
         const years = [
           ...new Set(

@@ -7,10 +7,12 @@ import { thumbUrlPrefix } from './appConfig';
 // first request was resized on the VM). `npm run images:prepared` makes them.
 export const PREPARED_WIDTHS = [240, 640, 1280] as const;
 export const PREPARED_PREFIXES = ['restaurant-dishes/', 'restaurant-images/', 'restaurant-galleries/', 'landing-galleries/'] as const;
+// Pin thumbnails (Medium.thumbName) sit at the container root: covered too (2026-11-22).
+export const PREPARED_ROOT = 'root';
 const PROD_PREFIX = 'https://chronopin.blob.core.windows.net/thumb/';
 
 export function isPreparableName(name: string): boolean {
-  return PREPARED_PREFIXES.some((prefix) => name.startsWith(prefix)) && /\.(webp|jpe?g|png|avif)$/i.test(name);
+  return (!name.includes('/') || PREPARED_PREFIXES.some((prefix) => name.startsWith(prefix))) && /\.(webp|jpe?g|png|avif)$/i.test(name);
 }
 
 // r/v1/<width>/<original name>[.webp]: the original name keeps renditions of
@@ -20,7 +22,7 @@ export function preparedName(name: string, width: number): string {
 }
 
 // The srcSet for a stored photo, or null for anything that has no renditions
-// (another host, a pin thumb, a folder the script does not cover).
+// (another host, a folder the script does not cover, a GIF).
 export function preparedSources(src: string, widths: readonly number[] = PREPARED_WIDTHS): { src: string; srcSet: string } | null {
   const base = [thumbUrlPrefix, PROD_PREFIX].find((prefix) => src.startsWith(prefix));
   if (!base) return null;

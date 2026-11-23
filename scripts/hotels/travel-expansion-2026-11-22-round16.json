@@ -1,0 +1,689 @@
+[
+  {
+    "key": "munich",
+    "pin": {
+      "title": "MEININGER Hotel Munich Olympiapark Opens",
+      "productName": "MEININGER Hotel Munich Olympiapark",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+      "description": "A basic budget hotel and hostel hybrid near Munich’s Olympic Park, offering private family rooms, a shared guest kitchen and common spaces, with mixed guest reviews.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Landshuter Allee 174, 80637 Munich, Germany",
+      "latitude": 48.1648635,
+      "longitude": 11.5383819,
+      "utcStartDateTime": "2019-03-25T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s later Lyon opening chronology explicitly dates München Olympiapark to 25 March in its 2019 openings. The original property announcement is labelled March 2019. This is the converted hotel opening, not an invented new-build completion day.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+          "title": "MEININGER Hotel Munich Olympiapark — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-munich/",
+          "title": "New hotel in Munich Olympic Park",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+          "title": "New hotel in Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187309-d13958740-Reviews-MEININGER_Hotel_Munich_Olympiapark-Munich_Upper_Bavaria_Bavaria.html",
+          "title": "MEININGER Hotel Munich Olympiapark",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/monthly/kl/historical/monatswerte_KL_03379_19540601_20251231_hist.zip",
+          "title": "DWD — München-Stadt 03379 monthly climate observations",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/munich",
+          "title": "MICHELIN Guide — Munich hotels",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbestravelguide.com/destinations/munich-germany",
+          "title": "Munich Luxury Hotels — Forbes Travel Guide",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A basic budget hotel and hostel hybrid near Munich’s Olympic Park, offering private family rooms, a shared guest kitchen and common spaces, with mixed guest reviews.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/\"></cite></p><h3>Family and budget stay</h3><p>Choose a whole private family room and confirm its exact beds, occupancy and any cot requirements. An individual dorm bed is a different booking product. The hotel lists a shared guest kitchen and common spaces; breakfast and other extras should be checked in the booked rate.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/\"></cite></p><p>The Landshuter Allee property sits by the Mittlerer Ring near the Olympic Park, away from the historic centre. Plan walking and public-transport routes, and compare the full private-room price including taxes, breakfast, parking and luggage storage.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/\"></cite></p><h3>Guest-review tradeoffs</h3><p>The opened Tripadvisor snapshot rates the hotel 2.9/5 overall from 97 reviews. Some guests praise staff and nearby transport; others report cleanliness, room condition, heat and noise problems. Read recent feedback before choosing this basic stay, especially for children or summer travel. The category reflects accommodation type, not an assurance of high guest satisfaction.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187309-d13958740-Reviews-MEININGER_Hotel_Munich_Olympiapark-Munich_Upper_Bavaria_Bavaria.html\"></cite></p><h3>Opening and conversion</h3><p>The operator’s later opening chronology dates Munich Olympiapark to 25 March 2019.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/\"></cite></p><p>The opening announcement describes conversion of a former office building into a hotel with 172 rooms and 822 beds. The current hotel page lists 172 rooms and 820 beds; the opening count and later listing are identified separately. No conversion-specific investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/\"></cite><cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-munich/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3,
+      "service": 3,
+      "location": 4,
+      "cleanliness": 3,
+      "value": 3,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187309-d13958740-Reviews-MEININGER_Hotel_Munich_Olympiapark-Munich_Upper_Bavaria_Bavaria.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 97 reviews, overall 2.9/5. Rooms 2.9, Service 3.1, Location 3.9, Cleanliness 3.1, Value 3.2, rounded to half steps. Laurel A firsthand English review displayed September 2025 without exact day; date null. Positive transport/staff account balanced with recent cleanliness, heat, noise and condition concerns. MICHELIN complete Munich-and-surroundings directory 1–27 of 27 and Forbes Munich directory have no MEININGER match. AAA award program excludes Germany. Acclaim zero records checked-guide absence.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187309-d13958740-Reviews-MEININGER_Hotel_Munich_Olympiapark-Munich_Upper_Bavaria_Bavaria.html",
+          "title": "Pleasemt stay and wonderful staff",
+          "publishedDate": null,
+          "quote": "The place is busy and friendly."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Converted hotel opened",
+          "value": "25 March 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 25 March",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "172 rooms / 822 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-munich/",
+            "title": "New hotel in Munich Olympic Park",
+            "quote": "172 rooms and 822 beds",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Converted hotel opened",
+          "date": "2019-03-25",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 25 March",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Munich, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room beds and occupancy; read recent room-condition reviews.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Olympic Park and city visits",
+        "category": "Culture",
+        "description": "Plan transport from Landshuter Allee to the park and Munich’s historic sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays, major events and festivals; compare date-specific prices",
+      "shoulderSeason": "Dates outside school holidays and major events; check attraction calendars",
+      "lowSeason": "Date-specific; seasonal closures and room rates require separate checks",
+      "tempRange": "4°C–24.9°C normal daytime highs",
+      "weatherSummary": "DWD München-Stadt station 03379, regional guidance for the Olympiapark area. Each calendar month averages 30 valid MO_TX temperature and MO_RR precipitation observations from 1991–2020, rounded to 0.1. Temperatures are average daytime highs, not means or forecasts. Summer rain and thunderstorms remain possible.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate continental influence / Munich",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 5.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 15.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 22.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 8.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "munich-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/0/9/csm_MEININGER-Hotel-M%C3%BCnchen-Olympiapark-6-Bed-Room-Standard-10-WSC7551-Print_8cf6d0da75.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/munich-room-e572fb71511764e3.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "e572fb71511764e35bf090545163c8161f6b1c37d62f63d5a8a56ae8ba6b5eae"
+      },
+      {
+        "key": "munich-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/e/1/csm_MEININGER-Hotel-M_nchen-Olympiapark-Guest-Kitchen-1-WSC8043-Web_c9ff995e3c.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/munich-kitchen-6cafd3f38d874b61.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "6cafd3f38d874b61caeabb2fc2f0e119a1fd2447c01bd3dc978b3996df728533"
+      },
+      {
+        "key": "munich-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/7/1/csm_MEININGER-Hotel-M_nchen-Olympiapark-Lounge-1-WSC8130-Web_ac34937521.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/munich-lounge-9b30b8cf12e73e8f.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "9b30b8cf12e73e8f7fca0c0ec5b5f51426106eef51f933971202ab0af17e06e5"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction or conversion budget verified; project price/currency null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "172 rooms / 822 beds is the opening release; current operator listing says 820 beds, noted separately rather than silently reconciled.",
+      "Overall 2.9/5 and recent family guest concerns remain prominent; budget positioning is not a guaranteed cheapest rate or high-satisfaction endorsement.",
+      "DWD city-station averages are regional guidance, not hotel weather or a claim that every month is comfortable.",
+      "Operator map point is corroborated by ArcGIS exact address and OSM named hotel point."
+    ]
+  },
+  {
+    "key": "newyork",
+    "pin": {
+      "title": "LEGOLAND New York Hotel Opens",
+      "productName": "LEGOLAND New York Hotel",
+      "sourceUrl": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+      "description": "A LEGO-themed family hotel at LEGOLAND New York in Goshen, with separate children’s sleeping areas, themed rooms and treasure hunts; check seasonal closures and recent reviews.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "1 LEGOLAND Boulevard, Goshen, NY 10924, United States",
+      "latitude": 41.3792138,
+      "longitude": -74.3146155,
+      "utcStartDateTime": "2021-08-06T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "LEGOLAND New York Resort’s release issued August 9, 2021 explicitly says the hotel debuted on Friday August 6. This dates the hotel opening, separate from the park’s earlier phased opening and July 9 opening of all seven lands.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+          "title": "LEGOLAND New York Hotel — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/everything-is-awesome-legoland-new-york-resort-is-fully-open-301350684.html",
+          "title": "Everything Is Awesome! LEGOLAND® New York Resort Is Fully Open",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mycruisingfamily.com/blog/2021/8/20/legoland-new-york-planning-your-legoland-hotel-stay",
+          "title": "LEGOLAND New York: Planning Your LEGOLAND Hotel Stay",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g47806-d23568396-Reviews-LEGOLANDR_New_York_Hotel-Goshen_New_York.html",
+          "title": "LEGOLAND® New York Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/legoland-hotel-new-york-AA128808",
+          "title": "Legoland Hotel New York — AAA Trip Canvas",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/new-york/plan-your-visit/know-before-you-go/seasonal-closures/",
+          "title": "Seasonal Closures — LEGOLAND New York",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/new-york/places-to-stay/vacation-packages/hotel-ticket-package/",
+          "title": "Hotel + Tickets Package — LEGOLAND New York",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00305310&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Middletown 2 NW USC00305310, 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A LEGO-themed family hotel at LEGOLAND New York in Goshen, with separate children’s sleeping areas, themed rooms and treasure hunts; check seasonal closures and recent reviews.<cite data-ref=\"https://www.legoland.com/new-york/places-to-stay/legoland-hotel/\"></cite></p><h3>Family stay and packages</h3><p>Choose Pirate, Kingdom, LEGO Friends or NINJAGO rooms and confirm your exact bed layout, occupancy and any cot requirements. The operator advertises separate children’s sleeping areas, treasure hunts, indoor play and family entertainment. Check scheduled activities and charges for arcade play.<cite data-ref=\"https://www.legoland.com/new-york/places-to-stay/legoland-hotel/\"></cite></p><p>Compare the full cost of your selected package: room, park tickets, breakfast, parking, taxes and cancellation terms. The advertised per-person package starting amount is not an all-in whole-room nightly quote.<cite data-ref=\"https://www.legoland.com/new-york/places-to-stay/vacation-packages/hotel-ticket-package/\"></cite></p><h3>Seasonal availability</h3><p>On the seasonal-closures page read 22 November 2026, the hotel pool is listed as closed for the 2026 season. Several themed lands and areas are listed to close from 27 November 2026. The park operates seasonally: check the calendar, booking availability and attraction status for your actual travel dates.<cite data-ref=\"https://www.legoland.com/new-york/plan-your-visit/know-before-you-go/seasonal-closures/\"></cite></p><h3>Review tradeoffs</h3><p>The opened Tripadvisor snapshot has an overall 3.1/5 from 89 reviews, with Value 2.5/5. Guests describe the appeal of themed rooms and walking to the park, alongside service, housekeeping, dining and extra-cost concerns. Read recent feedback before booking. This is a family-category option, not a budget recommendation.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g47806-d23568396-Reviews-LEGOLANDR_New_York_Hotel-Goshen_New_York.html\"></cite></p><p>My Cruising Family’s firsthand August 2021 stay describes the convenient walk to the park and its two-day package. That historical account is dated; its package price, food arrangements and cancellation terms are not presented as current offers.<cite data-ref=\"https://www.mycruisingfamily.com/blog/2021/8/20/legoland-new-york-planning-your-legoland-hotel-stay\"></cite></p><h3>Hotel opening and scale</h3><p>The operator’s release issued 9 August 2021 records the hotel’s debut on 6 August and its 250 rooms. The hotel opening is separate from the earlier phased park opening and July 9 opening of all seven lands. No hotel-specific construction cost was verified; a wider resort investment is not allocated to the hotel.<cite data-ref=\"https://www.prnewswire.com/news-releases/everything-is-awesome-legoland-new-york-resort-is-fully-open-301350684.html\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 3,
+      "location": 4,
+      "cleanliness": 4,
+      "value": 2.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g47806-d23568396-Reviews-LEGOLANDR_New_York_Hotel-Goshen_New_York.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 89 reviews, overall 3.1/5. Rooms 3.5, Service 3.1, Location 4.1, Cleanliness 3.8, Value 2.5, rounded to half steps. Independent My Cruising Family firsthand opening-weekend stay published 2021-08-20 in structured metadata; dated context explicit. Current review tradeoffs and operator seasonal closures retained. AAA exact-property listing read, but no numeric Diamond designation verified. MICHELIN Goshen unavailable; Forbes Hudson Valley directory no property match but incomplete local evidence; acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.mycruisingfamily.com/blog/2021/8/20/legoland-new-york-planning-your-legoland-hotel-stay",
+          "title": "LEGOLAND New York: Planning Your LEGOLAND Hotel Stay",
+          "publishedDate": "2021-08-20",
+          "quote": "LEGOLAND Hotel guests easily walk to the theme park both days"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel guest opening",
+          "value": "6 August 2021",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/everything-is-awesome-legoland-new-york-resort-is-fully-open-301350684.html",
+            "title": "Everything Is Awesome! LEGOLAND® New York Resort Is Fully Open",
+            "quote": "August 6",
+            "publishedDate": "2021-08-09"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "250 rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/everything-is-awesome-legoland-new-york-resort-is-fully-open-301350684.html",
+            "title": "Everything Is Awesome! LEGOLAND® New York Resort Is Fully Open",
+            "quote": "250-room",
+            "publishedDate": "2021-08-09"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel guest opening",
+          "date": "2021-08-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.prnewswire.com/news-releases/everything-is-awesome-legoland-new-york-resort-is-fully-open-301350684.html",
+            "title": "Everything Is Awesome! LEGOLAND® New York Resort Is Fully Open",
+            "quote": "August 6",
+            "publishedDate": "2021-08-09"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Goshen, New York, United States",
+    "topActivities": [
+      {
+        "title": "LEGO-themed family rooms",
+        "category": "Kids",
+        "description": "Choose the exact theme, beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunts and indoor play",
+        "category": "Kids",
+        "description": "Check current activities, schedules and any arcade charges.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Seasonal park visits",
+        "category": "Adventure",
+        "description": "Check opening calendars and closures before booking; the pool is listed closed for the 2026 season as read November 22.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays, major events and festivals; compare date-specific prices",
+      "shoulderSeason": "Dates outside school holidays and major events; check attraction calendars",
+      "lowSeason": "Date-specific; seasonal closures and room rates require separate checks",
+      "tempRange": "1.2°C–28°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Middletown 2 NW station USC00305310, 1991–2020 monthly normals in metric units. Nearby Orange County regional guidance for Goshen, not Goshen, Indiana. Temperatures are normal daytime highs, not a forecast. Winter is cold; hotel, park and pool schedules must be checked separately from weather suitability.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid continental / Goshen and Hudson Valley",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 1.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 8.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 28,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 27,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 16.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 10,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 3.7,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "newyork-exterior",
+        "imageSourceUrl": "https://www.legoland.com/new-york/media/xcxhntto/girl-in-front-of-legoland-hotel-pink-one-3x2-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND New York Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/newyork-exterior-f501a177ea902287.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "f501a177ea902287b447b88ae3cbc5364685bbafdd282b182fa613a8a5ddb0d9"
+      },
+      {
+        "key": "newyork-room",
+        "imageSourceUrl": "https://www.legoland.com/new-york/media/hrtlt44k/kingdom-room-adult-bed-1x1-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND New York Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/newyork-room-4d3fd6d28f6df1c3.webp",
+        "width": 1280,
+        "height": 1280,
+        "sha256": "4d3fd6d28f6df1c31c478f111121b88adf679a0afdf9b14e854eecff63d47a63"
+      },
+      {
+        "key": "newyork-treasure",
+        "imageSourceUrl": "https://www.legoland.com/new-york/media/pepmedyj/piretes-room-im_05.jpg",
+        "sourceUrl": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+        "credit": "LEGOLAND New York Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/newyork-treasure-97575bb193509758.webp",
+        "width": 894,
+        "height": 1600,
+        "sha256": "97575bb19350975868a149cd018b08ea6d9b4823ce1991a011eb46662f895dc4"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction or conversion budget verified; project price/currency null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN Goshen unavailable and AAA listing does not establish a Diamond award; acclaim null.",
+      "Per-person package starting price is not an all-in nightly room rate and is excluded.",
+      "Current closure page lists hotel pool closed for the 2026 season and several park areas closing November 27, 2026; reflected in article and activities.",
+      "Exact OSM named hotel point corroborates ArcGIS hotel POI; the nearby parking point is rejected. Official published mailing address retained.",
+      "Original operator page contains a reused Florida 2015 elevator image; it is excluded from this gallery. Only property-labelled exterior, room and treasure images retained."
+    ]
+  }
+]

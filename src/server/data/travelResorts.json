@@ -4395,5 +4395,540 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Munich, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room beds and occupancy; read recent room-condition reviews.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Olympic Park and city visits",
+        "category": "Culture",
+        "description": "Plan transport from Landshuter Allee to the park and Munich’s historic sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-olympiapark/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays, major events and festivals; compare date-specific prices",
+      "shoulderSeason": "Dates outside school holidays and major events; check attraction calendars",
+      "lowSeason": "Date-specific; seasonal closures and room rates require separate checks",
+      "tempRange": "4°C–24.9°C normal daytime highs",
+      "weatherSummary": "DWD München-Stadt station 03379, regional guidance for the Olympiapark area. Each calendar month averages 30 valid MO_TX temperature and MO_RR precipitation observations from 1991–2020, rounded to 0.1. Temperatures are average daytime highs, not means or forecasts. Summer rain and thunderstorms remain possible.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate continental influence / Munich",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 5.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 15.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.4,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 22.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 24.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 24.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 8.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 4.8,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Goshen, New York, United States",
+    "topActivities": [
+      {
+        "title": "LEGO-themed family rooms",
+        "category": "Kids",
+        "description": "Choose the exact theme, beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Treasure hunts and indoor play",
+        "category": "Kids",
+        "description": "Check current activities, schedules and any arcade charges.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Seasonal park visits",
+        "category": "Adventure",
+        "description": "Check opening calendars and closures before booking; the pool is listed closed for the 2026 season as read November 22.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/new-york/places-to-stay/legoland-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays, major events and festivals; compare date-specific prices",
+      "shoulderSeason": "Dates outside school holidays and major events; check attraction calendars",
+      "lowSeason": "Date-specific; seasonal closures and room rates require separate checks",
+      "tempRange": "1.2°C–28°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Middletown 2 NW station USC00305310, 1991–2020 monthly normals in metric units. Nearby Orange County regional guidance for Goshen, not Goshen, Indiana. Temperatures are normal daytime highs, not a forecast. Winter is cold; hotel, park and pool schedules must be checked separately from weather suitability.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid continental / Goshen and Hudson Valley",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 1.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 8.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 15.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 25.6,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 28,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 27,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 16.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 10,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 3.7,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Budapest, Hungary",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room beds, occupancy and cot availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare meals subject to house rules and equipment availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Great Market Hall and city walks",
+        "category": "Culture",
+        "description": "Plan market opening hours and public-transport routes from Csarnok tér.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor activities",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "3°C–28.1°C normal daytime highs",
+      "weatherSummary": "HungaroMet Budapest-Pestszentlőrinc station, 1991–2020 normals. Monthly maximum-temperature column gives average daytime highs; monthly precipitation totals determine rain bands. Regional guidance for central Budapest, not a hotel forecast; summer heat and winter cold remain possible.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate continental / Budapest",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 5.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 11.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 22.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 22.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 16.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 9.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 3.5,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Bedfordshire, England, UK",
+    "topActivities": [
+      {
+        "title": "Family woodland lodges",
+        "category": "Kids",
+        "description": "Choose the exact lodge layout and location; facilities differ across accommodation types.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Swimming and play areas",
+        "category": "Water",
+        "description": "Check operating times and age rules for the Subtropical Swimming Paradise and play areas.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Woodland walks and activities",
+        "category": "Nature",
+        "description": "Allow for hills and distances; paid activities, cycle hire and spa visits need separate checks.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+    "priceBasis": "Rates on request. Compare the booked lodge or room, stay length, occupancy, included facilities, food, paid activities and fees for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor activities",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "7.26°C–22.37°C normal daytime highs",
+      "weatherSummary": "Met Office Bedford station, 1991–2020 normals from the first station table. Nearby regional guidance for Woburn Forest: normal daytime highs and monthly rainfall, not a resort forecast. Rain can occur year-round; indoor swimming does not remove weather considerations for woodland activities.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Bedfordshire",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.97,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 13.71,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 16.74,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19.75,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 22.37,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 22.16,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.03,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.65,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 10.24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.53,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

@@ -1,0 +1,688 @@
+[
+  {
+    "key": "budapest",
+    "pin": {
+      "title": "MEININGER Budapest Great Market Hall Opens",
+      "productName": "MEININGER Budapest Great Market Hall",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+      "description": "A budget hotel and hostel hybrid beside Budapest’s Great Market Hall, with private family rooms, a shared guest kitchen and common spaces.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Csarnok tér 2, 1093 Budapest, Hungary",
+      "latitude": 47.4860404,
+      "longitude": 19.0601214,
+      "utcStartDateTime": "2019-03-18T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s subsequent Lyon opening chronology dates Budapest Great Market Hall to 18 March in its explicit 2019 opening sequence, corroborated by the later Brussels release. This is the actual opening, not the earlier planned spring-2018 target.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+          "title": "MEININGER Budapest Great Market Hall — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/new-property-in-budapest/",
+          "title": "New hotel in Budapest",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+          "title": "New hotel in Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g274887-d15125043-Reviews-MEININGER_Budapest_Great_Market_Hall-Budapest_Central_Hungary.html",
+          "title": "MEININGER Budapest Great Market Hall",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.met.hu/eghajlat/magyarorszag_eghajlata/varosok_jellemzoi/Budapest/index.php",
+          "title": "HungaroMet — Budapest-Pestszentlőrinc 1991–2020 climate normals",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/budapest",
+          "title": "MICHELIN Guide — Budapest hotels",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbestravelguide.com/destinations/budapest-hungary",
+          "title": "Budapest Luxury Hotels — Forbes Travel Guide",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid beside Budapest’s Great Market Hall, with private family rooms, a shared guest kitchen and common spaces.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/\"></cite></p><h3>Family and budget stay</h3><p>Book a whole private family room and confirm beds, occupancy and cot needs. Individual dorm beds are different products. The communal guest kitchen can help families prepare meals; check house rules and available equipment.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/\"></cite></p><p>The Csarnok tér property is beside the Great Market Hall on the Pest side, with public transport nearby. Compare the full private-room cost, taxes, breakfast, parking, luggage storage and late-checkout terms for your dates.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/\"></cite></p><h3>Review tradeoffs</h3><p>Guests praise the market location and transport access, while recent accounts raise housekeeping, breakfast, room temperature and fee concerns. Read feedback for your room category and ask about seasonal cooling if heat matters. Tripadvisor component scores are a research snapshot rather than live ratings.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g274887-d15125043-Reviews-MEININGER_Budapest_Great_Market_Hall-Budapest_Central_Hungary.html\"></cite></p><h3>Opening and capacity</h3><p>MEININGER’s later opening chronology records the Budapest launch on 18 March 2019. The earlier spring-2018 target is not used as an opening date.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/\"></cite></p><p>The opening announcement reports 184 rooms and 751 beds in a seven-storey property. These are opening-era figures, not a claim that later inventory is unchanged. No property-specific construction investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/new-property-in-budapest/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 3.5,
+      "service": 3.5,
+      "location": 4,
+      "cleanliness": 3.5,
+      "value": 3.5,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g274887-d15125043-Reviews-MEININGER_Budapest_Great_Market_Hall-Budapest_Central_Hungary.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 312 reviews, overall 3.8/5. Rooms 3.5, Service 3.5, Location 4.2, Cleanliness 3.5, Value 3.4, rounded to half steps. Nick B firsthand family review displayed July 2026 without exact publication day, date null. Recent breakfast, housekeeping, cooling and fee tradeoffs retained as guest feedback. MICHELIN complete Budapest list 1–22 of 22 and Forbes Budapest directory have no MEININGER match; AAA awards exclude Hungary. Acclaim zero records checked-guide absence.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g274887-d15125043-Reviews-MEININGER_Budapest_Great_Market_Hall-Budapest_Central_Hungary.html",
+          "title": "Very good hotel",
+          "publishedDate": null,
+          "quote": "The beds were comfortable and room service at request"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opened",
+          "value": "18 March 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 18 March",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "184 rooms / 751 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/new-property-in-budapest/",
+            "title": "New hotel in Budapest",
+            "quote": "184 rooms and 751 beds",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel opened",
+          "date": "2019-03-18",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 18 March",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Budapest, Hungary",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Confirm whole-room beds, occupancy and cot availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare meals subject to house rules and equipment availability.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Great Market Hall and city walks",
+        "category": "Culture",
+        "description": "Plan market opening hours and public-transport routes from Csarnok tér.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor activities",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "3°C–28.1°C normal daytime highs",
+      "weatherSummary": "HungaroMet Budapest-Pestszentlőrinc station, 1991–2020 normals. Monthly maximum-temperature column gives average daytime highs; monthly precipitation totals determine rain bands. Regional guidance for central Budapest, not a hotel forecast; summer heat and winter cold remain possible.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate continental / Budapest",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 5.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 11.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 22.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 26.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 28.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 28,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 22.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 16.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 9.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 3.5,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "budapest-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/3/d/csm_MEININGER-Budapest-Great-Market-Hall-2_2-Room-Premium-2-CSW6576-Web_102903d81f.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/budapest-room-b4ff10eb8e179e83.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "b4ff10eb8e179e8333fde2a20156ca13b767bc9a00d02e49f9c8fd29b94ba8db"
+      },
+      {
+        "key": "budapest-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/2/c/csm_MEININGER-Budapest-Great-Market-Hall-Guest-Kitchen-1-CSW8356-Web_120fdcbe14.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/budapest-kitchen-6c42c663f83b0c21.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "6c42c663f83b0c21b6e4084354bf411b848e1eb78fb072c3edc809a0a5463070"
+      },
+      {
+        "key": "budapest-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/b/a/csm_MEININGER-Budapest-Great-Market-Hall-Lobby-2-CSW8887-Web_a6f29b26c7.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/budapest/hotel-budapest-great-market-hall/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/budapest-lounge-e401f92669ae1bc9.webp",
+        "width": 1200,
+        "height": 785,
+        "sha256": "e401f92669ae1bc95049d2521d6b999c6898a270e2e3a48c716f03743bc8df29"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "No hotel-specific construction budget verified; project price and currency null.",
+      "Opening inventory explicitly dated; later operator inventory may differ.",
+      "Operator point corroborated by ArcGIS exact street address and OSM named hotel. An unrelated OSM electrical-substation result at number 2 is rejected."
+    ]
+  },
+  {
+    "key": "woburn",
+    "pin": {
+      "title": "Center Parcs Woburn Forest Opens",
+      "productName": "Center Parcs Woburn Forest",
+      "sourceUrl": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+      "description": "A woodland holiday village in Bedfordshire, with family lodges, indoor swimming, play areas and bookable activities; compare accommodation types and extra charges.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Resorts",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "Center Parcs Woburn Forest, Millbrook Road, Bedford MK45 2HZ, England, UK",
+      "latitude": 52.02762,
+      "longitude": -0.5241026,
+      "utcStartDateTime": "2014-06-06T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator’s 1 July 2014 investor presentation states that first paying guests arrived on 6 June, after a 16 May trial break. The launch release and later bondholder report corroborate 6 June 2014. This dates the whole village guest opening, not the earlier staff trial.",
+      "price": 250000000,
+      "priceCurrency": "GBP",
+      "references": [
+        {
+          "url": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+          "title": "Woburn Forest — Center Parcs",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.mynewsdesk.com/uk/center-parcs/pressreleases/new-center-parcs-village-now-open-to-short-break-guests-1069960",
+          "title": "New Center Parcs Village now open to short break guests",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.rns-pdf.londonstockexchange.com/rns/0214L_-2014-7-1.pdf",
+          "title": "Center Parcs Investor Presentation — Annual Results, 1 July 2014",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g190737-d6117690-Reviews-Center_Parcs_Woburn_Forest-Bedford_Bedfordshire_England.html",
+          "title": "Center Parcs Woburn Forest",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.metoffice.gov.uk/research/climate/maps-and-data/location-specific-long-term-averages/gcr9j7q0s",
+          "title": "Met Office — Bedford 1991–2020 station averages",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.joules.com/storelocator/centerparcswoburnforest/5328?sv=list",
+          "title": "Joules at Center Parcs Woburn Forest — site address",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A woodland holiday village in Bedfordshire, with family lodges, indoor swimming, play areas and bookable activities; compare accommodation types and extra charges.<cite data-ref=\"https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html\"></cite></p><h3>Family lodges and activities</h3><p>Choose the exact lodge type, bedroom layout, occupancy and any cot or accessibility needs. The village also opened with a hotel and spa suites; these are different accommodation products and should not be assumed to share a family lodge’s kitchen or occupancy.<cite data-ref=\"https://www.mynewsdesk.com/uk/center-parcs/pressreleases/new-center-parcs-village-now-open-to-short-break-guests-1069960\"></cite></p><p>The operator lists the Subtropical Swimming Paradise and indoor/outdoor play areas among included facilities. Many activities, cycle hire, restaurants and spa visits can add to the bill; check booking requirements, age rules, current prices and what your break includes. Pick a lodge location with walking distances and the site’s hills in mind.<cite data-ref=\"https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html\"></cite></p><h3>Guest feedback</h3><p>Guests praise the swimming complex, woodland setting and family activities. Recent reviews also describe expensive extras, variable lodge cleanliness, maintenance concerns and busy changeover days. These are guest accounts; read current reviews of your lodge type. The rubric covers the whole village, not only the separate hotel.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g190737-d6117690-Reviews-Center_Parcs_Woburn_Forest-Bedford_Bedfordshire_England.html\"></cite></p><h3>Opening and village development</h3><p>First paying guests arrived on 6 June 2014, following an earlier trial break. The operator’s July 2014 investor presentation reports approximately £250 million in development cost for the whole village. This is not a nightly price or a hotel-only construction cost.<cite data-ref=\"https://www.rns-pdf.londonstockexchange.com/rns/0214L_-2014-7-1.pdf\"></cite></p><p>The launch release describes 625 lodges, a 75-bedroom hotel and six spa suites. These are opening-era capacities, separate from later additions or refurbishment. The pin represents the complete Woburn Forest village.<cite data-ref=\"https://www.mynewsdesk.com/uk/center-parcs/pressreleases/new-center-parcs-village-now-open-to-short-break-guests-1069960\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 3.5,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g190737-d6117690-Reviews-Center_Parcs_Woburn_Forest-Bedford_Bedfordshire_England.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK village-wide snapshot 11,347 reviews, overall 4.0/5. Rooms 4.3, Service 4.2, Location 4.4, Cleanliness 4.4, Value 3.5, rounded to half steps. 693susan firsthand family review of a four-bedroom Woodland Lodge displayed October 2026 without exact day, date null. Kitchen excerpt describes that lodge, not every room type. Extras, cleanliness, maintenance and changeover tradeoffs retained. MICHELIN Woburn directory unavailable; Forbes Bedfordshire unavailable. AAA awards exclude UK. Acclaim null due specific guide evidence gaps, not unchecked.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g190737-d6117690-Reviews-Center_Parcs_Woburn_Forest-Bedford_Bedfordshire_England.html",
+          "title": "Highly recommend Center Parcs Woburn Forest.",
+          "publishedDate": null,
+          "quote": "The kitchen had two fridges, dishwasher and cooker."
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / holiday village",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Village guest opening",
+          "value": "6 June 2014",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rns-pdf.londonstockexchange.com/rns/0214L_-2014-7-1.pdf",
+            "title": "Center Parcs Investor Presentation — Annual Results, 1 July 2014",
+            "quote": "guests arrived 6th June.",
+            "publishedDate": "2014-07-01"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening accommodation mix",
+          "value": "625 lodges / 75 hotel bedrooms / 6 spa suites",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.mynewsdesk.com/uk/center-parcs/pressreleases/new-center-parcs-village-now-open-to-short-break-guests-1069960",
+            "title": "New Center Parcs Village now open to short break guests",
+            "quote": "625 lodges, a 75-bedroom hotel, six Spa Suites",
+            "publishedDate": "2014-06-05"
+          }
+        },
+        {
+          "key": "investment",
+          "label": "Approximate whole-village development cost",
+          "value": "GBP 250 million, approximately; whole village, not hotel-only or nightly rate",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rns-pdf.londonstockexchange.com/rns/0214L_-2014-7-1.pdf",
+            "title": "Center Parcs Investor Presentation — Annual Results, 1 July 2014",
+            "quote": "c£250m",
+            "publishedDate": "2014-07-01"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First paying village guests arrived",
+          "date": "2014-06-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.rns-pdf.londonstockexchange.com/rns/0214L_-2014-7-1.pdf",
+            "title": "Center Parcs Investor Presentation — Annual Results, 1 July 2014",
+            "quote": "guests arrived 6th June.",
+            "publishedDate": "2014-07-01"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Bedfordshire, England, UK",
+    "topActivities": [
+      {
+        "title": "Family woodland lodges",
+        "category": "Kids",
+        "description": "Choose the exact lodge layout and location; facilities differ across accommodation types.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Swimming and play areas",
+        "category": "Water",
+        "description": "Check operating times and age rules for the Subtropical Swimming Paradise and play areas.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Woodland walks and activities",
+        "category": "Nature",
+        "description": "Allow for hills and distances; paid activities, cycle hire and spa visits need separate checks.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+    "priceBasis": "Rates on request. Compare the booked lodge or room, stay length, occupancy, included facilities, food, paid activities and fees for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Late spring through early autumn for outdoor activities",
+      "peakSeason": "School holidays and major events; compare actual dates",
+      "shoulderSeason": "Dates outside school holidays and major events",
+      "lowSeason": "Date-specific; weather suitability does not establish cheaper rates",
+      "tempRange": "7.26°C–22.37°C normal daytime highs",
+      "weatherSummary": "Met Office Bedford station, 1991–2020 normals from the first station table. Nearby regional guidance for Woburn Forest: normal daytime highs and monthly rainfall, not a resort forecast. Rain can occur year-round; indoor swimming does not remove weather considerations for woodland activities.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Bedfordshire",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 7.26,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.97,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "good",
+          "tempC": 13.71,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 16.74,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 19.75,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 22.37,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 22.16,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.03,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.65,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 10.24,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 7.53,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "woburn-lake",
+        "imageSourceUrl": "https://centerparcs.scene7.com/is/image/centerparcs/Autumn%20shoot.%20WO.%20School%20age.%20Lake.%20CCornwell.%20In%20perpetuity%20002%2002%2011%2023-1?qlt=82&ts=1795189157114&dpr=off",
+        "sourceUrl": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+        "credit": "Center Parcs UK",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/woburn-lake-760d15a6a32ae521.webp",
+        "width": 1280,
+        "height": 854,
+        "sha256": "760d15a6a32ae5215a7064962ad9e2dbb1161f3ffcb3a1d20364a4119f5d99b6"
+      },
+      {
+        "key": "woburn-village",
+        "imageSourceUrl": "https://centerparcs.scene7.com/is/image/centerparcs/Village%20Square%20Drone%20WO%20July%202021%203-1?qlt=82&ts=1795189157501&dpr=off",
+        "sourceUrl": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+        "credit": "Center Parcs UK",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/woburn-village-c8d2212867801acc.webp",
+        "width": 1280,
+        "height": 720,
+        "sha256": "c8d2212867801acc1de79a4c56769260a8b9a93a8a5dbdf5ddbfe1813c6c42df"
+      },
+      {
+        "key": "woburn-playground",
+        "imageSourceUrl": "https://centerparcs.scene7.com/is/image/centerparcs/Adventure%20Playground%20WO%20June%202014%2004-2?qlt=82&ts=1795189157839&dpr=off",
+        "sourceUrl": "https://www.centerparcs.co.uk/discover-center-parcs/holiday-locations/woburn-forest.html",
+        "credit": "Center Parcs UK",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/woburn-playground-aa1faa38ac789c98.webp",
+        "width": 854,
+        "height": 1280,
+        "sha256": "aa1faa38ac789c9831bd0992efdad4b49aad49329b3158fa7d1b49134f8d5f7b"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN Woburn and Forbes Bedfordshire directories unavailable; acclaim null.",
+      "The GBP250m figure is approximate whole-village development cost. It is not assigned solely to the 75-room hotel.",
+      "Opening accommodation count is 625 lodges, 75 hotel bedrooms and six spa suites; later inventory is not verified.",
+      "Current operator page includes images and generic copy from other villages, excluded from the gallery. Retained photos explicitly identify Woburn by WO filenames.",
+      "Operator schema point 52.02762/-0.5241026 matches ArcGIS second resort POI. Other entry/village points do not indicate a different resort. Official operator postcode and onsite Joules Millbrook Road address retained; government onsite records also use Fordfield Road and an alternative service postcode."
+    ]
+  }
+]

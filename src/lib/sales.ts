@@ -33,6 +33,10 @@ export function formatSalesValue(
   return new Intl.NumberFormat(locale, options).format(row.value);
 }
 
+// A running total ("Life to date", "Shipped to date"), not one period's figure.
+export const isCumulative = (period: string | null) =>
+  /(?:life|shipped) to date/i.test(period ?? "");
+
 export type SalesSegment = {
   year: number;
   value: number;
@@ -54,10 +58,10 @@ export function yearSegments(
   group: PinSalesJson[],
 ): SalesSegment[] | null {
   const endYear = yearOf(row.asOf);
-  if (endYear === null || !/life to date/i.test(row.period ?? ""))
+  if (endYear === null || !isCumulative(row.period))
     return endYear === null ? null : [{ year: endYear, value: row.value }];
   const cumulative = group
-    .filter((r) => r.asOf && /life to date/i.test(r.period ?? ""))
+    .filter((r) => r.asOf && isCumulative(r.period))
     .sort((a, b) => (a.asOf as string).localeCompare(b.asOf as string));
   const firstYear = yearOf(cumulative[0]?.asOf ?? null) ?? endYear;
   const segments: SalesSegment[] = [];

@@ -5,9 +5,7 @@ Round 67 follow-up 10: caption audit of all 19,146 prod photos, nothing wrong (c
 The `PinSales` panel and the 6am/6pm `productSales` job are deployed. Playbook: "Sales figures panel: backfill and refresh" in `.agents/skills/daily-news-job/SKILL.md`; helper `scripts/sales/nintendo_ir_tables.py`.
 
 - [ ] **Add 14 more PS5 quarters** from Sony results via Gematsu "PS5 shipments top X million" posts (already sourced by the research agent; skip any quarter where outlets disagree). Push to local + production by `sourceUrl`.
-- [ ] **Commit the sales work** (schema `0267`, `src/lib/sales.ts`, `pinSales` model/route/component, `productSales` job, docs, skill, helper script) without the unrelated PreparedImage and menu-component changes from other sessions.
 - [ ] **Re-run `scripts/sales/nintendo_ir_tables.py`** after each Nintendo results release (early Feb, May, Aug, Nov) and push new rows.
-- [ ] **Translations:** sales panel strings are in all 16 locales; no pin translation runs needed (left to the translation agent).
 
 ## Production translations — updated November 15, 2026
 

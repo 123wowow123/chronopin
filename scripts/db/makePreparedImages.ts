@@ -1,4 +1,4 @@
-// Keeps the WebP renditions restaurant and landing photos are served from
+// Keeps the WebP renditions pin, restaurant and landing photos are served from
 // (src/lib/preparedImage.ts) in step with their originals, so pages load them
 // straight from Azure rather than through the VM's /_next/image resizer.
 // Only what changed is touched:
@@ -11,12 +11,13 @@
 //   npm run images:prepared                       local Azurite
 //   npm run images:prepared -- --prod             production storage (needs `az login`)
 //   npm run images:prepared -- --prod --prefix restaurant-dishes/san-diego --dry-run
+//   npm run images:prepared -- --prod --prefix root      pin thumbnails only
 import '../env';
 import { execFileSync } from 'node:child_process';
 import { parseArgs } from 'node:util';
 import { BlobServiceClient } from '@azure/storage-blob';
 import config from '@/server/config';
-import { PREPARED_PREFIXES, PREPARED_WIDTHS, isPreparableName, preparedName } from '@/lib/preparedImage';
+import { PREPARED_PREFIXES, PREPARED_ROOT, PREPARED_WIDTHS, isPreparableName, preparedName } from '@/lib/preparedImage';
 import { uploadPreparedRenditions } from '@/server/preparedImages';
 
 const SUB = '9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5';
@@ -27,9 +28,10 @@ const { values } = parseArgs({ options: {
   concurrency: { type: 'string', default: '8' },
   'dry-run': { type: 'boolean', default: false },
 } });
-const prefixes = values.prefix ?? [...PREPARED_PREFIXES];
-if (prefixes.some((prefix) => !PREPARED_PREFIXES.some((covered) => prefix.startsWith(covered)))) {
-  throw new Error(`--prefix must sit under ${PREPARED_PREFIXES.join(', ')}: the site only uses renditions there`);
+// `root` is the pin thumbnails at the top of the container (no folder).
+const prefixes = values.prefix ?? [PREPARED_ROOT, ...PREPARED_PREFIXES];
+if (prefixes.some((prefix) => prefix !== PREPARED_ROOT && !PREPARED_PREFIXES.some((covered) => prefix.startsWith(covered)))) {
+  throw new Error(`--prefix must be ${PREPARED_ROOT} or sit under ${PREPARED_PREFIXES.join(', ')}: the site only uses renditions there`);
 }
 const limit = values.limit ? Number(values.limit) : Infinity;
 const concurrency = Number(values.concurrency);
@@ -39,18 +41,28 @@ const connection = values.prod
   : config.azureStorage.connectionString;
 const container = BlobServiceClient.fromConnectionString(connection).getContainerClient('thumb');
 
+// The blobs under a scope: a folder's whole tree, or (root) only the
+// top-level files, without walking every folder.
+async function* list(prefix: string) {
+  if (prefix === PREPARED_ROOT || prefix.endsWith('/' + PREPARED_ROOT)) {
+    const at = prefix === PREPARED_ROOT ? '' : prefix.slice(0, -PREPARED_ROOT.length);
+    for await (const item of container.listBlobsByHierarchy('/', { prefix: at })) if (item.kind === 'blob') yield item;
+  } else {
+    yield* container.listBlobsFlat({ prefix });
+  }
+}
 // Rendition name -> when it was written.
 const renditions = new Map<string, Date>();
 for (const width of PREPARED_WIDTHS) {
   for (const prefix of prefixes) {
-    for await (const blob of container.listBlobsFlat({ prefix: `r/v1/${width}/${prefix}` })) renditions.set(blob.name, blob.properties.lastModified);
+    for await (const blob of list(`r/v1/${width}/${prefix}`)) renditions.set(blob.name, blob.properties.lastModified);
   }
 }
 const expected = new Set<string>();
 const todo: { name: string; widths: number[]; replace: boolean }[] = [];
 let missing = 0, stale = 0;
 for (const prefix of prefixes) {
-  for await (const blob of container.listBlobsFlat({ prefix })) {
+  for await (const blob of list(prefix)) {
     if (!isPreparableName(blob.name)) continue;
     const widths: number[] = [];
     let replace = false;

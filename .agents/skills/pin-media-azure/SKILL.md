@@ -48,12 +48,14 @@ site information sheet" with the PDF as `authorUrl`. Template: `scripts/construc
 ## After uploading
 Read the pin back, confirm each media URL loads, and note undownloadable images (the apply script drops them).
 
-## Restaurant and landing photos are served from prepared renditions (2026-11-22)
-Photos under `restaurant-dishes/`, `restaurant-images/`, `restaurant-galleries/` and `landing-galleries/` are shown
+## Pin, restaurant and landing photos are served from prepared renditions (2026-11-22)
+Pin thumbnails at the container root (`Medium.thumbName`, shown by `PinMedia`) and photos under `restaurant-dishes/`,
+`restaurant-images/`, `restaurant-galleries/` and `landing-galleries/` are shown
 from 240/640/1280 px WebP copies at `r/v1/<width>/<name>[.webp]` in the same `thumb` container, loaded straight
 from Azure (`PreparedImage`, `src/lib/preparedImage.ts`) instead of through the VM's `/_next/image` resizer. A missing
-copy falls back to the resizer, so it still shows, but costs a failed request each time. `uploadDishPhotos.ts`
-makes the copies on upload. Any other upload into those folders needs
+copy falls back to the resizer, so it still shows, but costs a failed request each time. `saveThumb` (every pin
+picture saved through the app or the admin API) and `uploadDishPhotos.ts` make the copies on upload; `--prefix root`
+covers pin thumbnails only. Any other upload into those folders needs
 `npm run images:prepared -- --prod --prefix <folder>/<slug>` afterwards. It only touches what changed: makes missing
 copies, remakes copies older than their original (the original was replaced), deletes copies whose original was
 deleted, leaves the rest alone, and reads each upload back. Run it with `--dry-run` first to see the counts.

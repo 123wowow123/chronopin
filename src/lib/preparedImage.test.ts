@@ -15,8 +15,13 @@ describe('preparedSources', () => {
     expect(preparedName('restaurant-images/a/b.webp', 240)).toBe('r/v1/240/restaurant-images/a/b.webp');
   });
 
-  it('leaves pin thumbs, other folders and other hosts alone', () => {
-    expect(preparedSources(`${blob}65d88065-5c15-4850-83f3-f8fca226e3da.jpeg`)).toBeNull();
+  it('covers pin thumbs at the container root', () => {
+    expect(preparedSources(`${blob}65d88065-5c15-4850-83f3-f8fca226e3da.jpeg`)!.src).toBe(`${blob}r/v1/640/65d88065-5c15-4850-83f3-f8fca226e3da.jpeg.webp`);
+    expect(preparedSources(`${blob}65d88065-5c15-4850-83f3-f8fca226e3da.gif`)).toBeNull();
+  });
+
+  it('leaves other folders and other hosts alone', () => {
+    expect(preparedSources(`${blob}card/v1/65d88065-5c15-4850-83f3-f8fca226e3da.jpeg`)).toBeNull();
     expect(preparedSources(`${blob}housing/x.webp`)).toBeNull();
     expect(preparedSources('https://images.squarespace-cdn.com/restaurant-dishes/x.webp')).toBeNull();
     expect(preparedSources(`${blob}restaurant-dishes/x.svg`)).toBeNull();
