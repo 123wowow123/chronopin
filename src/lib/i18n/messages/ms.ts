@@ -727,6 +727,7 @@ const ms: Messages = {
       units: 'Unit terjual',
       revenue: 'Hasil',
       source: 'Sumber',
+      unknown: 'Pecahan tidak diketahui',
     },
     gameMaturity: 'Penarafan umur',
     gamePlatforms: 'Platform',

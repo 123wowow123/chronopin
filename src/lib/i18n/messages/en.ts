@@ -727,6 +727,7 @@ const en = {
       units: 'Units sold',
       revenue: 'Revenue',
       source: 'Source',
+      unknown: 'Split unknown',
     },
     gameMaturity: 'Rated',
     gamePlatforms: 'Platforms',

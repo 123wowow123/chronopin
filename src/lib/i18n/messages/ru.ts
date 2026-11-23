@@ -731,6 +731,7 @@ const ru: Messages = {
       units: 'Продано единиц',
       revenue: 'Выручка',
       source: 'Источник',
+      unknown: 'Разбивка неизвестна',
     },
     gameMaturity: 'Возрастной рейтинг',
     gamePlatforms: 'Платформы',

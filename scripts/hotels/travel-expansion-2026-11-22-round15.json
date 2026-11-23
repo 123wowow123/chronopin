@@ -1,0 +1,679 @@
+[
+  {
+    "key": "heidelberg",
+    "pin": {
+      "title": "MEININGER Hotel Heidelberg Hauptbahnhof Opens",
+      "productName": "MEININGER Hotel Heidelberg Hauptbahnhof",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+      "description": "A budget hotel and hostel hybrid near Heidelberg’s main railway station, with private family rooms, a communal guest kitchen and colourful common areas.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Carl-Benz-Straße 2/1, 69115 Heidelberg, Germany",
+      "latitude": 49.3986953,
+      "longitude": 8.678485,
+      "utcStartDateTime": "2019-07-24T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s later Lyon release dates the Heidelberg Hauptbahnhof opening to 24 July in its explicit 2019 opening chronology. The subsequent Brussels release also confirms 24 July. This is the actual opening milestone, not the earlier planned beginning-of-2019 date.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+          "title": "MEININGER Hotel Heidelberg Hauptbahnhof — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-heidelberg/",
+          "title": "New hotel in Heidelberg",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+          "title": "New hotel in Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187286-d17756009-Reviews-MEININGER_Hotel_Heidelberg_Hauptbahnhof-Heidelberg_Baden_Wurttemberg.html",
+          "title": "MEININGER Hotel Heidelberg Hauptbahnhof",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/monthly/kl/historical/monatswerte_KL_05906_17810101_20251231_hist.zip",
+          "title": "DWD — Mannheim 05906 monthly climate observations",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Niederschlag_1991-2020.txt",
+          "title": "DWD — 1991–2020 monthly precipitation normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid near Heidelberg’s main railway station, with private family rooms, a communal guest kitchen and colourful common areas.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/\"></cite></p><h3>Family and budget stay</h3><p>Book a whole private family room and confirm the beds, occupancy and any cot requirements. Individual dorm beds are a different booking product. The operator provides a shared guest kitchen and common areas; check house rules and available equipment.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/\"></cite></p><p>The hotel is near the main railway station, outside the old-town core. Allow walking or public-transport time to central sights. Compare your dates’ full private-room charge, taxes, breakfast, parking, luggage storage and other extras.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/\"></cite></p><h3>Review tradeoffs</h3><p>Guests praise helpful staff and the useful communal kitchen, while other accounts report small or basic rooms, housekeeping issues and the distance to the old town. Read recent feedback about your room category and noise. Tripadvisor component scores are a research snapshot, not live ratings.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g187286-d17756009-Reviews-MEININGER_Hotel_Heidelberg_Hauptbahnhof-Heidelberg_Baden_Wurttemberg.html\"></cite></p><h3>Opening and scale</h3><p>MEININGER records the Heidelberg Hauptbahnhof opening on 24 July 2019 in its subsequent launch chronology. An earlier beginning-of-2019 target is not substituted for the opening date.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/\"></cite></p><p>The opening announcement reports 100 rooms and 331 beds. The earlier proposal’s 336-bed target is not treated as delivered capacity. No hotel-specific construction investment was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-heidelberg/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 4.5,
+      "location": 4,
+      "cleanliness": 4,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g187286-d17756009-Reviews-MEININGER_Hotel_Heidelberg_Hauptbahnhof-Heidelberg_Baden_Wurttemberg.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 68 reviews, overall 4.1/5. Rooms 3.8, Service 4.4, Location 3.8, Cleanliness 4.2, Value 4.2, rounded to half steps. English firsthand jordanellie41 review displayed February 2025 without exact publication day, date null. Kitchen usefulness, basic rooms, extras and distance tradeoffs retained. MICHELIN Heidelberg blocked by verification; Forbes Heidelberg unavailable. AAA award program excludes Germany. Acclaim null because guide evidence unavailable, not unchecked.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g187286-d17756009-Reviews-MEININGER_Hotel_Heidelberg_Hauptbahnhof-Heidelberg_Baden_Wurttemberg.html",
+          "title": "A CROSS BETWEEN A HOTEL AND A HOSTEL",
+          "publishedDate": null,
+          "quote": "There's a kitchen for all the guests to make their own food"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opened",
+          "value": "24 July 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 24 July",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "100 rooms / 331 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-heidelberg/",
+            "title": "New hotel in Heidelberg",
+            "quote": "100 rooms with a total of 331 beds",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel opened",
+          "date": "2019-07-24",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "on 24 July",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Heidelberg, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and verify beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Communal guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Old town by public transport",
+        "category": "Culture",
+        "description": "Plan the route and transit time from the station area to Heidelberg’s historic sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Spring through early autumn for sightseeing",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "5.3°C–26.7°C normal daytime highs",
+      "weatherSummary": "DWD Mannheim station 05906, nearby regional guidance for Heidelberg. Daytime highs are calculated as the equal-weight mean of each calendar month’s MO_TX observations in 1991–2020 (30 valid values per month). Rainfall uses DWD’s published Mannheim 1991–2020 precipitation normals. These averages are not a property forecast.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate / Heidelberg and the Upper Rhine",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 5.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 24.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 26.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 26.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 9.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 5.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "heidelberg-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/f/5/csm_MEININGER-Hotel-Heidelberg-Hauptbahnhof-2_2-Bed-Room-3-WSC9211-Web_bd3c6353bc.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/heidelberg-room-535ca89f5469d5bd.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "535ca89f5469d5bd757e67061de2a487a1ff41a50fa33f26610fbbe8173ddab1"
+      },
+      {
+        "key": "heidelberg-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/3/4/csm_MEININGER-Hotel-Heidelberg-Hauptbahnhof-Guest-Kitchen-1-WSC9663-Web_e4cdf8f1b8.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/heidelberg-kitchen-70f9fd09512f3272.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "70f9fd09512f3272f9a72c7b2c21346fcda07c4e4f78774db0e5c9a386e3afde"
+      },
+      {
+        "key": "heidelberg-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/3/f/csm_MEININGER-Hotel-Heidelberg-Hauptbahnhof-Lobby-5-WSC9813-Web_5c48f69a06.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/heidelberg-lounge-b4a8f0507e73f36e.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "b4a8f0507e73f36e74f6e6214d2140b377a004191a30e15890fa4e0cd87e0ca6"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly room quote verified; rates on request.",
+      "No property-specific construction investment verified; project price and currency null.",
+      "Comparative engineering scores unsupported and left null.",
+      "Translations left to the translation agent.",
+      "MICHELIN verification wall and Forbes Heidelberg unavailable; acclaim null.",
+      "Operator hotel URL uses hotel-heidelberg-central-station, not guessed Hauptbahnhof slug which returned 404.",
+      "Mannheim is a nearby regional proxy, not an onsite Heidelberg station; derived temperature baseline and published rainfall baseline explicitly distinguished.",
+      "Raw Mannheim monthly December 2020 precipitation is missing; no gap is filled by guess. Published DWD 30-year rainfall-normal row used instead.",
+      "ArcGIS first hotel-name search result was the wrong Ibis property and rejected. Correct MEININGER POI and exact 2/1 address corroborate operator point."
+    ]
+  },
+  {
+    "key": "pirate",
+    "pin": {
+      "title": "LEGOLAND Pirate Island Hotel Florida Opens",
+      "productName": "LEGOLAND Pirate Island Hotel Florida",
+      "sourceUrl": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+      "description": "A pirate-themed family hotel at LEGOLAND Florida, with separate children’s sleeping areas, LEGO treasure hunts and a short route to the park entrance.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "1 LEGOLAND Way, Winter Haven, FL 33884, United States",
+      "latitude": 27.98777,
+      "longitude": -81.6914146,
+      "utcStartDateTime": "2020-06-01T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The Points Guy’s firsthand 2021 stay account explicitly dates the hotel opening to June 1, 2020. A 2022 Central Florida Development Council interview quotes LEGOLAND saying Pirate Island debuted with the June 1 reopening; a later grand-opening celebration was separate. Earlier spring/April targets and unsourced June 25 summaries are not used.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+          "title": "Pirate Island Hotel — LEGOLAND Florida Resort",
+          "confidence": 100
+        },
+        {
+          "url": "https://thepointsguy.com/news/legoland-florida-pirate-island-hotel",
+          "title": "5 things to know about staying at Legoland Florida's new Pirate Island Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.cfdc.org/peppa-pig-theme-park-preparing-to-open-in-winter-haven/",
+          "title": "Peppa Pig Theme Park Preparing to Open in Winter Haven",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g34746-d19270727-Reviews-LEGOLAND_Pirate_Island_Hotel-Winter_Haven_Florida.html",
+          "title": "LEGOLAND Pirate Island Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.aaa.com/tripcanvas/hotel/legoland-pirate-island-hotel-AA128529",
+          "title": "LEGOLAND Pirate Island Hotel — AAA Trip Canvas",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/florida/places-to-stay/vacation-packages/room-only/",
+          "title": "LEGOLAND Florida Room Only",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USC00089707&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Winter Haven USC00089707, 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A pirate-themed family hotel at LEGOLAND Florida, with separate children’s sleeping areas, LEGO treasure hunts and a short route to the park entrance.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/\"></cite></p><h3>Family stay</h3><p>The hotel advertises pirate-themed rooms and suites, a separate children’s area, treasure hunts, entertainment and a pool. Select the exact room layout and occupancy, and check current activity schedules and pool access.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/\"></cite></p><p>Pirate Island is connected to the original LEGOLAND Hotel and shares its check-in area, but has a separate themed wing. The Points Guy’s February 2021 firsthand account describes that layout; its complimentary media stay is disclosed, and historical menu prices and pandemic procedures are not current promises.<cite data-ref=\"https://thepointsguy.com/news/legoland-florida-pirate-island-hotel\"></cite></p><p>Room-only stays are available at the resort. Check your selected package’s park admission, breakfast, parking, taxes and cancellation terms rather than assuming every booking includes tickets.<cite data-ref=\"https://www.legoland.com/florida/places-to-stay/vacation-packages/room-only/\"></cite></p><h3>Review tradeoffs</h3><p>The opened Tripadvisor snapshot has an overall 3.3/5 and Value 2.8/5 from 72 reviews. Recent guests report service, housekeeping and value concerns alongside praise for the theming and location. Read recent comments before booking; this family-focused property is not presented as a budget option.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g34746-d19270727-Reviews-LEGOLAND_Pirate_Island_Hotel-Winter_Haven_Florida.html\"></cite></p><p>The opened AAA property page identifies a Three Diamond designation and a 150-unit hotel. This is a separate inspection distinction, not a guest-review score or MICHELIN award.<cite data-ref=\"https://www.aaa.com/tripcanvas/hotel/legoland-pirate-island-hotel-AA128529\"></cite></p><h3>Opening and capacity</h3><p>Pirate Island began welcoming guests on 1 June 2020, according to the firsthand account and an operator interview describing its debut alongside the resort reopening. The operator said a fuller grand-opening moment followed later.<cite data-ref=\"https://thepointsguy.com/news/legoland-florida-pirate-island-hotel\"></cite></p><p>The Central Florida Development Council interview quotes the resort reporting 150 new rooms. The original hotel, Pirate Island and Beach Retreat remain separate accommodation identities. No Pirate Island-specific construction investment was verified.<cite data-ref=\"https://www.cfdc.org/peppa-pig-theme-park-preparing-to-open-in-winter-haven/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4,
+      "service": 3.5,
+      "location": 4,
+      "cleanliness": 3.5,
+      "value": 3,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g34746-d19270727-Reviews-LEGOLAND_Pirate_Island_Hotel-Winter_Haven_Florida.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 72 reviews, overall 3.3/5. Rooms 3.8, Service 3.5, Location 4.2, Cleanliness 3.7, Value 2.8, rounded to half steps. Value/service/housekeeping tradeoffs retained. Nick Ewen firsthand TPG stay published 2021-02-19; complimentary media accommodation disclosed. AAA exact-property page explicitly exposes diamond-three-long and 150 units, Three Diamond recognition stated in article. MICHELIN Winter Haven unavailable; Forbes Orlando checked without property match, incomplete local coverage. Acclaim remains null: no numeric conversion for Three Diamond established and remaining guide evidence incomplete.",
+      "reviews": [
+        {
+          "url": "https://thepointsguy.com/news/legoland-florida-pirate-island-hotel",
+          "title": "5 things to know about staying at Legoland Florida's new Pirate Island Hotel",
+          "publishedDate": "2021-02-19",
+          "quote": "But the most creative, kid-friendly feature was the in-room treasure hunt"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel guest opening",
+          "value": "1 June 2020",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://thepointsguy.com/news/legoland-florida-pirate-island-hotel",
+            "title": "5 things to know about staying at Legoland Florida's new Pirate Island Hotel",
+            "quote": "June 1, 2020",
+            "publishedDate": "2021-02-19"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Operator-reported addition",
+          "value": "150 rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.cfdc.org/peppa-pig-theme-park-preparing-to-open-in-winter-haven/",
+            "title": "Peppa Pig Theme Park Preparing to Open in Winter Haven",
+            "quote": "150 new rooms",
+            "publishedDate": "2022-02-18"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel welcomed guests",
+          "date": "2020-06-01",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://thepointsguy.com/news/legoland-florida-pirate-island-hotel",
+            "title": "5 things to know about staying at Legoland Florida's new Pirate Island Hotel",
+            "quote": "June 1, 2020",
+            "publishedDate": "2021-02-19"
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Winter Haven, Florida, United States",
+    "topActivities": [
+      {
+        "title": "Pirate-themed family rooms",
+        "category": "Kids",
+        "description": "Confirm the separate children’s area, beds and occupancy for the selected room.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGO treasure hunts",
+        "category": "Kids",
+        "description": "Check current in-room treasure hunts and scheduled activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND Florida visits",
+        "category": "Adventure",
+        "description": "Confirm opening calendars and tickets in the selected package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "bestSeason": "Late autumn and spring for less summer heat",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "22.8°C–33.8°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Winter Haven station USC00089707, 1991–2020 monthly normals in metric units. Local regional guidance for the hotel: normal daytime highs, not a forecast. Summer is hot and wet; check tropical-weather outlooks and attraction calendars.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Winter Haven",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 22.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 29.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "pirate-exterior",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/h5kawqox/pirate-island-hotel-outside-3x2-0-5mb.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pirate-exterior-d9fed50329ee450a.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "d9fed50329ee450a8ac7b89d9430a727c669d5d118476869d6ee8c9110a642f2"
+      },
+      {
+        "key": "pirate-room",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/m21lailw/adult-bed-close-pirate-island-hotel-themed-3x2-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pirate-room-a336a32cf7154d54.webp",
+        "width": 1600,
+        "height": 1066,
+        "sha256": "a336a32cf7154d549ca3bba0612a8f933bd9d5bf9718524f8d83ed5409187a5a"
+      },
+      {
+        "key": "pirate-treasure",
+        "imageSourceUrl": "https://www.legoland.com/florida/media/adjgv3oo/2019-06-26_legolandflorida_pirateislandhotel_0113-5.jpg",
+        "sourceUrl": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+        "credit": "LEGOLAND Florida Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/pirate-treasure-4963bba434286e47.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "4963bba434286e47f9b038c8b2cd6e972fb0118f6acfe7b1614d3db704221df0"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly room quote verified; rates on request.",
+      "No property-specific construction investment verified; project price and currency null.",
+      "Comparative engineering scores unsupported and left null.",
+      "Translations left to the translation agent.",
+      "No established rubric conversion for verified AAA Three Diamond designation; MICHELIN unavailable and Forbes local evidence incomplete, acclaim null with actual recognition stated separately.",
+      "Firsthand TPG review was a complimentary February 2021 media stay, explicitly disclosed; current operational details rely on operator page.",
+      "Exact Pirate Island ArcGIS POI used, separate from original hotel point. OSM hotel text search returned no result.",
+      "June 1 guest opening is corroborated by operator interview; later celebration and earlier planned April opening are different events."
+    ]
+  }
+]

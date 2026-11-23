@@ -726,6 +726,7 @@ const vi: Messages = {
       units: 'Số lượng đã bán',
       revenue: 'Doanh thu',
       source: 'Nguồn',
+      unknown: 'Chưa rõ phân bổ',
     },
     gameMaturity: 'Phân loại độ tuổi',
     gamePlatforms: 'Nền tảng',

@@ -796,6 +796,7 @@ const ar: Messages = {
       units: 'الوحدات المباعة',
       revenue: 'الإيرادات',
       source: 'المصدر',
+      unknown: 'التوزيع غير معروف',
     },
     gameMaturity: 'التصنيف العمري',
     gamePlatforms: 'المنصات',

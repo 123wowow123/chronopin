@@ -719,6 +719,7 @@ const th: Messages = {
       units: 'จำนวนที่ขายได้',
       revenue: 'รายได้',
       source: 'แหล่งที่มา',
+      unknown: 'ไม่ทราบการแบ่งรายปี',
     },
     gameMaturity: 'การจัดเรตติ้ง',
     gamePlatforms: 'แพลตฟอร์ม',

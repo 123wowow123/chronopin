@@ -1,5 +1,6 @@
 import {
   formatSalesValue,
+  SALES_UNKNOWN_COLOR,
   SALES_YEAR_COLORS,
   yearSegments,
   type PinSalesJson,
@@ -51,7 +52,9 @@ export function PinSales({
         const years = [
           ...new Set(
             group.flatMap((row) =>
-              (yearSegments(row, group) ?? []).map((s) => s.year),
+              (yearSegments(row, group) ?? [])
+                .filter((s) => !s.unknown)
+                .map((s) => s.year),
             ),
           ),
         ].sort((a, b) => a - b);
@@ -85,20 +88,30 @@ export function PinSales({
                       yearSegments(row, group) ?? [
                         { year: 0, value: row.value },
                       ]
-                    ).map((seg) => ({
-                      key: String(seg.year),
-                      label: seg.year ? String(seg.year) : "",
-                      valueText: formatSalesValue(
+                    ).map((seg) => {
+                      const amount = formatSalesValue(
                         { ...row, value: seg.value },
                         t.locale,
-                      ),
-                      pct: (seg.value / row.value) * 100,
-                      color:
-                        SALES_YEAR_COLORS[
-                          Math.max(0, years.indexOf(seg.year)) %
-                            SALES_YEAR_COLORS.length
-                        ],
-                    }))}
+                      );
+                      return {
+                        key: String(seg.year),
+                        label: seg.unknown
+                          ? `${seg.year}–${seg.toYear}`
+                          : seg.year
+                            ? String(seg.year)
+                            : "",
+                        valueText: seg.unknown
+                          ? `${amount} · ${t("pin.sales.unknown")}`
+                          : amount,
+                        pct: (seg.value / row.value) * 100,
+                        color: seg.unknown
+                          ? SALES_UNKNOWN_COLOR
+                          : SALES_YEAR_COLORS[
+                              Math.max(0, years.indexOf(seg.year)) %
+                                SALES_YEAR_COLORS.length
+                            ],
+                      };
+                    })}
                     sourceHref={row.sourceUrl}
                     sourceText={t("pin.sales.source")}
                   />

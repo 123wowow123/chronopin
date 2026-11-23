@@ -725,6 +725,7 @@ const hi: Messages = {
       units: 'बिकी इकाइयां',
       revenue: 'राजस्व',
       source: 'स्रोत',
+      unknown: 'विभाजन अज्ञात',
     },
     gameMaturity: 'आयु रेटिंग',
     gamePlatforms: 'प्लेटफ़ॉर्म',

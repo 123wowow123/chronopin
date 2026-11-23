@@ -720,6 +720,7 @@ const it: Messages = {
       units: 'Unità vendute',
       revenue: 'Ricavi',
       source: 'Fonte',
+      unknown: 'Ripartizione sconosciuta',
     },
     gameMaturity: 'Classificazione',
     gamePlatforms: 'Piattaforme',

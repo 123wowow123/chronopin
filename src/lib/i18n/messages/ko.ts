@@ -722,6 +722,7 @@ const ko: Messages = {
       units: '판매량',
       revenue: '매출',
       source: '출처',
+      unknown: '연도별 내역 미상',
     },
     gameMaturity: '등급',
     gamePlatforms: '지원 플랫폼',

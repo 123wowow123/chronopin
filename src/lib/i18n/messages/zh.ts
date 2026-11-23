@@ -723,6 +723,7 @@ const zh: Messages = {
       units: '销量',
       revenue: '收入',
       source: '来源',
+      unknown: '分年数据未知',
     },
     gameMaturity: '分级',
     gamePlatforms: '支持平台',

@@ -4127,5 +4127,273 @@
       ]
     },
     "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Heidelberg, Germany",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and verify beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Communal guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Old town by public transport",
+        "category": "Culture",
+        "description": "Plan the route and transit time from the station area to Heidelberg’s historic sights.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/heidelberg/hotel-heidelberg-central-station/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Spring through early autumn for sightseeing",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "5.3°C–26.7°C normal daytime highs",
+      "weatherSummary": "DWD Mannheim station 05906, nearby regional guidance for Heidelberg. Daytime highs are calculated as the equal-weight mean of each calendar month’s MO_TX observations in 1991–2020 (30 valid values per month). Rainfall uses DWD’s published Mannheim 1991–2020 precipitation normals. These averages are not a property forecast.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate / Heidelberg and the Upper Rhine",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 5.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 12.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 17.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 21,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 24.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 26.7,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 26.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 21.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 15.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 9.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 5.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
+  },
+  {
+    "sourceUrl": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Winter Haven, Florida, United States",
+    "topActivities": [
+      {
+        "title": "Pirate-themed family rooms",
+        "category": "Kids",
+        "description": "Confirm the separate children’s area, beds and occupancy for the selected room.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGO treasure hunts",
+        "category": "Kids",
+        "description": "Check current in-room treasure hunts and scheduled activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND Florida visits",
+        "category": "Adventure",
+        "description": "Confirm opening calendars and tickets in the selected package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/florida/places-to-stay/pirate-island-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "bestSeason": "Late autumn and spring for less summer heat",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "22.8°C–33.8°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Winter Haven station USC00089707, 1991–2020 monthly normals in metric units. Local regional guidance for the hotel: normal daytime highs, not a forecast. Summer is hot and wet; check tropical-weather outlooks and attraction calendars.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Humid subtropical / Winter Haven",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 22.8,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "prime",
+          "tempC": 24.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 29.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "good",
+          "tempC": 31.6,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "fair",
+          "tempC": 33.1,
+          "rainfall": "High"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "fair",
+          "tempC": 33.8,
+          "rainfall": "High"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "fair",
+          "tempC": 33.4,
+          "rainfall": "High"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "fair",
+          "tempC": 32.3,
+          "rainfall": "High"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 29.7,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "prime",
+          "tempC": 26.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 23.9,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "checkedAt": "2026-11-22"
   }
 ]

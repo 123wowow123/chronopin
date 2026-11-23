@@ -722,6 +722,7 @@ const es: Messages = {
       units: 'Unidades vendidas',
       revenue: 'Ingresos',
       source: 'Fuente',
+      unknown: 'Desglose desconocido',
     },
     gameMaturity: 'Clasificación',
     gamePlatforms: 'Plataformas',

@@ -722,6 +722,7 @@ const ja: Messages = {
       units: '販売数',
       revenue: '売上高',
       source: '出典',
+      unknown: '内訳は不明',
     },
     gameMaturity: '年齢区分',
     gamePlatforms: '対応プラットフォーム',

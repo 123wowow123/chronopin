@@ -727,6 +727,7 @@ const id: Messages = {
       units: 'Unit terjual',
       revenue: 'Pendapatan',
       source: 'Sumber',
+      unknown: 'Rincian tidak diketahui',
     },
     gameMaturity: 'Peringkat usia',
     gamePlatforms: 'Platform',
