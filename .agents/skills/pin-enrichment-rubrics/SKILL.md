@@ -30,6 +30,7 @@ If a figure or review is unavailable, record a specific research gap instead of 
   rather than shared local/production IDs. Replay example: `scripts/hotels/expandTravelShelves.mjs`
   and its dated research JSON. Use database-allocated IDs, verify Azure images before creating pins,
   preserve rate qualifiers (tax, season, room type) and leave construction cost separate from nightly rates.
+  Hotel review saves deduplicate by URL: send one review per exact URL, even when a public guest-review endpoint returns several accounts. Keep other verified tradeoffs in the article.
   Source-URL shelf membership is application code and needs an explicitly requested deploy to go live.
   Subsequent batches use `--catalog scripts/hotels/<dated-catalog>.json`; replay merges the runtime
   catalog by source URL and retains the earlier batches. Supply property-specific `bestTimeToGo` data

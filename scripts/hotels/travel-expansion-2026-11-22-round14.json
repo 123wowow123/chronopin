@@ -1,0 +1,681 @@
+[
+  {
+    "key": "brussels",
+    "pin": {
+      "title": "MEININGER Hotel Bruxelles Gare du Midi Opens",
+      "productName": "MEININGER Hotel Bruxelles Gare du Midi",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+      "description": "A budget hotel and hostel hybrid near Brussels-Midi station, with whole private family rooms, a shared guest kitchen and social spaces.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Budget-Friendly",
+        "Completed"
+      ],
+      "address": "Rue Bara 101, 1070 Anderlecht, Brussels, Belgium",
+      "latitude": 50.8356863,
+      "longitude": 4.3311413,
+      "utcStartDateTime": "2019-08-06T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "MEININGER’s subsequent Lyon launch release explicitly dates the Bruxelles Gare du Midi inauguration to 6 August 2019. The original announcement is labelled August 2019; the September 3 Hospitality Net syndication date is not used as an opening date.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+          "title": "MEININGER Hotel Bruxelles Gare du Midi — official hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-brussels/",
+          "title": "Second hotel in Brussels",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+          "title": "New hotel in Lyon",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.meininger-hotels.com/index.php?eID=meininger_reviews&page=0&hotel=BRU-RB&lang=en&target=family",
+          "title": "MEININGER / TrustYou — Bruxelles Gare du Midi verified family guest reviews",
+          "confidence": 100
+        },
+        {
+          "url": "https://opendata.meteo.be/ftp/climate/climate_statistics/climate_INS21016_9120_fr.pdf",
+          "title": "IRM — Uccle 1991–2020 climate statistics",
+          "confidence": 100
+        },
+        {
+          "url": "https://guide.michelin.com/en/hotels-stays/brussels",
+          "title": "MICHELIN Guide — Brussels hotels",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.forbestravelguide.com/destinations/brussels-belgium",
+          "title": "Brussels Luxury Hotels — Forbes Travel Guide",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A budget hotel and hostel hybrid near Brussels-Midi station, with whole private family rooms, a shared guest kitchen and social spaces.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/\"></cite></p><h3>Family and budget stay</h3><p>Choose a whole private room and confirm its beds, occupancy and cot requirements. A dorm bed is a different booking product. The operator lists a communal guest kitchen and lounge, useful for a family willing to share facilities.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/\"></cite></p><p>The Rue Bara hotel is convenient for Brussels-Midi rail connections. Allow walking or transit time to central sights and plan your arrival route. Compare total private-room cost, breakfast, taxes, parking and luggage-storage charges for your dates.<cite data-ref=\"https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/\"></cite></p><h3>Guest feedback</h3><p>The operator publishes TrustYou feedback from verified stays. Family guests describe useful kitchen access and comfortable rooms, while others object to luggage-storage and early-check-in charges or report service and housekeeping problems. These are guest accounts rather than independent inspection findings. The published Location component is 4.4/5; unsupported component scores remain unscored.<cite data-ref=\"https://www.meininger-hotels.com/index.php?eID=meininger_reviews&page=0&hotel=BRU-RB&lang=en&target=family\"></cite></p><h3>Opening and scale</h3><p>MEININGER records the Bruxelles Gare du Midi opening milestone on 6 August 2019 in its later Lyon release. The September 3 publication date on a syndicated opening article is separate.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/\"></cite></p><p>The original hotel announcement reports 150 rooms, 678 beds and 6,700 square metres of above-ground gross floor area. These opening figures are not taken from the earlier planned 668-bed proposal. No hotel-specific construction budget was verified.<cite data-ref=\"https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-brussels/\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": null,
+      "service": null,
+      "location": 4.5,
+      "cleanliness": null,
+      "value": null,
+      "acclaim": 0,
+      "source": "session",
+      "sourceUrl": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+      "basis": "Read 2026-11-22: operator page TrustYou snapshot 2,299 verified-stay reviews, overall 4.3/5, Location 4.4/5 rounded to 4.5. WiFi/Vibe are not hotel rubric axes. Rooms, Service, Cleanliness and Value sub-scores not published in opened snapshot, left null rather than inferred from prose or overall. Review excerpts read from the operator page’s public family-review endpoint; operator-collected feedback, not an independent critic. MICHELIN complete Brussels-and-surroundings list 1–39 of 39 has no MEININGER; Forbes Brussels directory has no match. AAA awards exclude Belgium. Acclaim 0 records checked-guide absence.",
+      "reviews": [
+        {
+          "url": "https://www.meininger-hotels.com/index.php?eID=meininger_reviews&page=0&hotel=BRU-RB&lang=en&target=family",
+          "title": "Always a great stay",
+          "publishedDate": "2026-10-23",
+          "quote": "well appointed and clean rooms, guest kitchen or breakfast room"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opening milestone",
+          "value": "6 August 2019",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "On 6 August 2019",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Opening inventory",
+          "value": "150 rooms / 678 beds",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/second-hotel-in-brussels/",
+            "title": "Second hotel in Brussels",
+            "quote": "150 rooms with a total of 678 beds",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Hotel opening milestone",
+          "date": "2019-08-06",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.meininger-hotels.com/en/press/press-releases/first-hotel-in-lyon/",
+            "title": "New hotel in Lyon",
+            "quote": "On 6 August 2019",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family",
+      "budget-friendly"
+    ],
+    "destination": "Brussels, Belgium",
+    "topActivities": [
+      {
+        "title": "Private family rooms",
+        "category": "Kids",
+        "description": "Book the whole room and confirm beds and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Shared guest kitchen",
+        "category": "Dining",
+        "description": "Prepare food in the communal kitchen subject to equipment availability and house rules.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "Brussels by rail and metro",
+        "category": "Culture",
+        "description": "Plan transit time from Midi station to the sights you want to visit.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bestSeason": "Spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "6.1°C–23.2°C normal daytime highs",
+      "weatherSummary": "Royal Meteorological Institute of Belgium (IRM), Uccle municipality statistics, 1991–2020 normals. Nearby regional guidance for Brussels: average daytime highs and monthly rain totals, not a hotel forecast. Rain occurs throughout the year.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Temperate oceanic / Brussels",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "fair",
+          "tempC": 6.1,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "fair",
+          "tempC": 7.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 10.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 15,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 18.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 21.2,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "prime",
+          "tempC": 23.2,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "prime",
+          "tempC": 23,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 19.5,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "good",
+          "tempC": 14.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 9.9,
+          "rainfall": "Moderate"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "fair",
+          "tempC": 6.6,
+          "rainfall": "Moderate"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "brussels-room",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/6/1/csm_MEININGER-Hotel-Bruxelles-Gare-du-Midi-6-Bed-Room-16-WSC1340-Web_32fc1762f5.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/brussels-room-20b78fc5928b62cc.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "20b78fc5928b62ccfe3a21d8aed25c0004ca19a6d7c02faf779f2996dc317596"
+      },
+      {
+        "key": "brussels-kitchen",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/6/0/csm_MEININGER-Hotel-Bruxelles-Gare-du-Midi-Guest-Kitchen-1-WSC2186-Web_850439c1f8.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/brussels-kitchen-2c481f40f6272e61.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "2c481f40f6272e619d8c67334a7f8ea95ff1ff4f7cb57623f2b21d2cb4e13aaf"
+      },
+      {
+        "key": "brussels-lounge",
+        "imageSourceUrl": "https://www.meininger-hotels.com/fileadmin/_processed_/1/6/csm_MEININGER-Hotel-Bruxelles-Gare-du-Midi-Lounge-1-WSC2828-Web_5e1899e994.jpg",
+        "sourceUrl": "https://www.meininger-hotels.com/en/hotels/brussels/hotel-bruxelles-gare-du-midi/",
+        "credit": "MEININGER Hotels",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/brussels-lounge-71ec8256ef8a306e.webp",
+        "width": 1200,
+        "height": 800,
+        "sha256": "71ec8256ef8a306ee9b7a50aa293cf96d6d728c5eb71d799e7baba7388feedb7"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction budget verified; project price and currency remain null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "Only Location has a published matching rubric component; other guest axes remain null. Overall 4.3 is not copied across axes.",
+      "Primary operator map point is corroborated by ArcGIS number-101 address and OSM address point; full official street address retained.",
+      "Exact opening date supplied by later operator retrospective; original month-only release and later syndication date not confused."
+    ]
+  },
+  {
+    "key": "california",
+    "pin": {
+      "title": "LEGOLAND Castle Hotel California Opens",
+      "productName": "LEGOLAND Castle Hotel California",
+      "sourceUrl": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+      "description": "A castle-themed family hotel beside LEGOLAND California, with wizard, knight and princess rooms, separate children’s sleeping areas and LEGO treasure hunts.",
+      "parentId": null,
+      "categories": [
+        "Travel"
+      ],
+      "tags": [
+        "Hotels",
+        "Kids & Family",
+        "Completed"
+      ],
+      "address": "1 LEGOLAND Drive, Carlsbad, CA 92008, United States",
+      "latitude": 33.1253537,
+      "longitude": -117.3115315,
+      "utcStartDateTime": "2018-04-27T00:00:00.000Z",
+      "allDay": true,
+      "dateConfidence": "confirmed",
+      "dateConfidenceReasoning": "The operator’s grand-opening announcement reproduced by The Brick Show is datelined April 27, 2018 and says the Castle Hotel opened today. Its official grand-opening broadcast description corroborates April 27. This is California’s Castle Hotel, not the original hotel or Castle Hotels in Windsor or Billund.",
+      "price": null,
+      "priceCurrency": null,
+      "references": [
+        {
+          "url": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+          "title": "LEGOLAND Castle Hotel — official California hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://brickshow.com/legoland-castle-hotel-in-legoland-california-now-officially-open/",
+          "title": "LEGOLAND Castle Hotel in LEGOLAND California Now Officially Open",
+          "confidence": 100
+        },
+        {
+          "url": "https://california-support.legoland.com/hc/en-us/articles/360001609871-How-big-is-the-LEGOLAND-Castle-Hotel",
+          "title": "How big is the LEGOLAND Castle Hotel?",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g32171-d13422844-Reviews-LEGOLAND_Castle_Hotel-Carlsbad_California.html",
+          "title": "LEGOLAND Castle Hotel",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.legoland.com/california/places-to-stay/vacation-packages/room-only/",
+          "title": "Room Only Hotel Bookings — LEGOLAND California",
+          "confidence": 100
+        },
+        {
+          "url": "https://california-support.legoland.com/hc/en-us/articles/360001574891-What-is-the-address-for-the-LEGOLAND-California-Hotel-and-Castle-Hotel",
+          "title": "What is the address for the LEGOLAND California Hotel and Castle Hotel?",
+          "confidence": 100
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=normals-monthly-1991-2020&stations=USW00003177&format=json&dataTypes=MLY-TMAX-NORMAL,MLY-PRCP-NORMAL&units=metric&includeStationName=true",
+          "title": "NOAA NCEI — Carlsbad Palomar Airport USW00003177, 1991–2020 monthly normals",
+          "confidence": 100
+        }
+      ],
+      "longFormSummary": "<p>A castle-themed family hotel beside LEGOLAND California, with wizard, knight and princess rooms, separate children’s sleeping areas and LEGO treasure hunts.<cite data-ref=\"https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/\"></cite></p><h3>Family stay</h3><p>Choose the exact Knights & Dragons, Royal Princess or Magic Wizard room category and confirm beds, occupancy and any cot needs. The hotel advertises interactive play, treasure hunts, entertainment and an outdoor pool; check the current activity and pool schedule.<cite data-ref=\"https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/\"></cite></p><p>Both onsite hotels sell room-only stays, so park admission is not included in every booking. Compare your selected package for tickets, breakfast, parking, taxes and cancellation terms. An expired per-person hotel-and-ticket promotion is not a current whole-room quote.<cite data-ref=\"https://www.legoland.com/california/places-to-stay/vacation-packages/room-only/\"></cite></p><h3>Review tradeoffs</h3><p>Family guests praise the themed bedrooms, treasure chests and short walk to the park. Other guests report check-in delays, noise, food quality problems and high extra charges. The Tripadvisor component scores describe a research snapshot, not live ratings. Compare the full holiday cost before booking.<cite data-ref=\"https://www.tripadvisor.co.uk/Hotel_Review-g32171-d13422844-Reviews-LEGOLAND_Castle_Hotel-Carlsbad_California.html\"></cite></p><h3>Opening and capacity</h3><p>The operator’s grand-opening announcement, reproduced by The Brick Show, dates the California Castle Hotel opening to 27 April 2018. It is the resort’s second onsite hotel and is distinct from the original LEGOLAND Hotel.<cite data-ref=\"https://brickshow.com/legoland-castle-hotel-in-legoland-california-now-officially-open/\"></cite></p><p>The current official hotel FAQ reports 250 themed rooms. No hotel-specific construction investment was verified; costs for Castle Hotels in other countries are not substituted.<cite data-ref=\"https://california-support.legoland.com/hc/en-us/articles/360001609871-How-big-is-the-LEGOLAND-Castle-Hotel\"></cite></p>"
+    },
+    "hotel": {
+      "rooms": 4.5,
+      "service": 4,
+      "location": 4.5,
+      "cleanliness": 4.5,
+      "value": 4,
+      "acclaim": null,
+      "source": "session",
+      "sourceUrl": "https://www.tripadvisor.co.uk/Hotel_Review-g32171-d13422844-Reviews-LEGOLAND_Castle_Hotel-Carlsbad_California.html",
+      "basis": "Read 2026-11-22: Tripadvisor UK snapshot 1,200 reviews; Rooms 4.3, Service 4.1, Location 4.7, Cleanliness 4.5, Value 3.9, rounded to nearest half step. Kim J firsthand family review displayed July 2026 without exact publication day, date null. Check-in, noise, dining and extra-cost tradeoffs retained as guest accounts. MICHELIN Carlsbad blocked by verification page. Forbes San Diego directory checked without Castle Hotel match. AAA Carlsbad directory read but no Castle Hotel designation established; coverage incomplete, acclaim null.",
+      "reviews": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Hotel_Review-g32171-d13422844-Reviews-LEGOLAND_Castle_Hotel-Carlsbad_California.html",
+          "title": "Nicely Themed Hotel",
+          "publishedDate": null,
+          "quote": "Being a few steps away from the theme park is a BIG plus at the end of the day!"
+        }
+      ]
+    },
+    "factory": {
+      "sector": "Hospitality / hotel",
+      "status": "production",
+      "assessmentDate": "2026-11-22",
+      "rubricYear": 2026,
+      "source": "session",
+      "axes": {
+        "scale": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "automation": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "technical": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "efficiency": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "supplyChain": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        },
+        "workforce": {
+          "score": null,
+          "basis": "unknown",
+          "reasoning": "No property-specific comparative construction benchmark or engineering score verified in the opened hotel sources.",
+          "sources": []
+        }
+      },
+      "metrics": [
+        {
+          "key": "stage",
+          "label": "Hotel opened",
+          "value": "27 April 2018",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://brickshow.com/legoland-castle-hotel-in-legoland-california-now-officially-open/",
+            "title": "LEGOLAND Castle Hotel in LEGOLAND California Now Officially Open",
+            "quote": "April 27, 2018",
+            "publishedDate": null
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Official hotel inventory",
+          "value": "250 themed rooms",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://california-support.legoland.com/hc/en-us/articles/360001609871-How-big-is-the-LEGOLAND-Castle-Hotel",
+            "title": "How big is the LEGOLAND Castle Hotel?",
+            "quote": "250 themed rooms",
+            "publishedDate": null
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Castle Hotel opened",
+          "date": "2018-04-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://brickshow.com/legoland-castle-hotel-in-legoland-california-now-officially-open/",
+            "title": "LEGOLAND Castle Hotel in LEGOLAND California Now Officially Open",
+            "quote": "April 27, 2018",
+            "publishedDate": null
+          }
+        }
+      ]
+    },
+    "shelves": [
+      "kids-family"
+    ],
+    "destination": "Carlsbad, California, United States",
+    "topActivities": [
+      {
+        "title": "Castle-themed family rooms",
+        "category": "Kids",
+        "description": "Choose the exact wizard, knight or princess room layout and occupancy.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGO treasure hunts",
+        "category": "Kids",
+        "description": "Check the current room and hotel treasure-hunt activities.",
+        "kidsFriendly": true
+      },
+      {
+        "title": "LEGOLAND California visits",
+        "category": "Adventure",
+        "description": "Check opening calendars and the park tickets included in your selected package.",
+        "kidsFriendly": true
+      }
+    ],
+    "priceSource": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+    "priceBasis": "Rates on request. Compare the booked private room, occupancy, taxes, breakfast, fees and any park-ticket inclusions for your actual dates.",
+    "bestTimeToGo": {
+      "recommendedMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bestSeason": "Spring through early autumn for outdoor visits",
+      "peakSeason": "School holidays and major events; compare hotel rates",
+      "shoulderSeason": "Dates outside major school and public holidays",
+      "lowSeason": "Date-specific; weather seasons do not establish cheaper room rates",
+      "tempRange": "17.8°C–24.3°C normal daytime highs",
+      "weatherSummary": "NOAA NCEI Carlsbad Palomar Airport station USW00003177, 1991–2020 monthly normals in metric units. Nearby regional guidance: average daytime highs and monthly rain totals, not a resort forecast. Summers are dry; coastal cloud and marine-layer conditions can still affect outdoor visits.",
+      "whyGo": "Use the monthly averages for general outdoor planning. Check the forecast, opening calendars, public holidays and date-specific rates before booking.",
+      "climateZone": "Coastal Mediterranean / Carlsbad",
+      "months": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "status": "good",
+          "tempC": 18.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "status": "good",
+          "tempC": 17.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "status": "good",
+          "tempC": 18.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "status": "prime",
+          "tempC": 19.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "status": "prime",
+          "tempC": 19.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "status": "prime",
+          "tempC": 21.1,
+          "rainfall": "Low"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "status": "good",
+          "tempC": 23.4,
+          "rainfall": "Low"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "status": "good",
+          "tempC": 24.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "status": "prime",
+          "tempC": 24.3,
+          "rainfall": "Low"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "status": "prime",
+          "tempC": 22.9,
+          "rainfall": "Low"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "status": "good",
+          "tempC": 20.8,
+          "rainfall": "Low"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "status": "good",
+          "tempC": 18.1,
+          "rainfall": "Low"
+        }
+      ]
+    },
+    "media": [
+      {
+        "key": "california-exterior",
+        "imageSourceUrl": "https://www.legoland.com/california/media/rppba1zr/castle-hotel-exterior-4x3-iphone-2023.jpg",
+        "sourceUrl": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+        "credit": "LEGOLAND California Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/california-exterior-8a589b6e6dffbf27.webp",
+        "width": 1600,
+        "height": 1200,
+        "sha256": "8a589b6e6dffbf27db2c9814bb7cb038092ff12b155edfed11ef3f47bbe8e058"
+      },
+      {
+        "key": "california-room",
+        "imageSourceUrl": "https://www.legoland.com/california/media/zlwnlu5p/boy-girl-on-bunk-bed-princess-room-3x2-0-4mb.jpg",
+        "sourceUrl": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+        "credit": "LEGOLAND California Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/california-room-c7a05d66fc9aefb0.webp",
+        "width": 1600,
+        "height": 1067,
+        "sha256": "c7a05d66fc9aefb086847b50f4add71fd0bada3c8afdd12c435e7dd96cfb83b9"
+      },
+      {
+        "key": "california-treasure",
+        "imageSourceUrl": "https://www.legoland.com/california/media/idbflzkr/castle-hotel-treasure-hunt-chest-3x2-1000px.jpg",
+        "sourceUrl": "https://www.legoland.com/california/places-to-stay/legoland-castle-hotel/",
+        "credit": "LEGOLAND California Resort",
+        "blobUrl": "https://chronopin.blob.core.windows.net/thumb/travel/2026-11-22/california-treasure-d10191324592bc73.webp",
+        "width": 1000,
+        "height": 667,
+        "sha256": "d10191324592bc73b6ac30c05a7661bc38a8e23d1909e2fc8c5268ef0e33cc25"
+      }
+    ],
+    "researchGaps": [
+      "No current date-specific all-in nightly quote verified; rates on request.",
+      "No property-specific construction budget verified; project price and currency remain null.",
+      "Unsupported comparative engineering scores remain null.",
+      "Translations left to the translation agent.",
+      "MICHELIN Carlsbad verification wall; Forbes and AAA directory checks do not establish a property award, acclaim null.",
+      "Official November 1, 2026 booking promotion is expired as of research date and excluded.",
+      "Exact ArcGIS Castle Hotel POI used; OSM text search returned no hotel result. Official shared resort mailing address retained."
+    ]
+  }
+]
