@@ -98,6 +98,33 @@ def run_prod_sql(sql: str) -> str:
     )
     return res.stdout.decode('utf-8')
 
+def https_report(json_mode: bool):
+    """Reduced health check over the admin API only (used when SSH to the VM is down).
+    Covers: due pins by state, due PinPerf panels, due pro tips, content-table coverage.
+    NOT covered (need SQL): untranslated/mangled rows, bullet checks, attribution-note leaks -
+    re-run the full check when SSH is back."""
+    sys.path.insert(0, str(os.path.dirname(os.path.abspath(__file__))))
+    import prod_https
+    import sync_translations as st
+    token = ensure_admin_token()
+    due = fetch_due_pins(token)
+    states = {'missing': 0, 'outdated': 0, 'incomplete': 0}
+    for p in due:
+        for v in p.get('states', {}).values():
+            if v in states:
+                states[v] += 1
+    api = prod_https.Api(ensure_admin_token)
+    panels = prod_https.fetch_due_panel_pins(api, st._chart_locale_ok, st._table_locale_ok, st.LOCALES)
+    tips = prod_https.fetch_due_pro_tips(api, st.LOCALES)
+    cov = api.call('GET', '/api/admin/content-translations')['tables']
+    out = {
+        'mode': 'https-only (mangled/bullet/leak checks skipped: need SSH)',
+        'pins_due': len(due), 'row_states': states,
+        'panel_pins_due': len(panels), 'pro_tip_pins_due': len({t['pinId'] for t in tips}),
+        'content_tables_due': {t['name']: t['due'] for t in cov if t['due']},
+    }
+    print(json.dumps(out, indent=2) if json_mode else '\n'.join(f'{k}: {v}' for k, v in out.items()))
+
 def main():
     json_mode = '--json' in sys.argv
 
@@ -313,7 +340,12 @@ SELECT row_to_json(pro_tip_counts)::text FROM pro_tip_counts;
         try:
             raw_output = run_prod_sql(sql).strip()
         except subprocess.CalledProcessError as e:
-            print(f"[{name}] query failed:\n{e.stderr.decode('utf-8', 'replace')}", file=sys.stderr)
+            err = e.stderr.decode('utf-8', 'replace')
+            if only is None and ('ssh:' in err or 'timed out' in err or 'Connection' in err):
+                print('SQL over SSH unavailable; running the reduced HTTPS-only health check.', file=sys.stderr)
+                https_report(json_mode)
+                sys.exit(0)
+            print(f"[{name}] query failed:\n{err}", file=sys.stderr)
             sys.exit(2)
         parsed = None
         for line in raw_output.splitlines():

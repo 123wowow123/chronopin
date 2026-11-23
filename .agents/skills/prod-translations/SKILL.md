@@ -171,6 +171,20 @@ The script automatically:
 
 ---
 
+## When SSH to the VM is down (HTTPS fallback)
+
+`scripts/prod-sql.sh` needs SSH (port 22 is firewalled to a few IPs, `ssh-from-ian` in `chronopin-web-nsg`). When it fails, `sync_translations.py` and `check_translations.py` fall back by themselves, with no flag:
+
+| Step | Fallback (`scripts/prod_https.py`, admin table API `/api/admin/db/:table`) |
+|:---|:---|
+| Pin text due list, push | already HTTPS (`/api/admin/translations`) |
+| `record_wiki_tracking` (SourceWiki attribution) | same rows written through `Source`, `PinSource`, `SourceWiki` |
+| Due `PinPerf` panels, due pro tips | read through the table API, same rules |
+| `prepare_mangled_rows_for_repair` | **skipped with a warning**; run it when SSH is back |
+| `check_translations.py` | reduced check (due pins/panels/tips, content-table coverage); mangled, bullet and leak checks **need SSH**, re-run the full audit later |
+
+Check your public IP and the NSG rule first if SSH drops (`az network nsg rule show --nsg-name chronopin-web-nsg -g Chronopin-US-West --name ssh-from-ian`).
+
 ## Infrastructure Guardrails (AGENTS.md)
 
 1. **Production VM Safety:** NEVER run `next build`, `npm run dev`, docker restarts, or resize commands on the production VM (`20.109.175.187`).
