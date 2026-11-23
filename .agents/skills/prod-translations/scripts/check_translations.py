@@ -18,6 +18,7 @@ import pathlib
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 
 sys.dont_write_bytecode = True
@@ -97,6 +98,19 @@ def run_prod_sql(sql: str) -> str:
         check=True
     )
     return res.stdout.decode('utf-8')
+
+def audit_via_api(name: str, since_days=None):
+    """One audit check through GET /api/admin/translations/audit. None when the endpoint is not deployed (404)."""
+    token = ensure_admin_token()
+    qs = f"?only={name}" + (f"&sinceDays={since_days}" if since_days and name == 'bullets' else '')
+    req = urllib.request.Request(f"{BASE}/api/admin/translations/audit{qs}", headers={'Authorization': 'Bearer ' + token})
+    try:
+        with urllib.request.urlopen(req, timeout=290) as resp:
+            return json.load(resp)['checks'][name]['data']
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        raise
 
 def https_report(json_mode: bool):
     """Reduced health check over the admin API only (used when SSH to the VM is down).
@@ -333,20 +347,31 @@ SELECT row_to_json(pro_tip_counts)::text FROM pro_tip_counts;
         json_mode = True
 
     db_data = {}
+    use_api = False
     for name, sql in queries.items():
         if only and name not in only:
             continue
         t0 = time.time()
-        try:
-            raw_output = run_prod_sql(sql).strip()
-        except subprocess.CalledProcessError as e:
-            err = e.stderr.decode('utf-8', 'replace')
-            if only is None and ('ssh:' in err or 'timed out' in err or 'Connection' in err):
-                print('SQL over SSH unavailable; running the reduced HTTPS-only health check.', file=sys.stderr)
+        if not use_api:
+            try:
+                raw_output = run_prod_sql(sql).strip()
+            except subprocess.CalledProcessError as e:
+                err = e.stderr.decode('utf-8', 'replace')
+                if 'ssh:' in err or 'timed out' in err or 'Connection' in err:
+                    print('SQL over SSH unavailable; running the checks through GET /api/admin/translations/audit.', file=sys.stderr)
+                    use_api = True
+                else:
+                    print(f"[{name}] query failed:\n{err}", file=sys.stderr)
+                    sys.exit(2)
+        if use_api:
+            parsed = audit_via_api(name, days if '--since-days' in sys.argv else None)
+            if parsed is None:
+                print('The audit endpoint is not on production yet (404); running the reduced HTTPS-only health check.', file=sys.stderr)
                 https_report(json_mode)
                 sys.exit(0)
-            print(f"[{name}] query failed:\n{err}", file=sys.stderr)
-            sys.exit(2)
+            db_data.update(parsed)
+            print(f"[{name}] {time.time() - t0:.1f}s (API)", file=sys.stderr, flush=True)
+            continue
         parsed = None
         for line in raw_output.splitlines():
             line = line.strip()

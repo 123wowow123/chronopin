@@ -181,9 +181,9 @@ The script automatically:
 | `record_wiki_tracking` (SourceWiki attribution) | same rows written through `Source`, `PinSource`, `SourceWiki` |
 | Due `PinPerf` panels, due pro tips | read through the table API, same rules |
 | `prepare_mangled_rows_for_repair` | **skipped with a warning**; run it when SSH is back |
-| `check_translations.py` | reduced check (due pins/panels/tips, content-table coverage); mangled, bullet and leak checks **need SSH**, re-run the full audit later |
+| `check_translations.py` | the full audit through `GET /api/admin/translations/audit` (admin token; `?only=counts,leak_pin,leak_translation,mangled,bullets,panels,pro_tips` and `&sinceDays=N` for bullets; SQL in `src/server/services/translationAudit.ts`, kept in step with the script's queries). That route must be **deployed** to production; until then (404) the script prints a reduced HTTPS-only check (due pins/panels/tips, content-table coverage) and the mangled, bullet and leak checks wait for SSH or the deploy |
 
-Check your public IP and the NSG rule first if SSH drops (`az network nsg rule show --nsg-name chronopin-web-nsg -g Chronopin-US-West --name ssh-from-ian`).
+When a query in `check_translations.py` changes, change it in `translationAudit.ts` too (the endpoint's copy). Check your public IP and the NSG rule first if SSH drops (`az network nsg rule show --nsg-name chronopin-web-nsg -g Chronopin-US-West --name ssh-from-ian`).
 
 ## Infrastructure Guardrails (AGENTS.md)
 
