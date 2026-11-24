@@ -215,15 +215,35 @@ class LocaleCache:
         self.new = {}
 
 
+_TOKEN: Dict[str, str] = {}
+
+
 def api(token: str, method: str, path: str, body: Optional[dict] = None) -> dict:
-    req = urllib.request.Request(
-        f'{BASE}{path}',
-        data=json.dumps(body).encode('utf-8') if body is not None else None,
-        method=method,
-        headers={'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'},
-    )
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return json.load(r)
+    """Admin API call. The token argument is kept for call sites; a 401 renews the token
+    (ensure_admin_token signs in again) and retries, so a run that outlives the token keeps going."""
+    import urllib.error
+    for attempt in range(3):
+        tok = _TOKEN.get('t') or token
+        req = urllib.request.Request(
+            f'{BASE}{path}',
+            data=json.dumps(body).encode('utf-8') if body is not None else None,
+            method=method,
+            headers={'Authorization': f'Bearer {tok}', 'Content-Type': 'application/json'},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code != 401 or attempt == 2:
+                raise
+            print('  admin token rejected (401); renewing')
+            _TOKEN['t'] = st.ensure_admin_token()
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 2:
+                raise
+            import time
+            time.sleep(10 * (attempt + 1))
+    raise RuntimeError('unreachable')
 
 
 def push(token: str, table: str, rows: List[dict]) -> int:
