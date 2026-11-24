@@ -28,6 +28,8 @@ async function llmsText(): Promise<string> {
     '',
     `> ${siteDescription} Every pin is one dated thing - a release, launch, premiere, event, deadline or law taking effect - with the sources that back its date.`,
     '',
+    '> Licensing: this content is not licensed for AI training, dataset building or bulk collection. Automated use needs a written agreement; see /terms and /robots.txt, and write to the contact address on /contact to ask.',
+    '',
     'How to read a pin page:',
     '',
     '- The date: its start (and end, for a span), with a date confidence word taken from how firmly the source states it: confirmed, scheduled, estimated, delayed or unverified. A delayed pin also says the date it was first due and why it moved.',

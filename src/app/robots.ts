@@ -20,14 +20,22 @@ const DISALLOW = [
   ...LOCALES.filter((l) => l !== DEFAULT_LOCALE).flatMap((l) => PRIVATE_PAGES.map((path) => `/${l}${path}`)),
 ];
 
+// Licensed use only, as Reddit does: AI crawlers and bulk scrapers are shut out
+// of everything (they may read nothing, not even /llms.txt) unless they hold a
+// written agreement. Applebot stays on the throttled group: it feeds Siri and
+// Spotlight search, not model training.
+const PAGE_BOTS = ['Applebot'];
+const UNLICENSED_BOTS = THROTTLED_BOT_NAMES.filter((name) => !PAGE_BOTS.includes(name));
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       { userAgent: '*', allow: '/', disallow: DISALLOW },
+      { userAgent: UNLICENSED_BOTS, disallow: '/' },
       // Throttled crawlers are asked for the per-bot pace (a 429
       // past it). A bot with its own group skips the * one, so the same pages
       // are closed here too.
-      { userAgent: THROTTLED_BOT_NAMES, allow: '/', disallow: DISALLOW, crawlDelay: 1 / PER_SECOND },
+      { userAgent: PAGE_BOTS, allow: '/', disallow: DISALLOW, crawlDelay: 1 / PER_SECOND },
     ],
     sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/sitemap-restaurants.xml`],
     host: siteUrl,

@@ -70,6 +70,9 @@ export default function TermsPage() {
         The site&rsquo;s design, software and the text we write are owned by {OPERATOR}. You may share links and short quotes with credit. Do not copy the site in bulk, scrape it in a way that burdens it, or use it to build a competing database. Quoted sources, images, videos and trademarks belong to their owners.
       </P>
       <P>
+        <strong>Crawling, scraping and AI training:</strong> the site&rsquo;s public content is open to people and to search engines that send readers back to it. It is not open to unlicensed automated access. Without a written licence from {OPERATOR} you may not use crawlers, scrapers, bots or other automated means to collect the site&rsquo;s content, or use that content (or anything derived from it) to train, fine-tune or ground a machine-learning or AI model, build a dataset or index, or power a competing product, whatever your robots.txt status. Our robots.txt asks AI crawlers and bulk scrapers to stay out entirely, and we may block them. To ask for a licence, email {mail}.
+      </P>
+      <P>
         <strong>Copyright complaints:</strong> if you believe something on the site infringes your copyright, email {mail} with the page address, the work you own, and your contact details, and we will review and remove it where appropriate.
       </P>
 
