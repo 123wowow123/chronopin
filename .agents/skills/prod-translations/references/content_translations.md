@@ -48,6 +48,10 @@ the pin translation step covers), `Comment` / `Message` (conversation, not conte
 
 Use the admin token the same way as for pins (`check_translations.ensure_admin_token()`).
 
+## Google Translate script (`content_translations.py`)
+
+When the owner asks for Google Translate instead of LLM workers: `TRANSLATE_DELAY=2 python3 .agents/skills/prod-translations/scripts/content_translations.py` (all tables with due rows, smallest first; `--tables`, `--locale`, `--max-rows N` for a pilot, `--after N`). It treats text fields as Markdown (front matter, code fences, footnote definitions, `[^sN]` refs, links, inline code and URLs kept verbatim; `**bold**` stays inside its sentence), translates only the prose keys listed in `JSON_PROSE_KEYS` inside JSON fields, checks that refs, URLs and line counts survived, and saves a row-locale only when every fragment passed `acceptable()`. Fragments are cached per locale in `.scrape/translations-cache/content/`. A table whose JSON gains new prose keys needs them added to `JSON_PROSE_KEYS`. Throughput at `TRANSLATE_DELAY=2` with a cold cache: about 45 s per wiki row (15 locales); the first full company-wiki + person-wiki backlog (~6,700 rows, 2026-11-23) ran under `nohup`, logging to `.scrape/logs/content-translations-<date>.log`.
+
 ## Rules
 
 - Text fields: plain text or the source's own Markdown; keep `[ref]` markers, links, `<cite data-ref>` tags.

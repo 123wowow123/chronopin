@@ -89,10 +89,16 @@ From the workspace root (`/Users/ianflynn/chronopin`):
 | **Sync Specific Pin (Text + Panels + Pro Tips)** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --pin 15860` |
 | **Sync Specific Locale** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --locale de` |
 | **Preview Due Pins, Panels & Pro Tips** | `python3 .agents/skills/prod-translations/scripts/sync_translations.py --dry-run` |
+| **Slow Google run (1 thread, 2 s between Google calls)** | `TRANSLATE_WORKERS=1 TRANSLATE_DELAY=2 python3 .agents/skills/prod-translations/scripts/sync_translations.py --chunk-size 25` |
+| **Content tables via Google Translate** | `TRANSLATE_DELAY=2 python3 .agents/skills/prod-translations/scripts/content_translations.py [--tables company-wiki,person-wiki] [--max-rows 3]` |
 | **Audit Content for Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py` |
 | **Clean Accidental Leaks** | `python3 .agents/skills/prod-translations/scripts/audit_and_clean_content.py --apply` |
 
 ---
+
+## Google Translate pacing and the CAPTCHA stop
+
+`sync_translations.py` (and `content_translations.py`, which imports it) read two env vars: `TRANSLATE_WORKERS` (parallel locale threads, default 5) and `TRANSLATE_DELAY` (minimum seconds between any two Google requests, shared across threads, default 0). When the owner asks for a slow run use `TRANSLATE_WORKERS=1 TRANSLATE_DELAY=2`. A Google `/sorry/` page or HTTP 429 raises `NmtBlocked` and the run stops at once (no retry); cached fragments are kept, so re-running later resumes.
 
 ## Supported Locales & Architecture
 

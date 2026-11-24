@@ -27,7 +27,9 @@ import pathlib
 import re
 import subprocess
 import sys
+import threading
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional, Set, Tuple
@@ -42,6 +44,39 @@ CACHE_DIR.mkdir(exist_ok=True, parents=True)
 BASE = 'https://www.chronopin.com'
 LOCALES = ['es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi', 'ar', 'th', 'it', 'ru', 'pt', 'ms', 'vi', 'id']
 FIELDS = ['title', 'description', 'longFormSummary', 'dateConfidenceReasoning', 'delayReasoning']
+
+# Google Translate pacing. TRANSLATE_WORKERS = parallel locale threads (default 5);
+# TRANSLATE_DELAY = minimum seconds between any two Google requests, shared by all threads (default 0).
+# A slow run: TRANSLATE_WORKERS=1 TRANSLATE_DELAY=2
+NMT_WORKERS = max(1, int(os.environ.get('TRANSLATE_WORKERS', '5')))
+NMT_DELAY = max(0.0, float(os.environ.get('TRANSLATE_DELAY', '0')))
+_NMT_LOCK = threading.Lock()
+_NMT_LAST = [0.0]
+_NMT_BLOCKED = threading.Event()
+
+class NmtBlocked(RuntimeError):
+    """Google answered with its /sorry/ CAPTCHA page or HTTP 429: stop, never retry past the gate."""
+
+def _nmt_urlopen(req, timeout):
+    if _NMT_BLOCKED.is_set():
+        raise NmtBlocked('Google Translate already blocked this run')
+    if NMT_DELAY > 0:
+        with _NMT_LOCK:
+            wait = _NMT_LAST[0] + NMT_DELAY - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            _NMT_LAST[0] = time.monotonic()
+    try:
+        r = urllib.request.urlopen(req, timeout=timeout)
+    except urllib.error.HTTPError as e:
+        if e.code == 429 or '/sorry/' in (e.geturl() or ''):
+            _NMT_BLOCKED.set()
+            raise NmtBlocked(f'Google Translate CAPTCHA/rate gate (HTTP {e.code}, {e.geturl()})')
+        raise
+    if '/sorry/' in (r.geturl() or ''):
+        _NMT_BLOCKED.set()
+        raise NmtBlocked(f'Google Translate CAPTCHA gate ({r.geturl()})')
+    return r
 
 def load_env_local() -> Dict[str, str]:
     env: Dict[str, str] = {}
@@ -361,7 +396,7 @@ def _call_batchexecute(texts: List[str], locale: str) -> Dict[str, str]:
                     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                 },
             )
-            with urllib.request.urlopen(req, timeout=25) as r:
+            with _nmt_urlopen(req, timeout=25) as r:
                 raw = r.read().decode('utf-8')
             out: Dict[str, str] = {}
             for line in raw.splitlines():
@@ -382,6 +417,8 @@ def _call_batchexecute(texts: List[str], locale: str) -> Dict[str, str]:
             if out:
                 time.sleep(0.15)
                 return out
+        except NmtBlocked:
+            raise
         except Exception:
             time.sleep(0.8 * (attempt + 1))
     return {}
@@ -413,7 +450,7 @@ def _raw_translate_single(text: str, locale: str) -> Optional[str]:
                         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                     },
                 )
-                with urllib.request.urlopen(req, timeout=15) as r:
+                with _nmt_urlopen(req, timeout=15) as r:
                     res_json = json.load(r)
                     if isinstance(res_json, list):
                         if res_json and isinstance(res_json[0], list) and res_json[0] and isinstance(res_json[0][0], list):
@@ -422,6 +459,8 @@ def _raw_translate_single(text: str, locale: str) -> Optional[str]:
                                 return val.strip()
                         elif res_json and isinstance(res_json[0], str) and res_json[0].strip():
                             return res_json[0].strip()
+            except NmtBlocked:
+                raise
             except Exception:
                 pass
         time.sleep(0.5 * (attempt + 1))
@@ -783,7 +822,7 @@ def sync_pin_chunk(due_pins: List[dict]) -> int:
         for p in due_pins
         if p.get('title')
     }
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NMT_WORKERS) as pool:
         futures = [
             pool.submit(translate_locale, loc, pins_by_locale[loc], sorted(texts_by_locale[loc]), titles_set)
             for loc in active_locales
@@ -1309,7 +1348,7 @@ def sync_panel_chunk(panel_pins: List[dict], locale_filter: Optional[str] = None
         return loc, cache
 
     caches_by_locale: Dict[str, Dict[str, str]] = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NMT_WORKERS) as pool:
         futs = [pool.submit(_fill_panel_locale_cache, loc, sorted(texts_by_locale[loc])) for loc in active_locales]
         for fut in concurrent.futures.as_completed(futs):
             loc, loc_cache = fut.result()
@@ -1570,7 +1609,7 @@ def sync_pro_tip_chunk(pro_tips: List[dict], locale_filter: Optional[str] = None
         return loc, out_rows
 
     all_rows: List[dict] = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NMT_WORKERS) as pool:
         futs = [
             pool.submit(_translate_pro_tips_for_locale, loc, items_by_locale[loc], sorted(texts_by_locale[loc]))
             for loc in active_locales
