@@ -57,6 +57,10 @@ Owner instruction, 2026-10-30: in pin research, creation and editing sessions (d
 
 Owner instruction, 2026-11-11: agents give every pin a full street address with geocoded coordinates, never a city-only label or the city-centre point, and thread members about one place share the parent's exact address and point; no prompting needed. Procedure and the PATCH-is-not-a-merge trap: `.agents/skills/daily-news-job/SKILL.md` ("Pin locations").
 
+## Docs notes (docs/okf)
+
+Every page under `docs/okf/` (run notes, expansion logs, references) starts with YAML frontmatter holding at least `type:` (plus `title`, `description`, `tags`); a bare `# Heading` file fails `npx vitest run src/lib/okfLint.test.ts`. Run that test after writing a note. A local pre-commit hook runs it when `docs/okf/` files are staged.
+
 ## Project skills
 
 Before starting a task, check `.agents/skills/` for a skill that covers it and read its `SKILL.md` first: `daily-news-job`, `run-news-job`, `election-results-pins`, `deploy-production`, `pin-enrichment-rubrics`, `construction-pin-research`, `restaurant-guide-research`, `pin-media-azure`, `prediction-market-pins`, `special-day-freebies`, `pin-field-and-api-dev`, `prod-translations` and `google-translate-prod` (owner says "Google Translate prod"). List the folder in case more have been added. Update the skill when its workflow changes.
