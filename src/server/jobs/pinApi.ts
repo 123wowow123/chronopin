@@ -179,6 +179,22 @@ export async function pushPinSales(pinId: number, figures: unknown[]): Promise<b
   return true;
 }
 
+// A pin's outcome pictures, already stored in Azure, to production (matched by
+// sourceUrl; ids differ). Production is read back and must hold every label.
+export async function pushOutcomePhotos(pinId: number, photos: { label: string; person: string; imageUrl: string; authorName: string | null; authorUrl: string | null }[]): Promise<boolean> {
+  if (!prodBase()) return false;
+  const [local] = await db.query<{ sourceUrl: string | null }>(`SELECT "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [pinId]);
+  if (!local?.sourceUrl) throw new Error(`Pin ${pinId}: missing sourceUrl for production outcome photos`);
+  const token = await adminToken('market outcome pictures');
+  const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(local.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token });
+  if (found.rows.length !== 1) throw new Error(`Pin ${pinId}: production sourceUrl is missing or ambiguous`);
+  const id = found.rows[0].id;
+  const saved = await call<{ label: string }[]>('PUT', `/api/pins/${id}/outcome-photos`, { token, body: { photos } });
+  const have = new Set((saved ?? []).map((r) => r.label));
+  if (!photos.every((p) => have.has(p.label))) throw new Error(`Pin ${id}: outcome photo readback verification failed`);
+  return true;
+}
+
 // A pin's tone score uses the lightweight score endpoint, never a full pin
 // PUT (which also starts search, media, source-wiki and other save work).
 // The server checks ownership and the hash again at the time of the write.

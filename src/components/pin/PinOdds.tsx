@@ -204,6 +204,14 @@ function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
   const listRef = useRef<HTMLUListElement>(null);
   const t = useT();
   useRowMoves(listRef, shown.map((o) => o.label).join('\n'));
+  // Pictures of the people (curated: an exchange's own images are flags and
+  // logos as often as faces). The leader with a picture is shown until another
+  // is picked; picking the one shown folds it away.
+  const hasPhoto = (o: MarketOutcome) => !!(o.person && o.image);
+  const photos = market.outcomes.some(hasPhoto);
+  const [picked, setPicked] = useState<string | null | undefined>(undefined);
+  const activeLabel = picked === undefined ? market.outcomes.find(hasPhoto)?.label : picked;
+  const active = photos ? market.outcomes.find((o) => o.label === activeLabel && hasPhoto(o)) : undefined;
 
   return (
     <div className="surface px-4 py-3 text-sm">
@@ -217,9 +225,17 @@ function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
       </div>
       <ul ref={listRef} className="flex flex-col gap-1.5">
         {shown.map((outcome) => (
-          <Outcome key={outcome.label} outcome={outcome} compact={false} />
+          <Outcome
+            key={outcome.label}
+            outcome={outcome}
+            compact={false}
+            photo={photos}
+            active={outcome.label === active?.label}
+            onPick={() => setPicked(outcome.label === active?.label ? null : outcome.label)}
+          />
         ))}
       </ul>
+      {active ? <OutcomeSpotlight outcome={active} /> : null}
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-subtle">
         {market.closed ? (
           <span className="font-semibold text-warning">{t('odds.closed')}</span>
@@ -242,9 +258,39 @@ function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
   );
 }
 
+// The person an active thumbnail picked, larger, with their name, chance and
+// the picture's credit.
+function OutcomeSpotlight({ outcome }: { outcome: MarketOutcome }) {
+  return (
+    <div className="mt-3 flex items-center gap-3 rounded-lg border border-line bg-raised p-2">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={outcome.image} alt={outcome.person ?? outcome.label} referrerPolicy="no-referrer" className="size-28 shrink-0 rounded-md object-cover" />
+      <div className="min-w-0">
+        <div className="truncate font-semibold text-ink">{outcome.person ?? outcome.label}</div>
+        {outcome.person ? <div className="truncate text-xs text-subtle">{outcome.label}</div> : null}
+        <div className="text-2xl font-semibold tabular-nums text-link">{percent(outcome.probability)}</div>
+        {outcome.credit ? <div className="mt-1 truncate text-[11px] text-subtle">{outcome.credit}</div> : null}
+      </div>
+    </div>
+  );
+}
+
 // One outcome's bar and chance. On a push the bar slides to its new width, the
 // number counts to its new value, and both tint green or red for a moment.
-function Outcome({ outcome, compact }: { outcome: MarketOutcome; compact: boolean }) {
+function Outcome({
+  outcome,
+  compact,
+  photo = false,
+  active = false,
+  onPick,
+}: {
+  outcome: MarketOutcome;
+  compact: boolean;
+  // Leave room for a thumbnail in front of the bar (a button when the outcome has a picture).
+  photo?: boolean;
+  active?: boolean;
+  onPick?: () => void;
+}) {
   const target = outcome.probability;
   const [shown, setShown] = useState(target);
   const [trend, setTrend] = useState<'up' | 'down' | null>(null);
@@ -293,7 +339,24 @@ function Outcome({ outcome, compact }: { outcome: MarketOutcome; compact: boolea
   const text = trend === 'up' ? 'text-success' : trend === 'down' ? 'text-danger' : 'text-ink';
 
   return (
-    <li className={`grid grid-cols-[minmax(0,1fr)_auto] items-center ${compact ? 'gap-x-2' : 'gap-x-3'}`}>
+    <li className={`grid items-center ${photo ? 'grid-cols-[auto_minmax(0,1fr)_auto]' : 'grid-cols-[minmax(0,1fr)_auto]'} ${compact ? 'gap-x-2' : 'gap-x-3'}`}>
+      {photo ? (
+        outcome.person && outcome.image ? (
+          <button
+            type="button"
+            aria-pressed={active}
+            aria-label={`${outcome.person ?? outcome.label} ${percent(outcome.probability)}`}
+            title={outcome.person ?? outcome.label}
+            onClick={onPick}
+            className={`block size-9 overflow-hidden rounded-md border bg-raised ${active ? 'border-link ring-2 ring-link/40' : 'border-line hover:border-link'}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={outcome.image} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-cover" />
+          </button>
+        ) : (
+          <span aria-hidden className="size-9 rounded-md bg-raised" />
+        )
+      ) : null}
       <span className={`relative overflow-hidden bg-raised ${compact ? 'rounded px-1.5 py-0.5' : 'rounded-md px-2 py-1'}`}>
         <span
           ref={barRef}

@@ -17,6 +17,7 @@ import type { MarketStream } from './marketSocket';
 import { polymarketStream } from './polymarketStream';
 import { polymarketUsHeaders, polymarketUsStream } from './polymarketUsStream';
 import log from './util/log';
+import { outcomeKey, outcomePhotosForPin, type OutcomePhoto } from './model/pinOutcomePhoto';
 
 const KALSHI_API = 'https://api.elections.kalshi.com/trade-api/v2';
 const POLYMARKET_API = 'https://gamma-api.polymarket.com';
@@ -193,6 +194,12 @@ function polymarketOutcomes(market: Json): MarketOutcome[] {
   }));
 }
 
+// The picture Polymarket attaches to an outcome's market (https only).
+function marketImage(m: Json): string | undefined {
+  const url = m.image || m.icon;
+  return typeof url === 'string' && url.startsWith('https://') ? url : undefined;
+}
+
 async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Promise<MarketOdds | null> {
   const fetchedAt = new Date().toISOString();
   if (ref.kind === 'market') {
@@ -225,7 +232,7 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
           .filter((m) => m.active !== false && (closed || !m.closed))
           .map((m) => {
             const yes = polymarketOutcomes(m).find((o) => o.label.toLowerCase() === 'yes');
-            return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume), history: yes?.history };
+            return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume), history: yes?.history, image: marketImage(m) };
           });
   return {
     source: 'Polymarket',
@@ -426,6 +433,8 @@ type Feed = {
   watching: string;
   unwatch?: () => void;
   pushTimer?: ReturnType<typeof setTimeout>;
+  // The pin's curated pictures of its outcomes' people, by outcomeKey.
+  photos?: Map<string, OutcomePhoto>;
 };
 
 const feeds: Map<number, Feed> = ((globalThis as any).__chronopinOddsFeeds ??= new Map());
@@ -477,8 +486,21 @@ function withQuotes(odds: MarketOdds): MarketOdds {
 function current(feed: Feed): MarketOdds[] {
   return feed.refs.flatMap((ref) => {
     const odds = feed.reads.get(refKey(ref))?.odds;
-    return odds ? [withQuotes(odds)] : [];
+    return odds ? [withPhotos(withQuotes(odds), feed.photos)] : [];
   });
+}
+
+// A pin's curated pictures of the people replace the exchange's own images
+// (often flags) on the outcomes they name.
+function withPhotos(odds: MarketOdds, photos?: Map<string, OutcomePhoto>): MarketOdds {
+  if (!photos?.size) return odds;
+  return {
+    ...odds,
+    outcomes: odds.outcomes.map(({ image: _exchange, ...outcome }) => {
+      const photo = photos.get(outcomeKey(outcome.label));
+      return photo ? { ...outcome, image: photo.imageUrl, person: photo.person, credit: photo.authorName ?? undefined } : outcome;
+    }),
+  };
 }
 
 function push(feed: Feed, odds: MarketOdds[]) {
@@ -533,6 +555,9 @@ async function refresh(pinId: number, feed: Feed) {
       else feed.reads.set(refKey(stale[i]), { odds: r.value, at: r.value ? Date.parse(r.value.fetchedAt) : now });
     });
     if (feed.last && stale.length && results.every((r) => r.status === 'rejected')) return;
+    feed.photos = await outcomePhotosForPin(pinId)
+      .then((rows) => new Map(rows.map((row) => [outcomeKey(row.label), row])))
+      .catch(() => feed.photos);
     watch(pinId, feed);
     push(feed, current(feed));
   } finally {

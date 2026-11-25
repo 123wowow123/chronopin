@@ -51,7 +51,7 @@ import { importCampaigns } from '../services/personCampaignsImport';
 import PersonCampaign from '../model/personCampaign';
 import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
 import { campaignRefreshDue, cycleOf } from '@/lib/campaigns';
-import { pushPinSales, personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { pushOutcomePhotos, pushPinSales, personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -68,6 +68,8 @@ import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
 import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
 import { salesStatus, savePinSales } from './productSales';
+import { photoGaps } from './outcomePhotos';
+import { photosProblem, savePhotos } from '../model/pinOutcomePhoto';
 import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
@@ -621,6 +623,37 @@ export const TOOLS: JobTool[] = [
       });
       await act(ctx, { tool: 'save_pin_sales', pinId, detail: `${rows.length} figure(s)${pushed ? '; prod saved' : ''}` });
       return { pinId, figures: rows.length, production: pushed };
+    },
+  },
+  // --- Pictures of the people behind market outcomes (the outcomePhotos task) ---
+  {
+    name: 'outcome_photo_status',
+    description:
+      "Prediction-market pins whose leading outcomes have no picture yet, for the outcomePhotos task: each gap has the pin, its market and `missing` outcomes (label, chance, and a Wikipedia lead-image `hint` when an article has exactly that title - a lead, not proof). Pins that already have pictures come first: a contest whose contestants or candidates changed. At most `limit` (default 5, at most 10) pins per call; `remaining` is how many more wait. Markets of dates, thresholds, parties, countries or teams are not people: pass those pins in `skip`. Then research each person and save_outcome_photos.",
+    input_schema: obj({ limit: num('At most this many pins, default 5, at most 10'), skip: { type: 'array', items: { type: 'number' }, description: 'Pin ids already handled, or whose outcomes are not people, this run' } }),
+    run: async (input, ctx) => {
+      const result = await photoGaps(int(input.limit, 5, 1, 10), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'outcome_photo_status', detail: `${result.gaps.length} pin(s) with outcomes lacking a picture, ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_outcome_photos',
+    description:
+      "Adds or replaces pictures of people on a market pin's odds bars: `photos`: [{ label (the outcome exactly as outcome_photo_status printed it), person (who is pictured, full name), imageSource (an https picture of THAT person: a Wikipedia/Commons file, an official or press photo; it is downloaded, cropped square and stored in Azure here), authorName (the credit, e.g. 'Wikimedia Commons, <file title>' or '<outlet> / <photographer>'), authorUrl (the page it came from) }]. Never a flag, logo, team crest, group shot or look-alike: verify the picture shows the named person (open the page, read the caption). Other outcomes' pictures stay. Saved here, and on production when the run writes there.",
+    input_schema: obj({ pinId: num('Pin id'), photos: { type: 'array', items: { type: 'object' } } }, ['pinId', 'photos']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const rows = photosProblem(input.photos);
+      if (typeof rows === 'string') throw new Error(rows);
+      const saved = await savePhotos(pinId, rows);
+      expirePinPage(pinId);
+      const pushed = await pushOutcomePhotos(pinId, saved).catch((err) => {
+        log.warn(`pin ${pinId}'s outcome photos did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_outcome_photos', pinId, detail: `${saved.length} picture(s)${pushed ? '; prod saved' : ''}` });
+      return { pinId, photos: saved.length, production: pushed };
     },
   },
   // --- Competing products on goods pins (the productCompetitors task) -------

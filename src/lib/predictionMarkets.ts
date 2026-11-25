@@ -22,6 +22,11 @@ export type MarketOutcome = {
   volume?: number;
   // Which price history is this outcome's, for its trend (GET /api/pins/:id/trend).
   history?: string;
+  // A picture of the outcome (the contestant or candidate), where the exchange has one.
+  image?: string;
+  // Who is pictured and where the picture is from, for a curated picture.
+  person?: string;
+  credit?: string;
 };
 
 // A market's leading outcome over the past week: [unix seconds, chance 0-1].

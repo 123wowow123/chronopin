@@ -37,7 +37,7 @@ sentiment and a sample. All of these are mandatory every run:
 - **Every other task in the list** (weekReview, freshSources, pinAds, holidayAds, adTranslations, personTrades,
   traderPositions, threadPredicted, productLifecycle, productCompetitors, factoryProfiles, breakingNews,
   trends (`.agents/skills/google-trends-pins/`), specialDayFreebies (`.agents/skills/special-day-freebies/`), predictionMarkets incl. Brent/WTI, earthquakes, stormTracks, layoffs, hiringJobCreation, modelScores,
-  modelRubrics, horoscopes, industryForecasts, productSales, marketImpact, sentiment).
+  modelRubrics, horoscopes, industryForecasts, productSales, outcomePhotos, marketImpact, sentiment).
 - **Housekeeping:** create/update pins as the tasks require, write the `docs/okf/scraping/news-YYYY-MM-DD-{am,pm}.md`
   run note and pass `npx vitest run src/lib/okfLint.test.ts` before `finish_job`.
 
@@ -53,7 +53,7 @@ until every lane is done for that 06:00 / 18:00 slot. Lanes:
 2. **Event info:** 40 pins (20 calls), hand-set rows handled by the admin PUT above.
 3. **Markets and new events:** predictionMarkets (incl. Brent/WTI), threadPredicted, breakingNews, trends (google-trends-pins skill), specialDayFreebies, earthquakes,
    stormTracks, layoffs (confirmed sweep, then the forecast pass: Blind/Layoffs.fyi/TrueUp/Reddit via the owner's Chrome login -> `Predicted`/`Rumor` pins with estimated date, headcount range and site; daily-jobs.md#layoffs), hiringJobCreation.
-4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, productSales, marketImpact, sentiment.
+4. **Scores and rubrics:** modelScores, modelRubrics, horoscopes, industryForecasts, productSales, outcomePhotos, marketImpact, sentiment.
 5. **Ads and products:** pinAds, holidayAds, adTranslations, personTrades, traderPositions, productLifecycle,
    productCompetitors, factoryProfiles.
 

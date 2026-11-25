@@ -1,5 +1,6 @@
 'use client';
 
+import { takeTimelineFocus } from '@/lib/client/timelineFocus';
 import { useRouter } from '@/lib/client/navigation';
 import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
@@ -471,6 +472,12 @@ export function Timeline({
   }, [reachesToday, holdToday, focus, reload, ring, postedWithin, defaultPostedWithin, radiusKm, imperial, router]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
+  // Showing again after a "To timeline" click: this page was kept from an
+  // earlier visit to the same URL, and the position put back above is where
+  // that visit ended. The pin asked for is scrolled to again instead.
+  useLayoutEffect(() => {
+    if (focus && takeTimelineFocus(focus.id)) holdFocus();
+  }, [focus, holdFocus]);
 
   // The day at the top of the window rides in the URL's hash once the reader
   // scrolls, so a reload or a shared link opens there, and each day they

@@ -1,3 +1,4 @@
+import { ToTimelineLink } from '@/components/pin/ToTimelineLink';
 import { PinFactoryBuildout } from '@/components/pin/PinFactoryBuildout';
 import { buildMarks, type FactoryMilestone, hasEstimatedCost, hasWholeProjectCost } from '@/lib/pinFactory';
 import Anchor from '@/components/ui/Anchor';
@@ -562,10 +563,10 @@ async function PinBody({
           ) : null}
           {/* Opens the timeline on this pin, centred, rather than on today. */}
           {/* The same pill as the aside's "To map". */}
-          <Link href={`/?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
+          <ToTimelineLink pinId={pin.id} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
             <Icon name="timeline" className="size-3.5 text-link" />
             {t('pin.toTimeline')}
-          </Link>
+          </ToTimelineLink>
           {/* Share, Not interested (or Show this pin again), Block. */}
           <PinMenu
             pin={{ id: pin.id, title: pin.title, originalTitle: pin.originalTitle, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
