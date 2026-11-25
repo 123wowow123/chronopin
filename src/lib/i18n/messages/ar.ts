@@ -1515,6 +1515,7 @@ const ar: Messages = {
     closed: 'مغلق',
     showResolved: 'عرض {count} أسواق منتهية',
     hideResolved: 'إخفاء المنتهية',
+    range: 'جرى التداول بين {low} و{high} قبل الإغلاق',
     updated: 'حُدّث {time}',
     live: 'مباشر',
     moreOutcomes: {

@@ -22,6 +22,9 @@ export type MarketOutcome = {
   volume?: number;
   // Which price history is this outcome's, for its trend (GET /api/pins/:id/trend).
   history?: string;
+  // Resolved markets only: the lowest and highest chance (0-1) this outcome
+  // traded at before it settled.
+  range?: { low: number; high: number };
   // A picture of the outcome (the contestant or candidate), where the exchange has one.
   image?: string;
   // Who is pictured and where the picture is from, for a curated picture.

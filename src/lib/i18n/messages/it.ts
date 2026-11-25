@@ -1301,6 +1301,7 @@ const it: Messages = {
     closed: 'Chiuso',
     showResolved: 'Mostra {count} risolti',
     hideResolved: 'Nascondi risolti',
+    range: 'Scambiato tra {low} e {high} prima della chiusura',
     updated: 'Aggiornato {time}',
     live: 'In diretta',
     moreOutcomes: { one: '{count} altro esito', other: '{count} altri esiti' },

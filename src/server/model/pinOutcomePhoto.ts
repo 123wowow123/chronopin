@@ -84,8 +84,15 @@ async function storePicture(pinId: number, person: string, source: string, kind:
   const data = Buffer.from(await res.arrayBuffer());
   if (data.length > MAX_BYTES) throw new Error(`${person}: the picture is too large`);
   let meta;
+  let input = sharp(data);
   try {
-    meta = await sharp(data).metadata();
+    meta = await input.metadata();
+    // A vector logo is rasterised large enough to fill the tile (24px icons included).
+    if (meta.format === 'svg' && meta.width && meta.height) {
+      const density = Math.min(2400, Math.max(72, Math.ceil((SIZE / Math.max(meta.width, meta.height)) * 72 * 1.5)));
+      input = sharp(data, { density });
+      meta = await input.metadata();
+    }
   } catch {
     throw new Error(`${person}: that URL is not a picture (an AVIF or video saved as .jpg?)`);
   }
@@ -94,8 +101,8 @@ async function storePicture(pinId: number, person: string, source: string, kind:
   // centred on a plain tile (white for logos, so a transparent crest reads).
   const jpeg =
     kind === 'person'
-      ? await sharp(data).rotate().flatten({ background: '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer()
-      : await sharp(data).rotate().flatten({ background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'contain', background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).jpeg({ quality: 88 }).toBuffer();
+      ? await input.clone().rotate().flatten({ background: '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer()
+      : await input.clone().rotate().flatten({ background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'contain', background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).jpeg({ quality: 88 }).toBuffer();
   const hash = createHash('sha256').update(jpeg).digest('hex').slice(0, 12);
   const slug = person.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase() || 'item';
   const name = `outcome-photos/${pinId}/${slug}-${hash}.jpg`;

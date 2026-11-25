@@ -1317,6 +1317,7 @@ const hi: Messages = {
     closed: 'बंद',
     showResolved: '{count} समाधानित दिखाएँ',
     hideResolved: 'समाधानित छिपाएँ',
+    range: 'बंद होने से पहले {low} से {high} के बीच कारोबार हुआ',
     updated: '{time} अपडेट किया गया',
     live: 'लाइव',
     moreOutcomes: { one: '{count} और नतीजा', other: '{count} और नतीजे' },

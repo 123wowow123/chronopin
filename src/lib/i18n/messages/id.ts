@@ -1311,6 +1311,7 @@ const id: Messages = {
     closed: 'Ditutup',
     showResolved: 'Tampilkan {count} yang selesai',
     hideResolved: 'Sembunyikan yang selesai',
+    range: 'Diperdagangkan antara {low} dan {high} sebelum ditutup',
     updated: 'Diperbarui {time}',
     live: 'Langsung',
     moreOutcomes: '{count} hasil lagi',

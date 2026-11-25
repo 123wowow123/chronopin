@@ -310,7 +310,7 @@ export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
   const hit = cache.get(key);
   if (hit && hit.expires > now) return hit.promise;
 
-  const read = ref.source === 'Kalshi' ? kalshi(ref) : ref.source === 'Polymarket' ? polymarket(ref) : polymarketUs(ref);
+  const read = (ref.source === 'Kalshi' ? kalshi(ref) : ref.source === 'Polymarket' ? polymarket(ref) : polymarketUs(ref)).then(withRanges);
   const promise = read.catch((err) => {
     if (err instanceof NotFound) return null;
     cache.delete(key);
@@ -322,6 +322,75 @@ export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
   }
   cache.set(key, { promise, expires: now + TTL_MS });
   return promise;
+}
+
+// --- Ranges ----------------------------------------------------------------
+
+// The lowest and highest chance each outcome of a resolved market traded at,
+// shown over its bar. A settled market's history is final, so it is read once.
+const ranges: Map<string, Promise<{ low: number; high: number } | null>> = ((globalThis as any).__chronopinMarketRanges ??= new Map());
+const RANGE_OUTCOMES = 6;
+
+async function readFullHistory(history: string): Promise<number[]> {
+  const [source, ...id] = history.split(':');
+  if (source === 'kalshi') {
+    const [series, ticker, side] = id;
+    const end = Math.floor(Date.now() / 1000);
+    const { market } = await getJson(`${KALSHI_API}/markets/${encodeURIComponent(ticker)}`);
+    const start = Math.floor(Date.parse(market?.open_time ?? '') / 1000) || end - 365 * 86_400;
+    // Hourly candles are capped in count, so the span is read in 30-day pages.
+    const prices: number[] = [];
+    for (let from = start; from < end; from += 30 * 86_400) {
+      const { candlesticks = [] } = await getJson(
+        `${KALSHI_API}/series/${encodeURIComponent(series)}/markets/${encodeURIComponent(ticker)}/candlesticks?start_ts=${from}&end_ts=${Math.min(end, from + 30 * 86_400)}&period_interval=60`,
+      );
+      for (const candle of candlesticks as Json[]) {
+        const chance = candleChance(candle);
+        if (chance !== undefined) prices.push(side === 'no' ? 1 - chance : chance);
+      }
+    }
+    return prices;
+  }
+  if (source === 'polymarket') {
+    const { history: points = [] } = await getJson(`${POLYMARKET_CLOB}/prices-history?market=${encodeURIComponent(id[0])}&interval=max&fidelity=60`);
+    return (points as Json[]).flatMap((point) => num(point.p) ?? []);
+  }
+  return [];
+}
+
+async function readRange(history: string): Promise<{ low: number; high: number } | null> {
+  const prices = await readFullHistory(history);
+  // The settlement snaps the price to 0 or 1: that is the result, not the polling.
+  let end = prices.length;
+  while (end > 1 && (prices[end - 1] === 0 || prices[end - 1] === 1)) end--;
+  // A new market opens with a few placeholder quotes (an empty book reads 50%): skipped.
+  const polled = prices.slice(prices.length > 48 ? 6 : 0, end);
+  return polled.length ? { low: Math.min(...polled), high: Math.max(...polled) } : null;
+}
+
+// A resolved market with each leading outcome's range while it traded. Best
+// effort: an outcome whose history cannot be read just has no range.
+async function withRanges(odds: MarketOdds | null): Promise<MarketOdds | null> {
+  if (!odds?.closed) return odds;
+  const outcomes = await Promise.all(
+    odds.outcomes.map(async (outcome, i) => {
+      const key = outcome.history;
+      if (!key || i >= RANGE_OUTCOMES) return outcome;
+      let hit = ranges.get(key);
+      if (!hit) {
+        hit = readRange(key).catch((err) => {
+          ranges.delete(key);
+          log.warn(`Price range of ${key} failed (${(err as Error).message})`);
+          return null;
+        });
+        if (ranges.size >= CACHE_LIMIT) ranges.delete(ranges.keys().next().value!);
+        ranges.set(key, hit);
+      }
+      const range = await hit;
+      return range ? { ...outcome, range } : outcome;
+    }),
+  );
+  return { ...odds, outcomes };
 }
 
 // --- Trends ----------------------------------------------------------------

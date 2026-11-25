@@ -1311,6 +1311,7 @@ const en = {
     closed: 'Closed',
     showResolved: 'Show {count} resolved',
     hideResolved: 'Hide resolved',
+    range: 'Traded between {low} and {high} before it closed',
     updated: 'Updated {time}',
     live: 'Live',
     moreOutcomes: { one: '{count} more outcome', other: '{count} more outcomes' },

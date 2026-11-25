@@ -1310,6 +1310,7 @@ const fr: Messages = {
     closed: 'Clôturé',
     showResolved: 'Afficher {count} résolus',
     hideResolved: 'Masquer les résolus',
+    range: 'Cotait entre {low} et {high} avant la clôture',
     updated: 'Mis à jour à {time}',
     live: 'En direct',
     moreOutcomes: { one: '{count} autre issue', other: '{count} autres issues' },

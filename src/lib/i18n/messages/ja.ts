@@ -1304,6 +1304,7 @@ const ja: Messages = {
     closed: '終了',
     showResolved: '決着済み {count} 件を表示',
     hideResolved: '決着済みを隠す',
+    range: '終了前は {low}〜{high} で推移',
     updated: '{time} 更新',
     live: 'ライブ',
     moreOutcomes: 'ほか {count} 件の結果',

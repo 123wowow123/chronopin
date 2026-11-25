@@ -1347,6 +1347,7 @@ const ru: Messages = {
     closed: 'Закрыто',
     showResolved: 'Показать завершённые: {count}',
     hideResolved: 'Скрыть завершённые',
+    range: 'До закрытия торговался в диапазоне от {low} до {high}',
     updated: 'Обновлено {time}',
     live: 'В реальном времени',
     moreOutcomes: { one: 'ещё {count} исход', few: 'ещё {count} исхода', many: 'ещё {count} исходов', other: 'ещё {count} исхода' },

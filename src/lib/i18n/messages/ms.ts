@@ -1311,6 +1311,7 @@ const ms: Messages = {
     closed: 'Tutup',
     showResolved: 'Tunjukkan {count} yang selesai',
     hideResolved: 'Sembunyikan yang selesai',
+    range: 'Didagangkan antara {low} dan {high} sebelum ditutup',
     updated: 'Dikemas kini {time}',
     live: 'Langsung',
     moreOutcomes: '{count} lagi hasil',

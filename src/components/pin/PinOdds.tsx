@@ -335,6 +335,8 @@ function Outcome({
     };
   }, [target]);
 
+  const range = outcome.range;
+  const t = useT();
   const fill = trend === 'up' ? 'bg-success/30' : trend === 'down' ? 'bg-danger/30' : 'bg-link/20';
   const text = trend === 'up' ? 'text-success' : trend === 'down' ? 'text-danger' : 'text-ink';
 
@@ -364,12 +366,21 @@ function Outcome({
           className={`absolute inset-y-0 start-0 transition-colors duration-700 motion-reduce:transition-none ${fill}`}
           style={{ width: barWidth(target) }}
         />
+        {range ? (
+          <span
+            aria-hidden
+            title={t('odds.range', { low: percent(range.low), high: percent(range.high) })}
+            className="absolute inset-y-0 border-x-2 border-link/70 bg-link/25"
+            style={{ insetInlineStart: barWidth(range.low), width: `max(2px, ${(range.high - range.low) * 100}%)` }}
+          />
+        ) : null}
         <span className="relative block truncate text-ink" title={outcome.label}>
           {outcome.label}
         </span>
       </span>
       <span className={`text-end font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${compact ? 'w-9' : 'w-11'} ${text}`}>
         {percent(shown)}
+        {range ? <span className="sr-only">{t('odds.range', { low: percent(range.low), high: percent(range.high) })}</span> : null}
       </span>
     </li>
   );
