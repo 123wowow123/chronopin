@@ -146,7 +146,7 @@ def map_fields(table: str, kinds: Dict[str, str], fields: dict, fn: Callable[[st
 
 
 def tokens(s: str) -> List[str]:
-    return sorted(re.findall(r'\[\^[^\]]+\]|https?://[^\s\[]+|`[^`]*`', s))
+    return sorted(re.findall(r'\[\^[^\]]+\]|https?://[^\s\[]+|`[^`\n]*`', s))
 
 
 def structure_ok(src: dict, tr: dict) -> bool:
@@ -167,6 +167,16 @@ def structure_ok(src: dict, tr: dict) -> bool:
         if x.count('\n') != y.count('\n') or tokens(x) != tokens(y):
             return False
     return True
+
+
+NAME_CONNECTORS = {'of', 'and', 'the', 'for', 'in', 'at', 'on', 'de', 'la', 'del', 'von', 'van', 'magna', 'summa', 'cum', 'laude'}
+
+
+def name_only(src: str) -> bool:
+    """A citation/credential list ("B.A., Huntingdon College (1969); J.D., University of Alabama"):
+    every word is Capitalised, a connector, an initialism or a number, so it stays as written in any locale."""
+    words = re.findall(r"[A-Za-z][A-Za-z'.\-]*", src)
+    return bool(words) and all(w[0].isupper() or w.lower() in NAME_CONNECTORS for w in words)
 
 
 class LocaleCache:
@@ -201,7 +211,10 @@ class LocaleCache:
                 tr = tidy_bold(src, tr.strip())
                 if self.locale == 'th':
                     tr = st.fix_thai_years(src, tr)
-                if '\n' in tr or not st.acceptable(self.locale, src, tr):
+                if '\n' in tr:
+                    continue
+                same = tr.strip() == src.strip()
+                if not (same and name_only(src)) and not st.acceptable(self.locale, src, tr):
                     continue
                 self.data[src] = tr
                 self.new[src] = tr

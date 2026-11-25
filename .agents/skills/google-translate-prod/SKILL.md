@@ -47,3 +47,11 @@ attribution Golden Rule live in `.agents/skills/prod-translations/`; this skill 
   or they stay English.
 - Thai uses Gregorian years (handled by `fix_thai_years`). No model tracking notes in any public field.
 - Fragment cache: `.scrape/translations-cache/content/<locale>.json` (reused across runs; keep it).
+- **Name-only fragments** (degree/citation lists like `B.A., Huntingdon College (1969)`) come back identical to
+  English and `acceptable()` rejects them; `name_only()` in `content_translations.py` accepts them for Latin locales.
+- **Stray backticks** (transliterations like ``al-`Iqāriyyah``) once broke the footnote/code token check across
+  lines (`structure changed, not saved`); `tokens()` now matches inline code within one line only.
+- Check the log's `done:` lines: `unbuilt` or `bad_structure` above 0 means rows stayed due.
+- **Fragments Google can't do** (mistranslated company names, a sentence cut at `U.S.`): translate them yourself and write them into the
+  locale cache with `st._save_locale_cache_atomic(ct.CACHE_DIR/'<loc>.json', {src: tr})`, then re-run the script for that table; it
+  builds, structure-checks and saves the rows as usual. Keep company/case names Latin; mirror a truncated source as is.
