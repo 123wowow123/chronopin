@@ -317,7 +317,7 @@ function OutcomeSpotlight({ outcome }: { outcome: MarketOutcome }) {
       />
       <div className="min-w-0">
         <div className="truncate font-semibold text-ink">{outcome.person ?? outcome.label}</div>
-        {outcome.person ? <div className="truncate text-xs text-subtle">{outcome.label}</div> : null}
+        {outcome.person && outcome.person !== outcome.label ? <div className="truncate text-xs text-subtle">{outcome.label}</div> : null}
         <div className="text-2xl font-semibold tabular-nums text-link">{percent(outcome.probability)}</div>
         {outcome.credit ? <div className="mt-1 truncate text-[11px] text-subtle">{outcome.credit}</div> : null}
       </div>

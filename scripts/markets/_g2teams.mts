@@ -7,7 +7,7 @@ const leagues: Record<number, string[]> = {
   1954: ['football/nfl'], 1955: ['basketball/nba'], 1956: ['hockey/nhl'],
   1957: ['soccer/UEFA.CHAMPIONS', 'soccer/eng.1', 'soccer/esp.1', 'soccer/ita.1', 'soccer/ger.1', 'soccer/fra.1'], 19332: ['soccer/eng.1'], 20639: ['soccer/usa.1'],
 };
-const alias: Record<string, string> = { psg: 'paris saint-germain', atletico: 'atlético madrid', 'atletico madrid': 'atlético madrid', 'montreal canadiens': 'montréal canadiens', 'los angeles r': 'los angeles rams', 'los angeles l': 'los angeles lakers', 'inter milan': 'internazionale', 'bayern munich': 'bayern munich', 'man city': 'manchester city', 'manchester united': 'manchester united' };
+const alias: Record<string, string> = { 'vancouver whitecaps fc': 'vancouver whitecaps', 'montreal canadiens': 'montreal canadiens', 'montréal canadiens': 'montreal canadiens', atletico: 'atletico madrid', psg: 'paris saint-germain', atletico: 'atlético madrid', 'atletico madrid': 'atlético madrid', 'montreal canadiens': 'montréal canadiens', 'los angeles r': 'los angeles rams', 'los angeles l': 'los angeles lakers', 'inter milan': 'internazionale', 'bayern munich': 'bayern munich', 'man city': 'manchester city', 'manchester united': 'manchester united' };
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.']/g, '').trim();
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 for (const [pid, paths] of Object.entries(leagues)) {
