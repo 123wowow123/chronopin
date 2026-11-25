@@ -7,8 +7,17 @@
 # Configuration and secrets come from Docker/env.prod.list on the VM, which
 # never enters git or an image (.gitignore, .dockerignore). Only Caddy's ports
 # are published; the rest talk over the compose network.
+# Every service but Caddy (which has its own, larger cap below) keeps at most
+# 150 MB of logs: edgecache's grew to 3.6 GB in one file unrotated (2026-11-25).
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: 50m
+    max-file: '3'
+
 services:
   postgres:
+    logging: *default-logging
     build: ./postgis
     image: chronopin-postgis:17
     env_file: env.prod.list
@@ -24,6 +33,7 @@ services:
       retries: 10
 
   faiss:
+    logging: *default-logging
     # FAISS_IMAGE (Docker/.env, written by scripts/deploy-faiss.sh) names the
     # image CI built. No fallback: nothing builds faiss on the VM, and an
     # unset name made `deploy` try to recreate faiss from a missing image.
@@ -38,6 +48,7 @@ services:
     restart: unless-stopped
 
   app:
+    logging: *default-logging
     build:
       context: ..
       dockerfile: Docker/Dockerfile
@@ -60,6 +71,7 @@ services:
   # (Caddyfile: the second upstream) while `app` is recreated, then is stopped.
   # Never running between deploys.
   app-next:
+    logging: *default-logging
     image: ${APP_IMAGE:-chronopin:latest}
     env_file: env.prod.list
     environment:
@@ -76,6 +88,7 @@ services:
   # A shared cache for the regional anonymous API answers (Docker/edgecache).
   # Caddy tries it first and falls back to `app`, so it can be stopped freely.
   edgecache:
+    logging: *default-logging
     image: nginx:1.27-alpine
     volumes:
       - ./edgecache:/etc/nginx/conf.d:ro
