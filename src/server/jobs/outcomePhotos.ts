@@ -57,7 +57,10 @@ export async function wikipediaLeads(labels: string[]): Promise<Map<string, { im
 
 // Markets on pins with outcomes lacking a picture. Pins that already have
 // pictures come first (new entrants), then the rest by dollar volume.
-export async function photoGaps(limit = 5, skip: number[] = []): Promise<{ gaps: PhotoGap[]; remaining: number }> {
+// `kind` 'person' lists markets of people; 'logo' and 'cover' list the markets
+// whose outcomes are teams, parties, companies, countries or works (words, no
+// numbers), for the agent to judge: a logo or flag, a poster or album cover.
+export async function photoGaps(limit = 5, skip: number[] = [], kind: 'person' | 'logo' | 'cover' = 'person'): Promise<{ gaps: PhotoGap[]; remaining: number }> {
   const pins = await db.query<{ id: number; title: string; sourceUrl: string | null; refs: string[] | null; have: string }>(
     `SELECT p."id", p."title", p."sourceUrl",
        (SELECT json_agg(r."url") FROM "PinReference" r WHERE r."pinId" = p."id") AS "refs",
@@ -78,14 +81,15 @@ export async function photoGaps(limit = 5, skip: number[] = []): Promise<{ gaps:
       const odds = await oddsFor(ref).catch(() => null);
       if (!odds || odds.closed || odds.outcomes.length < 3) continue;
       const leaders = odds.outcomes.slice(0, WANTED);
-      const missing = leaders.filter((o) => !photos.has(outcomeKey(o.label)) && !NOT_A_PERSON.test(o.label));
-      // A market of dates or thresholds has no people at all.
-      if (!missing.length || leaders.filter((o) => NOT_A_PERSON.test(o.label)).length > leaders.length / 2) continue;
+      const usable = (label: string) => (kind === 'person' ? !NOT_A_PERSON.test(label) : !/\d|[$%↑↓<>]|^(before|after|above|below|under|over|yes|no|tie|other|none|any|field)\b/i.test(label));
+      const missing = leaders.filter((o) => !photos.has(outcomeKey(o.label)) && usable(o.label));
+      // A market of dates or thresholds has no people (or things) at all.
+      if (!missing.length || leaders.filter((o) => !usable(o.label)).length > leaders.length / 2) continue;
       if (gaps.length >= limit) {
         remaining++;
         continue;
       }
-      const leads = await wikipediaLeads(missing.map((o) => o.label));
+      const leads = kind === 'person' ? await wikipediaLeads(missing.map((o) => o.label)) : new Map<string, { imageSource: string; pageUrl: string }>();
       gaps.push({
         pinId: pin.id,
         title: pin.title,

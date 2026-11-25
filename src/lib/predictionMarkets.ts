@@ -26,6 +26,8 @@ export type MarketOutcome = {
   image?: string;
   // Who is pictured and where the picture is from, for a curated picture.
   person?: string;
+  // 'person' crops a face; 'logo' and 'cover' are shown whole on a tile.
+  photoKind?: 'person' | 'logo' | 'cover';
   credit?: string;
 };
 

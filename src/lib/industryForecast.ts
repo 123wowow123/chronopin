@@ -94,15 +94,24 @@ const isRecord = (v: unknown): v is Record<string, unknown> => !!v && typeof v =
 const text = (v: unknown, max: number): v is string => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
 const isDay = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
-function lineProblem(v: unknown, what: string, dated: boolean, max = 12): ForecastLine | string {
+// A projection compares named categories (clothing, footwear, ...) instead of
+// years when none of its labels looks like a date.
+export const isCategoryLine = (line: { points: ForecastPoint[] } | null | undefined) => !!line && line.points.length > 0 && line.points.every((p) => !/^\d{4}(-\d{2}-\d{2})?$/.test(p.x));
+
+function lineProblem(v: unknown, what: string, dated: boolean, max = 12, categories = false): ForecastLine | string {
   if (!isRecord(v) || !text(v.label, 120)) return `${what}: needs a label.`;
   if (dated && !isDay(v.publishedDate)) return `${what}: publishedDate must be YYYY-MM-DD.`;
   if (!Array.isArray(v.points) || !v.points.length || v.points.length > max) return `${what}: 1 to ${max} points.`;
   const points: ForecastPoint[] = [];
   for (const p of v.points) {
-    if (!isRecord(p) || typeof p.x !== 'string' || !/^\d{4}(-\d{2}-\d{2})?$/.test(p.x) || typeof p.value !== 'number' || !Number.isFinite(p.value)) return `${what}: points are { x: "2027", value: number }.`;
+    if (!isRecord(p) || typeof p.x !== 'string' || typeof p.value !== 'number' || !Number.isFinite(p.value)) return `${what}: points are { x: "2027", value: number }.`;
+    const year = /^\d{4}(-\d{2}-\d{2})?$/.test(p.x);
+    if (!year && !(categories && text(p.x, 40))) return `${what}: points are { x: "2027", value: number }.`;
     points.push({ x: p.x, value: p.value });
   }
+  // Years and category names do not mix on one line, and category names must be distinct.
+  if (points.some((p) => /^\d{4}(-\d{2}-\d{2})?$/.test(p.x)) && points.some((p) => !/^\d{4}(-\d{2}-\d{2})?$/.test(p.x))) return `${what}: use years or category names, not both.`;
+  if (new Set(points.map((p) => p.x)).size !== points.length) return `${what}: each point label must be unique.`;
   return { label: v.label, points, ...(dated ? { publishedDate: v.publishedDate as string } : {}) };
 }
 
@@ -127,7 +136,7 @@ export function forecastProblem(input: unknown): IndustryForecastInput | string 
   }
   let projection: ForecastLine | null = null;
   if (input.projection != null) {
-    const line = lineProblem(input.projection, 'projection', false);
+    const line = lineProblem(input.projection, 'projection', false, 12, true);
     if (typeof line === 'string') return line;
     // A projected figure needs a quote from a source that states it.
     if (!sources.some((s) => s.quote)) return 'projection: at least one source needs a verbatim quote.';

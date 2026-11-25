@@ -1195,6 +1195,10 @@
       "label": "Gartner: Forecast Analysis: Information Security, Worldwide, 2026",
       "points": [
         {
+          "x": "2025",
+          "value": 213
+        },
+        {
           "x": "2026",
           "value": 244
         }
@@ -1206,9 +1210,26 @@
         "url": "https://www.gartner.com/en/documents/7408930",
         "date": "2026-02-05",
         "quote": "Spending on information security is expected to grow to $244 billion in 2026"
+      },
+      {
+        "label": "Gartner: end-user spending on information security, July 2025",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-07-29-gartner-forecasts-worldwide-end-user-spending-on-information-security-to-total-213-billion-us-dollars-in-2025",
+        "date": "2025-07-29",
+        "quote": "Worldwide end-user spending on information security is projected to reach $213 billion in 2025, up from $193 billion in 2024"
       }
     ],
-    "note": "USD billions. February 2026 published forecast abstract; this supersedes the $240 billion 2026 figure in the July 2025 release. Full research is subscription-only."
+    "note": "USD billions. February 2026 published forecast abstract; this supersedes the $240 billion 2026 figure in the July 2025 release. Full research is subscription-only. 2024 ($193B) and 2025 ($213B) are from the July 2025 release; 2026 is the later February 2026 figure, so the 2025 bar may predate a revision.",
+    "history": [
+      {
+        "label": "Gartner, July 2025 release",
+        "points": [
+          {
+            "x": "2024",
+            "value": 193
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "gartner-worldwide-it-spending",
@@ -1226,6 +1247,10 @@
       "label": "Gartner worldwide IT spending, October 2026",
       "points": [
         {
+          "x": "2026",
+          "value": 6.39
+        },
+        {
           "x": "2027",
           "value": 7.35
         }
@@ -1237,9 +1262,26 @@
         "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-21-gartner-forecasts-worldwide-it-spending-to-grow-15-percent-in-2027-totaling-7-point-35-trillion",
         "date": "2026-10-21",
         "quote": "Worldwide IT spending is expected to reach $7.35 trillion in 2027, up 15% from 2026"
+      },
+      {
+        "label": "Gartner worldwide IT spending, February 2026 (2025 base year)",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-forecasts-worldwide-it-spending-to-grow-10-point-8-percent-in-2026-totaling-6-point-15-trillion-dollars",
+        "date": "2026-02-03",
+        "quote": "Gartner Forecasts Worldwide IT Spending to Grow 10.8% in 2026, Totaling $6.15 Trillion"
       }
     ],
-    "note": "USD trillions across the IT market. This aggregate includes infrastructure, software and services; it is not a separate market-size estimate for each matching category."
+    "note": "USD trillions across the IT market. This aggregate includes infrastructure, software and services; it is not a separate market-size estimate for each matching category. 2026 ($6.391T) is from the October 2026 table; 2025 ($5.555T, shown as $5.56T) is the February 2026 edition's figure, which the October release no longer states, so it may have been revised since.",
+    "history": [
+      {
+        "label": "Gartner estimate, February 2026 release",
+        "points": [
+          {
+            "x": "2025",
+            "value": 5.56
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "pwc-entertainment-media",
@@ -1854,6 +1896,86 @@
       }
     ],
     "note": "Annual growth in the number of jewellery items sold over 2025–2028, shown at the end of the interval. Not annual revenue growth, total cumulative growth or a forecast for all clothing. The report’s headline fashion outlook is only qualitative (low single digits)."
+  },
+  {
+    "slug": "mckinsey-fashion-category-volume-growth",
+    "industry": "Fashion",
+    "title": "Annual unit-sales growth by fashion category, 2025E–2028E",
+    "tags": [
+      "Fashion"
+    ],
+    "prefix": "",
+    "suffix": "%",
+    "projection": {
+      "label": "BoF–McKinsey The State of Fashion 2026, page 52 (Euromonitor)",
+      "points": [
+        {
+          "x": "Jewellery",
+          "value": 4.1
+        },
+        {
+          "x": "Watches",
+          "value": 3.3
+        },
+        {
+          "x": "Handbags",
+          "value": 2.2
+        },
+        {
+          "x": "Footwear",
+          "value": 1.2
+        },
+        {
+          "x": "Clothing",
+          "value": 1.0
+        },
+        {
+          "x": "Other accessories",
+          "value": -0.6
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "BoF–McKinsey The State of Fashion 2026, page 52",
+        "url": "https://www.mckinsey.com/~/media/mckinsey/industries/retail/our%20insights/state%20of%20fashion/2026/the-state-of-fashion-2026-vf.pdf",
+        "date": "2025-11-17",
+        "quote": "Over the next few years, jewellery is forecast to be the fastest-growing category in fashion by unit sales, growing at nearly four times the rate of clothing."
+      }
+    ],
+    "note": "Volume growth CAGR (growth in the number of units sold), not revenue growth: price growth is charted separately in the report. Other accessories covers fashion glasses, belts, scarves, gloves, hats, caps, ties and other small accessories. Values are the labels printed on the page 52 chart."
+  },
+  {
+    "slug": "mckinsey-jewellery-market-size",
+    "industry": "Fashion",
+    "title": "Global jewellery market size, 2025E–2028E",
+    "tags": [
+      "Fashion"
+    ],
+    "prefix": "$",
+    "suffix": "B",
+    "projection": {
+      "label": "BoF–McKinsey The State of Fashion 2026, page 53 (Euromonitor)",
+      "points": [
+        {
+          "x": "2025",
+          "value": 395
+        },
+        {
+          "x": "2028",
+          "value": 460
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "BoF–McKinsey The State of Fashion 2026, page 53",
+        "url": "https://www.mckinsey.com/~/media/mckinsey/industries/retail/our%20insights/state%20of%20fashion/2026/the-state-of-fashion-2026-vf.pdf",
+        "date": "2025-11-17",
+        "quote": "Share of total jewellery market by region, 2025E–2028E"
+      }
+    ],
+    "note": "USD billions, Euromonitor data via McKinsey analysis; the totals are printed above the two columns of the regional-share chart on page 53 (both are estimates). Total jewellery sales, not units, and not only fine jewellery."
   },
   {
     "slug": "citi-stablecoin-issuance",

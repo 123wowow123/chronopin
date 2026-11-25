@@ -216,7 +216,7 @@ export const TASKS = {
   outcomePhotos: {
     group: 'scores',
     label: 'Photos of market contestants',
-    summary: "Give each prediction-market pin's leading people (pageant contestants, candidates, athletes, artists) a picture on its odds bars, including contestants added since the last run. Wikipedia or official or press photos, credited and stored in Azure; never a flag, logo or look-alike.",
+    summary: "Give each prediction-market pin's leading people (pageant contestants, candidates, athletes, artists) a picture on its odds bars, including contestants added since the last run. Wikipedia or official or press photos, credited and stored in Azure; never a flag, logo or look-alike of a person. Also team and party logos, flags and film, album or game covers on markets of those.",
   },
   marketImpact: {
     group: 'scores',

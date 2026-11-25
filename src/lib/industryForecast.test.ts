@@ -76,6 +76,11 @@ describe('industry forecast', () => {
   });
   it('refuses what it cannot cite', () => {
     expect(forecastProblem({ ...row, sources: [{ ...row.sources[0], url: 'http://x.test/' }] })).toMatch(/HTTPS/);
+    const cats = { ...row, projection: { label: 'McKinsey', points: [{ x: 'Jewellery', value: 4.1 }, { x: 'Other accessories', value: -0.6 }] }, earlier: [] };
+    expect(forecastProblem(cats)).toMatchObject({ projection: { points: [{ x: 'Jewellery' }, { x: 'Other accessories', value: -0.6 }] } });
+    expect(forecastProblem({ ...cats, projection: { label: 'm', points: [{ x: 'Jewellery', value: 1 }, { x: '2028', value: 2 }] } })).toMatch(/not both/);
+    expect(forecastProblem({ ...cats, projection: { label: 'm', points: [{ x: 'A', value: 1 }, { x: 'A', value: 2 }] } })).toMatch(/unique/);
+    expect(forecastProblem({ ...cats, earlier: [{ label: 'e', publishedDate: '2026-01-15', points: [{ x: 'Jewellery', value: 1 }] }] })).toMatch(/points are/);
     expect(forecastProblem({ ...row, sources: [{ ...row.sources[0], quote: null }] })).toMatch(/quote/);
     expect(forecastProblem({ ...row, projection: null })).toMatch(/earlier editions need/);
     expect(forecastProblem({ ...row, earlier: [{ ...row.earlier[0], publishedDate: null }] })).toMatch(/publishedDate/);

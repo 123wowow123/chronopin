@@ -9,12 +9,15 @@ import sharp from 'sharp';
 import * as db from '../db';
 import { getBlobUrl, uploadThumb } from '../azureBlob';
 
-export type OutcomePhoto = { label: string; person: string; imageUrl: string; imageSource?: string | null; authorName: string | null; authorUrl: string | null };
+export type PhotoKind = 'person' | 'logo' | 'cover';
+export const PHOTO_KINDS: PhotoKind[] = ['person', 'logo', 'cover'];
+
+export type OutcomePhoto = { label: string; person: string; kind: PhotoKind; imageUrl: string; imageSource?: string | null; authorName: string | null; authorUrl: string | null };
 
 export const outcomeKey = (label: string) => label.trim().toLowerCase();
 
 export function outcomePhotosForPin(pinId: number): Promise<OutcomePhoto[]> {
-  return db.query<OutcomePhoto>(`SELECT "label", "person", "imageUrl", "imageSource", "authorName", "authorUrl" FROM "PinOutcomePhoto" WHERE "pinId" = $1`, [pinId]);
+  return db.query<OutcomePhoto>(`SELECT "label", "person", "kind", "imageUrl", "imageSource", "authorName", "authorUrl" FROM "PinOutcomePhoto" WHERE "pinId" = $1`, [pinId]);
 }
 
 // What a saved photo's URL must start with: our own container, never another host.
@@ -23,7 +26,7 @@ const MAX_BYTES = 12_000_000;
 const MIN_SIDE = 160;
 const SIZE = 480;
 
-export type PhotoInput = { label: string; person: string; imageSource?: string; imageUrl?: string; authorName?: string; authorUrl?: string };
+export type PhotoInput = { label: string; person: string; kind?: PhotoKind; imageSource?: string; imageUrl?: string; authorName?: string; authorUrl?: string };
 
 function httpsUrl(value: unknown, what: string): string {
   let url: URL;
@@ -51,7 +54,9 @@ export function photosProblem(body: unknown): PhotoInput[] | string {
       const authorUrl = item.authorUrl ? httpsUrl(item.authorUrl, `${label}: authorUrl`) : undefined;
       const authorName = typeof item.authorName === 'string' ? item.authorName.trim().slice(0, 300) : undefined;
       if (!authorName || !authorUrl) return `${label}: credit the source with authorName and authorUrl.`;
-      rows.push({ label, person, imageSource, imageUrl, authorName, authorUrl });
+      const kind = item.kind === undefined ? 'person' : PHOTO_KINDS.find((k) => k === item.kind);
+      if (!kind) return `${label}: kind is person, logo or cover.`;
+      rows.push({ label, person, kind, imageSource, imageUrl, authorName, authorUrl });
     } catch (err) {
       return (err as Error).message;
     }
@@ -61,7 +66,7 @@ export function photosProblem(body: unknown): PhotoInput[] | string {
 
 // Downloads a source picture, crops it square around the likeliest face or
 // subject and stores it. Throws a plain sentence when it is not usable.
-async function storePicture(pinId: number, person: string, source: string): Promise<string> {
+async function storePicture(pinId: number, person: string, source: string, kind: PhotoKind = 'person'): Promise<string> {
   // Wikimedia answers a burst of requests with 429: wait and try again.
   let res: Response;
   for (let attempt = 0; ; attempt++) {
@@ -85,9 +90,14 @@ async function storePicture(pinId: number, person: string, source: string): Prom
     throw new Error(`${person}: that URL is not a picture (an AVIF or video saved as .jpg?)`);
   }
   if (!meta.width || !meta.height || Math.min(meta.width, meta.height) < MIN_SIDE) throw new Error(`${person}: the picture is under ${MIN_SIDE}px`);
-  const jpeg = await sharp(data).rotate().flatten({ background: '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer();
+  // A person is cropped square around the face; a logo or cover is kept whole,
+  // centred on a plain tile (white for logos, so a transparent crest reads).
+  const jpeg =
+    kind === 'person'
+      ? await sharp(data).rotate().flatten({ background: '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer()
+      : await sharp(data).rotate().flatten({ background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'contain', background: kind === 'logo' ? '#ffffff' : '#e8ecf1' }).jpeg({ quality: 88 }).toBuffer();
   const hash = createHash('sha256').update(jpeg).digest('hex').slice(0, 12);
-  const slug = person.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase() || 'person';
+  const slug = person.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase() || 'item';
   const name = `outcome-photos/${pinId}/${slug}-${hash}.jpg`;
   await uploadThumb(name, jpeg, 'image/jpeg', 'public, max-age=31536000, immutable');
   const url = getBlobUrl(name);
@@ -112,8 +122,8 @@ export async function savePhotosPartial(pinId: number, rows: PhotoInput[]): Prom
     // A gap between downloads keeps a batch under the host's rate limit.
     if (saved.length && r.imageSource) await new Promise((resolve) => setTimeout(resolve, 1500));
     try {
-      const imageUrl = r.imageSource ? await storePicture(pinId, r.person, r.imageSource) : r.imageUrl!;
-      saved.push({ label: r.label, person: r.person, imageUrl, imageSource: r.imageSource ?? null, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
+      const imageUrl = r.imageSource ? await storePicture(pinId, r.person, r.imageSource, r.kind) : r.imageUrl!;
+      saved.push({ label: r.label, person: r.person, kind: r.kind ?? 'person', imageUrl, imageSource: r.imageSource ?? null, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
     } catch (err) {
       failed.push({ label: r.label, reason: (err as Error).message });
     }
@@ -121,9 +131,9 @@ export async function savePhotosPartial(pinId: number, rows: PhotoInput[]): Prom
   await db.transaction(async (query) => {
     for (const p of saved) {
       await query(
-        `INSERT INTO "PinOutcomePhoto" ("pinId","label","person","imageUrl","imageSource","authorName","authorUrl") VALUES ($1,$2,$3,$4,$5,$6,$7)
-         ON CONFLICT ("pinId","label") DO UPDATE SET "person"=EXCLUDED."person","imageUrl"=EXCLUDED."imageUrl","imageSource"=EXCLUDED."imageSource","authorName"=EXCLUDED."authorName","authorUrl"=EXCLUDED."authorUrl"`,
-        [pinId, p.label, p.person, p.imageUrl, p.imageSource, p.authorName, p.authorUrl],
+        `INSERT INTO "PinOutcomePhoto" ("pinId","label","person","kind","imageUrl","imageSource","authorName","authorUrl") VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+         ON CONFLICT ("pinId","label") DO UPDATE SET "person"=EXCLUDED."person","kind"=EXCLUDED."kind","imageUrl"=EXCLUDED."imageUrl","imageSource"=EXCLUDED."imageSource","authorName"=EXCLUDED."authorName","authorUrl"=EXCLUDED."authorUrl"`,
+        [pinId, p.label, p.person, p.kind, p.imageUrl, p.imageSource, p.authorName, p.authorUrl],
       );
     }
   });

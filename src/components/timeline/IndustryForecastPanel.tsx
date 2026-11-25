@@ -5,7 +5,7 @@ import { RefineLink } from '@/components/pin/RefineLink';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
-import { formatForecastValue, type ForecastLine, type IndustryForecastJson } from '@/lib/industryForecast';
+import { formatForecastValue, isCategoryLine, type ForecastLine, type IndustryForecastJson } from '@/lib/industryForecast';
 
 // Drawn narrow because the search side panel is: the text stays readable when
 // it is scaled down to about 190px.
@@ -165,8 +165,49 @@ function Bars({ forecast, large }: { forecast: IndustryForecastJson; large: bool
   );
 }
 
+// Named categories side by side: horizontal bars so the names fit, and a
+// value below zero reaches left of the axis.
+function CategoryBars({ forecast, large }: { forecast: IndustryForecastJson; large: boolean }) {
+  const points = forecast.projection?.points ?? [];
+  const W = large ? 720 : 300;
+  const row = large ? 44 : 30;
+  const H = points.length * row + 8;
+  const labelW = large ? 180 : 108;
+  const valueW = large ? 60 : 44;
+  const lo = Math.min(0, ...points.map((p) => p.value));
+  // A negative bar and its value sit left of the axis, clear of the names.
+  const negW = lo < 0 ? (large ? 64 : 44) : 0;
+  const plotL = labelW + negW;
+  const plotW = W - labelW - negW - valueW;
+  const hi = Math.max(0, ...points.map((p) => p.value));
+  const span = hi - lo || 1;
+  const zero = plotL + ((0 - lo) / span) * plotW;
+  const peak = Math.max(...points.map((p) => p.value));
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full" role="img" aria-label={`${forecast.title}: ${forecast.industry}`}>
+      {points.map((p, i) => {
+        const y = 4 + i * row;
+        const w = (Math.abs(p.value) / span) * plotW;
+        const x = p.value < 0 ? zero - w : zero;
+        const cy = y + row / 2;
+        return (
+          <g key={p.x}>
+            <text x={labelW - 8} y={cy} textAnchor="end" dominantBaseline="middle" className={`fill-current text-ink ${large ? 'text-[14px]' : 'text-[11px]'}`}>{p.x}</text>
+            <rect x={x} y={y + row * 0.2} width={Math.max(w, 1)} height={row * 0.6} rx="2" className="fill-accent" opacity={p.value === peak ? 0.9 : 0.55}>
+              <title>{`${p.x}: ${formatForecastValue(forecast, p.value)}`}</title>
+            </rect>
+            <text x={p.value < 0 ? x - 5 : x + w + 5} y={cy} textAnchor={p.value < 0 ? 'end' : 'start'} dominantBaseline="middle" className={`fill-current font-semibold text-ink tabular-nums ${large ? 'text-[13px]' : 'text-[11px]'}`}>{formatForecastValue(forecast, p.value)}</text>
+          </g>
+        );
+      })}
+      <line x1={zero} x2={zero} y1={2} y2={H - 2} className="stroke-line" strokeWidth="1" />
+    </svg>
+  );
+}
+
 // The chart a panel gets: bars for a short projection, lines otherwise.
 export function ForecastGraph({ forecast, large = false }: { forecast: IndustryForecastJson; large?: boolean }) {
+  if (isCategoryLine(forecast.projection) && forecast.lines.length === 0) return <CategoryBars forecast={forecast} large={large} />;
   const projected = forecast.projection?.points ?? [];
   const barsOnly = projected.length > 0 && projected.length + forecast.lines.length <= 6 && forecast.lines.every((l) => l.points.length < 2) && forecast.earlier.length === 0;
   return barsOnly ? <Bars forecast={forecast} large={large} /> : <Chart forecast={forecast} large={large} />;
@@ -178,7 +219,9 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
   const projected = forecast.projection?.points ?? [];
   // A long projection starts collapsed to its first few years.
   const [expanded, setExpanded] = useState(large);
-  const shown = expanded ? projected : projected.slice(0, PROJECTED_SHOWN);
+  // Category bars carry every value on the chart itself.
+  const categories = isCategoryLine(forecast.projection) && forecast.lines.length === 0;
+  const shown = categories ? [] : expanded ? projected : projected.slice(0, PROJECTED_SHOWN);
   return (
     <>
       <ForecastGraph forecast={forecast} large={large} />
@@ -194,7 +237,7 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
             {forecast.projection!.label} {p.x}: <span className="font-semibold text-ink">{formatForecastValue(forecast, p.value)}</span> <span className="text-subtle">({t('pin.industry.projected')})</span>
           </li>
         ))}
-        {projected.length > PROJECTED_SHOWN ? (
+        {!categories && projected.length > PROJECTED_SHOWN ? (
           <li className="w-full">
             <button type="button" onClick={() => setExpanded(!expanded)} className="text-accent hover:underline">
               {expanded ? t('common.showLess') : `${t('common.showMore')} (${projected.length - PROJECTED_SHOWN})`}

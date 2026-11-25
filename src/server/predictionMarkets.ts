@@ -503,7 +503,7 @@ function withPhotos(odds: MarketOdds, photos?: Map<string, OutcomePhoto>): Marke
     outcomes: odds.outcomes
       .map(({ image: _exchange, ...outcome }) => {
         const photo = photos.get(outcomeKey(outcome.label));
-        return photo ? { ...outcome, image: photo.imageUrl, person: photo.person, credit: photo.authorName ?? undefined } : outcome;
+        return photo ? { ...outcome, image: photo.imageUrl, person: photo.person, photoKind: photo.kind, credit: photo.authorName ?? undefined } : outcome;
       })
       // Outcomes tied on chance (a decided contest: all 0%) list the ones with
       // a picture first, so the six rows shown are the faces we have.

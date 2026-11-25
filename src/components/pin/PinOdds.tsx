@@ -264,7 +264,7 @@ function OutcomeSpotlight({ outcome }: { outcome: MarketOutcome }) {
   return (
     <div className="mt-3 flex items-center gap-3 rounded-lg border border-line bg-raised p-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={outcome.image} alt={outcome.person ?? outcome.label} referrerPolicy="no-referrer" className="size-28 shrink-0 rounded-md object-cover" />
+      <img src={outcome.image} alt={outcome.person ?? outcome.label} referrerPolicy="no-referrer" className={`size-28 shrink-0 rounded-md ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`} />
       <div className="min-w-0">
         <div className="truncate font-semibold text-ink">{outcome.person ?? outcome.label}</div>
         {outcome.person ? <div className="truncate text-xs text-subtle">{outcome.label}</div> : null}
@@ -351,7 +351,7 @@ function Outcome({
             className={`block size-9 overflow-hidden rounded-md border bg-raised ${active ? 'border-link ring-2 ring-link/40' : 'border-line hover:border-link'}`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={outcome.image} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-full object-cover" />
+            <img src={outcome.image} alt="" loading="lazy" referrerPolicy="no-referrer" className={`size-full ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`} />
           </button>
         ) : (
           <span aria-hidden className="size-9 rounded-md bg-raised" />
