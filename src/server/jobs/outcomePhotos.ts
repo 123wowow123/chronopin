@@ -28,19 +28,25 @@ export type PhotoGap = {
   missing: { label: string; chance: number | null; hint?: { imageSource: string; pageUrl: string } }[];
 };
 
+// "SIENNA SPIRO" and "The Womack SIsters" are one article each under proper casing.
+const titleCase = (label: string) => label.toLowerCase().replace(/(^|[\s.'’-])(\p{L})/gu, (_, sep: string, c: string) => sep + c.toUpperCase());
+
 export async function wikipediaLeads(labels: string[]): Promise<Map<string, { imageSource: string; pageUrl: string }>> {
   const found = new Map<string, { imageSource: string; pageUrl: string }>();
   if (!labels.length) return found;
   try {
     const url = new URL('https://en.wikipedia.org/w/api.php');
-    url.search = new URLSearchParams({ action: 'query', titles: labels.join('|'), prop: 'pageimages|info', piprop: 'original', inprop: 'url', redirects: '1', format: 'json' }).toString();
+    url.search = new URLSearchParams({ action: 'query', titles: [...new Set(labels.flatMap((l) => [l, titleCase(l)]))].join('|'), prop: 'pageimages|info', piprop: 'original', inprop: 'url', redirects: '1', format: 'json' }).toString();
     const res = await fetch(url, { signal: AbortSignal.timeout(15_000), headers: { 'User-Agent': 'chronopin-image-fetch/1.0' } });
     const data = (await res.json()) as { query?: { redirects?: { from: string; to: string }[]; normalized?: { from: string; to: string }[]; pages?: Record<string, { title: string; fullurl?: string; original?: { source: string } }> } };
     const pages = new Map(Object.values(data.query?.pages ?? {}).map((p) => [p.title, p]));
+    const resolve = (name: string) => {
+      let title = name;
+      for (const step of [data.query?.normalized, data.query?.redirects]) title = step?.find((x) => x.from === title)?.to ?? title;
+      return pages.get(title);
+    };
     for (const label of labels) {
-      let title = label;
-      for (const step of [data.query?.normalized, data.query?.redirects]) title = step?.find((s) => s.from === title)?.to ?? title;
-      const page = pages.get(title);
+      const page = resolve(label)?.original ? resolve(label) : resolve(titleCase(label));
       if (page?.original?.source && page.fullurl) found.set(label, { imageSource: page.original.source.split('?')[0], pageUrl: page.fullurl });
     }
   } catch {

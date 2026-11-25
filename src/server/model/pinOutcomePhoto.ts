@@ -9,12 +9,12 @@ import sharp from 'sharp';
 import * as db from '../db';
 import { getBlobUrl, uploadThumb } from '../azureBlob';
 
-export type OutcomePhoto = { label: string; person: string; imageUrl: string; authorName: string | null; authorUrl: string | null };
+export type OutcomePhoto = { label: string; person: string; imageUrl: string; imageSource?: string | null; authorName: string | null; authorUrl: string | null };
 
 export const outcomeKey = (label: string) => label.trim().toLowerCase();
 
 export function outcomePhotosForPin(pinId: number): Promise<OutcomePhoto[]> {
-  return db.query<OutcomePhoto>(`SELECT "label", "person", "imageUrl", "authorName", "authorUrl" FROM "PinOutcomePhoto" WHERE "pinId" = $1`, [pinId]);
+  return db.query<OutcomePhoto>(`SELECT "label", "person", "imageUrl", "imageSource", "authorName", "authorUrl" FROM "PinOutcomePhoto" WHERE "pinId" = $1`, [pinId]);
 }
 
 // What a saved photo's URL must start with: our own container, never another host.
@@ -85,7 +85,7 @@ async function storePicture(pinId: number, person: string, source: string): Prom
     throw new Error(`${person}: that URL is not a picture (an AVIF or video saved as .jpg?)`);
   }
   if (!meta.width || !meta.height || Math.min(meta.width, meta.height) < MIN_SIDE) throw new Error(`${person}: the picture is under ${MIN_SIDE}px`);
-  const jpeg = await sharp(data).rotate().resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer();
+  const jpeg = await sharp(data).rotate().flatten({ background: '#e8ecf1' }).resize(SIZE, SIZE, { fit: 'cover', position: sharp.strategy.attention }).jpeg({ quality: 86 }).toBuffer();
   const hash = createHash('sha256').update(jpeg).digest('hex').slice(0, 12);
   const slug = person.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase() || 'person';
   const name = `outcome-photos/${pinId}/${slug}-${hash}.jpg`;
@@ -103,14 +103,14 @@ export async function savePhotos(pinId: number, rows: PhotoInput[]): Promise<Out
     // A gap between downloads keeps a batch under the host's rate limit.
     if (saved.length && r.imageSource) await new Promise((resolve) => setTimeout(resolve, 1500));
     const imageUrl = r.imageSource ? await storePicture(pinId, r.person, r.imageSource) : r.imageUrl!;
-    saved.push({ label: r.label, person: r.person, imageUrl, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
+    saved.push({ label: r.label, person: r.person, imageUrl, imageSource: r.imageSource ?? null, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
   }
   await db.transaction(async (query) => {
     for (const p of saved) {
       await query(
-        `INSERT INTO "PinOutcomePhoto" ("pinId","label","person","imageUrl","authorName","authorUrl") VALUES ($1,$2,$3,$4,$5,$6)
-         ON CONFLICT ("pinId","label") DO UPDATE SET "person"=EXCLUDED."person","imageUrl"=EXCLUDED."imageUrl","authorName"=EXCLUDED."authorName","authorUrl"=EXCLUDED."authorUrl"`,
-        [pinId, p.label, p.person, p.imageUrl, p.authorName, p.authorUrl],
+        `INSERT INTO "PinOutcomePhoto" ("pinId","label","person","imageUrl","imageSource","authorName","authorUrl") VALUES ($1,$2,$3,$4,$5,$6,$7)
+         ON CONFLICT ("pinId","label") DO UPDATE SET "person"=EXCLUDED."person","imageUrl"=EXCLUDED."imageUrl","imageSource"=EXCLUDED."imageSource","authorName"=EXCLUDED."authorName","authorUrl"=EXCLUDED."authorUrl"`,
+        [pinId, p.label, p.person, p.imageUrl, p.imageSource, p.authorName, p.authorUrl],
       );
     }
   });

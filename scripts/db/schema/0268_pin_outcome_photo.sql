@@ -13,6 +13,10 @@ CREATE TABLE "PinOutcomePhoto" (
   "label"      varchar(200) NOT NULL,
   "person"     varchar(200) NOT NULL,
   "imageUrl"   varchar(2000) NOT NULL,
+  -- The picture it was made from. Storage differs per environment (a local
+  -- emulator here, Azure in production), so a push to production sends this and
+  -- production downloads and stores its own copy.
+  "imageSource" varchar(2000),
   "authorName" varchar(300),
   "authorUrl"  varchar(2000),
   UNIQUE ("pinId", "label")
