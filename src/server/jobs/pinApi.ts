@@ -193,8 +193,10 @@ export async function pushOutcomePhotos(pinId: number, saved: { label: string; p
   const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(local.sourceUrl)}&utcDeletedDateTime.null=true&limit=2`, { token });
   if (found.rows.length !== 1) throw new Error(`Pin ${pinId}: production sourceUrl is missing or ambiguous`);
   const id = found.rows[0].id;
-  const back = await call<{ label: string }[]>('PUT', `/api/pins/${id}/outcome-photos`, { token, body: { photos } });
-  const have = new Set((back ?? []).map((r) => r.label));
+  // The endpoint takes 30 rows at a time (the last response lists them all).
+  let back: { label: string }[] = [];
+  for (let i = 0; i < photos.length; i += 30) back = (await call<{ label: string }[]>('PUT', `/api/pins/${id}/outcome-photos`, { token, body: { photos: photos.slice(i, i + 30) } })) ?? [];
+  const have = new Set(back.map((r) => r.label));
   if (!photos.every((p) => have.has(p.label))) throw new Error(`Pin ${id}: outcome photo readback verification failed`);
   return true;
 }
