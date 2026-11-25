@@ -1318,6 +1318,8 @@ const hi: Messages = {
     showResolved: '{count} समाधानित दिखाएँ',
     hideResolved: 'समाधानित छिपाएँ',
     range: 'बंद होने से पहले {low} से {high} के बीच कारोबार हुआ',
+    rangeLow: 'न्यूनतम',
+    rangeHigh: 'अधिकतम',
     updated: '{time} अपडेट किया गया',
     live: 'लाइव',
     moreOutcomes: { one: '{count} और नतीजा', other: '{count} और नतीजे' },

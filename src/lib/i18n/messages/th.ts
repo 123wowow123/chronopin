@@ -1301,6 +1301,8 @@ const th: Messages = {
     showResolved: 'แสดงที่สิ้นสุดแล้ว {count}',
     hideResolved: 'ซ่อนที่สิ้นสุดแล้ว',
     range: 'ซื้อขายระหว่าง {low} ถึง {high} ก่อนปิด',
+    rangeLow: 'ต่ำสุด',
+    rangeHigh: 'สูงสุด',
     updated: 'อัปเดต {time}',
     live: 'สด',
     moreOutcomes: 'อีก {count} ผลลัพธ์',

@@ -329,7 +329,9 @@ export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
 // The lowest and highest chance each outcome of a resolved market traded at,
 // shown over its bar. A settled market's history is final, so it is read once.
 const ranges: Map<string, Promise<{ low: number; high: number } | null>> = ((globalThis as any).__chronopinMarketRanges ??= new Map());
-const RANGE_OUTCOMES = 6;
+// Histories read at once, so a 45-outcome market doesn't open 45 requests together.
+const RANGE_CONCURRENCY = 6;
+const RANGE_CACHE_LIMIT = 5000;
 
 async function readFullHistory(history: string): Promise<number[]> {
   const [source, ...id] = history.split(':');
@@ -372,10 +374,13 @@ async function readRange(history: string): Promise<{ low: number; high: number }
 // effort: an outcome whose history cannot be read just has no range.
 async function withRanges(odds: MarketOdds | null): Promise<MarketOdds | null> {
   if (!odds?.closed) return odds;
-  const outcomes = await Promise.all(
-    odds.outcomes.map(async (outcome, i) => {
-      const key = outcome.history;
-      if (!key || i >= RANGE_OUTCOMES) return outcome;
+  const outcomes = [...odds.outcomes];
+  let next = 0;
+  const worker = async () => {
+    while (next < outcomes.length) {
+      const i = next++;
+      const key = outcomes[i].history;
+      if (!key) continue;
       let hit = ranges.get(key);
       if (!hit) {
         hit = readRange(key).catch((err) => {
@@ -383,13 +388,14 @@ async function withRanges(odds: MarketOdds | null): Promise<MarketOdds | null> {
           log.warn(`Price range of ${key} failed (${(err as Error).message})`);
           return null;
         });
-        if (ranges.size >= CACHE_LIMIT) ranges.delete(ranges.keys().next().value!);
+        if (ranges.size >= RANGE_CACHE_LIMIT) ranges.delete(ranges.keys().next().value!);
         ranges.set(key, hit);
       }
       const range = await hit;
-      return range ? { ...outcome, range } : outcome;
-    }),
-  );
+      if (range) outcomes[i] = { ...outcomes[i], range };
+    }
+  };
+  await Promise.all(Array.from({ length: RANGE_CONCURRENCY }, worker));
   return { ...odds, outcomes };
 }
 

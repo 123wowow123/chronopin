@@ -1302,6 +1302,8 @@ const pt: Messages = {
     showResolved: 'Mostrar {count} resolvidos',
     hideResolved: 'Ocultar resolvidos',
     range: 'Negociado entre {low} e {high} antes de encerrar',
+    rangeLow: 'Mín.',
+    rangeHigh: 'Máx.',
     updated: 'Atualizado {time}',
     live: 'Ao vivo',
     moreOutcomes: { one: 'mais {count} resultado', other: 'mais {count} resultados' },

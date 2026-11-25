@@ -1311,6 +1311,8 @@ const fr: Messages = {
     showResolved: 'Afficher {count} résolus',
     hideResolved: 'Masquer les résolus',
     range: 'Cotait entre {low} et {high} avant la clôture',
+    rangeLow: 'Bas',
+    rangeHigh: 'Haut',
     updated: 'Mis à jour à {time}',
     live: 'En direct',
     moreOutcomes: { one: '{count} autre issue', other: '{count} autres issues' },

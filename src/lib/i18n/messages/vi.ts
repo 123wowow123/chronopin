@@ -1311,6 +1311,8 @@ const vi: Messages = {
     showResolved: 'Hiện {count} đã kết thúc',
     hideResolved: 'Ẩn đã kết thúc',
     range: 'Giao dịch trong khoảng {low} đến {high} trước khi đóng',
+    rangeLow: 'Thấp',
+    rangeHigh: 'Cao',
     updated: 'Cập nhật {time}',
     live: 'Trực tiếp',
     moreOutcomes: '{count} kết quả nữa',

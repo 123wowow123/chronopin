@@ -1312,6 +1312,8 @@ const ms: Messages = {
     showResolved: 'Tunjukkan {count} yang selesai',
     hideResolved: 'Sembunyikan yang selesai',
     range: 'Didagangkan antara {low} dan {high} sebelum ditutup',
+    rangeLow: 'Rendah',
+    rangeHigh: 'Tinggi',
     updated: 'Dikemas kini {time}',
     live: 'Langsung',
     moreOutcomes: '{count} lagi hasil',

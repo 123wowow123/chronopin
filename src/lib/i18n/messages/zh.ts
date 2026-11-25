@@ -1305,6 +1305,8 @@ const zh: Messages = {
     showResolved: '显示 {count} 个已结算',
     hideResolved: '隐藏已结算',
     range: '收盘前在 {low} 至 {high} 之间波动',
+    rangeLow: '最低',
+    rangeHigh: '最高',
     updated: '{time} 更新',
     live: '实时',
     moreOutcomes: '另有 {count} 个结果',

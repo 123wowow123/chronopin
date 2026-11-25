@@ -1311,6 +1311,8 @@ const es: Messages = {
     showResolved: 'Mostrar {count} resueltos',
     hideResolved: 'Ocultar resueltos',
     range: 'Cotizó entre {low} y {high} antes de cerrar',
+    rangeLow: 'Mín.',
+    rangeHigh: 'Máx.',
     updated: 'Actualizado a las {time}',
     live: 'En directo',
     moreOutcomes: { one: '{count} resultado más', other: '{count} resultados más' },

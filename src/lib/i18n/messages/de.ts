@@ -1311,6 +1311,8 @@ const de: Messages = {
     showResolved: '{count} abgeschlossene anzeigen',
     hideResolved: 'Abgeschlossene ausblenden',
     range: 'Handelte vor dem Abschluss zwischen {low} und {high}',
+    rangeLow: 'Tief',
+    rangeHigh: 'Hoch',
     updated: 'Aktualisiert um {time}',
     live: 'Live',
     moreOutcomes: { one: '{count} weiterer Ausgang', other: '{count} weitere Ausgänge' },

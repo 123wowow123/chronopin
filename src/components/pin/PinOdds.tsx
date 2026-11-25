@@ -22,8 +22,19 @@ const FLASH_MS = 1600;
 
 // In UTC: Polymarket gives an end date as midnight UTC, which reads a day
 // early anywhere west of Greenwich.
-const closeDate = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const updatedTime = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+const closeDate = (locale: Locale) =>
+  dateFormat(INTL_LOCALES[locale], {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+const updatedTime = (locale: Locale) =>
+  dateFormat(INTL_LOCALES[locale], {
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+  });
 
 function percent(probability: number | null): string {
   if (probability == null) return '–';
@@ -42,31 +53,33 @@ function reducedMotion() {
 }
 
 // Whether a pin's resolved markets are unfolded. The toggle sits in the pin's
-// facts row, away from the tables it controls, so the two share this.
-const unfolded = new Set<number>();
+// facts row, away from the tables it controls, so the two share this. Until
+// the viewer chooses, resolved markets are unfolded when they carry price
+// ranges (worth seeing) and folded away otherwise.
+const choices = new Map<number, boolean>();
 const foldListeners = new Set<() => void>();
-function useUnfolded(pinId: number) {
-  return useSyncExternalStore(
+function useUnfolded(pinId: number, markets: MarketOdds[] | null | undefined) {
+  const chosen = useSyncExternalStore(
     (notify) => {
       foldListeners.add(notify);
       return () => void foldListeners.delete(notify);
     },
-    () => unfolded.has(pinId),
-    () => false,
+    () => choices.get(pinId),
+    () => undefined,
   );
+  return chosen ?? !!markets?.some((m) => m.closed && m.outcomes.some((o) => o.range));
 }
 
 // "Show 3 resolved": resolved (closed) markets are history, so PinOdds keeps
 // them folded away until this is pressed. Nothing when the pin has none.
 export function ResolvedToggle({ pinId }: { pinId: number }) {
   const markets = useMarketOdds(pinId);
-  const open = useUnfolded(pinId);
+  const open = useUnfolded(pinId, markets);
   const t = useT();
   const count = markets?.filter((m) => m.closed).length ?? 0;
   if (!count) return null;
   const toggle = () => {
-    if (open) unfolded.delete(pinId);
-    else unfolded.add(pinId);
+    choices.set(pinId, !open);
     foldListeners.forEach((notify) => notify());
   };
   return (
@@ -84,7 +97,7 @@ export function PinOdds({ pinId }: { pinId: number }) {
   const t = useT();
   useEffect(() => watchMarketOdds(pinId), [pinId]);
 
-  const showResolved = useUnfolded(pinId);
+  const showResolved = useUnfolded(pinId, markets);
   if (!markets?.length) return null;
   // Resolved markets are history: they stay folded away until asked for.
   const open = markets.filter((m) => !m.closed);
@@ -165,7 +178,13 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
       <div className="mb-1 flex items-center gap-1.5 text-[11px] text-subtle">
         <Icon name="trending-up" className="size-3 shrink-0 text-link" />
         {market ? (
-          <Anchor href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="inline-flex min-w-0 items-center gap-1 text-muted hover:text-link hover:no-underline">
+          <Anchor
+            href={market.url}
+            target="_blank"
+            rel="noopener nofollow"
+            title={market.title}
+            className="inline-flex min-w-0 items-center gap-1 text-muted hover:text-link hover:no-underline"
+          >
             <span className="truncate">{market.title}</span>
             <Icon name="external" className="size-3 shrink-0" />
           </Anchor>
@@ -195,7 +214,15 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
 
 function LiveDot({ fetchedAt }: { fetchedAt: string }) {
   const t = useT();
-  return <span aria-hidden title={t('odds.updated', { time: updatedTime(t.locale).format(new Date(fetchedAt)) })} className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none" />;
+  return (
+    <span
+      aria-hidden
+      title={t('odds.updated', {
+        time: updatedTime(t.locale).format(new Date(fetchedAt)),
+      })}
+      className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none"
+    />
+  );
 }
 
 function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
@@ -245,9 +272,27 @@ function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
             {t('odds.live')}
           </span>
         )}
-        {market.outcomes.length > SHOWN_OUTCOMES ? <span>{t('odds.moreOutcomes', { count: market.outcomes.length - SHOWN_OUTCOMES })}</span> : null}
-        {market.volume ? <span>{t('odds.traded', { amount: compactUsd(t.locale).format(market.volume) })}</span> : null}
-        {market.closeTime && !market.closed ? <span>{t('odds.closes', { date: closeDate(t.locale).format(new Date(market.closeTime)) })}</span> : null}
+        {market.outcomes.length > SHOWN_OUTCOMES ? (
+          <span>
+            {t('odds.moreOutcomes', {
+              count: market.outcomes.length - SHOWN_OUTCOMES,
+            })}
+          </span>
+        ) : null}
+        {market.volume ? (
+          <span>
+            {t('odds.traded', {
+              amount: compactUsd(t.locale).format(market.volume),
+            })}
+          </span>
+        ) : null}
+        {market.closeTime && !market.closed ? (
+          <span>
+            {t('odds.closes', {
+              date: closeDate(t.locale).format(new Date(market.closeTime)),
+            })}
+          </span>
+        ) : null}
         {ref && !market.closed ? <MoveAlertButton pinId={pinId} kind="market" subject={marketRefKey(ref)} /> : null}
         <Anchor href={market.url} target="_blank" rel="noopener nofollow" className="ms-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
           {t('odds.viewOn', { source: market.source })}
@@ -264,7 +309,12 @@ function OutcomeSpotlight({ outcome }: { outcome: MarketOutcome }) {
   return (
     <div className="mt-3 flex items-center gap-3 rounded-lg border border-line bg-raised p-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={outcome.image} alt={outcome.person ?? outcome.label} referrerPolicy="no-referrer" className={`size-28 shrink-0 rounded-md ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`} />
+      <img
+        src={outcome.image}
+        alt={outcome.person ?? outcome.label}
+        referrerPolicy="no-referrer"
+        className={`size-28 shrink-0 rounded-md ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`}
+      />
       <div className="min-w-0">
         <div className="truncate font-semibold text-ink">{outcome.person ?? outcome.label}</div>
         {outcome.person ? <div className="truncate text-xs text-subtle">{outcome.label}</div> : null}
@@ -336,6 +386,7 @@ function Outcome({
   }, [target]);
 
   const range = outcome.range;
+  const [rangeTip, setRangeTip] = useState(false);
   const t = useT();
   const fill = trend === 'up' ? 'bg-success/30' : trend === 'down' ? 'bg-danger/30' : 'bg-link/20';
   const text = trend === 'up' ? 'text-success' : trend === 'down' ? 'text-danger' : 'text-ink';
@@ -353,34 +404,65 @@ function Outcome({
             className={`block size-9 overflow-hidden rounded-md border bg-raised ${active ? 'border-link ring-2 ring-link/40' : 'border-line hover:border-link'}`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={outcome.image} alt="" loading="lazy" referrerPolicy="no-referrer" className={`size-full ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`} />
+            <img
+              src={outcome.image}
+              alt=""
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className={`size-full ${outcome.photoKind && outcome.photoKind !== 'person' ? 'object-contain' : 'object-cover'}`}
+            />
           </button>
         ) : (
           <span aria-hidden className="size-9 rounded-md bg-raised" />
         )
       ) : null}
-      <span className={`relative overflow-hidden bg-raised ${compact ? 'rounded px-1.5 py-0.5' : 'rounded-md px-2 py-1'}`}>
-        <span
-          ref={barRef}
-          aria-hidden
-          className={`absolute inset-y-0 start-0 transition-colors duration-700 motion-reduce:transition-none ${fill}`}
-          style={{ width: barWidth(target) }}
-        />
-        {range ? (
-          <span
-            aria-hidden
-            title={t('odds.range', { low: percent(range.low), high: percent(range.high) })}
-            className="absolute inset-y-0 border-x-2 border-link/70 bg-link/25"
-            style={{ insetInlineStart: barWidth(range.low), width: `max(2px, ${(range.high - range.low) * 100}%)` }}
-          />
-        ) : null}
-        <span className="relative block truncate text-ink" title={outcome.label}>
-          {outcome.label}
+      <span className="relative min-w-0">
+        <span className={`relative block overflow-hidden bg-raised ${compact ? 'rounded px-1.5 py-0.5' : 'rounded-md px-2 py-1'}`}>
+          <span ref={barRef} aria-hidden className={`absolute inset-y-0 start-0 transition-colors duration-700 motion-reduce:transition-none ${fill}`} style={{ width: barWidth(target) }} />
+          {range ? (
+            <span
+              aria-hidden
+              onMouseEnter={() => setRangeTip(true)}
+              onMouseLeave={() => setRangeTip(false)}
+              className="absolute inset-y-0 z-10 cursor-help rounded-sm border-x-2 border-ink/60 bg-ink/[0.13] hover:bg-ink/[0.22] transition-colors"
+              style={{
+                insetInlineStart: barWidth(range.low),
+                width: `max(6px, ${(range.high - range.low) * 100}%)`,
+              }}
+            />
+          ) : null}
+          <span className="pointer-events-none relative block truncate text-ink" title={range ? undefined : outcome.label}>
+            {outcome.label}
+          </span>
         </span>
+        {range && rangeTip ? (
+          <span
+            role="tooltip"
+            className="pointer-events-none absolute bottom-full z-20 mb-1.5 -translate-x-1/2 rounded-md border border-line bg-popover px-2.5 py-1.5 text-xs whitespace-nowrap shadow-lg"
+            style={{
+              insetInlineStart: `clamp(4.5rem, ${((range.low + range.high) / 2) * 100}%, calc(100% - 4.5rem))`,
+            }}
+          >
+            <span className="block max-w-48 truncate font-semibold text-ink">{outcome.label}</span>
+            <span className="block text-subtle">
+              {t('odds.rangeLow')} <b className="font-semibold text-ink tabular-nums">{percent(range.low)}</b>
+              <span aria-hidden> · </span>
+              {t('odds.rangeHigh')} <b className="font-semibold text-ink tabular-nums">{percent(range.high)}</b>
+            </span>
+            <span aria-hidden className="absolute top-full size-2 -translate-y-1 rotate-45 border-r border-b border-line bg-popover" style={{ insetInlineStart: 'calc(50% - 0.25rem)' }} />
+          </span>
+        ) : null}
       </span>
       <span className={`text-end font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${compact ? 'w-9' : 'w-11'} ${text}`}>
         {percent(shown)}
-        {range ? <span className="sr-only">{t('odds.range', { low: percent(range.low), high: percent(range.high) })}</span> : null}
+        {range ? (
+          <span className="sr-only">
+            {t('odds.range', {
+              low: percent(range.low),
+              high: percent(range.high),
+            })}
+          </span>
+        ) : null}
       </span>
     </li>
   );

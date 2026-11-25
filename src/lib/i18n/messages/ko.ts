@@ -1305,6 +1305,8 @@ const ko: Messages = {
     showResolved: '종료된 {count}개 보기',
     hideResolved: '종료된 항목 숨기기',
     range: '마감 전 {low}~{high} 사이에서 거래됨',
+    rangeLow: '최저',
+    rangeHigh: '최고',
     updated: '{time} 업데이트',
     live: '실시간',
     moreOutcomes: '그 외 결과 {count}건',
