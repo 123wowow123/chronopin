@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — thirteenth round, 2026-11-22"
+description: "Added MEININGER Hotel Copenhagen to family and budget, and LEGOLAND Hotel Florida to family. Research catalog: `scripts/hotels/travel-expansion-2026-11-22-round13.json`; replay with `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — thirteenth round, 2026-11-22
 
 Added MEININGER Hotel Copenhagen to family and budget, and LEGOLAND Hotel Florida to family.

@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — sixth round, 2026-11-22"
+description: "Added Gardaland Adventure Hotel (Italy) to the family shelf and MEININGER Hotel Berlin East Side Gallery to both the family and budget shelves. Research catalog: `scripts/hotels/travel-expansion-2026-11-22-round6.json`. Replay with..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — sixth round, 2026-11-22
 
 Added Gardaland Adventure Hotel (Italy) to the family shelf and MEININGER Hotel Berlin East Side

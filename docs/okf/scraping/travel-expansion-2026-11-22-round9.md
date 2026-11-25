@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — ninth round, 2026-11-22"
+description: "Added MEININGER Hotel Barcelona Fira Gran Via to both family and budget shelves, and LEGOLAND Hotel Dubai to family only. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round9.json`. Replay with `node..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — ninth round, 2026-11-22
 
 Added MEININGER Hotel Barcelona Fira Gran Via to both family and budget shelves, and LEGOLAND Hotel

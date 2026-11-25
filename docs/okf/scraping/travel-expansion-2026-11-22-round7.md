@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — seventh round, 2026-11-22"
+description: "Added MEININGER Hotel Amsterdam Amstel to both family and budget shelves and Moxy Tokyo Kinshicho to the budget shelf. English research catalog: `scripts/hotels/travel-expansion-2026-11-22-round7.json`. Replay identity checks with `node..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — seventh round, 2026-11-22
 
 Added MEININGER Hotel Amsterdam Amstel to both family and budget shelves and Moxy Tokyo Kinshicho

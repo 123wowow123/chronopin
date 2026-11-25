@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twelfth round, 2026-11-22"
+description: "Added MEININGER Hotel Paris Porte de Vincennes to family and budget, and LEGOLAND Castle Hotel Windsor to family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round12.json`. Replay: `node scripts/hotels/expandTravelShelves.mjs..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twelfth round, 2026-11-22
 
 Added MEININGER Hotel Paris Porte de Vincennes to family and budget, and LEGOLAND Castle Hotel Windsor

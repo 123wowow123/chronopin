@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — sixteenth round, 2026-11-22"
+description: "MEININGER Hotel Munich Olympiapark joins Family and Budget; LEGOLAND New York Hotel joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round16.json`. Replay with `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — sixteenth round, 2026-11-22
 
 MEININGER Hotel Munich Olympiapark joins Family and Budget; LEGOLAND New York Hotel joins Family.

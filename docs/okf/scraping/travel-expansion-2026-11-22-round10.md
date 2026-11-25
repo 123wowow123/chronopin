@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — tenth round, 2026-11-22"
+description: "Added MEININGER Kraków Centrum to family and budget, and LEGOLAND Japan Hotel to family only. Research catalog: `scripts/hotels/travel-expansion-2026-11-22-round10.json`. Replay: `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — tenth round, 2026-11-22
 
 Added MEININGER Kraków Centrum to family and budget, and LEGOLAND Japan Hotel to family only. Research

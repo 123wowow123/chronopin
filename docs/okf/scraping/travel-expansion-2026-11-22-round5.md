@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — fifth round, 2026-11-22"
+description: "Added Toy Story Hotel Shanghai to the family shelf and citizenM Paris Gare de Lyon to the budget shelf. Data saves are English only on production and local. Runtime shelf membership is application code; no production deployment was..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — fifth round, 2026-11-22
 
 Added Toy Story Hotel Shanghai to the family shelf and citizenM Paris Gare de Lyon to the budget

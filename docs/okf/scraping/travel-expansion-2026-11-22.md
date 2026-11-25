@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Family and budget travel additions — November 22, 2026"
+description: "Added four hotels to both the family and budget travel catalogs. Each has a native Travel pin, a sourced hotel rubric, an undated AAA inspector excerpt, three visually reviewed property photos uploaded to Azure and verified by public..."
+tags: [scraping, travel]
+---
+
 # Family and budget travel additions — November 22, 2026
 
 Added four hotels to both the family and budget travel catalogs. Each has a native Travel pin,

@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twentieth round, 2026-11-22"
+description: "MEININGER Hotel Bremen Hauptbahnhof joins Family and Budget; Great Wolf Lodge Northern California in Manteca joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round20.json`. Replay with `node..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twentieth round, 2026-11-22
 
 MEININGER Hotel Bremen Hauptbahnhof joins Family and Budget; Great Wolf Lodge Northern California

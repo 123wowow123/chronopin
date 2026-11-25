@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — eleventh round, 2026-11-22"
+description: "Added JO&JOE Vienna to budget and Great Wolf Lodge Colorado Springs to family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round11.json`. Replay with `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — eleventh round, 2026-11-22
 
 Added JO&JOE Vienna to budget and Great Wolf Lodge Colorado Springs to family. Catalog:

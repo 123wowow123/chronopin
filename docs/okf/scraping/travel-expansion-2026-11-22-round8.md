@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — eighth round, 2026-11-22"
+description: "Added MEININGER Hotel Lyon Centre Berthelot to the family and budget shelves and YOTEL Edinburgh to budget. English research catalog: `scripts/hotels/travel-expansion-2026-11-22-round8.json`. Replay with `node..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — eighth round, 2026-11-22
 
 Added MEININGER Hotel Lyon Centre Berthelot to the family and budget shelves and YOTEL Edinburgh to

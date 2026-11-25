@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-fourth round, 2026-11-23"
+description: "MEININGER Hotel Leipzig Central Station joins Family and Budget; Great Wolf Lodge LaGrange joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-23-round24.json`. Replay `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-fourth round, 2026-11-23
 
 MEININGER Hotel Leipzig Central Station joins Family and Budget; Great Wolf Lodge LaGrange joins Family.

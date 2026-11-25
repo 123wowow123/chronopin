@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-sixth round, 2026-11-23"
+description: "MEININGER Milano Garibaldi joins Family and Budget; Great Wolf Lodge Gurnee joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-23-round26.json`. Replay `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-sixth round, 2026-11-23
 
 MEININGER Milano Garibaldi joins Family and Budget; Great Wolf Lodge Gurnee joins Family.

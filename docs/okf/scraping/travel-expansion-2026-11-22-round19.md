@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — nineteenth round, 2026-11-22"
+description: "MEININGER Hotel Marseille Centre La Joliette joins Family and Budget. Great Wolf Lodge Maryland joins Family. Replay catalog: `scripts/hotels/travel-expansion-2026-11-22-round19.json`, using `node scripts/hotels/expandTravelShelves.mjs..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — nineteenth round, 2026-11-22
 
 MEININGER Hotel Marseille Centre La Joliette joins Family and Budget. Great Wolf Lodge Maryland

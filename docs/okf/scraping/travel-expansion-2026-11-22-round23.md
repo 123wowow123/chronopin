@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-third round, 2026-11-22"
+description: "MEININGER Hotel Cologne West joins Family and Budget; Great Wolf Lodge Concord joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round23.json`. Replay `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-third round, 2026-11-22
 
 MEININGER Hotel Cologne West joins Family and Budget; Great Wolf Lodge Concord joins Family.

@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — seventeenth round, 2026-11-22"
+description: "MEININGER Budapest Great Market Hall joins Family and Budget; Center Parcs Woburn Forest joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round17.json`. Replay with `node scripts/hotels/expandTravelShelves.mjs..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — seventeenth round, 2026-11-22
 
 MEININGER Budapest Great Market Hall joins Family and Budget; Center Parcs Woburn Forest joins Family.

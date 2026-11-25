@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — eighteenth round, 2026-11-22"
+description: "MEININGER Hotel Bordeaux Gare Saint-Jean joins Family and Budget. Great Wolf Lodge Arizona joins Family. Replay catalog: `scripts/hotels/travel-expansion-2026-11-22-round18.json`, using `node scripts/hotels/expandTravelShelves.mjs..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — eighteenth round, 2026-11-22
 
 MEININGER Hotel Bordeaux Gare Saint-Jean joins Family and Budget. Great Wolf Lodge Arizona joins Family.

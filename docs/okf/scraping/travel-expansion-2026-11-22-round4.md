@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — fourth round, 2026-11-22"
+description: "Added Universal Stella Nova Resort and Universal Terra Luna Resort to both the family and budget shelves. Both have official Prime Value positioning and standard two-queen rooms for up to four. English pin data is saved on production..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — fourth round, 2026-11-22
 
 Added Universal Stella Nova Resort and Universal Terra Luna Resort to both the family and budget

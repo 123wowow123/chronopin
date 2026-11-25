@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-first round, 2026-11-22"
+description: "MEININGER Hotel Dresden Zentrum joins Family and Budget; Great Wolf Lodge Williamsburg joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round21.json`. Replay with `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-first round, 2026-11-22
 
 MEININGER Hotel Dresden Zentrum joins Family and Budget; Great Wolf Lodge Williamsburg joins Family.

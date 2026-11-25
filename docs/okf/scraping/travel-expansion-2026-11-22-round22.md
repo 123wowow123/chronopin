@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-second round, 2026-11-22"
+description: "MEININGER Venezia Mestre joins Family and Budget; Great Wolf Lodge Grand Mound joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round22.json`. Replay with `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-second round, 2026-11-22
 
 MEININGER Venezia Mestre joins Family and Budget; Great Wolf Lodge Grand Mound joins Family.

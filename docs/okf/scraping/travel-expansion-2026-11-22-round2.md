@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "International family and budget stays — November 22, 2026"
+description: "Added four more hotels to both shelves, retaining the four Orlando-area additions from the first round."
+tags: [scraping, travel]
+---
+
 # International family and budget stays — November 22, 2026
 
 Added four more hotels to both shelves, retaining the four Orlando-area additions from the first round.

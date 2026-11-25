@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — fourteenth round, 2026-11-22"
+description: "MEININGER Hotel Bruxelles Gare du Midi joins Family and Budget; LEGOLAND Castle Hotel California joins Family. Research catalog `scripts/hotels/travel-expansion-2026-11-22-round14.json`; replay with `node..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — fourteenth round, 2026-11-22
 
 MEININGER Hotel Bruxelles Gare du Midi joins Family and Budget; LEGOLAND Castle Hotel California

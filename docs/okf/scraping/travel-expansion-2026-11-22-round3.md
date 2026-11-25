@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — third round, 2026-11-22"
+description: "Added two family hotels and two compact, value-positioned city hotels. English pin data, hotel rubrics, development profiles and credited media are saved on production and local. The runtime catalog is updated locally; no production..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — third round, 2026-11-22
 
 Added two family hotels and two compact, value-positioned city hotels. English pin data, hotel

@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — fifteenth round, 2026-11-22"
+description: "MEININGER Hotel Heidelberg Hauptbahnhof joins Family and Budget; LEGOLAND Pirate Island Hotel Florida joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-22-round15.json`. Replay: `node scripts/hotels/expandTravelShelves.mjs..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — fifteenth round, 2026-11-22
 
 MEININGER Hotel Heidelberg Hauptbahnhof joins Family and Budget; LEGOLAND Pirate Island Hotel Florida

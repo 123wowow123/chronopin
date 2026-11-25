@@ -1,3 +1,10 @@
+---
+type: Reference
+title: "Travel shelf expansion — twenty-fifth round, 2026-11-23"
+description: "MEININGER Hotel Frankfurt/Main Airport joins Family and Budget; Great Wolf Lodge Minnesota joins Family. Catalog: `scripts/hotels/travel-expansion-2026-11-23-round25.json`. Replay `node scripts/hotels/expandTravelShelves.mjs --catalog..."
+tags: [scraping, travel]
+---
+
 # Travel shelf expansion — twenty-fifth round, 2026-11-23
 
 MEININGER Hotel Frankfurt/Main Airport joins Family and Budget; Great Wolf Lodge Minnesota joins Family.
