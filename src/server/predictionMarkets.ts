@@ -220,6 +220,10 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
   const [event] = await getJson(`${POLYMARKET_API}/events?slug=${encodeURIComponent(ref.slug)}`);
   const markets: Json[] = event?.markets ?? [];
   if (!markets.length) return null;
+  // An event whose sub-market has settled Yes is decided even while the
+  // exchange still lists it open (one straggler market left unsettled): show
+  // every outcome with its final price, not just the straggler.
+  const decided = markets.length > 1 && markets.some((m) => m.closed && polymarketOutcomes(m).find((o) => o.label.toLowerCase() === 'yes')?.probability === 1);
   const closed = !!event.closed;
   // One market is a plain question; several are one outcome each, priced by
   // their Yes side. An open event's settled sub-markets (a candidate who
@@ -229,7 +233,7 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
     markets.length === 1
       ? polymarketOutcomes(markets[0])
       : markets
-          .filter((m) => m.active !== false && (closed || !m.closed))
+          .filter((m) => m.active !== false && (closed || decided || !m.closed))
           .map((m) => {
             const yes = polymarketOutcomes(m).find((o) => o.label.toLowerCase() === 'yes');
             return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume), history: yes?.history, image: marketImage(m) };
@@ -496,10 +500,14 @@ function withPhotos(odds: MarketOdds, photos?: Map<string, OutcomePhoto>): Marke
   if (!photos?.size) return odds;
   return {
     ...odds,
-    outcomes: odds.outcomes.map(({ image: _exchange, ...outcome }) => {
-      const photo = photos.get(outcomeKey(outcome.label));
-      return photo ? { ...outcome, image: photo.imageUrl, person: photo.person, credit: photo.authorName ?? undefined } : outcome;
-    }),
+    outcomes: odds.outcomes
+      .map(({ image: _exchange, ...outcome }) => {
+        const photo = photos.get(outcomeKey(outcome.label));
+        return photo ? { ...outcome, image: photo.imageUrl, person: photo.person, credit: photo.authorName ?? undefined } : outcome;
+      })
+      // Outcomes tied on chance (a decided contest: all 0%) list the ones with
+      // a picture first, so the six rows shown are the faces we have.
+      .sort((a, b) => (b.probability ?? -1) - (a.probability ?? -1) || Number(!!b.person) - Number(!!a.person)),
   };
 }
 

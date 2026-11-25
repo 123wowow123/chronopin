@@ -69,7 +69,7 @@ import { addPosition } from '../services/traders';
 import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
 import { salesStatus, savePinSales } from './productSales';
 import { photoGaps } from './outcomePhotos';
-import { photosProblem, savePhotos } from '../model/pinOutcomePhoto';
+import { photosProblem, savePhotosPartial } from '../model/pinOutcomePhoto';
 import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
@@ -646,14 +646,15 @@ export const TOOLS: JobTool[] = [
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
       const rows = photosProblem(input.photos);
       if (typeof rows === 'string') throw new Error(rows);
-      const saved = await savePhotos(pinId, rows);
+      const { saved, failed } = await savePhotosPartial(pinId, rows);
+      if (!saved.length) throw new Error(failed.map((f) => f.reason).join('; '));
       expirePinPage(pinId);
       const pushed = await pushOutcomePhotos(pinId, saved).catch((err) => {
         log.warn(`pin ${pinId}'s outcome photos did not reach production:`, (err as Error).message);
         return false;
       });
-      await act(ctx, { tool: 'save_outcome_photos', pinId, detail: `${saved.length} picture(s)${pushed ? '; prod saved' : ''}` });
-      return { pinId, photos: saved.length, production: pushed };
+      await act(ctx, { tool: 'save_outcome_photos', pinId, detail: `${saved.length} picture(s)${pushed ? '; prod saved' : ''}${failed.length ? `; ${failed.length} failed` : ''}` });
+      return { pinId, photos: saved.length, production: pushed, failed };
     },
   },
   // --- Competing products on goods pins (the productCompetitors task) -------

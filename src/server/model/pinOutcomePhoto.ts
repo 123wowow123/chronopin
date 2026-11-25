@@ -96,14 +96,27 @@ async function storePicture(pinId: number, person: string, source: string): Prom
   return url;
 }
 
-// Adds or replaces these pictures (one per outcome label); others stay.
+// Adds or replaces these pictures (one per outcome label); others stay. A
+// picture that cannot be fetched is left out and named in `failed`; it throws
+// only when none could be saved.
 export async function savePhotos(pinId: number, rows: PhotoInput[]): Promise<OutcomePhoto[]> {
+  const { saved, failed } = await savePhotosPartial(pinId, rows);
+  if (!saved.length && failed.length) throw new Error(failed[0].reason);
+  return saved;
+}
+
+export async function savePhotosPartial(pinId: number, rows: PhotoInput[]): Promise<{ saved: OutcomePhoto[]; failed: { label: string; reason: string }[] }> {
   const saved: OutcomePhoto[] = [];
+  const failed: { label: string; reason: string }[] = [];
   for (const r of rows) {
     // A gap between downloads keeps a batch under the host's rate limit.
     if (saved.length && r.imageSource) await new Promise((resolve) => setTimeout(resolve, 1500));
-    const imageUrl = r.imageSource ? await storePicture(pinId, r.person, r.imageSource) : r.imageUrl!;
-    saved.push({ label: r.label, person: r.person, imageUrl, imageSource: r.imageSource ?? null, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
+    try {
+      const imageUrl = r.imageSource ? await storePicture(pinId, r.person, r.imageSource) : r.imageUrl!;
+      saved.push({ label: r.label, person: r.person, imageUrl, imageSource: r.imageSource ?? null, authorName: r.authorName ?? null, authorUrl: r.authorUrl ?? null });
+    } catch (err) {
+      failed.push({ label: r.label, reason: (err as Error).message });
+    }
   }
   await db.transaction(async (query) => {
     for (const p of saved) {
@@ -114,5 +127,5 @@ export async function savePhotos(pinId: number, rows: PhotoInput[]): Promise<Out
       );
     }
   });
-  return saved;
+  return { saved, failed };
 }

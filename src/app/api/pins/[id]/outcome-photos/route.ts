@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { isAdmin, requireUser } from "@/server/auth";
 import * as db from "@/server/db";
 import { HttpError, intParam, json, readJson, route } from "@/server/http";
-import { outcomePhotosForPin, photosProblem, savePhotos } from "@/server/model/pinOutcomePhoto";
+import { outcomePhotosForPin, photosProblem, savePhotosPartial } from "@/server/model/pinOutcomePhoto";
 import { expirePinPage } from "@/server/services/cache";
 
 type Ctx = RouteContext<"/api/pins/[id]/outcome-photos">;
@@ -22,11 +22,10 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const body = (await readJson(request)) as { photos?: unknown };
   const rows = photosProblem(body?.photos);
   if (typeof rows === "string") throw new HttpError(400, rows);
-  try {
-    await savePhotos(pinId, rows);
-  } catch (err) {
-    throw new HttpError(422, (err as Error).message);
-  }
+  // Pictures that could not be fetched are left out (the caller reads the list
+  // back and sees which labels are missing); only a batch with none saved fails.
+  const { saved, failed } = await savePhotosPartial(pinId, rows);
+  if (!saved.length && failed.length) throw new HttpError(422, failed[0].reason);
   expirePinPage(pinId);
   return json(await outcomePhotosForPin(pinId));
 });
