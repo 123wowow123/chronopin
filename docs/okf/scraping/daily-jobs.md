@@ -821,6 +821,14 @@ events and create **predicted pins** out of them:
   - **Create predicted pins:** Every month, create pins for upcoming Brent and WTI price forecasts, tagged `Predicted` (plus `Energy`, `Economy`, `Commodities`, `Oil Price`, `Brent` or `WTI`), set `dateConfidence: 'estimated'` dated to the month's settlement date (e.g. 5:00 PM EDT / 21:00 UTC on the final trading day of the month), authored under `@EnergyDesk` (or `@EconDesk`), quoting the contract strike distribution and traded volume.
   - **Make into a thread:** Each monthly Brent pin must be attached via `parentId` to the previous month's Brent pin; each monthly WTI pin must be attached to the previous month's WTI pin, forming continuous monthly commodity forecast series.
   - **After price realization:** Once the month concludes and the contract settles (`status: finalized` on Kalshi or official exchange index / EIA spot release), update the pin to `dateConfidence: 'confirmed'`, update the title with the final realized value (e.g. `Brent Crude Oil Settlement — September 2026: $97.92/bbl`), and add reasoning explaining the final realized value and why the prediction market forecast was missed or on point against actual market drivers (OPEC+ quota compliance, geopolitical risk premia around Hormuz, commercial/SPR inventory changes, and global refinery demand).
+- **Refresh long-dated championship pins (2026-11-25, organic search):** Each run, re-read the odds of every
+  existing `Predicted` pin on a championship or "who will win" market (NBA, Super Bowl, World Series, World Cup,
+  elections) whose newest snapshot is older than 7 days, via `prediction_markets`/`get_pin`, and `update_pin` it:
+  add a dated snapshot bullet at the top of `longFormSummary` (leaders, volume, move since the last snapshot; older
+  snapshots stay below), refresh the `description`, and keep the `title` in search wording ("2027 NBA Champion Odds:
+  Who Will Win the 2027 NBA Finals?"). The meta description is cut near 155 characters, so put the year, the
+  top-three odds and the as-of date first. Keep date, author, media and tags; never touch translations. Old slugs
+  308 to the new one, so a retitle is safe. Pin 1955 was done by hand this way.
 - **Track record (2026-10-29, `/predictions`):** call `prediction_accuracy` with `apply: true` once after
   creating pins. It records, per Predicted pin and market, the odds the market gave when first seen (table
   `PredictionRecord`, 0233, never rewritten) and marks closed markets settled (`resolved`, or `void` when no

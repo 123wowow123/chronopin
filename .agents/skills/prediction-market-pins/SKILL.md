@@ -20,6 +20,14 @@ and must reach production.
   election cycle or franchise exists. A response series is one linear chain; no branching.
 - Check for duplicates with `GET /api/pins/search?q=...` first. Each reference needs a per-item `sourceUrl`.
 
+## Refresh championship pins (2026-11-25)
+- Long-dated "who will win" pins (NBA, Super Bowl, World Series, World Cup, elections) go stale: pin 1955's
+  newest snapshot was a month old. Each run, update any whose newest snapshot is over 7 days old with
+  `update_pin`: a new dated bullet on top of `longFormSummary` (top teams, volume, move since the last one), a
+  fresh `description` starting with year + top-three odds + as-of date (meta cuts near 155 characters), and a
+  search-wording title ("2027 NBA Champion Odds: Who Will Win ..."). Old slugs 308 to the new one.
+- Polymarket: `gamma-api.polymarket.com/events?slug=<slug>` (`outcomePrices[0]` per market, `volume`).
+
 ## Monthly Brent and WTI pins
 - One pin per commodity per month: tag `Predicted`, `dateConfidence: 'estimated'`, dated to the month's
   **settlement date**, quoting the modal strike distribution and dollar volume, under `@EnergyDesk` or `@EconDesk`.
