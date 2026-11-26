@@ -1,5 +1,5 @@
-// The tickers a reader adds to the trades pages: parsing what they type and
-// what is stored. Pure: the browser keeps the list (src/lib/client/ownTickers.ts).
+// The tickers a reader adds to the trades pages: parsing what they type, and
+// keeping theirs in view. Pure: the account keeps the list (OwnTicker, 0270).
 
 import { normalizeSymbol } from './stocks';
 
@@ -22,15 +22,4 @@ export function topWithOwn<T extends readonly [string, ...unknown[]]>(ranked: re
   // The reader's own entries above the cut keep their places too.
   let room = Math.max(size - below.length - ranked.slice(0, size).filter(([symbol]) => own.includes(symbol)).length, 0);
   return [...ranked.slice(0, size).filter(([symbol]) => own.includes(symbol) || room-- > 0), ...below];
-}
-
-// The stored list, whatever the store holds: real symbols, no repeats, capped.
-export function readOwnTickers(stored: string | null): string[] {
-  try {
-    const list: unknown = JSON.parse(stored ?? '[]');
-    if (!Array.isArray(list)) return [];
-    return [...new Set(list.map(normalizeSymbol).filter((s) => s !== null))].slice(0, MAX_OWN_TICKERS);
-  } catch {
-    return [];
-  }
 }

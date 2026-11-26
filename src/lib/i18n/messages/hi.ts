@@ -203,7 +203,6 @@ const hi: Messages = {
     tickerUp: '{symbol} औसत वॉल्यूम के {multiple}× पर {change} चढ़कर बंद हुआ ({day})',
     tickerDown: '{symbol} औसत वॉल्यूम के {multiple}× पर {change} गिरकर बंद हुआ ({day})',
     whyTicker: 'आपकी टिकर सूची में है',
-    ownTickerSignIn: 'अलर्ट पाने के लिए साइन इन करें',
     highVolumeAbout: 'इस सूची के बारे में',
     highVolumeEmpty: 'इस अवधि में इनमें से कोई शेयर नहीं।',
     highVolumeStock: 'शेयर',

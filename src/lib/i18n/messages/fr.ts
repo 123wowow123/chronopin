@@ -202,7 +202,6 @@ const fr: Messages = {
     tickerUp: '{symbol} a clôturé en hausse de {change} avec {multiple}× son volume moyen ({day})',
     tickerDown: '{symbol} a clôturé en baisse de {change} avec {multiple}× son volume moyen ({day})',
     whyTicker: 'Dans votre liste de symboles',
-    ownTickerSignIn: 'Connectez-vous pour recevoir des alertes',
     highVolumeAbout: 'À propos de cette liste',
     highVolumeEmpty: 'Aucune de ces actions sur cette période.',
     highVolumeStock: 'Action',

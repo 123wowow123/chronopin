@@ -202,7 +202,6 @@ const ja: Messages = {
     tickerUp: '{symbol}は平均の{multiple}倍の出来高で{change}上昇して引けました（{day}）',
     tickerDown: '{symbol}は平均の{multiple}倍の出来高で{change}下落して引けました（{day}）',
     whyTicker: '登録した銘柄です',
-    ownTickerSignIn: 'ログインして通知を受け取る',
     highVolumeAbout: 'この一覧について',
     highVolumeEmpty: 'この期間に該当する銘柄はありません。',
     highVolumeStock: '銘柄',

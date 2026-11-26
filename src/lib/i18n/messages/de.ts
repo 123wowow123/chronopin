@@ -202,7 +202,6 @@ const de: Messages = {
     tickerUp: '{symbol} schloss {change} im Plus bei {multiple}× dem Durchschnittsvolumen ({day})',
     tickerDown: '{symbol} schloss {change} im Minus bei {multiple}× dem Durchschnittsvolumen ({day})',
     whyTicker: 'Auf Ihrer Ticker-Liste',
-    ownTickerSignIn: 'Für Benachrichtigungen anmelden',
     highVolumeAbout: 'Über diese Liste',
     highVolumeEmpty: 'Keine dieser Aktien in diesem Zeitraum.',
     highVolumeStock: 'Aktie',

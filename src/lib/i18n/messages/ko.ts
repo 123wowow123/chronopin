@@ -202,7 +202,6 @@ const ko: Messages = {
     tickerUp: '{symbol}: 평균의 {multiple}배 거래량으로 {change} 상승 마감 ({day})',
     tickerDown: '{symbol}: 평균의 {multiple}배 거래량으로 {change} 하락 마감 ({day})',
     whyTicker: '내 종목 목록에 있음',
-    ownTickerSignIn: '로그인하고 알림 받기',
     highVolumeAbout: '이 목록 정보',
     highVolumeEmpty: '이 기간에 해당하는 종목이 없습니다.',
     highVolumeStock: '종목',

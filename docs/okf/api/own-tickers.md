@@ -1,7 +1,7 @@
 ---
 type: API Endpoint
 title: Own tickers and high-volume days API
-description: A reader adds tickers to the trades pages; signed in they are saved to the account and the news job alerts them of high-volume up and down days.
+description: A signed-in reader adds tickers to the trades pages, saved to the account; the news job alerts them of high-volume up and down days.
 resource: "../../../src/app/api/own-tickers/route.ts"
 tags: [api, stocks, trades, notifications]
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-11-25T00:00:00Z }
@@ -9,9 +9,10 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-11-25T00:00:00Z }
 
 # Own tickers
 
-"Add my ticker" on `/trades` and `/notifications/trades`. Signed out, the list is
-kept in the browser. Signed in, it is saved to the account (`OwnTicker`, 0270), and
-what the browser held moves there. At most 20.
+"Add my ticker" on `/trades` and `/notifications/trades`. Tickers are for signed-in
+readers only: signed out there is no ticker and no highlight, and **Add** goes to
+the login page and back. The list is saved to the account (`OwnTicker`, 0270). At
+most 20.
 
 * `GET /api/own-tickers` - `{ symbols }` (signed in)
 * `POST /api/own-tickers` `{ "symbols": ["NVDA"] }` - adds, answers the list

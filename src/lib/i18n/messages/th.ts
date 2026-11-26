@@ -202,7 +202,6 @@ const th: Messages = {
     tickerUp: '{symbol} ปิดบวก {change} ด้วยปริมาณ {multiple} เท่าของค่าเฉลี่ย ({day})',
     tickerDown: '{symbol} ปิดลบ {change} ด้วยปริมาณ {multiple} เท่าของค่าเฉลี่ย ({day})',
     whyTicker: 'อยู่ในรายการหุ้นของคุณ',
-    ownTickerSignIn: 'เข้าสู่ระบบเพื่อรับการแจ้งเตือน',
     highVolumeAbout: 'เกี่ยวกับรายการนี้',
     highVolumeEmpty: 'ไม่มีหุ้นเหล่านี้ในช่วงเวลานี้',
     highVolumeStock: 'หุ้น',

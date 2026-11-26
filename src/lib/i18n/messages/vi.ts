@@ -202,7 +202,6 @@ const vi: Messages = {
     tickerUp: '{symbol} đóng cửa tăng {change} với khối lượng {multiple}× trung bình ({day})',
     tickerDown: '{symbol} đóng cửa giảm {change} với khối lượng {multiple}× trung bình ({day})',
     whyTicker: 'Có trong danh sách mã của bạn',
-    ownTickerSignIn: 'Đăng nhập để nhận cảnh báo',
     highVolumeAbout: 'Giới thiệu danh sách này',
     highVolumeEmpty: 'Không có cổ phiếu nào trong giai đoạn này.',
     highVolumeStock: 'Cổ phiếu',

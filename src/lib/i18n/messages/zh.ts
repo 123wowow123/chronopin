@@ -203,7 +203,6 @@ const zh: Messages = {
     tickerUp: '{symbol}以{multiple}倍均量收涨{change}（{day}）',
     tickerDown: '{symbol}以{multiple}倍均量收跌{change}（{day}）',
     whyTicker: '在您的股票代码列表中',
-    ownTickerSignIn: '登录以接收提醒',
     highVolumeAbout: '关于此列表',
     highVolumeEmpty: '这些股票在此期间均无符合项。',
     highVolumeStock: '股票',

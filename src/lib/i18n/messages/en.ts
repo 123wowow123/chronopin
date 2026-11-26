@@ -203,7 +203,6 @@ const en = {
     tickerUp: '{symbol} closed up {change} on {multiple}× its average volume ({day})',
     tickerDown: '{symbol} closed down {change} on {multiple}× its average volume ({day})',
     whyTicker: 'On your ticker list',
-    ownTickerSignIn: 'Sign in to get alerts',
     highVolumeAbout: 'About this list',
     highVolumeEmpty: 'None of these stocks in this period.',
     highVolumeStock: 'Stock',

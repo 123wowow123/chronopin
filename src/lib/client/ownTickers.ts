@@ -1,17 +1,14 @@
-// The reader's own tickers on the trades pages. Signed in, they are saved to the
-// account (/api/own-tickers), which is what the alerts read; signed out, in
-// this browser. Those added signed out move to the account on signing in.
+// The signed-in reader's own tickers on the trades pages, saved to the account
+// (/api/own-tickers), which is what the alerts read. Signed out there are none.
 
 import { useEffect, useSyncExternalStore } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
-import { MAX_OWN_TICKERS, readOwnTickers } from '@/lib/ownTickers';
 
-const KEY = 'chronopin:own-tickers';
 const EMPTY: string[] = [];
 
-// Whose list is shown: a user's id, null for this browser's, undefined until known.
-let owner: number | null | undefined;
+// Whose list is shown: a user's id, or null for nobody's (signed out, or not read yet).
+let owner: number | null = null;
 let state: string[] = EMPTY;
 const listeners = new Set<() => void>();
 
@@ -20,55 +17,27 @@ function set(next: string[]) {
   listeners.forEach((listener) => listener());
 }
 
-function read(): string[] {
+async function load(userId: number) {
   try {
-    return readOwnTickers(localStorage.getItem(KEY));
-  } catch {
-    return EMPTY;
-  }
-}
-
-function write(next: string[]) {
-  // Blocked or full storage keeps the list for this visit only.
-  try {
-    localStorage.setItem(KEY, JSON.stringify(next));
-  } catch {}
-}
-
-async function loadAccount(userId: number) {
-  try {
-    const local = read();
-    const { symbols } = local.length
-      ? await api.post<{ symbols: string[] }>('/api/own-tickers', { symbols: local })
-      : await api.get<{ symbols: string[] }>('/api/own-tickers');
-    // Saved to the account now (the cap may have left some here).
-    if (local.length) write(local.filter((s) => !symbols.includes(s)));
+    const { symbols } = await api.get<{ symbols: string[] }>('/api/own-tickers');
     if (owner === userId) set(symbols);
   } catch {
     // Asked again on the next page that shows them.
-    if (owner === userId) owner = undefined;
+    if (owner === userId) owner = null;
   }
 }
 
 function show(userId: number | null) {
   if (owner === userId) return;
   owner = userId;
-  if (userId === null) return set(read());
   set(EMPTY);
-  void loadAccount(userId);
-}
-
-function onStorage(event: StorageEvent) {
-  // Another tab's change to this browser's list.
-  if (event.key === KEY && owner === null) set(read());
+  if (userId !== null) void load(userId);
 }
 
 function subscribe(listener: () => void) {
-  if (!listeners.size) window.addEventListener('storage', onStorage);
   listeners.add(listener);
   return () => {
     listeners.delete(listener);
-    if (!listeners.size) window.removeEventListener('storage', onStorage);
   };
 }
 
@@ -81,25 +50,15 @@ export function useOwnTickers(): string[] {
   return useSyncExternalStore(subscribe, () => state, () => EMPTY);
 }
 
-// Throws when the account could not save it.
+// Both throw when the account could not save the change.
 export async function addOwnTickers(symbols: string[]) {
   const userId = owner;
-  if (userId == null) {
-    const next = [...new Set([...read(), ...symbols])].slice(0, MAX_OWN_TICKERS);
-    write(next);
-    return set(next);
-  }
   const saved = await api.post<{ symbols: string[] }>('/api/own-tickers', { symbols });
   if (owner === userId) set(saved.symbols);
 }
 
 export async function removeOwnTicker(symbol: string) {
   const userId = owner;
-  const next = state.filter((s) => s !== symbol);
-  if (userId == null) {
-    write(next);
-    return set(next);
-  }
   const saved = await api.delete<{ symbols: string[] }>(`/api/own-tickers?symbol=${encodeURIComponent(symbol)}`);
   if (owner === userId) set(saved.symbols);
 }

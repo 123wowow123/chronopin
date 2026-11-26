@@ -203,7 +203,6 @@ const id: Messages = {
     tickerUp: '{symbol} ditutup naik {change} dengan {multiple}× volume rata-rata ({day})',
     tickerDown: '{symbol} ditutup turun {change} dengan {multiple}× volume rata-rata ({day})',
     whyTicker: 'Ada di daftar ticker Anda',
-    ownTickerSignIn: 'Masuk untuk menerima notifikasi',
     highVolumeAbout: 'Tentang daftar ini',
     highVolumeEmpty: 'Tidak ada saham ini dalam periode ini.',
     highVolumeStock: 'Saham',

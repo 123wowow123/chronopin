@@ -203,7 +203,6 @@ const pt: Messages = {
     tickerUp: '{symbol} fechou em alta de {change} com {multiple}× o volume médio ({day})',
     tickerDown: '{symbol} fechou em baixa de {change} com {multiple}× o volume médio ({day})',
     whyTicker: 'Está na sua lista de tickers',
-    ownTickerSignIn: 'Entre para receber alertas',
     highVolumeAbout: 'Sobre esta lista',
     highVolumeEmpty: 'Nenhuma destas ações neste período.',
     highVolumeStock: 'Ação',

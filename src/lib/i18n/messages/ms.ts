@@ -203,7 +203,6 @@ const ms: Messages = {
     tickerUp: '{symbol} ditutup naik {change} dengan {multiple}× purata volumnya ({day})',
     tickerDown: '{symbol} ditutup turun {change} dengan {multiple}× purata volumnya ({day})',
     whyTicker: 'Dalam senarai ticker anda',
-    ownTickerSignIn: 'Log masuk untuk menerima amaran',
     highVolumeAbout: 'Perihal senarai ini',
     highVolumeEmpty: 'Tiada saham ini dalam tempoh ini.',
     highVolumeStock: 'Saham',

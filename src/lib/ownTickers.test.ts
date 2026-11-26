@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { MAX_OWN_TICKERS, parseTickerInput, readOwnTickers, topWithOwn } from './ownTickers';
+import { parseTickerInput, topWithOwn } from './ownTickers';
 
 describe('parseTickerInput', () => {
   it('takes several symbols, upper-cased, without "$" or repeats', () => {
@@ -30,20 +30,5 @@ describe('topWithOwn', () => {
 
   it('grows only when the reader’s alone outnumber the places', () => {
     expect(names(topWithOwn(ranked, 2, ['B', 'D', 'F']))).toBe('BDF');
-  });
-});
-
-describe('readOwnTickers', () => {
-  it('reads a stored list and drops what is not a symbol', () => {
-    expect(readOwnTickers('["AAPL", "aapl", 5, "no good", "T"]')).toEqual(['AAPL', 'T']);
-  });
-
-  it('reads anything else as an empty list', () => {
-    for (const stored of [null, '', '{', '{"a":1}']) expect(readOwnTickers(stored)).toEqual([]);
-  });
-
-  it('caps the list', () => {
-    const many = Array.from({ length: MAX_OWN_TICKERS + 5 }, (_, i) => `A${i}`);
-    expect(readOwnTickers(JSON.stringify(many))).toHaveLength(MAX_OWN_TICKERS);
   });
 });

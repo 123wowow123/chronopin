@@ -202,7 +202,6 @@ const es: Messages = {
     tickerUp: '{symbol} cerró con una subida del {change} con {multiple}× su volumen medio ({day})',
     tickerDown: '{symbol} cerró con una caída del {change} con {multiple}× su volumen medio ({day})',
     whyTicker: 'Está en su lista de tickers',
-    ownTickerSignIn: 'Inicie sesión para recibir alertas',
     highVolumeAbout: 'Acerca de esta lista',
     highVolumeEmpty: 'Ninguna de estas acciones en este periodo.',
     highVolumeStock: 'Acción',

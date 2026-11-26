@@ -1,24 +1,27 @@
 'use client';
 
 import { useId, useState } from 'react';
-import { AuthLink } from '@/components/nav/AuthLink';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
+import { useRouter } from '@/lib/client/navigation';
 import { addOwnTickers, removeOwnTicker, useOwnTickers } from '@/lib/client/ownTickers';
+import { authHrefHere } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { MAX_OWN_TICKERS, parseTickerInput } from '@/lib/ownTickers';
 import { term } from '@/lib/searchTerms';
 
-// The trades pages' "add your own ticker" box, with the tickers added so far.
-// A symbol is kept only when the price source knows it.
+// The trades pages' "add your own ticker" box. A signed-in reader sees the
+// tickers added so far; Add sends a visitor to log in and brings them back. A
+// symbol is kept only when the price source knows it.
 export function OwnTickers({ className = '' }: { className?: string }) {
   const t = useT();
   const tickers = useOwnTickers();
   const { status, isLoggedIn } = useSession();
-  // Alerts read the account's list, so a visitor is offered signing in.
-  const offerSignIn = status === 'ready' && !isLoggedIn && tickers.length > 0;
+  const router = useRouter();
+  // Who is reading is known only after the page loads; Add waits for it.
+  const known = status === 'ready';
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +29,8 @@ export function OwnTickers({ className = '' }: { className?: string }) {
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
+    if (!known) return;
+    if (!isLoggedIn) return router.push(authHrefHere('/login'));
     const { symbols, invalid } = parseTickerInput(text);
     const fresh = symbols.filter((s) => !tickers.includes(s));
     if (invalid) return setError(t('notifications.ownTickerInvalid'));
@@ -89,7 +94,7 @@ export function OwnTickers({ className = '' }: { className?: string }) {
             maxLength={120}
             className="w-44 rounded-lg bg-field px-3 py-1.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none"
           />
-          <button type="submit" disabled={busy || !text.trim()} className="rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-50">
+          <button type="submit" disabled={!known || busy || (isLoggedIn && !text.trim())} className="rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-50">
             {busy ? t('common.loading') : t('notifications.ownTickerAdd')}
           </button>
         </form>
@@ -97,8 +102,6 @@ export function OwnTickers({ className = '' }: { className?: string }) {
       {/* Hung under the box, so it never moves the title beside it. */}
       {error ? (
         <p id={errorId} role="alert" className="absolute end-0 top-full mt-0.5 text-xs whitespace-nowrap text-danger-soft">{error}</p>
-      ) : offerSignIn ? (
-        <AuthLink to="/login" className="absolute end-0 top-full mt-0.5 text-xs whitespace-nowrap text-link hover:underline">{t('notifications.ownTickerSignIn')}</AuthLink>
       ) : null}
     </div>
   );

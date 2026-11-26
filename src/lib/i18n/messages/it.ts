@@ -203,7 +203,6 @@ const it: Messages = {
     tickerUp: '{symbol} ha chiuso in rialzo del {change} con {multiple}× il volume medio ({day})',
     tickerDown: '{symbol} ha chiuso in ribasso del {change} con {multiple}× il volume medio ({day})',
     whyTicker: 'È nella tua lista di ticker',
-    ownTickerSignIn: 'Accedi per ricevere avvisi',
     highVolumeAbout: 'Informazioni su questo elenco',
     highVolumeEmpty: 'Nessuno di questi titoli in questo periodo.',
     highVolumeStock: 'Titolo',

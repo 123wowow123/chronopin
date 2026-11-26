@@ -209,7 +209,6 @@ const ru: Messages = {
     tickerUp: '{symbol}: закрытие с ростом на {change} при объёме {multiple}× среднего ({day})',
     tickerDown: '{symbol}: закрытие с падением на {change} при объёме {multiple}× среднего ({day})',
     whyTicker: 'В вашем списке тикеров',
-    ownTickerSignIn: 'Войдите, чтобы получать уведомления',
     highVolumeAbout: 'Об этом списке',
     highVolumeEmpty: 'Среди этих акций за этот период таких нет.',
     highVolumeStock: 'Акция',
