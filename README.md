@@ -502,3 +502,14 @@ generate video on activites / food / stay per city. post to youtube shorts
 
 do
 open menu-pricing gaps, and verification notes.
+
+
+stock hitting high valume low price
+
+A high volume up day is a trading day where a stock's price closes higher AND its volume is significantly above its recent average — typically 2x or more the 50-day average daily volume (ADV).
+
+also make panel for high volume down day
+
+add how many days stock has been going up
+
+past 3 days movement. show up or down if all 3 days mark same direction or empty empty if mixed

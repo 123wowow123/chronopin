@@ -5,6 +5,11 @@ import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { HighVolumePanel } from '@/components/person/HighVolumePanel';
+import { useOwnTickers } from '@/lib/client/ownTickers';
+import { useOwnHighVolume } from '@/lib/client/ownHighVolume';
+import { highVolumeSince } from '@/lib/highVolume';
+import { topWithOwn } from '@/lib/ownTickers';
 import { api } from '@/lib/client/api';
 import { clearUnreadCount, updateUnreadCount, useUnreadCount } from '@/lib/client/notifications';
 import { onLive } from '@/lib/client/liveFeed';
@@ -1244,7 +1249,8 @@ export function NotificationsFeed() {
 }
 
 const HISTORY_WEEKS = [1, 2, 4, 8, 12];
-const TOP_TICKERS = 12;
+// The ticker rankings' collapsed height: a wide screen sets each side in two columns.
+const TICKER_ROWS = 25;
 
 const dayDate = (offset: number) => {
   const d = new Date();
@@ -1252,15 +1258,21 @@ const dayDate = (offset: number) => {
   return d;
 };
 
-// The /notifications/trades page: each day's buys and sells for the past two
-// weeks. Read-only, so unlike the main list it leaves the unread marks alone.
+// The /notifications/trades page: each day's buys and sells for the past four
+// weeks, or the span picked. Read-only, so unlike the main list it leaves the
+// unread marks alone.
 export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide?: boolean }) {
   const t = useT();
   const locale = useIntlLocale();
-  const [weeks, setWeeks] = useState(2);
+  const [weeks, setWeeks] = useState(4);
   const [allTickers, setAllTickers] = useState(false);
+  const topTickers = wide ? TICKER_ROWS * 2 : TICKER_ROWS;
   const [items, setItems] = useState<Notification[] | null>(null);
   const [failed, setFailed] = useState(false);
+  // The reader's own tickers, coloured apart wherever they appear.
+  const own = useOwnTickers();
+  // Which of them the high-volume panels would list, over the longest span.
+  const ownHits = useOwnHighVolume(own, HISTORY_WEEKS[HISTORY_WEEKS.length - 1] * 7);
   const load = useCallback(() => {
     setFailed(false);
     api
@@ -1323,7 +1335,26 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
     </div>
   );
   if (items === null) return <div className="surface px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
-  if (!days.length) return <div className="surface px-4 py-10 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
+  // The reader's tickers the panels of a span of `w` weeks would list: those the
+  // Buys / Sells rankings hold, and those with a high-volume day.
+  const ownShownIn = (w: number) => {
+    const first = dayKey(1 - w * 7);
+    const today = dayKey(0);
+    const traded = new Set(
+      items
+        .filter((n) => (n.tradeFiledDate?.slice(0, 10) ?? '') >= first && n.tradeFiledDate!.slice(0, 10) <= today)
+        .flatMap((n) => [...Object.keys(n.tradeBuyValues ?? {}), ...Object.keys(n.tradeSellValues ?? {})]),
+    );
+    const since = highVolumeSince(w * 7);
+    return own.filter((symbol) => traded.has(symbol) || ownHits.some((h) => h.symbol === symbol && h.day >= since));
+  };
+  if (!days.length) return (
+    <div className="flex flex-col gap-4">
+      <div className="surface px-4 py-10 text-center text-sm text-subtle">{t('notifications.empty')}</div>
+      {/* No filings to list, but the reader's own tickers are still checked. */}
+      <HighVolumePanel symbols={[]} own={own} days={weeks * 7} conflicts={conflicts} />
+    </div>
+  );
   const sum = (rows: Notification[], pick: (n: Notification) => number | null) => rows.reduce((total, n) => total + (pick(n) ?? 0), 0);
   const people = new Set(all.map((n) => n.personName)).size;
   const tone = { tradeBuys: 'text-success-soft ring-success/40', tradeSells: 'text-danger-soft ring-danger/40' } as const;
@@ -1343,7 +1374,8 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
         key={tk}
         href={tickerHref(tk)}
         title={conflicts.has(tk) ? `${t('notifications.conflict')}: ${[...conflicts.get(tk)!].slice(0, 3).join(', ')}` : undefined}
-        className={`relative inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}
+        // An own ticker keeps its buy or sell tint and gains the reader's colour.
+        className={`relative inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${own.includes(tk) ? 'bg-own-ticker/15 text-own-ticker ring-2 ring-own-ticker ring-inset' : cls}`}
       >
         {conflicts.has(tk) ? <Icon name="warning" className="size-3 shrink-0 text-warning-soft" /> : null}
         {tk}
@@ -1356,21 +1388,31 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
       <span key={a} title={`${side === 'buy' ? t('notifications.tradeBuys') : t('notifications.tradeSells')}: ${a}`} className={`min-w-0 max-w-full break-words rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${side === 'buy' ? 'bg-success/10 text-success-soft ring-success/30' : 'bg-danger/10 text-danger-soft ring-danger/30'}`}>{a}</span>
     ));
   return (
-    <div className={wide ? 'flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:items-start' : 'flex flex-col gap-4'}>
+    <div className={wide ? 'flex flex-col gap-4 lg:grid lg:grid-cols-[min(32rem,40%)_minmax(0,1fr)_minmax(0,1fr)] lg:grid-rows-[auto_auto_1fr] lg:items-start' : 'flex flex-col gap-4'}>
       <div role="group" aria-label={t('notifications.tradesToday')} className={`surface flex gap-1 p-1 ${wide ? 'lg:col-span-3' : ''}`}>
-        {HISTORY_WEEKS.map((w) => (
-          <button
-            key={w}
-            type="button"
-            aria-pressed={w === weeks}
-            onClick={() => setWeeks(w)}
-            className={`flex-1 rounded-lg px-2 py-1.5 text-sm font-semibold tabular-nums ${w === weeks ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
-          >
-            {weekLabel(w)}
-          </button>
-        ))}
+        {HISTORY_WEEKS.map((w) => {
+          // A dot marks a span in which one of the reader's tickers shows in a panel.
+          const hits = ownShownIn(w);
+          const note = hits.length ? t('notifications.ownTickerDot', { symbols: hits.join(', ') }) : undefined;
+          return (
+            <button
+              key={w}
+              type="button"
+              aria-pressed={w === weeks}
+              onClick={() => setWeeks(w)}
+              title={note}
+              className={`flex-1 rounded-lg px-2 py-1.5 text-sm font-semibold tabular-nums ${w === weeks ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
+            >
+              <span className="relative">
+                {weekLabel(w)}
+                {note ? <span aria-hidden className={`absolute -end-3 top-1/2 size-2 -translate-y-1/2 rounded-full bg-own-ticker ${w === weeks ? 'ring-2 ring-white' : ''}`} /> : null}
+              </span>
+              {note ? <span className="sr-only">{note}</span> : null}
+            </button>
+          );
+        })}
       </div>
-      <div className={`surface grid grid-cols-3 divide-x divide-line rtl:divide-x-reverse ${wide ? 'lg:col-span-1' : ''}`}>
+      <div className={`surface grid grid-cols-3 divide-x divide-line rtl:divide-x-reverse ${wide ? 'lg:col-start-1 lg:row-start-2' : ''}`}>
         {([
           ['tradeBuys', sum(all, (n) => n.tradeBuys)],
           ['tradeSells', sum(all, (n) => n.tradeSells)],
@@ -1385,7 +1427,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
           <span className="text-xs font-medium tracking-wide text-subtle uppercase">{t('notifications.tradePeople')}</span>
         </div>
       </div>
-      <div className={`surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse ${wide ? 'lg:col-span-2' : ''}`}>
+      <div className={`surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse ${wide ? 'lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-2' : ''}`}>
         {([
           ['tradeBuys', ranked.buys, assets.buys, 'buy'],
           ['tradeSells', ranked.sells, assets.sells, 'sell'],
@@ -1394,10 +1436,11 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
             <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
             {list.length ? (
               <ol className={`text-sm ${wide ? 'lg:columns-2 lg:gap-x-8' : ''}`}>
-                {(allTickers ? list : list.slice(0, TOP_TICKERS)).map(([ticker, st]) => (
-                  <li key={ticker} className="mb-1 flex items-baseline gap-2 break-inside-avoid">
+                {(allTickers ? list : topWithOwn(list, topTickers, own)).map(([ticker, st], i) => (
+                  // A narrow screen has one column, so the second column's share waits for "Show more".
+                  <li key={ticker} className={`mb-1 items-baseline gap-2 break-inside-avoid ${!allTickers && i >= TICKER_ROWS && !own.includes(ticker) ? 'hidden lg:flex' : 'flex'}`}>
                     <span className="w-5 shrink-0 text-end text-xs tabular-nums text-subtle">{st.people.size}</span>
-                    <Link href={tickerHref(ticker)} className="min-w-0 truncate font-semibold text-ink hover:underline">{ticker}</Link>
+                    <Link href={tickerHref(ticker)} className={`min-w-0 truncate font-semibold hover:underline ${own.includes(ticker) ? 'text-own-ticker' : 'text-ink'}`}>{ticker}</Link>
                     {conflicts.has(ticker) ? (
                       <span title={`${t('notifications.conflict')}: ${[...conflicts.get(ticker)!].slice(0, 3).join(', ')}`} className="shrink-0 text-warning-soft">
                         <Icon name="warning" className="size-3" />
@@ -1413,17 +1456,28 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
             {allTickers && other.length ? <div className={`flex flex-wrap gap-1 ${list.length ? 'mt-2 border-t border-line pt-2' : ''}`}>{assetChips(other, side)}</div> : null}
           </div>
         ))}
-        {ranked.buys.length > TOP_TICKERS || ranked.sells.length > TOP_TICKERS || assets.buys.length || assets.sells.length ? (
+        {ranked.buys.length > TICKER_ROWS || ranked.sells.length > TICKER_ROWS || assets.buys.length || assets.sells.length ? (
           <button
             type="button"
             aria-expanded={allTickers}
             onClick={() => setAllTickers((v) => !v)}
-            className="col-span-full border-t border-line px-4 py-2 text-sm font-semibold text-accent hover:bg-raised/50 sm:col-span-2"
+            // On a wide screen, nothing to add when both sides already fit.
+            className={`col-span-full border-t border-line px-4 py-2 text-sm font-semibold text-accent hover:bg-raised/50 sm:col-span-2 ${ranked.buys.length > topTickers || ranked.sells.length > topTickers || assets.buys.length || assets.sells.length ? '' : 'lg:hidden'}`}
           >
             {allTickers ? t('common.showLess') : t('common.showMore')}
           </button>
         ) : null}
       </div>
+      {/* The stocks the panel above lists collapsed, checked for high-volume days
+          ("Show more" leaves them as they are); on a wide screen they sit under the
+          totals, the third row taking the spare height. */}
+      <HighVolumePanel
+        symbols={[...new Set([ranked.buys, ranked.sells].flatMap((list) => topWithOwn(list, topTickers, own).map(([ticker]) => ticker)))]}
+        own={own}
+        days={weeks * 7}
+        conflicts={conflicts}
+        className={wide ? 'lg:col-start-1 lg:row-start-3' : ''}
+      />
       {days.map((g) => (
         <section key={g.day} className={`surface overflow-hidden ${wide ? 'lg:col-span-3' : ''}`}>
           <header className="flex items-baseline justify-between gap-2 border-b border-line bg-raised/40 px-4 py-2.5">

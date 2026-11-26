@@ -92,6 +92,8 @@
   --color-tradition-soft: var(--color-violet-300);
   /* What only a pin's authors or admins see (duplicate suggestions). */
   --color-privileged: var(--color-violet-400);
+  /* A ticker the reader added to the trades pages. */
+  --color-own-ticker: var(--color-violet-300);
   --color-curated: #ffc400;
 
   /* Hairlines and washes over panels: white on dark, black on light. */
@@ -187,6 +189,7 @@
   --color-holiday-ink: #ffffff;
   --color-tradition-soft: oklch(47% 0.13 295);
   --color-privileged: var(--color-violet-700);
+  --color-own-ticker: var(--color-violet-700);
   --color-curated: #a86f00;
 
   --color-tint: #000;

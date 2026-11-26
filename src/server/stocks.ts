@@ -7,6 +7,7 @@
 // timer while anyone watches, pushed to every watcher (src/server/liveFeed.ts).
 
 import { parseTrends, type EarningsTrends } from '@/lib/earningsTrends';
+import type { DailyBar } from '@/lib/highVolume';
 import { isCompanyListing, nasdaqChartInstant, nasdaqDay, nasdaqNumber, type AssetClass, type DailyClose, type StockQuote } from '@/lib/stocks';
 import log from './util/log';
 
@@ -148,6 +149,33 @@ async function readCloses(symbol: string, assetClass: AssetClass): Promise<Daily
     const low = nasdaqNumber(row.low ?? '');
     return [{ day, close, ...(high != null ? { high } : {}), ...(low != null ? { low } : {}) }];
   });
+}
+
+// Recent daily closes with volume: enough sessions for a 50-day average ahead
+// of the oldest day the trades page shows (twelve weeks). A symbol with no rows
+// as a stock is read as an ETF; empty when Nasdaq has neither.
+export function fetchDailyBars(symbol: string): Promise<DailyBar[]> {
+  return cached(`bars|${symbol}`, () => readDailyBars(symbol));
+}
+
+const BAR_CALENDAR_DAYS = 200;
+
+async function readDailyBars(symbol: string): Promise<DailyBar[]> {
+  const today = new Date();
+  const from = new Date(+today - BAR_CALENDAR_DAYS * 86_400_000).toISOString().slice(0, 10);
+  for (const assetClass of ['stocks', 'etf'] as const) {
+    const data = await get<{ tradesTable: { rows: { date: string; close: string; volume: string }[] | null } }>(
+      `/quote/${q(symbol)}/historical?assetclass=${assetClass}&fromdate=${from}&todate=${today.toISOString().slice(0, 10)}&limit=9999`,
+    );
+    const bars = (data?.tradesTable.rows ?? []).flatMap((row) => {
+      const day = nasdaqDay(row.date);
+      const close = nasdaqNumber(row.close);
+      const volume = nasdaqNumber(row.volume);
+      return day && close != null && volume != null ? [{ day, close, volume }] : [];
+    });
+    if (bars.length) return bars;
+  }
+  return [];
 }
 
 // The last session's minute prices (pre-market included), as instants.
