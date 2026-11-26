@@ -170,8 +170,8 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (ty
                   <th scope="row" className="ps-4 pe-1 py-0.5 text-start font-semibold">
                     <Link
                       href={`/search?q=${encodeURIComponent(term('ticker', symbol))}`}
-                      // The reader's own colour wins over the gray of a stock in both panels.
-                      className={`hover:underline ${own.includes(symbol) ? 'text-own-ticker' : both.has(symbol) ? 'text-faint' : 'text-ink'}`}
+                      // A stock in both panels is paler: gray, or light purple for one of the reader's own.
+                      className={`hover:underline ${own.includes(symbol) ? (both.has(symbol) ? 'text-own-ticker/55' : 'text-own-ticker') : both.has(symbol) ? 'text-faint' : 'text-ink'}`}
                       title={both.has(symbol) ? t('notifications.highVolumeBothHint') : undefined}
                     >
                       {symbol}

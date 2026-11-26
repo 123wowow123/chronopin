@@ -208,7 +208,7 @@ const vi: Messages = {
     highVolumeDays: '{count} ngày',
     highVolumeDaysHint: '“{example}” bên cạnh mã: số ngày trong giai đoạn này đạt điều kiện; dòng hiển thị ngày mới nhất',
     highVolumeMoved: 'Từ đó %',
-    highVolumeBothHint: 'Mã màu xám: có trong cả bảng tăng và bảng giảm',
+    highVolumeBothHint: 'Mã màu xám (tím nhạt nếu là mã của bạn): có trong cả bảng tăng và bảng giảm',
     highVolumeChangeHint: 'Thay đổi: giá đóng cửa hôm đó so với phiên trước',
     highVolumeMovedHint: 'Từ đó %: biến động giá từ giá đóng cửa hôm đó đến giá đóng cửa mới nhất',
     highVolumeSince: 'Tăng / giảm',

@@ -208,7 +208,7 @@ const ko: Messages = {
     highVolumeDays: '{count}일',
     highVolumeDaysHint: '종목 옆 “{example}”: 이 기간에 조건을 충족한 날의 수이며, 행에는 가장 최근 날을 표시',
     highVolumeMoved: '이후 %',
-    highVolumeBothHint: '회색 종목: 강세와 약세 패널 모두에 있음',
+    highVolumeBothHint: '회색 종목(내 종목은 연보라): 강세와 약세 패널 모두에 있음',
     highVolumeChangeHint: '등락률: 그날 종가의 전일 종가 대비 변동',
     highVolumeMovedHint: '이후 %: 그날 종가부터 최근 종가까지의 가격 변동',
     highVolumeSince: '상승 / 하락',

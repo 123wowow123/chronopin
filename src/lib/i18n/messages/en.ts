@@ -209,7 +209,7 @@ const en = {
     highVolumeDays: '{count} days',
     highVolumeDaysHint: '“{example}” beside a stock: how many days in this period met the rule; the row shows the newest',
     highVolumeMoved: 'Since %',
-    highVolumeBothHint: 'Gray ticker: listed in both the bullish and bearish panels',
+    highVolumeBothHint: 'Gray ticker (light purple if yours): listed in both the bullish and bearish panels',
     highVolumeChangeHint: 'Change: that day’s close against the previous close',
     highVolumeMovedHint: 'Since %: the price move from that day’s close to the latest close',
     highVolumeSince: 'Up / down',

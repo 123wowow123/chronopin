@@ -208,7 +208,7 @@ const ja: Messages = {
     highVolumeDays: '{count}日',
     highVolumeDaysHint: '銘柄横の「{example}」：期間内に条件を満たした日数。行には直近の日を表示',
     highVolumeMoved: '以降 %',
-    highVolumeBothHint: '灰色の銘柄：強気と弱気の両方のパネルに表示',
+    highVolumeBothHint: '灰色（自分の銘柄は薄紫）：強気と弱気の両方のパネルに表示',
     highVolumeChangeHint: '騰落率：その日の終値の前日終値比',
     highVolumeMovedHint: '以降 %：その日の終値から直近の終値までの値動き',
     highVolumeSince: '上昇 / 下落',

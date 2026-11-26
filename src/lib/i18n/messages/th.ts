@@ -208,7 +208,7 @@ const th: Messages = {
     highVolumeDays: '{count} วัน',
     highVolumeDaysHint: '“{example}” ข้างชื่อหุ้น: จำนวนวันในช่วงนี้ที่เข้าเกณฑ์ โดยแถวแสดงวันล่าสุด',
     highVolumeMoved: 'ตั้งแต่นั้น %',
-    highVolumeBothHint: 'ชื่อหุ้นสีเทา: อยู่ทั้งในแผงขาขึ้นและขาลง',
+    highVolumeBothHint: 'ชื่อหุ้นสีเทา (สีม่วงอ่อนหากเป็นของคุณ): อยู่ทั้งในแผงขาขึ้นและขาลง',
     highVolumeChangeHint: 'เปลี่ยนแปลง: ราคาปิดวันนั้นเทียบกับราคาปิดก่อนหน้า',
     highVolumeMovedHint: 'ตั้งแต่นั้น %: ราคาที่เปลี่ยนจากราคาปิดวันนั้นถึงราคาปิดล่าสุด',
     highVolumeSince: 'ขึ้น / ลง',

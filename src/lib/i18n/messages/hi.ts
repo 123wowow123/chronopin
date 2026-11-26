@@ -209,7 +209,7 @@ const hi: Messages = {
     highVolumeDays: '{count} दिन',
     highVolumeDaysHint: 'शेयर के पास “{example}”: इस अवधि में कितने दिन नियम पूरा हुआ; पंक्ति सबसे नया दिन दिखाती है',
     highVolumeMoved: 'तब से %',
-    highVolumeBothHint: 'ग्रे टिकर: तेज़ी और मंदी, दोनों पैनलों में शामिल',
+    highVolumeBothHint: 'ग्रे टिकर (आपका हो तो हल्का बैंगनी): तेज़ी और मंदी, दोनों पैनलों में शामिल',
     highVolumeChangeHint: 'बदलाव: उस दिन का बंद भाव, पिछले बंद भाव के मुकाबले',
     highVolumeMovedHint: 'तब से %: उस दिन के बंद भाव से आख़िरी बंद भाव तक कीमत का बदलाव',
     highVolumeSince: 'ऊपर / नीचे',

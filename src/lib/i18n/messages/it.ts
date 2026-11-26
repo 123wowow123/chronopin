@@ -209,7 +209,7 @@ const it: Messages = {
     highVolumeDays: '{count} giorni',
     highVolumeDaysHint: '«{example}» accanto a un titolo: quanti giorni del periodo hanno soddisfatto la regola; la riga mostra il più recente',
     highVolumeMoved: 'Da allora %',
-    highVolumeBothHint: 'Ticker in grigio: presente sia nel riquadro rialzista sia in quello ribassista',
+    highVolumeBothHint: 'Ticker in grigio (viola chiaro se è tuo): presente sia nel riquadro rialzista sia in quello ribassista',
     highVolumeChangeHint: 'Variazione: chiusura del giorno rispetto alla chiusura precedente',
     highVolumeMovedHint: 'Da allora %: movimento del prezzo dalla chiusura di quel giorno all’ultima chiusura',
     highVolumeSince: 'Su / giù',

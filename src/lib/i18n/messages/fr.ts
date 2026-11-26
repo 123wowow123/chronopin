@@ -208,7 +208,7 @@ const fr: Messages = {
     highVolumeDays: '{count} jours',
     highVolumeDaysHint: '« {example} » à côté d’une action : nombre de jours de la période remplissant la règle ; la ligne montre le plus récent',
     highVolumeMoved: 'Depuis %',
-    highVolumeBothHint: 'Symbole en gris : présent dans les panneaux haussier et baissier',
+    highVolumeBothHint: 'Symbole en gris (violet clair s’il est à vous) : présent dans les panneaux haussier et baissier',
     highVolumeChangeHint: 'Variation : clôture de ce jour par rapport à la clôture précédente',
     highVolumeMovedHint: 'Depuis % : évolution du cours depuis la clôture de ce jour jusqu’à la dernière clôture',
     highVolumeSince: 'Hausse / baisse',

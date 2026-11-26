@@ -209,7 +209,7 @@ const ms: Messages = {
     highVolumeDays: '{count} hari',
     highVolumeDaysHint: '“{example}” di sebelah saham: bilangan hari dalam tempoh ini yang memenuhi syarat; baris menunjukkan yang terkini',
     highVolumeMoved: 'Sejak itu %',
-    highVolumeBothHint: 'Ticker kelabu: tersenarai dalam kedua-dua panel menaik dan menurun',
+    highVolumeBothHint: 'Ticker kelabu (ungu muda jika milik anda): tersenarai dalam kedua-dua panel menaik dan menurun',
     highVolumeChangeHint: 'Perubahan: harga tutup hari itu berbanding tutup sebelumnya',
     highVolumeMovedHint: 'Sejak itu %: pergerakan harga dari tutup hari itu hingga tutup terkini',
     highVolumeSince: 'Naik / turun',

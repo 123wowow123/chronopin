@@ -230,7 +230,7 @@ const ar: Messages = {
     highVolumeDays: '{count} أيام',
     highVolumeDaysHint: '«{example}» بجانب السهم: عدد الأيام التي استوفت الشرط في هذه الفترة؛ ويعرض الصف أحدثها',
     highVolumeMoved: 'منذئذٍ %',
-    highVolumeBothHint: 'الرمز الرمادي: مدرج في لوحتي الصعود والهبوط معًا',
+    highVolumeBothHint: 'الرمز الرمادي (أو البنفسجي الفاتح إن كان من رموزك): مدرج في لوحتي الصعود والهبوط معًا',
     highVolumeChangeHint: 'التغير: إغلاق ذلك اليوم مقارنة بالإغلاق السابق',
     highVolumeMovedHint: 'منذئذٍ %: حركة السعر من إغلاق ذلك اليوم إلى آخر إغلاق',
     highVolumeSince: 'صعود / هبوط',

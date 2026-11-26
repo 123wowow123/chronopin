@@ -215,7 +215,7 @@ const ru: Messages = {
     highVolumeDays: '{count} дн.',
     highVolumeDaysHint: '«{example}» рядом с акцией: сколько дней за период отвечали условию; в строке показан последний',
     highVolumeMoved: 'С тех пор %',
-    highVolumeBothHint: 'Серый тикер: есть и в бычьей, и в медвежьей панели',
+    highVolumeBothHint: 'Серый тикер (светло-фиолетовый, если ваш): есть и в бычьей, и в медвежьей панели',
     highVolumeChangeHint: 'Изменение: закрытие того дня к предыдущему закрытию',
     highVolumeMovedHint: 'С тех пор %: движение цены от закрытия того дня до последнего закрытия',
     highVolumeSince: 'Рост / падение',

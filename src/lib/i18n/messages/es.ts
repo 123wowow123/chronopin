@@ -208,7 +208,7 @@ const es: Messages = {
     highVolumeDays: '{count} días',
     highVolumeDaysHint: '«{example}» junto a una acción: cuántos días de este periodo cumplieron la regla; la fila muestra el más reciente',
     highVolumeMoved: 'Desde %',
-    highVolumeBothHint: 'Ticker en gris: aparece en el panel alcista y en el bajista',
+    highVolumeBothHint: 'Ticker en gris (morado claro si es suyo): aparece en el panel alcista y en el bajista',
     highVolumeChangeHint: 'Variación: cierre de ese día frente al cierre anterior',
     highVolumeMovedHint: 'Desde %: movimiento del precio desde el cierre de ese día hasta el último cierre',
     highVolumeSince: 'Sube / baja',

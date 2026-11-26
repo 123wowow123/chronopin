@@ -208,7 +208,7 @@ const de: Messages = {
     highVolumeDays: '{count} Tage',
     highVolumeDaysHint: '„{example}“ neben einer Aktie: so viele Tage im Zeitraum erfüllten die Regel; die Zeile zeigt den neuesten',
     highVolumeMoved: 'Seither %',
-    highVolumeBothHint: 'Grauer Ticker: in der bullischen und der bärischen Liste enthalten',
+    highVolumeBothHint: 'Grauer Ticker (hellviolett, wenn es Ihrer ist): in der bullischen und der bärischen Liste enthalten',
     highVolumeChangeHint: 'Änderung: Schlusskurs des Tages gegenüber dem vorigen Schlusskurs',
     highVolumeMovedHint: 'Seither %: Kursbewegung vom Schlusskurs des Tages bis zum letzten Schlusskurs',
     highVolumeSince: 'Auf / ab',

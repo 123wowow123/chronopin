@@ -209,7 +209,7 @@ const zh: Messages = {
     highVolumeDays: '{count}天',
     highVolumeDaysHint: '股票旁的“{example}”：本期间内符合条件的天数；该行显示最近一天',
     highVolumeMoved: '此后 %',
-    highVolumeBothHint: '灰色代码：同时出现在看涨和看跌面板',
+    highVolumeBothHint: '灰色代码（您添加的为浅紫色）：同时出现在看涨和看跌面板',
     highVolumeChangeHint: '涨跌幅：当日收盘价相对前一收盘价',
     highVolumeMovedHint: '此后 %：从当日收盘价到最新收盘价的变动',
     highVolumeSince: '涨 / 跌',

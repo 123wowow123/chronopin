@@ -209,7 +209,7 @@ const pt: Messages = {
     highVolumeDays: '{count} dias',
     highVolumeDaysHint: '“{example}” ao lado de uma ação: quantos dias do período atenderam à regra; a linha mostra o mais recente',
     highVolumeMoved: 'Desde %',
-    highVolumeBothHint: 'Ticker em cinza: aparece nos painéis altista e baixista',
+    highVolumeBothHint: 'Ticker em cinza (roxo claro se for seu): aparece nos painéis altista e baixista',
     highVolumeChangeHint: 'Variação: fechamento do dia em relação ao fechamento anterior',
     highVolumeMovedHint: 'Desde %: variação do preço do fechamento daquele dia até o último fechamento',
     highVolumeSince: 'Alta / baixa',

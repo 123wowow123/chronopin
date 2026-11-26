@@ -209,7 +209,7 @@ const id: Messages = {
     highVolumeDays: '{count} hari',
     highVolumeDaysHint: '“{example}” di samping saham: jumlah hari dalam periode ini yang memenuhi syarat; baris menampilkan yang terbaru',
     highVolumeMoved: 'Sejak itu %',
-    highVolumeBothHint: 'Ticker abu-abu: ada di panel bullish dan bearish',
+    highVolumeBothHint: 'Ticker abu-abu (ungu muda jika milik Anda): ada di panel bullish dan bearish',
     highVolumeChangeHint: 'Perubahan: harga tutup hari itu dibanding tutup sebelumnya',
     highVolumeMovedHint: 'Sejak itu %: pergerakan harga dari tutup hari itu hingga tutup terakhir',
     highVolumeSince: 'Naik / turun',
