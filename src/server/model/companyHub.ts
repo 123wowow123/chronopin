@@ -34,8 +34,20 @@ export async function companyHubTree(companyId: number, companyName: string): Pr
   );
   // Each listed pin stands for its whole thread; a pin two listed pins share is shown once.
   const threads = new Map<number, number[]>(await Promise.all([...new Set(listed.map((l) => l.pinId))].map(async (id): Promise<[number, number[]]> => [id, await Pins.threadIds(id)])));
+  // A thread now spans authors, so a hub's thread can run into other companies' pins (Microsoft's into the
+  // Army IVAS/Anduril chain). A thread pin stays when it is listed, belongs to this company, or has the
+  // listed pin's own author (what a thread was before it crossed authors); anything else is left out.
+  const threadPinIds = [...new Set([...threads.values()].flat())];
+  const owners = new Map(
+    (threadPinIds.length ? await db.query<{ id: number; userId: number | null; companyId: number | null }>(`SELECT "id", "userId", "companyId" FROM "Pin" WHERE "id" = ANY($1::integer[])`, [threadPinIds]) : []).map((r) => [Number(r.id), r]),
+  );
+  const listedIds = new Set(listed.map((l) => l.pinId));
+  const keeps = (listedPin: number, id: number) => {
+    const pin = owners.get(id);
+    return id === listedPin || listedIds.has(id) || pin?.companyId === companyId || (pin?.userId != null && pin.userId === owners.get(listedPin)?.userId);
+  };
   const order = new Map<number, number[]>();
-  for (const { productId, pinId } of listed) order.set(productId, [...new Set([...(order.get(productId) ?? []), ...(threads.get(pinId) ?? [])])]);
+  for (const { productId, pinId } of listed) order.set(productId, [...new Set([...(order.get(productId) ?? []), ...(threads.get(pinId) ?? []).filter((id) => keeps(pinId, id))])]);
   const ids = [...new Set([...order.values()].flat())];
   const rows = ids.length
     ? await db.query<{ id: number; title: string; description: string | null; utcStartDateTime: Date | string; allDay: boolean; thumbName: string | null; originalUrl: string | null }>(
