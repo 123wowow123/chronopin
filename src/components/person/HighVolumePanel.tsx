@@ -217,7 +217,7 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (ty
                   </td>
                 {/* An arrow alone, to keep the column narrow; blank when the latest close was unchanged. */}
                 <td
-                  className={`ps-1 pe-4 py-0.5 text-center ${trend?.dir === 'down' ? 'text-danger-soft' : 'text-success-soft'}`}
+                  className={`ps-1 pe-4 py-0.5 text-center ${trend?.dir === 'down' ? 'text-danger-soft' : 'text-success-soft'} ${trend && trend.days < 3 ? 'opacity-25' : ''}`}
                   title={trend ? t('notifications.highVolumeTrendValue', { dir: t(trend.dir === 'up' ? 'notifications.highVolumeTrendUp' : 'notifications.highVolumeTrendDown'), count: trend.days }) : undefined}
                 >
                   {trend ? (
