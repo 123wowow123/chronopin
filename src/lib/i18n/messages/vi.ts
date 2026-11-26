@@ -1133,6 +1133,11 @@ const vi: Messages = {
     days: '{count} ngày',
     stretchLate: 'Trễ {span}: từ {from} đến {to}',
     stretchPromised: 'Thời gian chờ như đã hứa ban đầu: từ {from} đến {to}',
+    originalMissed: 'Lỡ mốc đầu tiên: {date}',
+    revisedMissed: 'Lỡ mốc đã điều chỉnh: {date}',
+    movedFrom: 'Dời từ {date}',
+    stretchPhase: '{label}: từ {from} đến {to}',
+    stretchWait: 'Thời gian chờ từ lúc đăng đến khi bắt đầu: từ {from} đến {to}',
   },
   dateConfidence: {
     tipHeading: 'Độ tin cậy của ngày',
@@ -1336,6 +1341,10 @@ const vi: Messages = {
     count: '{count} đang quan sát',
     startThread: 'Quan sát chuỗi này',
     stopThread: 'Ngừng quan sát chuỗi này',
+  },
+  unconfirmed: {
+    heading: 'Tin chưa được xác nhận',
+    note: 'Chưa bên liên quan nào xác nhận và tin này không quyết định ngày ở trên.',
   },
   odds: {
     trendUp: '{label} {percent} trên {source}, tăng {points} điểm tuần này',

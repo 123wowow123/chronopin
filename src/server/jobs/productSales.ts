@@ -4,6 +4,7 @@
 // recently released goods pins with none are looked at for a launch figure.
 
 import * as db from '../db';
+import { predictedPinOf } from '../model/predictedPin';
 import { saveSales, salesProblem } from '../model/pinSales';
 
 export type SalesCandidate = { pinId: number; title: string; productName: string | null; start: string; rows: number; newest: string | null; lastChecked: string | null };
@@ -20,7 +21,7 @@ export async function salesStatus(limit = 8, skip: number[] = []): Promise<{ ref
      WHERE p."utcDeletedDateTime" IS NULL
        AND (EXISTS (SELECT 1 FROM "PinSales" s WHERE s."pinId" = p."id")
          OR (EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Released')
-             AND NOT EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted')
+             AND NOT ${predictedPinOf('p')}
              AND p."utcStartDateTime" BETWEEN now() - interval '120 days' AND now()))`,
   );
   const all = rows

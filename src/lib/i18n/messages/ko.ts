@@ -1128,6 +1128,11 @@ const ko: Messages = {
     days: '{count}일',
     stretchLate: '{span} 지연: {from}~{to}',
     stretchPromised: '최초 약속된 대기 기간: {from}~{to}',
+    originalMissed: '최초 예정일 놓침: {date}',
+    revisedMissed: '변경 예정일 놓침: {date}',
+    movedFrom: '{date}에서 연기',
+    stretchPhase: '{label}: {from}~{to}',
+    stretchWait: '게시부터 시작까지의 대기 기간: {from}~{to}',
   },
   dateConfidence: {
     tipHeading: '날짜 확실성',
@@ -1330,6 +1335,10 @@ const ko: Messages = {
     count: '{count}명이 관심 등록',
     startThread: '이 스레드 지켜보기',
     stopThread: '스레드 지켜보기 해제',
+  },
+  unconfirmed: {
+    heading: '미확인 보도',
+    note: '관계자 누구도 확인하지 않았으며, 위 날짜의 근거가 아닙니다.',
   },
   odds: {
     trendUp: '{source}의 {label} {percent}, 이번 주 {points}포인트 상승',

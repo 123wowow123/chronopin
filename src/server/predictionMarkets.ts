@@ -302,6 +302,17 @@ function refKey(ref: MarketRef) {
   return ref.source === 'Kalshi' ? `k:${ref.kind}:${ref.ticker}` : ref.source === 'Polymarket' ? `p:${ref.kind}:${ref.slug}` : `u:${ref.slug}`;
 }
 
+const readMarket = (ref: MarketRef) => (ref.source === 'Kalshi' ? kalshi(ref) : ref.source === 'Polymarket' ? polymarket(ref) : polymarketUs(ref));
+
+// As oddsFor, uncached and without a closed market's traded ranges (a history
+// read per outcome): for a job that sweeps many markets for their state.
+export function marketState(ref: MarketRef): Promise<MarketOdds | null> {
+  return readMarket(ref).catch((err) => {
+    if (err instanceof NotFound) return null;
+    throw err;
+  });
+}
+
 // The odds a link points at, or null when the exchange has no such market.
 // Rejects when the exchange cannot be reached.
 export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
@@ -310,7 +321,7 @@ export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
   const hit = cache.get(key);
   if (hit && hit.expires > now) return hit.promise;
 
-  const read = (ref.source === 'Kalshi' ? kalshi(ref) : ref.source === 'Polymarket' ? polymarket(ref) : polymarketUs(ref)).then(withRanges);
+  const read = readMarket(ref).then(withRanges);
   const promise = read.catch((err) => {
     if (err instanceof NotFound) return null;
     cache.delete(key);

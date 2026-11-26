@@ -1260,6 +1260,11 @@ const ar: Messages = {
     days: '{count} يوم',
     stretchLate: 'تأخير {span}: من {from} إلى {to}',
     stretchPromised: 'الانتظار كما وُعد أول مرة: من {from} إلى {to}',
+    originalMissed: 'فات الموعد الأول: {date}',
+    revisedMissed: 'فات الموعد المعدّل: {date}',
+    movedFrom: 'أُجّل من {date}',
+    stretchPhase: '{label}: من {from} إلى {to}',
+    stretchWait: 'الانتظار من النشر حتى البداية: من {from} إلى {to}',
   },
   dateConfidence: {
     tipHeading: 'الثقة بالتاريخ',
@@ -1541,6 +1546,10 @@ const ar: Messages = {
     count: 'يراقبه {count}',
     startThread: 'مراقبة هذه السلسلة',
     stopThread: 'إيقاف مراقبة هذه السلسلة',
+  },
+  unconfirmed: {
+    heading: 'تقرير غير مؤكد',
+    note: 'لم يؤكد أي طرف معني هذا الخبر، ولا يحدد التاريخ أعلاه.',
   },
   odds: {
     trendUp: '{label} {percent} على {source}، بارتفاع {points} نقطة هذا الأسبوع',

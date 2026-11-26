@@ -24,6 +24,8 @@ description: >-
   diagram, a video screenshot). Treat them as the last resort: look first for the maker's newsroom or press kit
   release for the exact product or event (Intel's scene7 images, for example), then review and launch coverage,
   and only then Commons. Replace a stand-in that does not show the subject, and credit whichever source is used.
+- The picture must match the title: look at it, and refuse one whose words, version number, team, person or year
+  belong to a sibling or earlier event (owner, 2026-11-25; see `prediction-market-pins`, "Pictures must match").
 - Aim for three media per scraped pin. No picture twice (CDN size suffixes + difference hash dedupe).
 - Age-gated YouTube videos are refused; a second video can come from Dailymotion/Vimeo.
 

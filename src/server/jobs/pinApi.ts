@@ -450,3 +450,23 @@ export async function saveFlightPathRow(pinId: number, path: { label: string; so
   const patched = await call<{ rows?: unknown[] }>('PATCH', `/api/admin/db/PinFlightPath?pinId=${pinId}`, { token, base, body: row });
   if (!patched.rows?.length) await call('POST', '/api/admin/db/PinFlightPath', { token, base, body: [{ pinId, ...row }] });
 }
+
+// The "Possible duplicates" pairs (PinDuplicate) where the run writes, for the
+// duplicates task (./duplicateCleanup.ts): read and judged through the admin
+// table API, decided through the pin's own route, which feeds and rethreads.
+export type DuplicateRow = { pinId: number; otherPinId: number; reason: string; score: number | null; status: string; verdict: string | null; verdictReasoning: string | null };
+
+export async function duplicateRows(query: string): Promise<{ rows: DuplicateRow[]; total: number }> {
+  return call<{ rows: DuplicateRow[]; total: number }>('GET', `/api/admin/db/PinDuplicate?${query}`, { token: await adminToken('duplicate cleanup') });
+}
+
+export async function markDuplicate(pinId: number, otherPinId: number, verdict: string, reasoning: string): Promise<void> {
+  await call('PATCH', `/api/admin/db/PinDuplicate?pinId=${pinId}&otherPinId=${otherPinId}`, {
+    token: await adminToken('duplicate cleanup'),
+    body: { verdict, verdictReasoning: reasoning.slice(0, 2000), utcVerifiedDateTime: new Date().toISOString() },
+  });
+}
+
+export async function decideDuplicatePair(pinId: number, otherPinId: number, status: 'confirmed' | 'rejected'): Promise<void> {
+  await call('PUT', `/api/pins/${pinId}/duplicates/${otherPinId}`, { token: await adminToken('duplicate cleanup'), body: { status } });
+}

@@ -1125,6 +1125,11 @@ const pt: Messages = {
     days: '{count}d',
     stretchLate: 'Atrasado {span}: de {from} a {to}',
     stretchPromised: 'A espera prometida inicialmente: de {from} a {to}',
+    originalMissed: 'Primeira data não cumprida: {date}',
+    revisedMissed: 'Data revista não cumprida: {date}',
+    movedFrom: 'Adiado de {date}',
+    stretchPhase: '{label}: de {from} a {to}',
+    stretchWait: 'A espera da publicação até o início: de {from} a {to}',
   },
   dateConfidence: {
     tipHeading: 'Confiança da data',
@@ -1327,6 +1332,10 @@ const pt: Messages = {
     count: '{count} acompanhando',
     startThread: 'Acompanhar esta thread',
     stopThread: 'Parar de acompanhar esta thread',
+  },
+  unconfirmed: {
+    heading: 'Informação não confirmada',
+    note: 'Nenhuma das partes envolvidas confirmou, e isto não define a data acima.',
   },
   odds: {
     trendUp: '{label} {percent} no {source}, alta de {points} pontos esta semana',

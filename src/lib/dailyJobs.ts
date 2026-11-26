@@ -113,6 +113,11 @@ export const TASKS = {
     label: 'Thread predicted pins',
     summary: 'Check predicted pins for an earlier pin or thread in their story, series or franchise, and attach them with parentId if available.',
   },
+  duplicates: {
+    group: 'upkeep',
+    label: 'Possible duplicates',
+    summary: 'Decide one small batch of suggested duplicate pairs: confirm those that are the very same event, reject those that are not, and leave unclear ones for a person.',
+  },
   productLifecycle: {
     group: 'upkeep',
     label: 'Product lifecycle tags',
@@ -146,7 +151,7 @@ export const TASKS = {
   predictionMarkets: {
     group: 'discover',
     label: 'Prediction markets',
-    summary: 'Scrape prediction markets for interesting events and monthly Brent & WTI commodity prices; create predicted pins, make them into threads, and after price realization add reasoning of final value and why prediction was missed or on point.',
+    summary: 'Scrape prediction markets for interesting events and monthly Brent & WTI commodity prices; create predicted pins, make them into threads, move predicted dates to the latest odds (keeping each missed date on the countdown bar), add unconfirmed reports to their panel, and after price realization add reasoning of final value and why prediction was missed or on point.',
   },
   earthquakes: {
     group: 'discover',
@@ -315,7 +320,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'tickerAlerts', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'sentiment'],
+      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'tickerAlerts', 'traderPositions', 'threadPredicted', 'duplicates', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: null,
@@ -363,10 +368,11 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // spec tables (2026-10-24) and the daily horoscopes (2026-10-26) and the premium trader positions (2026-10-26)
   // and the alerts on readers' own tickers (2026-11-25), to saved news jobs too.
   // Owner, 2026-10-28: repair discovered content collisions in both news runs.
+  // Owner, 2026-11-25: and clean up possible duplicates in small batches.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'tickerAlerts', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'tickerAlerts', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'specialDayFreebies', 'trends', 'duplicates'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

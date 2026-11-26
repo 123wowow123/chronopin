@@ -1128,6 +1128,11 @@ const ja: Messages = {
     days: '{count}日',
     stretchLate: '{span}の遅れ: {from}〜{to}',
     stretchPromised: '当初約束された待ち時間: {from}〜{to}',
+    originalMissed: '当初の予定日を過ぎました：{date}',
+    revisedMissed: '改定後の予定日を過ぎました：{date}',
+    movedFrom: '{date}から延期',
+    stretchPhase: '{label}：{from}〜{to}',
+    stretchWait: '投稿から開始までの待ち時間：{from}〜{to}',
   },
   dateConfidence: {
     tipHeading: '日付の確度',
@@ -1330,6 +1335,10 @@ const ja: Messages = {
     count: '{count} 人がウォッチ中',
     startThread: 'このスレッドをウォッチ',
     stopThread: 'スレッドのウォッチを解除',
+  },
+  unconfirmed: {
+    heading: '未確認の報道',
+    note: '当事者はこの内容を確認しておらず、上の日付の根拠にはしていません。',
   },
   odds: {
     trendUp: '{source}で{label} {percent}、今週 {points} ポイント上昇',

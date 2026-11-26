@@ -79,6 +79,8 @@ import { llmPerfProblem, saveLlmPerf } from '../model/pinLlmPerf';
 import { saveVideoPerf, videoPerfProblem } from '../model/pinVideoPerf';
 import { savePerf } from '../model/pinPerf';
 import { predictedPins } from './threadPredicted';
+import { predictedDateChecks } from './predictedDates';
+import { DUPLICATE_BATCH, DUPLICATE_DECISIONS, MAX_DUPLICATE_BATCH, decideDuplicate, duplicateBatch, type DuplicateDecision } from './duplicateCleanup';
 import { syncProductLifecycle } from './productLifecycle';
 import { trendCandidates } from './trends';
 import { syncStorms } from './stormTracks';
@@ -215,6 +217,43 @@ export const TOOLS: JobTool[] = [
         tool: 'prediction_accuracy',
         detail: `${result.pins} predicted pin(s) read: recorded ${result.recorded}, settled ${result.settled}, void ${result.voided}, already closed ${result.skipped}`,
       });
+      return result;
+    },
+  },
+  {
+    name: 'duplicate_pairs',
+    description:
+      `The next small batch of "Possible duplicates" waiting for a decision (production's when the run writes there): pairs already judged but undecided, then same-source pairs, then the closest titles, each with both pins and the links they share. Call once a run, then decide_duplicate for every pair returned, as daily-jobs.md#duplicates says. Do not ask for a second batch.`,
+    input_schema: obj({ limit: num(`Pairs in the batch, default ${DUPLICATE_BATCH}, at most ${MAX_DUPLICATE_BATCH}`) }),
+    run: async (input, ctx) => {
+      const result = await duplicateBatch(int(input.limit, DUPLICATE_BATCH, 1, MAX_DUPLICATE_BATCH));
+      await act(ctx, { tool: 'duplicate_pairs', detail: `${result.pairs.length} pair(s) to decide of ${result.undecided} undecided${result.gone ? `, ${result.gone} set aside (deleted pin)` : ''}` });
+      return result;
+    },
+  },
+  {
+    name: 'decide_duplicate',
+    description:
+      "Decides one suggested pair from duplicate_pairs. 'same' confirms it: only when both pins are the very same event on the same occasion (the newer pin's links go to the older one, which can move its date, and threads are tidied). 'different' rejects it: another edition, variant, mission, episode, branch, tour date, milestone or announcement-versus-release. 'unsure' leaves it for a person. reasoning says what in the two pins or their sources decides it; open the sources when the pins alone do not.",
+    input_schema: obj(
+      { pinId: num('First pin id'), otherPinId: num('Second pin id'), decision: { type: 'string', enum: [...DUPLICATE_DECISIONS] }, reasoning: str('What makes them one event or two') },
+      ['pinId', 'otherPinId', 'decision', 'reasoning'],
+    ),
+    run: async (input, ctx) => {
+      const id = (value: unknown) => int(value, 0, 1, 2 ** 31 - 1);
+      const result = await decideDuplicate(id(input.pinId), id(input.otherPinId), input.decision as DuplicateDecision, String(input.reasoning ?? ''));
+      await act(ctx, { tool: 'decide_duplicate', pinId: result.pinId, detail: `${result.pinId}/${result.otherPinId} ${result.verdict}: ${input.reasoning}` });
+      return result;
+    },
+  },
+  {
+    name: 'predicted_date_checks',
+    description:
+      "Estimated-date market pins whose date needs another look, each with its live odds: reason 'missed' (the pin's day passed, the market is still open), 'resolved' (the market closed, the date is still an estimate) or 'ladder' (an open 'when will it happen' market whose likeliest window may have moved). Missed dates first, then ladders, then resolved (found is the total; limit cuts the list). Run once in predictionMarkets and work every pin returned, as daily-jobs.md#predicted-dates says: update_pin with the new utcStartDateTime, a dated odds bullet, description and dateConfidenceReasoning, and for a missed date moved later originalStartDate (only if empty: the first date missed) with delayReasoning starting 'Estimated:'. Also look at each pin's picture and replace one whose words or version number disagree with the title. Reads the local database: match the production pin by sourceUrl before editing.",
+    input_schema: obj({ limit: num('At most this many pins, default 25, at most 60'), exclude: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already checked' } }),
+    run: async (input, ctx) => {
+      const result = await predictedDateChecks({ limit: int(input.limit, 25, 1, 60), exclude: Array.isArray(input.exclude) ? input.exclude.map(Number).filter(Number.isInteger) : [] });
+      await act(ctx, { tool: 'predicted_date_checks', detail: `${result.pins.length} predicted date(s) to check (${result.read} of ${result.candidates} market pin(s) read)` });
       return result;
     },
   },

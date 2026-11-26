@@ -1134,6 +1134,11 @@ const en = {
     days: '{count}d',
     stretchLate: 'Late by {span}: {from} to {to}',
     stretchPromised: 'The wait as first promised: {from} to {to}',
+    originalMissed: 'First date missed: {date}',
+    revisedMissed: 'Revised date missed: {date}',
+    movedFrom: 'Moved from {date}',
+    stretchPhase: '{label}: {from} to {to}',
+    stretchWait: 'The wait from posting to the start: {from} to {to}',
   },
   dateConfidence: {
     tipHeading: 'Date confidence',
@@ -1337,6 +1342,10 @@ const en = {
     count: '{count} watching',
     startThread: 'Watch this thread',
     stopThread: 'Stop watching this thread',
+  },
+  unconfirmed: {
+    heading: 'Unconfirmed report',
+    note: 'Nobody involved has confirmed this, and it does not set the date above.',
   },
   odds: {
     trendUp: '{label} {percent} on {source}, up {points} points this week',

@@ -1134,6 +1134,11 @@ const es: Messages = {
     days: '{count} d',
     stretchLate: '{span} de retraso: del {from} al {to}',
     stretchPromised: 'La espera prometida al principio: del {from} al {to}',
+    originalMissed: 'Primera fecha incumplida: {date}',
+    revisedMissed: 'Fecha revisada incumplida: {date}',
+    movedFrom: 'Aplazado desde el {date}',
+    stretchPhase: '{label}: del {from} al {to}',
+    stretchWait: 'La espera desde la publicación hasta el inicio: del {from} al {to}',
   },
   dateConfidence: {
     tipHeading: 'Certeza de la fecha',
@@ -1336,6 +1341,10 @@ const es: Messages = {
     count: '{count} siguiendo',
     startThread: 'Seguir este hilo',
     stopThread: 'Dejar de seguir este hilo',
+  },
+  unconfirmed: {
+    heading: 'Información sin confirmar',
+    note: 'Ninguna de las partes lo ha confirmado y no determina la fecha indicada arriba.',
   },
   odds: {
     trendUp: '{label} {percent} en {source}, {points} puntos más esta semana',

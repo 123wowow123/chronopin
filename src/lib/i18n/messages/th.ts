@@ -1124,6 +1124,11 @@ const th: Messages = {
     days: '{count} วัน',
     stretchLate: 'ล่าช้า {span}: {from} ถึง {to}',
     stretchPromised: 'ระยะรอตามที่กำหนดไว้เดิม: {from} ถึง {to}',
+    originalMissed: 'พลาดกำหนดแรก: {date}',
+    revisedMissed: 'พลาดกำหนดที่ปรับใหม่: {date}',
+    movedFrom: 'เลื่อนจาก {date}',
+    stretchPhase: '{label}: {from} ถึง {to}',
+    stretchWait: 'ระยะรอตั้งแต่โพสต์จนถึงวันเริ่ม: {from} ถึง {to}',
   },
   dateConfidence: {
     tipHeading: 'ความเชื่อมั่นของวันที่',
@@ -1326,6 +1331,10 @@ const th: Messages = {
     count: 'ติดตาม {count} คน',
     startThread: 'ติดตามเธรดนี้',
     stopThread: 'เลิกติดตามเธรดนี้',
+  },
+  unconfirmed: {
+    heading: 'รายงานที่ยังไม่ได้รับการยืนยัน',
+    note: 'ผู้เกี่ยวข้องยังไม่ได้ยืนยันข้อมูลนี้ และไม่ได้ใช้กำหนดวันที่ด้านบน',
   },
   odds: {
     trendUp: '{label} {percent} บน {source} เพิ่มขึ้น {points} จุดในสัปดาห์นี้',

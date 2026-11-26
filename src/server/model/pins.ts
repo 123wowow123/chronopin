@@ -14,6 +14,7 @@ import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
 import { usdPriceSql } from '@/lib/currency';
 import { cityOf, countryOf } from '@/lib/city';
 import { NEW_TAG, PREDICTED_TAG, RESERVED_TAGS, reservedName, reservedTag, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
+import { predictedPinOf } from './predictedPin';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
@@ -787,11 +788,6 @@ export const pinConfidenceOf = (as: string) =>
 // ST_DWithin answers NULL for such a pin, which the filter drops.
 const withinRing = (as: string, point: number, meters: number) =>
   `($${point}::text IS NULL OR ST_DWithin("${as}"."location", $${point}::geography, $${meters}::double precision))`;
-
-// Whether pin "as" is a predicted pin: tagged 'Predicted', or an estimated-date
-// pin citing a prediction market ('Prediction Market' in PinTagView).
-const predictedPinOf = (as: string) =>
-  `EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "${as}"."id" AND ("pt"."name" = 'Predicted'::citext OR ("${as}"."dateConfidence" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext)))`;
 
 // Whether pin "as" clears the timeline's confidence bar at parameter "param"
 // (null for no bar). A predicted pin always does: its date is an estimate by

@@ -1139,6 +1139,11 @@ const hi: Messages = {
     days: '{count} दिन',
     stretchLate: '{span} लेट: {from} से {to} तक',
     stretchPromised: 'पहले तय किया गया इंतज़ार: {from} से {to} तक',
+    originalMissed: 'पहली तारीख चूक गई: {date}',
+    revisedMissed: 'संशोधित तारीख चूक गई: {date}',
+    movedFrom: '{date} से आगे बढ़ाया गया',
+    stretchPhase: '{label}: {from} से {to} तक',
+    stretchWait: 'पोस्ट होने से शुरू होने तक का इंतज़ार: {from} से {to} तक',
   },
   dateConfidence: {
     tipHeading: 'तारीख़ की निश्चितता',
@@ -1343,6 +1348,10 @@ const hi: Messages = {
     count: '{count} लोग देख रहे हैं',
     startThread: 'इस थ्रेड को देखें',
     stopThread: 'इस थ्रेड को देखना बंद करें',
+  },
+  unconfirmed: {
+    heading: 'अपुष्ट रिपोर्ट',
+    note: 'किसी भी संबंधित पक्ष ने इसकी पुष्टि नहीं की है, और ऊपर की तारीख इस पर आधारित नहीं है।',
   },
   odds: {
     trendUp: '{source} पर {label} {percent}, इस हफ़्ते {points} पॉइंट ऊपर',

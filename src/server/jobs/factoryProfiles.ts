@@ -7,6 +7,7 @@
 // timeline. A new pin has none the day it is saved; this finds it.
 
 import * as db from '../db';
+import { predictedPinOf } from '../model/predictedPin';
 import { factoryProblem } from '../model/pinFactory';
 import type { FactoryProfile } from '@/lib/pinFactory';
 
@@ -26,7 +27,7 @@ export async function factoryGaps(limit = 5, skip: number[] = []): Promise<{ gap
      FROM "Pin" p LEFT JOIN "User" u ON u."id" = p."userId"
      WHERE p."utcDeletedDateTime" IS NULL
        AND NOT EXISTS (SELECT 1 FROM "PinFactory" f WHERE f."pinId" = p."id")
-       AND NOT EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted')
+       AND NOT ${predictedPinOf('p')}
        AND (
          (EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Manufacturing', 'Factory'))
            AND (p."price" IS NOT NULL OR EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Proposed', 'In Progress', 'Completed'))))

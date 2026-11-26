@@ -1128,6 +1128,11 @@ const zh: Messages = {
     days: '{count}天',
     stretchLate: '延迟 {span}：{from} 至 {to}',
     stretchPromised: '最初承诺的等待期：{from} 至 {to}',
+    originalMissed: '错过最初日期：{date}',
+    revisedMissed: '错过修订日期：{date}',
+    movedFrom: '从 {date} 推迟',
+    stretchPhase: '{label}：{from} 至 {to}',
+    stretchWait: '从发布到开始的等待期：{from} 至 {to}',
   },
   dateConfidence: {
     tipHeading: '日期确定性',
@@ -1330,6 +1335,10 @@ const zh: Messages = {
     count: '{count} 人关注',
     startThread: '关注此串',
     stopThread: '取消关注此串',
+  },
+  unconfirmed: {
+    heading: '未经证实的报道',
+    note: '相关方均未证实此消息，上方日期不以此为依据。',
   },
   odds: {
     trendUp: '{source} 上 {label} 为 {percent}，本周上涨 {points} 个百分点',

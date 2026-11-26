@@ -222,3 +222,17 @@ owner pointed at the card. Every news run, in the scores lane:
   without a stated reason in the run note.
 - After `save_market_impact`, read the feed back (`GET /api/pins?search=<title>` shows `marketImpact`) and, if the card
   is stale, re-send `PUT /api/pins/:id/market-impact` with the same body (admin token), which invalidates the pin's cache.
+
+## Possible duplicates: one small batch each run (owner, 2026-11-25)
+
+The 06:00 and 18:00 job (`duplicates` task) works the "Possible duplicates" suggestions down
+([daily-jobs.md#duplicates](../../../docs/okf/scraping/daily-jobs.md)): `duplicate_pairs` once (20 pairs, at most 30),
+then `decide_duplicate` on each, from production when the run writes there.
+- `same` only for the very same event on the same occasion. A different edition, variant, flight, season, branch, tour
+  date, milestone, or announcement against release is `different`. Not settled by the pins or their sources: `unsure`
+  (left for a person). Give the deciding fact as the reason.
+- Never judge from the title score or a shared store/index link alone. Never delete a pin or overturn a person's
+  decision. After a `same`, read both pins back (the older one gains links and its date may move).
+- Without the tools (no open job run): `GET /api/admin/db/PinDuplicate?status=suggested&verdict.null=true&order=-reason,-score&limit=20`,
+  PATCH the row's `verdict`/`verdictReasoning`/`utcVerifiedDateTime`, then `PUT /api/pins/:id/duplicates/:otherId`
+  `{status: 'confirmed' | 'rejected'}` with the admin token.

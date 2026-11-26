@@ -1134,6 +1134,11 @@ const de: Messages = {
     days: '{count} T',
     stretchLate: '{span} zu spät: {from} bis {to}',
     stretchPromised: 'Die ursprünglich versprochene Wartezeit: {from} bis {to}',
+    originalMissed: 'Erster Termin verpasst: {date}',
+    revisedMissed: 'Neuer Termin verpasst: {date}',
+    movedFrom: 'Verschoben vom {date}',
+    stretchPhase: '{label}: {from} bis {to}',
+    stretchWait: 'Wartezeit von der Veröffentlichung bis zum Start: {from} bis {to}',
   },
   dateConfidence: {
     tipHeading: 'Terminsicherheit',
@@ -1336,6 +1341,10 @@ const de: Messages = {
     count: '{count} beobachten',
     startThread: 'Diesen Thread beobachten',
     stopThread: 'Thread nicht mehr beobachten',
+  },
+  unconfirmed: {
+    heading: 'Unbestätigter Bericht',
+    note: 'Von keinem Beteiligten bestätigt; er legt das obige Datum nicht fest.',
   },
   odds: {
     trendUp: '{label} {percent} auf {source}, diese Woche {points} Punkte gestiegen',

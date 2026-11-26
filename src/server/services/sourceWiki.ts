@@ -6,6 +6,7 @@ import Pin from '../model/pin';
 import Source, { hashText, PinSource, type PinSourceRole } from '../model/source';
 import { fetchSourceText, type SourceText } from '../scrape/sourceText';
 import { sourceKind } from '@/lib/sourceKind';
+import { isUnconfirmedReport } from '@/lib/unconfirmedReports';
 import log from '../util/log';
 import { expirePinPage, invalidatePin } from './cache';
 import { recordRewrite } from './pinUpdates';
@@ -132,6 +133,7 @@ export async function pinLinks(pinId: number): Promise<PinLinks | undefined> {
   if (!pin || pin.utcDeletedDateTime) return undefined;
   const rows = (await PinSource.forPin(pinId)).filter((row) => !row.utcRemovedDateTime && row.wikiVersion > 0);
   const wikis = await Source.wikis(rows.map((row) => row.sourceId));
+  const unconfirmed = new Set(((pin.references ?? []) as { url: string; reasoning?: string | null }[]).filter(isUnconfirmedReport).map((r) => r.url));
   let n = 0;
   const links: PinLinks['links'] = [];
   for (const row of rows) {
@@ -145,6 +147,7 @@ export async function pinLinks(pinId: number): Promise<PinLinks | undefined> {
       sourceId: row.sourceId,
       wikiVersion: row.wikiVersion,
       isNew: row.summarizedWikiVersion !== row.wikiVersion,
+      unconfirmed: unconfirmed.has(row.url),
     });
   }
   const about: ComposePin = {

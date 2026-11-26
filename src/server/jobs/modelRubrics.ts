@@ -11,6 +11,7 @@
 
 import * as db from '../db';
 import { perfForPin } from '../model/pinPerf';
+import { predictedPinOf } from '../model/predictedPin';
 import { perfProblem } from '@/lib/pinPerf';
 
 import { rubricKind, type RubricKind } from '@/lib/modelRubricKind';
@@ -26,7 +27,7 @@ export async function modelRubricGaps(limit = 5, skip: number[] = []): Promise<{
        EXISTS (SELECT 1 FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId"
          WHERE pm."pinId" = p."id" AND pm."utcDeletedDateTime" IS NULL
            AND m."type" = '1') AS "hasImage",
-       EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted') AS "predicted"
+       ${predictedPinOf('p')} AS "predicted"
      FROM "Pin" p LEFT JOIN "User" u ON u."id" = p."userId"
      WHERE p."utcDeletedDateTime" IS NULL AND p."utcStartDateTime" <= now()
        AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'AI Models')

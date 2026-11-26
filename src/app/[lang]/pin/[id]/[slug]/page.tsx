@@ -11,6 +11,7 @@ import { Comments } from '@/components/pin/Comments';
 import { PlaceLinks } from '@/components/pin/PlaceLinks';
 import { CompanyTicker } from '@/components/pin/CompanyTicker';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
+import { missedDates } from '@/lib/delay';
 import { CitedText } from '@/components/pin/CitedText';
 import { DateConfidence, DateConfidenceReasoning } from '@/components/pin/DateConfidence';
 import { DelayBadge, DelayReasoning } from '@/components/pin/DelayBadge';
@@ -57,6 +58,8 @@ import { PinEciChart } from '@/components/pin/PinEciChart';
 import { PinTimeHorizonChart } from '@/components/pin/PinTimeHorizonChart';
 import { PinTaste } from '@/components/pin/PinTaste';
 import { PinOdds, ResolvedToggle } from '@/components/pin/PinOdds';
+import { PinUnconfirmedReports } from '@/components/pin/PinUnconfirmedReports';
+import { unconfirmedReports } from '@/lib/unconfirmedReports';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinRestaurantMenu } from '@/components/pin/PinRestaurantMenu';
 import { PinRestaurantDetails } from '@/components/pin/PinRestaurantDetails';
@@ -279,7 +282,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} modelTraining={modelTraining} project={project} purpose={purpose} proTips={proTips} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} electionPerf={electionPerf} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} modelTraining={modelTraining} project={project} purpose={purpose} proTips={proTips} dam={dam} marketImpact={marketImpact} venue={venue} candidates={candidates} competitors={competitors} isHotel={!!hotel} costEstimated={hasEstimatedCost(factory)} costWholeProject={hasWholeProjectCost(factory)} autoplay={autoplay} buildMilestones={factory?.milestones} timeline={timelineSpan(perf)} electionPerf={electionPerf} missed={missedDates(pin, updates)} />
         </article>
 
         <aside data-pin-side className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -430,6 +433,7 @@ async function PinBody({
   buildMilestones,
   timeline,
   electionPerf,
+  missed,
 }: {
   pin: PinJson;
   timeZone: string;
@@ -455,6 +459,8 @@ async function PinBody({
   timeline?: ReturnType<typeof timelineSpan>;
   // An election pin's vote-share chart reads as part of the result, so it sits in the left column under the text.
   electionPerf?: PinPerfJson | null;
+  // The dates a delayed pin has left behind, for the countdown bar.
+  missed?: string[];
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // A datacenter figure searches for the pins at least that size (mw:>=100).
@@ -617,7 +623,7 @@ async function PinBody({
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} evidence={pinEvidence(pin)} kind={pinDateKind(pin.tags, !!timeline, pin.categories, !!pin.utcEndDateTime)} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? new Date(timeline.start).toISOString() : pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? true : pin.allDay} originalStart={pin.originalStartDate} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} kind={pinDateKind(pin.tags, !!timeline, pin.categories, !!pin.utcEndDateTime)} startStage={timeline?.startStage} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? new Date(timeline.start).toISOString() : pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={timeline && timeline.start < Date.parse(pin.utcStartDateTime) ? true : pin.allDay} originalStart={pin.originalStartDate} missed={missed} end={timeline ? new Date(timeline.end + 86400000).toISOString() : pin.tags?.some((tag) => BUILD_STATUSES.includes(tag.name)) ? pin.utcEndDateTime : null} marks={timeline ? timeline.marks : buildMarks(buildMilestones)} kind={pinDateKind(pin.tags, !!timeline, pin.categories, !!pin.utcEndDateTime)} startStage={timeline?.startStage} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the
@@ -702,6 +708,7 @@ async function PinBody({
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
+      <PinUnconfirmedReports reports={unconfirmedReports(pin.references)} t={t} />
       {electionPerf ? <PinPerf perf={electionPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
       {candidates?.length ? <PinCandidates candidates={candidates} t={t} pinId={pin.id} /> : null}
       {competitors?.length ? <PinCompetitors competitors={competitors} t={t} /> : null}

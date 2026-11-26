@@ -1134,6 +1134,11 @@ const ms: Messages = {
     days: '{count}h',
     stretchLate: 'Lewat {span}: {from} hingga {to}',
     stretchPromised: 'Tempoh menunggu seperti yang dijanjikan pada mulanya: {from} hingga {to}',
+    originalMissed: 'Tarikh asal terlepas: {date}',
+    revisedMissed: 'Tarikh disemak terlepas: {date}',
+    movedFrom: 'Dianjak daripada {date}',
+    stretchPhase: '{label}: {from} hingga {to}',
+    stretchWait: 'Tempoh menunggu dari siaran hingga mula: {from} hingga {to}',
   },
   dateConfidence: {
     tipHeading: 'Keyakinan tarikh',
@@ -1337,6 +1342,10 @@ const ms: Messages = {
     count: '{count} menonton',
     startThread: 'Tonton utas ini',
     stopThread: 'Henti menonton utas ini',
+  },
+  unconfirmed: {
+    heading: 'Laporan belum disahkan',
+    note: 'Tiada pihak terlibat yang mengesahkannya, dan ia tidak menentukan tarikh di atas.',
   },
   odds: {
     trendUp: '{label} {percent} di {source}, naik {points} mata minggu ini',

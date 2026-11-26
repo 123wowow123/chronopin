@@ -7,6 +7,7 @@
 // this finds it.
 
 import * as db from '../db';
+import { predictedPinOf } from '../model/predictedPin';
 
 export type CompetitorGap = { pinId: number; title: string; productName: string | null; start: string; rivals: number; author: string | null };
 
@@ -20,7 +21,7 @@ export async function competitorGaps(limit = 5, skip: number[] = []): Promise<{ 
      FROM "Pin" p LEFT JOIN "User" u ON u."id" = p."userId"
      WHERE p."utcDeletedDateTime" IS NULL
        AND EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" IN ('Announced', 'Released'))
-       AND NOT EXISTS (SELECT 1 FROM "PinTag" t WHERE t."pinId" = p."id" AND t."name" = 'Predicted')
+       AND NOT ${predictedPinOf('p')}
        AND ((SELECT count(*) FROM "PinCompetitor" c WHERE c."pinId" = p."id") < 2
             OR EXISTS (SELECT 1 FROM "PinCompetitor" c WHERE c."pinId" = p."id" AND c."sourceUrl" IS NULL
               OR c."competitorPinId" IS NULL))

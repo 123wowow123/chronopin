@@ -13,12 +13,50 @@ and must reach production.
 ## Event pins (owner instruction 2026-10-15)
 - Scrape interesting, high-volume markets across politics, tech/AI, space, macroeconomics, sports championships,
   culture, plus immediate weekly resolutions.
-- Tag every pin `Predicted`; set `dateConfidence: 'estimated'`, dated to the **predicted event onset**, never the
-  market close or settlement buffer.
+- Every pin must read as `Predicted`: set `dateConfidence: 'estimated'` (dated to the **predicted event onset**, never
+  the market close or settlement buffer) and cite the Kalshi/Polymarket link as `sourceUrl` or a reference. The site
+  then adds the `Predicted` tag itself (page, card, `tag:Predicted`). It is a derived reserved tag: the API drops it
+  from `tags`, so a pin JSON without it is not a missing tag. Check on the pin page or with `tag:Predicted` search.
 - Quote dollar volume and odds **with the observation date**.
 - Thread to candidate parents (`parentId`) whenever an earlier event in the series, flight-test programme,
   election cycle or franchise exists. A response series is one linear chain; no branching.
 - Check for duplicates with `GET /api/pins/search?q=...` first. Each reference needs a per-item `sourceUrl`.
+
+## Predicted date updates (owner, 2026-11-25; every 06:00 and 18:00 run)
+Run `predicted_date_checks` and work every pin it returns (`missed`, `resolved`, `ladder`). Without the tool (no open
+job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) and apply the same rules.
+- **New date:** the first day of the likeliest window still ahead (cumulative ladder: subtract neighbouring lines to
+  get each window's share); its last day if that window is under way. Say it is an estimate, not an announced date.
+- **Missed date** (the pin's day passed, no event, moved later): set `originalStartDate` to the missed day **only when
+  it is empty**, and `delayReasoning` starting `Estimated:`. The start bar shows that date and each later one pushed
+  back as separate segments, labelled under the bar (from the update log, `missedDates` in `src/lib/delay.ts`). Later
+  slips only move `utcStartDateTime` (and refresh `delayReasoning`); never overwrite `originalStartDate`.
+- A date only brought forward, or shifted before it arrived on a pin that never missed one, sets neither field.
+- **Also update:** a dated odds bullet on top of `longFormSummary` (with the move), `description`,
+  `dateConfidenceReasoning`, `marketVolume` and the market reference's reasoning. `resolved`: the actual date from the
+  primary source and `dateConfidence: 'confirmed'`.
+- Save with `update_pin` (or a whole-pin `PUT`, see `daily-news-job`), production matched by `sourceUrl`, then read
+  back date, `originalStartDate`, author, tags, media, parent. Translations stay with the translation agent.
+- Worked example: pin 15613 (next Claude Opus): Nov 30 estimate (Oct 15), brought to Nov 1 (Oct 21, not a slip),
+  Nov 1 missed, moved to Dec 1 (Nov 25) with `originalStartDate` 2026-11-01.
+
+## Unconfirmed reports panel (owner, 2026-11-25)
+- While updating a predicted pin, look for fresh leak or unnamed-source reports about the event.
+- Add each as a reference: `confidence` under 50 (40), `publishedDate`, **no** `startDate`/`endDate`, `reasoning` =
+  `Unconfirmed report: <who reported what, when, and on what basis; that the company has not confirmed it>`. Write it
+  for readers (no notes about our process); at most one or two sentences, only what the page says.
+- It shows under the market odds (`PinUnconfirmedReports`) and is left out of the article rewrite. Never put the claim
+  in the title, description, summary or date reasoning. Confirmed or disproved: drop the prefix and re-rate it.
+
+## Pictures must match the title (owner, 2026-11-25)
+- **Open and look at the picture** before saving it, and again on every pin the date check returns. Any words, model or
+  version number, team, person or year in it must agree with the title. Pin 15613 ("Next Claude Opus Model") showed
+  "Claude Sonnet 5.5": the previous release's announcement art.
+- An unreleased product has no art of its own: use the product line's official picture with **no version in it**, never
+  a sibling's or an earlier release's announcement card. Anthropic: the `og:image` of `anthropic.com/claude/opus`
+  (or `/sonnet`, `/haiku`), a plain "Claude Opus" wordmark; other makers: the product line's own page.
+- Replace it (do not just add a second one): whole-pin `PUT` without the wrong medium, credit the new one
+  (`pin-media-azure`), `POST /api/admin/pins/expire`, then view the pin page on production.
 
 ## Refresh championship pins (2026-11-25)
 - Long-dated "who will win" pins (NBA, Super Bowl, World Series, World Cup, elections) go stale: pin 1955's

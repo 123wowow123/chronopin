@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useNow } from '@/lib/client/now';
 import { dayAgo, dayKeyOf, dayKeyParts, formatDayKey, timeAgo } from '@/lib/format';
 import { delayLabel } from '@/lib/delay';
@@ -121,17 +122,70 @@ function stretchTitle(part: Stretch, t: Translator) {
   return part.late ? t('countdown.stretchLate', { span: delayLabel(from, to, t.locale), ...dates }) : t('countdown.stretchPromised', dates);
 }
 
+// What a segment of the bar stands for, in its tooltip: the stretch of a wait
+// (first promised, or late), a build stage and its dates, or, on a bar that is
+// all one piece, the wait from posting to the start.
+function segmentTip(part: Stretch, t: Translator, delayed: boolean) {
+  const dates = { from: formatDayKey(keyOf(part.from), t.locale), to: formatDayKey(keyOf(part.to), t.locale) };
+  if (part.late || delayed) return stretchTitle(part, t);
+  return part.label ? t('countdown.stretchPhase', { label: part.label, ...dates }) : t('countdown.stretchWait', dates);
+}
+
+// One segment of the bar, a button so it can be hovered, focused or tapped: it
+// swells under the pointer, presses in on a click, and says what it stands for.
+// The hit area is taller than the 6px track. align keeps the end segments'
+// tooltips inside the box.
+function Segment({ tip, grow, track, fill, filled, align, open, onToggle, onClose }: { tip: string; grow: number; track: string; fill: string; filled: number; align: 'start' | 'center' | 'end'; open: boolean; onToggle: () => void; onClose: () => void }) {
+  const place = align === 'start' ? 'start-0' : align === 'end' ? 'end-0' : 'left-1/2 -translate-x-1/2';
+  return (
+    <button
+      type="button"
+      data-segment
+      aria-label={tip}
+      aria-expanded={open}
+      onClick={onToggle}
+      onBlur={onClose}
+      onKeyDown={(e) => e.key === 'Escape' && onClose()}
+      className="group relative flex h-4 cursor-pointer items-center outline-none"
+      style={{ flexGrow: grow, flexBasis: 0, minWidth: 6 }}
+    >
+      <span
+        className={`relative block w-full overflow-hidden rounded-full transition-[height,transform,box-shadow,filter] duration-150 ease-out group-hover:h-2.5 group-hover:shadow-md group-focus-visible:h-2.5 group-focus-visible:ring-2 group-focus-visible:ring-link group-active:scale-x-[0.97] group-active:scale-y-75 group-active:brightness-90 motion-reduce:transition-none ${open ? 'h-2.5 ring-2 ring-subtle/60' : 'h-1.5'} ${track}`}
+      >
+        <span className={`absolute inset-y-0 start-0 rounded-full ${fill}`} style={{ width: `${filled}%` }} />
+      </span>
+      <span role="tooltip" className={`pointer-events-none absolute bottom-full z-20 mb-1 w-max max-w-[min(16rem,70vw)] rounded-md border border-line bg-popover px-2 py-1 text-start text-xs text-ink shadow-lg group-hover:block group-focus-visible:block ${open ? 'block' : 'hidden'} ${place}`}>
+        {tip}
+      </span>
+    </button>
+  );
+}
+
 // A live countdown to a pin's start, with a bar filling over the span from
 // when it was posted. Once started it says how long ago. A delayed pin's bar
-// is cut into the stretches of the wait, each slipped one its own shade.
+// is cut into the stretches of the wait, each slipped one its own shade, and
+// every date it left behind (missed: the first promise, then each later one) is
+// named under the bar in that shade.
 //
 // A construction pin (end given: its completion) runs the bar over the build
 // itself, groundbreaking to completion, with any slip of the start in front
 // of it in its own shade. startStage (a timeline's first stage, e.g. "Launch")
 // names the left label in place of "Started".
-export function CountdownMeter({ start, since, allDay, originalStart, end, marks = [], kind, startStage }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; end?: string | null; marks?: BuildMark[]; kind?: PinDateKind; startStage?: string }) {
+export function CountdownMeter({ start, since, allDay, originalStart, missed, end, marks = [], kind, startStage }: { start: string; since?: string; allDay?: boolean; originalStart?: string | null; missed?: string[]; end?: string | null; marks?: BuildMark[]; kind?: PinDateKind; startStage?: string }) {
   const tick = useNow(SECOND);
   const t = useT();
+  // The segment a click or tap has pinned open, by where it begins.
+  const [openAt, setOpenAt] = useState<number | null>(null);
+  // A tap elsewhere closes it: not every browser focuses a tapped button, so
+  // blur alone would leave it up.
+  useEffect(() => {
+    if (openAt == null) return;
+    const away = (e: PointerEvent) => {
+      if (!(e.target as Element | null)?.closest?.('[data-segment]')) setOpenAt(null);
+    };
+    document.addEventListener('pointerdown', away);
+    return () => document.removeEventListener('pointerdown', away);
+  }, [openAt]);
   const now = tick || null;
   const startMs = localStart(start, allDay);
   const started = now != null && startMs - now <= 0;
@@ -154,12 +208,23 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
   const build = !isNaN(endMs) && endMs > startMs;
   const percent = build ? Math.min(100, Math.max(0, ((now - startMs) / (endMs - startMs)) * 100)) : started ? 100 : !isNaN(from) && span > 0 ? Math.min(100, Math.max(0, ((now - from) / span) * 100)) : 0;
   const completes = build ? t(kind ? DATE_KIND_KEYS[kind].ends : 'countdown.completes', { when: formatDayKey(keyOf(endMs), t.locale) }) : '';
-  let parts = delayed && span > 0 ? stretches(from, startMs, [originalMs, sinceMs]) : [];
+  // The first promise and each later date pushed back, still before the start.
+  const slips = delayed
+    ? (missed?.length ? missed : [originalStart!]).map((key) => ({ key, at: localDay(key) }))
+        // A later promise that fell on the day it now starts only moved the hour.
+        .filter((slip) => slip.at < startMs && (slip.key === originalStart || slip.key !== keyOf(startMs)))
+    : [];
+  const slipMarks = slips.map((slip) => slip.at);
+  let parts = delayed && span > 0 ? stretches(from, startMs, [...slipMarks, sinceMs]) : [];
   if (build) {
     parts = [
-      ...(delayed ? [{ from: originalMs, to: startMs, late: true, tone: 0 }] : []),
+      ...(delayed ? stretches(originalMs, startMs, slipMarks) : []),
       ...phases(startMs, endMs, marks, t, !delayed),
     ];
+  }
+  // A bar with nothing to break it is one segment, from posting to the start.
+  if (!parts.length && !build && !delayed && span > 0) {
+    parts = [{ from, to: startMs, late: false, tone: 0 }];
   }
   // A timeline pin's bar says how far along it is, whole days of the whole span, not a build phase's name.
   const spanTitle = build && kind && kind !== 'construction' ? t('countdown.daysOfTotal', { elapsed: Math.max(0, Math.min(Math.floor((now - startMs) / DAY), Math.round((endMs - startMs) / DAY))).toLocaleString(t.locale), total: Math.round((endMs - startMs) / DAY).toLocaleString(t.locale) }) : undefined;
@@ -177,48 +242,68 @@ export function CountdownMeter({ start, since, allDay, originalStart, end, marks
       : t(startStage ? 'countdown.stageAgo' : 'countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale), stage: startStage ?? '' });
 
   return (
-    <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>
-      {build && started ? <span className="text-subtle">{agoLabel}</span> : null}
-      {!started ? <span className="font-bold tracking-wider text-future uppercase">{t('countdown.startsIn')}</span> : null}
-      <div className="relative flex h-1.5 flex-1 gap-0.5" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? t('countdown.started') : t('countdown.elapsed')}>
-        {parts.length ? (
-          parts.map((part) => (
-            <div key={part.from} className={`relative overflow-hidden rounded-full ${part.late ? LATE_TONES[part.tone].track : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].track : 'bg-raised-2'}`} style={{ flexGrow: part.to - part.from, flexBasis: 0, minWidth: 3 }} title={spanTitle ?? (build && !part.late ? part.label : stretchTitle(part, t))}>
-              <div
-                className={`absolute inset-y-0 start-0 rounded-full ${part.late ? LATE_TONES[part.tone].fill : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].fill : fillClass}`}
-                style={{ width: `${Math.min(100, Math.max(0, ((now - part.from) / (part.to - part.from)) * 100))}%` }}
+    <div className={`my-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-past/30 bg-past/10' : 'border-future/30 bg-future/10'}`}>
+      <div className="flex items-center gap-3">
+        {build && started ? <span className="text-subtle">{agoLabel}</span> : null}
+        {!started ? <span className="font-bold tracking-wider text-future uppercase">{t('countdown.startsIn')}</span> : null}
+        <div className="relative flex h-4 flex-1 items-center gap-0.5">
+          <span className="sr-only" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? t('countdown.started') : t('countdown.elapsed')} />
+          {parts.length ? (
+            parts.map((part, i) => (
+              <Segment
+                key={part.from}
+                tip={build && !part.late ? (spanTitle ?? segmentTip(part, t, false)) : segmentTip(part, t, delayed)}
+                grow={part.to - part.from}
+                track={part.late ? LATE_TONES[part.tone].track : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].track : 'bg-raised-2'}
+                fill={part.late ? LATE_TONES[part.tone].fill : part.phase != null ? PHASE_TONES[part.phase % PHASE_TONES.length].fill : fillClass}
+                filled={Math.min(100, Math.max(0, ((now - part.from) / (part.to - part.from)) * 100))}
+                align={parts.length === 1 ? 'center' : i === 0 ? 'start' : i === parts.length - 1 ? 'end' : 'center'}
+                open={openAt === part.from}
+                onToggle={() => setOpenAt((at) => (at === part.from ? null : part.from))}
+                onClose={() => setOpenAt((at) => (at === part.from ? null : at))}
               />
+            ))
+          ) : (
+            <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-raised-2">
+              <div className={`absolute inset-y-0 start-0 rounded-full ${fillClass}`} style={{ width: `${percent}%` }} />
             </div>
-          ))
-        ) : (
-          <div className="relative flex-1 overflow-hidden rounded-full bg-raised-2">
-            <div className={`absolute inset-y-0 start-0 rounded-full ${fillClass}`} style={{ width: `${percent}%` }} />
-          </div>
-        )}
-        {build
-          ? marks.map((mark) => {
-              const latest = mark.at <= now && !marks.some((m) => m.at > mark.at && m.at <= now);
-              const at = ((mark.at - parts[0].from) / (endMs - parts[0].from)) * 100;
-              return at > 1 && at < 99 ? (
-                <span key={`${mark.label}${mark.at}`} tabIndex={0} className={`group absolute top-1/2 flex size-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center outline-none${latest ? ' z-[1]' : ''}`} style={{ insetInlineStart: `${at}%` }}>
-                  <span className={`rounded-full border-2 ${latest ? 'size-4 border-white bg-past shadow-md ring-2 ring-past/50' : `size-2.5 border-panel ${mark.at <= now ? 'bg-past' : 'bg-subtle'}`}`} />
-                  <span role="tooltip" className="pointer-events-none absolute bottom-full z-10 mb-1 hidden rounded-md border border-line bg-popover px-2 py-1 text-xs whitespace-nowrap text-ink shadow-lg group-hover:block group-focus:block">
-                    {mark.label}: {mark.date}
+          )}
+          {build
+            ? marks.map((mark) => {
+                const latest = mark.at <= now && !marks.some((m) => m.at > mark.at && m.at <= now);
+                const at = ((mark.at - parts[0].from) / (endMs - parts[0].from)) * 100;
+                return at > 1 && at < 99 ? (
+                  <span key={`${mark.label}${mark.at}`} tabIndex={0} className={`group absolute top-1/2 flex size-4 -translate-x-1/2 -translate-y-1/2 items-center justify-center outline-none${latest ? ' z-[1]' : ''}`} style={{ insetInlineStart: `${at}%` }}>
+                    <span className={`rounded-full border-2 ${latest ? 'size-4 border-white bg-past shadow-md ring-2 ring-past/50' : `size-2.5 border-panel ${mark.at <= now ? 'bg-past' : 'bg-subtle'}`}`} />
+                    <span role="tooltip" className="pointer-events-none absolute bottom-full z-10 mb-1 hidden rounded-md border border-line bg-popover px-2 py-1 text-xs whitespace-nowrap text-ink shadow-lg group-hover:block group-focus:block">
+                      {mark.label}: {mark.date}
+                    </span>
                   </span>
-                </span>
-              ) : null;
-            })
-          : null}
+                ) : null;
+              })
+            : null}
+        </div>
+        {started ? (
+          <span className="text-subtle">{build ? completes : agoLabel}</span>
+        ) : (
+          <span className="font-mono text-sm text-future tabular-nums">
+            {years > 0 ? <b className="me-1">{t('countdown.years', { count: years })}</b> : null}
+            {years > 0 || days > 0 ? <b className="me-1">{t('countdown.days', { count: days })}</b> : null}
+            {[Math.floor((remaining % DAY) / HOUR), Math.floor((remaining % HOUR) / MINUTE), Math.floor((remaining % MINUTE) / SECOND)].map(pad).join(':')}
+          </span>
+        )}
       </div>
-      {started ? (
-        <span className="text-subtle">{build ? completes : agoLabel}</span>
-      ) : (
-        <span className="font-mono text-sm text-future tabular-nums">
-          {years > 0 ? <b className="me-1">{t('countdown.years', { count: years })}</b> : null}
-          {years > 0 || days > 0 ? <b className="me-1">{t('countdown.days', { count: days })}</b> : null}
-          {[Math.floor((remaining % DAY) / HOUR), Math.floor((remaining % HOUR) / MINUTE), Math.floor((remaining % MINUTE) / SECOND)].map(pad).join(':')}
-        </span>
-      )}
+      {slips.length ? (
+        <ul className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-subtle">
+          {slips.map((slip, i) => (
+            <li key={slip.key} className="flex items-center gap-1.5">
+              {/* The shade of the stretch that opens on this date. */}
+              <span aria-hidden="true" className={`size-2 shrink-0 rounded-full ${LATE_TONES[parts.find((p) => p.late && p.from === slip.at)?.tone ?? 0].fill}`} />
+              {t(slip.at > now ? 'countdown.movedFrom' : i === 0 ? 'countdown.originalMissed' : 'countdown.revisedMissed', { date: formatDayKey(slip.key, t.locale) })}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 }

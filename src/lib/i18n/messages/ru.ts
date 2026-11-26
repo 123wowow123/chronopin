@@ -1151,6 +1151,11 @@ const ru: Messages = {
     days: '{count} д.',
     stretchLate: 'Опоздание на {span}: с {from} по {to}',
     stretchPromised: 'Ожидание, как обещали сначала: с {from} по {to}',
+    originalMissed: 'Первый срок пропущен: {date}',
+    revisedMissed: 'Новый срок пропущен: {date}',
+    movedFrom: 'Перенесено с {date}',
+    stretchPhase: '{label}: с {from} по {to}',
+    stretchWait: 'Ожидание от публикации до начала: с {from} по {to}',
   },
   dateConfidence: {
     tipHeading: 'Достоверность даты',
@@ -1373,6 +1378,10 @@ const ru: Messages = {
     count: 'Отслеживают: {count}',
     startThread: 'Отслеживать эту цепочку',
     stopThread: 'Не отслеживать цепочку',
+  },
+  unconfirmed: {
+    heading: 'Неподтверждённое сообщение',
+    note: 'Никто из участников это не подтвердил, и дата выше на этом не основана.',
   },
   odds: {
     trendUp: '{label} {percent} на {source}, +{points} п. за неделю',

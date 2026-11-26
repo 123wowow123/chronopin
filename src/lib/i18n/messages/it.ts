@@ -1125,6 +1125,11 @@ const it: Messages = {
     days: '{count}g',
     stretchLate: 'In ritardo di {span}: dal {from} al {to}',
     stretchPromised: 'L’attesa inizialmente prevista: dal {from} al {to}',
+    originalMissed: 'Prima data mancata: {date}',
+    revisedMissed: 'Data rivista mancata: {date}',
+    movedFrom: 'Rinviato dal {date}',
+    stretchPhase: '{label}: dal {from} al {to}',
+    stretchWait: 'L’attesa dalla pubblicazione all’inizio: dal {from} al {to}',
   },
   dateConfidence: {
     tipHeading: 'Affidabilità della data',
@@ -1327,6 +1332,10 @@ const it: Messages = {
     count: '{count} lo seguono',
     startThread: 'Segui questo thread',
     stopThread: 'Smetti di seguire questo thread',
+  },
+  unconfirmed: {
+    heading: 'Notizia non confermata',
+    note: 'Nessuna delle parti coinvolte l’ha confermata e non determina la data indicata sopra.',
   },
   odds: {
     trendUp: '{label} {percent} su {source}, +{points} punti questa settimana',

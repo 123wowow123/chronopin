@@ -5,6 +5,7 @@
 
 import { compareDayKeys, dayKeyIn, dayKeyParts, daysBetween } from './format';
 import { INTL_LOCALES, type Locale } from './i18n/config';
+import type { PinChange } from './pinUpdates';
 import type { PinJson } from './types';
 
 export type PinDelay = {
@@ -69,6 +70,24 @@ export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateT
     return null;
   }
   return { from: pin.originalStartDate, to: now, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale), search: delaySearch(pin.originalStartDate, now) };
+}
+
+// The dates a delayed pin has left behind, oldest first: the day first
+// promised, then each later start the update log (PinUpdate) shows being pushed
+// back again. The countdown bar breaks at each. A start that was only ever
+// brought forward is not a slip, and one before the first promise or from the
+// current start on is not part of this delay.
+export function missedDates(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime'>, updates: { changes: PinChange[] }[]): string[] {
+  const delay = pinDelay(pin);
+  if (!delay) {
+    return [];
+  }
+  const pushed = updates
+    .flatMap((u) => u.changes)
+    .filter((c) => c.field === 'start' && c.before && c.after && Date.parse(c.after) > Date.parse(c.before))
+    .map((c) => dayKeyIn(c.before!, 'UTC'))
+    .filter((day) => compareDayKeys(day, delay.from) > 0 && compareDayKeys(day, delay.to) < 0);
+  return [delay.from, ...[...new Set(pushed)].sort(compareDayKeys)];
 }
 
 const DELAY_REASONING_MAX = 2000;

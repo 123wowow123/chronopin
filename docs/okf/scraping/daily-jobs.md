@@ -22,7 +22,7 @@ Owner update, October30,2026: research/editing runs leave pin translations to th
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [tickerAlerts](#tickeralerts), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [trends](#trends), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [productSales](#productsales), [outcomePhotos](#outcomephotos), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [tickerAlerts](#tickeralerts), [threadPredicted](#threadpredicted), [duplicates](#duplicates), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [trends](#trends), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [productSales](#productsales), [outcomePhotos](#outcomephotos), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -105,6 +105,8 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `traffic_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `thin_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `prediction_markets` | Kalshi and Polymarket events resolving in the next week and those newly listed since the last run, biggest book first, with odds, dollars traded and `coveredByPin` ([markets.ts](../../../src/server/jobs/markets.ts)) | About 45 pages of exchange listings filtered down to a page: per-game and recurring markets out, an election's props folded together |
+| `duplicate_pairs`, `decide_duplicate` | A small batch of suggested duplicate pairs with both pins, and the decision on each ([duplicateCleanup.ts](../../../src/server/jobs/duplicateCleanup.ts)) | The app's own pairs, decided through its API |
+| `predicted_date_checks` | Estimated-date market pins whose day passed, whose market closed, or whose date ladder is open, with live odds ([predictedDates.ts](../../../src/server/jobs/predictedDates.ts)) | The app's own pins against live odds |
 | `predicted_pins` | Predicted pins (market-predicted events, `Predicted` tag) with candidate parent threads to join ([threadPredicted.ts](../../../src/server/jobs/threadPredicted.ts)) | The app's own data and thread matching |
 | `model_scores` | AI model pins whose model OpenRouter prices but LMArena has not scored (`awaiting`), and scored frontier pins missing the Frontier Model tag (`needsFrontierTag`) ([modelScores.ts](../../../src/server/jobs/modelScores.ts)) | The arena's overall leaderboard, a few pages, plus one pin query |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
@@ -669,6 +671,21 @@ Nothing else needs review: the figures are computed, never estimated.
 **Duplicate pins and 'same event' (owner, 2026-10-14).** Once a pin is marked as the same event (a confirmed duplicate in a duplicate group), the 6am and 6pm job rethreads it so that the duplicate is not showing up on the thread: a duplicate pin must never answer the pin it duplicates, and duplicate pins must not appear in the thread. Detach the duplicate pin (`parentId: null`), and re-parent any child pins that answered the duplicate pin to the canonical/primary pin of that duplicate group instead. Never choose a parent that is in the pin's duplicate group.
 **Traps.** A thread connects events in the same recurring story, series, or franchise; do not thread loosely related events just because they share a category or topic. A parent pin must have happened before or on the predicted start date (`utcStartDateTime`), and must not be a descendant or confirmed duplicate of the pin.
 
+### duplicates
+
+**Reads** `duplicate_pairs` once: one batch (default 20, at most 30) of the "Possible duplicates" still waiting,
+from production when the run writes there.
+**Does** `decide_duplicate` on every pair returned (owner, 2026-11-25: "should be cleaned up in 6am/pm job in small
+batches"). `same`: both pins are the very same event on the same occasion. `different`: another edition, model
+variant, mission or flight number, episode or season, branch, tour date, construction milestone, or an announcement
+against its release. `unsure`: the pins and their sources do not settle it; it stays suggested for a person and is
+not offered again. Each with a reason naming the deciding fact.
+**Traps.** One batch a run, never a loop over the backlog. A title score is not evidence: templated titles (launches,
+tour dates, restaurant branches) score high and are different events. A shared link is not enough either (a store or
+index page serves many events); open the sources when unsure. Confirming moves the newer pin's links onto the older
+one, which can change its date, and re-parents thread replies: read both pins back after a `same`. Never delete a
+pin, and never overturn a pair a person already decided.
+
 ### productLifecycle
 
 Added 2026-10-24 (owner: product pins carry Announced and Released; a future launch gets Released once its date passes).
@@ -846,6 +863,25 @@ events and create **predicted pins** out of them:
   Who Will Win the 2027 NBA Finals?"). The meta description is cut near 155 characters, so put the year, the
   top-three odds and the as-of date first. Keep date, author, media and tags; never touch translations. Old slugs
   308 to the new one, so a retitle is safe. Pin 1955 was done by hand this way.
+- <a id="predicted-dates"></a>**Predicted dates (owner, 2026-11-25: "date updates should be done in 6am/pm job").**
+  Call `predicted_date_checks` once each run and work every pin it returns; rules in
+  `.agents/skills/prediction-market-pins/SKILL.md` ("Predicted date updates").
+  - Date: the first day of the likeliest window still ahead; its last day when that window is already under way.
+    Never leave a passed day on a pin whose market is still open.
+  - A missed date moved later: set `originalStartDate` to it **only when empty** (the first date missed) and
+    `delayReasoning` starting `Estimated:`. The countdown bar then breaks at that date and at every later one pushed
+    back, read from the pin's update log, so never edit or clear `originalStartDate` on a later slip.
+  - A date only brought forward, or moved before it arrived on a pin with no missed date, sets neither.
+  - `resolved`: set the actual date from the primary source, `dateConfidence: 'confirmed'`; keep `originalStartDate`.
+  - Each update: dated odds bullet on top, `description`, `dateConfidenceReasoning`, `marketVolume`, the market
+    reference's reasoning. Read the pin back.
+  - Look at the pin's picture: its words and version number must agree with the title. Replace a sibling's or earlier
+    release's art with the product line's official picture that names no version (owner, 2026-11-25).
+- **Unconfirmed reports (owner, 2026-11-25):** a leak or unnamed-source report about a pin's event goes in
+  `addReferences` with `confidence` under 50, `publishedDate`, no `startDate`, and `reasoning` starting
+  `Unconfirmed report:` followed by one or two reader-facing sentences. The pin page shows it in its own panel under
+  the market odds and the article rewrite leaves it out; never state it in the title, description, summary or date
+  reasoning. Once confirmed or disproved, rewrite the reference's reasoning without the prefix.
 - **Track record (2026-10-29, `/predictions`):** call `prediction_accuracy` with `apply: true` once after
   creating pins. It records, per Predicted pin and market, the odds the market gave when first seen (table
   `PredictionRecord`, 0233, never rewritten) and marks closed markets settled (`resolved`, or `void` when no

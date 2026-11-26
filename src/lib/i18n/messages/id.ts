@@ -1134,6 +1134,11 @@ const id: Messages = {
     days: '{count}h',
     stretchLate: 'Terlambat {span}: {from} hingga {to}',
     stretchPromised: 'Penantian sesuai janji semula: {from} hingga {to}',
+    originalMissed: 'Tanggal pertama terlewat: {date}',
+    revisedMissed: 'Tanggal revisi terlewat: {date}',
+    movedFrom: 'Diundur dari {date}',
+    stretchPhase: '{label}: {from} hingga {to}',
+    stretchWait: 'Penantian dari unggahan hingga mulai: {from} hingga {to}',
   },
   dateConfidence: {
     tipHeading: 'Keyakinan tanggal',
@@ -1337,6 +1342,10 @@ const id: Messages = {
     count: '{count} memantau',
     startThread: 'Pantau utas ini',
     stopThread: 'Berhenti memantau utas ini',
+  },
+  unconfirmed: {
+    heading: 'Laporan belum dikonfirmasi',
+    note: 'Belum ada pihak terkait yang mengonfirmasinya, dan ini tidak menentukan tanggal di atas.',
   },
   odds: {
     trendUp: '{label} {percent} di {source}, naik {points} poin minggu ini',

@@ -244,7 +244,9 @@ export async function writeWiki({ url, kind, title, text }: { url: string; kind:
 
 // isNew: the link came in (or its wiki was rewritten) since the summary was
 // last written.
-export type ComposeLink = { label: string; url: string; kind: SourceKind; wiki: WikiPage; isNew?: boolean };
+// unconfirmed: an unconfirmed report (lib/unconfirmedReports.ts), kept out of
+// what the summary is written from.
+export type ComposeLink = { label: string; url: string; kind: SourceKind; wiki: WikiPage; isNew?: boolean; unconfirmed?: boolean };
 export type ComposePin = { title: string; description?: string | null; utcStartDateTime: Date | string; utcEndDateTime?: Date | string | null; allDay?: boolean };
 
 // A wiki as Markdown for the compose call: every page in full when it fits,
@@ -268,8 +270,9 @@ export function composeInput(pin: ComposePin, links: ComposeLink[], currentSumma
     pin.description ? `Description: ${pin.description}` : '',
     `Starts: ${day(pin.utcStartDateTime)}${pin.utcEndDateTime ? `, ends: ${day(pin.utcEndDateTime)}` : ''}`,
   ].filter(Boolean);
+  const confirmed = links.filter((l) => !l.unconfirmed);
   const render = (full: boolean) =>
-    links.map((l) => `## [${l.label}] ${KIND_LABEL[l.kind]}: ${l.url}${l.isNew ? ' (new)' : ''}\n\n${renderWiki(l.wiki, full)}`).join('\n\n');
+    confirmed.map((l) => `## [${l.label}] ${KIND_LABEL[l.kind]}: ${l.url}${l.isNew ? ' (new)' : ''}\n\n${renderWiki(l.wiki, full)}`).join('\n\n');
   let body = render(true);
   if (body.length > COMPOSE_BUDGET_CHARS) body = render(false).slice(0, COMPOSE_BUDGET_CHARS);
   const current = currentSummary?.trim() ? `\n\n# Current summary\n\n${currentSummary.trim()}` : '';

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { delayLabel, delayProblem, delaySearch, pinDelay } from './delay';
+import { delayLabel, delayProblem, delaySearch, missedDates, pinDelay } from './delay';
 
 describe('delayLabel', () => {
   it('counts days, then weeks, then months, then half years', () => {
@@ -56,5 +56,21 @@ describe('delayProblem', () => {
     expect(delayProblem({ originalStartDate: 'late 2027' })).toMatch(/YYYY-MM-DD/);
     expect(delayProblem({ originalStartDate: '2027-13-40' })).toMatch(/YYYY-MM-DD/);
     expect(delayProblem({ delayReasoning: 'x'.repeat(2001) })).toMatch(/2000/);
+  });
+});
+
+describe('missedDates', () => {
+  const start = (before: string, after: string) => ({ changes: [{ field: 'start' as const, before: `${before}T00:00:00.000Z`, after: `${after}T00:00:00.000Z` }] });
+  const pin = { originalStartDate: '2026-11-01', utcStartDateTime: '2027-01-01T00:00:00.000Z' };
+
+  it('lists the first promise, then each later date pushed back, oldest first', () => {
+    // Newest first, as the log is read. The first estimate (Nov 30) was only brought forward.
+    const updates = [start('2026-12-15', '2027-01-01'), start('2026-12-01', '2026-12-15'), start('2026-11-01', '2026-12-01'), start('2026-11-30', '2026-11-01')];
+    expect(missedDates(pin, updates)).toEqual(['2026-11-01', '2026-12-01', '2026-12-15']);
+  });
+
+  it('is just the first promise with no log, and empty without a delay', () => {
+    expect(missedDates(pin, [])).toEqual(['2026-11-01']);
+    expect(missedDates({ utcStartDateTime: pin.utcStartDateTime }, [start('2026-12-01', '2027-01-01')])).toEqual([]);
   });
 });
