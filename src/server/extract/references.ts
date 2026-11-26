@@ -21,9 +21,13 @@ import { citeTag, urlKey } from '@/lib/citations';
 import log from '../util/log';
 import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE, UNIQUE_VALUE_RULE, withNote } from '.';
 import { PREDICTION_DATE_RULE } from './systemPrompt';
+import { isUnconfirmedReport } from '@/lib/unconfirmedReports';
 
 export const MIN_CONFIDENCE = 70;
 const MAX_REFERENCES = 5;
+// Reports on unnamed sources or leaks, kept beside the references (lib/unconfirmedReports.ts).
+export const MAX_UNCONFIRMED = 2;
+export const MAX_UNCONFIRMED_CONFIDENCE = 49;
 const MAX_SEARCHES = 5;
 // A pause_turn hands the server's search loop back to us; resume at most this often.
 const MAX_CONTINUATIONS = 3;
@@ -60,6 +64,8 @@ Rate each reference's confidence, 0-100, by how strongly the page itself support
 
 Then weigh the site itself: the lower its standing, the lower the confidence, whatever the page claims. A little-known blog, a small or hobbyist site, a thin rewrite of other coverage, or a site with no clear editorial record sits at least 15 points below what the same wording would earn from an established outlet, and never above 74. Say in the reasoning when the site's standing pulled the confidence down.
 
+Unconfirmed reports are the one exception to that bar, and are recorded apart from the references above: a news or trade page that reports the event or its date only on unnamed sources, leaks, insiders or rumour, which nobody involved has confirmed (a "reportedly testing" story, an anonymous-source scoop). Record at most ${MAX_UNCONFIRMED}, after the others, each with confidence 30-${MAX_UNCONFIRMED_CONFIDENCE}, startDate and endDate null, and a reasoning that begins "Unconfirmed report:" and then says in one or two plain sentences to a reader who reported what, when, on what basis, and that it is not confirmed. A source's own announcement, an established outlet naming its sources, and a page that merely repeats the pin's source are not unconfirmed reports. Never cite one in longFormSummary and never let one set the date.
+
 Only record references rated ${MIN_CONFIDENCE} or higher, at most ${MAX_REFERENCES}, strongest first. Copy each URL exactly as it appeared in a search or fetch result - never write one from memory or adjust it. publishedDate is the page's own publication date as YYYY-MM-DD, from the result's page age or the page itself, or null when unknown. startDate and endDate are when that page says the event starts and ends, as YYYY-MM-DD (endDate is the last day, inclusive), each null when the page does not give a specific day - never carry a date over from the source or from another page. reasoning is one or two sentences on why that confidence, grounded in what the page itself says about the event and its date - quote its key phrase where you can, and name the site ("LTA's project page says Phase 1 opens in 2030"). When nothing qualifies, record an empty list.
 
 Also write longFormSummary: the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown - drawn from the source and from the references you record. Where a reference adds to or updates the source (a newer date, a cost, who is involved), include that. ${PRODUCT_FEATURES_RULE} ${UNIQUE_VALUE_RULE} Ground every point: end it with a citation of each page that backs it, [S] for the source and [1], [2]... for references by their position in the list you record, e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a page actually says, and never a page you are not recording. longFormSummary is null when there is too little to summarize.
@@ -84,7 +90,7 @@ const RECORD_TOOL: Anthropic.Beta.BetaTool = {
             publishedDate: { type: ['string', 'null'], description: 'Publication date as YYYY-MM-DD, or null when unknown.' },
             startDate: { type: ['string', 'null'], description: 'The day this page says the event starts, as YYYY-MM-DD, or null when it gives none.' },
             endDate: { type: ['string', 'null'], description: 'The last day this page says the event runs, as YYYY-MM-DD, or null when it gives none.' },
-            reasoning: { type: 'string', description: 'Why this confidence: what the page itself says about the event and its date, in one or two sentences.' },
+            reasoning: { type: 'string', description: "Why this confidence: what the page itself says about the event and its date, in one or two sentences. For an unconfirmed report (leak, unnamed sources), begin 'Unconfirmed report:' and say who reported what and that it is not confirmed." },
           },
           required: ['url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning'],
           additionalProperties: false,
@@ -213,12 +219,26 @@ export function collectResultUrls(block: Anthropic.Beta.BetaContentBlock, seen: 
 export function keepReferences(candidates: FoundReference[], seen: Set<string>, sourceUrl: string): FoundReference[] {
   const sourceKey = urlKey(sourceUrl);
   const kept = new Map<string, FoundReference>();
+  const reports = new Map<string, FoundReference>();
   for (const candidate of candidates) {
     const key = urlKey(candidate.url);
     const confidence = Math.round(Number(candidate.confidence));
     if (!key || key === sourceKey || !seen.has(key) || kept.has(key)) continue;
-    if (!Number.isFinite(confidence) || confidence < MIN_CONFIDENCE || confidence > 100) continue;
+    if (!Number.isFinite(confidence) || confidence > 100) continue;
     const title = candidate.title?.trim().slice(0, 1024);
+    // An unconfirmed report: low confidence by design, never a date claim.
+    if (isUnconfirmedReport(candidate)) {
+      if (confidence < 0 || reports.size >= MAX_UNCONFIRMED) continue;
+      reports.set(key, {
+        url: candidate.url.trim(),
+        title: title || undefined,
+        confidence: Math.min(confidence, MAX_UNCONFIRMED_CONFIDENCE),
+        publishedDate: isYmd(candidate.publishedDate) ? candidate.publishedDate : undefined,
+        reasoning: candidate.reasoning!.trim().slice(0, 2000),
+      });
+      continue;
+    }
+    if (confidence < MIN_CONFIDENCE) continue;
     const { startDate, endDate } = referenceDates(candidate);
     kept.set(key, {
       url: candidate.url.trim(),
@@ -230,7 +250,7 @@ export function keepReferences(candidates: FoundReference[], seen: Set<string>, 
       reasoning: candidate.reasoning?.trim().slice(0, 2000) || undefined,
     });
   }
-  return [...kept.values()].sort((a, b) => b.confidence - a.confidence).slice(0, MAX_REFERENCES);
+  return [...[...kept.values()].sort((a, b) => b.confidence - a.confidence).slice(0, MAX_REFERENCES), ...reports.values()];
 }
 
 /**
@@ -241,7 +261,8 @@ export function keepReferences(candidates: FoundReference[], seen: Set<string>, 
 export function citeSummary(summary: string | null | undefined, candidates: FoundReference[], kept: FoundReference[], sourceUrl: string): string | undefined {
   const html = summary?.trim();
   if (!html) return undefined;
-  const keptKeys = new Set(kept.map((r) => urlKey(r.url)));
+  // An unconfirmed report is listed, never cited as support.
+  const keptKeys = new Set(kept.filter((r) => !isUnconfirmedReport(r)).map((r) => urlKey(r.url)));
   const urlOf = (label: string) => {
     if (/^s$/i.test(label)) return sourceUrl;
     const candidate = candidates[Number(label) - 1];

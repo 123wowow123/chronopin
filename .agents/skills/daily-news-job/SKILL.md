@@ -236,3 +236,13 @@ then `decide_duplicate` on each, from production when the run writes there.
 - Without the tools (no open job run): `GET /api/admin/db/PinDuplicate?status=suggested&verdict.null=true&order=-reason,-score&limit=20`,
   PATCH the row's `verdict`/`verdictReasoning`/`utcVerifiedDateTime`, then `PUT /api/pins/:id/duplicates/:otherId`
   `{status: 'confirmed' | 'rejected'}` with the admin token.
+
+## Unconfirmed reports on every pin you research (owner, 2026-11-25)
+
+The scrape's reference search records them (up to two per pin); the 06:00 and 18:00 run looks for them too, on each pin it
+updates and each pin it creates: a "reportedly", leak or unnamed-source story about the pin's event that nobody involved has
+confirmed. Add it with `update_pin` `addReferences`: `confidence` 30-49, `publishedDate`, no `startDate`/`endDate`, `reasoning`
+beginning `Unconfirmed report:` and then one or two plain sentences for readers (who reported what, when, on what basis, not
+confirmed). The pin page shows it in a panel under the market odds; the article rewrite skips it. Never put its claim in the
+title, description, summary or date reasoning, and never let it move the date. Rules and wording:
+`.agents/skills/prediction-market-pins/SKILL.md` ("Unconfirmed reports panel").

@@ -34,6 +34,29 @@ describe('keepReferences', () => {
   });
 });
 
+describe('keepReferences: unconfirmed reports', () => {
+  const seen = new Set(['news.example/launch', 'leak.example/a', 'leak.example/b', 'leak.example/c', 'leak.example/d'].map((u) => urlKey(`https://${u}`)!));
+  const report = (n: string, extra = {}) => ({ url: `https://leak.example/${n}`, title: n, confidence: 40, startDate: '2026-12-01', reasoning: `Unconfirmed report: Site ${n} says it is testing it, on unnamed sources.`, ...extra });
+
+  it('keeps up to two after the references, rated under 50, with no date claim', () => {
+    const kept = keepReferences([report('a', { confidence: 90 }), report('b'), report('c'), { url: 'https://news.example/launch', confidence: 80 }], seen, 'https://src.example/story');
+    expect(kept.map((r) => [r.url, r.confidence])).toEqual([
+      ['https://news.example/launch', 80],
+      ['https://leak.example/a', 49],
+      ['https://leak.example/b', 40],
+    ]);
+    expect(kept.slice(1).every((r) => !r.startDate && !r.endDate)).toBe(true);
+  });
+
+  it('is never cited as support in the summary', () => {
+    const candidates = [{ url: 'https://news.example/launch', confidence: 80 }, report('a')];
+    const kept = keepReferences(candidates, seen, 'https://src.example/story');
+    const html = citeSummary('<ul><li>Fact [1][2]</li></ul>', candidates, kept, 'https://src.example/story')!;
+    expect(html).toContain('news.example/launch');
+    expect(html).not.toContain('leak.example');
+  });
+});
+
 describe('citeSummary', () => {
   const candidates = [
     { url: 'https://news.example/launch', confidence: 80 },

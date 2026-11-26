@@ -41,7 +41,7 @@ job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) 
   Nov 1 missed, moved to Dec 1 (Nov 25) with `originalStartDate` 2026-11-01.
 
 ## Unconfirmed reports panel (owner, 2026-11-25)
-- While updating a predicted pin, look for fresh leak or unnamed-source reports about the event.
+- The scrape's reference search records them for any new pin, and every 06:00/18:00 run looks for them on each pin it researches (daily-news-job skill, "Unconfirmed reports on every pin"). While updating a predicted pin, look for fresh leak or unnamed-source reports about the event.
 - Add each as a reference: `confidence` under 50 (40), `publishedDate`, **no** `startDate`/`endDate`, `reasoning` =
   `Unconfirmed report: <who reported what, when, and on what basis; that the company has not confirmed it>`. Write it
   for readers (no notes about our process); at most one or two sentences, only what the page says.

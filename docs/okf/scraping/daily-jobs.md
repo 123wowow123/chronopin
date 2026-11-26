@@ -879,7 +879,7 @@ events and create **predicted pins** out of them:
     reference's reasoning. Read the pin back.
   - Look at the pin's picture: its words and version number must agree with the title. Replace a sibling's or earlier
     release's art with the product line's official picture that names no version (owner, 2026-11-25).
-- **Unconfirmed reports (owner, 2026-11-25):** a leak or unnamed-source report about a pin's event goes in
+- <a id="unconfirmed-reports"></a>**Unconfirmed reports (owner, 2026-11-25: "should be part of the scrape and 6am/6pm job").** The scrape's reference search records them (`references.ts`, up to two, beside the references), and every 06:00 and 18:00 run looks for them on each pin it researches (revisits, this week's pins, fresh sources, breaking news, predicted-date checks) and on the day's new pins. A leak or unnamed-source report about a pin's event goes in
   `addReferences` with `confidence` under 50, `publishedDate`, no `startDate`, and `reasoning` starting
   `Unconfirmed report:` followed by one or two reader-facing sentences. The pin page shows it in its own panel under
   the market odds and the article rewrite leaves it out; never state it in the title, description, summary or date
