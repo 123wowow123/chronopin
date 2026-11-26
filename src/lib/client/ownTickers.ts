@@ -4,6 +4,7 @@
 import { useEffect, useSyncExternalStore } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { parseTickerInput } from '@/lib/ownTickers';
 
 const EMPTY: string[] = [];
 
@@ -62,3 +63,31 @@ export async function removeOwnTicker(symbol: string) {
   const saved = await api.delete<{ symbols: string[] }>(`/api/own-tickers?symbol=${encodeURIComponent(symbol)}`);
   if (owner === userId) set(saved.symbols);
 }
+
+// What a signed-out reader typed before Add sent them to log in, kept so that
+// coming back adds it (as pendingAction does for a click). Logging in loads the
+// page anew, so it waits in sessionStorage.
+const PENDING = 'pendingTickers';
+const PENDING_MAX_AGE_MS = 15 * 60_000;
+
+export function savePendingTickers(symbols: string[]) {
+  try {
+    if (symbols.length) sessionStorage.setItem(PENDING, JSON.stringify({ symbols, savedAt: Date.now() }));
+    else sessionStorage.removeItem(PENDING);
+  } catch {
+    // Without storage the reader types it again.
+  }
+}
+
+// Taken as it is read, so it is added once.
+export function takePendingTickers(): string[] {
+  try {
+    const raw = sessionStorage.getItem(PENDING);
+    sessionStorage.removeItem(PENDING);
+    const pending = raw ? (JSON.parse(raw) as { symbols: string[]; savedAt: number }) : null;
+    return pending && Date.now() - pending.savedAt < PENDING_MAX_AGE_MS ? parseTickerInput(pending.symbols.join(' ')).symbols : [];
+  } catch {
+    return [];
+  }
+}
+

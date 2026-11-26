@@ -11,7 +11,7 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-11-25T00:00:00Z }
 
 "Add my ticker" on `/trades` and `/notifications/trades`. Tickers are for signed-in
 readers only: signed out there is no ticker and no highlight, and **Add** goes to
-the login page and back. The list is saved to the account (`OwnTicker`, 0270). At
+the login page and back, then adds what was typed. The list is saved to the account (`OwnTicker`, 0270). At
 most 20.
 
 * `GET /api/own-tickers` - `{ symbols }` (signed in)

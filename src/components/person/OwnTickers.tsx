@@ -1,20 +1,20 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useRouter } from '@/lib/client/navigation';
-import { addOwnTickers, removeOwnTicker, useOwnTickers } from '@/lib/client/ownTickers';
+import { addOwnTickers, removeOwnTicker, savePendingTickers, takePendingTickers, useOwnTickers } from '@/lib/client/ownTickers';
 import { authHrefHere } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { MAX_OWN_TICKERS, parseTickerInput } from '@/lib/ownTickers';
 import { term } from '@/lib/searchTerms';
 
 // The trades pages' "add your own ticker" box. A signed-in reader sees the
-// tickers added so far; Add sends a visitor to log in and brings them back. A
-// symbol is kept only when the price source knows it.
+// tickers added so far; Add sends a visitor to log in, brings them back and
+// then adds what they typed. A symbol is kept only when the price source knows it.
 export function OwnTickers({ className = '' }: { className?: string }) {
   const t = useT();
   const tickers = useOwnTickers();
@@ -27,16 +27,8 @@ export function OwnTickers({ className = '' }: { className?: string }) {
   const [error, setError] = useState<string | null>(null);
   const errorId = useId();
 
-  const submit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    if (!known) return;
-    if (!isLoggedIn) return router.push(authHrefHere('/login'));
-    const { symbols, invalid } = parseTickerInput(text);
-    const fresh = symbols.filter((s) => !tickers.includes(s));
-    if (invalid) return setError(t('notifications.ownTickerInvalid'));
-    if (tickers.length + fresh.length > MAX_OWN_TICKERS) return setError(t('notifications.ownTickerLimit', { count: MAX_OWN_TICKERS }));
-    setError(null);
-    if (!fresh.length) return setText('');
+  // Saves the symbols the price source knows.
+  const add = async (fresh: string[]) => {
     setBusy(true);
     try {
       const { unchecked } = await api.get<{ unchecked: string[] }>(`/api/trades/high-volume?days=1&symbols=${encodeURIComponent(fresh.join(','))}`);
@@ -51,6 +43,38 @@ export function OwnTickers({ className = '' }: { className?: string }) {
       setBusy(false);
     }
   };
+
+  const submit = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!known) return;
+    const { symbols, invalid } = parseTickerInput(text);
+    if (invalid) return setError(t('notifications.ownTickerInvalid'));
+    if (!isLoggedIn) {
+      savePendingTickers(symbols);
+      return router.push(authHrefHere('/login'));
+    }
+    const fresh = symbols.filter((s) => !tickers.includes(s));
+    if (tickers.length + fresh.length > MAX_OWN_TICKERS) return setError(t('notifications.ownTickerLimit', { count: MAX_OWN_TICKERS }));
+    setError(null);
+    if (!fresh.length) return setText('');
+    void add(fresh);
+  };
+
+  // Back from logging in: adds what was typed before it. (The account drops what
+  // it already holds, and anything past the cap.)
+  const addLatest = useRef(add);
+  useLayoutEffect(() => {
+    addLatest.current = add;
+  });
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    // Taken inside the timer, so an effect run twice cannot drop it.
+    const id = window.setTimeout(() => {
+      const pending = takePendingTickers();
+      if (pending.length) void addLatest.current(pending);
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [isLoggedIn]);
 
   return (
     <div className={`relative min-w-0 ${className}`}>
