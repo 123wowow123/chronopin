@@ -22,7 +22,7 @@ Owner update, October30,2026: research/editing runs leave pin translations to th
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [trends](#trends), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [productSales](#productsales), [outcomePhotos](#outcomephotos), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [tickerAlerts](#tickeralerts), [threadPredicted](#threadpredicted), [productLifecycle](#productlifecycle), [productCompetitors](#productcompetitors), [factoryProfiles](#factoryprofiles). Find new events: [breakingNews](#breakingnews), [trends](#trends), [specialDayFreebies](#specialdayfreebies), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes), [stormTracks](#stormtracks). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [horoscopes](#horoscopes), [industryForecasts](#industryforecasts), [productSales](#productsales), [outcomePhotos](#outcomephotos), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -636,6 +636,23 @@ Nothing else needs review: trades are the filing's own figures, never estimated.
 **Traps.** Members have up to 45 days to file, so a trade date months back is normal.
 Filings made on paper are scanned images and are skipped. Campaign finance is
 the midnight job's [personCampaigns](#personcampaigns), not this task.
+
+### tickerAlerts
+
+**Reads** nothing first; its one call, `ticker_alerts_update`, checks every ticker
+readers added to the trades pages (`OwnTicker`, 0270; "Add my ticker") against
+Nasdaq's daily prices and volume (`src/server/services/tickerAlerts.ts`). A reader
+is told, in the bell and by Web Push, of a session in the last 4 days on which their
+stock closed up or down on at least 2x its 50-day average volume, never of one before
+they added it, and once per stock and session. When the run writes to production
+(`JOBS_PROD_BASE`) it also calls `POST /api/admin/ticker-alerts` there
+([API](../api/own-tickers.md)), which checks production's readers.
+**Does** check `unchecked` (stocks Nasdaq gave no prices for: usually delisted) and a
+`production.error` (a 404 means the server does not have the endpoint yet: it needs a
+deploy, which only the owner asks for).
+**Traps.** Today's session is in Nasdaq's history only some time after the close, so
+the 06:00 run tells of the previous session and the 18:00 run usually of today's.
+Nothing else needs review: the figures are computed, never estimated.
 
 ### traderPositions
 

@@ -98,6 +98,11 @@ export const TASKS = {
     label: 'Stock trades of people',
     summary: "Read the House and Senate periodic transaction reports for new stock trades by members of Congress, save them to the people's pages and tell the people watching each person.",
   },
+  tickerAlerts: {
+    group: 'upkeep',
+    label: 'Alerts on tickers readers added',
+    summary: "Check the tickers readers added to the trades pages and tell each reader of a new high-volume up or down day, here and on production.",
+  },
   traderPositions: {
     group: 'upkeep',
     label: 'Trader positions (premium)',
@@ -310,7 +315,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'sentiment'],
+      tasks: ['revisits', 'weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'tickerAlerts', 'traderPositions', 'threadPredicted', 'productLifecycle', 'productCompetitors', 'factoryProfiles', 'trends', 'breakingNews', 'specialDayFreebies', 'predictionMarkets', 'earthquakes', 'stormTracks', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: null,
@@ -355,12 +360,13 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // runs, including saved settings from before this task was introduced.
   // Add the owner-requested twice-daily layoff and hiring beats, and the
   // person stock-trades update (2026-10-16) the model rubrics, reviews and
-  // spec tables (2026-10-24) and the daily horoscopes (2026-10-26) and the premium trader positions (2026-10-26), to saved news jobs too.
+  // spec tables (2026-10-24) and the daily horoscopes (2026-10-26) and the premium trader positions (2026-10-26)
+  // and the alerts on readers' own tickers (2026-11-25), to saved news jobs too.
   // Owner, 2026-10-28: repair discovered content collisions in both news runs.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['revisits', 'adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'tickerAlerts', 'traderPositions', 'earthquakes', 'stormTracks', 'productCompetitors', 'factoryProfiles', 'modelRubrics', 'horoscopes', 'industryForecasts', 'productSales', 'outcomePhotos', 'marketImpact', 'specialDayFreebies', 'trends'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

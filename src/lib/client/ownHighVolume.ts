@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/client/api';
+import { useRefreshTick } from '@/lib/client/refreshTick';
 import type { HighVolumeDay } from '@/lib/highVolume';
 
 type Latest = { symbol: string; day: string };
@@ -13,6 +14,7 @@ export function useOwnHighVolume(own: string[], days: number): Latest[] {
   const symbols = [...own].sort().join(',');
   const request = `${days}|${symbols}`;
   const [state, setState] = useState<{ request: string; latest: Latest[] } | null>(null);
+  const tick = useRefreshTick();
   useEffect(() => {
     if (!symbols) return;
     let stale = false;
@@ -27,6 +29,6 @@ export function useOwnHighVolume(own: string[], days: number): Latest[] {
     return () => {
       stale = true;
     };
-  }, [symbols, days, request]);
+  }, [symbols, days, request, tick]);
   return state?.request === request ? state.latest : NONE;
 }

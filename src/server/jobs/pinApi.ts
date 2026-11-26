@@ -379,6 +379,13 @@ export async function personTradesRequest(filings: unknown[]) {
   return call<{ added: number; missing: string[] }>('POST', '/api/admin/person-trades', { token, body: { filings } });
 }
 
+// Has production check its readers' own tickers and send their alerts (the
+// tickerAlerts task). Nothing unless the run writes to production.
+export async function tickerAlertsRequest() {
+  if (!prodBase()) return null;
+  return call<{ symbols: number; unchecked: string[]; sent: number }>('POST', '/api/admin/ticker-alerts', { token: await adminToken('ticker alerts') });
+}
+
 // Premium trader positions to production's admin endpoint (the traderPositions
 // task). Production pushes them to its own premium subscribers.
 export async function traderPositionsRequest(positions: unknown[]) {

@@ -1,11 +1,13 @@
 'use client';
 
 import { useId, useState } from 'react';
+import { AuthLink } from '@/components/nav/AuthLink';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { addOwnTickers, removeOwnTicker, useOwnTickers } from '@/lib/client/ownTickers';
+import { useSession } from '@/lib/client/session';
 import { MAX_OWN_TICKERS, parseTickerInput } from '@/lib/ownTickers';
 import { term } from '@/lib/searchTerms';
 
@@ -14,6 +16,9 @@ import { term } from '@/lib/searchTerms';
 export function OwnTickers({ className = '' }: { className?: string }) {
   const t = useT();
   const tickers = useOwnTickers();
+  const { status, isLoggedIn } = useSession();
+  // Alerts read the account's list, so a visitor is offered signing in.
+  const offerSignIn = status === 'ready' && !isLoggedIn && tickers.length > 0;
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +35,8 @@ export function OwnTickers({ className = '' }: { className?: string }) {
     setBusy(true);
     try {
       const { unchecked } = await api.get<{ unchecked: string[] }>(`/api/trades/high-volume?days=1&symbols=${encodeURIComponent(fresh.join(','))}`);
-      addOwnTickers(fresh.filter((s) => !unchecked.includes(s)));
+      const known = fresh.filter((s) => !unchecked.includes(s));
+      if (known.length) await addOwnTickers(known);
       // What was not found stays in the box to be corrected.
       setText(unchecked.join(' '));
       if (unchecked.length) setError(t('notifications.ownTickerUnknown', { symbols: unchecked.join(', ') }));
@@ -51,7 +57,10 @@ export function OwnTickers({ className = '' }: { className?: string }) {
                 <Link href={`/search?q=${encodeURIComponent(term('ticker', symbol))}`} className="py-1 ps-2.5 pe-0.5 text-own-ticker hover:underline">{symbol}</Link>
                 <button
                   type="button"
-                  onClick={() => removeOwnTicker(symbol)}
+                  onClick={() => {
+                    setError(null);
+                    removeOwnTicker(symbol).catch(() => setError(t('common.somethingWrong')));
+                  }}
                   aria-label={t('notifications.ownTickerRemove', { symbol })}
                   title={t('notifications.ownTickerRemove', { symbol })}
                   className="me-0.5 rounded-full p-1 hover:bg-own-ticker/20"
@@ -86,7 +95,11 @@ export function OwnTickers({ className = '' }: { className?: string }) {
         </form>
       </div>
       {/* Hung under the box, so it never moves the title beside it. */}
-      {error ? <p id={errorId} role="alert" className="absolute end-0 top-full mt-0.5 text-xs whitespace-nowrap text-danger-soft">{error}</p> : null}
+      {error ? (
+        <p id={errorId} role="alert" className="absolute end-0 top-full mt-0.5 text-xs whitespace-nowrap text-danger-soft">{error}</p>
+      ) : offerSignIn ? (
+        <AuthLink to="/login" className="absolute end-0 top-full mt-0.5 text-xs whitespace-nowrap text-link hover:underline">{t('notifications.ownTickerSignIn')}</AuthLink>
+      ) : null}
     </div>
   );
 }

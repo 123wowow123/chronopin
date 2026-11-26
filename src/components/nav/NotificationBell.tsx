@@ -9,6 +9,7 @@ import { HighVolumePanel } from '@/components/person/HighVolumePanel';
 import { useOwnTickers } from '@/lib/client/ownTickers';
 import { useOwnHighVolume } from '@/lib/client/ownHighVolume';
 import { highVolumeSince } from '@/lib/highVolume';
+import type { TickerAlert } from '@/lib/tickerAlerts';
 import { topWithOwn } from '@/lib/ownTickers';
 import { api } from '@/lib/client/api';
 import { clearUnreadCount, updateUnreadCount, useUnreadCount } from '@/lib/client/notifications';
@@ -54,6 +55,7 @@ type Notification = {
   tradeSellOtherValue: number | null;
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   move: MoveInfo | null;
+  ticker: TickerAlert | null;
   searchName: string | null;
   searchQuery: string | null;
   utcCreatedDateTime: string;
@@ -178,6 +180,8 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
       return { icon: 'eye', label: t('notifications.whyThread') };
     case 'move':
       return { icon: 'eye', label: t('moveAlerts.why') };
+    case 'ticker':
+      return { icon: 'eye', label: t('notifications.whyTicker'), href: '/trades' };
     case 'search':
       return n.searchQuery ? { icon: 'search', label: t('notifications.whySearch'), href: `/search?q=${encodeURIComponent(n.searchQuery)}` } : null;
     case 'trade':
@@ -267,7 +271,7 @@ function useNotificationList(active: boolean) {
 function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
   const handle = n.actor.userName.replace(/^@+/, '');
   const face =
-    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' || n.type === 'thread' || n.type === 'move' || n.type === 'search' ? (
+    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' || n.type === 'thread' || n.type === 'move' || n.type === 'search' || n.type === 'ticker' ? (
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
@@ -330,6 +334,7 @@ function sectionOf(type: string): Section {
     case 'trade':
     case 'move':
     case 'search':
+    case 'ticker':
       return 'watching';
     case 'comment':
     case 'reply':
@@ -647,6 +652,15 @@ function NotificationItems({
                     ) : n.type === 'update' && n.pinId ? (
                       <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
                         {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                      </Link>
+                    ) : n.type === 'ticker' && n.ticker ? (
+                      <Link href="/trades" className="block text-ink" onClick={onNavigate}>
+                        {t(n.ticker.change > 0 ? 'notifications.tickerUp' : 'notifications.tickerDown', {
+                          symbol: n.ticker.symbol,
+                          change: new Intl.NumberFormat(t.locale, { style: 'percent', maximumFractionDigits: 1 }).format(Math.abs(n.ticker.change)),
+                          multiple: new Intl.NumberFormat(t.locale, { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(n.ticker.multiple),
+                          day: new Intl.DateTimeFormat(t.locale, { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(n.ticker.day)),
+                        })}
                       </Link>
                     ) : n.type === 'move' && n.move ? (
                       <Link

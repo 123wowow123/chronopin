@@ -47,11 +47,12 @@ import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
 import { importTrades, prodPeopleByName, recentFilings } from '../services/personTradesImport';
+import { checkTickerAlerts } from '../services/tickerAlerts';
 import { importCampaigns } from '../services/personCampaignsImport';
 import PersonCampaign from '../model/personCampaign';
 import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
 import { campaignRefreshDue, cycleOf } from '@/lib/campaigns';
-import { pushOutcomePhotos, pushPinSales, personCampaignsRequest, personTradesRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import { pushOutcomePhotos, pushPinSales, personCampaignsRequest, personTradesRequest, tickerAlertsRequest, traderPositionsRequest, sponsoredTranslationRequest, createPin, getPin, prodHoroscopeSource, pushEventInfo, pushHoroscope, pushModelPerf, pushProductBlurb, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { syncMonthlyOilCommodities } from './commodityOil';
 import { marketCandidates } from './markets';
@@ -1021,6 +1022,18 @@ export const TOOLS: JobTool[] = [
       }
       await act(ctx, { tool: 'person_trades_update', detail: `${result.trades} trades in ${result.filings} new filings${prod ? `; prod added ${prod.added}` : ''}` });
       return { ...result, unmatched: result.unmatched.slice(0, 40), failed: result.failed.slice(0, 20), production: prod };
+    },
+  },
+  {
+    name: 'ticker_alerts_update',
+    description:
+      "The tickerAlerts task's only call. Reads the daily prices of every ticker readers added to the trades pages (\"Add my ticker\") and tells each reader, in the bell and by Web Push, of a new high-volume up or down day (close up or down on at least 2x the 50-day average volume, in the last few days and not before they added it), once per stock and session. Runs here and, when the run writes to production, on production for production's readers. Returns, for each, the stocks held, those with no price data (unchecked) and the alerts newly sent. Mechanical: nothing to review except unchecked and an error.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const here = await checkTickerAlerts();
+      const production = await tickerAlertsRequest().catch((err) => ({ error: (err as Error).message }));
+      await act(ctx, { tool: 'ticker_alerts_update', detail: `${here.symbols} stocks, ${here.sent} alerts${production ? ('error' in production ? '; production failed' : `; production ${production.symbols} stocks, ${production.sent} alerts`) : ''}` });
+      return { ...here, production };
     },
   },
   {

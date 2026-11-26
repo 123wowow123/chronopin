@@ -1,9 +1,10 @@
 'use client';
 
-import { useCallback, useEffect, useId, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
+import { useRefreshTick } from '@/lib/client/refreshTick';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
 import { ADV_DAYS, HIGH_VOLUME_MULTIPLE, HIGH_VOLUME_SYMBOLS, TREND_DAYS, type HighVolumeDay, type Trend } from '@/lib/highVolume';
 import { term } from '@/lib/searchTerms';
@@ -61,6 +62,21 @@ export function HighVolumePanel({ symbols, own, days, conflicts, className = '' 
       cancel?.();
     };
   }, [run]);
+  // A re-read of an open page: the rows stay until the new answer replaces
+  // them, and a failed one leaves them be.
+  const tick = useRefreshTick();
+  const refreshed = useRef(tick);
+  useEffect(() => {
+    if (refreshed.current === tick) return;
+    refreshed.current = tick;
+    let stale = false;
+    void load().then((result) => {
+      if (!stale && result) setState({ request, result });
+    });
+    return () => {
+      stale = true;
+    };
+  }, [tick, load, request]);
 
   if (!key) return null;
   const current = state?.request === request ? state : null;

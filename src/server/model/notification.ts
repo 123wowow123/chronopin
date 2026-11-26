@@ -3,6 +3,7 @@ import type { QueryFn, Row } from '../db';
 import { emitNotificationsChanged } from '../events';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import type { MoveInfo } from '@/lib/moveAlerts';
+import type { TickerAlert } from '@/lib/tickerAlerts';
 import { blockedBetween } from './blockSql';
 import { CONFLICTS } from './personTrade';
 
@@ -52,6 +53,9 @@ const types = {
   // A new pin matches a search the reader saved (SearchAlert). The actor is
   // the pin's author.
   search: 'search',
+  // One of the reader's own tickers (OwnTicker) had a high-volume up or down
+  // day. The actor is the reader. `ticker` says what happened.
+  ticker: 'ticker',
 } as const;
 
 // How late an alert may still go out, for a server that was down or busy
@@ -180,6 +184,8 @@ export type NotificationItem = {
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   // 'move' rows: what moved past the reader's Premium alert.
   move: MoveInfo | null;
+  // 'ticker' rows: the reader's stock, its session and what it did.
+  ticker: TickerAlert | null;
   // 'search' rows: the saved search the pin matched, as the reader named it, and its query.
   searchAlertId: number | null;
   searchName: string | null;
@@ -459,6 +465,17 @@ export default class Notification {
     ).then((rows) => announce(query, rows));
   }
 
+  // One 'ticker' per reader, stock and session (the unique index), answering
+  // with a row only when it is new. The reader is the actor (see types.ticker).
+  static createTicker({ userId, ticker }: { userId: number; ticker: TickerAlert }, query: QueryFn = db.query) {
+    return query(
+      `INSERT INTO "Notification" ("userId", "actorId", "type", "ticker") VALUES ($1, $1, 'ticker', $2)
+       ON CONFLICT ("userId", ("ticker" ->> 'symbol'), ("ticker" ->> 'day')) WHERE "type" = 'ticker' DO NOTHING
+       RETURNING "userId"`,
+      [userId, JSON.stringify(ticker)],
+    ).then((rows) => announce(query, rows));
+  }
+
   // One 'search' per saved search a new pin matched. The pin's author is the
   // actor (so a reader who blocked them hears nothing), and nobody is told of
   // a pin they wrote themselves. A pin matched again is told about once - the
@@ -506,7 +523,7 @@ export default class Notification {
                p."utcStartDateTime" AS "pinStart",
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
-               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling", n."personId", n."move",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling", n."personId", n."move", n."ticker",
                n."searchAlertId", COALESCE(NULLIF(btrim(ss."label"), ''), ss."query") AS "searchName", ss."query" AS "searchQuery",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
@@ -553,7 +570,7 @@ export default class Notification {
         LIMIT $3
       )
       SELECT e."id", e."type", e."pinId", e."pinTitle", e."commentId", e."commentText", e."companyId",
-             e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."move",
+             e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."move", e."ticker",
              e."searchAlertId", e."searchName", e."searchQuery",
                ${TRADE_COLUMNS},
              e."utcCreatedDateTime", e."read", e."actor",
@@ -587,7 +604,7 @@ export default class Notification {
       )
       SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
              NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
-             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", NULL::jsonb AS "move",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", NULL::jsonb AS "move", NULL::jsonb AS "ticker",
              NULL::int AS "searchAlertId", NULL::text AS "searchName", NULL::text AS "searchQuery",
              ${TRADE_COLUMNS},
              e."utcCreatedDateTime", true AS "read",
@@ -622,7 +639,7 @@ export default class Notification {
       )
       SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
              NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
-             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."personId", NULL::jsonb AS "move",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling", e."personId", NULL::jsonb AS "move", NULL::jsonb AS "ticker",
              NULL::int AS "searchAlertId", NULL::text AS "searchName", NULL::text AS "searchQuery",
              ${TRADE_COLUMNS},
              (SELECT COALESCE(jsonb_object_agg(v."ticker", v."assetType"), '{}'::jsonb)
