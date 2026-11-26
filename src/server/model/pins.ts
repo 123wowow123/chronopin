@@ -1045,9 +1045,10 @@ function queryPinByIds(ids: number[]): Promise<PageResult> {
 
 // A pin's whole thread as a tree, in the order it reads: the top pin first,
 // then each pin's responses under it, depth first, siblings oldest first. The
-// tree is the pin's ancestors (any author) with, under every one of them and
-// under the pin itself, each reply by the same author as the pin it answers.
-// A reader on any branch therefore sees the other branches too, not just the
+// tree is the pin's ancestors with, under every one of them and under the pin
+// itself, every reply, whoever wrote it (the same-author limit was removed
+// 2026-11-26 so a chain curated across desks, like the earthquake years, reads
+// whole). A reader on any branch therefore sees the other branches too, not just the
 // line down to the top.
 //
 // level is how far a row is nested: it steps in below a pin that has more
@@ -1078,7 +1079,6 @@ async function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrd
           FROM "Pin"
             JOIN "tree" ON "Pin"."parentId" = "tree"."id"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
-            AND "tree"."userId" = "Pin"."userId"
       )
     SELECT "id", "parentId", "start", "subthread" FROM "tree"`,
     [pinId],

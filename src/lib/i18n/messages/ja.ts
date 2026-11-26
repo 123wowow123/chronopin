@@ -934,6 +934,7 @@ const ja: Messages = {
     bookNow: '今すぐ予約',
     thread: 'スレッド',
     respond: 'このピンに返信',
+    threadAuthorChanged: '投稿者が変更',
     moreLikeThis: '似たピン',
     editPin: 'ピンを編集',
     tags: 'タグ',

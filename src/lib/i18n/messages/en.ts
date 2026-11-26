@@ -939,6 +939,7 @@ const en = {
     bookNow: 'Book now',
     thread: 'Thread',
     respond: 'Respond to this Pin',
+    threadAuthorChanged: 'Author changed',
     moreLikeThis: 'More like this',
     editPin: 'Edit pin',
     tags: 'Tags',

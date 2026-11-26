@@ -934,6 +934,7 @@ const ko: Messages = {
     bookNow: '지금 예약',
     thread: '스레드',
     respond: '이 핀에 응답',
+    threadAuthorChanged: '작성자 변경',
     moreLikeThis: '비슷한 핀',
     editPin: '핀 수정',
     tags: '태그',

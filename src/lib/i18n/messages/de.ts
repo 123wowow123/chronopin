@@ -934,6 +934,7 @@ const de: Messages = {
     bookNow: 'Jetzt buchen',
     thread: 'Thread',
     respond: 'Auf diesen Pin antworten',
+    threadAuthorChanged: 'Autorwechsel',
     moreLikeThis: 'Ähnliche Pins',
     editPin: 'Pin bearbeiten',
     tags: 'Tags',

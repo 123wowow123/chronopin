@@ -260,9 +260,8 @@ if args.apply:
             saved = api('PUT', f'/api/pins/{pin_id}/competitors', expected)
             assert len(saved) == len(expected)
 
-# Every series has a complete native-link index. The current thread renderer
-# follows same-author descendants, while these researched series intentionally
-# preserve older reviewers' and curators' authorship.
+# Every series has a complete native-link index. Threads span authors now,
+# and these researched series intentionally preserve older reviewers' and curators' authorship.
 marker = '<!-- Nintendo series catalog 2026-10-27 -->'
 indexes = []
 for series in sorted({g['series'] for g in games}):

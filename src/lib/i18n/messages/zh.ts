@@ -935,6 +935,7 @@ const zh: Messages = {
     bookNow: '立即预订',
     thread: '串',
     respond: '回应这个图钉',
+    threadAuthorChanged: '作者变更',
     moreLikeThis: '相似图钉',
     editPin: '编辑图钉',
     tags: '标签',

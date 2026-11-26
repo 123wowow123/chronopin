@@ -24,10 +24,10 @@ API and tables: `docs/okf/api/company-hub.md`. Tesla (hub pin 20728) is the temp
 - **Pin ids in the tree are the same on both sides** (local is a prod pull), but verify every id by title and company before the prod PUT (`GET /api/pins/:id` on both) and stop on a mismatch.
 - **Companies can be split**: Boeing's airliner pins sit under "Boeing Commercial Airplanes" (76), not "Boeing" (11). Check `Company` names first; the hub belongs to the company that owns the pins.
 - Overviews cite only what the pins' descriptions say; reports and rumours are labelled as reports. Counts of sites or items come from pin titles and are computed, not typed.
-- A tree pin lists its whole same-author thread, so the page shows more pins than were listed.
+- A tree pin lists its whole thread (any author, since 2026-11-26), so the page shows more pins than were listed.
 - Prod pushes: the prod admin token is `.scrape/admin.token`; a one-off network timeout happens, retry with a timeout.
 
-- **Chained catalogues cannot be split into products.** A listed pin expands to its whole same-author thread (`Pins.threadIds`), so when a company's pins are one chain (Disney Animation, Pixar, Marvel Studios) every product would show every pin. Build one product and put the franchise or era breakdown in its overview, facts and milestones, or re-thread the pins (not done). Check thread structure first: count pins whose `parentId` is null or outside the company.
+- **Chained catalogues cannot be split into products.** A listed pin expands to its whole thread (any author) (`Pins.threadIds`), so when a company's pins are one chain (Disney Animation, Pixar, Marvel Studios) every product would show every pin. Build one product and put the franchise or era breakdown in its overview, facts and milestones, or re-thread the pins (not done). Check thread structure first: count pins whose `parentId` is null or outside the company.
 - Catalogue overviews can be generated from pin titles and dates (`scratchpad` helper pattern: past-tense the title verb, add the pin date when the title has no month, cite `[pin:ID]`); keep each product's overview under 8,000 characters (the PUT limit) and never cut mid-sentence.
 
 ## Hub pin picture: founding site, else the logo (Ian, 2026-11-08)

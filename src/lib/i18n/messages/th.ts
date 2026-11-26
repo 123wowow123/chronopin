@@ -931,6 +931,7 @@ const th: Messages = {
     bookNow: 'จองเลย',
     thread: 'เธรด',
     respond: 'ตอบกลับหมุดนี้',
+    threadAuthorChanged: 'เปลี่ยนผู้เขียน',
     moreLikeThis: 'เพิ่มเติมที่คล้ายกัน',
     editPin: 'แก้ไขหมุด',
     tags: 'แท็ก',

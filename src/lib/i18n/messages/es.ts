@@ -934,6 +934,7 @@ const es: Messages = {
     bookNow: 'Reservar ahora',
     thread: 'Hilo',
     respond: 'Responder a este pin',
+    threadAuthorChanged: 'Cambio de autor',
     moreLikeThis: 'Más como este',
     editPin: 'Editar pin',
     tags: 'Etiquetas',

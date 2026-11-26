@@ -1189,7 +1189,9 @@ async function Thread({ pin }: { pin: PinJson }) {
       <ThreadList
         key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}
-        items={pins.map((p) => {
+        items={pins.map((p, index) => {
+          // The author changed since the row above: a pill names the new author.
+          const authorChanged = index > 0 && p.userId != null && p.userId !== pins[index - 1].userId;
           // A branch steps in under the pin it answers (threadLevel, capped so a
           // deep tree still fits the pane); an unbranched chain stays flush left.
           const level = Math.min(p.threadLevel ?? 0, MAX_THREAD_INDENT);
@@ -1212,6 +1214,11 @@ async function Thread({ pin }: { pin: PinJson }) {
                     <RatingSummary ratings={p.ratings} />
                     <EpisodeCount pin={p} chip />
                     <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
+                    {authorChanged ? (
+                      <span className="surface inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold text-ink">
+                        {p.user?.userName ?? t('pin.threadAuthorChanged')}
+                      </span>
+                    ) : null}
                   </span>
                 </span>
               </Link>

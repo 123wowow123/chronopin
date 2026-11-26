@@ -69,7 +69,7 @@ job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) 
 ## Monthly Brent and WTI pins
 - One pin per commodity per month: tag `Predicted`, `dateConfidence: 'estimated'`, dated to the month's
   **settlement date**, quoting the modal strike distribution and dollar volume, under `@EnergyDesk` or `@EconDesk`.
-- Thread to the prior month's pin in that commodity's chain (`parentId`), same author throughout.
+- Thread to the prior month's pin in that commodity's chain (`parentId`); any author may be in the chain (threads are no longer limited to one author, 2026-11-26).
 - After realization: write the final settlement value, set `dateConfidence: 'confirmed'`, and add reasoning on
   why the prediction hit or missed against the drivers (OPEC+ quota compliance, Hormuz/geopolitical risk premia,
   commercial and SPR inventories, global refinery demand).

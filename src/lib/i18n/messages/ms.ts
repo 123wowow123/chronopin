@@ -939,6 +939,7 @@ const ms: Messages = {
     bookNow: 'Tempah sekarang',
     thread: 'Utas',
     respond: 'Balas Pin ini',
+    threadAuthorChanged: 'Penulis bertukar',
     moreLikeThis: 'Lagi yang seumpama ini',
     editPin: 'Sunting pin',
     tags: 'Teg',

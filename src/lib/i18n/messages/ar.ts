@@ -1008,6 +1008,7 @@ const ar: Messages = {
     bookNow: 'احجز الآن',
     thread: 'سلسلة',
     respond: 'الرد على هذا الدبوس',
+    threadAuthorChanged: 'تغيّر الكاتب',
     moreLikeThis: 'المزيد من هذا النوع',
     editPin: 'تعديل الدبوس',
     tags: 'الوسوم',

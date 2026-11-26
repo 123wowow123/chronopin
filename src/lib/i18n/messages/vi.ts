@@ -938,6 +938,7 @@ const vi: Messages = {
     bookNow: 'Đặt ngay',
     thread: 'Chuỗi',
     respond: 'Phản hồi Ghim này',
+    threadAuthorChanged: 'Đổi tác giả',
     moreLikeThis: 'Tương tự',
     editPin: 'Chỉnh sửa ghim',
     tags: 'Thẻ',

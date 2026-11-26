@@ -943,6 +943,7 @@ const ru: Messages = {
     bookNow: 'Забронировать',
     thread: 'Цепочка',
     respond: 'Ответить на этот пин',
+    threadAuthorChanged: 'Другой автор',
     moreLikeThis: 'Похожие',
     editPin: 'Изменить пин',
     tags: 'Теги',

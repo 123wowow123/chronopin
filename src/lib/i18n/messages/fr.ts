@@ -934,6 +934,7 @@ const fr: Messages = {
     bookNow: 'Réserver',
     thread: 'Fil',
     respond: 'Répondre à cette épingle',
+    threadAuthorChanged: 'Auteur modifié',
     moreLikeThis: 'Dans le même genre',
     editPin: 'Modifier l’épingle',
     tags: 'Tags',

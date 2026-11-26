@@ -937,6 +937,7 @@ const hi: Messages = {
     bookNow: 'अभी बुक करें',
     thread: 'थ्रेड',
     respond: 'इस पिन का जवाब दें',
+    threadAuthorChanged: 'लेखक बदला',
     moreLikeThis: 'इससे मिलते-जुलते पिन',
     editPin: 'पिन संपादित करें',
     tags: 'टैग',

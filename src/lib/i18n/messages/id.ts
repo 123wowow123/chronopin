@@ -939,6 +939,7 @@ const id: Messages = {
     bookNow: 'Pesan sekarang',
     thread: 'Utas',
     respond: 'Tanggapi Pin ini',
+    threadAuthorChanged: 'Penulis berganti',
     moreLikeThis: 'Lainnya yang serupa',
     editPin: 'Edit pin',
     tags: 'Tag',
