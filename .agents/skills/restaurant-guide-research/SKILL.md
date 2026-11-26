@@ -10,6 +10,11 @@ description: >-
 
 Docs: `docs/okf/api/restaurant-content.md`, `restaurant-specials.md`, `restaurant-seed.md`.
 
+## Chrome tab hygiene (owner instruction, 2026-11-26)
+- Always close every Chrome tab you opened once you are done reading it (Google Maps listings, `lh3.googleusercontent.com` menu photos, Toast/Bopple/Clover/Square ordering portals, Yelp pages, operator sites) via `close_page` / `tabs_close_mcp` before finishing the turn or subagent run.
+- Never leave research tabs open in the owner's Chrome, and never close the owner's unrelated tabs.
+- Include this close-tabs instruction in every `browser` subagent prompt so each batch cleans up its own tabs before reporting back.
+
 ## Landing page sections
 Every guide (including Japan city guides) supports **Specials, Coming soon, Just opened, Top restaurants**, in that order.
 - Open the first populated tab by default, prioritizing Specials when offers exist.

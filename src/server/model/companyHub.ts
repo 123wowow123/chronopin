@@ -35,17 +35,29 @@ export async function companyHubTree(companyId: number, companyName: string): Pr
   // Each listed pin stands for its whole thread; a pin two listed pins share is shown once.
   const threads = new Map<number, number[]>(await Promise.all([...new Set(listed.map((l) => l.pinId))].map(async (id): Promise<[number, number[]]> => [id, await Pins.threadIds(id)])));
   // A thread now spans authors, so a hub's thread can run into other companies' pins (Microsoft's into the
-  // Army IVAS/Anduril chain). A thread pin stays when it is listed, belongs to this company, or has the
-  // listed pin's own author (what a thread was before it crossed authors); anything else is left out.
+  // Army IVAS/Anduril chain). A hub still shows what a thread was before it crossed authors: the listed
+  // pin's ancestors and, under each ancestor and the pin, replies by the same author as the pin they answer.
+  // A pin of this company, or another listed pin, stays whoever wrote it.
   const threadPinIds = [...new Set([...threads.values()].flat())];
-  const owners = new Map(
-    (threadPinIds.length ? await db.query<{ id: number; userId: number | null; companyId: number | null }>(`SELECT "id", "userId", "companyId" FROM "Pin" WHERE "id" = ANY($1::integer[])`, [threadPinIds]) : []).map((r) => [Number(r.id), r]),
-  );
+  const rowsOf = threadPinIds.length ? await db.query<{ id: number; parentId: number | null; userId: number | null; companyId: number | null }>(`SELECT "id", "parentId", "userId", "companyId" FROM "Pin" WHERE "id" = ANY($1::integer[])`, [threadPinIds]) : [];
+  const known = new Map(rowsOf.map((r) => [Number(r.id), { parentId: r.parentId == null ? null : Number(r.parentId), userId: r.userId, companyId: r.companyId }]));
+  const children = new Map<number, number[]>();
+  for (const [id, r] of known) if (r.parentId != null) children.set(r.parentId, [...(children.get(r.parentId) ?? []), id]);
   const listedIds = new Set(listed.map((l) => l.pinId));
-  const keeps = (listedPin: number, id: number) => {
-    const pin = owners.get(id);
-    return id === listedPin || listedIds.has(id) || pin?.companyId === companyId || (pin?.userId != null && pin.userId === owners.get(listedPin)?.userId);
+  const sameAuthorThread = (pinId: number) => {
+    const keep = new Set<number>();
+    const down = [pinId];
+    for (let up: number | null | undefined = pinId; up != null && !keep.has(up) ; up = known.get(up)?.parentId) { keep.add(up); down.push(up); }
+    while (down.length) {
+      const id = down.pop()!;
+      for (const child of children.get(id) ?? []) {
+        if (!keep.has(child) && known.get(child)?.userId === known.get(id)?.userId) { keep.add(child); down.push(child); }
+      }
+    }
+    return keep;
   };
+  const kept = new Map([...threads.keys()].map((id) => [id, sameAuthorThread(id)]));
+  const keeps = (listedPin: number, id: number) => kept.get(listedPin)!.has(id) || listedIds.has(id) || known.get(id)?.companyId === companyId;
   const order = new Map<number, number[]>();
   for (const { productId, pinId } of listed) order.set(productId, [...new Set([...(order.get(productId) ?? []), ...(threads.get(pinId) ?? []).filter((id) => keeps(pinId, id))])]);
   const ids = [...new Set([...order.values()].flat())];
