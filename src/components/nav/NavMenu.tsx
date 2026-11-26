@@ -16,7 +16,7 @@ import { MessengerButton } from '@/components/messages/Messenger';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
-const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
+const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2 aria-[current=page]:bg-raised aria-[current=page]:font-semibold aria-[current=page]:text-accent';
 const itemIconClass = 'size-4 text-subtle';
 
 type MenuItem = { href: string; label: MessageKey; icon: IconName };
@@ -27,7 +27,7 @@ type MenuGroup = { title?: MessageKey; items: MenuItem[] };
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuGroup[] {
   const groups: MenuGroup[] = [
-    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'nav.people', icon: 'users' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }, { href: '/forecasts', label: 'nav.forecasts', icon: 'trending-up' }] },
+    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'nav.people', icon: 'users' }, { href: '/forecasts', label: 'nav.forecasts', icon: 'trending-up' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }] },
     { title: 'nav.curated', items: [{ href: '/restaurants', label: 'nav.restaurants', icon: 'map' }, { href: '/travel', label: 'nav.travel', icon: 'globe' }, { href: '/activities', label: 'nav.activities', icon: 'compass' }, { href: '/products', label: 'nav.products', icon: 'cart' }, { href: '/cars', label: 'nav.cars', icon: 'car' }, { href: '/music', label: 'nav.music', icon: 'music' }] },
   ];
   if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });
@@ -139,13 +139,14 @@ function WatchedRow({ onToggle }: { onToggle: () => void }) {
 
 function MenuLinks({ groups }: { groups: MenuGroup[] }) {
   const t = useT();
+  const pathname = usePathname();
   return (
     <>
       {groups.map((group, index) => (
         <div key={index} className="border-b border-line py-1.5">
           {group.title ? <div className="px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t(group.title)}</div> : null}
           {group.items.map((item) => (
-            <Link key={item.href} href={item.href} className={itemClass}>
+            <Link key={item.href} href={item.href} aria-current={pathname === item.href || pathname.startsWith(`${item.href}/`) ? 'page' : undefined} className={itemClass}>
               <Icon name={item.icon} className={itemIconClass} />
               {t(item.label)}
             </Link>

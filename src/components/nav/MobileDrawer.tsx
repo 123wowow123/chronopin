@@ -352,8 +352,8 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
           )}
           <DrawerSection title={t('nav.people')} hideTitle>
             {link('/people', 'users', t('nav.people'))}
-            {link('/trades', 'trending-up', t('notifications.tradesToday'))}
             {link('/forecasts', 'trending-up', t('nav.forecasts'))}
+            {link('/trades', 'trending-up', t('notifications.tradesToday'))}
           </DrawerSection>
           <DrawerSection title={t('nav.curated')} className="pb-1!">
             {link('/restaurants', 'map', t('nav.restaurants'))}
