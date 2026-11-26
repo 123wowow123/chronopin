@@ -680,6 +680,8 @@ batches"). `same`: both pins are the very same event on the same occasion. `diff
 variant, mission or flight number, episode or season, branch, tour date, construction milestone, or an announcement
 against its release. `unsure`: the pins and their sources do not settle it; it stays suggested for a person and is
 not offered again. Each with a reason naming the deciding fact.
+**Deleted pins.** A pair holding a deleted pin is marked `unsure` (a page at a time) and the batch reads on until full;
+on 2026-11-25 that was 34,255 of 38,101 pairs, cleared in one pass.
 **Traps.** One batch a run, never a loop over the backlog. A title score is not evidence: templated titles (launches,
 tour dates, restaurant branches) score high and are different events. A shared link is not enough either (a store or
 index page serves many events); open the sources when unsure. Confirming moves the newer pin's links onto the older

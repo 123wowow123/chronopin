@@ -467,6 +467,28 @@ export async function markDuplicate(pinId: number, otherPinId: number, verdict: 
   });
 }
 
+// Which of these pins are deleted, in one read.
+export async function deletedPinIds(ids: number[]): Promise<number[]> {
+  if (!ids.length) return [];
+  const found = await call<{ rows: { id: number }[] }>('GET', `/api/admin/db/Pin?id.in=${ids.join(',')}&utcDeletedDateTime.null=false&limit=${ids.length}`, { token: await adminToken('duplicate cleanup') });
+  return found.rows.map((row) => row.id);
+}
+
+// Marks every unjudged suggested pair holding one of these pins 'unsure', so it
+// is not offered again. The pairs stay: a pin brought back keeps them.
+export async function setAsideDuplicates(ids: number[], reasoning: string): Promise<number> {
+  const token = await adminToken('duplicate cleanup');
+  let count = 0;
+  for (const column of ['pinId', 'otherPinId']) {
+    const done = await call<{ rows: unknown[] }>('PATCH', `/api/admin/db/PinDuplicate?${column}.in=${ids.join(',')}&status=suggested&verdict.null=true`, {
+      token,
+      body: { verdict: 'unsure', verdictReasoning: reasoning, utcVerifiedDateTime: new Date().toISOString() },
+    });
+    count += done.rows.length;
+  }
+  return count;
+}
+
 export async function decideDuplicatePair(pinId: number, otherPinId: number, status: 'confirmed' | 'rejected'): Promise<void> {
   await call('PUT', `/api/pins/${pinId}/duplicates/${otherPinId}`, { token: await adminToken('duplicate cleanup'), body: { status } });
 }

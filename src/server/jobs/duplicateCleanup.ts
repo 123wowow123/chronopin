@@ -4,7 +4,7 @@
 // (production when it is set to), since each has its own pairs and ids.
 
 import { urlKey } from '@/lib/citations';
-import { ApiCallError, decideDuplicatePair, duplicateRows, getPin, markDuplicate, type DuplicateRow, type PinJson } from './pinApi';
+import { ApiCallError, decideDuplicatePair, deletedPinIds, duplicateRows, getPin, markDuplicate, setAsideDuplicates, type DuplicateRow, type PinJson } from './pinApi';
 
 export const DUPLICATE_BATCH = 20;
 export const MAX_DUPLICATE_BATCH = 30;
@@ -45,36 +45,52 @@ export function sharedLinks(a: PinJson, b: PinJson): string[] {
   return [...new Set(links(a))].filter((link) => other.has(link));
 }
 
-const live = async (id: number): Promise<PinJson | null> => {
-  try {
-    const pin = await getPin(id);
-    return pin.utcDeletedDateTime ? null : pin;
-  } catch (err) {
-    if (err instanceof ApiCallError && err.status === 404) return null;
-    throw err;
-  }
-};
+// Pages of unjudged pairs read for one batch, and how many pairs a page holds:
+// most may hold a deleted pin, and those are set aside a page at a time.
+const PAGE = 100;
+const MAX_PAGES = 10;
+export const GONE_REASON = 'A pin in this pair has been deleted.';
 
 // The next undecided pairs: ones already judged 'same' or 'different' but not
 // yet decided, then ones never judged. An 'unsure' pair is left for a person. A
 // pair with a deleted pin is marked unsure here, so it stops coming back.
 export async function duplicateBatch(limit = DUPLICATE_BATCH) {
-  const judged = await duplicateRows(`status=suggested&verdict.in=same,different&${ORDER}&limit=${limit}`);
-  const fresh = await duplicateRows(`status=suggested&verdict.null=true&${ORDER}&limit=${limit * 3}`);
-  const pairs = [];
+  const pairs: unknown[] = [];
+  const taken = new Set<string>();
   let gone = 0;
-  for (const row of [...judged.rows, ...fresh.rows]) {
-    if (pairs.length >= limit) break;
-    const [a, b] = await Promise.all([live(row.pinId), live(row.otherPinId)]);
-    if (!a || !b) {
-      await markDuplicate(row.pinId, row.otherPinId, 'unsure', `Pin ${!a ? row.pinId : row.otherPinId} has been deleted.`);
-      gone++;
-      continue;
+
+  // Fills the batch from a page of rows, and returns the page's deleted pins.
+  const take = async (rows: DuplicateRow[]): Promise<number[]> => {
+    const dead = new Set(await deletedPinIds([...new Set(rows.flatMap((row) => [row.pinId, row.otherPinId]))]));
+    for (const row of rows) {
+      if (pairs.length >= limit) break;
+      const key = `${row.pinId}/${row.otherPinId}`;
+      if (taken.has(key) || dead.has(row.pinId) || dead.has(row.otherPinId)) continue;
+      const [a, b] = await Promise.all([getPin(row.pinId), getPin(row.otherPinId)]);
+      taken.add(key);
+      pairs.push({ pinId: row.pinId, otherPinId: row.otherPinId, reason: row.reason, score: row.score, verdict: row.verdict, verdictReasoning: row.verdictReasoning, sharedLinks: sharedLinks(a, b), pins: [duplicateEvidence(a), duplicateEvidence(b)] });
     }
-    pairs.push({ pinId: row.pinId, otherPinId: row.otherPinId, reason: row.reason, score: row.score, verdict: row.verdict, verdictReasoning: row.verdictReasoning, sharedLinks: sharedLinks(a, b), pins: [duplicateEvidence(a), duplicateEvidence(b)] });
+    return [...dead];
+  };
+
+  const judged = await duplicateRows(`status=suggested&verdict.in=same,different&${ORDER}&limit=${PAGE}`);
+  // A judged pair keeps its verdict; one with a deleted pin is only passed over.
+  if (judged.rows.length) await take(judged.rows);
+
+  let undecided = judged.total;
+  for (let page = 0; page < MAX_PAGES; page++) {
+    const fresh = await duplicateRows(`status=suggested&verdict.null=true&${ORDER}&limit=${PAGE}`);
+    if (page === 0) undecided += fresh.total;
+    if (!fresh.rows.length) break;
+    const dead = await take(fresh.rows);
+    if (dead.length) gone += await setAsideDuplicates(dead, GONE_REASON);
+    // With nothing set aside the next read would be this page again.
+    if (pairs.length >= limit || !dead.length) break;
   }
-  return { undecided: judged.total + fresh.total - gone, gone, pairs };
+  return { undecided: undecided - gone, gone, pairs: pairs as DuplicatePair[] };
 }
+
+export type DuplicatePair = Pick<DuplicateRow, 'pinId' | 'otherPinId' | 'reason' | 'score' | 'verdict' | 'verdictReasoning'> & { sharedLinks: string[]; pins: ReturnType<typeof duplicateEvidence>[] };
 
 export function decisionProblem(decision: unknown, reasoning: unknown): string | undefined {
   if (!DUPLICATE_DECISIONS.includes(decision as DuplicateDecision)) return `decision must be one of ${DUPLICATE_DECISIONS.join(', ')}`;

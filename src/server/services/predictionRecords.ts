@@ -17,16 +17,26 @@ const CHECK_MS = 60 * 60_000;
 // A settled market that was never recorded is scored on its price this long before it closed.
 export const HISTORICAL_DAYS = 7;
 
-type PinLinks = { id: number; sourceUrl: string | null; references: { url: string | null }[] };
+// predicted: false for a pin kept only because a record of it is still open (its
+// date has since been confirmed), whose markets are settled but none newly recorded.
+type PinLinks = { id: number; sourceUrl: string | null; references: { url: string | null }[]; predicted: boolean };
 
+const PREDICTED = `("p"."dateConfidence" = 'estimated'
+  OR EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Predicted'::citext))`;
+const OPEN_RECORD = `EXISTS (SELECT 1 FROM "PredictionRecord" AS "o" WHERE "o"."pinId" = "p"."id" AND "o"."status" = 'open')`;
+const MARKET_URL = `'(kalshi\\.com|polymarket\\.(com|us))/'`;
+
+// Only pins that link a market: thousands of estimated pins link none, and
+// would fill a sweep's limit before an open record was reached.
 const LINKS_SQL = `
-  SELECT "p"."id", "p"."sourceUrl",
+  SELECT "p"."id", "p"."sourceUrl", ${PREDICTED} AS "predicted",
          COALESCE((SELECT json_agg(json_build_object('url', "r"."url"))
                    FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id"), '[]'::json) AS "references"
   FROM "Pin" AS "p"
   WHERE "p"."utcDeletedDateTime" IS NULL
-    AND ("p"."dateConfidence" = 'estimated'
-         OR EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Predicted'::citext))`;
+    AND (${PREDICTED} OR ${OPEN_RECORD})
+    AND ("p"."sourceUrl" ~* ${MARKET_URL}
+         OR EXISTS (SELECT 1 FROM "PinReference" AS "m" WHERE "m"."pinId" = "p"."id" AND "m"."url" ~* ${MARKET_URL}))`;
 
 function outcomesOf(odds: MarketOdds): OutcomeOdds[] {
   return odds.outcomes.slice(0, MAX_OUTCOMES).map((o) => ({ label: o.label, probability: o.probability }));
@@ -34,12 +44,12 @@ function outcomesOf(odds: MarketOdds): OutcomeOdds[] {
 
 export type RecordSync = { recorded: number; settled: number; voided: number; skipped: number };
 
-async function syncRef(pinId: number, ref: MarketRef, tally: RecordSync, apply: boolean) {
+async function syncRef(pinId: number, ref: MarketRef, tally: RecordSync, apply: boolean, predicted: boolean) {
   const [existing] = await db.query<{ id: number; status: string }>(
     `SELECT "id", "status" FROM "PredictionRecord" WHERE "pinId" = $1 AND "marketUrl" = $2`,
     [pinId, ref.url],
   );
-  if (existing && existing.status !== 'open') return;
+  if (existing ? existing.status !== 'open' : !predicted) return;
   const odds = await oddsFor(ref);
   if (!odds || !odds.outcomes.length) return;
 
@@ -77,7 +87,7 @@ async function syncLinks(pin: PinLinks, apply: boolean): Promise<RecordSync> {
   const tally: RecordSync = { recorded: 0, settled: 0, voided: 0, skipped: 0 };
   for (const ref of pinMarketRefs(pin)) {
     try {
-      await syncRef(pin.id, ref, tally, apply);
+      await syncRef(pin.id, ref, tally, apply, pin.predicted);
     } catch (err) {
       log.warn(`prediction record for pin ${pin.id} (${ref.url}) failed:`, (err as Error).message);
     }
@@ -91,8 +101,8 @@ export async function syncPinRecords(pinId: number, { apply = true } = {}): Prom
   return pin ? syncLinks(pin, apply) : { recorded: 0, settled: 0, voided: 0, skipped: 0 };
 }
 
-// Every Predicted pin that has a market not yet settled in the record: new
-// pins first, then the open ones, so a settlement is found within the hour.
+// Every pin with a market to record or settle: Predicted pins not recorded yet
+// first, then the rest, so a settlement is found within the hour.
 export async function syncAllRecords({ apply = true, limit = 2000 } = {}): Promise<RecordSync & { pins: number }> {
   const pins = await db.query<PinLinks>(
     `${LINKS_SQL}

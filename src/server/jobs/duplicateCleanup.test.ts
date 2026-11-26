@@ -9,7 +9,7 @@ const api = vi.hoisted(() => {
       super(message);
     }
   }
-  return { ApiCallError, duplicateRows: vi.fn(), getPin: vi.fn(), markDuplicate: vi.fn(), decideDuplicatePair: vi.fn() };
+  return { ApiCallError, duplicateRows: vi.fn(), getPin: vi.fn(), markDuplicate: vi.fn(), decideDuplicatePair: vi.fn(), deletedPinIds: vi.fn(), setAsideDuplicates: vi.fn() };
 });
 vi.mock('./pinApi', () => api);
 
@@ -21,16 +21,18 @@ const pin = (id: number) => ({ id, title: `Pin ${id}`, sourceUrl: `https://examp
 beforeEach(() => vi.resetAllMocks());
 
 describe('duplicateBatch', () => {
-  it('gives a batch with both pins, and sets aside a pair with a deleted pin', async () => {
-    api.duplicateRows.mockResolvedValueOnce({ rows: [], total: 0 }).mockResolvedValueOnce({ rows: [row(1, 2), row(3, 4), row(5, 6)], total: 3 });
-    api.getPin.mockImplementation(async (id: number) => {
-      if (id === 2) throw new api.ApiCallError(404, 'gone');
-      return pin(id);
-    });
+  it('sets aside a page of deleted pins and reads on until the batch is full', async () => {
+    api.duplicateRows
+      .mockResolvedValueOnce({ rows: [], total: 0 })
+      .mockResolvedValueOnce({ rows: [row(1, 2), row(2, 3)], total: 3 })
+      .mockResolvedValueOnce({ rows: [row(5, 6)], total: 1 });
+    api.deletedPinIds.mockResolvedValueOnce([2]).mockResolvedValueOnce([]);
+    api.setAsideDuplicates.mockResolvedValue(2);
+    api.getPin.mockImplementation(async (id: number) => pin(id));
     const batch = await duplicateBatch(1);
-    expect(batch.pairs.map((p) => [p.pinId, p.otherPinId])).toEqual([[3, 4]]);
-    expect(batch).toMatchObject({ gone: 1, undecided: 2 });
-    expect(api.markDuplicate).toHaveBeenCalledWith(1, 2, 'unsure', 'Pin 2 has been deleted.');
+    expect(batch.pairs.map((p) => [p.pinId, p.otherPinId])).toEqual([[5, 6]]);
+    expect(batch).toMatchObject({ gone: 2, undecided: 1 });
+    expect(api.setAsideDuplicates).toHaveBeenCalledWith([2], expect.stringContaining('deleted'));
   });
 
   it('knows a link both pins cite', () => {
