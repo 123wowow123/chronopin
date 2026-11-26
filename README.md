@@ -437,13 +437,6 @@ https://search.google.com/search-console?utm_source=about-page&resource_id=sc-do
 
 
 
-
-earthquakes should have running thread per year.
-use main thread for each year and have sub thread to link all pins in the year.
-https://www.chronopin.com/pin/20607/m6-4-earthquake-strikes-southeast-of-easter-island-on-october-29
-
-
-
 create this 'The All-Map' graph dynamically for each person's holdings. start with michael burry
 https://michaeljburry.substack.com/p/build-a-bear-bbw-part-ii-hugs-the?utm_source=post-email-title&publication_id=6819723&post_id=219082855&utm_campaign=email-post-title&isFreemail=false&r=3eoc7b&triedRedirect=true&utm_medium=email
 
@@ -493,7 +486,6 @@ Personal dashboard allows are asking question and will set panel update and remi
 remind me of babcock and wilcox permitting final approval status
 this will run on 6 am/pm job to refresh information and notify you if updates are defected and likely dates if applicable
 
-yes check Los Angeles or Austin trucks on production
 
 
 

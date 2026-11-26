@@ -10,6 +10,12 @@
 //   npm run earthquakes -- --feed significant_month --min-mag 6
 //   npm run earthquakes -- --base http://localhost:3000
 //   npm run earthquakes -- --media                add ShakeMaps to quake pins that lack them
+//   npm run earthquakes -- --base <url> --head 3199 --parent 21448 --prev-head 3185
+//                                                 remote run: this year's head and chain tail, last year's head
+//
+// Quakes thread per calendar year: a year's first quake is its head and responds to the
+// previous year's head (the annual main line); its second quake is a subthread off the head,
+// and later quakes chain on from there (the year's leaf chain).
 //
 // Each pin carries up to three of USGS's ShakeMap pictures (shaking intensity,
 // peak ground acceleration and velocity), US-government works credited to USGS.
@@ -27,6 +33,10 @@ const { values: flags } = parseArgs({
     media: { type: 'boolean', default: false },
     'min-mag': { type: 'string', default: '5.5' },
     base: { type: 'string', default: 'http://localhost:3000' },
+    // Tail pin of the current year's chain on a server whose database this script cannot read.
+    parent: { type: 'string' },
+    head: { type: 'string' },
+    'prev-head': { type: 'string' },
   },
 });
 
@@ -125,14 +135,55 @@ async function main() {
   const token = flags['dry-run'] ? '' : await signIn(flags.base);
   const local = /^https?:\/\/(localhost|127\.0\.0\.1)/.test(flags.base);
   let made = 0;
+  // Year -> that year's head (its first quake pin) and tail (its latest); seeded from the local database or the flags.
+  const years = new Map<number, { head?: number; tail?: number }>();
+  const usgs = `"sourceUrl" LIKE 'https://earthquake.usgs.gov/%' AND "utcDeletedDateTime" IS NULL`;
+  const yearOf = async (year: number) => {
+    if (years.has(year)) return years.get(year)!;
+    const state: { head?: number; tail?: number } = {};
+    if (flags.head && year === new Date().getUTCFullYear()) { state.head = Number(flags.head); state.tail = Number(flags.parent ?? flags.head); }
+    else if (local) {
+      const [head] = await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE ${usgs} AND EXTRACT(YEAR FROM "utcStartDateTime" AT TIME ZONE 'UTC') = $1 ORDER BY "utcStartDateTime", "id" LIMIT 1`, [year]);
+      const [tail] = await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE ${usgs} AND EXTRACT(YEAR FROM "utcStartDateTime" AT TIME ZONE 'UTC') = $1 ORDER BY "utcStartDateTime" DESC, "id" DESC LIMIT 1`, [year]);
+      state.head = head?.id; state.tail = tail?.id;
+    }
+    years.set(year, state);
+    return state;
+  };
+  // The newest earlier year's head: the main line the new year's head responds to.
+  const previousHead = async (year: number): Promise<number | undefined> => {
+    for (const [y, st] of years) if (y < year && st.head) return st.head;
+    if (flags['prev-head']) return Number(flags['prev-head']);
+    if (!local) return undefined;
+    const [row] = await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE ${usgs} AND EXTRACT(YEAR FROM "utcStartDateTime" AT TIME ZONE 'UTC') < $1 ORDER BY "utcStartDateTime" DESC, "id" DESC LIMIT 1`, [year]);
+    return row?.id;
+  };
   for (const q of quakes.sort((a, b) => a.properties.time - b.properties.time)) {
     const body = { ...pinBody(q), media: await shakeMaps(q) };
     // The local database says nothing about another server's pins: there the route's duplicate-sourceUrl refusal does the skipping.
     const [existing] = local ? await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE "sourceUrl" = $1 AND "utcDeletedDateTime" IS NULL LIMIT 1`, [body.sourceUrl]) : [];
-    console.log(`${body.utcStartDateTime.slice(0, 16)} ${body.title}${existing ? ` [pin ${existing.id}]` : ''}`);
+    const year = new Date(body.utcStartDateTime).getUTCFullYear();
+    const state = await yearOf(year);
+    if (existing) { state.head ??= existing.id; state.tail = existing.id; }
+    // First quake of the year: main line, under the previous year's head. Second: a subthread off the head. Then a chain.
+    const first = !state.head;
+    const parentId = existing ? undefined : first ? await previousHead(year) : state.tail;
+    const subthread = !existing && !first && state.tail === state.head;
+    console.log(`${body.utcStartDateTime.slice(0, 16)} ${body.title}${existing ? ` [pin ${existing.id}]` : ''}${parentId ? ` -> ${subthread ? 'subthread of' : 'responds to'} ${parentId}` : ''}`);
     if (existing || flags['dry-run']) continue;
-    const response = await fetch(`${flags.base}/api/pins`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(body) });
-    if (response.ok) made++;
+    const response = await fetch(`${flags.base}/api/pins`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(parentId ? { ...body, parentId } : body) });
+    if (response.ok) {
+      made++;
+      const created = (await response.json().catch(() => null)) as { id?: number } | null;
+      if (created?.id) {
+        state.head ??= created.id;
+        state.tail = created.id;
+        if (subthread) {
+          const mark = await fetch(`${flags.base}/api/pins/${created.id}/subthread`, { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify({ subthread: true }) });
+          if (!mark.ok) console.error(`  subthread flag failed ${mark.status} for pin ${created.id}`);
+        }
+      }
+    }
     else console.error(`  failed ${response.status}: ${(await response.text()).slice(0, 200)}`);
   }
   console.log(`${made} pins created`);

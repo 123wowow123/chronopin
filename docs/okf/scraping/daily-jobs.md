@@ -781,6 +781,15 @@ quake), and a description of magnitude, depth, the PAGER alert level, felt
 reports and any tsunami flag. `find_pins` on the event page first: a quake
 already pinned is skipped. An aftershock in the same hour as a larger quake is
 its own pin only if USGS lists it as significant.
+**Threads (owner, 2026-11-26): an annual main line with a leaf chain per year.** The first
+quake pin of each year is that year's head, and the heads form the main line (2025 head
+-> 2026 head -> 2027 head). The rest of the year's quakes are one chronological chain hanging
+off the head: its first pin is a response to the head with `subthread: true`
+(`PUT /api/pins/:id/subthread`), each later quake responds to the previous one. The first
+quake of a new year gets the previous year's head as parent (not a subthread). Done on prod
+for 2025-2026: 3185 -> 3199 (main line), 19616 (subthread) -> ... -> newest. Earlier years
+are now chained too (2026-11-26): 2430 -> 2433 -> 2434 -> 2435 -> 2436 -> 6558 -> 6622 -> 2440 -> 2442 -> 3185. Pins already in another thread (6569 Hualien in the Typhoon Morakot thread; the Onagawa and Metsamor nuclear pins) are left out. `npm run earthquakes` does this itself; a remote run needs `--head`, `--parent` (tail) and `--prev-head`. Find the tail with
+`find_pins` on `earthquake.usgs.gov` sources. Quakes from other desks join by date.
 **Traps.** USGS revises magnitude and time for a day or two after an event; do not
 re-date an existing pin for a revision of a few tenths. USGS has no photos, but
 every significant quake has a ShakeMap: open the quake's `properties.detail` URL
