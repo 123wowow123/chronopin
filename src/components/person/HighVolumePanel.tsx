@@ -64,6 +64,8 @@ export function HighVolumePanel({ symbols, own, days, conflicts, className = '' 
 
   if (!key) return null;
   const current = state?.request === request ? state : null;
+  // Stocks with both kinds of day in the span, so listed in both panels.
+  const both = new Set(current?.result?.stocks.filter((s) => PANELS.every((p) => s.days.some((d) => d.change > 0 === p.up))).map((s) => s.symbol));
   return (
     <div className={`flex min-w-0 flex-col gap-4 ${className}`}>
       {PANELS.map((panel) => (
@@ -75,6 +77,7 @@ export function HighVolumePanel({ symbols, own, days, conflicts, className = '' 
           onRetry={run}
           conflicts={conflicts}
           own={own}
+          both={both}
         />
       ))}
     </div>
@@ -92,7 +95,7 @@ function sideOf(stocks: Result['stocks'], up: boolean, own: string[]): Result['s
 
 // One row per stock with its newest day. `stocks` is undefined while loading and
 // null when the prices could not be read.
-function Panel({ title, hint, tone, stocks, onRetry, conflicts, own }: (typeof PANELS)[number] & { stocks: Result['stocks'] | null | undefined; onRetry: () => void; conflicts: Map<string, Set<string>>; own: string[] }) {
+function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (typeof PANELS)[number] & { stocks: Result['stocks'] | null | undefined; onRetry: () => void; conflicts: Map<string, Set<string>>; own: string[]; both: Set<string> }) {
   const t = useT();
   const locale = useIntlLocale();
   const [all, setAll] = useState(false);
@@ -101,6 +104,7 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own }: (typeof P
   // The info text: the rule, then what a row's day count and columns mean.
   const about = [
     t(hint, { multiple: HIGH_VOLUME_MULTIPLE, days: ADV_DAYS }),
+    t('notifications.highVolumeBothHint'),
     t('notifications.highVolumeDaysHint', { example: t('notifications.highVolumeDays', { count: 3 }) }),
     t('notifications.highVolumeChangeHint'),
     t('notifications.highVolumeMovedHint'),
@@ -164,7 +168,14 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own }: (typeof P
               {(all ? stocks : stocks.slice(0, SHOWN)).map(({ symbol, days: hits, trend }) => (
                 <tr key={symbol}>
                   <th scope="row" className="ps-4 pe-1 py-0.5 text-start font-semibold">
-                    <Link href={`/search?q=${encodeURIComponent(term('ticker', symbol))}`} className={`hover:underline ${own.includes(symbol) ? 'text-own-ticker' : 'text-ink'}`}>{symbol}</Link>
+                    <Link
+                      href={`/search?q=${encodeURIComponent(term('ticker', symbol))}`}
+                      // The reader's own colour wins over the gray of a stock in both panels.
+                      className={`hover:underline ${own.includes(symbol) ? 'text-own-ticker' : both.has(symbol) ? 'text-faint' : 'text-ink'}`}
+                      title={both.has(symbol) ? t('notifications.highVolumeBothHint') : undefined}
+                    >
+                      {symbol}
+                    </Link>
                     {conflicts.has(symbol) ? (
                       <span title={`${t('notifications.conflict')}: ${[...conflicts.get(symbol)!].slice(0, 3).join(', ')}`} className="ms-1 inline-block align-[-1px] text-warning-soft">
                         <Icon name="warning" className="size-3" />
