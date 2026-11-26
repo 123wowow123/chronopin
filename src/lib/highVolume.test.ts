@@ -16,15 +16,17 @@ describe('highVolumeSince', () => {
 describe('recentTrend', () => {
   const bars = (...closes: number[]) => closes.map((close, i) => ({ day: day(i), close, volume: 1 }));
 
-  it('is up or down only when all of the last three sessions went that way', () => {
-    expect(recentTrend(bars(9, 1, 2, 3, 4))).toBe('up');
-    expect(recentTrend(bars(1, 9, 8, 7, 6).reverse())).toBe('down');
+  it('counts the sessions in a row that went one way, back from the latest', () => {
+    expect(recentTrend(bars(9, 1, 2, 3, 4))).toEqual({ dir: 'up', days: 3 });
+    expect(recentTrend(bars(1, 9, 8, 7, 6).reverse())).toEqual({ dir: 'down', days: 3 });
+    expect(recentTrend(bars(5, 1, 2, 3, 4, 5, 6))).toEqual({ dir: 'up', days: 5 });
+    expect(recentTrend(bars(1, 2, 1))).toEqual({ dir: 'down', days: 1 });
   });
 
-  it('is blank when mixed, unchanged or too short', () => {
-    expect(recentTrend(bars(1, 2, 1, 3))).toBeNull();
-    expect(recentTrend(bars(1, 2, 2, 3))).toBeNull();
-    expect(recentTrend(bars(1, 2, 3))).toBeNull();
+  it('stops at an unchanged close, and is blank when the latest is unchanged or too short', () => {
+    expect(recentTrend(bars(1, 2, 2, 3))).toEqual({ dir: 'up', days: 1 });
+    expect(recentTrend(bars(1, 2, 2))).toBeNull();
+    expect(recentTrend(bars(1))).toBeNull();
   });
 });
 

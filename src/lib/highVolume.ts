@@ -4,8 +4,6 @@
 
 export const HIGH_VOLUME_MULTIPLE = 2;
 export const ADV_DAYS = 50;
-// The latest sessions the "past 3 days" column reads.
-export const TREND_DAYS = 3;
 // The most symbols one GET /api/trades/high-volume checks.
 export const HIGH_VOLUME_SYMBOLS = 40;
 
@@ -25,16 +23,25 @@ export type HighVolumeDay = {
   down: number;
 };
 
-export type Trend = 'up' | 'down' | null;
+// The run of latest sessions that all closed the same way.
+export type Trend = { dir: 'up' | 'down'; days: number } | null;
 
-// Which way the last TREND_DAYS sessions all went, each against the close
-// before it: null when they differ, one was unchanged, or there are too few.
+// How many sessions in a row, counting back from the latest, closed higher
+// (or lower) than the close before: null when the latest close is unchanged
+// or there are fewer than two bars. An unchanged close ends the run.
 // `bars` may be in any order.
 export function recentTrend(bars: DailyBar[]): Trend {
-  const closes = [...bars].sort((a, b) => a.day.localeCompare(b.day)).slice(-(TREND_DAYS + 1)).map((b) => b.close);
-  if (closes.length <= TREND_DAYS) return null;
-  const moves = closes.slice(1).map((close, i) => close - closes[i]);
-  return moves.every((m) => m > 0) ? 'up' : moves.every((m) => m < 0) ? 'down' : null;
+  const closes = [...bars].sort((a, b) => a.day.localeCompare(b.day)).map((b) => b.close);
+  let days = 0;
+  let dir: 'up' | 'down' | null = null;
+  for (let i = closes.length - 1; i > 0; i--) {
+    const move = closes[i] - closes[i - 1];
+    const d = move > 0 ? 'up' : move < 0 ? 'down' : null;
+    if (!d || (dir && d !== dir)) break;
+    dir = d;
+    days++;
+  }
+  return dir ? { dir, days } : null;
 }
 
 // The first calendar day ("YYYY-MM-DD", UTC) of a span of the last `days`

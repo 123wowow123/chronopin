@@ -6,7 +6,7 @@ import Link from '@/components/ui/Link';
 import { api } from '@/lib/client/api';
 import { useRefreshTick } from '@/lib/client/refreshTick';
 import { useIntlLocale, useT } from '@/lib/client/i18n';
-import { ADV_DAYS, HIGH_VOLUME_MULTIPLE, HIGH_VOLUME_SYMBOLS, TREND_DAYS, type HighVolumeDay, type Trend } from '@/lib/highVolume';
+import { ADV_DAYS, HIGH_VOLUME_MULTIPLE, HIGH_VOLUME_SYMBOLS, type HighVolumeDay, type Trend } from '@/lib/highVolume';
 import { term } from '@/lib/searchTerms';
 
 type Result = { stocks: { symbol: string; days: HighVolumeDay[]; trend: Trend }[] };
@@ -125,7 +125,7 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (ty
     t('notifications.highVolumeChangeHint'),
     t('notifications.highVolumeMovedHint'),
     t('notifications.highVolumeSinceHint'),
-    t('notifications.highVolumeTrendHint', { count: TREND_DAYS }),
+    t('notifications.highVolumeTrendHint'),
   ];
   // A session's day is a calendar date: formatted in UTC so it never shifts.
   const date = new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric', timeZone: 'UTC' });
@@ -177,7 +177,7 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (ty
                 <th scope="col" className="px-1.5 py-1 text-end font-medium">{t('notifications.highVolumeVolume')}</th>
                 <th scope="col" className="px-1.5 py-1 text-end font-medium">{t('notifications.highVolumeMoved')}</th>
               <th scope="col" className="px-1.5 py-1 text-end font-medium">{t('notifications.highVolumeSince')}</th>
-              <th scope="col" className="ps-1 pe-4 py-1 text-center font-medium">{t('notifications.highVolumeTrend', { count: TREND_DAYS })}</th>
+              <th scope="col" className="ps-1 pe-4 py-1 text-center font-medium">{t('notifications.highVolumeTrend')}</th>
               </tr>
             </thead>
             <tbody>
@@ -215,15 +215,15 @@ function Panel({ title, hint, tone, stocks, onRetry, conflicts, own, both }: (ty
                     </span>
                     <span className="sr-only">{t('notifications.highVolumeSinceValue', { up: hits[0].up, down: hits[0].down })}</span>
                   </td>
-                {/* An arrow alone, to keep the column narrow; blank when the latest sessions were mixed. */}
+                {/* An arrow alone, to keep the column narrow; blank when the latest close was unchanged. */}
                 <td
-                  className={`ps-1 pe-4 py-0.5 text-center ${trend === 'down' ? 'text-danger-soft' : 'text-success-soft'}`}
-                  title={trend ? t(trend === 'up' ? 'notifications.highVolumeTrendUp' : 'notifications.highVolumeTrendDown') : undefined}
+                  className={`ps-1 pe-4 py-0.5 text-center ${trend?.dir === 'down' ? 'text-danger-soft' : 'text-success-soft'}`}
+                  title={trend ? t('notifications.highVolumeTrendValue', { dir: t(trend.dir === 'up' ? 'notifications.highVolumeTrendUp' : 'notifications.highVolumeTrendDown'), count: trend.days }) : undefined}
                 >
                   {trend ? (
                     <>
-                      <span aria-hidden>{trend === 'up' ? '▲' : '▼'}</span>
-                      <span className="sr-only">{t(trend === 'up' ? 'notifications.highVolumeTrendUp' : 'notifications.highVolumeTrendDown')}</span>
+                      <span aria-hidden>{trend.dir === 'up' ? '▲' : '▼'}{trend.days}</span>
+                      <span className="sr-only">{t('notifications.highVolumeTrendValue', { dir: t(trend.dir === 'up' ? 'notifications.highVolumeTrendUp' : 'notifications.highVolumeTrendDown'), count: trend.days })}</span>
                     </>
                   ) : null}
                 </td>

@@ -10,7 +10,7 @@ const PARALLEL = 8;
 // Which of the symbols closed higher or lower on at least twice their 50-day
 // average volume in the last `days` calendar days, today included (1 to 84,
 // default 14); a day's `change` tells which way, and a stock's `trend` which
-// way its last three sessions all went, if they did. `unchecked` lists those Nasdaq gave no prices for.
+// way its latest sessions have gone in a row, and for how many (`trend.days`). `unchecked` lists those Nasdaq gave no prices for.
 // GET /api/trades/high-volume?symbols=NVDA,T[&days=14]
 export const GET = route(async (request: NextRequest) => {
   const params = request.nextUrl.searchParams;
