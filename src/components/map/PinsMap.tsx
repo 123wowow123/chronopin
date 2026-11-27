@@ -473,6 +473,9 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
   const fitResults = !preserveView && (restaurantLayer || params.get('fit') === 'results'
     || splitSearchQuery(query).some((part) => part.kind === 'term' && part.field === 'pin' && !part.negated));
   const focusId = Number(params.get('pin')) || undefined;
+  // ?at=<pinId>: the numbered pin the map opens on (a thread's "To map" link),
+  // as the stepper's current stop.
+  const atId = Number(params.get('at')) || undefined;
   // From a pin's distance, clicked: draw what it measured. The viewer's place
   // is the browser's to work out, so the URL only asks for it.
   const fromMe = params.get('from') === 'me';
@@ -521,9 +524,9 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
   // walks the map from one to the next; step is the one the map last went to.
   const [step, setStep] = useState<number | null>(null);
   const [labelledStops, setLabelledStops] = useState<{ pin: MapPinJson; label: string }[]>([]);
-  const walkTo = (index: number) => {
+  const walkTo = (index: number, stops = labelledStops) => {
     const map = mapRef.current;
-    const stop = labelledStops[index];
+    const stop = stops[index];
     if (!map || !stop || stop.pin.latitude == null || stop.pin.longitude == null) return;
     setStep(index);
     const at = L.latLng(stop.pin.latitude, stop.pin.longitude + 360 * nearestOffset(stop.pin.longitude, map.getCenter().lng));
@@ -898,13 +901,16 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         if (cancelled) return;
         const labels = pinMarkerLabels(fetchQuery);
         setStep(null);
-        setLabelledStops(
-          markersRef.current
-            .filter((m) => labels.has(m.pin.id))
-            .map((m) => ({ pin: m.pin, label: labels.get(m.pin.id)! }))
-            .sort((a, b) => a.label.localeCompare(b.label, undefined, { numeric: true })),
-        );
+        const stops = markersRef.current
+          .filter((m) => labels.has(m.pin.id))
+          .map((m) => ({ pin: m.pin, label: labels.get(m.pin.id)! }))
+          .sort((a, b) => a.label.localeCompare(b.label, undefined, { numeric: true }));
+        setLabelledStops(stops);
         setStatus('ready');
+        if (atId && !focusId) {
+          const index = stops.findIndex((stop) => stop.pin.id === atId);
+          if (index >= 0) walkTo(index, stops);
+        }
       } catch {
         if (!cancelled) setStatus('error');
       }
@@ -914,7 +920,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
       cancelled = true;
       abort.abort();
     };
-  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView, specials, numberLocale]);
+  }, [past, future, postedWithin, fetchQuery, watched, focusId, atId, fitResults, restaurantLayer, preserveView, specials, numberLocale]);
 
   useEffect(() => {
     const map = mapRef.current;

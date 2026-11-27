@@ -25,6 +25,8 @@ export const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/c
 export const MAP_ATTRIBUTION_PREFIX = '<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer" title="A JavaScript library for interactive maps">Leaflet</a>';
 export { icon as markerIcon };
 
+export type ThreadMapStop = { id: number; n: number; title: string; href: string; latitude: number; longitude: number };
+
 // A pin's place on an OpenStreetMap map.
 export default function PinMap({
   latitude,
@@ -32,12 +34,17 @@ export default function PinMap({
   title,
   flightPath,
   siteShape,
+  stops,
+  currentId,
 }: {
   latitude: number;
   longitude: number;
   title: string;
   flightPath?: PinFlightPathJson;
   siteShape?: PinSiteShapeJson;
+  // The other located pins of the pin's thread (numbered as in the thread list).
+  stops?: ThreadMapStop[];
+  currentId?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [redrawId, setRedrawId] = useState('');
@@ -48,6 +55,8 @@ export default function PinMap({
   const [map, setMap] = useState<L.Map | null>(null);
   const framed = useRef<string | null>(null);
   const [armed, setArmed] = useState(false);
+  const [showThread, setShowThread] = useState(true);
+  const mainMarker = useRef<L.Marker | null>(null);
   const t = useT();
   const [startLabel, finishLabel, loopLabel] = [t('pin.routeStart'), t('pin.routeFinish'), t('pin.routeStartFinish')];
 
@@ -72,7 +81,7 @@ export default function PinMap({
     map.on('blur', disarm);
     map.getContainer().addEventListener('mouseleave', disarm);
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
-    L.marker([latitude, longitude], { icon }).addTo(map).bindPopup(title);
+    mainMarker.current = L.marker([latitude, longitude], { icon }).addTo(map).bindPopup(title);
     // The path leaves the pin's place (the marker); a dashed line marks a
     // computed estimate as opposed to a simulated trajectory.
     if (flightPath) {
@@ -88,6 +97,7 @@ export default function PinMap({
     return () => {
       map.getContainer().removeEventListener('mouseleave', disarm);
       framed.current = null;
+      mainMarker.current = null;
       setMap(null);
       map.remove();
     };
@@ -146,6 +156,47 @@ export default function PinMap({
     };
   }, [map, siteShape, redraw, districtView, longitude, latitude, startLabel, finishLabel, loopLabel]);
 
+  // The thread's pins: numbered as in the thread list, joined in order when the
+  // thread is a journey, the pin being read highlighted. The pin's own marker
+  // gives way to its numbered badge while they show.
+  const hasThread = !!stops && stops.length > 0;
+  const hasOutline = !!flightPath || !!siteShape?.geojson.features.length;
+  useEffect(() => {
+    if (!map || !hasThread || !showThread || !stops) return;
+    const group = L.layerGroup().addTo(map);
+    const points = stops.map((s) => [s.latitude, s.longitude] as [number, number]);
+    // A line joining them only helps when the thread moves on, a tour or a route:
+    // one that doubles back over itself (a tournament's venues) would cross the
+    // map, so it is left off when the path is much longer than the area covered.
+    const km = (a: [number, number], b: [number, number]) => Math.hypot((b[1] - a[1]) * 111.32 * Math.cos((((a[0] + b[0]) / 2) * Math.PI) / 180), (b[0] - a[0]) * 111.32);
+    const bounds = L.latLngBounds(points);
+    const diagonal = km([bounds.getSouth(), bounds.getWest()], [bounds.getNorth(), bounds.getEast()]);
+    const path = points.reduce((n, p, i) => (i ? n + km(points[i - 1], p) : 0), 0);
+    if (path <= diagonal * 2.5) L.polyline(points, { color: '#2563eb', weight: 2, opacity: 0.6, dashArray: '4 6', interactive: false }).addTo(group);
+    for (const s of stops) {
+      const marker = L.marker([s.latitude, s.longitude], {
+        icon: L.divIcon({
+          className: '',
+          iconSize: [26, 26],
+          html: `<span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:9999px;font:600 12px system-ui;color:#fff;border:2px solid #fff;background:${s.id === currentId ? '#e11d48' : '#2563eb'}">${s.n}</span>`,
+        }),
+        zIndexOffset: s.id === currentId ? 1000 : 0,
+      }).addTo(group);
+      const link = document.createElement('a');
+      link.href = s.href;
+      link.textContent = s.title;
+      marker.bindPopup(link);
+    }
+    const own = mainMarker.current;
+    if (own && stops.some((s) => s.id === currentId)) own.remove();
+    if (!hasOutline) map.fitBounds(bounds, { padding: [28, 28], maxZoom: 12 });
+    return () => {
+      group.remove();
+      if (own && !map.hasLayer(own)) own.addTo(map);
+      if (!hasOutline) map.setView([latitude, longitude], 11);
+    };
+  }, [map, hasThread, showThread, stops, currentId, hasOutline, latitude, longitude]);
+
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.
   // The label goes on a wrapper: Leaflet makes its own container focusable and
@@ -157,13 +208,26 @@ export default function PinMap({
     <div
       role="group"
       aria-label={t('pin.mapOf', { title })}
-      className={`isolate h-[360px] w-full overflow-hidden rounded-xl border bg-raised ring-2 transition sm:h-[420px] ${
+      className={`isolate relative h-[360px] w-full overflow-hidden rounded-xl border bg-raised ring-2 transition sm:h-[420px] ${
         armed
           ? 'border-accent ring-accent/45 shadow-lg shadow-accent/20'
           : 'border-line ring-transparent'
       }`}
     >
       <div ref={ref} className="size-full" />
+      {hasThread ? (
+        <button
+          type="button"
+          aria-pressed={showThread}
+          onClick={() => setShowThread((v) => !v)}
+          className={`absolute end-2 top-2 z-[1000] inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium shadow transition-colors ${
+            showThread ? 'border-accent bg-panel text-ink hover:bg-raised' : 'border-line bg-panel text-muted hover:bg-raised hover:text-ink'
+          }`}
+        >
+          <span aria-hidden className={`size-2 rounded-full ${showThread ? 'bg-accent' : 'bg-subtle'}`} />
+          {t('pin.thread')}
+        </button>
+      ) : null}
     </div>
     </div>
   );

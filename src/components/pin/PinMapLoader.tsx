@@ -6,7 +6,7 @@ import { useT } from '@/lib/client/i18n';
 import { SiteShapeKey } from './SiteShapeKey';
 import type { PinFlightPathJson } from '@/lib/types';
 import type { PinSiteShapeJson } from '@/lib/siteShape';
-import type { ThreadMapStop } from './ThreadMap';
+import type { ThreadMapStop } from './PinMap';
 
 // Leaflet touches window at import, so the map loads in the browser only.
 const PinMap = dynamic(() => import('./PinMap'), {
@@ -17,7 +17,7 @@ const PinMap = dynamic(() => import('./PinMap'), {
 // The pin's outline (a wildfire perimeter, district map, course) can be megabytes,
 // so the page leaves it out: the map draws at once and the outline is fetched and
 // added, with a quiet note while it comes.
-export function PinMapLoader({ siteShapePinId, ...props }: { latitude: number; longitude: number; title: string; flightPath?: PinFlightPathJson; siteShapePinId?: number }) {
+export function PinMapLoader({ siteShapePinId, ...props }: { latitude: number; longitude: number; title: string; flightPath?: PinFlightPathJson; siteShapePinId?: number; stops?: ThreadMapStop[]; currentId?: number }) {
   const t = useT();
   const [shape, setShape] = useState<PinSiteShapeJson | null>(null);
   const [loading, setLoading] = useState(siteShapePinId != null);
@@ -47,13 +47,4 @@ export function PinMapLoader({ siteShapePinId, ...props }: { latitude: number; l
       {shape ? <SiteShapeKey shape={shape} t={t} /> : null}
     </>
   );
-}
-
-const ThreadMap = dynamic(() => import('./ThreadMap'), {
-  ssr: false,
-  loading: () => <div className="mt-4 h-[300px] w-full animate-pulse rounded-xl bg-raised" />,
-});
-
-export function ThreadMapLoader(props: { stops: ThreadMapStop[]; currentId: number; backHref: string }) {
-  return <ThreadMap {...props} />;
 }

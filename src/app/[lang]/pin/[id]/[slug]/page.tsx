@@ -98,7 +98,7 @@ import { PinCriticReviews } from '@/components/pin/PinCriticReviews';
 import { isReviewable } from '@/lib/userReviews';
 import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 import { PinSuggest } from '@/components/pin/PinSuggest';
-import { PinMapLoader, ThreadMapLoader } from '@/components/pin/PinMapLoader';
+import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
 import { RelatedPins } from '@/components/pin/RelatedPins';
@@ -297,12 +297,20 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
                 ) : (
                   <span />
                 )}
-                <Link href={`/map?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
-                  <Icon name="map" className="size-3.5 text-link" />
-                  {t('pin.toMap')}
-                </Link>
+                <Suspense
+                  fallback={
+                    <Link href={`/map?pin=${pin.id}`} className={TO_MAP_CLASS}>
+                      <Icon name="map" className="size-3.5 text-link" />
+                      {t('pin.toMap')}
+                    </Link>
+                  }
+                >
+                  <ToMapLink pin={pin} />
+                </Suspense>
               </div>
-              <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} flightPath={pin.flightPath} siteShapePinId={hasSiteShape ? pin.id : undefined} />
+              <Suspense fallback={<PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} flightPath={pin.flightPath} siteShapePinId={hasSiteShape ? pin.id : undefined} />}>
+                <PinMapWithThread pin={pin} latitude={pin.latitude} longitude={pin.longitude} siteShapePinId={hasSiteShape ? pin.id : undefined} />
+              </Suspense>
               {pin.flightPath ? (
                 <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
                   <span>
@@ -1160,15 +1168,48 @@ async function ThreadOrCompanyTree({ pin }: { pin: PinJson }) {
   return <Thread pin={pin} />;
 }
 
-async function Thread({ pin }: { pin: PinJson }) {
-  const t = await getT();
-  const pins = await threadPins(pin.id, t.locale);
+type ThreadStop = { id: number; n: number; title: string; href: string; latitude: number; longitude: number };
+
+// The located pins of the pin's thread, numbered as in the thread list; empty
+// when the pin is not in a thread (or a company hub) or the thread is one place.
+async function threadStops(pin: PinJson): Promise<ThreadStop[]> {
+  if (!(pin.parentId || pin.rootThread) || (await pinCompanyHub(pin.id))) return [];
+  const pins = await threadPins(pin.id, (await getT()).locale);
   const numbers = threadNumbers(pins);
   const stops = pins.flatMap((p) =>
     p.latitude != null && p.longitude != null
       ? [{ id: p.id, n: numbers.get(p.id) ?? 0, title: p.title, href: pinPath(p), latitude: p.latitude, longitude: p.longitude }]
       : [],
   );
+  return new Set(stops.map((s) => `${s.latitude.toFixed(4)},${s.longitude.toFixed(4)}`)).size > 1 ? stops : [];
+}
+
+// The pin's map, with the located pins of its thread on it (a toggle hides them).
+async function PinMapWithThread({ pin, latitude, longitude, siteShapePinId }: { pin: PinJson; latitude: number; longitude: number; siteShapePinId?: number }) {
+  const stops = await threadStops(pin);
+  return <PinMapLoader latitude={latitude} longitude={longitude} title={pin.title} flightPath={pin.flightPath} siteShapePinId={siteShapePinId} stops={stops} currentId={pin.id} />;
+}
+
+const TO_MAP_CLASS = 'inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60';
+
+// "To map": a pin in a located thread opens the full map on every pin of the
+// thread (numbered), otherwise on the pin alone.
+async function ToMapLink({ pin }: { pin: PinJson }) {
+  const stops = await threadStops(pin);
+  const href = stops.length ? `/map?q=${encodeURIComponent(`pin:${stops.map((s) => `${s.id}=${s.n}`).join(',')}`)}&fit=results&at=${pin.id}&returnTo=${encodeURIComponent(pinPath(pin))}` : `/map?pin=${pin.id}`;
+  const t = await getT();
+  return (
+    <Link href={href} className={TO_MAP_CLASS}>
+      <Icon name="map" className="size-3.5 text-link" />
+      {t('pin.toMap')}
+    </Link>
+  );
+}
+
+async function Thread({ pin }: { pin: PinJson }) {
+  const t = await getT();
+  const pins = await threadPins(pin.id, t.locale);
+  const numbers = threadNumbers(pins);
   return (
     <section aria-labelledby="thread-heading" className="surface mt-6 p-5">
       <div className="flex items-center justify-between">
@@ -1185,7 +1226,6 @@ async function Thread({ pin }: { pin: PinJson }) {
       </div>
       <ThreadSuggestion pinId={pin.id} />
       <SideNoteToggle pinId={pin.id} />
-      {new Set(stops.map((s) => `${s.latitude.toFixed(4)},${s.longitude.toFixed(4)}`)).size > 1 ? <ThreadMapLoader stops={stops} currentId={pin.id} backHref={pinPath(pin)} /> : null}
       <ThreadList
         key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}

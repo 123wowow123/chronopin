@@ -29,7 +29,7 @@ async function sharedListing(searchParams: Props['searchParams']) {
 // /map would otherwise show the home page's title, description and URL - and
 // no picture, which Messenger shows as a bare title.
 // Per request too: the hreflang list follows the admin's language setting.
-const MAP_NOINDEX_PARAMS = ['q', 'show', 'specials', 'bounds', 'returnTo', 'fit', 'pin', 'from', 'f', 'past', 'future', 'posted', 'listings', 'listing'] as const;
+const MAP_NOINDEX_PARAMS = ['q', 'show', 'specials', 'bounds', 'returnTo', 'fit', 'at', 'pin', 'from', 'f', 'past', 'future', 'posted', 'listings', 'listing'] as const;
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   await connection();
