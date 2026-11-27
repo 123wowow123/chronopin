@@ -886,8 +886,10 @@ events and create **predicted pins** out of them:
     back, read from the pin's update log, so never edit or clear `originalStartDate` on a later slip.
   - A date only brought forward, or moved before it arrived on a pin with no missed date, sets neither.
   - `resolved`: set the actual date from the primary source, `dateConfidence: 'confirmed'`; keep `originalStartDate`.
+  - "Begins by" / ceasefire ladders: the date is the most likely effective end date, the end of the window with the
+    biggest share (subtract neighbouring lines), never the last priced line (owner, 2026-11-26; pin 20946).
   - Each update: dated odds bullet on top, `description`, `dateConfidenceReasoning`, `marketVolume`, the market
-    reference's reasoning. Read the pin back.
+    reference's reasoning, and the **title** when it quotes odds or a date (owner, 2026-11-26). Read the pin back.
   - Look at the pin's picture: its words and version number must agree with the title. Replace a sibling's or earlier
     release's art with the product line's official picture that names no version (owner, 2026-11-25).
 - <a id="unconfirmed-reports"></a>**Unconfirmed reports (owner, 2026-11-25: "should be part of the scrape and 6am/6pm job").** The scrape's reference search records them (`references.ts`, up to two, beside the references), and every 06:00 and 18:00 run looks for them on each pin it researches (revisits, this week's pins, fresh sources, breaking news, predicted-date checks) and on the day's new pins. A leak or unnamed-source report about a pin's event goes in

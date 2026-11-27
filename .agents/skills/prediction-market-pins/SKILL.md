@@ -37,6 +37,9 @@ job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) 
   back as separate segments, labelled under the bar (from the update log, `missedDates` in `src/lib/delay.ts`). Later
   slips only move `utcStartDateTime` (and refresh `delayReasoning`); never overwrite `originalStartDate`.
 - A date only brought forward, or shifted before it arrived on a pin that never missed one, sets neither field.
+- **Title (owner, 2026-11-26):** when the title quotes odds or a date ("Priced at 55% to Begin by November 15"), rewrite
+  it on every update to the current figure and the pin's current date, keeping the rest of the wording. Pin 20946's
+  title kept the Nov 11 odds and date for two weeks. Old slugs redirect, so a retitle is safe.
 - **Also update:** a dated odds bullet on top of `longFormSummary` (with the move), `description`,
   `dateConfidenceReasoning`, `marketVolume` and the market reference's reasoning. `resolved`: the actual date from the
   primary source and `dateConfidence: 'confirmed'`.
