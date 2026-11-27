@@ -60,16 +60,22 @@ export async function forecastSlugsForNames(names: readonly (string | null | und
   const wanted = names.filter((n): n is string => !!n).map((n) => n.trim().toLowerCase());
   if (scope === 'pin' && matchesTags(['AI Models'], wanted)) wanted.push('ai');
   if (!wanted.length) return [];
-  const rows = await db.query<Pick<Row, 'slug' | 'industry' | 'title' | 'tags'>>(
-    `SELECT "slug", "industry", "title", "tags" FROM "IndustryForecast"
+  const rows = await db.query<Pick<Row, 'slug' | 'industry' | 'title' | 'tags'> & { points: number }>(
+    `SELECT "slug", "industry", "title", "tags",
+       (SELECT coalesce(sum(jsonb_array_length(l->'points')), 0) FROM jsonb_array_elements("snapshot" || "earlier" || coalesce(jsonb_build_array("projection"), '[]'::jsonb)) l WHERE jsonb_typeof(l->'points') = 'array')
+       + jsonb_array_length("live") * ${LIVE_MONTHS} AS "points"
+     FROM "IndustryForecast"
      WHERE ${scope === 'pin' ? 'lower("industry") = ANY($1)' : 'EXISTS (SELECT 1 FROM unnest("tags") t WHERE lower(t) = ANY($1))'}
      ORDER BY "id"`,
     [wanted],
   );
-  const slugs = rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted, title)).map((r) => r.slug);
-  if (scope !== 'pin') return slugs;
-  const own = (s: string) => isPinSubjectForecast(s, wanted, title);
-  return [...slugs.filter(own), ...slugs.filter((s) => !own(s))];
+  // Equal matches: the chart with more data points ranks higher (stable, so
+  // ties keep id order).
+  const byPoints = (a: { points: number }, b: { points: number }) => Number(b.points) - Number(a.points);
+  const matched = rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted, title)).sort(byPoints);
+  if (scope !== 'pin') return matched.map((r) => r.slug);
+  const own = (r: { slug: string }) => isPinSubjectForecast(r.slug, wanted, title);
+  return [...matched.filter(own), ...matched.filter((r) => !own(r))].map((r) => r.slug);
 }
 
 export async function allForecasts(): Promise<IndustryForecastJson[]> {
@@ -78,7 +84,7 @@ export async function allForecasts(): Promise<IndustryForecastJson[]> {
 
 export async function forecastsBySlugs(slugs: string[]): Promise<IndustryForecastJson[]> {
   if (!slugs.length) return [];
-  const rows = (await all()).filter((r) => slugs.includes(r.slug));
+  const rows = (await all()).filter((r) => slugs.includes(r.slug)).sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug));
   const out = await Promise.all(rows.map(toJson));
   // A single-bar chart says little next to a trend line: it sorts after the
   // rest, so a panel with a card limit tucks it behind "Show more". The sort
