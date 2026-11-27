@@ -158,7 +158,16 @@ export async function saveEventInfo(
       JSON.stringify(fields.itinerary ?? []),
     ],
   );
-  return rows.length > 0;
+  if (rows.length === 0) {
+    // A hand-set row is kept, but the pin was still read: move only its check
+    // time so the refresh queue does not hand it back first on every call.
+    await db.query(`UPDATE "PinEventInfo" SET "checkedAt" = COALESCE($2::timestamptz, now()) WHERE "pinId" = $1`, [
+      pinId,
+      checkedAt ? new Date(checkedAt).toISOString() : null,
+    ]);
+    return false;
+  }
+  return true;
 }
 
 // A check whose pages stated nothing: the pin is marked read now, so a
