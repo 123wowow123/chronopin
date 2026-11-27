@@ -6,7 +6,7 @@ type Row = Omit<PinForecastJson, 'evidence'> & { evidence: { pinId: number; note
 
 export async function forecastForPin(pinId: number): Promise<PinForecastJson | null> {
   const [r] = await db.query<Row>(
-    `SELECT "outcome", "probability", "marketProbability", "reasoning", "evidence", "checkedAt" FROM "PinForecast" WHERE "pinId" = $1`,
+    `SELECT "outcome", "probability", "marketProbability", "reasoning", "evidence", "outcomes", "checkedAt" FROM "PinForecast" WHERE "pinId" = $1`,
     [pinId],
   );
   if (!r) return null;
@@ -25,10 +25,10 @@ export async function forecastForPin(pinId: number): Promise<PinForecastJson | n
 
 export async function saveForecast(pinId: number, f: Omit<PinForecastJson, 'checkedAt'>) {
   await db.query(
-    `INSERT INTO "PinForecast" ("pinId", "outcome", "probability", "marketProbability", "reasoning", "evidence", "checkedAt")
-     VALUES ($1, $2, $3, $4, $5, $6::jsonb, now())
-     ON CONFLICT ("pinId") DO UPDATE SET "outcome" = $2, "probability" = $3, "marketProbability" = $4, "reasoning" = $5, "evidence" = $6::jsonb, "checkedAt" = now()`,
-    [pinId, f.outcome, f.probability, f.marketProbability, f.reasoning, JSON.stringify(f.evidence.map(({ pinId: id, note }) => ({ pinId: id, note })))],
+    `INSERT INTO "PinForecast" ("pinId", "outcome", "probability", "marketProbability", "reasoning", "evidence", "outcomes", "checkedAt")
+     VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7::jsonb, now())
+     ON CONFLICT ("pinId") DO UPDATE SET "outcome" = $2, "probability" = $3, "marketProbability" = $4, "reasoning" = $5, "evidence" = $6::jsonb, "outcomes" = $7::jsonb, "checkedAt" = now()`,
+    [pinId, f.outcome, f.probability, f.marketProbability, f.reasoning, JSON.stringify(f.evidence.map(({ pinId: id, note }) => ({ pinId: id, note }))), JSON.stringify(f.outcomes ?? [])],
   );
 }
 

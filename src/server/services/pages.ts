@@ -319,7 +319,7 @@ export async function pinMarketImpact(id: number): Promise<PinMarketImpactJson |
   return marketImpactForPin(id);
 }
 
-// ChronoPin's own prediction for a market-predicted pin (PinForecast), or null.
+// Chronopin's own prediction for a market-predicted pin (PinForecast): the call, its per-row odds column and evidence, or null.
 export async function pinForecast(id: number): Promise<PinForecastJson | null> {
   'use cache';
   cacheLife('hours');

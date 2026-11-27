@@ -7,6 +7,7 @@ import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import { marketRefKey, parseMarketUrl, pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
 import { MoveAlertButton } from '@/components/pin/MoveAlertButton';
 import type { PinJson } from '@/lib/types';
+import type { PinForecastOutcome } from '@/lib/pinForecast';
 import { useT } from '@/lib/client/i18n';
 import { compactUsd, dateFormat } from '@/lib/format';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
@@ -42,6 +43,14 @@ function percent(probability: number | null): string {
   if (p > 0 && p < 1) return '<1%';
   if (p < 100 && p > 99) return '>99%';
   return `${Math.round(p)}%`;
+}
+
+// Chronopin's chance against the market's: green when Chronopin rates the outcome likelier,
+// red when less likely (a whole point apart or more), neutral when level or the market has none.
+export function ourTone(ours: number, market: number | null): string {
+  if (market == null) return 'text-accent';
+  const gap = Math.round(ours * 100) - Math.round(market * 100);
+  return gap >= 1 ? 'text-success' : gap <= -1 ? 'text-danger' : 'text-accent';
 }
 
 function barWidth(probability: number | null): string {
@@ -92,7 +101,7 @@ export function ResolvedToggle({ pinId }: { pinId: number }) {
 // Odds from the Kalshi and Polymarket markets the pin cites, pushed by the
 // server as they refresh (at least once a minute) for as long as the page is
 // in view. Nothing when none of them answer.
-export function PinOdds({ pinId }: { pinId: number }) {
+export function PinOdds({ pinId, ours }: { pinId: number; ours?: PinForecastOutcome[] }) {
   const markets = useMarketOdds(pinId);
   const t = useT();
   useEffect(() => watchMarketOdds(pinId), [pinId]);
@@ -110,7 +119,7 @@ export function PinOdds({ pinId }: { pinId: number }) {
         {t('odds.heading')}
       </h2>
       {visible.map((market) => (
-        <Market key={market.url} market={market} pinId={pinId} />
+        <Market key={market.url} market={market} pinId={pinId} ours={ours} />
       ))}
     </section>
   );
@@ -225,12 +234,15 @@ function LiveDot({ fetchedAt }: { fetchedAt: string }) {
   );
 }
 
-function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
+function Market({ market, pinId, ours }: { market: MarketOdds; pinId: number; ours?: PinForecastOutcome[] }) {
   const ref = parseMarketUrl(market.url);
   const shown = market.outcomes.slice(0, SHOWN_OUTCOMES);
   const listRef = useRef<HTMLUListElement>(null);
   const t = useT();
   useRowMoves(listRef, shown.map((o) => o.label).join('\n'));
+  // Chronopin's own chance per row (PinForecast.outcomes), matched by label: a column beside the market's.
+  const ourChance = useMemo(() => new Map((ours ?? []).map((o) => [o.label, o.probability / 100])), [ours]);
+  const hasOurs = !market.closed && shown.some((o) => ourChance.has(o.label));
   // Pictures of the people (curated: an exchange's own images are flags and
   // logos as often as faces). The leader with a picture is shown until another
   // is picked; picking the one shown folds it away.
@@ -250,11 +262,18 @@ function Market({ market, pinId }: { market: MarketOdds; pinId: number }) {
         </Anchor>
         <span className="ms-auto shrink-0 text-xs font-semibold tracking-wider text-subtle uppercase">{market.source}</span>
       </div>
+      {hasOurs ? (
+        <div aria-hidden className="mb-1 flex justify-end gap-3 text-[10px] font-semibold tracking-wider text-subtle uppercase">
+          <span className="w-11 text-end">{t('forecast.market')}</span>
+          <span className="w-16 text-end text-accent">{t('forecast.ours')}</span>
+        </div>
+      ) : null}
       <ul ref={listRef} className="flex flex-col gap-1.5">
         {shown.map((outcome) => (
           <Outcome
             key={outcome.label}
             outcome={outcome}
+            ours={hasOurs ? (ourChance.get(outcome.label) ?? null) : undefined}
             compact={false}
             photo={photos}
             active={outcome.label === active?.label}
@@ -329,12 +348,15 @@ function OutcomeSpotlight({ outcome }: { outcome: MarketOutcome }) {
 // number counts to its new value, and both tint green or red for a moment.
 function Outcome({
   outcome,
+  ours,
   compact,
   photo = false,
   active = false,
   onPick,
 }: {
   outcome: MarketOutcome;
+  // Chronopin's chance for this row (null = none given), undefined when the market has no such column.
+  ours?: number | null;
   compact: boolean;
   // Leave room for a thumbnail in front of the bar (a button when the outcome has a picture).
   photo?: boolean;
@@ -392,7 +414,7 @@ function Outcome({
   const text = trend === 'up' ? 'text-success' : trend === 'down' ? 'text-danger' : 'text-ink';
 
   return (
-    <li className={`grid items-center ${photo ? 'grid-cols-[auto_minmax(0,1fr)_auto]' : 'grid-cols-[minmax(0,1fr)_auto]'} ${compact ? 'gap-x-2' : 'gap-x-3'}`}>
+    <li className={`grid items-center ${photo ? 'grid-cols-[auto_minmax(0,1fr)_auto]' : ours !== undefined ? 'grid-cols-[minmax(0,1fr)_auto_auto]' : 'grid-cols-[minmax(0,1fr)_auto]'} ${compact ? 'gap-x-2' : 'gap-x-3'}`}>
       {photo ? (
         outcome.person && outcome.image ? (
           <button
@@ -464,6 +486,11 @@ function Outcome({
           </span>
         ) : null}
       </span>
+      {ours !== undefined ? (
+        <span className={`w-16 text-end font-semibold tabular-nums ${ours == null ? 'text-subtle opacity-40' : ourTone(ours, target)}`} aria-label={`${t('forecast.ours')} ${percent(ours)}`}>
+          {percent(ours)}
+        </span>
+      ) : null}
     </li>
   );
 }

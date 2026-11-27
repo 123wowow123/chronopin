@@ -1,16 +1,20 @@
 // Chronopin's own call on a market-predicted pin (PinForecast, 0272).
 export type PinForecastEvidence = { pinId: number; note: string; title?: string | null };
 
+export type PinForecastOutcome = { label: string; probability: number };
+
 export type PinForecastJson = {
   outcome: string;
   probability: number | null;
   marketProbability: number | null;
   reasoning: string;
   evidence: PinForecastEvidence[];
+  // Chronopin's chance per market outcome row, matched by the row's exact label.
+  outcomes: PinForecastOutcome[];
   checkedAt?: string;
 };
 
-export const FORECAST_LIMITS = { outcome: 200, reasoning: 1200, note: 200, evidence: 6 } as const;
+export const FORECAST_LIMITS = { outcome: 200, reasoning: 1200, note: 200, evidence: 6, outcomes: 60 } as const;
 
 const pct = (v: unknown): number | null => {
   if (v == null || v === '') return null;
@@ -34,5 +38,14 @@ export function parseForecast(body: Record<string, unknown>): Omit<PinForecastJs
     if (!Number.isInteger(pinId) || pinId < 1 || !note || note.length > FORECAST_LIMITS.note) throw new Error(`each evidence item needs a pinId and a note of at most ${FORECAST_LIMITS.note} characters`);
     return { pinId, note };
   });
-  return { outcome, reasoning, probability: pct(body.probability), marketProbability: pct(body.marketProbability), evidence };
+  const rawOutcomes = body.outcomes == null ? [] : body.outcomes;
+  if (!Array.isArray(rawOutcomes) || rawOutcomes.length > FORECAST_LIMITS.outcomes) throw new Error(`outcomes is a list of at most ${FORECAST_LIMITS.outcomes} rows`);
+  const outcomes = rawOutcomes.map((o) => {
+    const item = o as Record<string, unknown>;
+    const label = typeof item?.label === 'string' ? item.label.trim() : '';
+    const probability = pct(item?.probability);
+    if (!label || probability == null) throw new Error('each outcome needs the market row label and a probability 0-100');
+    return { label, probability };
+  });
+  return { outcome, reasoning, probability: pct(body.probability), marketProbability: pct(body.marketProbability), evidence, outcomes };
 }

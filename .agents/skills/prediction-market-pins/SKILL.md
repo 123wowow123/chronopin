@@ -61,6 +61,7 @@ site pins it rests on. Research the question and read related pins first (`find_
 the series, the company's recent pins, data-series pins). `probability` = chance the market's headline outcome happens;
 `marketProbability` = the market's figure that day. Only disagree with the market for a sourced reason, say what would
 change the call, list at most 6 `evidence` pins you opened, never invent figures. Redo calls older than 3 days.
+Also send `outcomes`: Chronopin's chance for **every row** of the market's ladder or field, label exactly as the odds panel shows it (`Above $3.00`), from one distribution so rows stay consistent. The odds panel shows them as a column right of the market's percentages.
 
 ## Unconfirmed reports panel (owner, 2026-11-25)
 - The scrape's reference search records them for any new pin, and every 06:00/18:00 run looks for them on each pin it researches (daily-news-job skill, "Unconfirmed reports on every pin"). While updating a predicted pin, look for fresh leak or unnamed-source reports about the event.

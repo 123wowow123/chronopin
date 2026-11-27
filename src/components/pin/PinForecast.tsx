@@ -4,15 +4,17 @@ import type { Translator } from '@/lib/i18n/translate';
 import type { PinForecastJson } from '@/lib/pinForecast';
 import { pinPath } from '@/lib/seo';
 
-function Figure({ label, value, accent }: { label: string; value: number; accent?: boolean }) {
+function Figure({ label, value, tone }: { label: string; value: number; tone?: 'up' | 'down' | 'level' }) {
+  const text = tone === 'up' ? 'text-success' : tone === 'down' ? 'text-danger' : tone === 'level' ? 'text-accent' : 'text-ink';
+  const fill = tone === 'up' ? 'bg-success' : tone === 'down' ? 'bg-danger' : tone === 'level' ? 'bg-accent' : 'bg-muted';
   return (
     <div className="min-w-24 flex-1">
       <div className="flex items-baseline justify-between gap-2">
         <span className="text-xs text-subtle">{label}</span>
-        <span className={`text-base font-semibold tabular-nums ${accent ? 'text-accent' : 'text-ink'}`}>{value}%</span>
+        <span className={`text-base font-semibold tabular-nums ${text}`}>{value}%</span>
       </div>
       <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-tint/10" role="img" aria-label={`${label} ${value}%`}>
-        <div className={`h-full rounded-full ${accent ? 'bg-accent' : 'bg-muted'}`} style={{ width: `${value}%` }} />
+        <div className={`h-full rounded-full ${fill}`} style={{ width: `${value}%` }} />
       </div>
     </div>
   );
@@ -35,7 +37,7 @@ export function PinForecast({ forecast, t }: { forecast: PinForecastJson | null;
       </p>
       {probability != null || marketProbability != null ? (
         <div className="mt-2 flex flex-wrap gap-4">
-          {probability != null ? <Figure label={t('forecast.ours')} value={probability} accent /> : null}
+          {probability != null ? <Figure label={t('forecast.ours')} value={probability} tone={marketProbability == null || probability === marketProbability ? 'level' : probability > marketProbability ? 'up' : 'down'} /> : null}
           {marketProbability != null ? <Figure label={t('forecast.market')} value={marketProbability} /> : null}
         </div>
       ) : null}

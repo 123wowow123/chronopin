@@ -720,7 +720,7 @@ async function PinBody({
         {pinMarketRefs(pin).length ? <ResolvedToggle pinId={pin.id} /> : null}
       </div>
       <PinAwards awards={pin.awards} />
-      {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
+      {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} ours={forecast?.outcomes} /> : null}
       <PinForecast forecast={forecast ?? null} t={t} />
       <PinUnconfirmedReports reports={unconfirmedReports(pin.references)} t={t} />
       {electionPerf ? <PinPerf perf={electionPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}

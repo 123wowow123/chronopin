@@ -594,7 +594,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'save_pin_forecast',
     description:
-      "Saves Chronopin's own prediction for a market-predicted pin, shown as a block under the market odds. `outcome` (required, at most 200 characters) is the call in one line; `probability` (0-100) is Chronopin's estimate that the market's headline outcome happens, `marketProbability` the market's figure today; `reasoning` (required, at most 1200) is the case from pages you opened (trend, base rates, scheduled catalysts), never a guess, and says what would change the call; `evidence` lists up to 6 other pins on the site the call rests on, each { pinId, note }. Disagree with the market only with a reason. Saved here, and on production when the run writes there (matched by sourceUrl; evidence pin ids are production ids only when the databases agree, so check them).",
+      "Saves Chronopin's own prediction for a market-predicted pin, shown as a block under the market odds. `outcome` (required, at most 200 characters) is the call in one line; `probability` (0-100) is Chronopin's estimate that the market's headline outcome happens, `marketProbability` the market's figure today; `reasoning` (required, at most 1200) is the case from pages you opened (trend, base rates, scheduled catalysts), never a guess, and says what would change the call; `evidence` lists up to 6 other pins on the site the call rests on, each { pinId, note }. `outcomes` gives Chronopin's chance for every row of the market's ladder or field (labels exactly as the odds panel shows them), drawn from one distribution so the rows are consistent; the panel shows them in a column beside the market's. Disagree with the market only with a reason. Saved here, and on production when the run writes there (matched by sourceUrl; evidence pin ids are production ids only when the databases agree, so check them).",
     input_schema: obj({
       pinId: num('Pin id'),
       outcome: str('The call, one line'),
@@ -602,6 +602,7 @@ export const TOOLS: JobTool[] = [
       marketProbability: num('0-100'),
       reasoning: str('The case and what would change it'),
       evidence: { type: 'array', items: { type: 'object', properties: { pinId: { type: 'integer' }, note: { type: 'string' } }, required: ['pinId', 'note'] }, description: 'Other pins the call rests on, at most 6' },
+      outcomes: { type: 'array', items: { type: 'object', properties: { label: { type: 'string' }, probability: { type: 'number' } }, required: ['label', 'probability'] }, description: "Chronopin's chance for each row of the market (label exactly as the odds panel shows it, e.g. 'Above $3.00'); shown as a column beside the market's percentages. Give every row of a ladder, from one distribution so the rows never cross." },
     }, ['pinId', 'outcome', 'reasoning']),
     run: async (input, ctx) => {
       const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
