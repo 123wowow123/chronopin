@@ -5,7 +5,7 @@ Part of the 06:00/18:00 news job (daily-jobs.md#pingangHandoff). Reads every liv
 user 1 from local, maps its categories to a desk, and moves only "good" pins
 (>=2 references, >600 characters of summary, >=1 picture, no mojibake title) with
 POST /api/admin/pins/author on local and production (ids match for these older pins;
-production is matched by sourceUrl to be safe). Thin pins are listed, not moved.
+production is matched by sourceUrl, or by exact title and start day when the pin has none, to be safe). Thin pins are listed, not moved.
 
   python3 scripts/jobs/pingang_handoff.py            # dry run
   python3 scripts/jobs/pingang_handoff.py --apply    # move them
@@ -40,7 +40,7 @@ def main(apply):
         off += 200
     def detail(r):
         d = json.load(urllib.request.urlopen(f"{L}/api/pins/{r['id']}", timeout=60))
-        return {'id': r['id'], 'sourceUrl': r['sourceUrl'], 'title': d['title'], 'cats': d.get('categories', []), 'refs': len(d.get('references', [])), 'media': len(d.get('media', [])), 'len': len(d.get('longFormSummary') or '')}
+        return {'id': r['id'], 'sourceUrl': r['sourceUrl'], 'start': d.get('utcStartDateTime'), 'title': d['title'], 'cats': d.get('categories', []), 'refs': len(d.get('references', [])), 'media': len(d.get('media', [])), 'len': len(d.get('longFormSummary') or '')}
     with cf.ThreadPoolExecutor(8) as ex: pins = list(ex.map(detail, rows))
     move = collections.defaultdict(list); held = []
     for o in pins:
@@ -55,8 +55,16 @@ def main(apply):
             print('local', dk, len(r.get('updated', [])), 'updated')
             prod_ids = []
             for o in chunk:  # prod id by sourceUrl, never assume the local id
-                f = call(P, pt, 'GET', '/api/admin/db/Pin?sourceUrl=' + urllib.parse.quote(o['sourceUrl']) + '&utcDeletedDateTime.null=true&limit=2')['rows']
+                try:
+                    if o['sourceUrl']:
+                        f = call(P, pt, 'GET', '/api/admin/db/Pin?sourceUrl=' + urllib.parse.quote(o['sourceUrl']) + '&utcDeletedDateTime.null=true&limit=2')['rows']
+                    else:  # no sourceUrl (e.g. local pin 132): match on exact title and start day, and only when unambiguous
+                        f = call(P, pt, 'GET', '/api/admin/db/Pin?title=' + urllib.parse.quote(o['title']) + '&utcDeletedDateTime.null=true&limit=5')['rows']
+                        f = [x for x in f if x.get('title') == o['title'] and str(x.get('utcStartDateTime') or '')[:10] == str(o.get('start') or '')[:10]]
+                except Exception as e:  # one unmatched pin must not stop the rest of the handoff
+                    print('prod match failed for', o['id'], e); continue
                 if len(f) == 1 and f[0].get('userId') == 1: prod_ids.append(f[0]['id'])
+                else: print('prod match skipped for', o['id'], o['title'][:50], len(f), 'rows')
             if prod_ids:
                 r = call(P, pt, 'POST', '/api/admin/pins/author', {'ids': prod_ids, 'userName': dk})
                 print('prod ', dk, len(r.get('updated', [])), 'updated')
