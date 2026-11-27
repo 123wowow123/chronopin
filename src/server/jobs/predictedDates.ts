@@ -10,6 +10,20 @@ import { marketState } from '../predictionMarkets';
 import log from '../util/log';
 
 const MAX_PINS_READ = 150;
+const PROD_URL = process.env.PROD_BASE_URL ?? 'https://www.chronopin.com';
+
+// The local database lags production, so a 'resolved' pin may already be confirmed there.
+// Keeps the pin when production cannot be read or answers with another source.
+async function confirmedOnProduction(id: number, sourceUrl: string | null): Promise<boolean> {
+  try {
+    const res = await fetch(`${PROD_URL}/api/pins/${id}`, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return false;
+    const pin = (await res.json()) as { dateConfidence?: string; sourceUrl?: string | null };
+    return pin.dateConfidence === 'confirmed' && (pin.sourceUrl ?? null) === sourceUrl;
+  } catch {
+    return false;
+  }
+}
 
 const MONTH = '(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?';
 const DATE_LABEL = new RegExp(`^(?:(?:on or )?(?:before|by|after)\\s+)?(?:${MONTH}(?:\\s+\\d{1,2}(?:st|nd|rd|th)?)?(?:,?\\s*\\d{4})?|q[1-4]\\s*\\d{4}|(?:end of\\s+)?20\\d\\d)$`, 'i');
@@ -35,7 +49,8 @@ export const oddsTitleStale = (title: string, updated: Date | string | null, now
 
 export function dateCheckReason(startDay: string, today: string, odds: Pick<MarketOdds, 'closed' | 'outcomes'>, staleOddsTitle = false): DateCheckReason | null {
   const passed = startDay < today;
-  if (odds.closed) return passed ? 'resolved' : null;
+  // A closed market that has settled (an outcome at 100%) is resolved even when the pin's day is still ahead.
+  if (odds.closed) return passed || odds.outcomes.some((o) => (o.probability ?? 0) >= 0.99) ? 'resolved' : null;
   if (passed) return 'missed';
   if (isDateLadder(odds.outcomes.map((o) => o.label))) return 'ladder';
   return staleOddsTitle ? 'odds' : null;
@@ -68,7 +83,9 @@ export async function predictedDateChecks({ limit = 25, exclude = [] as number[]
       });
       if (!odds?.outcomes.length) continue;
       const reason = dateCheckReason(dayKeyIn(new Date(row.utcStartDateTime).toISOString(), 'UTC'), today, odds, oddsTitleStale(row.title, row.utcUpdatedDateTime));
-      if (!reason) continue;
+      // The first market read (the pin's own sourceUrl comes first) decides; a companion market never overrides it.
+      if (!reason) break;
+      if (reason === 'resolved' && (await confirmedOnProduction(row.id, row.sourceUrl))) break;
       pins.push({
         id: row.id,
         title: row.title,

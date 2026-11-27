@@ -22,6 +22,10 @@ describe('dateCheckReason', () => {
     expect(dateCheckReason('2026-12-01', '2026-11-25', odds(false, 'Yes', 'No'))).toBeNull();
     expect(dateCheckReason('2026-12-01', '2026-11-25', odds(true, 'Yes', 'No'))).toBeNull();
   });
+  it('flags a settled market even when the pin day is ahead', () => {
+    const settled = { closed: true, outcomes: [{ label: 'Jensen Huang', probability: 1 }, { label: 'Ian Buck', probability: 0 }] };
+    expect(dateCheckReason('2026-12-31', '2026-11-26', settled)).toBe('resolved');
+  });
 });
 
 describe('odds in the title', () => {
