@@ -1020,3 +1020,8 @@ Round 15 landing-tab verification notes (Nov 23 — San Antonio Iconic dishes 6 
     - **Wave 15 Korean Naver Place delivery-markup & Japanese chain branch-tier traps (Nov 26 — `.scrape/pricing-gaps-2026-11-24/verified_prices_wave15.json`):**
       - Naver Place's auto-synced delivery tabs (`Baedal Minjok` on `Bibijae` `1156147371`) can add `+1,000 KRW` over dine-in; cross-check against recent physical Google Maps `Photos -> Menu` sheets (`Michael Swanson`, Aug 2026: `13,000`/`11,500 KRW` dine-in vs `14,000`/`12,500 KRW` Baemin).
       - Do not borrow corporate web menus across Japanese chains that print branch-tier disclaimers (`価格が店舗により異なります`: `Sugakiya`, `Shake Shack`, `Hamakatsu`, `Saint Marc Cafe`), and watch for percent-encoding case duplicates in DB records (`1410` `%E9%81%93...` vs `1430` `%e9%81%93...` for `Taco Bell — Dotonbori`).
+
+## Wave 16 traps (2026-11-26)
+- Price only items with one unambiguous branch price; hold items whose board shows several variants or sizes (burritos, platters, brunch sets) rather than picking the cheapest.
+- A Naver Place `시가` market price can differ from the in-store menu book; use the book only when it is a dated 2026 photo, set `priceLabel: null`, and note whole/half portions.
+- `apply_prices_multi.py --audit` can die on a transient SSL handshake timeout after a successful apply; rerun `--audit` alone, then `--dry-run` to confirm zero dirty targets.

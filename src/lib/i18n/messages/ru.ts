@@ -1385,6 +1385,14 @@ const ru: Messages = {
     heading: 'Неподтверждённое сообщение',
     note: 'Никто из участников это не подтвердил, и дата выше на этом не основана.',
   },
+  forecast: {
+    heading: 'Прогноз Chronopin',
+    ours: 'Chronopin',
+    market: 'Рынок',
+    basedOn: 'На основе этих пинов',
+    note: 'Оценка Chronopin. Не финансовая рекомендация.',
+    updated: 'Обновлено {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} на {source}, +{points} п. за неделю',
     trendDown: '{label} {percent} на {source}, −{points} п. за неделю',

@@ -54,6 +54,14 @@ job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) 
 - Worked example: pin 15613 (next Claude Opus): Nov 30 estimate (Oct 15), brought to Nov 1 (Oct 21, not a slip),
   Nov 1 missed, moved to Dec 1 (Nov 25) with `originalStartDate` 2026-11-01.
 
+## Chronopin prediction block (owner, 2026-11-26; every 06:00 and 18:00 run)
+Run `forecast_candidates`, work each pin and save with `save_pin_forecast` (docs: `docs/okf/api/pin-forecast.md`).
+It renders under the market odds: the call, Chronopin's probability beside the market's, the reasoning and links to
+site pins it rests on. Research the question and read related pins first (`find_pins`/`get_pin`: earlier instalments of
+the series, the company's recent pins, data-series pins). `probability` = chance the market's headline outcome happens;
+`marketProbability` = the market's figure that day. Only disagree with the market for a sourced reason, say what would
+change the call, list at most 6 `evidence` pins you opened, never invent figures. Redo calls older than 3 days.
+
 ## Unconfirmed reports panel (owner, 2026-11-25)
 - The scrape's reference search records them for any new pin, and every 06:00/18:00 run looks for them on each pin it researches (daily-news-job skill, "Unconfirmed reports on every pin"). While updating a predicted pin, look for fresh leak or unnamed-source reports about the event.
 - Add each as a reference: `confidence` under 50 (40), `publishedDate`, **no** `startDate`/`endDate`, `reasoning` =

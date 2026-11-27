@@ -1553,6 +1553,14 @@ const ar: Messages = {
     heading: 'تقرير غير مؤكد',
     note: 'لم يؤكد أي طرف معني هذا الخبر، ولا يحدد التاريخ أعلاه.',
   },
+  forecast: {
+    heading: 'توقع Chronopin',
+    ours: 'Chronopin',
+    market: 'السوق',
+    basedOn: 'استنادًا إلى هذه الدبابيس',
+    note: 'تقدير من Chronopin. ليس نصيحة مالية.',
+    updated: 'تم التحديث في {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} على {source}، بارتفاع {points} نقطة هذا الأسبوع',
     trendDown: '{label} {percent} على {source}، بانخفاض {points} نقطة هذا الأسبوع',

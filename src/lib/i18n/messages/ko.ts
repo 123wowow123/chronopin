@@ -1342,6 +1342,14 @@ const ko: Messages = {
     heading: '미확인 보도',
     note: '관계자 누구도 확인하지 않았으며, 위 날짜의 근거가 아닙니다.',
   },
+  forecast: {
+    heading: 'Chronopin 예측',
+    ours: 'Chronopin',
+    market: '시장',
+    basedOn: '근거가 된 핀',
+    note: 'Chronopin의 추정이며 투자 조언이 아닙니다.',
+    updated: '{date} 업데이트.',
+  },
   odds: {
     trendUp: '{source}의 {label} {percent}, 이번 주 {points}포인트 상승',
     trendDown: '{source}의 {label} {percent}, 이번 주 {points}포인트 하락',

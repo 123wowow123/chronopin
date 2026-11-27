@@ -1349,6 +1349,14 @@ const ms: Messages = {
     heading: 'Laporan belum disahkan',
     note: 'Tiada pihak terlibat yang mengesahkannya, dan ia tidak menentukan tarikh di atas.',
   },
+  forecast: {
+    heading: 'Ramalan Chronopin',
+    ours: 'Chronopin',
+    market: 'Pasaran',
+    basedOn: 'Berdasarkan pin ini',
+    note: 'Anggaran Chronopin. Bukan nasihat kewangan.',
+    updated: 'Dikemas kini pada {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} di {source}, naik {points} mata minggu ini',
     trendDown: '{label} {percent} di {source}, turun {points} mata minggu ini',

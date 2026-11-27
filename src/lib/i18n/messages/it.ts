@@ -1339,6 +1339,14 @@ const it: Messages = {
     heading: 'Notizia non confermata',
     note: 'Nessuna delle parti coinvolte l’ha confermata e non determina la data indicata sopra.',
   },
+  forecast: {
+    heading: 'Previsione di Chronopin',
+    ours: 'Chronopin',
+    market: 'Mercato',
+    basedOn: 'Basato su questi pin',
+    note: 'Stima di Chronopin. Non è consulenza finanziaria.',
+    updated: 'Aggiornato il {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} su {source}, +{points} punti questa settimana',
     trendDown: '{label} {percent} su {source}, -{points} punti questa settimana',

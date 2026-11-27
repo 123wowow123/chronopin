@@ -1342,6 +1342,14 @@ const zh: Messages = {
     heading: '未经证实的报道',
     note: '相关方均未证实此消息，上方日期不以此为依据。',
   },
+  forecast: {
+    heading: 'Chronopin 预测',
+    ours: 'Chronopin',
+    market: '市场',
+    basedOn: '依据的图钉',
+    note: 'Chronopin 的估计，不构成投资建议。',
+    updated: '更新于 {date}。',
+  },
   odds: {
     trendUp: '{source} 上 {label} 为 {percent}，本周上涨 {points} 个百分点',
     trendDown: '{source} 上 {label} 为 {percent}，本周下跌 {points} 个百分点',

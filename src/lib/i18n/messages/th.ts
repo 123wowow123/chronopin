@@ -1338,6 +1338,14 @@ const th: Messages = {
     heading: 'รายงานที่ยังไม่ได้รับการยืนยัน',
     note: 'ผู้เกี่ยวข้องยังไม่ได้ยืนยันข้อมูลนี้ และไม่ได้ใช้กำหนดวันที่ด้านบน',
   },
+  forecast: {
+    heading: 'คาดการณ์ของ Chronopin',
+    ours: 'Chronopin',
+    market: 'ตลาด',
+    basedOn: 'อ้างอิงจากพินเหล่านี้',
+    note: 'ประมาณการของ Chronopin ไม่ใช่คำแนะนำทางการเงิน',
+    updated: 'อัปเดตเมื่อ {date}',
+  },
   odds: {
     trendUp: '{label} {percent} บน {source} เพิ่มขึ้น {points} จุดในสัปดาห์นี้',
     trendDown: '{label} {percent} บน {source} ลดลง {points} จุดในสัปดาห์นี้',

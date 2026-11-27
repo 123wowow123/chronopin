@@ -863,6 +863,16 @@ events and create **predicted pins** out of them:
   `dateConfidenceReasoning`, start with `Estimated:` and explain the basis, quoting
   the market's odds and dollar volume as read on that day (past tense: "On 15 October 2026
   Polymarket traders priced...").
+
+**Chronopin prediction (owner, 2026-11-26):** after the date checks, call `forecast_candidates` and, for each pin,
+form Chronopin's own call and save it with `save_pin_forecast` (`docs/okf/api/pin-forecast.md`; shown under the market
+odds). Read the market, research the underlying question (current data, base rates, scheduled catalysts), and read
+related pins on the site with `find_pins` / `get_pin`: earlier instalments of a recurring series (pin 21508's earlier
+months), the company's recent pins, data-series pins. `probability` is Chronopin's estimate that the market's headline
+outcome happens, `marketProbability` the market's figure that day; disagree with the market only with a sourced reason
+and say what would change the call. List up to 6 supporting pins as `evidence` ({pinId, note}); never invent figures or
+cite pins you did not open. Redo any call older than 3 days.
+
 - **Monthly Brent and WTI commodity prices (owner instruction, 2026-10-15):**
   Scrape prediction markets (Kalshi, Polymarket) for Brent and WTI crude oil commodity prices every month.
   - **Create predicted pins:** Every month, create pins for upcoming Brent and WTI price forecasts, tagged `Predicted` (plus `Energy`, `Economy`, `Commodities`, `Oil Price`, `Brent` or `WTI`), set `dateConfidence: 'estimated'` dated to the month's settlement date (e.g. 5:00 PM EDT / 21:00 UTC on the final trading day of the month), authored under `@EnergyDesk` (or `@EconDesk`), quoting the contract strike distribution and traded volume.

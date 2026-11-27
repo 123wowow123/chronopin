@@ -26,6 +26,8 @@ import type { PinPurposeJson } from '@/lib/pinPurpose';
 import { damForPin } from '../model/pinDam';
 import type { PinDamJson } from '@/lib/damSpecs';
 import { marketImpactForPin } from '../model/pinMarketImpact';
+import { forecastForPin } from '../model/pinForecast';
+import type { PinForecastJson } from '@/lib/pinForecast';
 import type { PinMarketImpactJson } from '@/lib/marketImpact';
 import type { PinProjectJson } from '@/lib/projectSpecs';
 import { hasSiteShape, siteShapeForPin } from '../model/pinSiteShape';
@@ -315,6 +317,14 @@ export async function pinMarketImpact(id: number): Promise<PinMarketImpactJson |
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return marketImpactForPin(id);
+}
+
+// ChronoPin's own prediction for a market-predicted pin (PinForecast), or null.
+export async function pinForecast(id: number): Promise<PinForecastJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return forecastForPin(id);
 }
 
 // The pin's dam height / storage / capacity figures (PinDam).

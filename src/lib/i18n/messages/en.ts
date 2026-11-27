@@ -1349,6 +1349,14 @@ const en = {
     heading: 'Unconfirmed report',
     note: 'Nobody involved has confirmed this, and it does not set the date above.',
   },
+  forecast: {
+    heading: 'Chronopin prediction',
+    ours: 'Chronopin',
+    market: 'Market',
+    basedOn: 'Based on these pins',
+    note: 'Chronopin\'s estimate. Not financial advice.',
+    updated: 'Updated {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} on {source}, up {points} points this week',
     trendDown: '{label} {percent} on {source}, down {points} points this week',

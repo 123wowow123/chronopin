@@ -1355,6 +1355,14 @@ const hi: Messages = {
     heading: 'अपुष्ट रिपोर्ट',
     note: 'किसी भी संबंधित पक्ष ने इसकी पुष्टि नहीं की है, और ऊपर की तारीख इस पर आधारित नहीं है।',
   },
+  forecast: {
+    heading: 'Chronopin का पूर्वानुमान',
+    ours: 'Chronopin',
+    market: 'बाज़ार',
+    basedOn: 'इन पिनों पर आधारित',
+    note: 'Chronopin का अनुमान। वित्तीय सलाह नहीं।',
+    updated: '{date} को अपडेट किया गया।',
+  },
   odds: {
     trendUp: '{source} पर {label} {percent}, इस हफ़्ते {points} पॉइंट ऊपर',
     trendDown: '{source} पर {label} {percent}, इस हफ़्ते {points} पॉइंट नीचे',

@@ -1348,6 +1348,14 @@ const vi: Messages = {
     heading: 'Tin chưa được xác nhận',
     note: 'Chưa bên liên quan nào xác nhận và tin này không quyết định ngày ở trên.',
   },
+  forecast: {
+    heading: 'Dự đoán của Chronopin',
+    ours: 'Chronopin',
+    market: 'Thị trường',
+    basedOn: 'Dựa trên các ghim này',
+    note: 'Ước tính của Chronopin. Không phải lời khuyên tài chính.',
+    updated: 'Cập nhật {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} trên {source}, tăng {points} điểm tuần này',
     trendDown: '{label} {percent} trên {source}, giảm {points} điểm tuần này',

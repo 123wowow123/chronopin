@@ -1349,6 +1349,14 @@ const id: Messages = {
     heading: 'Laporan belum dikonfirmasi',
     note: 'Belum ada pihak terkait yang mengonfirmasinya, dan ini tidak menentukan tanggal di atas.',
   },
+  forecast: {
+    heading: 'Prediksi Chronopin',
+    ours: 'Chronopin',
+    market: 'Pasar',
+    basedOn: 'Berdasarkan pin ini',
+    note: 'Perkiraan Chronopin. Bukan nasihat keuangan.',
+    updated: 'Diperbarui {date}.',
+  },
   odds: {
     trendUp: '{label} {percent} di {source}, naik {points} poin minggu ini',
     trendDown: '{label} {percent} di {source}, turun {points} poin minggu ini',

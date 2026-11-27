@@ -68,6 +68,8 @@ import { ACTIONS, INSTRUMENTS, TRADER_SOURCES } from '@/lib/traders';
 import TraderPosition from '../model/traderPosition';
 import { addPosition } from '../services/traders';
 import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
+import { forecastCandidates, saveForecast } from '../model/pinForecast';
+import { parseForecast } from '@/lib/pinForecast';
 import { salesStatus, savePinSales } from './productSales';
 import { photoGaps } from './outcomePhotos';
 import { photosProblem, savePhotosPartial } from '../model/pinOutcomePhoto';
@@ -575,6 +577,43 @@ export const TOOLS: JobTool[] = [
       });
       await act(ctx, { tool: 'save_market_impact', pinId, detail: `weight ${weight}${pushed ? '; prod saved' : ''}` });
       return { pinId, weight, production: pushed };
+    },
+  },
+  // --- Chronopin's call on predicted pins (the predictionMarkets task) -------
+  {
+    name: 'forecast_candidates',
+    description:
+      "Open Polymarket/Kalshi predicted pins that have no Chronopin prediction yet, or one older than `staleDays` (default 3), unreviewed first, soonest event first. For each: read the market, research the underlying question, run find_pins / get_pin on related pins on the site (earlier instalments of the series, the company's recent pins, data-series pins), then save_pin_forecast. `remaining` is how many more wait.",
+    input_schema: obj({ limit: num('At most this many, default 10, at most 30'), staleDays: num('Re-do a call older than this, default 3'), skip: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already handled this run' } }),
+    run: async (input, ctx) => {
+      const result = await forecastCandidates(int(input.limit, 10, 1, 30), int(input.staleDays, 3, 1, 90), Array.isArray(input.skip) ? input.skip.map(Number).filter(Number.isInteger) : []);
+      await act(ctx, { tool: 'forecast_candidates', detail: `${result.candidates.length} pin(s) listed, ${result.remaining} more waiting` });
+      return result;
+    },
+  },
+  {
+    name: 'save_pin_forecast',
+    description:
+      "Saves Chronopin's own prediction for a market-predicted pin, shown as a block under the market odds. `outcome` (required, at most 200 characters) is the call in one line; `probability` (0-100) is Chronopin's estimate that the market's headline outcome happens, `marketProbability` the market's figure today; `reasoning` (required, at most 1200) is the case from pages you opened (trend, base rates, scheduled catalysts), never a guess, and says what would change the call; `evidence` lists up to 6 other pins on the site the call rests on, each { pinId, note }. Disagree with the market only with a reason. Saved here, and on production when the run writes there (matched by sourceUrl; evidence pin ids are production ids only when the databases agree, so check them).",
+    input_schema: obj({
+      pinId: num('Pin id'),
+      outcome: str('The call, one line'),
+      probability: num('0-100'),
+      marketProbability: num('0-100'),
+      reasoning: str('The case and what would change it'),
+      evidence: { type: 'array', items: { type: 'object', properties: { pinId: { type: 'integer' }, note: { type: 'string' } }, required: ['pinId', 'note'] }, description: 'Other pins the call rests on, at most 6' },
+    }, ['pinId', 'outcome', 'reasoning']),
+    run: async (input, ctx) => {
+      const pinId = int(input.pinId, 0, 1, 2 ** 31 - 1);
+      const forecast = parseForecast(input);
+      await saveForecast(pinId, forecast);
+      expirePinPage(pinId);
+      const pushed = await pushModelPerf(pinId, 'forecast', forecast).catch((err) => {
+        log.warn(`pin ${pinId}'s forecast did not reach production:`, (err as Error).message);
+        return false;
+      });
+      await act(ctx, { tool: 'save_pin_forecast', pinId, detail: `${forecast.probability ?? '-'}% vs market ${forecast.marketProbability ?? '-'}%${pushed ? '; prod saved' : ''}` });
+      return { pinId, probability: forecast.probability, production: pushed };
     },
   },
   // --- Industry forecast panels (the industryForecasts task) ----------------

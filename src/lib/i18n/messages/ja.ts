@@ -1342,6 +1342,14 @@ const ja: Messages = {
     heading: '未確認の報道',
     note: '当事者はこの内容を確認しておらず、上の日付の根拠にはしていません。',
   },
+  forecast: {
+    heading: 'Chronopinの予測',
+    ours: 'Chronopin',
+    market: '市場',
+    basedOn: '根拠となるピン',
+    note: 'Chronopinの推定です。投資助言ではありません。',
+    updated: '{date}に更新。',
+  },
   odds: {
     trendUp: '{source}で{label} {percent}、今週 {points} ポイント上昇',
     trendDown: '{source}で{label} {percent}、今週 {points} ポイント下落',
