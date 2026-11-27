@@ -53,17 +53,30 @@ export function priceLines(rows: Price[]): ForecastLine[] {
   ];
 }
 
+// Refuses lines that look like a unit change or a broken feed: the latest all-makers
+// total must be positive and at least 10% of the series peak (Ramp's totals only grow;
+// a x1e12 unit change once flattened every point to 0 and was saved unnoticed).
+export function assertPlausibleUsage(slug: string, lines: ForecastLine[]): void {
+  const values = lines[0]?.points.map((p) => p.value) ?? [];
+  const latest = values.at(-1) ?? 0;
+  const peak = Math.max(0, ...values);
+  if (!(latest > 0) || latest < peak * 0.1) throw new Error(`Ramp feed for ${slug} looks wrong (latest ${latest}, peak ${peak}); not saving. Check the feed's units.`);
+}
+
 // Fetches the feeds and replaces the three rows' lines here and, when the run
 // writes to production, there. Throws if a row is missing (npm run industry:forecasts).
 export async function refreshRampTokens(): Promise<{ through: string; weeks: number; production: boolean }> {
   const [usage, prices] = await Promise.all([feed<Usage>('tokenVolumes'), feed<Price>('tokenPrices')]);
   const sets: [string, ForecastLine[]][] = [
-    [RAMP_TOKEN_ROWS.volume, usageLines(usage, 'token_volume', 1e12, 2)],
-    [RAMP_TOKEN_ROWS.spend, usageLines(usage, 'token_spend', 1e6, 2)],
+    // The feed already reports trillions of tokens and millions of dollars (dividing
+    // by 1e12 / 1e6 flattened every line to 0), so no scaling.
+    [RAMP_TOKEN_ROWS.volume, usageLines(usage, 'token_volume', 1, 2)],
+    [RAMP_TOKEN_ROWS.spend, usageLines(usage, 'token_spend', 1, 2)],
     [RAMP_TOKEN_ROWS.price, priceLines(prices)],
   ];
   let production = true;
   for (const [slug, lines] of sets) {
+    if (slug !== RAMP_TOKEN_ROWS.price) assertPlausibleUsage(slug, lines);
     if (lines.some((l) => l.points.length < 2)) throw new Error(`Ramp feed for ${slug} no longer has a weekly series`);
     if (!(await saveForecastSnapshot(slug, lines))) throw new Error(`No ${slug} row; run npm run industry:forecasts`);
     production = (await industryForecastRequest({ slug, snapshot: lines }).then(() => true, () => false)) && production;
