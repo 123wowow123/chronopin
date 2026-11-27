@@ -27,6 +27,11 @@ Run `predicted_date_checks` and work every pin it returns (`missed`, `resolved`,
 job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) and apply the same rules.
 - **New date:** the first day of the likeliest window still ahead (cumulative ladder: subtract neighbouring lines to
   get each window's share); its last day if that window is under way. Say it is an estimate, not an announced date.
+  For "begins by" / ceasefire / "effective by" ladders this is the **most likely effective end date**: the end of the
+  window with the biggest share, never the last priced line just because its cumulative odds are highest (the cumulative
+  figure always grows with the date). Quote both lines in `dateConfidenceReasoning`. Pin 20946 (US-Iran ceasefire,
+  2026-11-26): Nov 23-30 added 16 points (57.5% to 73.5%), Dec 1-31 added 9 (to 82.5%), so the date is Nov 30; Dec 31 was
+  set once on the owner's request and was the wrong rule.
 - **Missed date** (the pin's day passed, no event, moved later): set `originalStartDate` to the missed day **only when
   it is empty**, and `delayReasoning` starting `Estimated:`. The start bar shows that date and each later one pushed
   back as separate segments, labelled under the bar (from the update log, `missedDates` in `src/lib/delay.ts`). Later

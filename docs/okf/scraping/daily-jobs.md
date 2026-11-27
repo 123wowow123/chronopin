@@ -857,7 +857,9 @@ events and create **predicted pins** out of them:
   to occur or start (`utcStartDateTime`), following the [predictions rule](strategy.md#which-date)
   and [vertical recipe](verticals.md). Never date to the market's settlement
   buffer or closing time (`closes`). For a cumulative ladder, date to the likeliest
-  rung or where probability crosses a significant majority threshold. In
+  rung or where probability crosses a significant majority threshold; for "begins by"
+  ladders use the most likely effective end date (the end of the window with the biggest
+  share, not the last priced line). In
   `dateConfidenceReasoning`, start with `Estimated:` and explain the basis, quoting
   the market's odds and dollar volume as read on that day (past tense: "On 15 October 2026
   Polymarket traders priced...").
