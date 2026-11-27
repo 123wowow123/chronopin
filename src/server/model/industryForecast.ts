@@ -3,7 +3,7 @@
 import * as db from '../db';
 import { getFredSeries } from '../fredSeries';
 import type { ForecastLine, ForecastSource, IndustryForecastInput, IndustryForecastJson } from '@/lib/industryForecast';
-import { isPinSubjectForecast, matchesPinForecast, matchesTags } from '@/lib/industryForecast';
+import { isPinSubjectForecast, matchesPinForecast, matchesTags, snapshotProblem } from '@/lib/industryForecast';
 
 type Row = {
   slug: string;
@@ -108,7 +108,17 @@ export async function saveIndustryForecast(r: IndustryForecastInput, snapshot: F
 }
 
 // The BTOS lines of the AI adoption row, replaced.
-export async function saveForecastSnapshot(slug: string, snapshot: ForecastLine[]): Promise<boolean> {
+export class SnapshotRejected extends Error {}
+
+// Replaces a row's stored lines. Every refresh job and the admin route save through
+// here, so a feed that changed units is refused before it overwrites good data
+// (snapshotProblem); { force: true } is for a reviewed, genuine jump.
+export async function saveForecastSnapshot(slug: string, snapshot: ForecastLine[], opts: { force?: boolean } = {}): Promise<boolean> {
+  if (!opts.force) {
+    const [current] = await db.query<{ snapshot: ForecastLine[] }>(`SELECT "snapshot" FROM "IndustryForecast" WHERE "slug" = $1`, [slug]);
+    const problem = current ? snapshotProblem(current.snapshot ?? [], snapshot) : null;
+    if (problem) throw new SnapshotRejected(`${slug} snapshot not saved: ${problem}`);
+  }
   const rows = await db.query<{ slug: string }>(`UPDATE "IndustryForecast" SET "snapshot" = $2, "checkedAt" = now() WHERE "slug" = $1 RETURNING "slug"`, [slug, JSON.stringify(snapshot)]);
   return rows.length === 1;
 }

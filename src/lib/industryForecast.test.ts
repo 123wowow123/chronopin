@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { forecastProblem, formatForecastValue, matchesPinForecast, matchesTags } from './industryForecast';
+import { forecastProblem, formatForecastValue, matchesPinForecast, matchesTags, snapshotProblem } from './industryForecast';
 import forecasts from '../../scripts/industry/forecasts.json';
 
 const row = {
@@ -84,5 +84,23 @@ describe('industry forecast', () => {
     expect(forecastProblem({ ...row, sources: [{ ...row.sources[0], quote: null }] })).toMatch(/quote/);
     expect(forecastProblem({ ...row, projection: null })).toMatch(/earlier editions need/);
     expect(forecastProblem({ ...row, earlier: [{ ...row.earlier[0], publishedDate: null }] })).toMatch(/publishedDate/);
+  });
+});
+
+describe('snapshotProblem', () => {
+  const line = (label: string, ...values: number[]) => ({ label, points: values.map((value, i) => ({ x: `2026-11-0${i + 1}`, value })) });
+
+  it('refuses a line flattened to zero by a unit change', () => {
+    expect(snapshotProblem([line('A', 200, 276)], [line('A', 0, 0, 0)])).toMatch(/all zeros/);
+    expect(snapshotProblem([line('A', 200, 276)], [line('A', 100, 0)])).toMatch(/went from 276 to 0/);
+  });
+
+  it('refuses a line that exploded', () => {
+    expect(snapshotProblem([line('A', 2, 3)], [line('A', 2, 3000)])).toMatch(/more than 20x/);
+  });
+
+  it('accepts normal moves, new lines and lines that were zero before', () => {
+    expect(snapshotProblem([line('A', 200, 276)], [line('A', 200, 300), line('B', 1, 2), line('C', 0, 5)])).toBeNull();
+    expect(snapshotProblem([line('C', 0, 0)], [line('C', 0, 5)])).toBeNull();
   });
 });

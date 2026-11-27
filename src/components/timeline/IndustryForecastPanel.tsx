@@ -237,7 +237,7 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
   return (
     <>
       <ForecastGraph forecast={forecast} large={large} />
-      <ul className={`mt-2 flex flex-wrap gap-x-4 gap-y-1 tabular-nums text-muted ${large ? 'text-sm' : 'text-xs'}`}>
+      <ul className={`mt-2 grid grid-cols-[repeat(auto-fill,minmax(13rem,1fr))] gap-x-4 gap-y-1 tabular-nums text-muted ${large ? 'text-sm' : 'text-xs'}`}>
         {latest.map(({ label, pinId, p }, i) => (
           <li key={label}>
             <span className={`me-1 inline-block size-2 rounded-full ${DOTS[i % DOTS.length]}`} aria-hidden />
@@ -250,14 +250,14 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
           </li>
         ))}
         {!categories && projected.length > PROJECTED_SHOWN ? (
-          <li className="w-full">
+          <li className="col-span-full">
             <button type="button" onClick={() => setExpanded(!expanded)} className="text-accent hover:underline">
               {expanded ? t('common.showLess') : `${t('common.showMore')} (${projected.length - PROJECTED_SHOWN})`}
             </button>
           </li>
         ) : null}
         {forecast.earlier.map((e) => (
-          <li key={e.label} className="w-full text-subtle">
+          <li key={e.label} className="col-span-full text-subtle">
             <span className="me-1 inline-block w-4 border-t-2 border-dotted border-subtle align-middle" aria-hidden />
             {t('pin.industry.revised')}: {e.label} ({e.points.map((p) => `${p.x} ${formatForecastValue(forecast, p.value)}`).join(', ')})
           </li>

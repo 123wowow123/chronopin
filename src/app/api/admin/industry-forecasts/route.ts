@@ -3,7 +3,7 @@ import { revalidateTag } from 'next/cache';
 import { forecastProblem, type ForecastLine } from '@/lib/industryForecast';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
-import { saveForecastSnapshot, saveIndustryForecast } from '@/server/model/industryForecast';
+import { SnapshotRejected, saveForecastSnapshot, saveIndustryForecast } from '@/server/model/industryForecast';
 import { TAGS } from '@/server/services/cache';
 
 // Saves one industry forecast row (IndustryForecast, 0216) so the jobs' local
@@ -15,7 +15,9 @@ export const PUT = route(async (request: NextRequest) => {
   if (Array.isArray(body.snapshot) && typeof body.slug === 'string' && Object.keys(body).length === 2) {
     const ok = body.snapshot.every((l: ForecastLine) => typeof l?.label === 'string' && Array.isArray(l.points) && l.points.every((p) => typeof p.x === 'string' && Number.isFinite(p.value)));
     if (!ok) throw new HttpError(400, '', { message: 'snapshot: [{ label, points: [{ x, value }] }]' });
-    const saved = await saveForecastSnapshot(body.slug, body.snapshot);
+    const saved = await saveForecastSnapshot(body.slug, body.snapshot).catch((e) => {
+      throw e instanceof SnapshotRejected ? new HttpError(422, '', { message: e.message }) : e;
+    });
     // The forecasts page is cached for hours; new lines and pin links must show on it.
     if (saved) revalidateTag(TAGS.industryForecasts, { expire: 0 });
     return json({ saved });

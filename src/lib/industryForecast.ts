@@ -5,6 +5,24 @@ export type ForecastPoint = { x: string; value: number };
 export type ForecastLine = { label: string; points: ForecastPoint[]; kind?: 'live' | 'snapshot' | 'earlier'; publishedDate?: string;
   // A pin about the thing this line measures (a GPU model's launch pin): the legend links to it.
   pinId?: number };
+// A refresh that collapsed or exploded a line is almost always a feed unit change
+// (Ramp's switch to trillions/millions once flattened every line to 0), not news.
+// Returns why the new lines must not replace the stored ones, or null when they look sane.
+export const SNAPSHOT_MAX_JUMP = 20;
+export function snapshotProblem(previous: ForecastLine[], next: ForecastLine[]): string | null {
+  for (const line of next) {
+    const values = line.points.map((p) => p.value);
+    const latest = values.at(-1);
+    if (latest === undefined || !Number.isFinite(latest)) return `"${line.label}" has no latest value`;
+    if (values.length >= 3 && values.every((v) => v === 0)) return `"${line.label}" is all zeros`;
+    const before = previous.find((l) => l.label === line.label)?.points.at(-1)?.value;
+    if (before === undefined || !Number.isFinite(before) || before === 0) continue;
+    const ratio = latest / before;
+    if (!(ratio >= 1 / SNAPSHOT_MAX_JUMP && ratio <= SNAPSHOT_MAX_JUMP)) return `"${line.label}" went from ${before} to ${latest} (more than ${SNAPSHOT_MAX_JUMP}x); check the feed's units`;
+  }
+  return null;
+}
+
 export type ForecastSource = { label: string; url: string; date: string | null; quote: string | null };
 
 export type IndustryForecastJson = {
