@@ -15,7 +15,10 @@ export const PUT = route(async (request: NextRequest) => {
   if (Array.isArray(body.snapshot) && typeof body.slug === 'string' && Object.keys(body).length === 2) {
     const ok = body.snapshot.every((l: ForecastLine) => typeof l?.label === 'string' && Array.isArray(l.points) && l.points.every((p) => typeof p.x === 'string' && Number.isFinite(p.value)));
     if (!ok) throw new HttpError(400, '', { message: 'snapshot: [{ label, points: [{ x, value }] }]' });
-    return json({ saved: await saveForecastSnapshot(body.slug, body.snapshot) });
+    const saved = await saveForecastSnapshot(body.slug, body.snapshot);
+    // The forecasts page is cached for hours; new lines and pin links must show on it.
+    if (saved) revalidateTag(TAGS.industryForecasts, { expire: 0 });
+    return json({ saved });
   }
   const checked = forecastProblem(body);
   if (typeof checked === 'string') throw new HttpError(400, '', { message: checked });

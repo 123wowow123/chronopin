@@ -216,7 +216,7 @@ export const TASKS = {
   industryForecasts: {
     group: 'scores',
     label: 'Industry forecast panels',
-    summary: "Refresh the Census BTOS AI-adoption lines, then check each forecast panel's projection against its publisher's newest edition (Gartner, Goldman Sachs, FactSet, IDC) and save revisions, keeping the replaced figures as a grey dotted earlier edition.",
+    summary: "Refresh the Census BTOS AI-adoption lines, the Ramp token panels and the Ornn GPU rental price lines, then check each forecast panel's projection against its publisher's newest edition (Gartner, Goldman Sachs, FactSet, IDC) and save revisions, keeping the replaced figures as a grey dotted earlier edition.",
   },
   productSales: {
     group: 'scores',
