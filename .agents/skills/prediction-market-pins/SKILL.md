@@ -20,10 +20,16 @@ and must reach production.
 - Quote dollar volume and odds **with the observation date**.
 - Thread to candidate parents (`parentId`) whenever an earlier event in the series, flight-test programme,
   election cycle or franchise exists. A response series is one linear chain; no branching.
+- **Recurring market series are threads (owner, 2026-11-26).** When a market is one instalment of a series that
+  recurs (monthly price ladders such as the Ornn H100 average rental price, yearly "which X will happen in 2026/2027"
+  markets, the same question per month or year), thread it under the previous instalment's pin with `parentId` as it
+  comes up. `find_pins` the series title words first; the first instalment starts the chain and later ones respond to
+  the newest pin in it. Seeds: pin 21508 (H100 rental price, Jan 2027; Feb 2027 and later respond to it) and pin 21507
+  (which math problems AI solves in 2026; the 2027 edition responds to it).
 - Check for duplicates with `GET /api/pins/search?q=...` first. Each reference needs a per-item `sourceUrl`.
 
 ## Predicted date updates (owner, 2026-11-25; every 06:00 and 18:00 run)
-Run `predicted_date_checks` and work every pin it returns (`missed`, `resolved`, `ladder`). Without the tool (no open
+Run `predicted_date_checks` and work every pin it returns (`missed`, `resolved`, `ladder`, `odds`; `odds` = open market, date still ahead, title quotes a percentage not refreshed in 12 hours). Without the tool (no open
 job run), read the pin's market (`gamma-api.polymarket.com/events?slug=<slug>`) and apply the same rules.
 - **New date:** the first day of the likeliest window still ahead (cumulative ladder: subtract neighbouring lines to
   get each window's share); its last day if that window is under way. Say it is an estimate, not an announced date.

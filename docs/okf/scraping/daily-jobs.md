@@ -879,6 +879,9 @@ events and create **predicted pins** out of them:
 - <a id="predicted-dates"></a>**Predicted dates (owner, 2026-11-25: "date updates should be done in 6am/pm job").**
   Call `predicted_date_checks` once each run and work every pin it returns; rules in
   `.agents/skills/prediction-market-pins/SKILL.md` ("Predicted date updates").
+  - Reasons: `missed`, `ladder`, `resolved`, and `odds` (open market, date ahead, title quotes a percentage not
+    refreshed in 12 hours; owner, 2026-11-26): an `odds` pin gets the new title, odds bullet and description, and its
+    date only if the likeliest window moved.
   - Date: the first day of the likeliest window still ahead; its last day when that window is already under way.
     Never leave a passed day on a pin whose market is still open.
   - A missed date moved later: set `originalStartDate` to it **only when empty** (the first date missed) and

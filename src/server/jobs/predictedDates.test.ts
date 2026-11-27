@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dateCheckReason, isDateLadder } from './predictedDates';
+import { dateCheckReason, isDateLadder, oddsTitleStale } from './predictedDates';
 
 const odds = (closed: boolean, ...labels: string[]) => ({ closed, outcomes: labels.map((label) => ({ label, probability: 0.5 })) });
 
@@ -21,5 +21,16 @@ describe('dateCheckReason', () => {
     expect(dateCheckReason('2026-12-01', '2026-11-25', odds(false, 'December 15', 'December 31'))).toBe('ladder');
     expect(dateCheckReason('2026-12-01', '2026-11-25', odds(false, 'Yes', 'No'))).toBeNull();
     expect(dateCheckReason('2026-12-01', '2026-11-25', odds(true, 'Yes', 'No'))).toBeNull();
+  });
+});
+
+describe('odds in the title', () => {
+  const now = Date.parse('2026-11-26T12:00:00Z');
+  it('flags an open market with a quoted percentage not refreshed for 12 hours', () => {
+    expect(oddsTitleStale('A Ceasefire Is Priced at 55% to Begin', '2026-11-25T12:00:00Z', now)).toBe(true);
+    expect(oddsTitleStale('A Ceasefire Is Priced at 73.5% to Begin', '2026-11-26T08:00:00Z', now)).toBe(false);
+    expect(oddsTitleStale('Next Claude Opus Model', '2026-11-01T00:00:00Z', now)).toBe(false);
+    expect(dateCheckReason('2026-12-01', '2026-11-25', odds(false, 'Yes', 'No'), true)).toBe('odds');
+    expect(dateCheckReason('2026-12-01', '2026-11-25', odds(true, 'Yes', 'No'), true)).toBeNull();
   });
 });

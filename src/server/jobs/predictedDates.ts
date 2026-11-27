@@ -20,16 +20,25 @@ export const isDateLadder = (labels: string[]): boolean => labels.length > 1 && 
 // missed: the pin's day has passed and the market is still open, so the event
 // has not come. resolved: the market has closed and the date is still an
 // estimate. ladder: an open "when" market, whose likeliest window may have moved.
-export type DateCheckReason = 'missed' | 'resolved' | 'ladder';
+// odds: an open market, date still ahead, whose title quotes odds that were not
+// refreshed in the last 12 hours (owner, 2026-11-26: retitle with the odds).
+export type DateCheckReason = 'missed' | 'resolved' | 'ladder' | 'odds';
 
 // Which come first when there are more than the limit.
-const ORDER: Record<DateCheckReason, number> = { missed: 0, ladder: 1, resolved: 2 };
+const ORDER: Record<DateCheckReason, number> = { missed: 0, ladder: 1, resolved: 2, odds: 3 };
 
-export function dateCheckReason(startDay: string, today: string, odds: Pick<MarketOdds, 'closed' | 'outcomes'>): DateCheckReason | null {
+const STALE_MS = 12 * 3600 * 1000;
+// A title like "Priced at 55% to Begin by ..." goes stale as the odds move.
+export const titleQuotesOdds = (title: string): boolean => /\d(?:\.\d+)?\s?%/.test(title);
+export const oddsTitleStale = (title: string, updated: Date | string | null, now = Date.now()): boolean =>
+  titleQuotesOdds(title) && (!updated || now - new Date(updated).getTime() > STALE_MS);
+
+export function dateCheckReason(startDay: string, today: string, odds: Pick<MarketOdds, 'closed' | 'outcomes'>, staleOddsTitle = false): DateCheckReason | null {
   const passed = startDay < today;
   if (odds.closed) return passed ? 'resolved' : null;
   if (passed) return 'missed';
-  return isDateLadder(odds.outcomes.map((o) => o.label)) ? 'ladder' : null;
+  if (isDateLadder(odds.outcomes.map((o) => o.label))) return 'ladder';
+  return staleOddsTitle ? 'odds' : null;
 }
 
 type Row = { id: number; title: string; sourceUrl: string | null; utcStartDateTime: Date; originalStartDate: string | null; utcUpdatedDateTime: Date | null; references: { url: string }[] };
@@ -58,7 +67,7 @@ export async function predictedDateChecks({ limit = 25, exclude = [] as number[]
         return undefined;
       });
       if (!odds?.outcomes.length) continue;
-      const reason = dateCheckReason(dayKeyIn(new Date(row.utcStartDateTime).toISOString(), 'UTC'), today, odds);
+      const reason = dateCheckReason(dayKeyIn(new Date(row.utcStartDateTime).toISOString(), 'UTC'), today, odds, oddsTitleStale(row.title, row.utcUpdatedDateTime));
       if (!reason) continue;
       pins.push({
         id: row.id,
