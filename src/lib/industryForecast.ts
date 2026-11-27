@@ -50,6 +50,19 @@ const PIN_SUBJECT_TERMS: Record<string, RegExp> = {
   'oecd-fao-world-poultry-consumption': /\b(poultry|chicken|turkey|nuggets?|wings?)\b/i,
 };
 
+// Charts shown first on a pin that names their subject (not required to show).
+const PIN_PRIORITY_TERMS: Record<string, RegExp> = {
+  'ornn-gpu-rental-price': /\b(gpus?|ornn|ocpi|h100|h200|b200|b300|gb200|a100|rtx|rental|compute prices?)\b/i,
+};
+
+// Whether a forecast is about the pin's own subject (a commodity or GPU chart
+// whose subject words the pin names); such panels are listed before the
+// broad industry ones, so a pin's "show more" cut never hides them.
+export function isPinSubjectForecast(slug: string, names: readonly (string | null | undefined)[], title?: string | null): boolean {
+  const subject = PIN_SUBJECT_TERMS[slug] ?? PIN_PRIORITY_TERMS[slug];
+  return !!subject && [...names, title].some((n) => !!n && subject.test(n));
+}
+
 // Pin sidebars require the forecast's own industry, rather than any related
 // tag, and, for commodity charts, the commodity in the pin's tags or title.
 // AI sector charts additionally require AI on the pin.

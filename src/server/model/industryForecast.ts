@@ -3,7 +3,7 @@
 import * as db from '../db';
 import { getFredSeries } from '../fredSeries';
 import type { ForecastLine, ForecastSource, IndustryForecastInput, IndustryForecastJson } from '@/lib/industryForecast';
-import { matchesPinForecast, matchesTags } from '@/lib/industryForecast';
+import { isPinSubjectForecast, matchesPinForecast, matchesTags } from '@/lib/industryForecast';
 
 type Row = {
   slug: string;
@@ -66,7 +66,10 @@ export async function forecastSlugsForNames(names: readonly (string | null | und
      ORDER BY "id"`,
     [wanted],
   );
-  return rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted, title)).map((r) => r.slug);
+  const slugs = rows.filter((r) => scope !== 'pin' || matchesPinForecast(r, wanted, title)).map((r) => r.slug);
+  if (scope !== 'pin') return slugs;
+  const own = (s: string) => isPinSubjectForecast(s, wanted, title);
+  return [...slugs.filter(own), ...slugs.filter((s) => !own(s))];
 }
 
 export async function allForecasts(): Promise<IndustryForecastJson[]> {
