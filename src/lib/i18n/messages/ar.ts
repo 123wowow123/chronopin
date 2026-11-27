@@ -1426,6 +1426,8 @@ const ar: Messages = {
     altMonthly: '{label}، شهريًا من {from} إلى {to}، بين {low} و{high}.',
     markedMonth: 'شهر هذا الدبوس: {date}، {value}',
     sourceFred: 'سلسلة FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'الإصدار التالي {date}',
   },
   stocks: {

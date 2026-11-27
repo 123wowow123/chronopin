@@ -1250,6 +1250,8 @@ const en = {
     altMonthly: '{label}, monthly from {from} to {to}, between {low} and {high}.',
     markedMonth: "This pin's month: {date}, {value}",
     sourceFred: 'FRED series {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Next release {date}',
   },
   stocks: {

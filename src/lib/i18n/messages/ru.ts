@@ -1286,6 +1286,8 @@ const ru: Messages = {
     altMonthly: '{label}, ежемесячно с {from} по {to}, от {low} до {high}.',
     markedMonth: 'Месяц этого пина: {date}, {value}',
     sourceFred: 'Ряд FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Следующая публикация {date}',
   },
   stocks: {

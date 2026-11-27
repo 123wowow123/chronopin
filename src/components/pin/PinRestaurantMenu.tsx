@@ -79,7 +79,7 @@ export async function PinRestaurantMenu({ pinId, sourceUrl, today }: { pinId: nu
   const lunch = specials.filter((special) => special.kind === 'lunch');
   const other = specials.filter((special) => special.kind === 'other');
   const checked = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${profile.checkedAt}T00:00:00Z`));
-  const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items).filter((item) => restaurantDishImages(item).length).map((item) => [restaurantDishImages(item)[0].src, item])).values()];
+  const dishPhotos = [...new Map(menus.flatMap((menu) => menu.items.map((item) => ({ item, currency: menu.currency }))).filter(({ item }) => restaurantDishImages(item).length).map((entry) => [restaurantDishImages(entry.item)[0].src, entry])).values()];
   const tabs = menus.map((menu) => ({ label: menu.label, content: <MenuContent menu={menu} pinId={pinId} /> }));
   if (lunch.length || other.length) tabs.push({ label: 'Specials', content: <div>
     {lunch.length ? <>

@@ -37,3 +37,9 @@ describe('sizeOf', () => {
     expect(sizeOf('Dollars per Gallon')).toBeNull();
   });
 });
+
+describe('sizeOf rental price', () => {
+  it('formats USD per GPU-hour with a dollar sign and cents', () => {
+    expect(sizeOf('USD per GPU-hour')).toEqual({ divide: 1, label: '/GPU-hr', tight: true, prefix: '$', decimals: 2 });
+  });
+});

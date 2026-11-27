@@ -1243,6 +1243,8 @@ const ko: Messages = {
     altMonthly: '{label}, {from}부터 {to}까지 월간, {low}~{high} 범위.',
     markedMonth: '이 핀의 달: {date}, {value}',
     sourceFred: 'FRED 시리즈 {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: '다음 발표 {date}',
   },
   stocks: {

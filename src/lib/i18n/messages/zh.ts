@@ -1243,6 +1243,8 @@ const zh: Messages = {
     altMonthly: '{label}，{from} 至 {to} 的月度数据，介于 {low} 与 {high} 之间。',
     markedMonth: '此标记所在月：{date}，{value}',
     sourceFred: 'FRED 数据系列 {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: '下次发布 {date}',
   },
   stocks: {

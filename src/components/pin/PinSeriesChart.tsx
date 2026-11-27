@@ -4,6 +4,7 @@ import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocale, useT } from '@/lib/client/i18n';
 import { INTL_LOCALES } from '@/lib/i18n/config';
+import type { MessageKey } from '@/lib/i18n/translate';
 import type { PinSeriesData, SeriesPoint } from '@/lib/series';
 import { loadPinSeries, seriesExtent, sizeOf } from '@/lib/series';
 
@@ -55,6 +56,9 @@ export function PinSeriesChart({ pinId, has }: { pinId: number; has: boolean }) 
   );
 }
 
+// The label key for each publisher; EIA, the original, is the fallback.
+const SOURCE_KEYS: Record<string, MessageKey> = { ornn: 'series.sourceOrnn', fred: 'series.sourceFred', epoch: 'series.sourceEpoch' };
+
 const unitOf = (series: PinSeriesData) => (series.units ? sizeOf(series.units) : null);
 
 function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: string; t: ReturnType<typeof useT> }) {
@@ -101,10 +105,33 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
     setHover({ point: points[index], x: x(index), y: y(points[index].value) });
   };
 
+  // Axis dates: a window of a year or two needs months, not "2026" at both
+  // ends. A weekly series reads "Aug 27", a monthly one "Aug 2026"; the year
+  // joins a day label only when the window crosses a year. A long history
+  // keeps just the years.
+  const spanDays = (Date.parse(`${latest.day}T00:00:00Z`) - Date.parse(`${points[0].day}T00:00:00Z`)) / 86_400_000;
+  const short = spanDays <= 800;
+  const midIndex = Math.floor((points.length - 1) / 2);
+  const crossesYear = points[0].day.slice(0, 4) !== latest.day.slice(0, 4);
+  const tickFormat = new Intl.DateTimeFormat(
+    INTL_LOCALES[locale as keyof typeof INTL_LOCALES] ?? 'en-US',
+    monthly
+      ? { month: 'short', year: 'numeric', timeZone: 'UTC' }
+      : crossesYear
+        ? { month: 'short', day: 'numeric', year: '2-digit', timeZone: 'UTC' }
+        : { month: 'short', day: 'numeric', timeZone: 'UTC' },
+  );
+  const tick = (day: string) => (short ? tickFormat.format(new Date(`${day}T00:00:00Z`)) : day.slice(0, 4));
+
   const unit = unitOf(series);
   // The axis gets the bare number - the unit is named once, in the heading, so
   // the scale labels stay inside their gutter at phone width.
-  const bare = (value: number) => num.format(unit ? Math.round((value / unit.divide) * 10) / 10 : value);
+  const dp = unit?.decimals ?? 1;
+  const bare = (value: number) => {
+    const scale = 10 ** dp;
+    const n = unit ? Math.round((value / unit.divide) * scale) / scale : value;
+    return unit?.decimals != null ? `${unit.prefix ?? ''}${n.toFixed(unit.decimals)}` : num.format(n);
+  };
   const show = (value: number) => (unit ? `${bare(value)}${unit.tight ? '' : ' '}${unit.label}` : bare(value));
 
   return (
@@ -176,10 +203,15 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
           {bare(min)}
         </text>
         <text x={PAD.left} y={VIEW.h - 6} className="fill-current text-[11px] text-faint">
-          {points[0].day.slice(0, 4)}
+          {tick(points[0].day)}
         </text>
+        {short && points.length > 4 ? (
+          <text x={x(midIndex)} y={VIEW.h - 6} textAnchor="middle" className="fill-current text-[11px] text-faint">
+            {tick(points[midIndex].day)}
+          </text>
+        ) : null}
         <text x={PAD.left + PLOT.w} y={VIEW.h - 6} textAnchor="end" className="fill-current text-[11px] text-faint">
-          {latest.day.slice(0, 4)}
+          {tick(latest.day)}
         </text>
       </svg>
 
@@ -204,7 +236,7 @@ function OneSeries({ series, locale, t }: { series: PinSeriesData; locale: strin
 
       <p className="mt-2 text-xs text-subtle">
         <Anchor href={series.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-link hover:underline">
-          {t(series.source === 'fred' ? 'series.sourceFred' : 'series.source', { id: series.seriesId })}
+          {t(SOURCE_KEYS[series.source] ?? 'series.source', { id: series.seriesId })}
         </Anchor>
         {series.nextReleaseDate ? <span className="ms-2">{t('series.next', { date: series.nextReleaseDate })}</span> : null}
       </p>

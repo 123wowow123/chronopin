@@ -1250,6 +1250,8 @@ const ms: Messages = {
     altMonthly: '{label}, bulanan dari {from} hingga {to}, antara {low} dan {high}.',
     markedMonth: 'Bulan pin ini: {date}, {value}',
     sourceFred: 'Siri FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Keluaran seterusnya {date}',
   },
   stocks: {

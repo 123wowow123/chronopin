@@ -53,7 +53,9 @@ export function seriesExtent(points: SeriesPoint[]): { points: SeriesPoint[]; mi
 // Longest match first: "thousand barrels per day" must not be read as
 // "thousand barrels".
 // A rate is a share, not a size: "3.4%" sits tight against its number.
-const UNITS: { match: RegExp; divide: number; label: string; tight?: boolean }[] = [
+const UNITS: { match: RegExp; divide: number; label: string; tight?: boolean; prefix?: string; decimals?: number }[] = [
+  // A rental price: cents matter ($3.10, not $3.1), and the dollar sign leads.
+  { match: /^usd per gpu-hour/i, divide: 1, label: '/GPU-hr', tight: true, prefix: '$', decimals: 2 },
   { match: /^percent/i, divide: 1, label: '%', tight: true },
   { match: /thousand barrels per day/i, divide: 1000, label: 'million bbl/d' },
   { match: /million barrels per day/i, divide: 1, label: 'million bbl/d' },
@@ -61,7 +63,10 @@ const UNITS: { match: RegExp; divide: number; label: string; tight?: boolean }[]
   { match: /million barrels/i, divide: 1, label: 'million bbl' },
 ];
 
-export function sizeOf(units: string): { divide: number; label: string; tight?: boolean } | null {
+export function sizeOf(units: string): { divide: number; label: string; tight?: boolean; prefix?: string; decimals?: number } | null {
   const hit = UNITS.find((u) => u.match.test(units));
-  return hit ? { divide: hit.divide, label: hit.label, tight: hit.tight } : null;
+  if (!hit) return null;
+  const out: { divide: number; label: string; tight?: boolean; prefix?: string; decimals?: number } = { divide: hit.divide, label: hit.label, tight: hit.tight };
+  if (hit.prefix) { out.prefix = hit.prefix; out.decimals = hit.decimals; }
+  return out;
 }

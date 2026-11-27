@@ -2,7 +2,9 @@
 // drawn from live public series, a stored snapshot and/or a cited projection.
 
 export type ForecastPoint = { x: string; value: number };
-export type ForecastLine = { label: string; points: ForecastPoint[]; kind?: 'live' | 'snapshot' | 'earlier'; publishedDate?: string };
+export type ForecastLine = { label: string; points: ForecastPoint[]; kind?: 'live' | 'snapshot' | 'earlier'; publishedDate?: string;
+  // A pin about the thing this line measures (a GPU model's launch pin): the legend links to it.
+  pinId?: number };
 export type ForecastSource = { label: string; url: string; date: string | null; quote: string | null };
 
 export type IndustryForecastJson = {

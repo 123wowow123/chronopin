@@ -1661,6 +1661,28 @@
     "note": "Blended price per million tokens (token spend divided by token volume, all token types) for OpenAI and Anthropic, as Ramp charts it; weekly seven-day totals. Measured on businesses on Ramp's card and bill-pay platform, from Ramp AI Token Spend Management; a sample of Ramp customers, not the whole US. Lines are refreshed by the 6am and 6pm job."
   },
   {
+    "slug": "ornn-gpu-rental-price",
+    "industry": "AI",
+    "title": "GPU rental price per hour, Ornn Compute Price Index",
+    "tags": [
+      "AI",
+      "Computing",
+      "Semiconductors",
+      "Business"
+    ],
+    "prefix": "$",
+    "suffix": "",
+    "sources": [
+      {
+        "label": "Ornn Compute Price Index (OCPI)",
+        "url": "https://data.ornn.com/home/h100",
+        "date": "2026-11-26",
+        "quote": null
+      }
+    ],
+    "note": "Daily rental price of one GPU per hour in US dollars, by model, from Ornn's Compute Price Index of GPU cloud rental markets. Ornn serves only the latest three months, so earlier days come from this site's own daily readings. Lines are refreshed by the 6am and 6pm job."
+  },
+  {
     "slug": "gvr-anime-market",
     "industry": "Anime",
     "title": "Worldwide anime market revenue",

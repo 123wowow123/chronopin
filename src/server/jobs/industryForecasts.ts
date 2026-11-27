@@ -18,6 +18,7 @@ const BTOS_ROW = 'us-ai-adoption';
 
 export { forecastStatus };
 export { refreshRampTokens } from './rampTokens';
+export { refreshOrnnGpuPrices } from './ornnGpuPrices';
 
 // Downloads the Census file and re-reads its two AI questions (scripts/industry/btos.py,
 // which needs python3 with openpyxl), then replaces the AI adoption row's survey

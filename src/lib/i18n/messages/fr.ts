@@ -1249,6 +1249,8 @@ const fr: Messages = {
     altMonthly: '{label}, mensuel du {from} au {to}, entre {low} et {high}.',
     markedMonth: 'Le mois de cette épingle : {date}, {value}',
     sourceFred: 'Série {id} de FRED',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Prochaine publication {date}',
   },
   stocks: {

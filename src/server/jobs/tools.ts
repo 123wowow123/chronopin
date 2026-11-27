@@ -71,7 +71,7 @@ import { impactCandidates, saveMarketImpact } from '../model/pinMarketImpact';
 import { salesStatus, savePinSales } from './productSales';
 import { photoGaps } from './outcomePhotos';
 import { photosProblem, savePhotosPartial } from '../model/pinOutcomePhoto';
-import { forecastStatus, refreshBtos, refreshRampTokens, saveResearched } from './industryForecasts';
+import { forecastStatus, refreshBtos, refreshOrnnGpuPrices, refreshRampTokens, saveResearched } from './industryForecasts';
 import { pendingReviewSentiment, REVIEW_SENTIMENT_PROMPT, saveReviewSentiments } from './reviewSentiment';
 import { reviewResearchGaps, saveResearchedReviews } from './reviewResearch';
 import type { ReviewTable } from '@/lib/pinReviews';
@@ -608,6 +608,17 @@ export const TOOLS: JobTool[] = [
     run: async (_input, ctx) => {
       const result = await refreshRampTokens();
       await act(ctx, { tool: 'refresh_ramp_tokens', detail: `Ramp tokens through ${result.through}, ${result.weeks} weeks${result.production ? '; prod saved' : ''}` });
+      return result;
+    },
+  },
+  {
+    name: 'refresh_ornn_gpu_prices',
+    description:
+      "Reads Ornn's Compute Price Index (data.ornn.com/home/h100) and replaces the daily lines of the GPU rental price panel (USD per GPU-hour for B300, B200, H200, H100, A100, RTX PRO 6000, RTX 5090), merged into the days already stored because Ornn only serves the latest three months, here and on production when the run writes there. Mechanical: nothing to review. Returns the newest day.",
+    input_schema: obj({}),
+    run: async (_input, ctx) => {
+      const result = await refreshOrnnGpuPrices();
+      await act(ctx, { tool: 'refresh_ornn_gpu_prices', detail: `Ornn GPU prices through ${result.through}, ${result.days} days${result.production ? '; prod saved' : ''}` });
       return result;
     },
   },

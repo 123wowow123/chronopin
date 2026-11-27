@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { RefineLink } from '@/components/pin/RefineLink';
+import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
@@ -19,8 +20,13 @@ const dims = (large: boolean) => {
 const STROKES = ['stroke-accent', 'stroke-success', 'stroke-muted', 'stroke-danger'];
 const FILLS = ['fill-accent', 'fill-success', 'fill-muted', 'fill-danger'];
 const DOTS = ['bg-accent', 'bg-success', 'bg-muted', 'bg-danger'];
+// The forecasts page sits inside the restaurant guide's styles, whose `a` rule
+// strips colour and underline, so a legend link carries its own look inline.
+const LEGEND_LINK = { color: 'var(--color-link)', textDecoration: 'underline dotted', textUnderlineOffset: 2 } as const;
 const TICKS = 3;
 const PROJECTED_SHOWN = 1;
+
+const yearOfTime = (t: number) => new Date(t).getUTCFullYear();
 
 // A year ("2027") sits mid-year; a day is itself.
 const at = (x: string) => (/^\d{4}$/.test(x) ? Date.UTC(Number(x), 6, 1) : Date.parse(`${x}T00:00:00Z`));
@@ -77,7 +83,12 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
   // The point of each line at the hovered time (a line with none there is left out).
   const hit = hover == null ? [] : lines.map(({ line }, i) => ({ i, line, p: line.points.find((p) => at(p.x) === hover) })).filter((h) => h.p);
   const left = hover == null ? 0 : ((x(hover) / VIEW.w) * 100);
-  const yearOf = (t: number) => new Date(t).getUTCFullYear();
+  // A window of two years or less (a daily price series) reads in months and
+  // days with a midpoint; a longer one keeps just the years.
+  const shortSpan = t1 - t0 <= 800 * 86_400_000;
+  const crossesYear = yearOfTime(t0) !== yearOfTime(t1);
+  const dayFormat = new Intl.DateTimeFormat('en-US', crossesYear ? { month: 'short', day: 'numeric', year: '2-digit', timeZone: 'UTC' } : { month: 'short', day: 'numeric', timeZone: 'UTC' });
+  const xLabel = (t: number) => (shortSpan ? dayFormat.format(new Date(t)) : yearOfTime(t));
 
   return (
     <div className="relative">
@@ -112,8 +123,9 @@ function Chart({ forecast, large = false }: { forecast: IndustryForecastJson; la
             {hit.map(({ i, p }) => <circle key={i} cx={x(hover)} cy={y(p!.value)} r="4.5" className={`${toneOf(lines, i).fill} stroke-panel`} strokeWidth="2" />)}
           </g>
         ) : null}
-        <text x={padLeft} y={VIEW.h - 6} className="fill-current text-[13px] text-faint">{yearOf(t0)}</text>
-        <text x={padLeft + plotW} y={VIEW.h - 6} textAnchor="end" className="fill-current text-[13px] text-faint">{yearOf(t1)}</text>
+        <text x={padLeft} y={VIEW.h - 6} className="fill-current text-[13px] text-faint">{xLabel(t0)}</text>
+        {shortSpan ? <text x={padLeft + plotW / 2} y={VIEW.h - 6} textAnchor="middle" className="fill-current text-[13px] text-faint">{xLabel((t0 + t1) / 2)}</text> : null}
+        <text x={padLeft + plotW} y={VIEW.h - 6} textAnchor="end" className="fill-current text-[13px] text-faint">{xLabel(t1)}</text>
       </svg>
       {hover != null && hit.length ? (
         <div
@@ -215,7 +227,7 @@ export function ForecastGraph({ forecast, large = false }: { forecast: IndustryF
 
 function Body({ forecast, large = false }: { forecast: IndustryForecastJson; large?: boolean }) {
   const t = useT();
-  const latest = forecast.lines.map((l) => ({ label: l.label, p: l.points.at(-1) })).filter((l): l is { label: string; p: { x: string; value: number } } => !!l.p);
+  const latest = forecast.lines.map((l) => ({ label: l.label, pinId: l.pinId, p: l.points.at(-1) })).filter((l): l is { label: string; pinId: number | undefined; p: { x: string; value: number } } => !!l.p);
   const projected = forecast.projection?.points ?? [];
   // A long projection starts collapsed to its first few years.
   const [expanded, setExpanded] = useState(large);
@@ -226,10 +238,10 @@ function Body({ forecast, large = false }: { forecast: IndustryForecastJson; lar
     <>
       <ForecastGraph forecast={forecast} large={large} />
       <ul className={`mt-2 flex flex-wrap gap-x-4 gap-y-1 tabular-nums text-muted ${large ? 'text-sm' : 'text-xs'}`}>
-        {latest.map(({ label, p }, i) => (
+        {latest.map(({ label, pinId, p }, i) => (
           <li key={label}>
             <span className={`me-1 inline-block size-2 rounded-full ${DOTS[i % DOTS.length]}`} aria-hidden />
-            {label}: <span className="font-semibold text-ink">{formatForecastValue(forecast, p.value)}</span> <span className="text-subtle">({p.x.slice(0, 7)} · {t('pin.industry.reported')})</span>
+            {pinId ? <Link href={`/pin/${pinId}`} prefetch={false} style={LEGEND_LINK}>{label}</Link> : label}: <span className="font-semibold text-ink">{formatForecastValue(forecast, p.value)}</span> <span className="text-subtle">({p.x.slice(0, 7)} · {t('pin.industry.reported')})</span>
           </li>
         ))}
         {shown.map((p) => (
@@ -316,6 +328,11 @@ export function ForecastCard({ forecast }: { forecast: IndustryForecastJson }) {
   );
 }
 
+// A dated projection with one year and nothing else to compare draws a single
+// bar, which says nothing a caption would not; such panels stay hidden until a
+// sourced second figure exists.
+const isLoneBar = (f: IndustryForecastJson) => !isCategoryLine(f.projection) && (f.projection?.points.length ?? 0) === 1 && f.lines.every((l) => l.points.length < 2) && f.earlier.length === 0;
+
 // Industry forecast panels for an industry's pins and searches
 // (IndustryForecast, 0216): published series (Ramp AI Index via FRED, Census
 // BTOS) with sourced projections (Goldman Sachs, Gartner) dashed beyond them.
@@ -329,7 +346,7 @@ export function IndustryForecastPanel({ slugs, compact = false, limit }: { slugs
     let cancelled = false;
     api
       .get<IndustryForecastJson[]>(`/api/industry-forecasts?slugs=${encodeURIComponent(key)}`)
-      .then((f) => !cancelled && setForecasts(f))
+      .then((f) => !cancelled && setForecasts(f.filter((x) => !isLoneBar(x))))
       .catch(() => {});
     return () => {
       cancelled = true;

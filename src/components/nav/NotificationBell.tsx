@@ -1082,7 +1082,6 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/activities', label: 'Activities', icon: 'compass' },
   { href: '/products', label: 'Products', icon: 'cart' },
   { href: '/cars', label: 'Cars', icon: 'car' },
-  { href: '/forecasts', label: 'Forecasts', icon: 'trending-up' },
   { href: '/music', label: 'Music', icon: 'music' },
 ];
 
@@ -1126,6 +1125,12 @@ export function WeatherButton({ className = '' }: { className?: string }) {
               <Link href="/people" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
                 <Icon name="users" className="size-4 text-muted" />
                 People
+              </Link>
+            </li>
+            <li className="px-1.5">
+              <Link href="/forecasts" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
+                <Icon name="trending-up" className="size-4 text-muted" />
+                {t('nav.forecasts')}
               </Link>
             </li>
             <li className="px-1.5">

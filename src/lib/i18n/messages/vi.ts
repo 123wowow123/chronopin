@@ -1249,6 +1249,8 @@ const vi: Messages = {
     altMonthly: '{label}, theo tháng từ {from} đến {to}, trong khoảng {low} đến {high}.',
     markedMonth: 'Tháng của ghim này: {date}, {value}',
     sourceFred: 'Chuỗi FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Lần công bố tiếp theo {date}',
   },
   stocks: {

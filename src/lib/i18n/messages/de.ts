@@ -1249,6 +1249,8 @@ const de: Messages = {
     altMonthly: '{label}, monatlich von {from} bis {to}, zwischen {low} und {high}.',
     markedMonth: 'Der Monat dieser Pinnadel: {date}, {value}',
     sourceFred: 'FRED-Reihe {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Nächste Veröffentlichung {date}',
   },
   stocks: {

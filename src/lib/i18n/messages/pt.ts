@@ -1240,6 +1240,8 @@ const pt: Messages = {
     altMonthly: '{label}, mensal de {from} a {to}, entre {low} e {high}.',
     markedMonth: 'O mês deste pin: {date}, {value}',
     sourceFred: 'Série FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'Próxima divulgação {date}',
   },
   stocks: {

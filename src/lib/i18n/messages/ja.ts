@@ -1243,6 +1243,8 @@ const ja: Messages = {
     altMonthly: '{label}、{from} から {to} までの月次、{low} から {high} の範囲。',
     markedMonth: 'このピンの月: {date}、{value}',
     sourceFred: 'FRED 系列 {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: '次回公表 {date}',
   },
   stocks: {

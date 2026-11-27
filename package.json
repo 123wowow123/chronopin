@@ -117,6 +117,7 @@
     "industry:forecasts": "tsx scripts/industry/apply.ts",
     "industry:forecasts:prod": "tsx scripts/industry/prod.ts",
     "industry:ramp": "tsx scripts/industry/ramp.ts",
+    "industry:ornn": "tsx scripts/industry/ornn.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",
     "threads:prequels": "tsx scripts/threads/prequels.ts",
     "threads:models": "tsx scripts/threads/models.ts",

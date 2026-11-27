@@ -1239,6 +1239,8 @@ const th: Messages = {
     altMonthly: '{label} รายเดือนตั้งแต่ {from} ถึง {to} อยู่ระหว่าง {low} ถึง {high}',
     markedMonth: 'เดือนของหมุดนี้: {date}, {value}',
     sourceFred: 'ชุดข้อมูล FRED {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'เผยแพร่ครั้งถัดไป {date}',
   },
   stocks: {

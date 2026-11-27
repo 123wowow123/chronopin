@@ -1256,6 +1256,8 @@ const hi: Messages = {
     altMonthly: '{label}, {from} से {to} तक मासिक, {low} और {high} के बीच।',
     markedMonth: 'इस पिन का महीना: {date}, {value}',
     sourceFred: 'FRED सीरीज़ {id}',
+    sourceOrnn: 'Ornn OCPI {id}',
+    sourceEpoch: 'Epoch AI {id}',
     next: 'अगला रिलीज़ {date}',
   },
   stocks: {
