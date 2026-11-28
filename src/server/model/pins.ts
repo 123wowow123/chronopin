@@ -191,11 +191,11 @@ export default class Pins extends BasePins<Pin> {
       FROM "Pin" AS "p"
       WHERE "p"."utcStartDateTime" >= $1::timestamptz AND "p"."utcStartDateTime" < $2::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
-        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
+        AND ($3::timestamptz IS NULL OR ("p"."utcCreatedDateTime" >= $3 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "p"."id" AND "pu"."utcCreatedDateTime" >= $3)))
         AND ${clearsBarOrDayEmpty('p', '$4', '$7::text')}
         AND ${notCompanyHub('p')}
         AND ${withinRing('p', 5, 6)}
-        AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $3) AND ${clearsBar('timelineOther', '$4')} AND ${withinRing('timelineOther', 5, 6)}`)}`,
+        AND ${restaurantTimelineClause('p', '$7', `($3::timestamptz IS NULL OR ("timelineOther"."utcCreatedDateTime" >= $3 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "timelineOther"."id" AND "pu"."utcCreatedDateTime" >= $3))) AND ${clearsBar('timelineOther', '$4')} AND ${withinRing('timelineOther', 5, 6)}`)}`,
       [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null, timeZone],
     );
   }
@@ -368,7 +368,7 @@ export default class Pins extends BasePins<Pin> {
       'FROM "Pin"',
       [
         '"Pin"."utcDeletedDateTime" IS NULL',
-        '($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)',
+        '($1::timestamptz IS NULL OR ("Pin"."utcCreatedDateTime" >= $1 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "Pin"."id" AND "pu"."utcCreatedDateTime" >= $1)))',
         `${clearsBar('Pin', '$2')}`,
       ],
       [createdSince || null, minConfidence],
@@ -408,7 +408,7 @@ export default class Pins extends BasePins<Pin> {
     const live = `FROM "PinAddressPlace" AS "pp"
          JOIN "Pin" ON "Pin"."id" = "pp"."pinId"
        WHERE "Pin"."utcDeletedDateTime" IS NULL
-         AND ($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)
+         AND ($1::timestamptz IS NULL OR ("Pin"."utcCreatedDateTime" >= $1 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "Pin"."id" AND "pu"."utcCreatedDateTime" >= $1)))
          AND ${clearsBar('Pin', '$2')}`;
     const shape = (rows: { name: string; country: string | null; count: string; lat: number | null; lon: number | null }[]) =>
       rows.map((r) => ({ ...r, count: Number(r.count) }));
@@ -610,7 +610,7 @@ const MAP_WHERE = `"p"."location" IS NOT NULL
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($1::timestamptz IS NULL OR "p"."utcStartDateTime" >= $1)
         AND ($2::timestamptz IS NULL OR "p"."utcStartDateTime" <= $2)
-        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
+        AND ($3::timestamptz IS NULL OR ("p"."utcCreatedDateTime" >= $3 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "p"."id" AND "pu"."utcCreatedDateTime" >= $3)))
         AND (NOT $6::boolean OR (
           EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
           AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" IN ('Restaurant Opening', 'Restaurant', 'Restaurants'))))`;
@@ -966,11 +966,11 @@ function queryPage(
       WHERE ("p"."utcStartDateTime", "p"."id") ${after} ($2::timestamptz, $3::integer)
         AND "p"."utcDeletedDateTime" IS NULL
         ${onlyFavorites ? `AND "p"."id" IN (${watchedPinIdsOf('$1')})` : ''}
-        AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
+        AND ($4::timestamptz IS NULL OR ("p"."utcCreatedDateTime" >= $4 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "p"."id" AND "pu"."utcCreatedDateTime" >= $4)))
         AND ${onlyFavorites ? clearsBar('p', '$6') : clearsBarOrDayEmpty('p', '$6', '$9::text')}
         AND ${notCompanyHub('p')}
         AND ${withinRing('p', 7, 8)}
-        ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR "timelineOther"."utcCreatedDateTime" >= $4) AND ${clearsBar('timelineOther', '$6')} AND ${withinRing('timelineOther', 7, 8)}`)})`}
+        ${onlyFavorites ? '' : `AND ("p"."id" = $10 OR ${restaurantTimelineClause('p', '$9', `($4::timestamptz IS NULL OR ("timelineOther"."utcCreatedDateTime" >= $4 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "timelineOther"."id" AND "pu"."utcCreatedDateTime" >= $4))) AND ${clearsBar('timelineOther', '$6')} AND ${withinRing('timelineOther', 7, 8)}`)})`}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
       LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
@@ -992,7 +992,7 @@ function queryBetween(start: Date, end: Date, userId: number, limit: number, cre
       FROM "Pin" AS "p"
       WHERE "p"."utcStartDateTime" >= $2::timestamptz AND "p"."utcStartDateTime" < $3::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
-        AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
+        AND ($4::timestamptz IS NULL OR ("p"."utcCreatedDateTime" >= $4 OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "p"."id" AND "pu"."utcCreatedDateTime" >= $4)))
         AND ${clearsBar('p', '$6')}
         AND ${notCompanyHub('p')}
         AND ${withinRing('p', 7, 8)}
@@ -1523,7 +1523,8 @@ export function searchClauses(filter: SearchFilter) {
     }
   }
   if (filter.createdSince) {
-    where.push(`"Pin"."utcCreatedDateTime" >= ${add(filter.createdSince)}`);
+    const since = add(filter.createdSince);
+    where.push(`("Pin"."utcCreatedDateTime" >= ${since} OR EXISTS (SELECT 1 FROM "PinUpdate" AS "pu" WHERE "pu"."pinId" = "Pin"."id" AND "pu"."utcCreatedDateTime" >= ${since}))`);
   }
   if (filter.startFrom) {
     where.push(`"Pin"."utcStartDateTime" >= ${add(filter.startFrom)}`);

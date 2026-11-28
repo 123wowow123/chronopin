@@ -495,3 +495,6 @@ generate video on activites / food / stay per city. post to youtube shorts
 do
 open menu-pricing gaps, and verification notes.
 
+
+
+Missing restaurant menu pictures and reviews on prod

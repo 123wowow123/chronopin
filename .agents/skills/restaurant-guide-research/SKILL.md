@@ -1025,3 +1025,8 @@ Round 15 landing-tab verification notes (Nov 23 — San Antonio Iconic dishes 6 
 - Price only items with one unambiguous branch price; hold items whose board shows several variants or sizes (burritos, platters, brunch sets) rather than picking the cheapest.
 - A Naver Place `시가` market price can differ from the in-store menu book; use the book only when it is a dated 2026 photo, set `priceLabel: null`, and note whole/half portions.
 - `apply_prices_multi.py --audit` can die on a transient SSL handshake timeout after a successful apply; rerun `--audit` alone, then `--dry-run` to confirm zero dirty targets.
+
+## Wave 19 traps (2026-11-27)
+- Google Maps' structured `Menu` / `Kiosk Menu` tab on US food trucks (`Pana Food Truck`, `140 S Montgomery St`) can pull DoorDash-inflated prices (+30–40%) with AI-generated descriptions; cross-check against first-party storefronts (`panafoodtruck.com/store/`, `order.incentivio.com` for `Termini Brothers`) or physical truck-window photos.
+- When a Japanese venue's older website menu omits tax treatment (`Hatena Coffee — Fukuoka Tenjin`, `¥700 as printed; confirm tax treatment`), check the owner's latest Google Maps `FOOD MENU` photo and official pricing table (`フード代：500円〜(税込550円〜)`) before applying tax-included (`税込`) amounts and clearing stale `priceLabel` strings with `"priceLabel": null`.
+- On dual-format venues (`Press* Food & Wine`: `$95pp` set menu + à-la-carte sample menu sharing item names in one array), use `items_by_index` with `expected_name` to price only the à-la-carte rows while leaving set-menu component rows unpriced.

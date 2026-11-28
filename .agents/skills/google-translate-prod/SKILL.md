@@ -21,6 +21,13 @@ attribution Golden Rule live in `.agents/skills/prod-translations/`; this skill 
    python3 .agents/skills/prod-translations/scripts/sync_translations.py --pro-tips --no-prep --pins <DUE_PRO_TIP_PIN_IDS>
    ```
    Skip a line when its list is empty. For more than ~25 pins, shard the ids across runs.
+   **Slow run (owner says "slowly"), verified 2026-11-27 on 246 pins:** prefix with `TRANSLATE_WORKERS=1 TRANSLATE_DELAY=3`.
+   Pilot 5 pins first, then ONE run over all ids with `--chunk-size 25 --pins "$IDS"`: it chunks, pushes per chunk and, when
+   the id list includes the panel and pro-tip pins, also does panels and pro tips in the same run (no separate lines needed).
+   Re-run `--list-ids` right before the full run: new pins become due between listings. Launch with
+   `nohup ... > .scrape/logs/gt-pins-$(date +%F).log 2>&1 &`; the "completed" task notification is only the launcher
+   shell exiting. Check `pgrep -f "sync_translations.py --no-prep"` and grep the log for `chunk|Batch|Successfully|Completed`.
+   macOS has no `timeout` command. About 20-25 min for 246 pins (3690 rows).
 2. **Secondary content tables** (all with due rows, smallest first; slow, so run it in the background):
    ```bash
    mkdir -p .scrape/logs
@@ -34,6 +41,8 @@ attribution Golden Rule live in `.agents/skills/prod-translations/`; this skill 
    python3 .agents/skills/prod-translations/scripts/check_translations.py
    curl -s -H "Authorization: Bearer $(cat .scrape/admin.token)" https://www.chronopin.com/api/admin/content-translations
    ```
+   `check_translations.py` covers pins, panels and pro tips only; step 2's tables (e.g. `pin-critic-review` had 24 due
+   after the 2026-11-27 pin run) are audited by the curl and still need `content_translations.py`.
    Done = 0 due pins, 0 mangled/leaks, and `due: 0` for every table. On a 401 renew the token via the
    admin-login-refresh skill; never ask the owner.
 
@@ -55,3 +64,19 @@ attribution Golden Rule live in `.agents/skills/prod-translations/`; this skill 
 - **Fragments Google can't do** (mistranslated company names, a sentence cut at `U.S.`): translate them yourself and write them into the
   locale cache with `st._save_locale_cache_atomic(ct.CACHE_DIR/'<loc>.json', {src: tr})`, then re-run the script for that table; it
   builds, structure-checks and saves the rows as usual. Keep company/case names Latin; mirror a truncated source as is.
+- **Finding the stuck fragments** (worked 2026-11-27, `restaurant-content`: 4 rows, 13 row-locales, 11 fragments, mostly
+  Italian dish descriptions plus one Japanese review and one fragment with an English suffix). The log only says
+  `unbuilt`, so list them with a throwaway script (keep it in the scratchpad, not the repo):
+  1. `import content_translations as ct` (add `.agents/skills/prod-translations/scripts` to `sys.path`, `sys.dont_write_bytecode = True`),
+     `tok = ct.st.ensure_admin_token()`, `kinds = {f['name']: f['kind'] for f in defs[table]['fields']}` from
+     `GET /api/admin/content-translations`.
+  2. Page through ALL due rows (`GET ...?table=T&locale=<all>&limit=50&after=N`, follow `next`); the due row may not be
+     on the first page.
+  3. For each row and each `loc` in `r['locales']`: `ct.map_fields(table, kinds, r['fields'], lambda t: frags.add(t) or t)`,
+     then keep fragments where `not ct.LocaleCache(loc).data.get(f)`.
+  4. Translate each yourself per locale and write with `ct.st._save_locale_cache_atomic(ct.CACHE_DIR/f'{loc}.json', {src: tr})`
+     (it merges, so it is safe). A fragment already in the target language (Italian text for `it`) is mirrored as is.
+     Keep the English suffix's meaning (translate it too), dish/venue names, prices and URLs unchanged.
+  5. Re-run `content_translations.py --tables <table>` (no other copy running); expect `saved: N, unbuilt: 0`.
+- Rows can become due while you work (new pins, edited critic reviews, horoscopes). After the last run, re-check the
+  curl audit and `--list-ids` and run one more small pass until everything reads `due: 0`.
